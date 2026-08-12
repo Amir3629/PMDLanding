@@ -49,3 +49,26 @@ Choose the metrics that match the workflow being implemented. Examples include:
 - revenue or profitability by item or location
 
 Website copy should explain what can be tracked or improved without inventing a guaranteed percentage.
+
+<!-- PMD PRODUCT PAGE DEPTH V2 START -->
+
+## Detailed product-page measurement language
+
+The detailed product pages may describe metrics that a restaurant can baseline, monitor or compare. These are measurement frameworks, not guaranteed improvements.
+
+Examples include:
+
+- arrival-to-seat time
+- order-to-kitchen visibility
+- preparation duration
+- ready-to-serve handoff time
+- bill-request-to-payment time
+- table turnover
+- no-show rate
+- identified-guest and repeat-visit rates
+- integration success, freshness and reconciliation exceptions
+- AI source coverage, traceability and forecast error
+
+Before publishing a percentage improvement, document the event definitions, source systems, comparison period, restaurant scope and approval to use the result.
+
+<!-- PMD PRODUCT PAGE DEPTH V2 END -->

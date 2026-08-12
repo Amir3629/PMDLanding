@@ -1,6 +1,7 @@
 import PageHero from './PageHero';
 import CTA from './CTA';
 import { Icon } from './Icons';
+import ProductDetailSections from './ProductDetailSections';
 
 export default function SolutionPage({ page }) {
   return (
@@ -26,6 +27,8 @@ export default function SolutionPage({ page }) {
           ))}
         </div>
       </section>
+
+      <ProductDetailSections details={page.details} productName={page.eyebrow} />
 
       <section className="section capabilitySection">
         <div className="container capabilityPanel">
