@@ -17,7 +17,7 @@ export default function HomePage() {
       <InteractiveDemos />
       <FlexibilityAndIntegrationSections />
       <LifestyleMarquee />
-      <CTA title="Ready to see PayMyDine around your restaurant roles and workflows?" body="Book a demo and we’ll focus on the team structure, guest journey, AI, modules and integrations that fit your operation." />
+      <CTA title="Map your restaurant to the 9 PayMyDine product areas." body="Bring the roles, floor structure, guest journey, current systems and metrics you want to improve. We will show the smallest practical setup and how it can expand." />
     </>
   );
 }

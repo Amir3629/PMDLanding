@@ -21,7 +21,7 @@ export default function SolutionPage({ page }) {
           {page.story.map((item, index) => (
             <article className={`storyFeature ${index % 2 ? 'reverse' : ''}`} key={item.title}>
               <div className="storyFeatureImage"><img src={item.image} alt="" loading="lazy" /></div>
-              <div className="storyFeatureCopy"><span className="eyebrow">{page.storyEyebrow || page.eyebrow}</span><h2>{item.title}</h2><p>{item.body}</p><a className="textArrow" href="/how-it-works">See the operating flow <Icon name="arrow" size={15}/></a></div>
+              <div className="storyFeatureCopy"><span className="eyebrow">{page.storyEyebrow || page.eyebrow}</span><h2>{item.title}</h2><p>{item.body}</p><a className="textArrow" href="/how-it-works">See the 5-step operating flow <Icon name="arrow" size={15}/></a></div>
             </article>
           ))}
         </div>
@@ -30,8 +30,8 @@ export default function SolutionPage({ page }) {
       <section className="section capabilitySection">
         <div className="container capabilityPanel">
           <div>
-            <span className="eyebrow">{page.capabilityEyebrow || 'What this workflow can include'}</span>
-            <h2>{page.capabilityTitle || 'Keep the relevant capabilities close to the work.'}</h2>
+            <span className="eyebrow">{page.capabilityEyebrow || 'What the team can do'}</span>
+            <h2>{page.capabilityTitle || 'Keep the required actions and metrics in one workflow.'}</h2>
             {page.capabilityBody && <p>{page.capabilityBody}</p>}
           </div>
           <div className="capabilityList">{page.bullets.map((item) => <span key={item}><Icon name="check" size={16}/>{item}</span>)}</div>

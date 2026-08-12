@@ -1,164 +1,164 @@
 export const teamPages = {
   owner: {
     label: 'Owner',
-    eyebrow: 'For owners',
-    title: 'See the whole restaurant without living in every screen.',
-    intro: 'Bring performance, floor activity, reservations, kitchen signals and the questions that matter to ownership into one decision-focused view.',
+    eyebrow: 'For owners - 6 business signals',
+    title: 'Review the restaurant without opening every team workspace.',
+    intro: 'Use one owner view to review revenue, guest volume, table activity, reservations, kitchen status and top-selling items, then ask what changed and which metric needs investigation.',
     heroImage: '/site-assets/owner/1.webp',
     accent: 'green',
     highlights: [
-      ['Performance at a glance', 'Follow revenue, guest volume, tables and key operating signals without opening every team workspace.'],
-      ['Live restaurant context', 'See what is happening across service, reservations and kitchen while the day is still in motion.'],
-      ['AI-assisted understanding', 'Use PayMyDine AI to explore changes, patterns and questions around the restaurant data available to you.'],
-      ['Role-based control', 'Keep ownership visibility broad while other team members stay focused on the work that belongs to them.']
+      ['Revenue and demand', 'Compare revenue, guest count and average check by period, service window or location where the data is available.'],
+      ['Floor and service', 'Review occupied tables, turnover, open orders and active service without asking each team for a separate update.'],
+      ['Kitchen and menu', 'See preparation status, best sellers, sold-out patterns and item performance in the wider business picture.'],
+      ['AI-assisted questions', 'Ask what changed, which category or location moved and what source view should be checked next.']
     ],
     story: [
       {
-        title: 'A decision view, not another admin screen.',
-        body: 'Ownership needs the operating picture behind the restaurant: what is moving, what changed and where attention may be useful next.',
+        title: 'Replace screen-hopping with a six-signal owner view.',
+        body: 'The owner workspace brings business and operating context together so a high-level number can be traced to the tables, channels, items or periods behind it.',
         image: '/site-assets/owner/2.webp'
       },
       {
-        title: 'Ask better questions of the restaurant day.',
-        body: 'AI assistance can help turn live and historical restaurant information into clearer summaries, comparisons and follow-up questions.',
+        title: 'Turn a result into a follow-up question.',
+        body: 'AI assistance can compare available periods or locations and summarise unusual movement while the owner verifies the source data and chooses the action.',
         image: '/site-assets/extra/manager-analytics.webp'
       }
     ],
-    bullets: ['Revenue & sales', 'Guest and table activity', 'Reservations', 'Kitchen performance', 'Top-selling items', 'AI-assisted summaries']
+    bullets: ['Revenue and sales', 'Guest volume', 'Table activity', 'Reservations', 'Kitchen status', 'Top-selling items']
   },
   manager: {
     label: 'Manager',
-    eyebrow: 'For managers',
-    title: 'Keep the shift moving with the right live view.',
-    intro: 'Give managers the operational context behind tables, orders, reservations, kitchen progress and team activity while service is happening.',
+    eyebrow: 'For managers - 5 live queues',
+    title: 'Coordinate the shift from tables, orders, kitchen, reservations and team activity.',
+    intro: 'Use one live management view to see the five queues that shape service, identify exceptions and route the next action to the responsible role.',
     heroImage: '/site-assets/extra/restaurant-team-planning.webp',
     accent: 'blue',
     highlights: [
-      ['Live floor context', 'Understand table status, active service and what is changing across the restaurant.'],
-      ['Shift coordination', 'Keep front of house, kitchen and reservation activity easier to follow from one management view.'],
-      ['Exceptions first', 'Make it easier to spot delays, unusual changes or areas that may need attention during the shift.'],
-      ['Performance with context', 'See operational activity alongside the business signals that help explain the day.']
+      ['Floor state', 'See occupied, available, waiting and payment-stage tables against the live floor map.'],
+      ['Open orders', 'Identify delayed, modified or incomplete orders and move from the exception to the table and channel behind it.'],
+      ['Kitchen progress', 'Review received, preparing and ready tickets without working inside the kitchen screen.'],
+      ['Arrivals and team activity', 'Keep upcoming bookings, walk-ins, assigned roles and active handoffs in the same shift picture.']
     ],
     story: [
       {
-        title: 'Move from status checking to shift coordination.',
-        body: 'A manager workspace should make the next operational decision easier to see instead of becoming another place to search for information.',
+        title: 'Manage exceptions instead of collecting status updates.',
+        body: 'A manager can focus on what is waiting, delayed or blocked while each role continues to work in its own queue.',
         image: '/site-assets/staff/6.webp'
       },
       {
-        title: 'Keep team views specialised while management stays informed.',
-        body: 'Waiters, kitchen and reservation teams can work in focused spaces while the manager keeps the wider service picture in view.',
+        title: 'Use the same operating context for the post-shift review.',
+        body: 'Table movement, order timing, kitchen status and team activity can later explain revenue, turnover and service results.',
         image: '/site-assets/extra/team-tech-meeting.webp'
       }
     ],
-    bullets: ['Table status', 'Open orders', 'Kitchen progress', 'Reservations', 'Team activity', 'Shift performance']
+    bullets: ['Table status', 'Open orders', 'Kitchen progress', 'Reservations and walk-ins', 'Team activity', 'Shift exceptions']
   },
   'front-of-house': {
     label: 'Front of House',
-    eyebrow: 'For front of house',
-    title: 'Stay close to tables, guests and the next action.',
-    intro: 'Keep service teams focused on the tables, orders, requests and payment moments that shape the guest experience during the shift.',
+    eyebrow: 'For front of house - 6 service signals',
+    title: 'Keep assigned tables, order notes, guest requests and checkout status in one service view.',
+    intro: 'Front-of-house teams can focus on six service signals without unrelated ownership or admin controls, while each action remains attached to the correct table and ticket.',
     heroImage: '/site-assets/staff/1.webp',
     accent: 'orange',
     highlights: [
-      ['Tables first', 'See the table context that matters for service without unrelated ownership or admin information.'],
-      ['Orders in context', 'Keep ordered items, notes and the guest journey attached to the right table.'],
-      ['Guest requests', 'Bring service calls and table requests into the same front-of-house workflow.'],
-      ['Checkout awareness', 'Stay aware of bill and payment status as the table moves toward the end of the meal.']
+      ['Assigned tables', 'See the tables and service stage owned by the current team member or section.'],
+      ['Orders and notes', 'Keep ordered items, modifiers, allergies and service notes attached to the table context.'],
+      ['Guest requests', 'Receive waiter calls and digital service requests in the same queue used for table work.'],
+      ['Checkout awareness', 'See when a table is viewing the bill, splitting it or completing payment so the next service action is clear.']
     ],
     story: [
       {
-        title: 'The workspace follows the service rhythm.',
-        body: 'Front-of-house teams need fast access to the guest and table information that helps them act now, not a dashboard built for ownership.',
+        title: 'The workspace follows the real service sequence.',
+        body: 'Seat, order, request, serve and settle are visible as table actions, not as unrelated messages across different tools.',
         image: '/site-assets/staff/4.webp'
       },
       {
-        title: 'Guest actions stay connected to the people serving them.',
-        body: 'QR ordering and digital requests can feed into the restaurant workflow without removing the human service experience.',
+        title: 'Guest digital actions remain accountable restaurant work.',
+        body: 'A QR order or service request reaches the responsible front-of-house or kitchen queue with the table and order context attached.',
         image: '/site-assets/comments/5.webp'
       }
     ],
-    bullets: ['Assigned tables', 'Orders & notes', 'Guest requests', 'Waiter calls', 'Order status', 'Checkout context']
+    bullets: ['Assigned tables', 'Orders and modifiers', 'Guest requests', 'Waiter calls', 'Order status', 'Checkout status']
   },
   kitchen: {
     label: 'Kitchen & KDS',
-    eyebrow: 'For kitchen & KDS',
-    title: 'See what needs to be prepared next.',
-    intro: 'Turn incoming orders into a focused preparation queue with the details, timing and status the kitchen needs during service.',
+    eyebrow: 'For kitchen - 4 ticket states',
+    title: 'Move every ticket from received to preparing, ready and handed off.',
+    intro: 'The kitchen workspace keeps item detail, modifiers, timing and four visible ticket states in one preparation queue, without unrelated table or business controls.',
     heroImage: '/site-assets/kitchen/1.webp',
     accent: 'orange',
     highlights: [
-      ['Focused ticket view', 'Keep preparation work visible without unrelated front-of-house or ownership information.'],
-      ['Notes & item detail', 'Carry the preparation context the kitchen needs into the ticket itself.'],
-      ['Timing visibility', 'Follow ticket time and preparation progress as the shift develops.'],
-      ['Ready-to-serve handoff', 'Make the next service step visible when an order is ready to leave the kitchen.']
+      ['Focused queue', 'Sort incoming work by time, station, course or priority using the context available in the configured KDS.'],
+      ['Item and modifier detail', 'Keep preparation notes, quantities, modifiers and sold-out information visible on the ticket.'],
+      ['Timing and progress', 'See how long work has been waiting and which tickets are received, preparing or ready.'],
+      ['Ready handoff', 'Publish ready status to front of house and management so the service handoff has a clear completion signal.']
     ],
     story: [
       {
-        title: 'Kitchen information should be operational, not decorative.',
-        body: 'A KDS is useful when the team can read priorities, notes and status quickly during real preparation work.',
+        title: 'A useful KDS makes priority and completion obvious.',
+        body: 'The kitchen should be able to read what to prepare, how it differs, how long it has waited and which status comes next at a glance.',
         image: '/site-assets/kitchen/2.webp'
       },
       {
-        title: 'Ready status should reach the next role.',
-        body: 'Preparation is one part of the guest journey. The handoff back to the floor should stay visible and easy to act on.',
+        title: 'Ready status belongs to the next role as well.',
+        body: 'When preparation is complete, front of house and managers receive the status needed to finish the table journey.',
         image: '/site-assets/extra/team-planning.webp'
       }
     ],
-    bullets: ['Kitchen tickets', 'Preparation queue', 'Order notes', 'Ticket timing', 'Ready status', 'Front-of-house handoff']
+    bullets: ['Received tickets', 'Preparing tickets', 'Ready tickets', 'Item and modifier detail', 'Ticket timing', 'Front-of-house handoff']
   },
   reservations: {
     label: 'Reservations',
-    eyebrow: 'For reservations & reception',
-    title: 'Plan arrivals with the floor in view.',
-    intro: 'Give reservation and reception teams the booking, arrival and table context they need to make the next seating decision easier.',
+    eyebrow: 'For reservations - 6 planning signals',
+    title: 'Match arrivals and walk-ins to live table capacity.',
+    intro: 'Use upcoming arrivals, party size, table availability, turn timing, walk-ins and multi-floor context to make the next seating decision with the real floor in view.',
     heroImage: '/site-assets/extra/host-stand.webp',
     accent: 'blue',
     highlights: [
-      ['Upcoming arrivals', 'See what is arriving next and how party size shapes the near-term floor plan.'],
-      ['Calendar & timeline', 'Move between planning views depending on whether the team is looking ahead or working live.'],
-      ['Table context', 'Keep free, occupied and reservation-ready tables close to the booking workflow.'],
-      ['Guest coordination', 'Keep the booking story visible from confirmation through arrival and seating.']
+      ['Upcoming arrivals', 'See arrival time, party size and booking status before the guest reaches the door.'],
+      ['Calendar and timeline', 'Use planning views for the day ahead and a live sequence for the service period.'],
+      ['Availability and turn timing', 'Combine free, occupied and reservation-ready tables with expected turnover.'],
+      ['Walk-ins and floor assignment', 'Add unplanned arrivals without losing the booking load or multi-floor capacity picture.']
     ],
     story: [
       {
-        title: 'A booking list becomes more useful with floor context.',
-        body: 'Reservations are easier to act on when the team can understand what is arriving alongside what the restaurant floor can support.',
+        title: 'Turn the booking list into a live seating plan.',
+        body: 'A reservation becomes actionable when arrival timing and party size are read alongside the tables that can support it.',
         image: '/site-assets/extra/shared-table-feast.webp'
       },
       {
-        title: 'Plan ahead, then operate in real time.',
-        body: 'Calendar and timeline views help with preparation while live table visibility helps with the decisions happening at the door.',
+        title: 'Plan ahead, then keep operating in real time.',
+        body: 'Calendar and timeline views support preparation while live availability, walk-ins and table assignment support decisions at the door.',
         image: '/site-assets/custom/reservations-floor-story.webp'
       }
     ],
-    bullets: ['Reservation calendar', 'Timeline view', 'Upcoming arrivals', 'Party size', 'Table availability', 'Seating context']
+    bullets: ['Upcoming arrivals', 'Party size', 'Calendar and timeline', 'Table availability', 'Walk-ins', 'Multi-floor seating']
   },
   finance: {
     label: 'Finance & Reporting',
-    eyebrow: 'For finance & reporting',
-    title: 'Turn restaurant activity into cleaner business reporting.',
-    intro: 'Bring revenue, payment activity, sales categories and reporting views together for the people responsible for the business side of service.',
+    eyebrow: 'For finance - 6 reporting views',
+    title: 'Trace revenue and payment results back to the restaurant activity behind them.',
+    intro: 'Use revenue, category sales, payment activity, average check, best sellers and period comparisons to build cleaner reporting with the operating context still available.',
     heroImage: '/site-assets/owner/2.webp',
     accent: 'green',
     highlights: [
-      ['Revenue visibility', 'Follow sales and revenue information from the same restaurant environment that produced it.'],
-      ['Payment context', 'Keep payment activity connected to the operating picture instead of treating it as an isolated endpoint.'],
-      ['Category performance', 'Use sales and menu categories to understand where revenue is coming from.'],
-      ['Reporting support', 'Use available reporting and export views to support the finance workflow around the restaurant.']
+      ['Revenue by period or location', 'Compare the reporting period or location using the available sales data and keep the source scope explicit.'],
+      ['Payment activity', 'Review payment method, status and settlement context alongside the table or order journey that produced it.'],
+      ['Category and item performance', 'See which menu categories or items contribute revenue and where margin questions need deeper review.'],
+      ['AI-assisted comparison', 'Summarise period or location changes and identify the source report that finance should verify next.']
     ],
     story: [
       {
-        title: 'Keep financial reporting close to restaurant context.',
-        body: 'Numbers are easier to understand when they can be read alongside the tables, order channels and operating activity behind them.',
+        title: 'A business number is easier to trust when its scope is clear.',
+        body: 'Reporting should state the location, period, channels, payment mix and operating activity included in the result.',
         image: '/site-assets/extra/tablet-dashboard.webp'
       },
       {
-        title: 'Use AI to explore the story behind a number.',
-        body: 'Where data is available, AI assistance can help owners and reporting teams compare periods, summarise changes and frame useful follow-up questions.',
+        title: 'Use AI to frame the next finance question, not to approve the answer.',
+        body: 'AI assistance can compare and summarise available data while finance verifies the source, accounting treatment and final interpretation.',
         image: '/site-assets/extra/analytics-tablet-phone.webp'
       }
     ],
-    bullets: ['Revenue', 'Sales categories', 'Payment activity', 'Performance views', 'Reporting', 'AI-assisted comparisons']
+    bullets: ['Revenue', 'Sales categories', 'Payment activity', 'Average check', 'Best sellers', 'Period and location comparison']
   }
 };

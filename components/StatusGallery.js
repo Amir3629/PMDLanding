@@ -6,10 +6,10 @@ export function StatusGallery() {
       <div className="container">
         <div className="splitHeading">
           <div>
-            <span className="eyebrow">Shared context, different views</span>
-            <h2>The restaurant stays coordinated without putting everyone on the same screen.</h2>
+            <span className="eyebrow">4 moments that need shared status</span>
+            <h2>Keep the table, ticket and payment state visible so teams do not repeat the same status check.</h2>
           </div>
-          <p>Guest, front-of-house, kitchen and payment moments can stay related while each person sees the status and actions that belong to their role.</p>
+          <p>Guests, front of house, kitchen and payment workflows can use different screens while reading the same underlying restaurant context.</p>
         </div>
         <div className="statusGrid">
           {homeStatusCards.map((card, index) => (

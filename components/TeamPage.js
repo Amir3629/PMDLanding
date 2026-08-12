@@ -25,10 +25,10 @@ export default function TeamPage({ page }) {
             <article className={`storyFeature ${index % 2 ? 'reverse' : ''}`} key={item.title}>
               <div className="storyFeatureImage"><img src={item.image} alt="" loading="lazy" /></div>
               <div className="storyFeatureCopy">
-                <span className="eyebrow">Workspace in context</span>
+                <span className="eyebrow">Role workflow in context</span>
                 <h2>{item.title}</h2>
                 <p>{item.body}</p>
-                <a className="textArrow" href="/teams">Explore all team workspaces <Icon name="arrow" size={15}/></a>
+                <a className="textArrow" href="/teams">Compare all 6 workspaces <Icon name="arrow" size={15}/></a>
               </div>
             </article>
           ))}
@@ -38,9 +38,9 @@ export default function TeamPage({ page }) {
       <section className="section capabilitySection">
         <div className="container capabilityPanel">
           <div>
-            <span className="eyebrow">Role-focused workspace</span>
-            <h2>Keep the right information close to the responsibility.</h2>
-            <p>PayMyDine separates role views so people can stay focused while the restaurant continues to operate as one system.</p>
+            <span className="eyebrow">Signals and controls for this role</span>
+            <h2>Show the information needed for the job without exposing unrelated admin controls.</h2>
+            <p>Role-based access changes what a person can see and do. The underlying table, order, kitchen, reservation and payment context remains part of one restaurant flow.</p>
           </div>
           <div className="capabilityList">
             {page.bullets.map((item) => <span key={item}><Icon name="check" size={16}/>{item}</span>)}
@@ -49,8 +49,8 @@ export default function TeamPage({ page }) {
       </section>
 
       <CTA
-        title={`Want to see the ${page.label} workspace in context?`}
-        body="Book a demo and we’ll walk through the roles, modules and operating flow that fit your restaurant."
+        title={`See the ${page.label} workspace with your real roles and workflow.`}
+        body="Bring your current responsibilities, handoffs and reporting questions. We will map them to the controls and context this workspace should include."
       />
     </>
   );
