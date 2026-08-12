@@ -1,0 +1,18 @@
+.next/
+node_modules/
+.vercel/
+Archive/
+reference/
+__MACOSX/
+_backup*/
+*.zip
+
+# Keep original high-resolution generation library on the Mac only.
+public/Images/
+public/assets/
+
+# Deploy optimized JPG/WebP copies instead of raw duplicated PNGs.
+public/site-assets/**/*.png
+
+IMAGE-AUDIT.md
+*.DS_Store
