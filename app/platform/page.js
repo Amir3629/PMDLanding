@@ -11,21 +11,21 @@ export default function PlatformPage() {
   return (
     <>
       <PageHero
-        eyebrow="PayMyDine product"
-        title="Nine connected product areas for the modern restaurant."
-        intro="Bring restaurant operations, reservations, ordering, kitchen and menu control, payments, guest growth, analytics, team management and integrations into one adaptable environment."
+        eyebrow="9 product areas - 6 role workspaces"
+        title="One operating layer for the actions, status and metrics behind the restaurant day."
+        intro="Use reservations, tables, ordering, kitchen, payments, guest CRM, analytics, team controls, integrations and AI as connected product areas. Each role receives a focused workspace while management keeps the shared operating picture."
         image="/site-assets/custom/platform-hero.webp"
       />
       <OfferGrid compact />
       <Workflow variant="platform" />
       <section className="section twoUpStorySection">
         <div className="container twoUpStoryGrid">
-          <article><img src={imageGroups.comments[7]} alt=""/><div><span className="eyebrow">Role-aware workflow</span><h2>Carry the right context to the person responsible for the next step.</h2><p>Guest actions, table context and kitchen progress can move through the restaurant while each role sees a workspace focused on its own responsibility.</p></div></article>
-          <article><img src={imageGroups.social[3]} alt=""/><div><span className="eyebrow">Business intelligence</span><h2>Move from live activity to a clearer operating question.</h2><p>Owners and managers can combine performance visibility with AI-assisted summaries and comparisons around the restaurant data available to them.</p></div></article>
+          <article><img src={imageGroups.comments[7]} alt=""/><div><span className="eyebrow">Role-aware workflow</span><h2>Move table, order and guest context to the role responsible for the next action.</h2><p>Front of house receives service work, kitchen receives preparation work, reservations receives arrivals and managers receive exceptions without copying information between systems.</p></div></article>
+          <article><img src={imageGroups.social[3]} alt=""/><div><span className="eyebrow">9 decision metrics</span><h2>Track the number, comparison period and operating context behind it.</h2><p>Review revenue, guests, average check, table turnover, sales timing, best sellers, payment mix, forecasting and profitability, then use AI assistance to ask why a signal changed.</p></div></article>
         </div>
       </section>
       <InteractiveDemos variant="platform" />
-      <CTA title="Want to see how the PayMyDine product areas fit your restaurant?" body="We can walk through the nine product areas, the existing team workspaces and the integrations relevant to your setup." />
+      <CTA title="Choose the product areas that remove the most duplicate work first." body="We can map all 9 areas to your current tools, team responsibilities and reporting needs, then define a practical first scope." />
     </>
   );
 }

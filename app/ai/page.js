@@ -4,23 +4,23 @@ import { Icon } from '@/components/Icons';
 
 export const metadata = {
   title: 'PayMyDine AI',
-  description: 'AI assistance for restaurant summaries, performance questions, patterns and decision support inside PayMyDine.'
+  description: 'AI assistance for restaurant questions, daily briefings, alerts, comparisons, forecasts and next-step investigation.'
 };
 
 const questions = [
-  ['Ask questions', 'Ask natural questions about restaurant performance, guests, operations, menu behaviour and profitability.'],
-  ['Daily AI briefing', 'Start the day with a concise view of the signals, changes and priorities that deserve attention.'],
-  ['Smart alerts', 'Surface unusual movement and meaningful changes so the team can investigate what matters sooner.'],
-  ['Forecasting', 'Use historical and live signals to support demand, sales and profitability forecasting.']
+  ['Ask a business question', 'Ask about revenue, guests, average check, table turnover, sales timing, best sellers, payment mix or profitability using the data available in the configured environment.'],
+  ['Receive a daily briefing', 'Summarise the previous period, highlight unusual movement and list the metrics or locations that deserve a closer look.'],
+  ['Investigate an alert', 'Move from an unusual signal to the source period, category, location or operating context behind it.'],
+  ['Compare and forecast', 'Compare periods or locations and use historical patterns to support demand, sales and profitability forecasting.']
 ];
 
 export default function AIPage() {
   return (
     <>
       <PageHero
-        eyebrow="PayMyDine AI"
-        title="Ask better questions of your restaurant data."
-        intro="PayMyDine AI is designed to make restaurant information easier to explore, summarise and understand—so owners and managers can move from data to a clearer next question."
+        eyebrow="6 AI-assisted actions"
+        title="Ask what changed, compare the source data and decide what to inspect next."
+        intro="PayMyDine AI can support questions, daily briefings, alerts, comparisons, forecasting and next-step investigation across the restaurant data available in your setup. It supports decisions; it does not replace them."
         image="/site-assets/owner/2.webp"
         accent="green"
       />
@@ -40,19 +40,19 @@ export default function AIPage() {
           <article className="storyFeature">
             <div className="storyFeatureImage"><img src="/site-assets/extra/manager-analytics.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
-              <span className="eyebrow">AI with restaurant context</span>
-              <h2>Useful assistance starts with the information behind the question.</h2>
-              <p>AI becomes more valuable when it can work alongside the sales, table, reservation, kitchen and menu signals already visible in the restaurant operating environment.</p>
-              <a className="textArrow" href="/solutions/insights">Explore restaurant insights <Icon name="arrow" size={15}/></a>
+              <span className="eyebrow">9 metrics in context</span>
+              <h2>Start with a number, then keep the comparison period and operating cause visible.</h2>
+              <p>Revenue, guests, average check, table turnover, sales timing, best sellers, payment mix, forecasts and profitability are more useful when the owner can move from the summary to the source view behind it.</p>
+              <a className="textArrow" href="/solutions/insights">See the 9 management metrics <Icon name="arrow" size={15}/></a>
             </div>
           </article>
           <article className="storyFeature reverse">
             <div className="storyFeatureImage"><img src="/site-assets/extra/tablet-dashboard.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
-              <span className="eyebrow">Decision support</span>
-              <h2>AI should make the picture easier to understand, not hide the source.</h2>
-              <p>Summaries and observations should support human decisions. Owners and managers still need the underlying restaurant context to verify, compare and decide what to do next.</p>
-              <a className="textArrow" href="/teams/owner">Explore the owner workspace <Icon name="arrow" size={15}/></a>
+              <span className="eyebrow">Decision support, not autopilot</span>
+              <h2>Use AI to shorten investigation time while the team verifies and decides.</h2>
+              <p>Every summary depends on the modules, data quality, comparison period and integrations available. The restaurant team keeps control of the operational or commercial action.</p>
+              <a className="textArrow" href="/teams/owner">See the owner decision view <Icon name="arrow" size={15}/></a>
             </div>
           </article>
         </div>
@@ -61,24 +61,24 @@ export default function AIPage() {
       <section className="section capabilitySection">
         <div className="container capabilityPanel">
           <div>
-            <span className="eyebrow">AI assistance, not autopilot</span>
-            <h2>Use AI to understand the restaurant. Keep decisions with the team.</h2>
-            <p>Available AI outputs depend on the data, modules and restaurant configuration available in the PayMyDine environment.</p>
+            <span className="eyebrow">Available AI actions</span>
+            <h2>Ask, summarise, compare, alert, forecast and investigate.</h2>
+            <p>Exact outputs depend on the data, modules, locations and connected systems available in the PayMyDine environment.</p>
           </div>
           <div className="capabilityList">
-            <span><Icon name="check" size={16}/>Ask questions</span>
+            <span><Icon name="check" size={16}/>Natural-language questions</span>
             <span><Icon name="check" size={16}/>Daily AI briefing</span>
             <span><Icon name="check" size={16}/>Smart alerts</span>
-            <span><Icon name="check" size={16}/>Forecasting</span>
-            <span><Icon name="check" size={16}/>Profitability by item or location</span>
-            <span><Icon name="check" size={16}/>Next best action</span>
+            <span><Icon name="check" size={16}/>Period and location comparison</span>
+            <span><Icon name="check" size={16}/>Forecasting support</span>
+            <span><Icon name="check" size={16}/>Next metric to investigate</span>
           </div>
         </div>
       </section>
 
       <CTA
-        title="Want to explore AI around your restaurant workflow?"
-        body="We can show how AI assistance fits alongside the PayMyDine data, roles and operating views relevant to your setup."
+        title="Bring one real management question to an AI demo."
+        body="We will identify which PayMyDine data is needed, show the source views behind the answer and explain where human review remains essential."
       />
     </>
   );

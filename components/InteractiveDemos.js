@@ -13,9 +13,9 @@ export default function InteractiveDemos({ variant = 'home' }) {
     <section className="section demoSection" id="demo">
       <div className="container">
         <div className="sectionHeading centerHeading demoSectionHeading">
-          <span className="eyebrow">Two sides of the same restaurant</span>
-          <h2>Give each person the view that fits the moment.</h2>
-          <p>Ownership can follow performance and priorities while guests get a simple ordering journey—without turning both experiences into the same interface.</p>
+          <span className="eyebrow">Two interfaces, one restaurant context</span>
+          <h2>Management needs operating metrics. Guests need a short path to the next table action.</h2>
+          <p>PayMyDine does not force both audiences into the same screen. The owner view can show business and service signals while the guest view stays focused on browse, order, request and pay.</p>
         </div>
 
         <div className="demoShowcaseGrid">
@@ -24,9 +24,9 @@ export default function InteractiveDemos({ variant = 'home' }) {
               <img src={ownerImage} alt="PayMyDine owner and restaurant operations workflow" loading="lazy" />
             </div>
             <div className="demoShowcaseCopy">
-              <span>Owner & management</span>
-              <h3>A decision view of the restaurant day.</h3>
-              <p>Follow live performance, floor activity and the operating signals that deserve attention without working inside every team screen.</p>
+              <span>Owner and management</span>
+              <h3>Review revenue, guests, tables, orders, kitchen status and exceptions from one decision view.</h3>
+              <p>Move from a high-level metric to the floor, order channel or item detail behind it without opening every role workspace.</p>
             </div>
           </article>
 
@@ -36,8 +36,8 @@ export default function InteractiveDemos({ variant = 'home' }) {
             </div>
             <div className="demoShowcaseCopy">
               <span>Guest journey</span>
-              <h3>A direct path from the table to the next action.</h3>
-              <p>Let guests browse, order, request service and move toward checkout while the restaurant team keeps the operating context behind the experience.</p>
+              <h3>Four clear actions: scan, browse, order and settle the table.</h3>
+              <p>The mobile journey can keep table context attached through service requests and checkout, including equal, item-based and share-based bill splitting.</p>
             </div>
           </article>
         </div>

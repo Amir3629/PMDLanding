@@ -4,8 +4,8 @@ export const productAreas = [
     icon: 'chart',
     title: 'PayMyDine AI',
     href: '/ai',
-    body: 'Ask questions, get daily briefings, smart alerts, forecasts and next-best-action guidance.',
-    navNote: 'Questions, briefings, alerts, forecasting and profitability guidance.',
+    body: 'Use 6 AI-assisted actions: ask questions, receive a daily briefing, flag unusual movement, compare periods, support forecasts and identify the next metric to investigate.',
+    navNote: '6 actions for questions, briefings, alerts, comparisons, forecasts and investigation.',
     image: '/site-assets/owner/2.webp',
     compactImage: '/site-assets/social/7.webp'
   },
@@ -14,8 +14,8 @@ export const productAreas = [
     icon: 'operations',
     title: 'Restaurant Operations',
     href: '/solutions/operations',
-    body: 'Run dashboards, orders, tables, floor maps and dine-in or takeaway activity from one operating view.',
-    navNote: 'Dashboard, orders, tables, floor maps and live restaurant activity.',
+    body: 'Monitor 6 live views: dashboard, open orders, table status, floor maps, dine-in or takeaway and current restaurant activity.',
+    navNote: '6 live views for orders, tables, floor maps, channels and active service.',
     image: '/site-assets/table/11.webp',
     compactImage: '/site-assets/custom/shared-restaurant-hero-16.webp'
   },
@@ -24,8 +24,8 @@ export const productAreas = [
     icon: 'calendar',
     title: 'Reservations & Table Management',
     href: '/solutions/reservations',
-    body: 'Manage calendars, availability, walk-ins, table assignments, guest flow and multiple floors.',
-    navNote: 'Calendar, timeline, availability, seating and multi-floor table planning.',
+    body: 'Plan 7 reservation and seating tasks: calendar, timeline, availability, walk-ins, table assignment, guest flow and multiple floors.',
+    navNote: '7 planning tools for arrivals, capacity, seating, walk-ins and multiple floors.',
     image: '/site-assets/table/1.webp',
     compactImage: '/site-assets/table/2.webp'
   },
@@ -34,8 +34,8 @@ export const productAreas = [
     icon: 'kitchen',
     title: 'Ordering, Kitchen & Menu',
     href: '/solutions/kitchen',
-    body: 'Connect waiter ordering, KDS preparation, menu management, customization and sold-out status.',
-    navNote: 'Waiter ordering, KDS, preparation, menu management and sold-out control.',
+    body: 'Move orders through 7 controls: waiter entry, KDS, preparation status, ready status, menu management, modifiers and sold-out items.',
+    navNote: '7 order, kitchen and menu controls from entry to ready handoff.',
     image: '/site-assets/extra/chef-warm-kitchen.webp',
     compactImage: '/site-assets/kitchen/2.webp'
   },
@@ -44,8 +44,8 @@ export const productAreas = [
     icon: 'card',
     title: 'Payments & Guest Ordering',
     href: '/solutions/payments',
-    body: 'Combine card and digital payments, pay-at-table, split bills, table QR, mobile menus and guest checkout.',
-    navNote: 'Payments, split bills, table QR, mobile menu and guest checkout.',
+    body: 'Cover 8 guest-ordering and payment moments, including table QR, mobile menu, pay-at-table and 3 split methods: equally, by item or by shares.',
+    navNote: '8 ordering and payment moments, including 3 bill-split methods.',
     image: '/site-assets/payment/1.webp',
     compactImage: '/site-assets/payment/3.webp'
   },
@@ -54,8 +54,8 @@ export const productAreas = [
     icon: 'chart',
     title: 'Analytics, Forecasting & Profitability',
     href: '/solutions/insights',
-    body: 'Understand revenue, guests, average check, table turnover, sales patterns, payment mix and profitability.',
-    navNote: 'Revenue, demand, forecasting, best sellers and profitability by item or location.',
+    body: 'Track 9 decision metrics: revenue, guests, average check, table turnover, sales by time, best sellers, payment mix, forecasting and profitability.',
+    navNote: '9 metrics for revenue, demand, table performance, forecasts and profitability.',
     image: '/site-assets/extra/manager-analytics.webp',
     compactImage: '/site-assets/extra/analytics-tablet-phone.webp'
   },
@@ -64,8 +64,8 @@ export const productAreas = [
     icon: 'team',
     title: 'Team Management',
     href: '/solutions/team',
-    body: 'Manage role workspaces, permissions, shifts, performance and staff activity in one team layer.',
-    navNote: 'Role workspaces, permissions, shifts, performance and staff activity.',
+    body: 'Coordinate 5 people controls: role workspaces, permissions, shifts, performance context and staff activity.',
+    navNote: '5 people controls across workspaces, permissions, shifts and staff activity.',
     image: '/site-assets/staff/1.webp',
     compactImage: '/site-assets/staff/6.webp'
   },
@@ -74,8 +74,8 @@ export const productAreas = [
     icon: 'phone',
     title: 'Guest CRM, Marketing & Growth',
     href: '/solutions/guest-ordering',
-    body: 'Build richer guest profiles and turn loyalty, offers, campaigns and feedback into repeat visits.',
-    navNote: 'Profiles, loyalty, offers, campaigns, feedback and retention.',
+    body: 'Use 6 growth tools: profiles, loyalty, offers, campaigns, feedback and retention, with visit context available for relevant follow-up.',
+    navNote: '6 CRM and growth tools for guest context, engagement and retention.',
     image: '/site-assets/social/18.webp',
     compactImage: '/site-assets/comments/7.webp'
   },
@@ -84,8 +84,8 @@ export const productAreas = [
     icon: 'link',
     title: 'Integrations, Multi-location & Inventory',
     href: '/integrations',
-    body: 'Connect POS, accounting, delivery and payment providers while supporting central control, menus, reporting and inventory.',
-    navNote: 'POS, accounting, delivery, payments, central control, inventory and purchasing.',
+    body: 'Connect 4 system types - POS, accounting, delivery and payments - then add central reporting, shared menus, inventory, food-cost and purchasing context.',
+    navNote: '4 integration types plus central reporting, menus, inventory, food cost and purchasing.',
     image: '/site-assets/custom/integrations-capabilities-fit.webp',
     compactImage: '/site-assets/custom/integrations-operating-picture.webp'
   }
@@ -122,17 +122,17 @@ export const primaryNav = [
       {
         title: 'Restaurant leadership',
         links: [
-          ['Owner', '/teams/owner', 'A decision-focused view of performance, priorities and the restaurant day.'],
-          ['Manager', '/teams/manager', 'Live operational context for tables, service, kitchen and the shift.'],
-          ['Finance & reporting', '/teams/finance', 'Revenue, payment and reporting views for the business side of service.']
+          ['Owner', '/teams/owner', 'Review 6 business signals: revenue, guests, tables, reservations, kitchen status and top items.'],
+          ['Manager', '/teams/manager', 'Coordinate 5 live queues: tables, orders, kitchen, reservations and team activity.'],
+          ['Finance & reporting', '/teams/finance', 'Use 6 reporting views for revenue, categories, payments, average check, best sellers and comparisons.']
         ]
       },
       {
         title: 'Restaurant teams',
         links: [
-          ['Front of house', '/teams/front-of-house', 'Tables, orders and guest requests without unrelated admin clutter.'],
-          ['Kitchen & KDS', '/teams/kitchen', 'Preparation, timing, notes and ready-to-serve status in one focused view.'],
-          ['Reservations', '/teams/reservations', 'Bookings, arrivals and floor context for reception and reservation teams.']
+          ['Front of house', '/teams/front-of-house', 'See 6 service signals: assigned tables, orders, notes, requests, status and checkout.'],
+          ['Kitchen & KDS', '/teams/kitchen', 'Move tickets through received, preparing, ready and handed-off states with timing and notes visible.'],
+          ['Reservations', '/teams/reservations', 'Use 6 planning signals for arrivals, party size, availability, walk-ins and seating.']
         ]
       }
     ]
@@ -148,35 +148,35 @@ export const homeStatusCards = [
   {
     image: '/site-assets/extra/chef-order-23.webp',
     eyebrow: 'Guest payment',
-    title: 'Checkout stays visible to the table.',
-    body: 'Keep the final payment step easy to understand for both the guest and the restaurant team.'
+    title: 'Keep table and payment status connected through checkout.',
+    body: 'Guests see the amount, available method and confirmation while staff keep bill status attached to the table.'
   },
   {
     image: '/site-assets/comments/14.webp',
     eyebrow: 'Split bills',
-    title: 'Different tables can settle in different ways.',
-    body: 'Support Split Equally, By Order Items and By Shares from the same payment journey.'
+    title: 'One bill supports three split methods.',
+    body: 'Let guests split equally, assign ordered items or divide the total by shares without starting a separate checkout.'
   },
   {
     image: '/site-assets/comments/5.webp',
     eyebrow: 'Team status',
-    title: 'The next action reaches the right role.',
-    body: 'Front-of-house and kitchen teams can follow the order state without sharing the same workspace.'
+    title: 'Order status moves to the role responsible for the next handoff.',
+    body: 'Front of house sees service status, kitchen sees preparation status and management sees exceptions from the same ticket context.'
   },
   {
     image: '/site-assets/comments/10.webp',
     eyebrow: 'Payments & guest ordering',
-    title: 'A table journey that starts on the guest’s phone.',
-    body: 'Bring menu discovery, ordering, service requests and checkout into one mobile path.'
+    title: 'Four guest actions stay in one mobile path.',
+    body: 'A guest can scan, browse, order and pay while table context remains attached to the restaurant workflow.'
   }
 ];
 
 export const workflowSteps = [
-  ['Guest or staff action', 'The journey starts from the table, reservation flow or team workspace.'],
-  ['Restaurant context', 'Table, order and guest context stay attached to the work that follows.'],
-  ['Role-specific action', 'The next team member sees the information needed for their responsibility.'],
-  ['Service & checkout', 'Preparation, service and payment continue without breaking the operating picture.'],
-  ['Insight & assistance', 'Live activity becomes reporting, context and AI-assisted understanding for the business.']
+  ['Guest or staff action', 'A guest scans, reception seats, a waiter opens an order or a manager changes a table.'],
+  ['Restaurant context', 'Table, guest, order, timing, notes and permissions travel with the action.'],
+  ['Role-specific action', 'The responsible role receives a focused queue with the context and controls needed for the next step.'],
+  ['Service & checkout', 'Preparation, ready status, handoff and checkout continue from the same restaurant context.'],
+  ['Insight & assistance', 'Revenue, guest, table, sales and profitability data become available for reporting and AI-assisted questions.']
 ];
 
 export const imageGroups = {
@@ -193,31 +193,31 @@ export const imageGroups = {
 export const solutionPages = {
   operations: {
     eyebrow: 'Restaurant Operations',
-    title: 'Run the restaurant from one clear operating view.',
-    intro: 'Bring the dashboard, orders, tables, floor maps, dine-in and takeaway activity into one live operating layer for the restaurant day.',
+    title: 'See tables, orders and exceptions before they become service problems.',
+    intro: 'Use 6 live views - dashboard, open orders, table status, floor maps, dine-in or takeaway and current activity - to understand what is active, what is waiting and where the shift needs attention.',
     storyEyebrow: 'Restaurant operations',
-    capabilityEyebrow: 'Operating toolkit',
-    capabilityTitle: 'Keep the live restaurant picture close to the people running the shift.',
-    capabilityBody: 'The operating layer keeps daily activity visible without forcing teams to jump between disconnected workflows.',
-    ctaTitle: 'Want to see Restaurant Operations in action?',
-    ctaBody: 'We can focus the demo on dashboards, orders, tables, floor maps and the live activity that matters to your team.',
+    capabilityEyebrow: '6 live operating views',
+    capabilityTitle: 'Check the restaurant state without rebuilding it from separate screens.',
+    capabilityBody: 'Managers can review open orders, occupied tables, order channels, floor position and live exceptions from the same operating context.',
+    ctaTitle: 'See the 6 Restaurant Operations views in your own service flow.',
+    ctaBody: 'Bring your floor plan, order channels and management questions. We will show how the dashboard, tables, orders and live activity fit together.',
     heroImage: '/site-assets/extra/management-app.webp',
     accent: 'green',
     highlights: [
-      ['Dashboard', 'Keep the main restaurant picture visible from one operating view.'],
-      ['Orders', 'Follow open and active orders as service moves through the day.'],
-      ['Tables', 'Keep table status and activity attached to the restaurant context.'],
-      ['Floor maps', 'Understand the floor visually while service is in motion.']
+      ['Dashboard', 'Start with active tables, open orders, sales and exceptions instead of a generic summary.'],
+      ['Orders', 'Filter open, delayed or completed orders and keep each ticket attached to its table and channel.'],
+      ['Tables', 'See occupied, available and payment-stage tables with service status in view.'],
+      ['Floor maps', 'Use the physical floor layout to locate tables, bookings and service pressure.']
     ],
     story: [
       {
-        title: 'From the dashboard to the floor, the operation stays connected.',
-        body: 'Orders, tables, service activity and floor context can stay together so the next decision is easier to see.',
+        title: 'One shift view replaces repeated status checking.',
+        body: 'A manager can move from floor state to order detail without asking each team for a separate update.',
         image: '/site-assets/owner/1.webp'
       },
       {
-        title: 'Built for both dine-in and takeaway.',
-        body: 'Different order channels can still feed one operating picture while each team works from the context it needs.',
+        title: 'Keep dine-in and takeaway distinguishable but connected.',
+        body: 'Each channel keeps its own table or order context while contributing to the same live workload and reporting picture.',
         image: '/site-assets/extra/restaurant-team-planning.webp'
       }
     ],
@@ -225,12 +225,12 @@ export const solutionPages = {
   },
   reservations: {
     eyebrow: 'Reservations & Table Management',
-    title: 'Plan bookings, arrivals and seating with the floor in view.',
-    intro: 'Bring calendar planning, availability, walk-ins, table assignment and guest flow together so the next seating decision is easier to make.',
+    title: 'Match bookings and walk-ins to real floor capacity.',
+    intro: 'Use 7 reservation tools - calendar, timeline, availability, walk-ins, table assignment, guest flow and multiple floors - to plan demand against the live floor.',
     storyEyebrow: 'Reservations & table management',
-    capabilityEyebrow: 'Reservation toolkit',
-    capabilityTitle: 'Keep planning views and live floor context in the same story.',
-    capabilityBody: 'Use the views that help the team prepare ahead, then keep table availability and guest flow close when the restaurant gets busy.',
+    capabilityEyebrow: '7 reservation and seating tools',
+    capabilityTitle: 'Plan ahead with calendar and timeline views, then operate live with availability and table assignment.',
+    capabilityBody: 'Reception can use party size, arrival time, available tables, expected turns, walk-ins and floor position to make the next seating decision.',
     ctaTitle: 'Want to see Reservations & Table Management in action?',
     ctaBody: 'Book a demo and we’ll walk through calendars, arrivals, table assignment, walk-ins and multiple-floor setups.',
     heroImage: '/site-assets/extra/host-stand.webp',
@@ -243,13 +243,13 @@ export const solutionPages = {
     ],
     story: [
       {
-        title: 'A booking view made for restaurant pace.',
-        body: 'Calendar and timeline views help the team understand what is coming before the next guest reaches the door.',
+        title: 'See the shape of arrivals before service starts.',
+        body: 'Calendar and timeline views show arrival load, party sizes and timing so the team can prepare capacity before the door gets busy.',
         image: '/site-assets/extra/shared-table-feast.webp'
       },
       {
-        title: 'The floor stays part of the reservation decision.',
-        body: 'Table assignment, guest flow and multiple floors can stay connected to the booking context.',
+        title: 'Turn a booking list into a live seating plan.',
+        body: 'Availability, walk-ins, expected turns and multi-floor table assignment remain attached to the reservation context.',
         image: '/site-assets/custom/reservations-floor-story.webp'
       }
     ],
@@ -257,12 +257,12 @@ export const solutionPages = {
   },
   'guest-ordering': {
     eyebrow: 'Guest CRM, Marketing & Growth',
-    title: 'Turn guest relationships into a stronger growth loop.',
-    intro: 'Bring guest profiles, loyalty, offers, campaigns and feedback into a connected view designed to support repeat visits and better guest relationships.',
+    title: 'Build a usable guest record from visits, orders and feedback.',
+    intro: 'Use 6 growth tools - profiles, loyalty, offers, campaigns, feedback and retention - to understand engagement and plan relevant follow-up where consent and data rules allow.',
     storyEyebrow: 'Guest relationships',
-    capabilityEyebrow: 'CRM & growth toolkit',
-    capabilityTitle: 'Keep guest context useful before, during and after the visit.',
-    capabilityBody: 'The goal is to turn restaurant interactions into a clearer guest picture that can support retention, loyalty and more relevant marketing.',
+    capabilityEyebrow: '6 CRM and growth tools',
+    capabilityTitle: 'Move from an anonymous visit to relevant follow-up.',
+    capabilityBody: 'Profiles can connect visit history, order preferences, loyalty activity, campaign response and feedback so the next message has a clear reason.',
     ctaTitle: 'Want to explore Guest CRM, Marketing & Growth?',
     ctaBody: 'We can walk through profiles, loyalty, offers, campaigns, feedback and the guest signals that can support retention.',
     heroImage: '/site-assets/extra/scan-to-order.webp',
@@ -275,13 +275,13 @@ export const solutionPages = {
     ],
     story: [
       {
-        title: 'Guest information becomes more useful when it stays connected to the visit.',
-        body: 'The restaurant can use guest context to understand relationships beyond a single order or table moment.',
+        title: 'Build the guest profile from real restaurant interactions.',
+        body: 'Connect visits, orders, preferences and loyalty activity to understand the relationship beyond one table or transaction.',
         image: '/site-assets/extra/qr-service.webp'
       },
       {
-        title: 'Feedback and retention belong in the same growth story.',
-        body: 'Use feedback, offers and engagement signals to understand what brings guests back and where the experience can improve.',
+        title: 'Use feedback to decide the next retention action.',
+        body: 'Combine feedback, offer response and visit frequency to choose whether the next action is service recovery, loyalty or a relevant campaign.',
         image: '/site-assets/extra/cafe-conversations.webp'
       }
     ],
@@ -289,31 +289,31 @@ export const solutionPages = {
   },
   payments: {
     eyebrow: 'Payments & Guest Ordering',
-    title: 'Connect ordering, checkout and flexible ways to pay.',
-    intro: 'Combine card and digital payments, pay-at-table, split-bill flows, table QR, mobile menus and guest checkout in one connected journey.',
+    title: 'Take a table from QR scan to confirmed payment without restarting the journey.',
+    intro: 'Cover 8 guest and payment moments: card or digital payment, pay-at-table, split equally, split by item, split by shares, table QR, mobile menu and guest checkout.',
     storyEyebrow: 'Guest ordering & payment',
-    capabilityEyebrow: 'Guest journey toolkit',
-    capabilityTitle: 'Let the table move naturally from menu discovery to payment.',
-    capabilityBody: 'Ordering and checkout stay connected so guests can choose how they order and how they settle the bill without restarting the journey.',
+    capabilityEyebrow: '8 ordering and payment moments',
+    capabilityTitle: 'Keep the table, order, bill and payment status attached from scan to confirmation.',
+    capabilityBody: 'Guests can scan, browse, order, request service and pay while the restaurant keeps the table and order context visible.',
     ctaTitle: 'Want to explore Payments & Guest Ordering?',
     ctaBody: 'Book a demo and we’ll focus on table QR, mobile menus, guest checkout, pay-at-table and split-bill flows.',
     heroImage: '/site-assets/extra/smoother-checkout.webp',
     accent: 'purple',
     highlights: [
-      ['Card / digital payments', 'Support the payment methods available through the restaurant setup.'],
-      ['Pay at table', 'Give guests a practical way to move from the table journey into checkout.'],
-      ['Split equally', 'Divide the bill evenly across the group when that is the simplest option.'],
-      ['Split by item', 'Let guests assign ordered items to the people paying for them.']
+      ['Card / digital payments', 'Show the card or digital methods available for the configured provider and keep the selected method attached to the bill status.'],
+      ['Pay at table', 'Open the correct bill from the table context and keep payment status visible to the service team.'],
+      ['Split equally', 'Divide the total evenly across the selected number of payers.'],
+      ['Split by item', 'Assign ordered items to individual payers while keeping the remaining balance visible.']
     ],
     story: [
       {
-        title: 'A guest journey that stays connected from menu to checkout.',
-        body: 'Table QR and mobile ordering can carry the guest through the restaurant journey without breaking the connection to the operating flow.',
+        title: 'Four guest actions stay in one mobile path.',
+        body: 'Scan, browse, order and pay remain attached to the table and feed the responsible restaurant role at each step.',
         image: '/site-assets/extra/payment-thank-you.webp'
       },
       {
-        title: 'Flexible payment moments for real tables.',
-        body: 'From a single payer to shared bills, the checkout can adapt to how guests actually want to settle the table.',
+        title: 'One bill supports three split methods.',
+        body: 'Guests can pay as one party or split equally, by ordered item or by shares while the unpaid balance remains visible.',
         image: '/site-assets/custom/cafe-payment-confirmation-replacement.webp'
       }
     ],
@@ -321,31 +321,31 @@ export const solutionPages = {
   },
   kitchen: {
     eyebrow: 'Ordering, Kitchen & Menu',
-    title: 'Connect waiter ordering, kitchen flow and menu control.',
-    intro: 'Keep waiter ordering, KDS preparation, menu management, customization and sold-out information aligned from the first order to the ready handoff.',
+    title: 'Move every order from entry to ready status with menu context attached.',
+    intro: 'Use 7 controls - waiter entry, KDS, preparation status, ready status, menu management, modifiers and sold-out items - from order capture to service handoff.',
     storyEyebrow: 'Ordering, kitchen & menu',
-    capabilityEyebrow: 'Ordering & menu toolkit',
-    capabilityTitle: 'Keep the order, preparation and menu state in one connected flow.',
-    capabilityBody: 'The front-of-house order should reach the kitchen clearly, while menu changes and sold-out information stay visible to the people who need them.',
+    capabilityEyebrow: '7 order, kitchen and menu controls',
+    capabilityTitle: 'Give front of house and kitchen the same ticket status without giving them the same screen.',
+    capabilityBody: 'The ticket carries table, item, modifier and timing context into the kitchen while menu and sold-out changes prevent unavailable items from continuing through the flow.',
     ctaTitle: 'Want to see Ordering, Kitchen & Menu in action?',
     ctaBody: 'We can show waiter ordering, KDS preparation, menu management, customization and ready-status handoff around your operation.',
     heroImage: '/site-assets/extra/chef-warm-kitchen.webp',
     accent: 'orange',
     highlights: [
-      ['Waiter ordering', 'Capture the order in the service workflow and keep it attached to the right table.'],
-      ['KDS', 'Give the kitchen a focused preparation workspace for incoming work.'],
-      ['Preparation status', 'Keep received and in-progress work visible as the kitchen moves.'],
-      ['Ready status', 'Make the handoff back to the service team easy to follow.']
+      ['Waiter ordering', 'Create the order from the waiter or guest flow and attach the correct table, items, modifiers and notes.'],
+      ['KDS', 'Place incoming tickets in a focused KDS queue with item detail, timing and priority context.'],
+      ['Preparation status', 'Show received and preparing states so kitchen and management can see what is waiting and what is active.'],
+      ['Ready status', 'Publish ready status to front of house so the completed ticket has a clear next owner.']
     ],
     story: [
       {
-        title: 'The order should reach the kitchen with the context it needs.',
-        body: 'A focused KDS keeps preparation details, notes and status readable when service gets busy.',
+        title: 'The kitchen receives the complete preparation context, not a copied order summary.',
+        body: 'Item detail, modifiers, ticket age and current state remain visible in the preparation queue during service.',
         image: '/site-assets/kitchen/2.webp'
       },
       {
-        title: 'Menu control stays part of the operating flow.',
-        body: 'Menu management, customization and sold-out information can stay aligned with what the restaurant can actually serve.',
+        title: 'Menu availability prevents the next avoidable ticket problem.',
+        body: 'Menu, modifier and sold-out changes update the ordering context so unavailable or incorrectly configured items do not continue into preparation.',
         image: '/site-assets/extra/team-planning.webp'
       }
     ],
@@ -353,31 +353,31 @@ export const solutionPages = {
   },
   team: {
     eyebrow: 'Team Management',
-    title: 'Manage people, permissions and performance around the restaurant day.',
-    intro: 'Give every role the right workspace while keeping roles, permissions, shift management, performance and staff activity connected to one restaurant operation.',
+    title: 'Give each role the controls it needs and management the team picture.',
+    intro: 'Coordinate 5 people controls - role workspaces, permissions, shifts, performance context and staff activity - without putting every employee in the same admin screen.',
     storyEyebrow: 'Team management',
-    capabilityEyebrow: 'People & permissions',
-    capabilityTitle: 'Keep each role focused while management keeps the wider team visible.',
-    capabilityBody: 'Separate workspaces reduce interface noise without separating the restaurant into disconnected systems.',
+    capabilityEyebrow: '5 team controls',
+    capabilityTitle: 'Limit access and interface noise while preserving the handoff between roles.',
+    capabilityBody: 'Owners, managers, front of house, kitchen, reservations and finance can see different controls while using the same table, order and business context.',
     ctaTitle: 'Want to explore Team Management?',
     ctaBody: 'Book a demo and we’ll map role workspaces, permissions, shifts, performance and staff activity around your team structure.',
     heroImage: '/site-assets/extra/role-dashboard.webp',
     accent: 'green',
     highlights: [
-      ['Role workspaces', 'Give each person the view that matches the work they are responsible for.'],
-      ['Roles & permissions', 'Control access deliberately so the right people see the right information.'],
-      ['Shift management', 'Keep staffing and day-to-day shift context easier to coordinate.'],
-      ['Performance insight', 'Bring team activity and performance context closer to management.']
+      ['Role workspaces', 'Assign a focused queue and set of actions to the role responsible for the work.'],
+      ['Roles & permissions', 'Define view, create, change, approve and export permissions by role.'],
+      ['Shift management', 'Keep shift assignment and active team context close to the work being coordinated.'],
+      ['Performance insight', 'Review completed actions, timing and service outcomes with the responsible role and shift context visible.']
     ],
     story: [
       {
-        title: 'The right workspace for the right responsibility.',
-        body: 'Owners, managers, front of house and kitchen teams can work from focused views while staying connected to the same restaurant operation.',
+        title: 'Six workspaces organise access around real restaurant responsibilities.',
+        body: 'Owners, managers, front of house, kitchen, reservations and finance can use focused views while the handoff context stays connected.',
         image: '/site-assets/extra/taqueria-handoff.webp'
       },
       {
-        title: 'Staff activity stays visible without adding noise.',
-        body: 'Management can keep the wider team picture while each role stays focused on the actions that belong to it.',
+        title: 'Management sees team activity without exposing management controls to every role.',
+        body: 'Managers can review assignments, active work and completion status while each role continues to see only the controls required for its responsibility.',
         image: '/site-assets/extra/latte-handoff.webp'
       }
     ],
@@ -385,31 +385,31 @@ export const solutionPages = {
   },
   insights: {
     eyebrow: 'Analytics, Forecasting & Profitability',
-    title: 'See what is happening, what is changing and where profitability is moving.',
-    intro: 'Bring revenue, guests, average check, table turnover, sales timing, best sellers, payment mix, forecasting and profitability into one decision-focused view.',
+    title: 'Track 9 metrics that explain revenue, demand and margin.',
+    intro: 'Compare revenue, guests, average check, table turnover, sales by time, best sellers, payment mix, forecasting and profitability by item or location.',
     storyEyebrow: 'Analytics & profitability',
-    capabilityEyebrow: 'Decision toolkit',
-    capabilityTitle: 'Turn restaurant activity into a clearer financial and operating picture.',
-    capabilityBody: 'Live analytics become more useful when demand, sales, tables, payment mix and item or location profitability can be understood together.',
+    capabilityEyebrow: '9 management metrics',
+    capabilityTitle: 'Compare the number, the period and the operating context behind it.',
+    capabilityBody: 'A metric should state its period, location, channels and source context so management can trace a change to the restaurant activity behind it.',
     ctaTitle: 'Want to explore Analytics, Forecasting & Profitability?',
     ctaBody: 'We can show the signals behind revenue, guests, table performance, forecasting, best sellers and profitability by item or location.',
     heroImage: '/site-assets/custom/insights-hero.webp',
     accent: 'blue',
     highlights: [
-      ['Revenue', 'Track restaurant revenue and sales movement in the operating picture.'],
-      ['Guests', 'Understand guest volume and demand across the restaurant.'],
-      ['Average check', 'See how spend per guest is changing over time.'],
-      ['Table turnover', 'Understand how the floor is performing as service moves.']
+      ['Revenue', 'Compare revenue by period, service window, channel or location where the configured data supports it.'],
+      ['Guests', 'Track guest count or covers to explain demand and calculate spend per guest.'],
+      ['Average check', 'Calculate average check from revenue and guest count, then compare the result by period or location.'],
+      ['Table turnover', 'Review how many parties tables serve and how long tables remain in each service stage.']
     ],
     story: [
       {
-        title: 'A clearer view for daily decisions.',
-        body: 'Bring revenue, order channels, guest activity, best sellers and payment mix into one operating picture.',
+        title: 'Nine metrics create one decision view.',
+        body: 'Read revenue and demand alongside order channels, guest activity, table performance, best sellers and payment mix.',
         image: '/site-assets/extra/manager-analytics.webp'
       },
       {
-        title: 'Forecasting becomes more useful when profitability stays visible.',
-        body: 'Use sales patterns, demand signals and profitability by item or location to understand what deserves attention next.',
+        title: 'Compare forecasts with actual demand and margin.',
+        body: 'Use historical sales and demand patterns to support a forecast, then compare it with actual results and profitability by item or location.',
         image: '/site-assets/extra/analytics-tablet-phone.webp'
       }
     ],
@@ -422,7 +422,7 @@ export const resources = [
     slug: 'getting-started',
     title: 'Getting started with PayMyDine',
     category: 'Implementation',
-    intro: 'A practical view of discovery, configuration, team setup, integrations and go-live planning.',
+    intro: 'A 6-stage guide from operating discovery and product scope to role configuration, integration review, validation and measured go-live.',
     image: '/site-assets/extra/team-planning.webp',
     articleImage: '/site-assets/extra/kitchen-orders.webp',
     sections: [
@@ -435,7 +435,7 @@ export const resources = [
     slug: 'role-based-workspaces',
     title: 'Designing role-based restaurant workspaces',
     category: 'Teams',
-    intro: 'Why owners, managers, front of house and kitchen teams should not all work from the same screen.',
+    intro: 'How 6 role workspaces reduce noise and permissions risk while keeping the restaurant context connected.',
     image: '/site-assets/extra/qr-ordering-scene.webp',
     articleImage: '/site-assets/extra/outdoor-qr-toast.webp',
     sections: [
@@ -448,7 +448,7 @@ export const resources = [
     slug: 'ai-in-restaurant-operations',
     title: 'Where AI can assist restaurant operations',
     category: 'AI & insights',
-    intro: 'A practical approach to using AI for summaries, questions, patterns and decision support around restaurant data.',
+    intro: 'How to ask, summarise, compare, alert, forecast and investigate across 9 restaurant metrics without hiding the source data.',
     image: '/site-assets/extra/friends-dinner.webp',
     articleImage: '/site-assets/extra/restaurant-entrance.webp',
     sections: [
@@ -461,7 +461,7 @@ export const resources = [
     slug: 'guest-ordering-journey',
     title: 'Designing a guest ordering journey that stays part of the restaurant',
     category: 'Guest experience',
-    intro: 'How QR access, mobile ordering, service requests and checkout can support the table experience without taking it over.',
+    intro: 'How the 4-action guest path - scan, browse, order and pay - creates clear work for front of house, kitchen and payment flows.',
     image: '/site-assets/extra/payment-cafe-table.webp',
     articleImage: '/site-assets/extra/payment-dinner.webp',
     sections: [
@@ -474,7 +474,7 @@ export const resources = [
     slug: 'reservations-and-floor-planning',
     title: 'Bringing reservations and floor planning together',
     category: 'Reservations',
-    intro: 'Use bookings, expected arrivals and live table context to make the next seating decision easier to understand.',
+    intro: 'How 7 reservation and seating capabilities turn arrival load, party size and live floor capacity into a practical seating decision.',
     image: '/site-assets/extra/tablet-dashboard.webp',
     articleImage: '/site-assets/extra/payment-approved.webp',
     sections: [
@@ -487,7 +487,7 @@ export const resources = [
     slug: 'pos-integration-planning',
     title: 'Planning a useful POS integration',
     category: 'Integrations',
-    intro: 'A practical way to decide what should connect, what should stay in place and which PayMyDine capabilities add the most value.',
+    intro: 'How to define the data source, fields, direction, refresh timing and responsible role before building a POS integration.',
     image: '/site-assets/extra/power-up-pos.webp',
     articleImage: '/site-assets/extra/dashboard-menu-mockup.webp',
     sections: [
@@ -500,4 +500,4 @@ export const resources = [
 
 export const integrations = ['SumUp', 'ready2order', 'Lightspeed', 'Square'];
 
-export const integrationFeaturePills = ['POS integrations', 'Accounting', 'Delivery', 'Payment providers', 'Central owner view', 'Inventory'];
+export const integrationFeaturePills = ['POS data', 'Accounting context', 'Delivery channels', 'Payment providers', 'Central reporting', 'Inventory'];

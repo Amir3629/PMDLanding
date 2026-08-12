@@ -2,11 +2,11 @@ import { imageGroups } from '@/data/site';
 import { Icon } from './Icons';
 
 const steps = [
-  { title: 'Guest or Staff Action', body: 'The journey starts from the table, reservation flow or a team workspace.', icon: 'operations' },
-  { title: 'Restaurant Context', body: 'Table, order and guest context stay attached to the work that follows.', icon: 'table' },
-  { title: 'Role-Specific Action', body: 'The next person sees the information needed for their responsibility.', icon: 'kitchen' },
-  { title: 'Service & Checkout', body: 'Preparation, service and payment continue without breaking the operating picture.', icon: 'card' },
-  { title: 'Insight & Assistance', body: 'Live activity becomes reporting, context and AI-assisted understanding for the business.', icon: 'chart' }
+  { title: 'Action starts', body: 'A guest scans a table QR, reception seats a booking, a waiter opens an order or a manager changes a table.', icon: 'operations' },
+  { title: 'Context is attached', body: 'Table, guest, order, timing, notes and permissions travel with the action instead of being entered again.', icon: 'table' },
+  { title: 'The responsible role receives it', body: 'Front of house sees service work, kitchen sees preparation work and managers see exceptions and live status.', icon: 'kitchen' },
+  { title: 'Service and checkout complete', body: 'Preparation, ready status, handoff and payment continue from the same restaurant context, including three bill-split methods.', icon: 'card' },
+  { title: 'Activity becomes management data', body: 'Revenue, guests, average check, table turnover, sales timing and profitability become available for reporting and AI-assisted questions.', icon: 'chart' }
 ];
 
 export default function Workflow({ variant = 'home' }) {
@@ -16,9 +16,9 @@ export default function Workflow({ variant = 'home' }) {
     <section className="section workflowSection">
       <div className="container workflowShowcase">
         <div className="workflowShowcaseCopy">
-          <span className="eyebrow">One restaurant journey</span>
-          <h2>Context moves with the work, from the guest moment to the business decision.</h2>
-          <p>PayMyDine keeps the useful information connected while each role works from a view designed around what they need to do next.</p>
+          <span className="eyebrow">5-step operating flow</span>
+          <h2>The next action changes by role. The table, order and guest context should not disappear between steps.</h2>
+          <p>PayMyDine carries the useful context from the guest or staff action through preparation, service, checkout, reporting and AI-assisted review.</p>
         </div>
         <div className="workflowShowcaseVisual">
           <img src={workflowImage} alt="PayMyDine restaurant workflow" loading="lazy" />

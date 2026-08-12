@@ -2,26 +2,25 @@ import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
 import { Icon } from '@/components/Icons';
 
-
 export const metadata = {
   title: 'Integrations, Multi-location & Inventory',
-  description: 'Connect POS, accounting, delivery and payment providers while supporting central control, shared menus, reporting and inventory workflows.'
+  description: 'Connect supported POS, accounting, delivery and payment systems with central reporting, menus and inventory context.'
 };
 
 const capabilities = [
-  ['POS integrations', 'Connect supported POS environments and bring the right operating data into the PayMyDine picture.'],
-  ['Accounting', 'Keep accounting context closer to the wider restaurant operating and reporting environment.'],
-  ['Delivery', 'Connect delivery workflows where the available integration supports the restaurant setup.'],
-  ['Payment providers', 'Work with supported payment providers while keeping checkout part of the guest and restaurant journey.']
+  ['POS data', 'Bring supported order, sales, menu or table data into the PayMyDine operating picture without asking staff to enter the same information again.'],
+  ['Accounting context', 'Pass or align the available reporting fields needed by the finance workflow, subject to the connected system and permissions.'],
+  ['Delivery channels', 'Keep supported delivery orders distinguishable by channel while including them in the wider workload and sales picture.'],
+  ['Payment providers', 'Connect supported payment status and settlement context to the table and guest checkout journey.']
 ];
 
 export default function IntegrationsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Integrations, multi-location & inventory"
-        title="Connect the systems and restaurant locations behind the operation."
-        intro="Bring POS, accounting, delivery and payment providers together with central owner visibility, shared menus, central reporting and inventory workflows where supported."
+        eyebrow="4 integration types - 6 central controls"
+        title="Connect the systems that already hold restaurant data, then make that data useful to the next role."
+        intro="PayMyDine can work with supported POS, accounting, delivery and payment environments, then add central owner views, shared menus, reporting, inventory, food-cost and purchasing context where the source systems allow it."
         image="/site-assets/custom/integrations-hero-restaurant-way-16.webp"
         accent="green"
       />
@@ -29,9 +28,9 @@ export default function IntegrationsPage() {
       <section className="section integrationStepsSection">
         <div className="container">
           <div className="sectionHeading centerHeading">
-            <span className="eyebrow">Connected restaurant infrastructure</span>
-            <h2>Bring the systems, locations and stock context into one clearer operating picture.</h2>
-            <p>Integration scope depends on the systems available, but the goal stays the same: make connected information more useful to the people running the restaurant.</p>
+            <span className="eyebrow">Define the data path before the connector</span>
+            <h2>For each integration, decide which data moves, which system remains authoritative and who uses the result.</h2>
+            <p>A useful integration removes re-entry or missing context. It should not move data simply because a connection is technically possible.</p>
           </div>
           <div className="highlightGrid">
             {capabilities.map(([title, body], index) => (
@@ -46,9 +45,9 @@ export default function IntegrationsPage() {
       <section className="section darkIntegrationPage">
         <div className="container darkIntegrationGrid">
           <div>
-            <span className="eyebrow darkEyebrow">Multi-location & central control</span>
-            <h2>Give ownership a central view while locations keep working locally.</h2>
-            <p>Shared menus, central reporting and location-level inventory can help multi-site operators keep the wider business picture visible without removing local operating context.</p>
+            <span className="eyebrow darkEyebrow">6 multi-location controls</span>
+            <h2>Compare locations centrally while each restaurant keeps its local operating context.</h2>
+            <p>Ownership can review location performance and shared standards without turning every site into the same floor plan, service model or team structure.</p>
           </div>
           <div className="integrationNameGrid">
             {['Central owner view', 'Shared menus', 'Central reporting', 'Inventory', 'Food cost', 'Purchasing'].map((item) => (
@@ -63,23 +62,23 @@ export default function IntegrationsPage() {
           <article>
             <img src="/site-assets/custom/integrations-capabilities-fit.webp" alt=""/>
             <div>
-              <span className="eyebrow">Flexible adoption</span>
-              <h2>Connect the capabilities that fit the operation.</h2>
-              <p>Start with the systems and workflows that matter most, then extend the setup as the restaurant or group grows.</p>
+              <span className="eyebrow">Integration scope</span>
+              <h2>Connect only the fields that support a real workflow or reporting need.</h2>
+              <p>Document the source, direction, refresh timing, permission and responsible role for each data field before implementation.</p>
             </div>
           </article>
           <article>
             <img src="/site-assets/custom/integrations-operating-picture.webp" alt=""/>
             <div>
               <span className="eyebrow">One business picture</span>
-              <h2>Keep reporting, inventory and operations connected.</h2>
-              <p>The right connections can make multi-location performance, food cost, purchasing and operational data easier to understand together.</p>
+              <h2>Read sales, stock, purchasing and location performance together.</h2>
+              <p>Where the connected systems provide the data, owners can compare location results, understand food-cost movement and trace a business number back to its operating source.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <CTA title="Want to review your integration and multi-location setup?" body="Tell us which systems and locations you use and what you want PayMyDine to connect. We can focus the conversation on the available integration path." />
+      <CTA title="Review one real integration before discussing every possible connector." body="Tell us the system, data fields, direction, refresh requirement and role that needs the result. We will define the practical integration scope around that workflow." />
     </>
   );
 }

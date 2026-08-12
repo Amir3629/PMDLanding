@@ -4,19 +4,19 @@ import CTA from '@/components/CTA';
 export const metadata = { title: 'Restaurant Setups' };
 
 const setups = [
-  ['Full-service restaurants', 'Bring reservations, table service, kitchen flow, payments, role-based workspaces and ownership visibility around a seated guest journey.', '/site-assets/custom/restaurant-type-full-service.webp'],
-  ['Casual dining', 'Support a faster service rhythm with table activity, ordering, takeaway, payments and focused team views.', '/site-assets/custom/restaurant-type-modern-dining.webp'],
-  ['High-volume dining', 'Keep guest ordering, service handoffs, kitchen preparation and checkout easier to follow when demand builds quickly.', '/site-assets/extra/qr-breakfast.webp'],
-  ['Larger venues', 'Use multiple floor maps, specialised role workspaces and selected modules for bigger spaces and more complex team structures.', '/site-assets/extra/team-cafe-meeting.webp']
+  ['Full-service restaurants', 'Connect bookings, table assignment, waiter ordering, kitchen status, pay-at-table and ownership reporting around a seated guest journey.', '/site-assets/custom/restaurant-type-full-service.webp'],
+  ['Casual dining', 'Keep table status, fast ordering, takeaway workload, menu availability and payment visible when service cycles are shorter.', '/site-assets/custom/restaurant-type-modern-dining.webp'],
+  ['High-volume dining', 'Use role queues, kitchen ticket states, sold-out controls and guest ordering to keep the next action visible as demand builds.', '/site-assets/extra/qr-breakfast.webp'],
+  ['Larger or multi-floor venues', 'Configure multiple floor maps, specialised workspaces, central reporting and selected integrations for more complex teams and spaces.', '/site-assets/extra/team-cafe-meeting.webp']
 ];
 
 export default function RestaurantTypesPage() {
   return (
     <>
-      <PageHero eyebrow="Restaurant setups" title="Shape PayMyDine around the service model you already run." intro="Different restaurants organise tables, teams, guest journeys and technology in different ways. PayMyDine can be configured around that operating structure instead of forcing every venue into the same template." image="/site-assets/custom/shared-restaurant-hero-16.webp" />
+      <PageHero eyebrow="4 restaurant setup patterns" title="Configure the roles, floor, guest journey and metrics around the service model you already run." intro="The product areas stay the same, but the priority, permissions and workflow change by restaurant type. Start with the real service path and select only the controls that support it." image="/site-assets/custom/shared-restaurant-hero-16.webp" />
       <section className="section setupGridSection"><div className="container setupGrid">{setups.map(([title, body, image]) => <article className="setupCard" key={title}><img src={image} alt=""/><div><h2>{title}</h2><p>{body}</p></div></article>)}</div></section>
-      <section className="section capabilitySection"><div className="container capabilityPanel"><div><span className="eyebrow">Adaptable by design</span><h2>Choose the configuration that matches the restaurant.</h2><p>Start with the roles and workflows you need today, then extend the setup as the operation changes.</p></div><div className="capabilityList"><span>Role-based team workspaces</span><span>Multiple floor maps</span><span>Different guest menu styles</span><span>Selected modules</span><span>Dine-in & takeaway</span><span>Supported POS integrations</span></div></div></section>
-      <CTA title="Want to map PayMyDine to your restaurant setup?" body="Book a demo and we’ll focus on the team structure, guest journey, floor, modules and integrations relevant to your venue." />
+      <section className="section capabilitySection"><div className="container capabilityPanel"><div><span className="eyebrow">Configuration decisions</span><h2>For every setup, define six things before choosing modules.</h2><p>Document roles, floor structure, order channels, guest touchpoints, current systems and the baseline metrics used to judge the result.</p></div><div className="capabilityList"><span>Role ownership</span><span>Floor and table model</span><span>Dine-in and takeaway channels</span><span>Guest ordering path</span><span>POS and payment boundaries</span><span>Baseline operating metrics</span></div></div></section>
+      <CTA title="Map one real service model to PayMyDine." body="We will identify the responsible roles, product areas, floor configuration, integrations and metrics needed for that setup." />
     </>
   );
 }

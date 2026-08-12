@@ -3,46 +3,46 @@ import CTA from '@/components/CTA';
 
 export const metadata = {
   title: 'How It Works',
-  description: 'See how PayMyDine connects guest touchpoints, team workflows and restaurant visibility across the day.'
+  description: 'A five-step view of how PayMyDine carries restaurant context from guest or staff action to service, payment, reporting and AI.'
 };
 
 const journeyCards = [
   {
-    eyebrow: 'Guest experience',
-    title: 'Start with a familiar table experience.',
-    body: 'A QR touchpoint can open the menu and ordering journey without taking attention away from the restaurant itself.',
+    eyebrow: '4 guest actions',
+    title: 'Scan, browse, order and pay without losing the table context.',
+    body: 'A table QR can open the mobile menu, keep the table attached to the order, support service requests and continue into checkout.',
     image: '/site-assets/comments/16.webp',
     alt: 'Guests using a PayMyDine QR experience at the table'
   },
   {
-    eyebrow: 'Restaurant setting',
-    title: 'Digital service should feel like part of the venue.',
-    body: 'PayMyDine supports the restaurant experience in the background, helping the digital journey sit naturally alongside service.',
+    eyebrow: 'Restaurant-controlled service',
+    title: 'Digital convenience feeds the team workflow instead of replacing it.',
+    body: 'Front of house and kitchen receive the next action in role-focused views, while the restaurant controls menus, availability, service and payment options.',
     image: '/site-assets/table/11.webp',
     alt: 'Restaurant environment supported by PayMyDine'
   }
 ];
 
 const flowSteps = [
-  ['01', 'Guest arrives', 'The restaurant experience begins as usual, with digital access available when it is useful.'],
-  ['02', 'Menu & ordering', 'Guests can browse, order and interact from their own device while the table context stays attached to the restaurant journey.'],
-  ['03', 'The right role takes over', 'Front of house or kitchen receives the next action inside a workspace focused on that responsibility.'],
-  ['04', 'Service & payment', 'The table can move toward checkout with flexible payment and split-bill options while status stays visible to the restaurant.'],
-  ['05', 'Insight & AI', 'Live activity becomes reporting, owner visibility and AI-assisted summaries or questions around the restaurant data available.']
+  ['01', 'Action starts', 'A guest scans, reception seats, a waiter opens an order or a manager changes a table.'],
+  ['02', 'Context is attached', 'Table, guest, order, timing, notes and permissions stay with the action.'],
+  ['03', 'The responsible role receives it', 'Front of house sees service work, kitchen sees preparation work and managers see exceptions.'],
+  ['04', 'Service and payment complete', 'Ready status, handoff and checkout continue from the same context, including three split-bill methods.'],
+  ['05', 'Activity becomes management data', 'Revenue, guests, average check, table turnover, sales timing and profitability feed reporting and AI-assisted questions.']
 ];
 
 const operationsCards = [
   {
-    eyebrow: 'Restaurant operations',
-    title: 'The team sees the part of the day that matters to them.',
-    body: 'Owner, manager, waiter, kitchen and reservation roles can work from focused views while the wider restaurant stays connected.',
+    eyebrow: '6 role workspaces',
+    title: 'Each role sees the queue, controls and status it is responsible for.',
+    body: 'Owners, managers, front of house, kitchen, reservations and finance use focused views while the underlying restaurant context remains shared.',
     image: '/site-assets/owner/1.webp',
     alt: 'PayMyDine restaurant operations view'
   },
   {
-    eyebrow: 'Kitchen & team flow',
-    title: 'Guest actions become clear work for the restaurant.',
-    body: 'Orders can move into preparation with visible status and a cleaner handoff between the guest journey, front of house and kitchen.',
+    eyebrow: '4 kitchen ticket states',
+    title: 'Received, preparing, ready and handed off stay visible across the service chain.',
+    body: 'The kitchen can focus on preparation while front of house and managers see the status needed for the next handoff.',
     image: '/site-assets/kitchen/2.webp',
     alt: 'Kitchen team working with PayMyDine'
   }
@@ -52,9 +52,9 @@ export default function HowItWorksPage() {
   return (
     <>
       <PageHero
-        eyebrow="How PayMyDine works"
-        title="A connected restaurant day, from first guest touchpoint to final insight."
-        intro="PayMyDine connects guest-facing moments with role-based team workspaces, kitchen flow, payment, reporting and AI-assisted understanding without forcing every person into the same interface."
+        eyebrow="5-step operating flow"
+        title="Carry context from the first table action to the final management question."
+        intro="PayMyDine connects guest-facing actions, role-based workspaces, kitchen status, payment, reporting and AI without asking every person to use the same interface or re-enter the same context."
         image="/site-assets/extra/izakaya-phone.webp"
         accent="orange"
       />
@@ -62,9 +62,9 @@ export default function HowItWorksPage() {
       <section className="section howJourneySection">
         <div className="container">
           <div className="sectionHeading centerHeading howJourneyHeading">
-            <span className="eyebrow">Built around responsibilities</span>
-            <h2>Digital touchpoints should support service while restaurant teams keep a clear operating role.</h2>
-            <p>The guest journey, front of house, kitchen and ownership views can stay related without becoming one oversized workflow.</p>
+            <span className="eyebrow">Guest actions remain restaurant work</span>
+            <h2>A mobile action should create the right table, service or payment task for the team.</h2>
+            <p>The guest sees a short flow. The restaurant receives the structured context needed to prepare, serve and settle the table.</p>
           </div>
 
           <div className="demoShowcaseGrid howJourneyGrid">
@@ -88,10 +88,10 @@ export default function HowItWorksPage() {
         <div className="container">
           <div className="splitHeading howFlowHeading">
             <div>
-              <span className="eyebrow">One operating story</span>
-              <h2>From arrival to insight, the context moves to the role responsible for the next step.</h2>
+              <span className="eyebrow">Five explicit handoffs</span>
+              <h2>At every step, define the action, context, responsible role and visible status.</h2>
             </div>
-            <p>Each workspace stays focused, while the useful restaurant context continues across service, preparation, checkout and reporting.</p>
+            <p>This makes the workflow testable: teams can see where information is lost, where status is repeated and where an integration or workspace should take over.</p>
           </div>
 
           <div className="howFlowGrid">
@@ -109,9 +109,9 @@ export default function HowItWorksPage() {
       <section className="section howOperationsSection">
         <div className="container">
           <div className="sectionHeading howOperationsHeading">
-            <span className="eyebrow">Behind the service</span>
-            <h2>Every role works from a focused view while ownership keeps the wider picture.</h2>
-            <p>Guest-facing convenience is one layer. The same restaurant environment can support service teams, kitchen preparation, reservations, management visibility and AI-assisted understanding.</p>
+            <span className="eyebrow">Behind the guest journey</span>
+            <h2>Role workspaces and visible ticket states turn digital actions into accountable restaurant work.</h2>
+            <p>The team can identify who owns the next action, which status proves completion and which metric should reflect the result.</p>
           </div>
 
           <div className="howOperationsGrid">
@@ -132,11 +132,11 @@ export default function HowItWorksPage() {
       </section>
 
       <CTA
-        title="See how PayMyDine could fit your restaurant."
-        body="We can walk through the guest journey, restaurant workflows, selected modules and integrations that make sense for your setup."
+        title="Map one real restaurant journey through all 5 steps."
+        body="Bring a booking, table order, kitchen handoff or payment flow. We will identify the action, context, role, status and metric at every step."
         primaryLabel="Book a Demo"
         primaryHref="/contact"
-        secondaryLabel="Explore the Platform"
+        secondaryLabel="Explore the 9 Product Areas"
         secondaryHref="/platform"
       />
     </>
