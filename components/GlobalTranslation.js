@@ -123,8 +123,83 @@ export default function GlobalTranslation() {
 
 
     /*
+      ----------------------------------------------------------
+      TRANSLATION READY DETECTION
+      ----------------------------------------------------------
+
+      English is already server-rendered.
+
+      For Turkish we wait for Google's translated-ltr state.
+      For Arabic we wait for Google's translated-rtl state.
+
+      Only THEN is the transition shield removed.
+
+      This prevents the original English page appearing for a
+      fraction of a second before translated text replaces it.
+    */
+
+    const releaseTranslationShield = () => {
+
+      const html =
+        document.documentElement;
+
+      const body =
+        document.body;
+
+      const language =
+        html.dataset.pmdLanguage ||
+        'en';
+
+      if (language === 'en') {
+
+        html.classList.remove(
+          'pmd-translation-pending'
+        );
+
+        return;
+      }
+
+
+      const translatedClass =
+        language === 'ar'
+          ? 'translated-rtl'
+          : 'translated-ltr';
+
+
+      const ready =
+        html.classList.contains(
+          translatedClass
+        ) ||
+        body.classList.contains(
+          translatedClass
+        );
+
+
+      if (ready) {
+
+        window.requestAnimationFrame(() => {
+
+          window.requestAnimationFrame(() => {
+
+            html.classList.remove(
+              'pmd-translation-pending'
+            );
+
+          });
+
+        });
+
+      }
+
+    };
+
+
+    /*
       Keep Google from visually shifting the entire page
       with its injected top bar.
+
+      Also watch for Google's translated-ltr / translated-rtl
+      class.
     */
 
     const observer =
@@ -136,6 +211,8 @@ export default function GlobalTranslation() {
         document.documentElement.style.marginTop =
           '0px';
 
+        releaseTranslationShield();
+
       });
 
 
@@ -143,14 +220,50 @@ export default function GlobalTranslation() {
       document.documentElement,
       {
         attributes: true,
+        attributeFilter: [
+          'class',
+          'lang',
+          'dir'
+        ],
         childList: true,
         subtree: true
       }
     );
 
 
+    /*
+      Check once immediately too.
+    */
+
+    releaseTranslationShield();
+
+
+    /*
+      Safety valve:
+      if the external translation service cannot respond,
+      never trap the visitor behind the shield forever.
+
+      Normal translation should complete far earlier than this.
+    */
+
+    const safetyTimer =
+      window.setTimeout(() => {
+
+        document.documentElement.classList.remove(
+          'pmd-translation-pending'
+        );
+
+      }, 4500);
+
+
     return () => {
+
       observer.disconnect();
+
+      window.clearTimeout(
+        safetyTimer
+      );
+
     };
 
   }, []);

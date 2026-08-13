@@ -172,6 +172,24 @@ export default function LanguageSwitcher() {
   const changeLanguage = (next) => {
     if (!LANGUAGES[next]) return;
 
+    if (next === language) {
+      setOpen(false);
+      return;
+    }
+
+    /*
+      Cover the old language immediately.
+
+      This prevents:
+      English -> translated language
+      translated language -> another language
+
+      from showing an intermediate flash.
+    */
+    document.documentElement.classList.add(
+      'pmd-translation-pending'
+    );
+
     setLanguage(next);
     setOpen(false);
 
@@ -246,9 +264,10 @@ export default function LanguageSwitcher() {
 
   return (
     <div
-      className="pmdLanguageSwitcher"
+      className="pmdLanguageSwitcher notranslate"
       ref={rootRef}
       data-no-motion
+      translate="no"
     >
       <button
         className="pmdLanguageButton"
