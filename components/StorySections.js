@@ -176,6 +176,22 @@ export function RoleAndAISections() {
           </div>
 
 
+          {/* === PMD AI IMPACT GRAPH V6 START === */}
+
+          <figure className="pmdAiImpactVisual">
+
+            <img
+              src="/site-assets/custom/ai-impact-growth.png"
+              alt="Illustration showing AI-supported restaurant efficiency, revenue, table turnover and guest satisfaction increasing while costs, wait times and manual work decrease over time."
+              loading="lazy"
+              decoding="async"
+            />
+
+          </figure>
+
+          {/* === PMD AI IMPACT GRAPH V6 END === */}
+
+
           <div className="twoUpStoryGrid">
 
             <article>

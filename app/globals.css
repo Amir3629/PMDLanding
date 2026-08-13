@@ -6762,3 +6762,158 @@ body:has(section.hero.pmdHeroFullBleedFix)
 
 
 /* === PMD HERO FONT NAV SMOOTH V5 END === */
+
+
+/* === PMD GROWTH HERO AI GRAPH V6 START === */
+
+
+/*
+   ============================================================
+   HOMEPAGE GROWTH HERO
+   ============================================================
+*/
+
+
+@media (min-width: 1100px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroCopy
+  h1.pmdGrowthHeroTitle {
+
+    font-size:
+      clamp(50px, 4vw, 64px)
+      !important;
+
+    line-height: .96 !important;
+
+    letter-spacing: -.052em !important;
+  }
+
+}
+
+
+@media (min-width: 741px) and (max-width: 1099px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroCopy
+  h1.pmdGrowthHeroTitle {
+
+    font-size:
+      clamp(43px, 5.7vw, 54px)
+      !important;
+
+    line-height: .97 !important;
+
+    letter-spacing: -.048em !important;
+  }
+
+}
+
+
+@media (max-width: 740px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroCopy
+  h1.pmdGrowthHeroTitle {
+
+    font-size:
+      clamp(36px, 10vw, 44px)
+      !important;
+
+    line-height: .98 !important;
+
+    letter-spacing: -.043em !important;
+  }
+
+}
+
+
+/*
+   Keep the paragraph informative without letting it become
+   visually wider than the hero copy needs.
+*/
+
+body:has(section.hero.pmdHeroFullBleedFix)
+section.hero.pmdHeroFullBleedFix
+.heroText {
+
+  max-width: 610px;
+}
+
+
+/*
+   ============================================================
+   AI IMPACT GRAPH
+   ============================================================
+
+   The graph belongs in the AI explanation section, not Hero.
+
+   It provides visual proof between:
+   - AI explanation
+   - detailed AI workflow cards
+*/
+
+
+.pmdAiImpactVisual {
+
+  width: min(100%, 1080px);
+
+  margin:
+    42px
+    auto
+    34px;
+
+  border:
+    1px solid
+    rgba(1, 72, 54, .10);
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  box-shadow:
+    0 24px 70px rgba(5, 55, 43, .08),
+    0 5px 18px rgba(5, 55, 43, .05);
+
+  position: relative;
+
+  isolation: isolate;
+}
+
+
+.pmdAiImpactVisual img {
+
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  object-fit: contain;
+}
+
+
+@media (max-width: 740px) {
+
+  .pmdAiImpactVisual {
+
+    width: 100%;
+
+    margin:
+      28px
+      auto
+      24px;
+
+    border-radius: 20px;
+  }
+
+}
+
+
+/* === PMD GROWTH HERO AI GRAPH V6 END === */

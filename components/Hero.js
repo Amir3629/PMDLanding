@@ -14,20 +14,27 @@ export default function Hero() {
             9 connected product areas
           </span>
 
-          <h1>
-            Run the restaurant.
-            {' '}
+          <h1 className="pmdGrowthHeroTitle">
+            AI-Powered
+            <br />
+            Restaurant Growth.
+            <br />
             <span>
-              Let AI show you what needs attention
+              Lower Costs.
               <br />
-              next.
+              Faster Service.
+              <br />
+              Higher Revenue.
             </span>
           </h1>
 
           <p className="heroText">
-            PayMyDine connects reservations, orders, kitchen, payments, CRM,
-            analytics and teams in one live operating picture. AI explains what
-            changed and helps each role decide what to do next.
+            PayMyDine helps restaurants automate reservations, ordering,
+            kitchen, payments and team workflows, optimize every table and
+            guest journey, and connect CRM and analytics in one live operating
+            picture. AI-powered insights surface what needs attention, helping
+            reduce manual work and wait times, speed service, improve table
+            turnover and guest experience, and support revenue growth.
           </p>
 
           <div className="heroButtons">
