@@ -5,10 +5,10 @@ import { teamPages } from '@/data/teams';
 
 export const metadata = {
   title: 'Team Workspaces',
-  description: 'Six role-based PayMyDine workspaces for owners, managers, front of house, kitchen, reservations and finance.'
+  description: 'Six role-based PayMyDine workspaces for owners, managers, service staff, kitchen, reservations and finance.'
 };
 
-const order = ['owner', 'manager', 'front-of-house', 'kitchen', 'reservations', 'finance'];
+const order = ['owner', 'manager', 'service-staff', 'kitchen', 'reservations', 'finance'];
 
 export default function TeamsPage() {
   return (
@@ -16,7 +16,7 @@ export default function TeamsPage() {
       <PageHero
         eyebrow="6 role workspaces"
         title="Show each role the queue, controls and metrics it is responsible for."
-        intro="Owners need business signals. Managers need live exceptions. Front of house needs tables and guests. Kitchen needs tickets and timing. Reservations needs arrivals and capacity. Finance needs clean reporting."
+        intro="Owners need business signals. Managers need live exceptions. Service staff needs tables and guests. Kitchen needs tickets and timing. Reservations needs arrivals and capacity. Finance needs clean reporting."
         image="/site-assets/extra/role-dashboard.webp"
         accent="green"
       />
@@ -57,7 +57,7 @@ export default function TeamsPage() {
           <div className="capabilityList">
             <span><Icon name="check" size={16}/>Owner decisions</span>
             <span><Icon name="check" size={16}/>Manager exceptions</span>
-            <span><Icon name="check" size={16}/>Front-of-house service</span>
+            <span><Icon name="check" size={16}/>Service staff service</span>
             <span><Icon name="check" size={16}/>Kitchen tickets and timing</span>
             <span><Icon name="check" size={16}/>Reservation capacity</span>
             <span><Icon name="check" size={16}/>Finance reporting</span>

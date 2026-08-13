@@ -17,7 +17,7 @@ const journeyCards = [
   {
     eyebrow: 'Restaurant-controlled service',
     title: 'Digital convenience feeds the team workflow instead of replacing it.',
-    body: 'Front of house and kitchen receive the next action in role-focused views, while the restaurant controls menus, availability, service and payment options.',
+    body: 'Service staff and kitchen receive the next action in role-focused views, while the restaurant controls menus, availability, service and payment options.',
     image: '/site-assets/table/11.webp',
     alt: 'Restaurant environment supported by PayMyDine'
   }
@@ -26,7 +26,7 @@ const journeyCards = [
 const flowSteps = [
   ['01', 'Action starts', 'A guest scans, reception seats, a waiter opens an order or a manager changes a table.'],
   ['02', 'Context is attached', 'Table, guest, order, timing, notes and permissions stay with the action.'],
-  ['03', 'The responsible role receives it', 'Front of house sees service work, kitchen sees preparation work and managers see exceptions.'],
+  ['03', 'The responsible role receives it', 'Service staff sees service work, kitchen sees preparation work and managers see exceptions.'],
   ['04', 'Service and payment complete', 'Ready status, handoff and checkout continue from the same context, including three split-bill methods.'],
   ['05', 'Activity becomes management data', 'Revenue, guests, average check, table turnover, sales timing and profitability feed reporting and AI-assisted questions.']
 ];
@@ -35,14 +35,14 @@ const operationsCards = [
   {
     eyebrow: '6 role workspaces',
     title: 'Each role sees the queue, controls and status it is responsible for.',
-    body: 'Owners, managers, front of house, kitchen, reservations and finance use focused views while the underlying restaurant context remains shared.',
+    body: 'Owners, managers, service staff, kitchen, reservations and finance use focused views while the underlying restaurant context remains shared.',
     image: '/site-assets/owner/1.webp',
     alt: 'PayMyDine restaurant operations view'
   },
   {
     eyebrow: '4 kitchen ticket states',
     title: 'Received, preparing, ready and handed off stay visible across the service chain.',
-    body: 'The kitchen can focus on preparation while front of house and managers see the status needed for the next handoff.',
+    body: 'The kitchen can focus on preparation while service staff and managers see the status needed for the next handoff.',
     image: '/site-assets/kitchen/2.webp',
     alt: 'Kitchen team working with PayMyDine'
   }

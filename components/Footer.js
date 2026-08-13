@@ -17,7 +17,7 @@ export default function Footer() {
           <h4>For Teams</h4>
           <a href="/teams/owner">Owner</a>
           <a href="/teams/manager">Manager</a>
-          <a href="/teams/front-of-house">Front of house</a>
+          <a href="/teams/service-staff">Service staff</a>
           <a href="/teams/kitchen">Kitchen & KDS</a>
           <a href="/teams/reservations">Reservations</a>
           <a href="/teams/finance">Finance & reporting</a>

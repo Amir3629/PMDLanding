@@ -102,16 +102,16 @@ export const primaryNav = [
     href: '/platform',
     columns: [
       {
-        title: 'Operations & service',
-        links: [productLink(1), productLink(2), productLink(3)]
+        title: '1–3 Platform & operations',
+        links: [productLink(0), productLink(1), productLink(2)]
       },
       {
-        title: 'Guests & teams',
-        links: [productLink(4), productLink(7), productLink(5)]
+        title: '4–6 Service & performance',
+        links: [productLink(3), productLink(4), productLink(5)]
       },
       {
-        title: 'Intelligence & scale',
-        links: [productLink(0), productLink(6), productLink(8)]
+        title: '7–9 Teams, guests & scale',
+        links: [productLink(6), productLink(7), productLink(8)]
       }
     ]
   },
@@ -130,7 +130,7 @@ export const primaryNav = [
       {
         title: 'Restaurant teams',
         links: [
-          ['Front of house', '/teams/front-of-house', 'See 6 service signals: assigned tables, orders, notes, requests, status and checkout.'],
+          ['Service staff', '/teams/service-staff', 'See 6 service signals: assigned tables, orders, notes, requests, status and checkout.'],
           ['Kitchen & KDS', '/teams/kitchen', 'Move tickets through received, preparing, ready and handed-off states with timing and notes visible.'],
           ['Reservations', '/teams/reservations', 'Use 6 planning signals for arrivals, party size, availability, walk-ins and seating.']
         ]
@@ -161,13 +161,13 @@ export const homeStatusCards = [
     image: '/site-assets/comments/5.webp',
     eyebrow: 'Team status',
     title: 'Order status moves to the role responsible for the next handoff.',
-    body: 'Front of house sees service status, kitchen sees preparation status and management sees exceptions from the same ticket context.'
+    body: 'Service staff sees service status, kitchen sees preparation status and management sees exceptions from the same ticket context.'
   },
   {
     image: '/site-assets/comments/10.webp',
-    eyebrow: 'Payments & guest ordering',
-    title: 'Four guest actions stay in one mobile path.',
-    body: 'A guest can scan, browse, order and pay while table context remains attached to the restaurant workflow.'
+    eyebrow: 'Table QR ordering & payment',
+    title: 'Scan the table QR code, browse, order and pay without losing the table context.',
+    body: 'Guests scan the table QR code to open the mobile menu, place the order and complete payment while PayMyDine keeps the table, order, bill and payment status connected for staff.'
   }
 ];
 
@@ -325,7 +325,7 @@ export const solutionPages = {
     intro: 'Use 7 controls - waiter entry, KDS, preparation status, ready status, menu management, modifiers and sold-out items - from order capture to service handoff.',
     storyEyebrow: 'Ordering, kitchen & menu',
     capabilityEyebrow: '7 order, kitchen and menu controls',
-    capabilityTitle: 'Give front of house and kitchen the same ticket status without giving them the same screen.',
+    capabilityTitle: 'Give service staff and kitchen the same ticket status without giving them the same screen.',
     capabilityBody: 'The ticket carries table, item, modifier and timing context into the kitchen while menu and sold-out changes prevent unavailable items from continuing through the flow.',
     ctaTitle: 'Want to see Ordering, Kitchen & Menu in action?',
     ctaBody: 'We can show waiter ordering, KDS preparation, menu management, customization and ready-status handoff around your operation.',
@@ -335,7 +335,7 @@ export const solutionPages = {
       ['Waiter ordering', 'Create the order from the waiter or guest flow and attach the correct table, items, modifiers and notes.'],
       ['KDS', 'Place incoming tickets in a focused KDS queue with item detail, timing and priority context.'],
       ['Preparation status', 'Show received and preparing states so kitchen and management can see what is waiting and what is active.'],
-      ['Ready status', 'Publish ready status to front of house so the completed ticket has a clear next owner.']
+      ['Ready status', 'Publish ready status to service staff so the completed ticket has a clear next owner.']
     ],
     story: [
       {
@@ -358,7 +358,7 @@ export const solutionPages = {
     storyEyebrow: 'Team management',
     capabilityEyebrow: '5 team controls',
     capabilityTitle: 'Limit access and interface noise while preserving the handoff between roles.',
-    capabilityBody: 'Owners, managers, front of house, kitchen, reservations and finance can see different controls while using the same table, order and business context.',
+    capabilityBody: 'Owners, managers, service staff, kitchen, reservations and finance can see different controls while using the same table, order and business context.',
     ctaTitle: 'Want to explore Team Management?',
     ctaBody: 'Book a demo and we’ll map role workspaces, permissions, shifts, performance and staff activity around your team structure.',
     heroImage: '/site-assets/extra/role-dashboard.webp',
@@ -372,7 +372,7 @@ export const solutionPages = {
     story: [
       {
         title: 'Six workspaces organise access around real restaurant responsibilities.',
-        body: 'Owners, managers, front of house, kitchen, reservations and finance can use focused views while the handoff context stays connected.',
+        body: 'Owners, managers, service staff, kitchen, reservations and finance can use focused views while the handoff context stays connected.',
         image: '/site-assets/extra/taqueria-handoff.webp'
       },
       {
@@ -426,7 +426,7 @@ const solutionDetailExpansions = {
     factsIntro: 'The numbers describe the configured product scope. Performance improvements must be measured against the restaurant baseline.',
     facts: [
       ['06', 'core capabilities', `Dashboard, orders, tables, floor maps, dine-in or takeaway and live activity stay in one operating area.`],
-      ['04', 'role perspectives', `Owner, manager, front-of-house and kitchen teams use the same restaurant context at different levels of detail.`],
+      ['04', 'role perspectives', `Owner, manager, service staff and kitchen teams use the same restaurant context at different levels of detail.`],
       ['02', 'service channels', `Dine-in and takeaway can be followed together without maintaining separate versions of the restaurant day.`],
       ['01', 'shared operating picture', `A status change should update the same restaurant story instead of ending in a disconnected screen.`]
     ],
@@ -436,7 +436,7 @@ const solutionDetailExpansions = {
     workflow: [
       ['Load the shift context', `Open reservations, active tables, open orders, takeaway work and the floor view before service pressure builds.`],
       ['Identify exceptions', `Find waiting guests, delayed orders, unpaid tables or areas of the floor that need management attention.`],
-      ['Move work to the responsible role', `Front of house sees service actions, kitchen sees preparation work and managers keep the wider exception view.`],
+      ['Move work to the responsible role', `Service staff sees service actions, kitchen sees preparation work and managers keep the wider exception view.`],
       ['Close the service loop', `Update the order, table, preparation and payment state so the next team member does not work from an old status.`],
       ['Review the completed shift', `Compare revenue, guests, table movement and operational exceptions after the service period.`]
     ],
@@ -445,7 +445,7 @@ const solutionDetailExpansions = {
     roleViews: [
       ['Owner', `Reviews revenue, guest volume, table turnover and the exceptions that affected the business result.`],
       ['Manager', `Monitors the floor, open orders, delays, takeaway activity and the actions that need coordination during the shift.`],
-      ['Front of house', `Works with assigned tables, orders, guest requests, service status and checkout context.`],
+      ['Service staff', `Works with assigned tables, orders, guest requests, service status and checkout context.`],
       ['Kitchen', `Receives preparation work with order detail, notes, timing and ready-to-serve handoff status.`]
     ],
     metricsTitle: 'Measure whether the operating flow is becoming easier to run.',
@@ -495,11 +495,11 @@ const solutionDetailExpansions = {
       ['Review the seating result', `Measure arrivals, no-shows, waiting time, table use and turnover with consistent event definitions.`]
     ],
     rolesTitle: 'Reception plans the door while management keeps capacity and service in view.',
-    rolesIntro: 'Reservation work is specialised, but the seating decision still affects front of house, kitchen and ownership reporting.',
+    rolesIntro: 'Reservation work is specialised, but the seating decision still affects service staff, kitchen and ownership reporting.',
     roleViews: [
       ['Reservations and reception', `Sees upcoming arrivals, party size, booking details, availability and the next seating decision.`],
       ['Manager', `Monitors capacity pressure, walk-ins, delayed arrivals and how seating choices affect the active floor.`],
-      ['Front of house', `Receives the table and guest context needed to begin service after seating.`],
+      ['Service staff', `Receives the table and guest context needed to begin service after seating.`],
       ['Owner', `Reviews demand patterns, no-shows, utilisation and table turnover across periods or locations.`]
     ],
     metricsTitle: 'Use reservation events to improve planning without inventing a percentage.',
@@ -531,7 +531,7 @@ const solutionDetailExpansions = {
   kitchen: {
     factsEyebrow: 'Ordering and kitchen scope',
     factsTitle: 'Seven controls connect order capture, preparation status and menu availability.',
-    factsIntro: 'The purpose is to reduce missing context between front of house, the kitchen and the menu state guests or staff see.',
+    factsIntro: 'The purpose is to reduce missing context between service staff, the kitchen and the menu state guests or staff see.',
     facts: [
       ['07', 'workflow controls', `Waiter ordering, KDS, preparation status, ready status, menu management, customisation and sold-out information are included.`],
       ['02', 'critical handoffs', `The order moves from service to preparation, then ready status moves back to the service team.`],
@@ -551,7 +551,7 @@ const solutionDetailExpansions = {
     rolesTitle: 'The same order is presented differently to service, preparation and management.',
     rolesIntro: 'Each role should see the detail required for its action without losing the table and order identity behind the work.',
     roleViews: [
-      ['Front of house', `Captures items, modifiers and notes, then follows preparation and ready status for the right table.`],
+      ['Service staff', `Captures items, modifiers and notes, then follows preparation and ready status for the right table.`],
       ['Kitchen and KDS', `Works from a focused queue with item detail, notes, elapsed time and preparation status.`],
       ['Manager', `Sees workload, delayed tickets, ready handoffs and menu availability exceptions during service.`],
       ['Menu administrator', `Maintains menu items, customisation and sold-out state for the configured ordering channels.`]
@@ -570,7 +570,7 @@ const solutionDetailExpansions = {
       'Menu items, categories, modifiers and preparation notes',
       'KDS views and the roles responsible for each queue',
       'Received, in-progress and ready status definitions',
-      'Front-of-house acknowledgement and service handoff rules',
+      'Service staff acknowledgement and service handoff rules',
       'Sold-out ownership and channel-update requirements',
       'POS or ordering integration source-of-truth decisions'
     ],
@@ -589,7 +589,7 @@ const solutionDetailExpansions = {
     facts: [
       ['08', 'journey moments', `Card or digital payment, pay at table, three split methods, table QR, mobile menu and guest checkout form the current scope.`],
       ['03', 'bill-split methods', `Guests can split equally, assign ordered items or divide the total by shares.`],
-      ['04', 'role perspectives', `Guest, front-of-house, management and finance each need a different view of the same checkout.`],
+      ['04', 'role perspectives', `Guest, service staff, management and finance each need a different view of the same checkout.`],
       ['01', 'connected journey', `Menu access, ordering, service context and payment should not restart as separate experiences.`]
     ],
     workflowEyebrow: 'From table QR to settled status',
@@ -606,7 +606,7 @@ const solutionDetailExpansions = {
     rolesIntro: 'A simple guest interface should still provide the operational and reporting information required by the team.',
     roleViews: [
       ['Guest', `Browses, orders, requests service and pays through the configured table journey without learning the restaurant's internal systems.`],
-      ['Front of house', `Sees bill status, payment progress and whether the table still requires service or settlement attention.`],
+      ['Service staff', `Sees bill status, payment progress and whether the table still requires service or settlement attention.`],
       ['Manager', `Monitors incomplete payments, exceptions and the effect of checkout timing on table availability.`],
       ['Finance and reporting', `Reviews payment activity, method mix and reconciliation context available from the provider or POS connection.`]
     ],
@@ -695,7 +695,7 @@ const solutionDetailExpansions = {
     factsTitle: 'Six workspaces and five team controls keep access aligned with responsibility.',
     factsIntro: 'Role-based design changes what each person sees; it does not create six disconnected restaurant systems.',
     facts: [
-      ['06', 'role workspaces', `Owner, manager, front of house, kitchen, reservations and finance have distinct product stories in PayMyDine.`],
+      ['06', 'role workspaces', `Owner, manager, service staff, kitchen, reservations and finance have distinct product stories in PayMyDine.`],
       ['05', 'team controls', `Role workspaces, permissions, shift management, performance insight and staff activity form the current scope.`],
       ['02', 'visibility levels', `Focused role views support daily work while management keeps wider operational context.`],
       ['01', 'shared operation', `Table, order, reservation, kitchen and payment context remains part of the same restaurant.`]
@@ -715,7 +715,7 @@ const solutionDetailExpansions = {
     roleViews: [
       ['Owner and finance', `Need revenue, performance, payment and reporting context without operating every table or kitchen ticket.`],
       ['Manager', `Needs the live floor, open work, exceptions and team activity required to coordinate the shift.`],
-      ['Front of house and reservations', `Need guests, tables, bookings, orders and service actions without unrelated financial administration.`],
+      ['Service staff and reservations', `Need guests, tables, bookings, orders and service actions without unrelated financial administration.`],
       ['Kitchen', `Needs preparation detail, timing and ready handoff without the rest of the management interface.`]
     ],
     metricsTitle: 'Evaluate whether role design reduces ambiguity and handoff delay.',
@@ -750,7 +750,7 @@ const solutionDetailExpansions = {
     factsIntro: 'Growth outcomes depend on consent, profile quality, restaurant execution and the measurement data available.',
     facts: [
       ['06', 'growth capabilities', `Profiles, loyalty, offers, campaigns, feedback and retention form the current guest-growth scope.`],
-      ['04', 'role perspectives', `Guest, front of house, management and marketing or ownership use different parts of the relationship.`],
+      ['04', 'role perspectives', `Guest, service staff, management and marketing or ownership use different parts of the relationship.`],
       ['05', 'lifecycle steps', `Identify, understand, segment, engage and measure create a practical guest-growth loop.`],
       ['01', 'guest relationship', `Visit, order and feedback context can contribute to one profile where identity and consent allow it.`]
     ],
@@ -765,10 +765,10 @@ const solutionDetailExpansions = {
       ['Measure the return signal', `Review redemption, feedback, repeat visits or other agreed outcomes against the original audience and period.`]
     ],
     rolesTitle: 'Guest growth depends on the restaurant experience as well as the campaign screen.',
-    rolesIntro: 'Profiles and offers are useful when front-of-house context, management decisions and guest consent remain aligned.',
+    rolesIntro: 'Profiles and offers are useful when service staff context, management decisions and guest consent remain aligned.',
     roleViews: [
       ['Guest', `Receives a relevant loyalty, offer, feedback or ordering experience through the configured touchpoint.`],
-      ['Front of house', `Uses appropriate guest context to support service without exposing unnecessary profile or campaign administration.`],
+      ['Service staff', `Uses appropriate guest context to support service without exposing unnecessary profile or campaign administration.`],
       ['Manager', `Reviews feedback themes, service issues and campaign effects alongside the restaurant operation.`],
       ['Owner or marketing', `Defines segments, offers, campaigns and retention measures based on available guest and visit data.`]
     ],
@@ -830,7 +830,7 @@ export const resources = [
     image: '/site-assets/extra/qr-ordering-scene.webp',
     articleImage: '/site-assets/extra/outdoor-qr-toast.webp',
     sections: [
-      ['Match the view to the responsibility', 'Ownership needs performance context. Front of house needs tables, orders and guest requests. Kitchen needs preparation work. Role-based design keeps each workspace focused.'],
+      ['Match the view to the responsibility', 'Ownership needs performance context. Service staff needs tables, orders and guest requests. Kitchen needs preparation work. Role-based design keeps each workspace focused.'],
       ['Keep the wider operation connected', 'Separate workspaces should not create separate versions of the restaurant. The useful context still needs to move between the people responsible for the next step.'],
       ['Use permissions deliberately', 'Access should follow responsibility so each role can work confidently without unnecessary admin or business information.']
     ]
@@ -852,7 +852,7 @@ export const resources = [
     slug: 'guest-ordering-journey',
     title: 'Designing a guest ordering journey that stays part of the restaurant',
     category: 'Guest experience',
-    intro: 'How the 4-action guest path - scan, browse, order and pay - creates clear work for front of house, kitchen and payment flows.',
+    intro: 'How the 4-action guest path - scan, browse, order and pay - creates clear work for service staff, kitchen and payment flows.',
     image: '/site-assets/extra/payment-cafe-table.webp',
     articleImage: '/site-assets/extra/payment-dinner.webp',
     sections: [

@@ -53,11 +53,11 @@ export const teamPages = {
     ],
     bullets: ['Table status', 'Open orders', 'Kitchen progress', 'Reservations and walk-ins', 'Team activity', 'Shift exceptions']
   },
-  'front-of-house': {
-    label: 'Front of House',
-    eyebrow: 'For front of house - 6 service signals',
+  'service-staff': {
+    label: 'Service Staff',
+    eyebrow: 'For service staff - 6 service signals',
     title: 'Keep assigned tables, order notes, guest requests and checkout status in one service view.',
-    intro: 'Front-of-house teams can focus on six service signals without unrelated ownership or admin controls, while each action remains attached to the correct table and ticket.',
+    intro: 'Service staff teams can focus on six service signals without unrelated ownership or admin controls, while each action remains attached to the correct table and ticket.',
     heroImage: '/site-assets/staff/1.webp',
     accent: 'orange',
     highlights: [
@@ -74,7 +74,7 @@ export const teamPages = {
       },
       {
         title: 'Guest digital actions remain accountable restaurant work.',
-        body: 'A QR order or service request reaches the responsible front-of-house or kitchen queue with the table and order context attached.',
+        body: 'A QR order or service request reaches the responsible service staff or kitchen queue with the table and order context attached.',
         image: '/site-assets/comments/5.webp'
       }
     ],
@@ -91,7 +91,7 @@ export const teamPages = {
       ['Focused queue', 'Sort incoming work by time, station, course or priority using the context available in the configured KDS.'],
       ['Item and modifier detail', 'Keep preparation notes, quantities, modifiers and sold-out information visible on the ticket.'],
       ['Timing and progress', 'See how long work has been waiting and which tickets are received, preparing or ready.'],
-      ['Ready handoff', 'Publish ready status to front of house and management so the service handoff has a clear completion signal.']
+      ['Ready handoff', 'Publish ready status to service staff and management so the service handoff has a clear completion signal.']
     ],
     story: [
       {
@@ -101,11 +101,11 @@ export const teamPages = {
       },
       {
         title: 'Ready status belongs to the next role as well.',
-        body: 'When preparation is complete, front of house and managers receive the status needed to finish the table journey.',
+        body: 'When preparation is complete, service staff and managers receive the status needed to finish the table journey.',
         image: '/site-assets/extra/team-planning.webp'
       }
     ],
-    bullets: ['Received tickets', 'Preparing tickets', 'Ready tickets', 'Item and modifier detail', 'Ticket timing', 'Front-of-house handoff']
+    bullets: ['Received tickets', 'Preparing tickets', 'Ready tickets', 'Item and modifier detail', 'Ticket timing', 'Service staff handoff']
   },
   reservations: {
     label: 'Reservations',

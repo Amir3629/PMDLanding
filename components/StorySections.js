@@ -10,7 +10,7 @@ export function RoleAndAISections() {
             <span className="eyebrow darkEyebrow">6 role workspaces</span>
             <h2>Give each role the actions it owns without creating six versions of the restaurant.</h2>
           </div>
-          <p>Owners, managers, front of house, kitchen, reservations and finance can use focused views while table, order, guest and payment context stays connected.</p>
+          <p>Owners, managers, service staff, kitchen, reservations and finance can use focused views while table, order, guest and payment context stays connected.</p>
         </div>
         <div className="container darkStoryGrid">
           <article className="darkStoryCard wideDarkCard">
@@ -18,7 +18,7 @@ export function RoleAndAISections() {
             <img src={imageGroups.owner[2]} alt="Restaurant owner using PayMyDine" loading="lazy" />
           </article>
           <article className="darkStoryCard">
-            <div className="darkCardCopy"><span>FOR TEAMS</span><h3>Route the next action to the role responsible for it.</h3><p>Front of house sees tables and guest requests. Kitchen sees tickets and timing. Reservations sees arrivals and availability.</p><a href="/teams">Compare all 6 workspaces <Icon name="arrow" size={15}/></a></div>
+            <div className="darkCardCopy"><span>FOR TEAMS</span><h3>Route the next action to the role responsible for it.</h3><p>Service staff sees tables and guest requests. Kitchen sees tickets and timing. Reservations sees arrivals and availability.</p><a href="/teams">Compare all 6 workspaces <Icon name="arrow" size={15}/></a></div>
             <img src={imageGroups.staff[4]} alt="Restaurant team using PayMyDine" loading="lazy" />
           </article>
           <article className="darkStoryCard">
