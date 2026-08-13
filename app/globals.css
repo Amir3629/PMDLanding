@@ -6384,3 +6384,381 @@ body:has(section.hero.pmdHeroFullBleedFix)
   }
 }
 /* === PMD COOKIE NOTICE V1 END === */
+
+
+/* === PMD HERO FONT NAV SMOOTH V5 START === */
+
+/*
+   ============================================================
+   1. HOMEPAGE HERO HEADLINE
+   ============================================================
+
+   The new AI headline contains considerably more words than
+   the old headline.
+
+   Keep it strong, but prevent the previous 96px desktop size
+   from creating the giant stack seen in the screenshot.
+
+   Homepage only.
+*/
+
+
+@media (min-width: 1100px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroCopy h1 {
+
+    font-size:
+      clamp(54px, 4.55vw, 72px)
+      !important;
+
+    line-height: .96 !important;
+
+    letter-spacing: -.055em !important;
+  }
+
+}
+
+
+@media (min-width: 741px) and (max-width: 1099px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroCopy h1 {
+
+    font-size:
+      clamp(46px, 6.2vw, 60px)
+      !important;
+
+    line-height: .97 !important;
+
+    letter-spacing: -.05em !important;
+  }
+
+}
+
+
+@media (max-width: 740px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroCopy h1 {
+
+    font-size:
+      clamp(40px, 11vw, 50px)
+      !important;
+
+    line-height: .98 !important;
+
+    letter-spacing: -.045em !important;
+  }
+
+}
+
+
+
+/*
+   ============================================================
+   2. DESKTOP PRODUCT / FOR TEAMS DROPDOWNS
+   ============================================================
+
+   IMPORTANT:
+
+   Header.js no longer destroys the menu immediately.
+
+   Therefore opacity + transform can animate BOTH:
+   - opening
+   - closing
+*/
+
+
+.siteHeader .megaMenu {
+
+  display: block !important;
+
+  opacity: 0 !important;
+
+  visibility: hidden !important;
+
+  pointer-events: none !important;
+
+  transform:
+    translateX(-50%)
+    translateY(-10px)
+    scale(.985)
+    !important;
+
+  transform-origin: top center !important;
+
+  will-change:
+    opacity,
+    transform;
+
+  transition:
+    opacity .20s ease,
+    transform .30s cubic-bezier(.22, 1, .36, 1),
+    visibility 0s linear .30s
+    !important;
+}
+
+
+.siteHeader .megaMenu.isOpen {
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+  pointer-events: auto !important;
+
+  transform:
+    translateX(-50%)
+    translateY(0)
+    scale(1)
+    !important;
+
+  transition:
+    opacity .20s ease,
+    transform .30s cubic-bezier(.22, 1, .36, 1),
+    visibility 0s
+    !important;
+}
+
+
+
+/*
+   Backdrop also fades rather than appearing/disappearing
+   abruptly.
+*/
+
+
+.siteHeader .megaBackdrop {
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none !important;
+
+  transition:
+    opacity .22s ease,
+    visibility 0s linear .22s;
+}
+
+
+.siteHeader .megaBackdrop.isOpen {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto !important;
+
+  transition:
+    opacity .22s ease,
+    visibility 0s;
+}
+
+
+
+/*
+   ============================================================
+   3. MOBILE NAVIGATION
+   ============================================================
+
+   Keep it mounted too.
+
+   This gives the hamburger navigation itself a smooth
+   opening/closing movement.
+*/
+
+
+@media (max-width: 820px) {
+
+  .siteHeader .mainNav {
+
+    display: flex !important;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+      translateY(-10px);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+      opacity .20s ease,
+      transform .30s cubic-bezier(.22, 1, .36, 1),
+      max-height .36s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear .36s;
+  }
+
+
+  .siteHeader .mainNav.isOpen {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+      translateY(0);
+
+    max-height:
+      calc(100dvh - 96px);
+
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+
+    -webkit-overflow-scrolling: touch;
+
+    transition:
+      opacity .20s ease,
+      transform .30s cubic-bezier(.22, 1, .36, 1),
+      max-height .36s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s;
+  }
+
+
+
+  /*
+     ----------------------------------------------------------
+     MOBILE PRODUCT / FOR TEAMS ACCORDION
+     ----------------------------------------------------------
+  */
+
+
+  .siteHeader .megaMenu,
+  .siteHeader .megaMenuProduct {
+
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+    max-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding:
+      0 12px
+      !important;
+
+    overflow: hidden !important;
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    transform:
+      translateY(-6px)
+      !important;
+
+    transform-origin:
+      top center
+      !important;
+
+    border-color:
+      transparent
+      !important;
+
+    box-shadow:
+      none
+      !important;
+
+    transition:
+      max-height .38s cubic-bezier(.22, 1, .36, 1),
+      opacity .18s ease,
+      transform .28s cubic-bezier(.22, 1, .36, 1),
+      padding .28s ease,
+      margin .28s ease,
+      visibility 0s linear .38s
+      !important;
+  }
+
+
+  .siteHeader .megaMenu.isOpen {
+
+    max-height:
+      1800px
+      !important;
+
+    margin-top:
+      4px
+      !important;
+
+    padding:
+      12px
+      !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+
+    transform:
+      translateY(0)
+      !important;
+
+    transition:
+      max-height .38s cubic-bezier(.22, 1, .36, 1),
+      opacity .20s ease,
+      transform .30s cubic-bezier(.22, 1, .36, 1),
+      padding .28s ease,
+      margin .28s ease,
+      visibility 0s
+      !important;
+  }
+
+
+  /*
+     Mobile does not use the page backdrop.
+  */
+
+  .siteHeader .megaBackdrop,
+  .siteHeader .megaBackdrop.isOpen {
+
+    display: none !important;
+  }
+
+}
+
+
+
+/*
+   ============================================================
+   4. ACCESSIBILITY
+   ============================================================
+*/
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .siteHeader .mainNav,
+  .siteHeader .megaMenu,
+  .siteHeader .megaBackdrop {
+
+    transition: none !important;
+  }
+
+}
+
+
+/* === PMD HERO FONT NAV SMOOTH V5 END === */

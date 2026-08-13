@@ -10,10 +10,27 @@ export default function Header() {
   const [mega, setMega] = useState(null);
 
   useEffect(() => {
-    const close = () => setMega(null);
-    window.addEventListener('scroll', close, { passive: true });
-    return () => window.removeEventListener('scroll', close);
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setMega(null);
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, []);
+
+  const toggleMobileNav = () => {
+    if (mobileOpen) {
+      setMega(null);
+    }
+
+    setMobileOpen((value) => !value);
+  };
 
   return (
     <header className="siteHeader">
@@ -22,25 +39,31 @@ export default function Header() {
         <nav className={`mainNav ${mobileOpen ? 'isOpen' : ''}`} aria-label="Primary navigation">
           {primaryNav.map((item) => {
             const hasMenu = Boolean(item.columns);
+            const isMegaOpen = mega === item.label;
+
             return (
               <div className="navItem" key={item.label}>
                 {hasMenu ? (
                   <button
-                    className={mega === item.label ? 'navTrigger active' : 'navTrigger'}
+                    className={isMegaOpen ? 'navTrigger active' : 'navTrigger'}
                     type="button"
+                    aria-expanded={isMegaOpen}
                     onClick={() => setMega((current) => current === item.label ? null : item.label)}
                   >
                     {item.label} <Icon name="down" size={14} />
                   </button>
                 ) : (
-                  <a href={item.href} onClick={() => setMobileOpen(false)}>{item.label}</a>
+                  <a href={item.href} onClick={() => { setMega(null); setMobileOpen(false); }}>{item.label}</a>
                 )}
 
-                {hasMenu && mega === item.label && (
-                  <div className={`megaMenu ${item.label === 'Product' ? 'megaMenuProduct' : ''}`}>
+                {hasMenu && (
+                  <div
+                    className={`megaMenu ${item.label === 'Product' ? 'megaMenuProduct' : ''} ${isMegaOpen ? 'isOpen' : ''}`}
+                    aria-hidden={!isMegaOpen}
+                  >
                     <div className="megaMenuTop">
                       <strong>{item.label}</strong>
-                      <a href={item.href} onClick={() => setMega(null)}>View overview <Icon name="arrow" size={15} /></a>
+                      <a href={item.href} onClick={() => { setMega(null); setMobileOpen(false); }}>View overview <Icon name="arrow" size={15} /></a>
                     </div>
                     <div className="megaColumns">
                       {item.columns.map((column) => (
@@ -64,12 +87,24 @@ export default function Header() {
         <div className="headerActions">
           <a className="loginLink desktopOnly" href="/how-it-works">How It Works</a>
           <a className="button buttonSmall" href="/contact">Book a Demo <Icon name="arrow" size={16}/></a>
-          <button className="menuButton" type="button" aria-label="Toggle navigation" onClick={() => setMobileOpen((value) => !value)}>
+          <button
+            className="menuButton"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded={mobileOpen}
+            onClick={toggleMobileNav}
+          >
             <span/><span/><span/>
           </button>
         </div>
       </div>
-      {mega && <button className="megaBackdrop" aria-label="Close menu" onClick={() => setMega(null)} />}
+      <button
+        className={`megaBackdrop ${mega ? 'isOpen' : ''}`}
+        aria-label="Close menu"
+        aria-hidden={!mega}
+        tabIndex={mega ? 0 : -1}
+        onClick={() => setMega(null)}
+      />
     </header>
   );
 }
