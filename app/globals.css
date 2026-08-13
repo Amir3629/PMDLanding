@@ -9073,3 +9073,73 @@ body.translated-rtl {
 }
 
 /* === PMD ARABIC HEADER SHADOW CLEAN V13.11 END === */
+
+/* === PMD ARABIC HERO IMAGE DROP SHADOW CLEAN V13.12 START === */
+
+/*
+  Root-cause fix for the grey/white haze at the TOP of the Arabic
+  restaurant background.
+
+  The base global rule gives every .heroImage this filter:
+
+    drop-shadow(0 35px 55px rgba(7,52,40,.16))
+
+  Because the Arabic restaurant artwork is a large full-height mirrored
+  image, that blurred drop-shadow is visible around its top edge and
+  looks like a second gradient/shadow layer.
+
+  Remove the filter ONLY from the Arabic desktop restaurant background.
+  Keep:
+  - mirrored restaurant position
+  - side white fade
+  - bottom extension/fade
+  - dashboard/device artwork
+  - English/Turkish
+  - tablet/mobile
+*/
+
+@media (min-width: 1100px) {
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroRightPanel
+  > img.heroImage.pmdHeroArtworkFix[src*="/site-assets/hero-platform.webp"] {
+
+    filter:
+      none !important;
+
+    -webkit-filter:
+      none !important;
+
+    box-shadow:
+      none !important;
+
+    text-shadow:
+      none !important;
+  }
+
+
+  /*
+    Defensive cleanup on the restaurant frame itself.
+    Do not touch ::before because that is the approved SIDE fade.
+  */
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroVisual
+  .heroImageFrame.heroImageFrameClean.heroRightPanel.pmdHeroArtworkWrapFix {
+
+    filter:
+      none !important;
+
+    -webkit-filter:
+      none !important;
+
+    box-shadow:
+      none !important;
+  }
+
+}
+
+/* === PMD ARABIC HERO IMAGE DROP SHADOW CLEAN V13.12 END === */
