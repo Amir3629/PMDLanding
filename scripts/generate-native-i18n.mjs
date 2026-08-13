@@ -395,7 +395,41 @@ function transformFile(sourceFile, targetFile, locale, cache) {
     StringLiteral(p) {
       const original = p.node.value;
 
-      if (shouldTranslateString(p, original)) {
+      /*
+        A human-facing string may be nested inside a JSX attribute
+        expression, for example:
+
+          className={open ? 'navTrigger active' : 'navTrigger'}
+
+        The old generator only protected DIRECT JSXAttribute children,
+        so it translated class tokens such as "navTrigger active".
+        Walk upward to the enclosing JSXAttribute and protect every
+        technical attribute regardless of expression nesting.
+      */
+      const technicalJsxAttribute = (() => {
+        let current = p.parentPath;
+
+        while (current) {
+          if (current.isJSXAttribute?.()) {
+            const attr = jsxAttributeName(current);
+            return Boolean(attr && TECH_ATTRS.has(attr));
+          }
+
+          if (
+            current.isJSXElement?.() ||
+            current.isJSXFragment?.() ||
+            current.isStatement?.()
+          ) {
+            break;
+          }
+
+          current = current.parentPath;
+        }
+
+        return false;
+      })();
+
+      if (!technicalJsxAttribute && shouldTranslateString(p, original)) {
         const translated = translateCore(original, cache);
 
         /*

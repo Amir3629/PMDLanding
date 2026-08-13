@@ -25,7 +25,7 @@ export default function TeamPage({
                 <span className="eyebrow">تدفق العمل في سياق الدور</span>
                 <h2>{item.title}</h2>
                 <p>{item.body}</p>
-                <a className="textArrow" href="/ar/teams">مقارنة بجميع أماكن العمل الستة <Icon name="arrow" size={15} /></a>
+                <a className="textArrow" href="/ar/teams">قارن مساحات العمل الست <Icon name="arrow" size={15} /></a>
               </div>
             </article>)}
         </div>

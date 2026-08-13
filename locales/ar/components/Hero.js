@@ -13,9 +13,9 @@ export default function Hero() {
           </span>
 
           <h1 className="pmdGrowthHeroTitle">
-            مدعوم بالـ AI
+            مدعوم بالذكاء الاصطناعي
             <br />
-            نمو المطعم.
+            نمو المطاعم.
             <br />
             <span>
               تكاليف أقل.
@@ -27,7 +27,7 @@ export default function Hero() {
           </h1>
 
           <p className="heroText">
-            (بياميدين) يساعد المطاعم على التحفّظات المؤتمتة، المطابخ والمدفوعات وتدفقات عمل الفريق، تحقيق أقصى قدر ممكن من كل طاولة رحلة ضيافة، وربط إدارة المخاطر المؤسسية والمحللين في أحد العمليات الحية صورة يُظهر ما يحتاج إلى الاهتمام، يساعد الحد من العمل اليدوي و أوقات الانتظار، والخدمة السريعة، وتحسين الجدول التناوب وتجربة الضيوف ودعم نمو الإيرادات
+            تساعد PayMyDine المطاعم على أتمتة الحجوزات والطلبات وعمليات المطبخ والمدفوعات وسير عمل الفرق، وتحسين كل طاولة ورحلة ضيف، وربط إدارة علاقات الضيوف (CRM) والتحليلات ضمن صورة تشغيلية حية واحدة. وتُبرز الرؤى المدعومة بالذكاء الاصطناعي ما يحتاج إلى الانتباه، مما يساعد على تقليل العمل اليدوي وأوقات الانتظار، وتسريع الخدمة، وتحسين دوران الطاولات وتجربة الضيوف، ودعم نمو الإيرادات.
           </p>
 
           <div className="heroButtons">
@@ -38,14 +38,14 @@ export default function Hero() {
 
             <a className="button buttonGhost" href="/ar/ai">
               <Icon name="play" size={18} />
-              (استكشف (بيادين آي
+              استكشف PayMyDine AI
             </a>
 
           </div>
 
           <div className="heroProof">
 
-            {["9 مجالات منتجات مترابطة", "6 إجراءات مدعومة من منظمة العفو الدولية", "6 أماكن عمل", "استعراض الاستثمار الأجنبي المباشر المرتبط بالمصدر"].map(item => <span key={item}>
+            {["9 مجالات منتجات مترابطة", "6 إجراءات بمساعدة الذكاء الاصطناعي", "6 مساحات عمل حسب الدور", "مراجعة بالذكاء الاصطناعي مرتبطة بالمصادر"].map(item => <span key={item}>
                 <Icon name="check" size={15} />
                 {item}
               </span>)}
@@ -59,7 +59,7 @@ export default function Hero() {
 
           <div className="heroImageFrame heroImageFrameClean heroRightPanel pmdHeroArtworkWrapFix">
 
-            <img src="/site-assets/hero-platform.webp" alt={"منصة بي ميدين وتجربة ضيوف"} className="heroImage pmdHeroArtworkFix" />
+            <img src="/site-assets/hero-platform.webp" alt={"منصة PayMyDine وتجربة الضيف"} className="heroImage pmdHeroArtworkFix" />
 
           </div>
 

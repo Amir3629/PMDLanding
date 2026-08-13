@@ -28,12 +28,12 @@ export default function Header() {
   return <header className="siteHeader">
       <div className="container headerInner">
         <Logo />
-        <nav className={`mainNav ${mobileOpen ? 'isOpen' : ''}`} aria-label={"الملاحة الأولية"}>
+        <nav className={`mainNav ${mobileOpen ? 'isOpen' : ''}`} aria-label={"التنقل الرئيسي"}>
           {primaryNav.map(item => {
           const hasMenu = Boolean(item.columns);
           const isMegaOpen = mega === item.label;
           return <div className="navItem" key={item.label}>
-                {hasMenu ? <button className={isMegaOpen ? "ناشط" : 'navTrigger'} type="button" aria-expanded={isMegaOpen} onClick={() => setMega(current => current === item.label ? null : item.label)}>
+                {hasMenu ? <button className={isMegaOpen ? 'navTrigger active' : 'navTrigger'} type="button" aria-expanded={isMegaOpen} onClick={() => setMega(current => current === item.label ? null : item.label)}>
                     {item.label} <Icon name="down" size={14} />
                   </button> : <a href={item.href} onClick={() => {
               setMega(null);
@@ -67,11 +67,11 @@ export default function Header() {
         <div className="headerActions">
           <a className="loginLink desktopOnly" href="/ar/how-it-works">كيف يعمل</a>
           <a className="button buttonSmall" href="/ar/contact">احجز عرضًا توضيحيًا <Icon name="arrow" size={16} /></a>
-          <button className="menuButton" type="button" aria-label={"الملاحة"} aria-expanded={mobileOpen} onClick={toggleMobileNav}>
+          <button className="menuButton" type="button" aria-label={"فتح أو إغلاق قائمة التنقل"} aria-expanded={mobileOpen} onClick={toggleMobileNav}>
             <span /><span /><span />
           </button>
         </div>
       </div>
-      <button className={`megaBackdrop ${mega ? 'isOpen' : ''}`} aria-label={"تغلق القائمة"} aria-hidden={!mega} tabIndex={mega ? 0 : -1} onClick={() => setMega(null)} />
+      <button className={`megaBackdrop ${mega ? 'isOpen' : ''}`} aria-label={"إغلاق القائمة"} aria-hidden={!mega} tabIndex={mega ? 0 : -1} onClick={() => setMega(null)} />
     </header>;
 }

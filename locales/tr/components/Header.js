@@ -33,7 +33,7 @@ export default function Header() {
           const hasMenu = Boolean(item.columns);
           const isMegaOpen = mega === item.label;
           return <div className="navItem" key={item.label}>
-                {hasMenu ? <button className={isMegaOpen ? "navTrigger aktif" : 'navTrigger'} type="button" aria-expanded={isMegaOpen} onClick={() => setMega(current => current === item.label ? null : item.label)}>
+                {hasMenu ? <button className={isMegaOpen ? 'navTrigger active' : 'navTrigger'} type="button" aria-expanded={isMegaOpen} onClick={() => setMega(current => current === item.label ? null : item.label)}>
                     {item.label} <Icon name="down" size={14} />
                   </button> : <a href={item.href} onClick={() => {
               setMega(null);

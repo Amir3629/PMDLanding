@@ -40,7 +40,7 @@ export default function SolutionsPage() {
           </div>
           <div className="capabilityList">
             <span><Icon name="check" size={16} />9 مجالات منتجات</span>
-            <span><Icon name="check" size={16} />6 أماكن عمل</span>
+            <span><Icon name="check" size={16} />6 مساحات عمل حسب الدور</span>
             <span><Icon name="check" size={16} />تدفق العمليات على خط ٥ خطوات</span>
             <span><Icon name="check" size={16} />3 أساليب لبيع الفواتير</span>
             <span><Icon name="check" size={16} />9 مقاييس إدارية</span>

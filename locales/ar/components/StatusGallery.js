@@ -9,18 +9,17 @@ export function StatusGallery() {
           <div>
 
             <span className="eyebrow">
-              ويصبح الوضع على قيد الحياة سياق AI
+              الحالة الحية تصبح سياقًا للذكاء الاصطناعي
             </span>
 
             <h2>
-              أبقي الطاولة والتذكرة وحالة الدفع مشتركة في الوقت الحقيقي
-ثم استخدام AI للمساعدة في شرح الاستثناءات وراء ذلك.
+              حافظ على مشاركة حالة الطاولة والتذكرة والدفع في الوقت الفعلي، ثم استخدم الذكاء الاصطناعي للمساعدة في تفسير الاستثناءات وراءها.
             </h2>
 
           </div>
 
           <p>
-            يستخدم الضيوف، وموظفو الخدمات، وسير العمل في المطبخ والدفع مختلفا الشاشات، لكن نشاطها يسهم في نفس التشغيل صورة وهذا يعطي الإدارة بيانات أكثر وضوحا عن مصادر الإبلاغ، مقارنات و تحقيق مساعد
+            يستخدم الضيوف وفريق الخدمة والمطبخ وعمليات الدفع شاشات مختلفة، لكن نشاطهم يساهم في الصورة التشغيلية نفسها. وهذا يمنح الإدارة بيانات مصدر أوضح للتقارير والمقارنات والتحقيقات المدعومة بالذكاء الاصطناعي.
           </p>
 
         </div>
@@ -54,7 +53,7 @@ export function StatusGallery() {
 }
 export function LifestyleMarquee() {
   const images = ['/site-assets/extra/seaside-dinner.webp', '/site-assets/extra/twilight-cafe.webp', '/site-assets/extra/friends-split-bill.webp', '/site-assets/extra/friends-qr.webp', '/site-assets/extra/bill-paid-cafe.webp', '/site-assets/extra/split-bill-table.webp', '/site-assets/custom/split-friends-replacement.webp', '/site-assets/extra/qr-ordering-experience.webp', imageGroups.social[0], imageGroups.social[2], imageGroups.table[3], imageGroups.kitchen[3]];
-  return <section className="photoMarquee" aria-label={"لحظات الراحة"}>
+  return <section className="photoMarquee" aria-label={"لحظات من المطعم"}>
 
       <div className="marqueeTrack">
 

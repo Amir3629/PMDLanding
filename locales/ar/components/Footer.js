@@ -16,7 +16,7 @@ export default function Footer() {
           <a href="/ar/teams/owner">المالك</a>
           <a href="/ar/teams/manager">المدير</a>
           <a href="/ar/teams/service-staff">فريق الخدمة</a>
-          <a href="/ar/teams/kitchen">المطبخ ونظام عرض المطبخ (KDS)</a>
+          <a href="/ar/teams/kitchen">المطبخ ونظام KDS</a>
           <a href="/ar/teams/reservations">الحجوزات</a>
           <a href="/ar/teams/finance">المالية والتقارير</a>
         </div>

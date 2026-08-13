@@ -1,7 +1,7 @@
 import { Icon } from './Icons';
 export default function CTA({
-  title = "هل أنت مستعد لخريطة (زكس كيز) لمطعمك؟",
-  body = "أحضروا أدواتكم الحالية، أدواركم، عمليات التسليم ومقاييس التشغيل وسنبين مجالات المنتجات التي تحل محل العمل المكرر وما هي النظم التي ينبغي أن تظل مترابطة.",
+  title = "هل أنت جاهز لملاءمة PayMyDine مع تشغيل مطعمك؟",
+  body = "أحضر أدواتك الحالية وأدوارك ونقاط التسليم ومؤشرات التشغيل. سنوضح أي مجالات المنتج تقلل العمل المكرر وأي الأنظمة ينبغي أن تبقى مترابطة.",
   primaryLabel = "احجز عرضًا توضيحيًا",
   primaryHref = "/ar/contact",
   secondaryLabel = "كيف يعمل",
@@ -11,7 +11,7 @@ export default function CTA({
       <div className="container">
         <div className="ctaCard">
           <div>
-            <span className="eyebrow lightEyebrow">خريطة العملية الحقيقية</span>
+            <span className="eyebrow lightEyebrow">ارسم صورة التشغيل الفعلي</span>
             <h2>{title}</h2>
             <p>{body}</p>
           </div>

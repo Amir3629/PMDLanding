@@ -8860,3 +8860,36 @@ body.translated-rtl {
 
 
 /* === PMD NATIVE ARABIC HERO MIRROR V13.6 END === */
+
+/* === PMD ARABIC HERO LEFT EDGE V13.7 START === */
+
+/*
+  Screenshot QA showed about 25px of hero background still visible at
+  the physical left viewport edge in native ar-OM desktop mode.
+
+  Move only the restaurant visual 30px farther left and expand its
+  width by the same amount, so no new gap is created on the text side.
+
+  Dashboard/device artwork is a separate direct child of the hero and
+  is intentionally untouched.
+*/
+@media (min-width: 1100px) {
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroVisual {
+
+    left:
+      -30px !important;
+
+    right:
+      auto !important;
+
+    width:
+      calc(min(56vw, 940px) + 30px) !important;
+  }
+
+}
+
+/* === PMD ARABIC HERO LEFT EDGE V13.7 END === */
