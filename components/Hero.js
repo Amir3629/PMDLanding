@@ -18,17 +18,16 @@ export default function Hero() {
             Run the restaurant.
             {' '}
             <span>
-              Let AI show you what needs attention next.
+              Let AI show you what needs attention
+              <br />
+              next.
             </span>
           </h1>
 
           <p className="heroText">
-            PayMyDine connects reservations, tables, ordering, kitchen,
-            payments, guest CRM, analytics, team permissions and integrations
-            in one operating picture. PayMyDine AI helps explain what changed,
-            compare periods, surface unusual movement, support forecasts and
-            guide each role toward the next decision while the source data
-            stays visible.
+            PayMyDine connects reservations, orders, kitchen, payments, CRM,
+            analytics and teams in one live operating picture. AI explains what
+            changed and helps each role decide what to do next.
           </p>
 
           <div className="heroButtons">
