@@ -53,7 +53,7 @@ export const teamPages = {
     ],
     bullets: ['Table status', 'Open orders', 'Kitchen progress', 'Reservations and walk-ins', 'Team activity', 'Shift exceptions']
   },
-  'service staff': {
+  'service-staff': {
     label: 'Service Staff',
     eyebrow: 'For service staff - 6 service signals',
     title: 'Keep assigned tables, order notes, guest requests and checkout status in one service view.',

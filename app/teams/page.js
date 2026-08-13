@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Six role-based PayMyDine workspaces for owners, managers, service staff, kitchen, reservations and finance.'
 };
 
-const order = ['owner', 'manager', 'service staff', 'kitchen', 'reservations', 'finance'];
+const order = ['owner', 'manager', 'service-staff', 'kitchen', 'reservations', 'finance'];
 
 export default function TeamsPage() {
   return (

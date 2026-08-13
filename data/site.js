@@ -130,7 +130,7 @@ export const primaryNav = [
       {
         title: 'Restaurant teams',
         links: [
-          ['Service staff', '/teams/service staff', 'See 6 service signals: assigned tables, orders, notes, requests, status and checkout.'],
+          ['Service staff', '/teams/service-staff', 'See 6 service signals: assigned tables, orders, notes, requests, status and checkout.'],
           ['Kitchen & KDS', '/teams/kitchen', 'Move tickets through received, preparing, ready and handed-off states with timing and notes visible.'],
           ['Reservations', '/teams/reservations', 'Use 6 planning signals for arrivals, party size, availability, walk-ins and seating.']
         ]
