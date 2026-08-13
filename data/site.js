@@ -7,7 +7,7 @@ export const productAreas = [
     body: 'Use 6 AI-assisted actions: ask questions, receive a daily briefing, flag unusual movement, compare periods, support forecasts and identify the next metric to investigate.',
     navNote: '6 actions for questions, briefings, alerts, comparisons, forecasts and investigation.',
     image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
-    compactImage: '/site-assets/social/7.webp'
+    compactImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
   },
   {
     number: 2,
@@ -16,8 +16,8 @@ export const productAreas = [
     href: '/solutions/operations',
     body: 'Monitor 6 live views: dashboard, open orders, table status, floor maps, dine-in or takeaway and current restaurant activity.',
     navNote: '6 live views for orders, tables, floor maps, channels and active service.',
-    image: '/site-assets/table/11.webp',
-    compactImage: '/site-assets/custom/shared-restaurant-hero-16.webp'
+    image: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
+    compactImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp'
   },
   {
     number: 3,
@@ -46,8 +46,8 @@ export const productAreas = [
     href: '/solutions/payments',
     body: 'Cover 8 guest-ordering and payment moments, including table QR, mobile menu, pay-at-table and 3 split methods: equally, by item or by shares.',
     navNote: '8 ordering and payment moments, including 3 bill-split methods.',
-    image: '/site-assets/payment/1.webp',
-    compactImage: '/site-assets/payment/3.webp'
+    image: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
+    compactImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp'
   },
   {
     number: 6,
@@ -56,8 +56,8 @@ export const productAreas = [
     href: '/solutions/insights',
     body: 'Track 9 decision metrics: revenue, guests, average check, table turnover, sales by time, best sellers, payment mix, forecasting and profitability.',
     navNote: '9 metrics for revenue, demand, table performance, forecasts and profitability.',
-    image: '/site-assets/extra/manager-analytics.webp',
-    compactImage: '/site-assets/extra/analytics-tablet-phone.webp'
+    image: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp',
+    compactImage: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp'
   },
   {
     number: 7,
@@ -66,8 +66,8 @@ export const productAreas = [
     href: '/solutions/team',
     body: 'Coordinate 5 people controls: role workspaces, permissions, shifts, performance context and staff activity.',
     navNote: '5 people controls across workspaces, permissions, shifts and staff activity.',
-    image: '/site-assets/staff/1.webp',
-    compactImage: '/site-assets/staff/6.webp'
+    image: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp',
+    compactImage: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp'
   },
   {
     number: 8,
@@ -76,8 +76,8 @@ export const productAreas = [
     href: '/solutions/guest-ordering',
     body: 'Use 6 growth tools: profiles, loyalty, offers, campaigns, feedback and retention, with visit context available for relevant follow-up.',
     navNote: '6 CRM and growth tools for guest context, engagement and retention.',
-    image: '/site-assets/social/18.webp',
-    compactImage: '/site-assets/comments/7.webp'
+    image: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp',
+    compactImage: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp'
   },
   {
     number: 9,
@@ -86,8 +86,8 @@ export const productAreas = [
     href: '/integrations',
     body: 'Connect 4 system types - POS, accounting, delivery and payments - then add central reporting, shared menus, inventory, food-cost and purchasing context.',
     navNote: '4 integration types plus central reporting, menus, inventory, food cost and purchasing.',
-    image: '/site-assets/custom/integrations-capabilities-fit.webp',
-    compactImage: '/site-assets/custom/integrations-operating-picture.webp'
+    image: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp',
+    compactImage: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp'
   }
 ];
 

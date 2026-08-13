@@ -6,7 +6,7 @@ export const productAreas = [{
   body: "6 AI-assisted eylemleri kullanın: sorular sor, günlük bir kısalık, bayrak sıra dışı hareket edin, dönemleri karşılaştırır, tahminleri karşılaştırır ve bir sonraki metrikleri araştırır.",
   navNote: "Sorular için 6 eylem, kısacalar, uyarılar, karşılaştırmalar, tahminler ve soruşturma.",
   image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
-  compactImage: '/site-assets/social/7.webp'
+  compactImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
 }, {
   number: 2,
   icon: 'operations',
@@ -14,8 +14,8 @@ export const productAreas = [{
   href: "/tr/solutions/operations",
   body: "6 canlı görüş izleyin: pano, açık siparişler, masa statüsü, zemin haritaları, yemek yeme veya taksi ve mevcut restoran aktivite.",
   navNote: "Siparişler, masalar, zemin haritaları, kanallar ve aktif hizmet için 6 canlı görüş.",
-  image: '/site-assets/table/11.webp',
-  compactImage: '/site-assets/custom/shared-restaurant-hero-16.webp'
+  image: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp'
 }, {
   number: 3,
   icon: 'calendar',
@@ -41,8 +41,8 @@ export const productAreas = [{
   href: "/tr/solutions/payments",
   body: "Masa QR de dahil olmak üzere 8 misafir sipariş ve ödeme anılarını, mobil menüyü, ödeme amaçlı ve 3 bölünmüş yöntemi: eşit olarak, öğe veya hisselerle.",
   navNote: "3 fatura destekli yöntem de dahil olmak üzere 8 sipariş ve ödeme anları.",
-  image: '/site-assets/payment/1.webp',
-  compactImage: '/site-assets/payment/3.webp'
+  image: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp'
 }, {
   number: 6,
   icon: 'chart',
@@ -50,8 +50,8 @@ export const productAreas = [{
   href: "/tr/solutions/insights",
   body: "9 karar metrikleri izleyin: gelir, konuklar, ortalama kontrol, masa cirosu, zaman, en iyi satıcılar, ödeme karışımı, tahmin ve kârlılık.",
   navNote: "Gelir, talep, masa performansı, tahminler ve kârlılık için 9 metrik.",
-  image: '/site-assets/extra/manager-analytics.webp',
-  compactImage: '/site-assets/extra/analytics-tablet-phone.webp'
+  image: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp'
 }, {
   number: 7,
   icon: 'team',
@@ -59,8 +59,8 @@ export const productAreas = [{
   href: "/tr/solutions/team",
   body: "5 kişi kontrol eder: iş alanları, izinler, değişimler, performans bağlamı ve personel aktivitesi.",
   navNote: "5 kişi iş alanları, izinler, değişimler ve personel aktivitelerini kontrol eder.",
-  image: '/site-assets/staff/1.webp',
-  compactImage: '/site-assets/staff/6.webp'
+  image: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp'
 }, {
   number: 8,
   icon: 'phone',
@@ -68,8 +68,8 @@ export const productAreas = [{
   href: "/tr/solutions/guest-ordering",
   body: "6 büyüme aracı kullanın: profiller, sadakat, teklifler, kampanyalar, geri bildirim ve saklama, ilgili takip için mevcut olan ziyaret bağlamı.",
   navNote: "6 CRM ve misafir bağlamı, nişan ve saklama araçları.",
-  image: '/site-assets/social/18.webp',
-  compactImage: '/site-assets/comments/7.webp'
+  image: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp'
 }, {
   number: 9,
   icon: 'link',
@@ -77,8 +77,8 @@ export const productAreas = [{
   href: "/tr/integrations",
   body: "Connect 4 sistem türü - POS, muhasebe, teslimat ve ödeme - sonra merkezi raporlama, paylaşılan menüler, envanter, yiyecek-maliyet ve satın alma bağlamı ekleyin.",
   navNote: "4 entegrasyon türleri artı merkezi raporlama, menüler, envanter, yiyecek maliyeti ve satın alma.",
-  image: '/site-assets/custom/integrations-capabilities-fit.webp',
-  compactImage: '/site-assets/custom/integrations-operating-picture.webp'
+  image: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp'
 }];
 const productLink = index => {
   const item = productAreas[index];

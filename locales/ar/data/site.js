@@ -6,7 +6,7 @@ export const productAreas = [{
   body: "استخدم 6 إجراءات بمساعدة الذكاء الاصطناعي: اطرح الأسئلة، وتلقَّ موجزًا يوميًا، وارصد التحركات غير المعتادة، وقارن الفترات، وادعم التوقعات، وحدد المؤشر التالي الذي يحتاج إلى التحقيق.",
   navNote: "6 إجراءات للأسئلة والموجزات والتنبيهات والمقارنات والتوقعات والتحقيق.",
   image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
-  compactImage: '/site-assets/social/7.webp'
+  compactImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
 }, {
   number: 2,
   icon: 'operations',
@@ -14,8 +14,8 @@ export const productAreas = [{
   href: "/ar/solutions/operations",
   body: "راقب 6 عروض حية: لوحة المعلومات، والطلبات المفتوحة، وحالة الطاولات، ومخططات الصالة، وخدمة داخل المطعم أو الطلبات الخارجية، والنشاط الحالي للمطعم.",
   navNote: "6 عروض حية للطلبات والطاولات ومخططات الصالة والقنوات والخدمة النشطة.",
-  image: '/site-assets/table/11.webp',
-  compactImage: '/site-assets/custom/shared-restaurant-hero-16.webp'
+  image: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp'
 }, {
   number: 3,
   icon: 'calendar',
@@ -41,8 +41,8 @@ export const productAreas = [{
   href: "/ar/solutions/payments",
   body: "غطِّ 8 لحظات في طلب الضيف والدفع، بما فيها رمز QR للطاولة، والقائمة على الهاتف، والدفع على الطاولة، و3 طرق لتقسيم الفاتورة: بالتساوي، أو حسب الأصناف، أو حسب الحصص.",
   navNote: "8 لحظات للطلب والدفع، تشمل 3 طرق لتقسيم الفاتورة.",
-  image: '/site-assets/payment/1.webp',
-  compactImage: '/site-assets/payment/3.webp'
+  image: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp'
 }, {
   number: 6,
   icon: 'chart',
@@ -50,8 +50,8 @@ export const productAreas = [{
   href: "/ar/solutions/insights",
   body: "تابع 9 مؤشرات للقرار: الإيرادات، وعدد الضيوف، ومتوسط الفاتورة، ودوران الطاولات، والمبيعات حسب الوقت، والأصناف الأكثر مبيعًا، ومزيج طرق الدفع، والتوقعات، والربحية.",
   navNote: "9 مؤشرات للإيرادات والطلب وأداء الطاولات والتوقعات والربحية.",
-  image: '/site-assets/extra/manager-analytics.webp',
-  compactImage: '/site-assets/extra/analytics-tablet-phone.webp'
+  image: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp'
 }, {
   number: 7,
   icon: 'team',
@@ -59,8 +59,8 @@ export const productAreas = [{
   href: "/ar/solutions/team",
   body: "نسّق 5 ضوابط لإدارة الفريق: مساحات العمل حسب الدور، والصلاحيات، والمناوبات، وسياق الأداء، ونشاط الموظفين.",
   navNote: "5 ضوابط لإدارة الفريق تشمل مساحات العمل والصلاحيات والمناوبات ونشاط الموظفين.",
-  image: '/site-assets/staff/1.webp',
-  compactImage: '/site-assets/staff/6.webp'
+  image: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp'
 }, {
   number: 8,
   icon: 'phone',
@@ -68,8 +68,8 @@ export const productAreas = [{
   href: "/ar/solutions/guest-ordering",
   body: "استخدم 6 أدوات للنمو: ملفات الضيوف، والولاء، والعروض، والحملات، والملاحظات، والاحتفاظ بالضيوف، مع إتاحة سياق الزيارات لمتابعة أكثر صلة.",
   navNote: "6 أدوات لإدارة علاقات الضيوف والنمو من أجل فهم السياق وتعزيز التفاعل والاحتفاظ بالضيوف.",
-  image: '/site-assets/social/18.webp',
-  compactImage: '/site-assets/comments/7.webp'
+  image: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp'
 }, {
   number: 9,
   icon: 'link',
@@ -77,8 +77,8 @@ export const productAreas = [{
   href: "/ar/integrations",
   body: "اربط 4 أنواع من الأنظمة — POS، والمحاسبة، والتوصيل، والمدفوعات — ثم أضف التقارير المركزية، والقوائم المشتركة، والمخزون، وتكلفة الطعام، وسياق المشتريات.",
   navNote: "4 أنواع من التكاملات، إضافة إلى التقارير المركزية والقوائم والمخزون وتكلفة الطعام والمشتريات.",
-  image: '/site-assets/custom/integrations-capabilities-fit.webp',
-  compactImage: '/site-assets/custom/integrations-operating-picture.webp'
+  image: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp',
+  compactImage: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp'
 }];
 const productLink = index => {
   const item = productAreas[index];
