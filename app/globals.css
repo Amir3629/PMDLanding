@@ -9020,3 +9020,56 @@ body.translated-rtl {
 }
 
 /* === PMD ARABIC HERO BOTTOM EXTENSION V13.10 END === */
+
+/* === PMD ARABIC HEADER SHADOW CLEAN V13.11 START === */
+
+/*
+  Arabic homepage desktop only.
+
+  Screenshot QA showed a second grey/white haze across the TOP of the
+  mirrored restaurant artwork. That haze is the floating header/card
+  shadow landing on the photo underneath it.
+
+  Keep:
+  - the white rounded header card
+  - its border/backdrop appearance
+  - the hero side fade
+  - the new hero bottom extension/fade
+  - all dashboard/device positioning
+
+  Remove only the large elevation shadow/filter that washes the photo.
+*/
+
+@media (min-width: 1100px) {
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  .siteHeader {
+
+    box-shadow:
+      none !important;
+
+    filter:
+      none !important;
+  }
+
+
+  /*
+    Some historical homepage header patches placed the elevation on
+    .headerInner instead of .siteHeader. Neutralize that second source too.
+  */
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  .siteHeader
+  .headerInner {
+
+    box-shadow:
+      none !important;
+
+    filter:
+      none !important;
+  }
+
+}
+
+/* === PMD ARABIC HEADER SHADOW CLEAN V13.11 END === */
