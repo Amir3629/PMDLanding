@@ -8508,3 +8508,102 @@ body.translated-rtl {
 
 
 /* === PMD LANGUAGE RECOVERY ARABIC HERO V10 END === */
+
+
+/* === PMD TRANSLATION RUNTIME V11 START === */
+
+
+/*
+   Google Translate mount must exist in layout so the widget can
+   initialise, but it must never affect PayMyDine layout.
+*/
+
+.pmdGoogleTranslateMount {
+
+  position:
+    fixed !important;
+
+  top:
+    -10000px !important;
+
+  left:
+    -10000px !important;
+
+  width:
+    1px !important;
+
+  height:
+    1px !important;
+
+  overflow:
+    hidden !important;
+
+  opacity:
+    0 !important;
+
+  pointer-events:
+    none !important;
+
+}
+
+
+/*
+   Google sometimes attempts to offset the body for its banner.
+*/
+
+html,
+body {
+
+  top:
+    0 !important;
+
+}
+
+
+html.translated-ltr body,
+html.translated-rtl body {
+
+  top:
+    0 !important;
+
+}
+
+
+/*
+   Hide legacy Google translation chrome without hiding the
+   translated PayMyDine document itself.
+*/
+
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover {
+
+  display:
+    none !important;
+
+  visibility:
+    hidden !important;
+
+}
+
+
+/*
+   PayMyDine and the language selector are always original brand
+   content.
+*/
+
+[data-pmd-brand="true"],
+[data-pmd-brand="true"] *,
+.pmdLanguageSwitcher,
+.pmdLanguageSwitcher * {
+
+  unicode-bidi:
+    isolate;
+
+}
+
+
+/* === PMD TRANSLATION RUNTIME V11 END === */

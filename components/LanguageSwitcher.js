@@ -42,20 +42,11 @@ const ROOT_DOMAIN =
 
 
 
-function getGoogleTranslateSelect() {
-
-  return document.querySelector(
-    '.goog-te-combo'
-  );
-
-}
-
-
-
 function isPayMyDineDomain() {
 
   const host =
     window.location.hostname;
+
 
   return (
     host === ROOT_DOMAIN ||
@@ -68,67 +59,35 @@ function isPayMyDineDomain() {
 
 
 
-function cookieDomains() {
-
-  if (!isPayMyDineDomain()) {
-    return [];
-  }
-
-  return [
-    ROOT_DOMAIN,
-    `.${ROOT_DOMAIN}`,
-    `www.${ROOT_DOMAIN}`,
-    `.www.${ROOT_DOMAIN}`
-  ];
-
-}
-
-
-
-function writeGoogleCookie(
-  value,
-  expires
-) {
+function clearGoogleCookie() {
 
   const basic =
-    `googtrans=${value};` +
-    `path=/;` +
-    `expires=${expires};` +
-    `SameSite=Lax`;
+    'googtrans=;' +
+    'path=/;' +
+    'Max-Age=0;' +
+    'SameSite=Lax';
 
-  /*
-    Host-only cookie.
-  */
+
   document.cookie =
     basic;
 
 
-  /*
-    Explicitly synchronise all domains that may have been
-    created by previous PayMyDine / Google Translate versions.
+  if (
+    isPayMyDineDomain()
+  ) {
 
-    Most importantly:
-      .paymydine.com
+    document.cookie =
+      `${basic};domain=.${ROOT_DOMAIN}`;
 
-    Previous code only dealt with .www.paymydine.com.
-  */
-  cookieDomains().forEach(
-    (domain) => {
-
-      document.cookie =
-        `${basic};domain=${domain}`;
-
-    }
-  );
+  }
 
 }
 
 
 
-function setGoogleCookie(language) {
-
-  const value =
-    `/en/${language}`;
+function setGoogleCookie(
+  language
+) {
 
   const expires =
     new Date(
@@ -136,54 +95,34 @@ function setGoogleCookie(language) {
       365 * 24 * 60 * 60 * 1000
     ).toUTCString();
 
-  writeGoogleCookie(
-    value,
-    expires
-  );
-
-}
-
-
-
-function clearGoogleCookie() {
-
-  const expires =
-    'Thu, 01 Jan 1970 00:00:00 GMT';
 
   const basic =
-    `googtrans=;` +
-    `path=/;` +
+    `googtrans=/en/${language};` +
+    'path=/;' +
     `expires=${expires};` +
-    `Max-Age=0;` +
-    `SameSite=Lax`;
+    'SameSite=Lax';
 
 
-  /*
-    Host-only cookie.
-  */
   document.cookie =
     basic;
 
 
-  /*
-    Remove every domain variation used by both:
-    - old PayMyDine translation code
-    - Google Translate
-  */
-  cookieDomains().forEach(
-    (domain) => {
+  if (
+    isPayMyDineDomain()
+  ) {
 
-      document.cookie =
-        `${basic};domain=${domain}`;
+    document.cookie =
+      `${basic};domain=.${ROOT_DOMAIN}`;
 
-    }
-  );
+  }
 
 }
 
 
 
-function applyDirection(language) {
+function applyDirection(
+  language
+) {
 
   const definition =
     LANGUAGES[language] ||
@@ -245,45 +184,12 @@ export default function LanguageSwitcher() {
     } catch (_) {}
 
 
-    if (!LANGUAGES[saved]) {
+    if (
+      !LANGUAGES[saved]
+    ) {
 
       saved =
         'en';
-
-    }
-
-
-    /*
-      IMPORTANT:
-
-      Kill the V9 frozen-page class immediately.
-
-      Even if an old browser tab somehow carried this class,
-      it must never keep PayMyDine hidden.
-    */
-    document.documentElement
-      .classList.remove(
-        'pmd-translation-pending'
-      );
-
-
-    /*
-      ENGLISH RECOVERY.
-
-      If localStorage says English, remove every old Google
-      translation cookie automatically.
-
-      User does NOT need to manually clear browser cookies.
-    */
-    if (saved === 'en') {
-
-      clearGoogleCookie();
-
-    } else {
-
-      setGoogleCookie(
-        saved
-      );
 
     }
 
@@ -298,34 +204,36 @@ export default function LanguageSwitcher() {
     );
 
 
+    const close =
+      (event) => {
 
-    const close = (event) => {
+        if (
+          rootRef.current &&
+          !rootRef.current.contains(
+            event.target
+          )
+        ) {
 
-      if (
-        rootRef.current &&
-        !rootRef.current.contains(
-          event.target
-        )
-      ) {
+          setOpen(false);
 
-        setOpen(false);
+        }
 
-      }
-
-    };
+      };
 
 
-    const escape = (event) => {
+    const escape =
+      (event) => {
 
-      if (
-        event.key === 'Escape'
-      ) {
+        if (
+          event.key ===
+            'Escape'
+        ) {
 
-        setOpen(false);
+          setOpen(false);
 
-      }
+        }
 
-    };
+      };
 
 
     document.addEventListener(
@@ -359,194 +267,75 @@ export default function LanguageSwitcher() {
 
 
 
-  const changeLanguage = (
-    next
-  ) => {
+  const changeLanguage =
+    (next) => {
 
-    if (!LANGUAGES[next]) {
-
-      return;
-
-    }
-
-
-    setOpen(false);
-
-
-    if (
-      next === language
-    ) {
-
-      return;
-
-    }
-
-
-    /*
-      V10 deliberately DOES NOT add a loading screen here.
-    */
-
-    document.documentElement
-      .classList.remove(
-        'pmd-translation-pending'
-      );
-
-
-    try {
-
-      window.localStorage.setItem(
-        STORAGE_KEY,
-        next
-      );
-
-    } catch (_) {}
-
-
-    setLanguage(
-      next
-    );
-
-
-    applyDirection(
-      next
-    );
-
-
-
-    /*
-      ========================================================
-      ENGLISH
-      ========================================================
-
-      Remove ALL Google translation cookies.
-
-      Then ask Google to restore the original source DOM.
-
-      Finally reload once with a clean English cookie state.
-    */
-
-    if (
-      next === 'en'
-    ) {
-
-      clearGoogleCookie();
-
-
-      const combo =
-        getGoogleTranslateSelect();
-
-
-      if (combo) {
-
-        combo.value =
-          'en';
-
-
-        combo.dispatchEvent(
-          new Event(
-            'change',
-            {
-              bubbles: true
-            }
-          )
-        );
-
-
-        window.setTimeout(
-          () => {
-
-            window.location.reload();
-
-          },
-          120
-        );
-
+      if (
+        !LANGUAGES[next]
+      ) {
 
         return;
 
       }
 
 
-      window.location.reload();
-
-      return;
-
-    }
+      setOpen(false);
 
 
-
-    /*
-      ========================================================
-      TURKISH / ARABIC
-      ========================================================
-
-      Synchronise cookie BEFORE asking Google to translate.
-    */
-
-    setGoogleCookie(
-      next
-    );
-
-
-    const tryApply = (
-      attempt = 0
-    ) => {
-
-      const combo =
-        getGoogleTranslateSelect();
-
-
-      if (combo) {
-
-        combo.value =
-          next;
-
-
-        combo.dispatchEvent(
-          new Event(
-            'change',
-            {
-              bubbles: true
-            }
-          )
-        );
-
+      if (
+        next === language
+      ) {
 
         return;
 
       }
+
+
+      try {
+
+        window.localStorage.setItem(
+          STORAGE_KEY,
+          next
+        );
+
+      } catch (_) {}
 
 
       /*
-        Google Translate normally exists far earlier because
-        V10 loads it from <head>.
-
-        This is just a fallback.
+        Synchronise cookie BEFORE reload.
       */
+
       if (
-        attempt < 50
+        next === 'en'
       ) {
 
-        window.setTimeout(
-          () =>
-            tryApply(
-              attempt + 1
-            ),
-          60
-        );
+        clearGoogleCookie();
 
       } else {
 
-        window.location.reload();
+        setGoogleCookie(
+          next
+        );
 
       }
 
+
+      applyDirection(
+        next
+      );
+
+
+      /*
+        DO NOT live-mutate the existing React DOM.
+
+        Reload into clean server HTML.
+
+        GlobalTranslation will start Google only after hydration.
+      */
+
+      window.location.reload();
+
     };
-
-
-    tryApply();
-
-  };
 
 
 
@@ -607,7 +396,6 @@ export default function LanguageSwitcher() {
       </button>
 
 
-
       <div
         className={
           `pmdLanguageMenu ${
@@ -645,7 +433,6 @@ export default function LanguageSwitcher() {
         </button>
 
 
-
         <button
           type="button"
           className={
@@ -670,7 +457,6 @@ export default function LanguageSwitcher() {
           </span>
 
         </button>
-
 
 
         <button

@@ -3,7 +3,6 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieNotice from '@/components/CookieNotice';
-
 import SmoothMotion from '@/components/SmoothMotion';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import GlobalTranslation from '@/components/GlobalTranslation';
@@ -20,7 +19,12 @@ export const metadata = {
   },
 
   description:
-    'PayMyDine brings restaurant operations, role-based team workspaces, guest ordering, kitchen flow, payments, live insights, integrations and AI assistance into one adaptable platform.'
+    'PayMyDine brings restaurant operations, role-based team workspaces, guest ordering, kitchen flow, payments, live insights, integrations and AI assistance into one adaptable platform.',
+
+  icons: {
+    icon:
+      '/site-assets/logo.svg'
+  }
 
 };
 
@@ -42,17 +46,23 @@ export default function RootLayout({
 
         {/*
           ======================================================
-          PMD LANGUAGE BOOT V10
+          PMD LANGUAGE PRE-PAINT BOOT V11
           ======================================================
 
-          Runs BEFORE normal React hydration.
+          This script is intentionally SMALL.
 
-          IMPORTANT:
-          - never hides the website for translation
-          - synchronises Google cookie immediately
-          - clears stale Arabic/Turkish cookie when EN selected
-          - prepares RTL before first layout
-          - homepage splash is independent from translation
+          It does NOT load Google Translate.
+          It does NOT modify rendered text.
+          It does NOT call TranslateElement.
+
+          It only:
+          - reads saved language
+          - prepares lang / dir
+          - synchronises googtrans cookie
+          - handles first homepage splash
+
+          Therefore third-party translation cannot mutate React
+          server HTML before hydration.
         */}
 
         <script
@@ -66,7 +76,7 @@ export default function RootLayout({
       'pmd_language_v1';
 
     var SPLASH_KEY =
-      'pmd_home_splash_seen_v10';
+      'pmd_home_splash_seen_v11';
 
     var ROOT_DOMAIN =
       'paymydine.com';
@@ -110,13 +120,8 @@ export default function RootLayout({
         : 'ltr';
 
 
-    /*
-      Absolutely remove V9 translation blocker.
-    */
-
-    html.classList.remove(
-      'pmd-translation-pending'
-    );
+    window.__PMD_LANGUAGE__ =
+      selected;
 
 
 
@@ -127,45 +132,21 @@ export default function RootLayout({
 
       return (
         host === ROOT_DOMAIN ||
-        host.endsWith(
+        host.slice(
+          -(ROOT_DOMAIN.length + 1)
+        ) ===
           '.' + ROOT_DOMAIN
-        )
       );
 
     }
 
 
 
-    function domains() {
-
-      if (!isPMDDomain()) {
-
-        return [];
-
-      }
-
-
-      return [
-        ROOT_DOMAIN,
-        '.' + ROOT_DOMAIN,
-        'www.' + ROOT_DOMAIN,
-        '.www.' + ROOT_DOMAIN
-      ];
-
-    }
-
-
-
-    function expireGoogleCookie() {
-
-      var expires =
-        'Thu, 01 Jan 1970 00:00:00 GMT';
-
+    function clearGoogleCookie() {
 
       var base =
         'googtrans=;' +
         'path=/;' +
-        'expires=' + expires + ';' +
         'Max-Age=0;' +
         'SameSite=Lax';
 
@@ -174,16 +155,16 @@ export default function RootLayout({
         base;
 
 
-      domains().forEach(
-        function (domain) {
+      if (
+        isPMDDomain()
+      ) {
 
-          document.cookie =
-            base +
-            ';domain=' +
-            domain;
+        document.cookie =
+          base +
+          ';domain=.' +
+          ROOT_DOMAIN;
 
-        }
-      );
+      }
 
     }
 
@@ -200,46 +181,39 @@ export default function RootLayout({
         ).toUTCString();
 
 
-      var value =
-        '/en/' + language;
-
-
       var base =
-        'googtrans=' + value + ';' +
-        'path=/;' +
-        'expires=' + expires + ';' +
-        'SameSite=Lax';
+        'googtrans=/en/' +
+        language +
+        ';path=/;' +
+        'expires=' +
+        expires +
+        ';SameSite=Lax';
 
 
       document.cookie =
         base;
 
 
-      domains().forEach(
-        function (domain) {
+      if (
+        isPMDDomain()
+      ) {
 
-          document.cookie =
-            base +
-            ';domain=' +
-            domain;
+        document.cookie =
+          base +
+          ';domain=.' +
+          ROOT_DOMAIN;
 
-        }
-      );
+      }
 
     }
 
 
 
-    /*
-      Browser state and Google cookie are now always aligned
-      BEFORE Google Translate loads.
-    */
-
     if (
       selected === 'en'
     ) {
 
-      expireGoogleCookie();
+      clearGoogleCookie();
 
     } else {
 
@@ -251,22 +225,13 @@ export default function RootLayout({
 
 
 
-    window.__PMD_LANGUAGE__ =
-      selected;
-
-
-
     /*
-      ========================================================
-      FIRST HOMEPAGE VISIT SPLASH
-      ========================================================
+      FIRST HOMEPAGE VISIT SPLASH ONLY.
 
-      This is NOT a translation loading screen.
-
-      It only appears once per browser session when / is first
-      opened.
-
-      Navigating pages or changing languages does not show it.
+      NOT used for:
+      - translation
+      - page navigation
+      - changing language
     */
 
     try {
@@ -298,9 +263,7 @@ export default function RootLayout({
 
           },
 
-          selected === 'en'
-            ? 650
-            : 950
+          700
 
         );
 
@@ -309,193 +272,11 @@ export default function RootLayout({
     } catch (_) {}
 
 
-
-    /*
-      ========================================================
-      GOOGLE TRANSLATE CALLBACK
-      ========================================================
-
-      Defined in HEAD instead of waiting for React useEffect.
-
-      That starts translation substantially earlier.
-    */
-
-    window.googleTranslateElementInit =
-      function () {
-
-
-        function initialise() {
-
-          if (
-            !window.google ||
-            !window.google.translate
-          ) {
-
-            window.setTimeout(
-              initialise,
-              25
-            );
-
-            return;
-
-          }
-
-
-          var mount =
-            document.getElementById(
-              'pmd-google-translate'
-            );
-
-
-          if (!mount) {
-
-            window.setTimeout(
-              initialise,
-              25
-            );
-
-            return;
-
-          }
-
-
-          if (
-            !mount.dataset
-              .pmdGoogleReady
-          ) {
-
-            new window.google.translate
-              .TranslateElement(
-
-                {
-                  pageLanguage:
-                    'en',
-
-                  includedLanguages:
-                    'en,tr,ar',
-
-                  autoDisplay:
-                    false,
-
-                  multilanguagePage:
-                    true
-                },
-
-                'pmd-google-translate'
-
-              );
-
-
-            mount.dataset
-              .pmdGoogleReady =
-                'true';
-
-          }
-
-
-
-          if (
-            selected === 'tr' ||
-            selected === 'ar'
-          ) {
-
-            var attempts =
-              0;
-
-
-            function apply() {
-
-              var combo =
-                document.querySelector(
-                  '.goog-te-combo'
-                );
-
-
-              if (combo) {
-
-                combo.value =
-                  selected;
-
-
-                combo.dispatchEvent(
-                  new Event(
-                    'change',
-                    {
-                      bubbles: true
-                    }
-                  )
-                );
-
-
-                return;
-
-              }
-
-
-              attempts +=
-                1;
-
-
-              if (
-                attempts < 50
-              ) {
-
-                window.setTimeout(
-                  apply,
-                  40
-                );
-
-              }
-
-            }
-
-
-            apply();
-
-          }
-
-        }
-
-
-        initialise();
-
-      };
-
-
-  } catch (_) {
-
-    document.documentElement
-      .classList.remove(
-        'pmd-translation-pending'
-      );
-
-  }
+  } catch (_) {}
 
 })();
             `
           }}
-        />
-
-
-        {/*
-          Connection starts before React hydration.
-        */}
-
-        <link
-          rel="preconnect"
-          href="https://translate.google.com"
-        />
-
-        <link
-          rel="dns-prefetch"
-          href="https://translate.google.com"
-        />
-
-
-        <script
-          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          defer
-          data-pmd-translate="true"
         />
 
 
@@ -519,12 +300,6 @@ export default function RootLayout({
 
 
       <body>
-
-        {/*
-          First-visit homepage splash ONLY.
-
-          V10 never uses this for translation/page navigation.
-        */}
 
         <div
           className="pmdTranslationShield notranslate"
@@ -554,6 +329,13 @@ export default function RootLayout({
 
         <SmoothMotion />
 
+        {/*
+          IMPORTANT:
+
+          Google Translate is now owned by this CLIENT component.
+
+          It loads only AFTER React hydration.
+        */}
         <GlobalTranslation />
 
         <Header />

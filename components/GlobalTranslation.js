@@ -9,6 +9,14 @@ const STORAGE_KEY =
   'pmd_language_v1';
 
 
+const SCRIPT_ID =
+  'pmd-google-translate-script-v11';
+
+
+const MOUNT_ID =
+  'pmd-google-translate';
+
+
 
 function getSelectedLanguage() {
 
@@ -38,43 +46,138 @@ function getSelectedLanguage() {
 
 
 
+function normaliseGoogleLayout() {
+
+  if (
+    document.body
+  ) {
+
+    document.body.style.top =
+      '0px';
+
+  }
+
+
+  document.documentElement
+    .style.marginTop =
+      '0px';
+
+}
+
+
+
+function isAlreadyTranslated() {
+
+  const html =
+    document.documentElement;
+
+
+  return (
+    html.classList.contains(
+      'translated-ltr'
+    ) ||
+    html.classList.contains(
+      'translated-rtl'
+    )
+  );
+
+}
+
+
+
 export default function GlobalTranslation() {
 
   useEffect(() => {
 
-    /*
-      V10 NEVER blocks the document.
+    const language =
+      getSelectedLanguage();
 
-      This fixes the V9 state where the whole website could
-      remain behind the PayMyDine translation shield.
+
+    /*
+      ========================================================
+      ENGLISH
+      ========================================================
+
+      English is the original React/server HTML.
+
+      Absolutely no Google Translate runtime is required.
     */
 
-    document.documentElement
-      .classList.remove(
-        'pmd-translation-pending'
-      );
+    if (
+      language === 'en'
+    ) {
+
+      normaliseGoogleLayout();
+
+      document.documentElement
+        .dataset.pmdTranslationReady =
+          'true';
+
+      return;
+
+    }
 
 
 
-    let lastApplied =
+    /*
+      ========================================================
+      TURKISH / ARABIC
+      ========================================================
+
+      CRITICAL:
+
+      This useEffect runs AFTER React hydration.
+
+      Only now are we allowed to load a third-party script that
+      mutates page text.
+    */
+
+    let cancelled =
+      false;
+
+    let initialiseTimer =
+      null;
+
+    let comboTimer =
       null;
 
 
-    const applySelectedLanguage =
-      () => {
+    window.__PMD_GT_INITIALIZED__ =
+      false;
 
-        const selected =
-          getSelectedLanguage();
+
+
+    const applyCombo =
+      (attempt = 0) => {
+
+        if (
+          cancelled
+        ) {
+
+          return;
+
+        }
+
+
+        normaliseGoogleLayout();
 
 
         /*
-          English is the original server-rendered language.
+          Google may already have translated automatically from
+          the googtrans cookie.
+
+          If yes, DO NOT dispatch another change event.
         */
+
         if (
-          selected === 'en'
+          isAlreadyTranslated()
         ) {
 
-          return true;
+          document.documentElement
+            .dataset.pmdTranslationReady =
+              'true';
+
+          return;
 
         }
 
@@ -85,22 +188,40 @@ export default function GlobalTranslation() {
           );
 
 
-        if (!combo) {
+        if (
+          !combo
+        ) {
 
-          return false;
+          if (
+            attempt < 80
+          ) {
+
+            comboTimer =
+              window.setTimeout(
+                () =>
+                  applyCombo(
+                    attempt + 1
+                  ),
+                50
+              );
+
+          }
+
+          return;
 
         }
 
 
         /*
-          Only trigger once per selected language.
+          Dispatch at most once and ONLY when required.
         */
+
         if (
-          lastApplied !== selected
+          combo.value !== language
         ) {
 
           combo.value =
-            selected;
+            language;
 
 
           combo.dispatchEvent(
@@ -112,142 +233,456 @@ export default function GlobalTranslation() {
             )
           );
 
+        }
 
-          lastApplied =
-            selected;
+
+        document.documentElement
+          .dataset.pmdTranslationReady =
+            'true';
+
+      };
+
+
+
+    const initialise =
+      (attempt = 0) => {
+
+        if (
+          cancelled
+        ) {
+
+          return;
 
         }
 
 
-        return true;
+        const TranslateElement =
+          window.google &&
+          window.google.translate &&
+          window.google.translate
+            .TranslateElement;
+
+
+        const mount =
+          document.getElementById(
+            MOUNT_ID
+          );
+
+
+        /*
+          THIS CHECK FIXES:
+          "undefined is not a constructor"
+
+          window.google.translate existing is NOT sufficient.
+          TranslateElement itself must be a function.
+        */
+
+        if (
+          typeof TranslateElement !==
+            'function' ||
+          !mount
+        ) {
+
+          if (
+            attempt < 100
+          ) {
+
+            initialiseTimer =
+              window.setTimeout(
+                () =>
+                  initialise(
+                    attempt + 1
+                  ),
+                50
+              );
+
+          }
+
+          return;
+
+        }
+
+
+        /*
+          Singleton.
+
+          Never create two Google TranslateElement instances.
+        */
+
+        if (
+          !window.__PMD_GT_INITIALIZED__
+        ) {
+
+          try {
+
+            new TranslateElement(
+
+              {
+                pageLanguage:
+                  'en',
+
+                includedLanguages:
+                  'tr,ar',
+
+                autoDisplay:
+                  false
+              },
+
+              MOUNT_ID
+
+            );
+
+
+            window.__PMD_GT_INITIALIZED__ =
+              true;
+
+
+          } catch (error) {
+
+            console.warn(
+              'PayMyDine translation init retry:',
+              error
+            );
+
+
+            window.__PMD_GT_INITIALIZED__ =
+              false;
+
+
+            if (
+              attempt < 100
+            ) {
+
+              initialiseTimer =
+                window.setTimeout(
+                  () =>
+                    initialise(
+                      attempt + 1
+                    ),
+                  80
+                );
+
+            }
+
+
+            return;
+
+          }
+
+        }
+
+
+        /*
+          Give Google's widget a moment to honour googtrans
+          cookie before manually touching its select.
+        */
+
+        comboTimer =
+          window.setTimeout(
+            () =>
+              applyCombo(0),
+            250
+          );
 
       };
 
 
 
     /*
-      The Google script is now loaded from <head>, before
-      React's normal useEffect timing.
+      Google calls this after element.js is ready.
 
-      If it is already available, make sure its callback ran.
+      Callback itself is safe because initialise() checks the
+      REAL constructor before using `new`.
     */
 
+    window.googleTranslateElementInit =
+      () => {
+
+        initialise(0);
+
+      };
+
+
+
+    const loadGoogleTranslate =
+      () => {
+
+        if (
+          cancelled
+        ) {
+
+          return;
+
+        }
+
+
+        const existing =
+          document.getElementById(
+            SCRIPT_ID
+          );
+
+
+        if (
+          existing
+        ) {
+
+          initialise(0);
+
+          return;
+
+        }
+
+
+        const script =
+          document.createElement(
+            'script'
+          );
+
+
+        script.id =
+          SCRIPT_ID;
+
+
+        script.src =
+          'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+
+
+        script.async =
+          true;
+
+
+        script.defer =
+          true;
+
+
+        script.onerror =
+          () => {
+
+            /*
+              NEVER freeze or hide the website when Google is
+              unavailable.
+            */
+
+            document.documentElement
+              .dataset.pmdTranslationReady =
+                'fallback';
+
+          };
+
+
+        document.body.appendChild(
+          script
+        );
+
+      };
+
+
+
+    /*
+      Wait until the entire first page load has completed.
+
+      React has already hydrated before this effect, and waiting
+      for load gives the application even more separation from
+      Google's DOM mutation.
+    */
+
+    const start =
+      () => {
+
+        window.setTimeout(
+          loadGoogleTranslate,
+          40
+        );
+
+      };
+
+
     if (
-      window.google &&
-      window.google.translate &&
-      typeof window.googleTranslateElementInit ===
-        'function'
+      document.readyState ===
+        'complete'
     ) {
 
-      window.googleTranslateElementInit();
+      start();
+
+    } else {
+
+      window.addEventListener(
+        'load',
+        start,
+        {
+          once: true
+        }
+      );
 
     }
 
 
 
     /*
-      Quick fallback polling for slow networks.
+      ========================================================
+      TRANSLATED NAVIGATION SAFETY
+      ========================================================
+
+      A DOM-translating service and SPA reconciliation are a
+      dangerous combination.
+
+      While TR / AR is active, same-origin page navigation uses
+      a normal full document navigation.
+
+      React therefore receives clean server HTML on every page
+      BEFORE Google translates that new page.
     */
 
-    let attempts =
-      0;
+    const hardNavigate =
+      (event) => {
+
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        ) {
+
+          return;
+
+        }
 
 
-    const timer =
-      window.setInterval(
-        () => {
-
-          applySelectedLanguage();
+        const target =
+          event.target;
 
 
-          attempts +=
-            1;
+        if (
+          !(target instanceof Element)
+        ) {
+
+          return;
+
+        }
 
 
-          if (
-            attempts >= 40
-          ) {
+        const anchor =
+          target.closest(
+            'a[href]'
+          );
 
-            window.clearInterval(
-              timer
+
+        if (
+          !anchor ||
+          anchor.target === '_blank' ||
+          anchor.hasAttribute(
+            'download'
+          )
+        ) {
+
+          return;
+
+        }
+
+
+        let url;
+
+
+        try {
+
+          url =
+            new URL(
+              anchor.href,
+              window.location.href
             );
 
-          }
+        } catch (_) {
 
-        },
-        75
-      );
-
-
-
-    /*
-      Google sometimes injects a body top offset/banner.
-      Keep the PayMyDine layout in its normal position.
-    */
-
-    const normaliseGoogleLayout =
-      () => {
-
-        if (
-          document.body &&
-          document.body.style.top !==
-            '0px'
-        ) {
-
-          document.body.style.top =
-            '0px';
+          return;
 
         }
 
 
         if (
-          document.documentElement
-            .style.marginTop !==
-            '0px'
+          url.origin !==
+            window.location.origin
         ) {
 
-          document.documentElement
-            .style.marginTop =
-              '0px';
+          return;
 
         }
+
+
+        /*
+          Same-page anchors should continue normally.
+        */
+
+        if (
+          url.pathname ===
+            window.location.pathname &&
+          url.search ===
+            window.location.search &&
+          url.hash
+        ) {
+
+          return;
+
+        }
+
+
+        event.preventDefault();
+
+        window.location.assign(
+          url.href
+        );
 
       };
 
 
-    normaliseGoogleLayout();
-
-
-
-    const observer =
-      new MutationObserver(
-        () => {
-
-          normaliseGoogleLayout();
-
-          applySelectedLanguage();
-
-        }
-      );
-
-
-    observer.observe(
-      document.documentElement,
-      {
-        childList: true,
-        subtree: true
-      }
+    document.addEventListener(
+      'click',
+      hardNavigate,
+      true
     );
 
 
 
     return () => {
 
-      window.clearInterval(
-        timer
+      cancelled =
+        true;
+
+
+      window.removeEventListener(
+        'load',
+        start
       );
 
-      observer.disconnect();
+
+      document.removeEventListener(
+        'click',
+        hardNavigate,
+        true
+      );
+
+
+      if (
+        initialiseTimer
+      ) {
+
+        window.clearTimeout(
+          initialiseTimer
+        );
+
+      }
+
+
+      if (
+        comboTimer
+      ) {
+
+        window.clearTimeout(
+          comboTimer
+        );
+
+      }
 
     };
 
@@ -258,10 +693,11 @@ export default function GlobalTranslation() {
   return (
 
     <div
-      id="pmd-google-translate"
+      id={MOUNT_ID}
       className="pmdGoogleTranslateMount notranslate"
       translate="no"
       aria-hidden="true"
+      data-no-motion
     />
 
   );
