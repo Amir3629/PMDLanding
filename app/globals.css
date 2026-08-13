@@ -9020,3 +9020,145 @@ body.translated-rtl {
 }
 
 /* === PMD ARABIC HERO BOTTOM EXTENSION V13.10 END === */
+
+/* === PMD ARABIC HERO BAKED TOP CROP V13.15 START === */
+
+/*
+  FINAL Arabic desktop hero correction.
+
+  Source audit + failed isolation tests established that the pale band is
+  not created by:
+    - siteHeader box-shadow
+    - siteHeader backdrop-filter
+    - the fixed header wrapper
+    - the generic heroImage drop-shadow
+
+  hero-platform.webp itself was authored with a built-in light/fade
+  composition. Native Arabic mirrors that same bitmap, so the unwanted
+  upper strip becomes exposed on the physical LEFT side.
+
+  Do not keep hunting shadows. Remove the actual rendered top slice of
+  ONLY the Arabic restaurant bitmap.
+
+  Geometry:
+    image box starts 10% above the frame
+    image box is 110% tall
+    clip 9.091% of that taller box
+
+    9.091% of 110% = 10%, therefore the first visible pixel still starts
+    exactly at the hero frame top: no gap, no layout jump.
+
+  Important:
+    - horizontal placement is unchanged
+    - mirror remains scaleX(-1)
+    - dashboard/phone/POS layer is untouched
+    - right-side white blend is untouched
+    - V13.10 bottom extension/fade is untouched
+    - English/Turkish are untouched
+    - tablet/mobile are untouched
+*/
+
+@media (min-width: 1100px) {
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroRightPanel
+  > img.heroImage.pmdHeroArtworkFix[src*="/site-assets/hero-platform.webp"] {
+
+    /*
+      Override the V13.10 top:0 / bottom:0 / height:100% only for the
+      Arabic desktop bitmap.
+    */
+    top:
+      -10% !important;
+
+    right:
+      0 !important;
+
+    bottom:
+      auto !important;
+
+    left:
+      0 !important;
+
+    width:
+      100% !important;
+
+    height:
+      110% !important;
+
+    min-width:
+      100% !important;
+
+    min-height:
+      110% !important;
+
+    max-width:
+      none !important;
+
+    max-height:
+      none !important;
+
+    object-fit:
+      cover !important;
+
+    object-position:
+      right center !important;
+
+    /*
+      Keep the approved Arabic horizontal mirror.
+      No horizontal translation or scaling is added.
+    */
+    transform:
+      scaleX(-1) !important;
+
+    transform-origin:
+      center center !important;
+
+    translate:
+      none !important;
+
+    scale:
+      none !important;
+
+    rotate:
+      none !important;
+
+    /*
+      Clip the unwanted built-in top slice.
+      Because the element itself begins at -10%, this clip starts exactly
+      at the frame's y=0 and cannot create a white top gap.
+    */
+    clip-path:
+      inset(9.091% 0 0 0) !important;
+
+    -webkit-clip-path:
+      inset(9.091% 0 0 0) !important;
+
+    /*
+      Keep the cropped edge clean. This is not the fix by itself; it only
+      prevents a new shadow from being generated on the new clipped edge.
+    */
+    filter:
+      none !important;
+
+    -webkit-filter:
+      none !important;
+
+    box-shadow:
+      none !important;
+
+    opacity:
+      1 !important;
+
+    visibility:
+      visible !important;
+
+    z-index:
+      1 !important;
+  }
+
+}
+
+/* === PMD ARABIC HERO BAKED TOP CROP V13.15 END === */
