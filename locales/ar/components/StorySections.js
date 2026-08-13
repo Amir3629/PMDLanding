@@ -144,7 +144,7 @@ export function RoleAndAISections() {
 
           <figure className="pmdAiImpactVisual">
 
-            <img src="/site-assets/custom/ai-impact-growth.png" alt={"وزاد عدد المطاعم التي تدعمها شركة AI- من حيث كفاءة المطاعم، والإيرادات، ودوران الطاولة، وترضية الضيوف، في حين انخفضت التكاليف وفترات الانتظار والعمل اليدوي بمرور الوقت."} loading="lazy" decoding="async" />
+            <img src="/site-assets/custom/ai-impact-growth.png" alt={"وزاد عدد المطاعم التي تدعمها الذكاء الاصطناعي- من حيث كفاءة المطاعم، والإيرادات، ودوران الطاولة، وترضية الضيوف، في حين انخفضت التكاليف وفترات الانتظار والعمل اليدوي بمرور الوقت."} loading="lazy" decoding="async" />
 
           </figure>
 

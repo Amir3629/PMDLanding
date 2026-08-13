@@ -24,7 +24,7 @@ export default function SmoothMotion() {
     */
 
     const mobile = window.matchMedia('(max-width: 820px)').matches;
-    const selectors = ["Bölüm Adı", '.splitHeading', '.offerCard', '.statusCard', ".hikaye", '.resourceCard', '.setupCard', '.pricingFactorGrid > *', '.companyValueCards > *', '.integrationPills > *', ".workflowA", '.demoShowcaseCard', '.darkStoryCard', ". çapındaDarkCard", '.pageHeroCopy > *', '.pageHeroImage', '.highlightGrid > *', "İkiUpStoryGrid > *", ".capability Panel > *", ".integration Grid > *", '.companyGalleryGrid > *', '.footerGrid > *', '.pmdAiImpactVisual'];
+    const selectors = ['.sectionHeading', '.splitHeading', '.offerCard', '.statusCard', '.storyFeature', '.resourceCard', '.setupCard', '.pricingFactorGrid > *', '.companyValueCards > *', '.integrationPills > *', '.workflowStep', '.demoShowcaseCard', '.darkStoryCard', '.wideDarkCard', '.pageHeroCopy > *', '.pageHeroImage', '.highlightGrid > *', '.twoUpStoryGrid > *', '.capabilityPanel > *', '.integrationGrid > *', '.companyGalleryGrid > *', '.footerGrid > *', '.pmdAiImpactVisual'];
     const nodes = [...new Set([...document.querySelectorAll(selectors.join(','))].filter(el => !el.closest('.siteHeader, .megaMenu, .hero, [data-no-motion]')))];
     const siblingIndex = new Map();
     nodes.forEach(el => {

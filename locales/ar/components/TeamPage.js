@@ -22,7 +22,7 @@ export default function TeamPage({
           {page.story.map((item, index) => <article className={`storyFeature ${index % 2 ? 'reverse' : ''}`} key={item.title}>
               <div className="storyFeatureImage"><img src={item.image} alt="" loading="lazy" /></div>
               <div className="storyFeatureCopy">
-                <span className="eyebrow">تدفق العمل في سياق الدور</span>
+                <span className="eyebrow">سير العمل حسب الدور</span>
                 <h2>{item.title}</h2>
                 <p>{item.body}</p>
                 <a className="textArrow" href="/ar/teams">قارن مساحات العمل الست <Icon name="arrow" size={15} /></a>
@@ -34,9 +34,9 @@ export default function TeamPage({
       <section className="section capabilitySection">
         <div className="container capabilityPanel">
           <div>
-            <span className="eyebrow">إشارات وضوابط لهذا الدور</span>
-            <h2>أظهر المعلومات اللازمة للعمل دون أن يكشف عن ضوابط غير متصلة</h2>
-            <p>ويغير الوصول القائم على الأدوار ما يمكن للشخص أن يراه ويفعله. ويظل الجدول الأساسي، والنظام، والمطبخ، والتحفظ، والدفع جزءا من تدفق مطعم واحد.</p>
+            <span className="eyebrow">مؤشرات وضوابط هذا الدور</span>
+            <h2>اعرض المعلومات اللازمة للعمل دون إظهار ضوابط إدارية غير مرتبطة.</h2>
+            <p>يحدد الوصول حسب الدور ما يمكن للشخص رؤيته وتنفيذه. ويظل سياق الطاولة والطلب والمطبخ والحجز والدفع جزءًا من سير عمل واحد داخل المطعم.</p>
           </div>
           <div className="capabilityList">
             {page.bullets.map(item => <span key={item}><Icon name="check" size={16} />{item}</span>)}
@@ -44,6 +44,6 @@ export default function TeamPage({
         </div>
       </section>
 
-      <CTA title={`See the ${page.label} workspace with your real roles and workflow.`} body={"إجلبْ مسؤولياتَكَ الحاليةَ، يَنْقلُ وأسئلةَ الإبلاغ. وسوف نرسمها على الضوابط والسياق الذي ينبغي أن يشمله هذا المجال."} />
+      <CTA title={`شاهد مساحة عمل ${page.label} بأدوارك وسير العمل الفعلي.`} body={"أحضر مسؤولياتك الحالية ونقاط التسليم وأسئلة التقارير. وسنربطها بالضوابط والسياق الذي ينبغي أن تتضمنه مساحة العمل هذه."} />
     </>;
 }

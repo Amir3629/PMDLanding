@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="container footerGrid">
         <div className="footerBrand">
           <Logo />
-          <p>برنامج عمل واحد للمطاعم للعمليات، والتحفظات، والطلب، والمطبخ، ومراقبة القائمة، والمدفوعات، ونمو الضيوف، والمحللين، وإدارة الأفرقة، والتكامل.</p>
+          <p>منصة تشغيل واحدة للمطاعم تجمع العمليات والحجوزات والطلبات والمطبخ وإدارة قائمة الطعام والمدفوعات ونمو الضيوف والتحليلات وإدارة الفريق والتكاملات.</p>
         </div>
         <div>
           <h4>المنتج</h4>
@@ -24,7 +24,7 @@ export default function Footer() {
           <h4>استكشف</h4>
           <a href="/ar/platform">نظرة عامة على المنتج</a>
           <a href="/ar/integrations">التكاملات</a>
-          <a href="/ar/restaurant-types">إعدادات المطعم</a>
+          <a href="/ar/restaurant-types">إعدادات المطاعم</a>
           <a href="/ar/how-it-works">كيف يعمل</a>
           <a href="/ar/implementation">التنفيذ</a>
           <a href="/ar/support">الدعم</a>
@@ -35,6 +35,6 @@ export default function Footer() {
           <a href="/ar/contact">احجز عرضًا توضيحيًا</a>
         </div>
       </div>
-      <div className="container footerBottom"><span>2026 PayMyDine.</span><span>عمليات الإصلاح، الدور حسب الدور.</span></div>
+      <div className="container footerBottom"><span>© 2026 PayMyDine.</span><span>تشغيل المطعم، دورًا بعد دور.</span></div>
     </footer>;
 }

@@ -16,8 +16,8 @@ export default function ProductDetailSections({
           <div className="container">
             <div className="sectionHeading centerHeading">
               <span className="eyebrow">{details.factsEyebrow || `${productName} at a glance`}</span>
-              <h2>{details.factsTitle || 'What is included, who uses it and what stays connected.'}</h2>
-              <p>{details.factsIntro || 'These are product-scope facts, not promised customer performance results.'}</p>
+              <h2>{details.factsTitle || "Ne dahil, kim kullanır ve ne kalır."}</h2>
+              <p>{details.factsIntro || "Bunlar ürün katlı gerçekler, söz konusu müşteri performans sonuçları değil."}</p>
             </div>
             <div className="highlightGrid">
               {facts.map(([value, title, body]) => <article className="highlightCard" key={`${value}-${title}`}>
@@ -34,9 +34,9 @@ export default function ProductDetailSections({
             <div className="splitHeading howFlowHeading">
               <div>
                 <span className="eyebrow">{details.workflowEyebrow || `${productName} workflow`}</span>
-                <h2>{details.workflowTitle || 'How the work moves from the first signal to a completed action.'}</h2>
+                <h2>{details.workflowTitle || "İş, ilk sinyalden tam bir eyleme nasıl hareket eder."}</h2>
               </div>
-              <p>{details.workflowIntro || 'Each step keeps the restaurant context attached while responsibility moves to the next role.'}</p>
+              <p>{details.workflowIntro || "Her adım, sorumluluk bir sonraki role taşınırken restoran bağlamını tutar."}</p>
             </div>
             <div className="howFlowGrid">
               {workflow.map(([title, body], index) => <article className="howFlowCard" key={title}>
@@ -51,9 +51,9 @@ export default function ProductDetailSections({
       {roleViews.length > 0 && <section className="section companyValues">
           <div className="container companyValuesGrid">
             <div>
-              <span className="eyebrow">{details.rolesEyebrow || 'What each role sees'}</span>
-              <h2>{details.rolesTitle || 'The same restaurant context, presented around different responsibilities.'}</h2>
-              <p>{details.rolesIntro || 'Role-based views reduce interface noise without creating separate versions of the restaurant.'}</p>
+              <span className="eyebrow">{details.rolesEyebrow || "Her rol ne görür"}</span>
+              <h2>{details.rolesTitle || "Aynı restoran bağlamı, farklı sorumluluklar etrafında sunulur."}</h2>
+              <p>{details.rolesIntro || "Rol tabanlı görüşler, restoranın ayrı versiyonları olmadan arayüz gürültüsünü azaltır."}</p>
             </div>
             <div className="companyValueCards">
               {roleViews.map(([title, body]) => <article key={title}>
@@ -67,9 +67,9 @@ export default function ProductDetailSections({
       {metrics.length > 0 && <section className="section pricingSection">
           <div className="container">
             <div className="sectionHeading centerHeading">
-              <span className="eyebrow">{details.metricsEyebrow || 'Measure the workflow'}</span>
-              <h2>{details.metricsTitle || 'Establish a baseline before claiming an improvement.'}</h2>
-              <p>{details.metricsIntro || 'The exact metrics available depend on the modules, integrations and event data in the configured environment.'}</p>
+              <span className="eyebrow">{details.metricsEyebrow || "İş akışını ölçme"}</span>
+              <h2>{details.metricsTitle || "Bir gelişme iddia etmeden önce bir temel oluşturmak."}</h2>
+              <p>{details.metricsIntro || "Mevcut tam ölçümler, yapılandırılmış ortamda modüllere, entegrasyonlara ve olay verilere bağlıdır."}</p>
             </div>
             <div className="pricingFactorGrid">
               {metrics.map(([title, body], index) => <article key={title}>
@@ -84,9 +84,9 @@ export default function ProductDetailSections({
       {implementation.length > 0 && <section className="section capabilitySection">
           <div className="container capabilityPanel">
             <div>
-              <span className="eyebrow">{details.implementationEyebrow || 'Configuration and data requirements'}</span>
-              <h2>{details.implementationTitle || 'Define the operating rules before expecting the workflow to perform.'}</h2>
-              <p>{details.implementationIntro || 'Implementation should document the source of truth, role ownership, status definitions and measurement method.'}</p>
+              <span className="eyebrow">{details.implementationEyebrow || "Yapılama ve veri gereksinimleri"}</span>
+              <h2>{details.implementationTitle || "İş akışını gerçekleştirmek için beklemeden önce işletim kurallarını tanımlayın."}</h2>
+              <p>{details.implementationIntro || "Uygulama gerçek, rol sahipliği, durum tanımları ve ölçüm yöntemi kaynağını belgelemeli."}</p>
             </div>
             <div className="capabilityList">
               {implementation.map(item => <span key={item}><Icon name="check" size={16} />{item}</span>)}
@@ -97,9 +97,9 @@ export default function ProductDetailSections({
       {faqs.length > 0 && <section className="section companyValues">
           <div className="container companyValuesGrid">
             <div>
-              <span className="eyebrow">{details.faqEyebrow || 'Practical questions'}</span>
-              <h2>{details.faqTitle || 'What to clarify before choosing the scope.'}</h2>
-              <p>{details.faqIntro || 'The exact answer can depend on the restaurant setup, selected modules and connected systems.'}</p>
+              <span className="eyebrow">{details.faqEyebrow || "Pratik sorular"}</span>
+              <h2>{details.faqTitle || "kapsamı seçmeden önce ne açıklığa kavuşturulur."}</h2>
+              <p>{details.faqIntro || "Kesin cevap restoran kurulumuna, seçilmiş modüllere ve bağlantılı sistemlere bağlı olabilir."}</p>
             </div>
             <div className="companyValueCards">
               {faqs.map(([title, body]) => <article key={title}>

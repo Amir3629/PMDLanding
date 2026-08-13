@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-13T15:49:30.757Z",
+  "generatedAt": "2026-08-13T17:11:53.406Z",
   "sourceFiles": 39,
   "sourcePages": 19,
-  "strings": 1364,
+  "strings": 1357,
   "locales": {
     "tr": {
-      "cachedTranslations": 1364,
+      "cachedTranslations": 1383,
       "generatedFiles": 39
     },
     "ar": {
-      "cachedTranslations": 1364,
+      "cachedTranslations": 1358,
       "generatedFiles": 39
     }
   }

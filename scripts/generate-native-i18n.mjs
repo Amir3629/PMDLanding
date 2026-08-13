@@ -89,6 +89,24 @@ function looksLikeRouteOrAsset(value) {
   return false;
 }
 
+function looksLikeTechnicalLiteral(value) {
+  const s = String(value || '').trim();
+
+  if (!s) return true;
+
+  // CSS selectors accidentally collected from motion/querySelector arrays.
+  if (/^[.#][A-Za-z0-9_-]+(?:\s*[>+~]\s*\*|\s+[.#A-Za-z0-9_*>+~:-]+)*$/.test(s)) {
+    return true;
+  }
+
+  // Common CSS values.
+  if (/^-?\d+(?:\.\d+)?(?:px|rem|em|vh|vw|svh|dvh|%)(?:\s+-?\d+(?:\.\d+)?(?:px|rem|em|vh|vw|svh|dvh|%)){0,3}$/.test(s)) {
+    return true;
+  }
+
+  return false;
+}
+
 function isLowerTechnicalToken(value) {
   return /^[a-z0-9][a-z0-9_-]*$/.test(value) && !value.includes(' ');
 }
@@ -97,6 +115,41 @@ function jsxAttributeName(attributePath) {
   const node = attributePath?.node;
   if (!node || !t.isJSXAttribute(node) || !t.isJSXIdentifier(node.name)) return null;
   return node.name.name;
+}
+
+function isTechnicalJsxAttributeName(name) {
+  if (!name) return false;
+  if (TECH_ATTRS.has(name)) return true;
+  if (name === 'key' || name === 'style') return true;
+  if (name.startsWith('data-')) return true;
+  if (/^on[A-Z]/.test(name)) return true;
+  if (name.startsWith('aria-') && name !== 'aria-label' && name !== 'aria-description') return true;
+  return false;
+}
+
+function jsxRenderContext(pathRef) {
+  let current = pathRef.parentPath;
+  let sawExpression = false;
+
+  while (current) {
+    if (current.isJSXAttribute?.()) {
+      const attr = jsxAttributeName(current);
+      return isTechnicalJsxAttributeName(attr) ? 'technical' : 'visible';
+    }
+
+    if (current.isJSXExpressionContainer?.()) {
+      sawExpression = true;
+    }
+
+    if (current.isJSXElement?.() || current.isJSXFragment?.()) {
+      return sawExpression ? 'visible' : 'none';
+    }
+
+    if (current.isStatement?.()) break;
+    current = current.parentPath;
+  }
+
+  return 'none';
 }
 
 function objectKeyName(propertyPath) {
@@ -123,11 +176,16 @@ function shouldTranslateString(pathRef, rawValue) {
   const value = humanCore(rawValue);
   if (!value || !hasLetters(value)) return false;
   if (looksLikeRouteOrAsset(value)) return false;
+  if (looksLikeTechnicalLiteral(value)) return false;
   if (TECH_JS_STRINGS.has(value)) return false;
   if (PROTECTED_TERMS.includes(value)) return false;
 
   const parent = pathRef.parentPath;
   if (!parent) return false;
+
+  const renderContext = jsxRenderContext(pathRef);
+  if (renderContext === 'technical') return false;
+  if (renderContext === 'visible' && !pathRef.isJSXText?.()) return true;
 
   if (
     parent.isImportDeclaration?.() ||
@@ -140,12 +198,12 @@ function shouldTranslateString(pathRef, rawValue) {
 
   if (parent.isJSXAttribute?.()) {
     const attr = jsxAttributeName(parent);
-    return attr ? !TECH_ATTRS.has(attr) : false;
+    return attr ? !isTechnicalJsxAttributeName(attr) : false;
   }
 
   if (parent.isJSXExpressionContainer?.() && parent.parentPath?.isJSXAttribute?.()) {
     const attr = jsxAttributeName(parent.parentPath);
-    return attr ? !TECH_ATTRS.has(attr) : false;
+    return attr ? !isTechnicalJsxAttributeName(attr) : false;
   }
 
   if (parent.isJSXExpressionContainer?.()) return true;
@@ -157,7 +215,7 @@ function shouldTranslateString(pathRef, rawValue) {
 
   if (parent.isArrayExpression?.()) {
     if (isLowerTechnicalToken(value)) return false;
-    if (/^[A-Z0-9]{2,8}$/.test(value)) return false;
+    if (/^[A-Z0-9]{2,8}$/.test(value) && value !== 'LIVE') return false;
     return true;
   }
 
@@ -412,7 +470,7 @@ function transformFile(sourceFile, targetFile, locale, cache) {
         while (current) {
           if (current.isJSXAttribute?.()) {
             const attr = jsxAttributeName(current);
-            return Boolean(attr && TECH_ATTRS.has(attr));
+            return Boolean(attr && isTechnicalJsxAttributeName(attr));
           }
 
           if (

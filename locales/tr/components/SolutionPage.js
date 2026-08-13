@@ -29,8 +29,8 @@ export default function SolutionPage({
       <section className="section capabilitySection">
         <div className="container capabilityPanel">
           <div>
-            <span className="eyebrow">{page.capabilityEyebrow || 'What the team can do'}</span>
-            <h2>{page.capabilityTitle || 'Keep the required actions and metrics in one workflow.'}</h2>
+            <span className="eyebrow">{page.capabilityEyebrow || "Takım ne yapabilir"}</span>
+            <h2>{page.capabilityTitle || "Gerekli eylemleri ve metrikleri bir iş akışında tut."}</h2>
             {page.capabilityBody && <p>{page.capabilityBody}</p>}
           </div>
           <div className="capabilityList">{page.bullets.map(item => <span key={item}><Icon name="check" size={16} />{item}</span>)}</div>

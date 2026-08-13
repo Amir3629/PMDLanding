@@ -4,18 +4,18 @@ import { Icon } from "@/locales/ar/components/Icons";
 import { productAreas } from "@/locales/ar/data/site";
 export const metadata = {
   title: "مناطق المنتجات",
-  description: "تسعة مجالات عملية لمنتجات PayMyDine تشمل العمليات والضيوف والأفرقة والاستخبارات والنمو والتكامل."
+  description: "تسعة مجالات عملية لمنتجات PayMyDine تشمل العمليات والضيوف والفرق والاستخبارات والنمو والتكامل."
 };
 export default function SolutionsPage() {
   return <>
-      <PageHero eyebrow={"9 مناطق منتجات PayMyDine"} title={"اختر سير العمل الذي تحتاجه لتحسنه ثم أبقه متصلاً ببقية المطعم"} intro={"ويبين كل مجال من مجالات المنتجات الواردة أدناه الإجراءات التي يدعمها، وسياق المطعم الذي يحتفظ به، والمقاييس أو المركز الذي يمكن أن يستخدمه الفريق. ابدأوا بمنطقة واحدة أو تجمعوا كل تسعة"} image="/site-assets/extra/restaurant-team-planning.webp" accent="green" />
+      <PageHero eyebrow={"9 مناطق منتجات PayMyDine"} title={"اختر سير العمل الذي تحتاجه لتحسنه ثم أبقه متصلاً ببقية المطعم"} intro={"ويبين كل مجال من مجالات المنتجات الواردة أدناه الإجراءات التي يدعمها، وسياق المطعم الذي يحتفظ به، والمقاييس أو الحالة الذي يمكن أن يستخدمه الفريق. ابدأوا بمنطقة واحدة أو تجمعوا كل تسعة"} image="/site-assets/extra/restaurant-team-planning.webp" accent="green" />
 
       <section className="section offerSection compactSection">
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">خريطة المنتجات حسب الوظائف التشغيلية</span>
             <h2>اختر المنطقة التي تتطابق مع الوظيفة أو السؤال أو الإدارة التي تريد إصلاحها</h2>
-            <p>ولا تزال التحفظات، والخدمات، والمطبخ، والمدفوعات، والأفرقة، والإبلاغ مسؤوليات منفصلة، ولكن سياقها المفيد يمكن أن ينتقل عبر طبقة تشغيلية واحدة.</p>
+            <p>ولا تزال الحجوزات، والخدمات، والمطبخ، والمدفوعات، والفرق، والتقارير مسؤوليات منفصلة، ولكن سياقها المفيد يمكن أن ينتقل عبر طبقة تشغيلية واحدة.</p>
           </div>
           <div className="offerGrid offerGridVisual">
             {productAreas.map(item => <a className="offerCard offerCardWithImage" href={item.href} key={item.title}>
@@ -42,7 +42,7 @@ export default function SolutionsPage() {
             <span><Icon name="check" size={16} />9 مجالات منتجات</span>
             <span><Icon name="check" size={16} />6 مساحات عمل حسب الدور</span>
             <span><Icon name="check" size={16} />تدفق العمليات على خط ٥ خطوات</span>
-            <span><Icon name="check" size={16} />3 أساليب لبيع الفواتير</span>
+            <span><Icon name="check" size={16} />3 أساليب لتقسيم الفاتورة</span>
             <span><Icon name="check" size={16} />9 مقاييس إدارية</span>
             <span><Icon name="check" size={16} />4 أنواع للتكامل</span>
           </div>

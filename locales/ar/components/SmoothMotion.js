@@ -24,7 +24,7 @@ export default function SmoothMotion() {
     */
 
     const mobile = window.matchMedia('(max-width: 820px)').matches;
-    const selectors = ["القسم الرئيسي", ". .", "(فير كارد)", "(الحالة (كارد", "الهيئة", "(موارد كارد)", "(سيتيوب كارد)", "? ?", "رفقة (فالوي كاردز)", "ترجمة", "سير العمل", "(ديمو شاو كارد)", "darkStoryCard", "(دارك كارد)", "ترجمة", "الصفحة", "♪", "2UpStoryGrid  *", "القدرة الفريق*", "التكامل غريد", "رفقة (جالري غريد)", "?", "PmdAiImpactVisual"];
+    const selectors = ['.sectionHeading', '.splitHeading', '.offerCard', '.statusCard', '.storyFeature', '.resourceCard', '.setupCard', '.pricingFactorGrid > *', '.companyValueCards > *', '.integrationPills > *', '.workflowStep', '.demoShowcaseCard', '.darkStoryCard', '.wideDarkCard', '.pageHeroCopy > *', '.pageHeroImage', '.highlightGrid > *', '.twoUpStoryGrid > *', '.capabilityPanel > *', '.integrationGrid > *', '.companyGalleryGrid > *', '.footerGrid > *', '.pmdAiImpactVisual'];
     const nodes = [...new Set([...document.querySelectorAll(selectors.join(','))].filter(el => !el.closest('.siteHeader, .megaMenu, .hero, [data-no-motion]')))];
     const siblingIndex = new Map();
     nodes.forEach(el => {

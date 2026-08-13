@@ -14,7 +14,7 @@ export async function generateMetadata({
   } = await params;
   const page = teamPages[slug];
   return page ? {
-    title: `${page.label} Workspace`,
+    title: `${page.label} — مساحة العمل`,
     description: page.intro
   } : {};
 }
