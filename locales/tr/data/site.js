@@ -227,7 +227,7 @@ export const solutionPages = {
     story: [{
       title: "misafir profili gerçek restoran etkileşimlerinden oluşturun.",
       body: "Bağlantı ziyaretleri, siparişler, tercihler ve sadakat faaliyetleri bir masanın veya işlemin ötesindeki ilişkiyi anlamak için.",
-      image: '/site-assets/extra/qr-service.webp'
+      image: '/site-assets/custom/solution-story/guest-profile-interactions-20260809.webp'
     }, {
       title: "Bir sonraki tutma eylemine karar vermek için geri bildirim kullanın.",
       body: "Bir sonraki eylemin hizmet kurtarma, sadakat veya ilgili bir kampanya olup olmadığını seçmek için geri bildirim ve ziyaret frekansı ekleyin.",
@@ -275,7 +275,7 @@ export const solutionPages = {
     story: [{
       title: "Mutfak tam hazırlık bağlamını alır, kopyalanmış bir sipariş özeti değil.",
       body: "Madde detayı, modifiers, bilet yaşı ve mevcut durum hizmet sırasında hazırlık kuyruklarında görünür.",
-      image: '/site-assets/kitchen/2.webp'
+      image: '/site-assets/custom/solution-story/kitchen-preparation-context-20260809.webp'
     }, {
       title: "Menü kullanılabilirliği bir sonraki önlenebilir bilet problemini önler.",
       body: "Menü, modifier ve satılan değişiklikler sipariş bağlamı bu kadar kullanılamaz veya yanlış yapılandırılmış öğeler hazırlanmaya devam etmez.",

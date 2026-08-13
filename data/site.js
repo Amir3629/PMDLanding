@@ -277,7 +277,7 @@ export const solutionPages = {
       {
         title: 'Build the guest profile from real restaurant interactions.',
         body: 'Connect visits, orders, preferences and loyalty activity to understand the relationship beyond one table or transaction.',
-        image: '/site-assets/extra/qr-service.webp'
+        image: '/site-assets/custom/solution-story/guest-profile-interactions-20260809.webp'
       },
       {
         title: 'Use feedback to decide the next retention action.',
@@ -341,7 +341,7 @@ export const solutionPages = {
       {
         title: 'The kitchen receives the complete preparation context, not a copied order summary.',
         body: 'Item detail, modifiers, ticket age and current state remain visible in the preparation queue during service.',
-        image: '/site-assets/kitchen/2.webp'
+        image: '/site-assets/custom/solution-story/kitchen-preparation-context-20260809.webp'
       },
       {
         title: 'Menu availability prevents the next avoidable ticket problem.',
