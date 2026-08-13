@@ -9225,3 +9225,196 @@ body.translated-rtl {
 }
 
 /* === PMD ARABIC HEADER BACKDROP BLUR CLEAN V13.13 END === */
+
+/* === PMD ARABIC HEADER ZERO-WRAPPER V13.14 START === */
+
+/*
+  Screenshot + GitHub source audit found the real geometry:
+
+  - historical desktop .siteHeader has 18px top padding
+  - .headerInner has a 74px minimum height
+  - together they create a 92px FULL-WIDTH fixed header wrapper
+  - the visible pale band is exactly this 92px region
+
+  Previous fixes removed shadow / filter / backdrop-filter, but left the
+  physical 92px full-width wrapper box in place.
+
+  Final structural fix:
+  collapse ONLY the Arabic desktop homepage OUTER wrapper to zero height,
+  keep overflow visible, and keep the actual white .headerInner card in the
+  exact same visual position by moving it down the old 18px padding amount.
+
+  Result:
+  - no full-width header paint/compositing region can sit over the photo
+  - the floating white header card stays where it is
+  - menus remain inside the same DOM/header
+  - hero image, dashboard, side fade and bottom fade are untouched
+*/
+
+@media (min-width: 1100px) {
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  .siteHeader {
+
+    /* Keep the header following the viewport, but remove its paint area. */
+    position:
+      fixed !important;
+
+    top:
+      16px !important;
+
+    left:
+      0 !important;
+
+    right:
+      0 !important;
+
+    width:
+      100% !important;
+
+    height:
+      0 !important;
+
+    min-height:
+      0 !important;
+
+    max-height:
+      0 !important;
+
+    padding:
+      0 !important;
+
+    margin:
+      0 !important;
+
+    overflow:
+      visible !important;
+
+    /* No full-width visual/compositing effect whatsoever. */
+    background:
+      none !important;
+
+    background-color:
+      transparent !important;
+
+    background-image:
+      none !important;
+
+    border:
+      0 !important;
+
+    border-bottom:
+      0 !important;
+
+    outline:
+      0 !important;
+
+    box-shadow:
+      none !important;
+
+    filter:
+      none !important;
+
+    -webkit-filter:
+      none !important;
+
+    backdrop-filter:
+      none !important;
+
+    -webkit-backdrop-filter:
+      none !important;
+
+    opacity:
+      1 !important;
+
+    mix-blend-mode:
+      normal !important;
+
+    isolation:
+      auto !important;
+
+    transform:
+      none !important;
+
+    translate:
+      none !important;
+
+    z-index:
+      10000 !important;
+
+    pointer-events:
+      none !important;
+  }
+
+
+  /*
+    Preserve the floating card at the SAME vertical position.
+
+    Old position:
+      siteHeader top 16px
+      + siteHeader top padding 18px
+      = card top 34px
+
+    New position:
+      siteHeader top 16px
+      + headerInner relative top 18px
+      = card top 34px
+  */
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  .siteHeader
+  .headerInner {
+
+    position:
+      relative !important;
+
+    top:
+      18px !important;
+
+    left:
+      auto !important;
+
+    right:
+      auto !important;
+
+    margin-left:
+      auto !important;
+
+    margin-right:
+      auto !important;
+
+    opacity:
+      1 !important;
+
+    visibility:
+      visible !important;
+
+    background:
+      #ffffff !important;
+
+    backdrop-filter:
+      none !important;
+
+    -webkit-backdrop-filter:
+      none !important;
+
+    filter:
+      none !important;
+
+    -webkit-filter:
+      none !important;
+
+    box-shadow:
+      none !important;
+
+    z-index:
+      10001 !important;
+
+    pointer-events:
+      auto !important;
+  }
+
+}
+
+/* === PMD ARABIC HEADER ZERO-WRAPPER V13.14 END === */
