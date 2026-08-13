@@ -8893,3 +8893,130 @@ body.translated-rtl {
 }
 
 /* === PMD ARABIC HERO LEFT EDGE V13.7 END === */
+
+/* === PMD ARABIC HERO BOTTOM EXTENSION V13.10 START === */
+
+/*
+  Native ar-OM desktop only.
+
+  The Arabic hero visual currently reaches the end of the hero section,
+  but the screenshot shows a thin white strip immediately below the
+  restaurant/dashboard artwork.
+
+  Extend only the restaurant/background visual 36px downward.
+  Do NOT move the dashboard/device layer.
+  English/Turkish and mobile/tablet remain untouched.
+*/
+
+@media (min-width: 1100px) {
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroVisual {
+
+    top:
+      0 !important;
+
+    bottom:
+      -36px !important;
+
+    height:
+      auto !important;
+
+    min-height:
+      0 !important;
+  }
+
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroVisual
+  .heroImageFrame.heroImageFrameClean.heroRightPanel.pmdHeroArtworkWrapFix {
+
+    top:
+      0 !important;
+
+    bottom:
+      0 !important;
+
+    height:
+      100% !important;
+
+    min-height:
+      100% !important;
+  }
+
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroRightPanel
+  > img.heroImage.pmdHeroArtworkFix[src*="/site-assets/hero-platform.webp"] {
+
+    top:
+      0 !important;
+
+    bottom:
+      0 !important;
+
+    height:
+      100% !important;
+
+    min-height:
+      100% !important;
+  }
+
+
+  /*
+    Soft vertical blend at the bottom of the extended restaurant visual.
+    Dashboard/device layer remains above this at z-index 40.
+  */
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  .heroVisual::after {
+
+    content:
+      "" !important;
+
+    display:
+      block !important;
+
+    position:
+      absolute !important;
+
+    left:
+      0 !important;
+
+    right:
+      0 !important;
+
+    bottom:
+      0 !important;
+
+    height:
+      118px !important;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.00) 0%,
+        rgba(255,255,255,0.10) 24%,
+        rgba(255,255,255,0.38) 52%,
+        rgba(255,255,255,0.74) 76%,
+        rgba(255,255,255,0.96) 94%,
+        #ffffff 100%
+      ) !important;
+
+    pointer-events:
+      none !important;
+
+    z-index:
+      6 !important;
+  }
+
+}
+
+/* === PMD ARABIC HERO BOTTOM EXTENSION V13.10 END === */
