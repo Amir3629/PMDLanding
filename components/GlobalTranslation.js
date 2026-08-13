@@ -10,11 +10,19 @@ const STORAGE_KEY =
 
 
 const SCRIPT_ID =
-  'pmd-google-translate-script-v11';
+  'pmd-google-translate-script-v12';
 
 
 const MOUNT_ID =
   'pmd-google-translate';
+
+
+const SENTINEL_ID =
+  'pmd-translation-sentinel';
+
+
+const SENTINEL_SOURCE =
+  'Translation ready';
 
 
 
@@ -66,19 +74,52 @@ function normaliseGoogleLayout() {
 
 
 
-function isAlreadyTranslated() {
+function translatedMarkerExists() {
 
-  const html =
-    document.documentElement;
+  return Boolean(
+
+    document.querySelector(
+
+      'html.translated-ltr,' +
+      'html.translated-rtl,' +
+      'body.translated-ltr,' +
+      'body.translated-rtl'
+
+    )
+
+  );
+
+}
+
+
+
+function sentinelHasTranslated() {
+
+  const sentinel =
+    document.getElementById(
+      SENTINEL_ID
+    );
+
+
+  if (
+    !sentinel
+  ) {
+
+    return false;
+
+  }
+
+
+  const value =
+    (
+      sentinel.textContent ||
+      ''
+    ).trim();
 
 
   return (
-    html.classList.contains(
-      'translated-ltr'
-    ) ||
-    html.classList.contains(
-      'translated-rtl'
-    )
+    value.length > 0 &&
+    value !== SENTINEL_SOURCE
   );
 
 }
@@ -89,8 +130,16 @@ export default function GlobalTranslation() {
 
   useEffect(() => {
 
+    const html =
+      document.documentElement;
+
+
     const language =
       getSelectedLanguage();
+
+
+    normaliseGoogleLayout();
+
 
 
     /*
@@ -98,20 +147,24 @@ export default function GlobalTranslation() {
       ENGLISH
       ========================================================
 
-      English is the original React/server HTML.
+      English is server-rendered source content.
 
-      Absolutely no Google Translate runtime is required.
+      It never waits for Google Translate.
     */
 
     if (
       language === 'en'
     ) {
 
-      normaliseGoogleLayout();
-
-      document.documentElement
-        .dataset.pmdTranslationReady =
+      html.dataset
+        .pmdTranslationReady =
           'true';
+
+
+      html.classList.remove(
+        'pmd-language-switching'
+      );
+
 
       return;
 
@@ -123,35 +176,347 @@ export default function GlobalTranslation() {
       ========================================================
       TURKISH / ARABIC
       ========================================================
-
-      CRITICAL:
-
-      This useEffect runs AFTER React hydration.
-
-      Only now are we allowed to load a third-party script that
-      mutates page text.
     */
+
+    html.dataset
+      .pmdTranslationReady =
+        'pending';
+
 
     let cancelled =
       false;
 
+
+    let alreadyReady =
+      false;
+
+
     let initialiseTimer =
       null;
+
 
     let comboTimer =
       null;
 
 
-    window.__PMD_GT_INITIALIZED__ =
-      false;
+    let pollingTimer =
+      null;
+
+
+    let readyTimer =
+      null;
+
+
+    let fallbackTimer =
+      null;
+
+
+    let sentinelObserver =
+      null;
+
+
+    let markerObserver =
+      null;
+
+
+
+    const translationDetected =
+      () => {
+
+        return (
+          translatedMarkerExists() ||
+          sentinelHasTranslated()
+        );
+
+      };
+
+
+
+    const markReady =
+      () => {
+
+        if (
+          cancelled ||
+          alreadyReady
+        ) {
+
+          return;
+
+        }
+
+
+        if (
+          !translationDetected()
+        ) {
+
+          return;
+
+        }
+
+
+        alreadyReady =
+          true;
+
+
+        /*
+          Google can update many text nodes very quickly.
+
+          Give those DOM mutations a very small settling window
+          before exposing the page.
+        */
+
+        readyTimer =
+          window.setTimeout(
+
+            () => {
+
+              window.requestAnimationFrame(
+                () => {
+
+                  window.requestAnimationFrame(
+                    () => {
+
+                      if (
+                        cancelled
+                      ) {
+
+                        return;
+
+                      }
+
+
+                      html.dataset
+                        .pmdTranslationReady =
+                          'true';
+
+
+                      html.classList.remove(
+                        'pmd-language-switching'
+                      );
+
+                    }
+                  );
+
+                }
+              );
+
+            },
+
+            90
+
+          );
+
+      };
+
+
+
+    /*
+      --------------------------------------------------------
+      TRANSLATION SENTINEL
+      --------------------------------------------------------
+
+      This tiny off-screen phrase is translated by Google too.
+
+      We don't reveal the actual website merely because the
+      Google dropdown says AR/TR.
+
+      We wait until Google has actually modified translated DOM.
+    */
+
+    const sentinel =
+      document.getElementById(
+        SENTINEL_ID
+      );
+
+
+    if (
+      sentinel
+    ) {
+
+      sentinelObserver =
+        new MutationObserver(
+          () => {
+
+            markReady();
+
+          }
+        );
+
+
+      sentinelObserver.observe(
+        sentinel,
+        {
+          characterData:
+            true,
+
+          childList:
+            true,
+
+          subtree:
+            true
+        }
+      );
+
+    }
+
+
+
+    /*
+      Google Translate commonly marks the translated document
+      with translated-ltr / translated-rtl.
+
+      Observe CLASS ONLY.
+
+      This observer never triggers translation itself, so there
+      is no V10-style mutation loop.
+    */
+
+    markerObserver =
+      new MutationObserver(
+        () => {
+
+          markReady();
+
+        }
+      );
+
+
+    markerObserver.observe(
+      document.documentElement,
+      {
+        attributes:
+          true,
+
+        attributeFilter:
+          ['class']
+      }
+    );
+
+
+    if (
+      document.body
+    ) {
+
+      markerObserver.observe(
+        document.body,
+        {
+          attributes:
+            true,
+
+          attributeFilter:
+            ['class']
+        }
+      );
+
+    }
+
+
+
+    /*
+      ========================================================
+      SAFETY FALLBACK
+      ========================================================
+
+      A broken Google connection must NEVER leave PayMyDine
+      permanently blank.
+
+      Normal translation should finish much earlier.
+
+      If it completely fails, show the underlying page after
+      five seconds instead of freezing the site forever.
+    */
+
+    fallbackTimer =
+      window.setTimeout(
+
+        () => {
+
+          if (
+            cancelled ||
+            alreadyReady
+          ) {
+
+            return;
+
+          }
+
+
+          html.dataset
+            .pmdTranslationReady =
+              'fallback';
+
+
+          html.classList.remove(
+            'pmd-language-switching'
+          );
+
+        },
+
+        5000
+
+      );
+
+
+
+    /*
+      ========================================================
+      WAIT FOR ACTUAL TRANSLATED DOM
+      ========================================================
+    */
+
+    const pollForTranslation =
+      (
+        attempt = 0
+      ) => {
+
+        if (
+          cancelled ||
+          alreadyReady
+        ) {
+
+          return;
+
+        }
+
+
+        if (
+          translationDetected()
+        ) {
+
+          markReady();
+
+          return;
+
+        }
+
+
+        if (
+          attempt < 80
+        ) {
+
+          pollingTimer =
+            window.setTimeout(
+              () =>
+                pollForTranslation(
+                  attempt + 1
+                ),
+              60
+            );
+
+        }
+
+      };
 
 
 
     const applyCombo =
-      (attempt = 0) => {
+      (
+        attempt = 0
+      ) => {
 
         if (
-          cancelled
+          cancelled ||
+          alreadyReady
         ) {
 
           return;
@@ -162,20 +527,11 @@ export default function GlobalTranslation() {
         normaliseGoogleLayout();
 
 
-        /*
-          Google may already have translated automatically from
-          the googtrans cookie.
-
-          If yes, DO NOT dispatch another change event.
-        */
-
         if (
-          isAlreadyTranslated()
+          translationDetected()
         ) {
 
-          document.documentElement
-            .dataset.pmdTranslationReady =
-              'true';
+          markReady();
 
           return;
 
@@ -213,7 +569,8 @@ export default function GlobalTranslation() {
 
 
         /*
-          Dispatch at most once and ONLY when required.
+          Dispatch only if Google has not already selected the
+          required language from the googtrans cookie.
         */
 
         if (
@@ -228,7 +585,8 @@ export default function GlobalTranslation() {
             new Event(
               'change',
               {
-                bubbles: true
+                bubbles:
+                  true
               }
             )
           );
@@ -236,16 +594,28 @@ export default function GlobalTranslation() {
         }
 
 
-        document.documentElement
-          .dataset.pmdTranslationReady =
-            'true';
+        /*
+          IMPORTANT:
+
+          DO NOT reveal here.
+
+          A selected Google combo does NOT mean page text has
+          finished translating.
+
+          V11 revealed too early here, which caused the English
+          blink.
+        */
+
+        pollForTranslation(0);
 
       };
 
 
 
     const initialise =
-      (attempt = 0) => {
+      (
+        attempt = 0
+      ) => {
 
         if (
           cancelled
@@ -268,14 +638,6 @@ export default function GlobalTranslation() {
             MOUNT_ID
           );
 
-
-        /*
-          THIS CHECK FIXES:
-          "undefined is not a constructor"
-
-          window.google.translate existing is NOT sufficient.
-          TranslateElement itself must be a function.
-        */
 
         if (
           typeof TranslateElement !==
@@ -303,14 +665,9 @@ export default function GlobalTranslation() {
         }
 
 
-        /*
-          Singleton.
-
-          Never create two Google TranslateElement instances.
-        */
-
         if (
-          !window.__PMD_GT_INITIALIZED__
+          !window
+            .__PMD_GT_INITIALIZED__
         ) {
 
           try {
@@ -326,6 +683,7 @@ export default function GlobalTranslation() {
 
                 autoDisplay:
                   false
+
               },
 
               MOUNT_ID
@@ -333,8 +691,9 @@ export default function GlobalTranslation() {
             );
 
 
-            window.__PMD_GT_INITIALIZED__ =
-              true;
+            window
+              .__PMD_GT_INITIALIZED__ =
+                true;
 
 
           } catch (error) {
@@ -343,10 +702,6 @@ export default function GlobalTranslation() {
               'PayMyDine translation init retry:',
               error
             );
-
-
-            window.__PMD_GT_INITIALIZED__ =
-              false;
 
 
             if (
@@ -372,28 +727,16 @@ export default function GlobalTranslation() {
         }
 
 
-        /*
-          Give Google's widget a moment to honour googtrans
-          cookie before manually touching its select.
-        */
-
         comboTimer =
           window.setTimeout(
             () =>
               applyCombo(0),
-            250
+            220
           );
 
       };
 
 
-
-    /*
-      Google calls this after element.js is ready.
-
-      Callback itself is safe because initialise() checks the
-      REAL constructor before using `new`.
-    */
 
     window.googleTranslateElementInit =
       () => {
@@ -433,6 +776,21 @@ export default function GlobalTranslation() {
         }
 
 
+        if (
+          window.google &&
+          window.google.translate &&
+          typeof window.google.translate
+            .TranslateElement ===
+              'function'
+        ) {
+
+          initialise(0);
+
+          return;
+
+        }
+
+
         const script =
           document.createElement(
             'script'
@@ -459,13 +817,17 @@ export default function GlobalTranslation() {
           () => {
 
             /*
-              NEVER freeze or hide the website when Google is
-              unavailable.
+              Never freeze website because Google failed.
             */
 
-            document.documentElement
-              .dataset.pmdTranslationReady =
+            html.dataset
+              .pmdTranslationReady =
                 'fallback';
+
+
+            html.classList.remove(
+              'pmd-language-switching'
+            );
 
           };
 
@@ -479,11 +841,10 @@ export default function GlobalTranslation() {
 
 
     /*
-      Wait until the entire first page load has completed.
+      React hydration has already occurred because this is a
+      client useEffect.
 
-      React has already hydrated before this effect, and waiting
-      for load gives the application even more separation from
-      Google's DOM mutation.
+      Wait for load too, then start Google.
     */
 
     const start =
@@ -491,7 +852,7 @@ export default function GlobalTranslation() {
 
         window.setTimeout(
           loadGoogleTranslate,
-          40
+          30
         );
 
       };
@@ -510,7 +871,8 @@ export default function GlobalTranslation() {
         'load',
         start,
         {
-          once: true
+          once:
+            true
         }
       );
 
@@ -520,18 +882,31 @@ export default function GlobalTranslation() {
 
     /*
       ========================================================
-      TRANSLATED NAVIGATION SAFETY
+      TRANSLATED INTERNAL NAVIGATION
       ========================================================
 
-      A DOM-translating service and SPA reconciliation are a
-      dangerous combination.
+      TR/AR already use full page navigation.
 
-      While TR / AR is active, same-origin page navigation uses
-      a normal full document navigation.
-
-      React therefore receives clean server HTML on every page
-      BEFORE Google translates that new page.
+      V12 conceals the current translated page BEFORE leaving,
+      so the browser cannot expose English during the next
+      document load.
     */
+
+    const concealForNavigation =
+      () => {
+
+        html.classList.add(
+          'pmd-language-switching'
+        );
+
+
+        html.dataset
+          .pmdTranslationReady =
+            'pending';
+
+      };
+
+
 
     const hardNavigate =
       (event) => {
@@ -555,7 +930,10 @@ export default function GlobalTranslation() {
 
 
         if (
-          !(target instanceof Element)
+          !(
+            target instanceof
+              Element
+          )
         ) {
 
           return;
@@ -611,7 +989,7 @@ export default function GlobalTranslation() {
 
 
         /*
-          Same-page anchors should continue normally.
+          Normal same-page anchors remain normal.
         */
 
         if (
@@ -629,8 +1007,29 @@ export default function GlobalTranslation() {
 
         event.preventDefault();
 
-        window.location.assign(
-          url.href
+
+        concealForNavigation();
+
+
+        /*
+          Allow browser one paint frame to conceal the current
+          document, then perform real page navigation.
+        */
+
+        window.requestAnimationFrame(
+          () => {
+
+            window.requestAnimationFrame(
+              () => {
+
+                window.location.assign(
+                  url.href
+                );
+
+              }
+            );
+
+          }
         );
 
       };
@@ -641,6 +1040,15 @@ export default function GlobalTranslation() {
       hardNavigate,
       true
     );
+
+
+
+    /*
+      If translation somehow completed before all watchers were
+      installed, detect it now.
+    */
+
+    markReady();
 
 
 
@@ -663,26 +1071,32 @@ export default function GlobalTranslation() {
       );
 
 
-      if (
-        initialiseTimer
-      ) {
+      sentinelObserver?.disconnect();
 
-        window.clearTimeout(
-          initialiseTimer
-        );
-
-      }
+      markerObserver?.disconnect();
 
 
-      if (
-        comboTimer
-      ) {
+      [
+        initialiseTimer,
+        comboTimer,
+        pollingTimer,
+        readyTimer,
+        fallbackTimer
+      ].forEach(
+        (timer) => {
 
-        window.clearTimeout(
-          comboTimer
-        );
+          if (
+            timer
+          ) {
 
-      }
+            window.clearTimeout(
+              timer
+            );
+
+          }
+
+        }
+      );
 
     };
 
@@ -692,13 +1106,39 @@ export default function GlobalTranslation() {
 
   return (
 
-    <div
-      id={MOUNT_ID}
-      className="pmdGoogleTranslateMount notranslate"
-      translate="no"
-      aria-hidden="true"
-      data-no-motion
-    />
+    <>
+
+      <div
+        id={MOUNT_ID}
+        className="pmdGoogleTranslateMount notranslate"
+        translate="no"
+        aria-hidden="true"
+        data-no-motion
+      />
+
+
+      {/*
+        IMPORTANT:
+
+        Do NOT add:
+        - display:none
+        - translate="no"
+        - notranslate
+
+        Google needs to translate this phrase so V12 knows the
+        translated DOM has genuinely started updating.
+      */}
+
+      <span
+        id={SENTINEL_ID}
+        className="pmdTranslationSentinel"
+        aria-hidden="true"
+        data-no-motion
+      >
+        Translation ready
+      </span>
+
+    </>
 
   );
 

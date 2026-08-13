@@ -8607,3 +8607,222 @@ iframe.goog-te-banner-frame,
 
 
 /* === PMD TRANSLATION RUNTIME V11 END === */
+
+
+/* === PMD NO ENGLISH FLASH V12 START === */
+
+
+/*
+   ============================================================
+   TRANSLATION SENTINEL
+   ============================================================
+
+   Must remain in DOM and translatable.
+
+   It is visually unavailable but NOT display:none.
+*/
+
+.pmdTranslationSentinel {
+
+  position:
+    fixed !important;
+
+  top:
+    0 !important;
+
+  left:
+    -10000px !important;
+
+  width:
+    1px !important;
+
+  height:
+    1px !important;
+
+  overflow:
+    hidden !important;
+
+  opacity:
+    0 !important;
+
+  pointer-events:
+    none !important;
+
+  white-space:
+    nowrap !important;
+
+}
+
+
+
+/*
+   ============================================================
+   ZERO-ENGLISH-FLASH
+   ============================================================
+
+   Before first body paint, app/layout.js already knows the
+   saved language.
+
+   EN:
+     immediately visible.
+
+   TR / AR:
+     server-rendered English content participates in layout but
+     is not painted until translation is confirmed.
+
+   NO loader is shown here.
+   NO PayMyDine logo screen is shown here.
+*/
+
+
+html[
+  data-pmd-language="tr"
+][
+  data-pmd-translation-ready="pending"
+]
+body
+> :not(.pmdTranslationShield)
+  :not(.pmdGoogleTranslateMount)
+  :not(.pmdTranslationSentinel)
+  :not(.pmdLanguageSwitcher),
+
+html[
+  data-pmd-language="ar"
+][
+  data-pmd-translation-ready="pending"
+]
+body
+> :not(.pmdTranslationShield)
+  :not(.pmdGoogleTranslateMount)
+  :not(.pmdTranslationSentinel)
+  :not(.pmdLanguageSwitcher),
+
+html.pmd-language-switching
+body
+> :not(.pmdTranslationShield)
+  :not(.pmdGoogleTranslateMount)
+  :not(.pmdTranslationSentinel)
+  :not(.pmdLanguageSwitcher) {
+
+  opacity:
+    0 !important;
+
+  pointer-events:
+    none !important;
+
+}
+
+
+
+/*
+   Language selector itself stays visible.
+
+   It is protected with translate="no", so it never exposes
+   accidental English page content.
+*/
+
+html[
+  data-pmd-language="tr"
+][
+  data-pmd-translation-ready="pending"
+]
+.pmdLanguageSwitcher,
+
+html[
+  data-pmd-language="ar"
+][
+  data-pmd-translation-ready="pending"
+]
+.pmdLanguageSwitcher {
+
+  opacity:
+    1 !important;
+
+  visibility:
+    visible !important;
+
+}
+
+
+
+/*
+   Smooth reveal AFTER translated DOM is genuinely ready.
+*/
+
+html[
+  data-pmd-language="tr"
+][
+  data-pmd-translation-ready="true"
+]
+body
+> :not(.pmdTranslationShield)
+  :not(.pmdGoogleTranslateMount)
+  :not(.pmdTranslationSentinel)
+  :not(.pmdLanguageSwitcher),
+
+html[
+  data-pmd-language="ar"
+][
+  data-pmd-translation-ready="true"
+]
+body
+> :not(.pmdTranslationShield)
+  :not(.pmdGoogleTranslateMount)
+  :not(.pmdTranslationSentinel)
+  :not(.pmdLanguageSwitcher) {
+
+  animation:
+    pmdTranslatedDocumentRevealV12
+    .18s
+    ease-out
+    both;
+
+}
+
+
+@keyframes pmdTranslatedDocumentRevealV12 {
+
+  from {
+
+    opacity:
+      0;
+
+  }
+
+
+  to {
+
+    opacity:
+      1;
+
+  }
+
+}
+
+
+
+/*
+   Reduced-motion users get immediate visibility once translation
+   itself is ready.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  html[
+    data-pmd-translation-ready="true"
+  ]
+  body
+  > :not(.pmdTranslationShield)
+    :not(.pmdGoogleTranslateMount)
+    :not(.pmdTranslationSentinel)
+    :not(.pmdLanguageSwitcher) {
+
+    animation:
+      none !important;
+
+  }
+
+}
+
+
+/* === PMD NO ENGLISH FLASH V12 END === */
