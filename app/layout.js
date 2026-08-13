@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CookieNotice from '@/components/CookieNotice';
 import SmoothMotion from "@/components/SmoothMotion";
 export const metadata = {
   title: {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieNotice />
       </body>
     </html>
   );

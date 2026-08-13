@@ -9,7 +9,7 @@ export function StatusGallery() {
             <span className="eyebrow">4 moments that need shared status</span>
             <h2>Keep the table, ticket and payment state visible so teams do not repeat the same status check.</h2>
           </div>
-          <p>Guests, front of house, kitchen and payment workflows can use different screens while reading the same underlying restaurant context.</p>
+          <p>Guests, service staff, kitchen and payment workflows can use different screens while reading the same underlying restaurant context.</p>
         </div>
         <div className="statusGrid">
           {homeStatusCards.map((card, index) => (

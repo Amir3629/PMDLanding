@@ -4,7 +4,7 @@ import { Icon } from './Icons';
 const steps = [
   { title: 'Action starts', body: 'A guest scans a table QR, reception seats a booking, a waiter opens an order or a manager changes a table.', icon: 'operations' },
   { title: 'Context is attached', body: 'Table, guest, order, timing, notes and permissions travel with the action instead of being entered again.', icon: 'table' },
-  { title: 'The responsible role receives it', body: 'Front of house sees service work, kitchen sees preparation work and managers see exceptions and live status.', icon: 'kitchen' },
+  { title: 'The responsible role receives it', body: 'Service staff sees service work, kitchen sees preparation work and managers see exceptions and live status.', icon: 'kitchen' },
   { title: 'Service and checkout complete', body: 'Preparation, ready status, handoff and payment continue from the same restaurant context, including three bill-split methods.', icon: 'card' },
   { title: 'Activity becomes management data', body: 'Revenue, guests, average check, table turnover, sales timing and profitability become available for reporting and AI-assisted questions.', icon: 'chart' }
 ];

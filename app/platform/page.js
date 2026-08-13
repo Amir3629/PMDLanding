@@ -20,7 +20,7 @@ export default function PlatformPage() {
       <Workflow variant="platform" />
       <section className="section twoUpStorySection">
         <div className="container twoUpStoryGrid">
-          <article><img src={imageGroups.comments[7]} alt=""/><div><span className="eyebrow">Role-aware workflow</span><h2>Move table, order and guest context to the role responsible for the next action.</h2><p>Front of house receives service work, kitchen receives preparation work, reservations receives arrivals and managers receive exceptions without copying information between systems.</p></div></article>
+          <article><img src={imageGroups.comments[7]} alt=""/><div><span className="eyebrow">Role-aware workflow</span><h2>Move table, order and guest context to the role responsible for the next action.</h2><p>Service staff receives service work, kitchen receives preparation work, reservations receives arrivals and managers receive exceptions without copying information between systems.</p></div></article>
           <article><img src={imageGroups.social[3]} alt=""/><div><span className="eyebrow">9 decision metrics</span><h2>Track the number, comparison period and operating context behind it.</h2><p>Review revenue, guests, average check, table turnover, sales timing, best sellers, payment mix, forecasting and profitability, then use AI assistance to ask why a signal changed.</p></div></article>
         </div>
       </section>

@@ -9,7 +9,7 @@ export const metadata = {
 const steps = [
   ['01', 'Document the current operation', 'List roles, floor structure, order channels, guest touchpoints, current systems, repeated data entry and the metrics management uses today.'],
   ['02', 'Choose the first product scope', 'Select the smallest set of the 9 product areas that removes a clear workflow problem without replacing systems that should remain in place.'],
-  ['03', 'Configure 6 role workspaces', 'Define permissions, queues, actions and visible status for owners, managers, front of house, kitchen, reservations and finance as required.'],
+  ['03', 'Configure 6 role workspaces', 'Define permissions, queues, actions and visible status for owners, managers, service staff, kitchen, reservations and finance as required.'],
   ['04', 'Define integration contracts', 'For each POS, payment, delivery or accounting connection, document the source, fields, direction, refresh timing and responsible role.'],
   ['05', 'Validate real service scenarios', 'Test bookings, walk-ins, table orders, modifiers, kitchen handoffs, sold-out items, split bills, refunds and reporting before go-live.'],
   ['06', 'Go live and measure', 'Track agreed baseline metrics such as wait time, preparation time, table turnover, average check, payment time or repeat-visit rate, then adjust the configuration.']
