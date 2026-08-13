@@ -9143,3 +9143,85 @@ body.translated-rtl {
 }
 
 /* === PMD ARABIC HERO IMAGE DROP SHADOW CLEAN V13.12 END === */
+
+/* === PMD ARABIC HEADER BACKDROP BLUR CLEAN V13.13 START === */
+
+/*
+  ACTUAL root cause of the horizontal haze across the top of the
+  Arabic restaurant background:
+
+  Base CSS:
+    .siteHeader {
+      backdrop-filter: blur(18px);
+      ...
+    }
+
+  On the homepage, .siteHeader becomes a full-width FIXED transparent
+  wrapper. Even when box-shadow and filter are removed, backdrop-filter
+  still blurs the restaurant image BEHIND the full-width header wrapper.
+
+  That produces the wide grey/white "second shadow" band visible across
+  the top of the mirrored Arabic hero.
+
+  Fix ONLY the Arabic desktop homepage wrapper.
+  The white rounded .headerInner card remains visually unchanged.
+*/
+
+@media (min-width: 1100px) {
+
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  .siteHeader {
+
+    /*
+      Critical fix: filter:none does NOT disable backdrop-filter.
+      Remove the actual behind-element blur.
+    */
+    backdrop-filter:
+      none !important;
+
+    -webkit-backdrop-filter:
+      none !important;
+
+    /*
+      The base sticky-header rule also carries a full-width bottom border.
+      The homepage uses a floating card, so the wrapper itself must be
+      fully transparent with no horizontal line.
+    */
+    background:
+      transparent !important;
+
+    border:
+      0 !important;
+
+    border-bottom:
+      0 !important;
+
+    box-shadow:
+      none !important;
+
+    filter:
+      none !important;
+  }
+
+
+  /*
+    Preserve the approved floating white header card.
+    Do NOT remove its own background, radius or border.
+    Only ensure it is not introducing an extra backdrop blur.
+  */
+  html[lang="ar-OM"][dir="rtl"]
+  body:has(section.hero.pmdHeroFullBleedFix)
+  .siteHeader
+  .headerInner {
+
+    backdrop-filter:
+      none !important;
+
+    -webkit-backdrop-filter:
+      none !important;
+  }
+
+}
+
+/* === PMD ARABIC HEADER BACKDROP BLUR CLEAN V13.13 END === */
