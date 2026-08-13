@@ -9270,3 +9270,78 @@ body:has(section.hero.pmdHeroFullBleedFix)
 }
 
 /* === PMD HOMEPAGE PRODUCT CARD MEDIA V15.2 END === */
+
+/* === PMD HOMEPAGE PRODUCT CARD MEDIA V15.3 START === */
+
+/*
+  Final homepage-card media behavior:
+
+  - Keep the shorter 8:5 frame from V15.2.
+  - Fill the entire preview frame edge-to-edge.
+  - Remove the V15.1 optical scale because cover already fills the frame.
+  - No side letterboxing / empty breathing room.
+  - Homepage product cards only; page/solution heroes remain untouched.
+*/
+
+body:has(section.hero.pmdHeroFullBleedFix)
+#what-we-offer
+.offerCardMedia {
+  aspect-ratio:
+    8 / 5 !important;
+
+  overflow:
+    hidden !important;
+}
+
+
+body:has(section.hero.pmdHeroFullBleedFix)
+#what-we-offer
+.offerCardMedia img {
+  display:
+    block !important;
+
+  width:
+    100% !important;
+
+  height:
+    100% !important;
+
+  max-width:
+    none !important;
+
+  object-fit:
+    cover !important;
+
+  object-position:
+    center center !important;
+
+  transform:
+    none !important;
+
+  transform-origin:
+    center center !important;
+
+  background:
+    transparent !important;
+}
+
+
+/*
+  Explicitly neutralize the V15.1 5% zoom for the seven new hero-derived
+  card previews. object-fit:cover is now responsible for filling the frame.
+*/
+body:has(section.hero.pmdHeroFullBleedFix)
+#what-we-offer
+.offerCardMedia
+img[src*="/site-assets/custom/page-heroes/"] {
+  object-fit:
+    cover !important;
+
+  object-position:
+    center center !important;
+
+  transform:
+    none !important;
+}
+
+/* === PMD HOMEPAGE PRODUCT CARD MEDIA V15.3 END === */
