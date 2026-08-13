@@ -6917,3 +6917,213 @@ section.hero.pmdHeroFullBleedFix
 
 
 /* === PMD GROWTH HERO AI GRAPH V6 END === */
+
+
+/* === PMD MOBILE MOTION V7 START === */
+
+
+/*
+   ============================================================
+   MOBILE SCROLL MOTION
+   ============================================================
+
+   Desktop remains unchanged.
+
+   Mobile goals:
+
+   - begin animation before content reaches viewport
+   - less vertical travel
+   - no blur during scroll
+   - tiny stagger
+   - smooth opacity + transform
+   - avoid keeping dozens of GPU layers alive
+*/
+
+
+@media (max-width: 820px) {
+
+
+  /*
+     ----------------------------------------------------------
+     SCROLL REVEAL
+     ----------------------------------------------------------
+  */
+
+  html.pmd-motion-ready
+  .pmd-reveal-v2 {
+
+    opacity: 0 !important;
+
+    transform:
+      translate3d(0, 10px, 0)
+      scale(.9985)
+      !important;
+
+    /*
+       Blur is visually nice on desktop but relatively expensive
+       while Safari/Chrome is also processing touch scrolling.
+    */
+
+    filter: none !important;
+
+    transition:
+      opacity .44s cubic-bezier(.22, 1, .36, 1),
+      transform .52s cubic-bezier(.22, 1, .36, 1)
+      !important;
+
+    transition-delay:
+      var(--pmd-stagger, 0ms)
+      !important;
+
+    will-change:
+      opacity,
+      transform;
+  }
+
+
+  html.pmd-motion-ready
+  .pmd-reveal-v2.pmd-in-view-v2 {
+
+    opacity: 1 !important;
+
+    transform:
+      translate3d(0, 0, 0)
+      scale(1)
+      !important;
+
+    filter: none !important;
+  }
+
+
+  /*
+     Once visible, stop asking the browser to permanently
+     reserve compositing resources.
+  */
+
+  html.pmd-motion-ready
+  .pmd-reveal-v2.pmd-in-view-v2 {
+
+    will-change: auto;
+  }
+
+
+  /*
+     ----------------------------------------------------------
+     PAGE LOAD / HERO COPY
+     ----------------------------------------------------------
+  */
+
+  html.pmd-motion-ready
+  .pmd-enter-v2 {
+
+    animation:
+      pmdMobileEnterV7
+      .50s
+      cubic-bezier(.22, 1, .36, 1)
+      both
+      !important;
+
+    animation-delay:
+      var(--pmd-enter-delay, 35ms)
+      !important;
+  }
+
+
+  @keyframes pmdMobileEnterV7 {
+
+    from {
+
+      opacity: 0;
+
+      transform:
+        translate3d(0, 9px, 0)
+        scale(.999);
+    }
+
+    to {
+
+      opacity: 1;
+
+      transform:
+        translate3d(0, 0, 0)
+        scale(1);
+    }
+
+  }
+
+
+  /*
+     ----------------------------------------------------------
+     LARGE IMAGES / CARDS
+     ----------------------------------------------------------
+
+     Do not add scroll-time filters to these.
+  */
+
+  .offerCard,
+  .statusCard,
+  .resourceCard,
+  .setupCard,
+  .demoShowcaseCard,
+  .storyFeature,
+  .darkStoryCard,
+  .wideDarkCard,
+  .twoUpStoryGrid > *,
+  .pmdAiImpactVisual {
+
+    -webkit-backface-visibility:
+      hidden;
+
+    backface-visibility:
+      hidden;
+  }
+
+
+  /*
+     Mobile has no useful hover state.
+  */
+
+  .pmd-soft-lift-v2:hover {
+
+    transform:
+      none !important;
+
+    filter:
+      none !important;
+  }
+
+}
+
+
+/*
+   ============================================================
+   REDUCED MOTION
+   ============================================================
+*/
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .pmd-reveal-v2,
+  .pmd-enter-v2 {
+
+    opacity:
+      1 !important;
+
+    transform:
+      none !important;
+
+    filter:
+      none !important;
+
+    animation:
+      none !important;
+
+    transition:
+      none !important;
+  }
+
+}
+
+
+/* === PMD MOBILE MOTION V7 END === */
