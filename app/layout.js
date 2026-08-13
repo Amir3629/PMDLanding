@@ -120,21 +120,6 @@ export default function RootLayout({
         : 'ltr';
 
 
-    /*
-      V12:
-
-      English can paint immediately.
-
-      Turkish / Arabic must NOT expose server-rendered English
-      text while Google is preparing the translated DOM.
-    */
-
-    html.dataset.pmdTranslationReady =
-      selected === 'en'
-        ? 'true'
-        : 'pending';
-
-
     window.__PMD_LANGUAGE__ =
       selected;
 

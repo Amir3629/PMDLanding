@@ -271,11 +271,8 @@ export default function LanguageSwitcher() {
     (next) => {
 
       if (
-        !LANGUAGES[next] ||
-        next === language
+        !LANGUAGES[next]
       ) {
-
-        setOpen(false);
 
         return;
 
@@ -285,27 +282,13 @@ export default function LanguageSwitcher() {
       setOpen(false);
 
 
-      const html =
-        document.documentElement;
+      if (
+        next === language
+      ) {
 
+        return;
 
-      /*
-        Conceal CURRENT page before changing language.
-
-        Do not change current DOM text/direction live.
-
-        The next document starts with the correct language state
-        before its first paint.
-      */
-
-      html.classList.add(
-        'pmd-language-switching'
-      );
-
-
-      html.dataset
-        .pmdTranslationReady =
-          'pending';
+      }
 
 
       try {
@@ -317,6 +300,10 @@ export default function LanguageSwitcher() {
 
       } catch (_) {}
 
+
+      /*
+        Synchronise cookie BEFORE reload.
+      */
 
       if (
         next === 'en'
@@ -333,25 +320,20 @@ export default function LanguageSwitcher() {
       }
 
 
-      /*
-        Give concealment one rendering frame.
+      applyDirection(
+        next
+      );
 
-        Then reload into CLEAN server DOM.
+
+      /*
+        DO NOT live-mutate the existing React DOM.
+
+        Reload into clean server HTML.
+
+        GlobalTranslation will start Google only after hydration.
       */
 
-      window.requestAnimationFrame(
-        () => {
-
-          window.requestAnimationFrame(
-            () => {
-
-              window.location.reload();
-
-            }
-          );
-
-        }
-      );
+      window.location.reload();
 
     };
 
@@ -438,12 +420,16 @@ export default function LanguageSwitcher() {
             )
           }
         >
-          <span>🇬🇧</span>
+
+          <span>
+            🇬🇧
+          </span>
 
           <span>
             <b>English</b>
             <small>English</small>
           </span>
+
         </button>
 
 
@@ -460,12 +446,16 @@ export default function LanguageSwitcher() {
             )
           }
         >
-          <span>🇹🇷</span>
+
+          <span>
+            🇹🇷
+          </span>
 
           <span>
             <b>Türkçe</b>
             <small>Turkish</small>
           </span>
+
         </button>
 
 
@@ -482,12 +472,16 @@ export default function LanguageSwitcher() {
             )
           }
         >
-          <span>🇴🇲</span>
+
+          <span>
+            🇴🇲
+          </span>
 
           <span>
             <b>العربية</b>
             <small>عُمان</small>
           </span>
+
         </button>
 
       </div>
