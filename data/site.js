@@ -102,15 +102,15 @@ export const primaryNav = [
     href: '/platform',
     columns: [
       {
-        title: '1–3 Platform & operations',
+        title: 'Platform & operations',
         links: [productLink(0), productLink(1), productLink(2)]
       },
       {
-        title: '4–6 Service & performance',
+        title: 'Service & performance',
         links: [productLink(3), productLink(4), productLink(5)]
       },
       {
-        title: '7–9 Teams, guests & scale',
+        title: 'Teams, guests & scale',
         links: [productLink(6), productLink(7), productLink(8)]
       }
     ]
