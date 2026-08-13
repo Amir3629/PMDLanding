@@ -9194,3 +9194,35 @@ body:has(section.hero.pmdHeroFullBleedFix)
 }
 
 /* === PMD HOMEPAGE PRODUCT CARD MEDIA V15 END === */
+
+/* === PMD HOMEPAGE PRODUCT CARD MEDIA V15.1 START === */
+
+/*
+  Fine-tune the seven new page-hero preview images only.
+
+  V15 correctly stopped cropping by using a 3:2 frame + contain.
+  A few generated artworks include extra breathing room around their edges,
+  which can look like side gaps in the homepage card preview.
+
+  Keep the full-image/contain behavior, but apply a very small 5% optical
+  zoom to only the new page-hero assets. The card frame stays 3:2.
+*/
+
+body:has(section.hero.pmdHeroFullBleedFix)
+#what-we-offer
+.offerCardMedia
+img[src*="/site-assets/custom/page-heroes/"] {
+  object-fit:
+    contain !important;
+
+  object-position:
+    center center !important;
+
+  transform:
+    scale(1.05) !important;
+
+  transform-origin:
+    center center !important;
+}
+
+/* === PMD HOMEPAGE PRODUCT CARD MEDIA V15.1 END === */
