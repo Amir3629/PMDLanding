@@ -3,6 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieNotice from '@/components/CookieNotice';
 import SmoothMotion from "@/components/SmoothMotion";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import GlobalTranslation from "@/components/GlobalTranslation";
 export const metadata = {
   title: {
     default: 'PayMyDine — Restaurant Operations Platform',
@@ -21,7 +23,9 @@ export default function RootLayout({ children }) {
       </head>
       <body>
 <SmoothMotion />
+        <GlobalTranslation />
         <Header />
+        <LanguageSwitcher />
         <main>{children}</main>
         <Footer />
         <CookieNotice />
