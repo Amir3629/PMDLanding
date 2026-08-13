@@ -7645,97 +7645,48 @@ html[dir="rtl"]
 /* === PMD GLOBAL LANGUAGES V8 END === */
 
 
-/* === PMD RTL HERO NO FLASH V9 START === */
+
+
+/* === PMD LANGUAGE RECOVERY ARABIC HERO V10 START === */
 
 
 /*
    ============================================================
-   1. MOBILE HOMEPAGE HEADER CLEARANCE
+   1. EMERGENCY SAFETY
    ============================================================
 
-   Homepage header is fixed:
-     top: 16px
-     card height: ~78px
-
-   The old 80px hero top padding lets the eyebrow/headline
-   begin underneath that card.
-
-   Give the hero a clean visible gap below the header.
+   There is NO translation pending UI anymore.
 */
 
 
-@media (max-width: 740px) {
+html.pmd-translation-pending {
 
-  body:has(section.hero.pmdHeroFullBleedFix)
-  section.hero.pmdHeroFullBleedFix {
-
-    padding-top:
-      122px !important;
-  }
+  overflow:
+    auto !important;
 
 }
 
 
-@media (max-width: 380px) {
+html.pmd-translation-pending
+.pmdTranslationShield {
 
-  body:has(section.hero.pmdHeroFullBleedFix)
-  section.hero.pmdHeroFullBleedFix {
+  opacity:
+    0 !important;
 
-    padding-top:
-      126px !important;
-  }
+  visibility:
+    hidden !important;
 
-}
+  pointer-events:
+    none !important;
 
-
-
-/*
-   ============================================================
-   2. PAYMYDINE / LANGUAGE UI MUST NEVER TRANSLATE
-   ============================================================
-*/
-
-
-.notranslate,
-[translate="no"],
-[data-pmd-brand="true"] {
-
-  unicode-bidi:
-    isolate;
-}
-
-
-.brand.notranslate,
-.brand.notranslate *,
-.pmdLanguageSwitcher.notranslate,
-.pmdLanguageSwitcher.notranslate * {
-
-  direction:
-    ltr !important;
 }
 
 
 
 /*
    ============================================================
-   3. TRANSLATION TRANSITION SHIELD
+   2. FIRST HOMEPAGE VISIT SPLASH ONLY
    ============================================================
-
-   The important part:
-
-   pmd-translation-pending is added BEFORE the browser paints
-   when the stored language is Turkish or Arabic.
-
-   So visitors do NOT see:
-
-     English
-       ->
-     blink
-       ->
-     Arabic/Turkish
-
-   They see the clean PayMyDine shield until the requested
-   language is actually ready.
 */
 
 
@@ -7759,8 +7710,8 @@ html[dir="rtl"]
   background:
     radial-gradient(
       circle at 50% 42%,
-      rgba(184, 220, 53, .12),
-      transparent 32%
+      rgba(183,217,54,.14),
+      transparent 33%
     ),
     #ffffff;
 
@@ -7774,12 +7725,12 @@ html[dir="rtl"]
     none;
 
   transition:
-    opacity .16s ease,
-    visibility 0s linear .16s;
+    opacity .22s ease,
+    visibility 0s linear .22s;
 }
 
 
-html.pmd-translation-pending
+html.pmd-first-visit-splash
 .pmdTranslationShield {
 
   opacity:
@@ -7797,7 +7748,7 @@ html.pmd-translation-pending
 }
 
 
-html.pmd-translation-pending {
+html.pmd-first-visit-splash {
 
   overflow:
     hidden;
@@ -7821,11 +7772,11 @@ html.pmd-translation-pending {
   gap:
     12px;
 
-  color:
-    #064333;
-
   direction:
     ltr !important;
+
+  color:
+    #064333;
 }
 
 
@@ -7850,12 +7801,21 @@ html.pmd-translation-pending {
   line-height:
     1;
 
+  font-weight:
+    850;
+
   letter-spacing:
     -.04em;
 }
 
 
 .pmdTranslationLoader {
+
+  position:
+    relative;
+
+  display:
+    block;
 
   width:
     34px;
@@ -7864,19 +7824,16 @@ html.pmd-translation-pending {
     3px;
 
   margin-top:
-    5px;
+    4px;
 
   overflow:
     hidden;
 
   border-radius:
-    99px;
+    999px;
 
   background:
-    #e7f1ec;
-
-  position:
-    relative;
+    #e6f2ec;
 }
 
 
@@ -7904,25 +7861,27 @@ html.pmd-translation-pending {
     #0ba66a;
 
   animation:
-    pmdTranslationLoaderV9
-    .8s
+    pmdSplashV10
+    .72s
     ease-in-out
     infinite;
 }
 
 
-@keyframes pmdTranslationLoaderV9 {
+@keyframes pmdSplashV10 {
 
-  0% {
-    left: -45%;
+  from {
+
+    left:
+      -50%;
+
   }
 
-  50% {
-    left: 55%;
-  }
+  to {
 
-  100% {
-    left: 100%;
+    left:
+      105%;
+
   }
 
 }
@@ -7931,36 +7890,94 @@ html.pmd-translation-pending {
 
 /*
    ============================================================
-   4. ARABIC HOMEPAGE = MIRRORED HERO COMPOSITION
+   3. PAYMYDINE MUST NEVER TRANSLATE
+   ============================================================
+*/
+
+
+.notranslate,
+[translate="no"],
+[data-pmd-brand="true"] {
+
+  unicode-bidi:
+    isolate;
+}
+
+
+.brand.notranslate,
+.brand.notranslate *,
+.pmdLanguageSwitcher.notranslate,
+.pmdLanguageSwitcher.notranslate *,
+.pmdTranslationShield.notranslate,
+.pmdTranslationShield.notranslate * {
+
+  direction:
+    ltr !important;
+}
+
+
+
+/*
+   ============================================================
+   4. MOBILE HOMEPAGE HEADER CLEARANCE
+   ============================================================
+*/
+
+
+@media (max-width: 740px) {
+
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
+  section.hero.pmdHeroFullBleedFix {
+
+    padding-top:
+      122px !important;
+
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
+  section.hero.pmdHeroFullBleedFix {
+
+    padding-top:
+      126px !important;
+
+  }
+
+}
+
+
+
+/*
+   ============================================================
+   5. ARABIC HERO LAYOUT
    ============================================================
 
-   IMPORTANT:
+   ENGLISH:
+     COPY | RESTAURANT
 
-   We mirror LAYOUT/POSITION.
+   ARABIC:
+     RESTAURANT | COPY
 
-   We do NOT horizontally flip the dashboard/product artwork,
-   because doing that would reverse text and UI inside the
-   PayMyDine screenshots.
-
-   Arabic composition:
-
-     ART / RESTAURANT IMAGE      COPY
-          LEFT                   RIGHT
+   The dashboard / phone / menu screenshots are NOT flipped.
 */
 
 
 @media (min-width: 741px) {
 
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   > .container.heroGrid {
-
-    /*
-      Exact mirror of original:
-        English = .9fr copy / 1.1fr visual
-        Arabic  = 1.1fr visual / .9fr copy
-    */
 
     direction:
       ltr !important;
@@ -7969,11 +7986,15 @@ html.pmd-translation-pending {
       minmax(0, 1.1fr)
       minmax(0, .9fr)
       !important;
+
   }
 
 
+
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   .heroCopy {
 
@@ -7986,19 +8007,23 @@ html.pmd-translation-pending {
     justify-self:
       end !important;
 
-    text-align:
-      right !important;
-
     direction:
       rtl !important;
 
+    text-align:
+      right !important;
+
     z-index:
-      50 !important;
+      60 !important;
+
   }
 
 
+
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   .heroVisual {
 
@@ -8008,19 +8033,85 @@ html.pmd-translation-pending {
     grid-row:
       1 !important;
 
-    justify-self:
-      stretch !important;
-
     direction:
       ltr !important;
 
+    justify-self:
+      stretch !important;
+
     z-index:
-      2 !important;
+      1 !important;
+
   }
 
 
+
   /*
-     Mirror the decorative green hero glows too.
+     ----------------------------------------------------------
+     ACTUAL FIX FOR MISSING ARABIC RESTAURANT IMAGE
+     ----------------------------------------------------------
+
+     V9 only changed left/right positioning.
+
+     But hero-platform.webp was composed for English.
+
+     V10 mirrors THE RESTAURANT ARTWORK ITSELF.
+
+     This moves:
+     - restaurant scene
+     - its built-in light/fade composition
+
+     to the correct Arabic side.
+  */
+
+
+  html[dir="rtl"]
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
+  section.hero.pmdHeroFullBleedFix
+  .heroRightPanel
+  > img.heroImage.pmdHeroArtworkFix[
+    src*="/site-assets/hero-platform.webp"
+  ] {
+
+    right:
+      auto !important;
+
+    left:
+      0 !important;
+
+    object-position:
+      left center !important;
+
+    transform:
+      scaleX(-1)
+      !important;
+
+    transform-origin:
+      center center !important;
+
+    translate:
+      none !important;
+
+    scale:
+      none !important;
+
+    rotate:
+      none !important;
+
+    opacity:
+      1 !important;
+
+    visibility:
+      visible !important;
+
+  }
+
+
+
+  /*
+     Mirror the decorative background glows.
   */
 
   html[dir="rtl"]
@@ -8032,6 +8123,7 @@ html.pmd-translation-pending {
 
     left:
       -160px !important;
+
   }
 
 
@@ -8044,74 +8136,7 @@ html.pmd-translation-pending {
 
     right:
       -220px !important;
-  }
 
-
-  /*
-     The main restaurant/background artwork was right anchored.
-
-     Arabic gets the corresponding LEFT anchor.
-  */
-
-  html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
-  section.hero.pmdHeroFullBleedFix
-  .heroRightPanel
-  > img.heroImage.pmdHeroArtworkFix[src*="/site-assets/hero-platform.webp"] {
-
-    right:
-      auto !important;
-
-    left:
-      0 !important;
-
-    object-position:
-      left center !important;
-  }
-
-
-  /*
-     Re-create the soft blend on the side facing the copy.
-
-     EN:
-        copy is left -> artwork fades toward left
-
-     AR:
-        copy is right -> artwork fades toward right
-  */
-
-  html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
-  section.hero.pmdHeroFullBleedFix
-  .heroVisual::after {
-
-    display:
-      block !important;
-
-    content:
-      '' !important;
-
-    position:
-      absolute !important;
-
-    inset:
-      -3% -8% -3% 0 !important;
-
-    z-index:
-      4 !important;
-
-    pointer-events:
-      none !important;
-
-    background:
-      linear-gradient(
-        90deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,.04) 48%,
-        rgba(255,255,255,.48) 72%,
-        rgba(255,255,255,.90) 91%,
-        #fff 100%
-      ) !important;
   }
 
 }
@@ -8120,23 +8145,20 @@ html.pmd-translation-pending {
 
 /*
    ============================================================
-   5. ARABIC SECONDARY / DEVICE ARTWORK POSITION
+   6. ARABIC DESKTOP DASHBOARD ARTWORK
    ============================================================
 
-   English approved desktop position:
-     left: 545px
-
-   Mirror:
-     right: 545px
-
-   The artwork itself is NOT flipped.
+   IMPORTANT:
+   Move it, but DO NOT mirror UI pixels.
 */
 
 
 @media (min-width: 1100px) {
 
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   > .pmdHeroSecondaryLayerV2 {
 
@@ -8145,26 +8167,34 @@ html.pmd-translation-pending {
 
     right:
       545px !important;
+
   }
 
 
+
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   > .pmdHeroSecondaryLayerV2
   > img.pmdHeroSecondaryImageV2 {
 
-    /*
-      Directional shadow now falls slightly toward LEFT,
-      matching the Arabic visual composition.
-    */
+    transform:
+      none !important;
+
+    direction:
+      ltr !important;
 
     filter:
       drop-shadow(
-        -24px 28px 48px
-        rgba(7, 52, 40, .11)
+        -24px
+        28px
+        48px
+        rgba(7,52,40,.11)
       )
       !important;
+
   }
 
 }
@@ -8172,18 +8202,18 @@ html.pmd-translation-pending {
 
 
 /*
-   Tablet English position:
-     left: 37.075vw
-
-   Arabic mirror:
-     right: 37.075vw
+   ============================================================
+   7. ARABIC TABLET
+   ============================================================
 */
 
 
 @media (min-width: 741px) and (max-width: 1099px) {
 
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   > .pmdHeroSecondaryLayerV2 {
 
@@ -8192,40 +8222,140 @@ html.pmd-translation-pending {
 
     right:
       37.075vw !important;
+
   }
 
 
+
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   .heroRightPanel
-  > img.heroImage.pmdHeroArtworkFix[src*="/site-assets/hero-platform.webp"] {
-
-    /*
-      Existing tablet English value was right:-8%.
-      Mirror the same amount.
-    */
+  > img.heroImage.pmdHeroArtworkFix[
+    src*="/site-assets/hero-platform.webp"
+  ] {
 
     right:
       auto !important;
 
     left:
       -8% !important;
+
+    /*
+      Preserve the mirror after the old tablet rules which
+      previously forced transform:none.
+    */
+
+    transform:
+      scaleX(-1)
+      !important;
+
   }
 
 
+
+  /*
+     Existing tablet fade is on LEFT for English.
+
+     Arabic needs exactly the opposite:
+       transparent -> white toward RIGHT.
+  */
+
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
+  section.hero.pmdHeroFullBleedFix
+  .heroVisual
+  .heroImageFrame.heroImageFrameClean.heroRightPanel::before {
+
+    left:
+      auto !important;
+
+    right:
+      0 !important;
+
+    background:
+      linear-gradient(
+        270deg,
+
+        rgba(255,255,255,1) 0%,
+
+        rgba(255,255,255,.995) 12%,
+
+        rgba(255,255,255,.97) 25%,
+
+        rgba(255,255,255,.90) 38%,
+
+        rgba(255,255,255,.75) 52%,
+
+        rgba(255,255,255,.52) 65%,
+
+        rgba(255,255,255,.29) 77%,
+
+        rgba(255,255,255,.12) 88%,
+
+        rgba(255,255,255,.03) 96%,
+
+        rgba(255,255,255,0) 100%
+      )
+      !important;
+
+    background-image:
+      linear-gradient(
+        270deg,
+
+        rgba(255,255,255,1) 0%,
+
+        rgba(255,255,255,.995) 12%,
+
+        rgba(255,255,255,.97) 25%,
+
+        rgba(255,255,255,.90) 38%,
+
+        rgba(255,255,255,.75) 52%,
+
+        rgba(255,255,255,.52) 65%,
+
+        rgba(255,255,255,.29) 77%,
+
+        rgba(255,255,255,.12) 88%,
+
+        rgba(255,255,255,.03) 96%,
+
+        rgba(255,255,255,0) 100%
+      )
+      !important;
+
+  }
+
+
+
+  html[dir="rtl"]
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   > .pmdHeroSecondaryLayerV2
   > img.pmdHeroSecondaryImageV2 {
 
+    transform:
+      none !important;
+
+    direction:
+      ltr !important;
+
     filter:
       drop-shadow(
-        -18px 24px 38px
-        rgba(7, 52, 40, .10)
+        -18px
+        24px
+        38px
+        rgba(7,52,40,.10)
       )
       !important;
+
   }
 
 }
@@ -8234,22 +8364,22 @@ html.pmd-translation-pending {
 
 /*
    ============================================================
-   6. ARABIC MOBILE HERO
+   8. ARABIC MOBILE
    ============================================================
 
-   Mobile intentionally uses the artwork in normal flow.
+   Main restaurant artwork is intentionally hidden on the
+   existing mobile layout.
 
-   Do NOT flip the actual dashboard screenshot.
-
-   Text remains RTL/right-aligned while the product artwork
-   stays readable and centered underneath.
+   Secondary PayMyDine UI remains readable.
 */
 
 
 @media (max-width: 740px) {
 
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   .heroCopy {
 
@@ -8258,46 +8388,49 @@ html.pmd-translation-pending {
 
     text-align:
       right !important;
+
   }
 
 
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   .heroButtons {
 
     direction:
       rtl !important;
+
   }
 
 
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   .heroProof {
 
     direction:
       rtl !important;
 
-    justify-content:
-      flex-start;
   }
 
 
-  /*
-     Keep screenshot pixels readable.
-  */
-
   html[dir="rtl"]
-  body:has(section.hero.pmdHeroFullBleedFix)
+  body:has(
+    section.hero.pmdHeroFullBleedFix
+  )
   section.hero.pmdHeroFullBleedFix
   .pmdHeroSecondaryImageV2 {
+
+    transform:
+      none !important;
 
     direction:
       ltr !important;
 
-    transform:
-      none !important;
   }
 
 }
@@ -8306,7 +8439,7 @@ html.pmd-translation-pending {
 
 /*
    ============================================================
-   7. GOOGLE TRANSLATE UI NEVER SHIFTS WEBSITE
+   9. GOOGLE TRANSLATE CLEANUP
    ============================================================
 */
 
@@ -8318,15 +8451,24 @@ iframe.goog-te-banner-frame,
 
   display:
     none !important;
+
 }
 
 
-html,
 body {
 
   top:
     0 !important;
+
 }
+
+
+
+/*
+   Google injects these classes during translation.
+
+   Never allow them to shift the PayMyDine page.
+*/
 
 
 body.translated-ltr,
@@ -8334,18 +8476,22 @@ body.translated-rtl {
 
   top:
     0 !important;
+
 }
 
 
 
 /*
    ============================================================
-   8. REDUCED MOTION
+   10. REDUCED MOTION
    ============================================================
 */
 
 
-@media (prefers-reduced-motion: reduce) {
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
 
   .pmdTranslationShield,
   .pmdTranslationLoader::after {
@@ -8355,9 +8501,10 @@ body.translated-rtl {
 
     animation:
       none !important;
+
   }
 
 }
 
 
-/* === PMD RTL HERO NO FLASH V9 END === */
+/* === PMD LANGUAGE RECOVERY ARABIC HERO V10 END === */

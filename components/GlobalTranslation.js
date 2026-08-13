@@ -1,10 +1,41 @@
 'use client';
 
-import { useEffect } from 'react';
+import {
+  useEffect
+} from 'react';
 
 
 const STORAGE_KEY =
   'pmd_language_v1';
+
+
+
+function getSelectedLanguage() {
+
+  try {
+
+    const selected =
+      window.localStorage.getItem(
+        STORAGE_KEY
+      );
+
+
+    if (
+      selected === 'tr' ||
+      selected === 'ar'
+    ) {
+
+      return selected;
+
+    }
+
+  } catch (_) {}
+
+
+  return 'en';
+
+}
+
 
 
 export default function GlobalTranslation() {
@@ -12,268 +43,227 @@ export default function GlobalTranslation() {
   useEffect(() => {
 
     /*
-      Google translation callback.
+      V10 NEVER blocks the document.
 
-      This widget is deliberately hidden.
-      PayMyDine provides its own UI.
+      This fixes the V9 state where the whole website could
+      remain behind the PayMyDine translation shield.
     */
 
-    window.googleTranslateElementInit =
-      function googleTranslateElementInit() {
+    document.documentElement
+      .classList.remove(
+        'pmd-translation-pending'
+      );
 
+
+
+    let lastApplied =
+      null;
+
+
+    const applySelectedLanguage =
+      () => {
+
+        const selected =
+          getSelectedLanguage();
+
+
+        /*
+          English is the original server-rendered language.
+        */
         if (
-          !window.google ||
-          !window.google.translate
+          selected === 'en'
         ) {
-          return;
+
+          return true;
+
         }
 
-        const mount =
-          document.getElementById(
-            'pmd-google-translate'
+
+        const combo =
+          document.querySelector(
+            '.goog-te-combo'
           );
 
-        if (!mount) return;
+
+        if (!combo) {
+
+          return false;
+
+        }
 
 
-        new window.google.translate.TranslateElement(
-          {
-            pageLanguage: 'en',
+        /*
+          Only trigger once per selected language.
+        */
+        if (
+          lastApplied !== selected
+        ) {
 
-            includedLanguages:
-              'en,tr,ar',
-
-            autoDisplay: false,
-
-            multilanguagePage: true
-          },
-
-          'pmd-google-translate'
-        );
+          combo.value =
+            selected;
 
 
-        let selected = 'en';
+          combo.dispatchEvent(
+            new Event(
+              'change',
+              {
+                bubbles: true
+              }
+            )
+          );
 
-        try {
-          selected =
-            window.localStorage.getItem(
-              STORAGE_KEY
-            ) || 'en';
-        } catch (_) {}
+
+          lastApplied =
+            selected;
+
+        }
+
+
+        return true;
+
+      };
+
+
+
+    /*
+      The Google script is now loaded from <head>, before
+      React's normal useEffect timing.
+
+      If it is already available, make sure its callback ran.
+    */
+
+    if (
+      window.google &&
+      window.google.translate &&
+      typeof window.googleTranslateElementInit ===
+        'function'
+    ) {
+
+      window.googleTranslateElementInit();
+
+    }
+
+
+
+    /*
+      Quick fallback polling for slow networks.
+    */
+
+    let attempts =
+      0;
+
+
+    const timer =
+      window.setInterval(
+        () => {
+
+          applySelectedLanguage();
+
+
+          attempts +=
+            1;
+
+
+          if (
+            attempts >= 40
+          ) {
+
+            window.clearInterval(
+              timer
+            );
+
+          }
+
+        },
+        75
+      );
+
+
+
+    /*
+      Google sometimes injects a body top offset/banner.
+      Keep the PayMyDine layout in its normal position.
+    */
+
+    const normaliseGoogleLayout =
+      () => {
+
+        if (
+          document.body &&
+          document.body.style.top !==
+            '0px'
+        ) {
+
+          document.body.style.top =
+            '0px';
+
+        }
 
 
         if (
-          selected === 'tr' ||
-          selected === 'ar'
+          document.documentElement
+            .style.marginTop !==
+            '0px'
         ) {
 
-          window.setTimeout(() => {
-
-            const combo =
-              document.querySelector(
-                '.goog-te-combo'
-              );
-
-            if (
-              combo &&
-              combo.value !== selected
-            ) {
-              combo.value =
-                selected;
-
-              combo.dispatchEvent(
-                new Event('change')
-              );
-            }
-
-          }, 250);
+          document.documentElement
+            .style.marginTop =
+              '0px';
 
         }
 
       };
 
 
-    const existing =
-      document.querySelector(
-        'script[data-pmd-translate]'
-      );
-
-    if (!existing) {
-
-      const script =
-        document.createElement(
-          'script'
-        );
-
-      script.src =
-        'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-
-      script.async = true;
-
-      script.defer = true;
-
-      script.dataset.pmdTranslate =
-        'true';
-
-      document.body.appendChild(
-        script
-      );
-
-    }
+    normaliseGoogleLayout();
 
 
-    /*
-      ----------------------------------------------------------
-      TRANSLATION READY DETECTION
-      ----------------------------------------------------------
-
-      English is already server-rendered.
-
-      For Turkish we wait for Google's translated-ltr state.
-      For Arabic we wait for Google's translated-rtl state.
-
-      Only THEN is the transition shield removed.
-
-      This prevents the original English page appearing for a
-      fraction of a second before translated text replaces it.
-    */
-
-    const releaseTranslationShield = () => {
-
-      const html =
-        document.documentElement;
-
-      const body =
-        document.body;
-
-      const language =
-        html.dataset.pmdLanguage ||
-        'en';
-
-      if (language === 'en') {
-
-        html.classList.remove(
-          'pmd-translation-pending'
-        );
-
-        return;
-      }
-
-
-      const translatedClass =
-        language === 'ar'
-          ? 'translated-rtl'
-          : 'translated-ltr';
-
-
-      const ready =
-        html.classList.contains(
-          translatedClass
-        ) ||
-        body.classList.contains(
-          translatedClass
-        );
-
-
-      if (ready) {
-
-        window.requestAnimationFrame(() => {
-
-          window.requestAnimationFrame(() => {
-
-            html.classList.remove(
-              'pmd-translation-pending'
-            );
-
-          });
-
-        });
-
-      }
-
-    };
-
-
-    /*
-      Keep Google from visually shifting the entire page
-      with its injected top bar.
-
-      Also watch for Google's translated-ltr / translated-rtl
-      class.
-    */
 
     const observer =
-      new MutationObserver(() => {
+      new MutationObserver(
+        () => {
 
-        document.body.style.top =
-          '0px';
+          normaliseGoogleLayout();
 
-        document.documentElement.style.marginTop =
-          '0px';
+          applySelectedLanguage();
 
-        releaseTranslationShield();
-
-      });
+        }
+      );
 
 
     observer.observe(
       document.documentElement,
       {
-        attributes: true,
-        attributeFilter: [
-          'class',
-          'lang',
-          'dir'
-        ],
         childList: true,
         subtree: true
       }
     );
 
 
-    /*
-      Check once immediately too.
-    */
-
-    releaseTranslationShield();
-
-
-    /*
-      Safety valve:
-      if the external translation service cannot respond,
-      never trap the visitor behind the shield forever.
-
-      Normal translation should complete far earlier than this.
-    */
-
-    const safetyTimer =
-      window.setTimeout(() => {
-
-        document.documentElement.classList.remove(
-          'pmd-translation-pending'
-        );
-
-      }, 4500);
-
 
     return () => {
 
-      observer.disconnect();
-
-      window.clearTimeout(
-        safetyTimer
+      window.clearInterval(
+        timer
       );
+
+      observer.disconnect();
 
     };
 
   }, []);
 
 
+
   return (
+
     <div
       id="pmd-google-translate"
-      className="pmdGoogleTranslateMount"
+      className="pmdGoogleTranslateMount notranslate"
+      translate="no"
       aria-hidden="true"
     />
+
   );
+
 }
