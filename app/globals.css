@@ -9098,3 +9098,99 @@ body.translated-rtl {
 }
 
 /* === PMD ARABIC HERO BOTTOM EXTENSION V13.10 END === */
+
+/* === PMD HOMEPAGE PRODUCT CARD MEDIA V15 START === */
+
+/*
+  Homepage product cards only.
+
+  Previous frame:
+    fixed height: 220px
+    image: object-fit: cover
+
+  The new ChatGPT hero artwork is close to 3:2. A fixed 220px frame in the
+  three-column homepage grid is substantially wider than 3:2, so cover
+  crops the top/bottom of the artwork.
+
+  V15 gives the preview a natural 3:2 frame and uses contain so the full
+  image remains visible. This does not modify PageHero / solution hero
+  artwork and does not affect OfferGrid when used away from the homepage.
+*/
+
+body:has(section.hero.pmdHeroFullBleedFix)
+#what-we-offer
+.offerCardMedia {
+  width:
+    100% !important;
+
+  height:
+    auto !important;
+
+  min-height:
+    0 !important;
+
+  aspect-ratio:
+    3 / 2 !important;
+
+  overflow:
+    hidden !important;
+
+  background:
+    #f4f8f6 !important;
+}
+
+
+body:has(section.hero.pmdHeroFullBleedFix)
+#what-we-offer
+.offerCardMedia img {
+  width:
+    100% !important;
+
+  height:
+    100% !important;
+
+  max-width:
+    none !important;
+
+  object-fit:
+    contain !important;
+
+  object-position:
+    center center !important;
+
+  transform:
+    none !important;
+
+  background:
+    #f4f8f6 !important;
+}
+
+
+/*
+  Keep the image area comfortably sized on narrower cards as well.
+  The 3:2 ratio remains the source of truth, so images are not cropped.
+*/
+@media (max-width: 900px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  #what-we-offer
+  .offerCardMedia {
+    aspect-ratio:
+      3 / 2 !important;
+  }
+
+}
+
+
+@media (max-width: 620px) {
+
+  body:has(section.hero.pmdHeroFullBleedFix)
+  #what-we-offer
+  .offerCardMedia {
+    aspect-ratio:
+      3 / 2 !important;
+  }
+
+}
+
+/* === PMD HOMEPAGE PRODUCT CARD MEDIA V15 END === */
