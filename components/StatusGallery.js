@@ -2,35 +2,81 @@ import { homeStatusCards, imageGroups } from '@/data/site';
 
 export function StatusGallery() {
   return (
+
     <section className="section statusSection">
+
       <div className="container">
+
         <div className="splitHeading">
+
           <div>
-            <span className="eyebrow">4 moments that need shared status</span>
-            <h2>Keep the table, ticket and payment state visible so teams do not repeat the same status check.</h2>
+
+            <span className="eyebrow">
+              Live status becomes AI context
+            </span>
+
+            <h2>
+              Keep the table, ticket and payment state shared in real time,
+              then use AI to help explain the exceptions behind it.
+            </h2>
+
           </div>
-          <p>Guests, service staff, kitchen and payment workflows can use different screens while reading the same underlying restaurant context.</p>
+
+          <p>
+            Guests, service staff, kitchen and payment workflows use different
+            screens, but their activity contributes to the same operating
+            picture. That gives management clearer source data for reporting,
+            comparisons and AI-assisted investigation.
+          </p>
+
         </div>
+
+
         <div className="statusGrid">
+
           {homeStatusCards.map((card, index) => (
-            <article className={`statusCard statusCard${index + 1}`} key={card.title}>
-              <img src={card.image} alt="" loading="lazy" />
+
+            <article
+              className={`statusCard statusCard${index + 1}`}
+              key={card.title}
+            >
+
+              <img
+                src={card.image}
+                alt=""
+                loading="lazy"
+              />
+
               <div className="statusCardShade" />
+
               <div className="statusCardCopy">
+
                 <span>{card.eyebrow}</span>
+
                 <h3>{card.title}</h3>
+
                 <p>{card.body}</p>
+
               </div>
+
             </article>
+
           ))}
+
         </div>
+
       </div>
+
     </section>
+
   );
 }
 
+
 export function LifestyleMarquee() {
+
   const images = [
+
     '/site-assets/extra/seaside-dinner.webp',
     '/site-assets/extra/twilight-cafe.webp',
     '/site-assets/extra/friends-split-bill.webp',
@@ -39,18 +85,43 @@ export function LifestyleMarquee() {
     '/site-assets/extra/split-bill-table.webp',
     '/site-assets/custom/split-friends-replacement.webp',
     '/site-assets/extra/qr-ordering-experience.webp',
+
     imageGroups.social[0],
     imageGroups.social[2],
     imageGroups.table[3],
     imageGroups.kitchen[3]
+
   ];
+
   return (
-    <section className="photoMarquee" aria-label="Restaurant moments">
+
+    <section
+      className="photoMarquee"
+      aria-label="Restaurant moments"
+    >
+
       <div className="marqueeTrack">
+
         {[...images, ...images].map((src, index) => (
-          <div className="marqueePhoto" key={`${src}-${index}`}><img src={src} alt="" loading="lazy" /></div>
+
+          <div
+            className="marqueePhoto"
+            key={`${src}-${index}`}
+          >
+
+            <img
+              src={src}
+              alt=""
+              loading="lazy"
+            />
+
+          </div>
+
         ))}
+
       </div>
+
     </section>
+
   );
 }
