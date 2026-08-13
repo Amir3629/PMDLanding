@@ -17,7 +17,7 @@ export default function TeamsPage() {
         eyebrow="6 role workspaces"
         title="Show each role the queue, controls and metrics it is responsible for."
         intro="Owners need business signals. Managers need live exceptions. Service staff needs tables and guests. Kitchen needs tickets and timing. Reservations needs arrivals and capacity. Finance needs clean reporting."
-        image="/site-assets/extra/role-dashboard.webp"
+        image="/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp"
         accent="green"
       />
 

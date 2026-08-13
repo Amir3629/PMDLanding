@@ -9,7 +9,7 @@ export const metadata = {
 const order = ['owner', 'manager', 'service-staff', 'kitchen', 'reservations', 'finance'];
 export default function TeamsPage() {
   return <>
-      <PageHero eyebrow={"6 مساحات عمل حسب الدور"} title={"وأظهر كل دور ما هو مسؤول عنه من أسئلة وضوابط ومقاييس."} intro={"المالكون يحتاجون إشارات عمل يحتاج المديرون إلى إستثناءات حية موظفو الخدمات بحاجة إلى طاولات وضيوف. المطبخ يحتاج إلى تذاكر وتوقيت وتحتاج الحجوزات إلى الوصول والقدرة. ويحتاج التمويل إلى إبلاغ نظيف."} image="/site-assets/extra/role-dashboard.webp" accent="green" />
+      <PageHero eyebrow={"6 مساحات عمل حسب الدور"} title={"وأظهر كل دور ما هو مسؤول عنه من أسئلة وضوابط ومقاييس."} intro={"المالكون يحتاجون إشارات عمل يحتاج المديرون إلى إستثناءات حية موظفو الخدمات بحاجة إلى طاولات وضيوف. المطبخ يحتاج إلى تذاكر وتوقيت وتحتاج الحجوزات إلى الوصول والقدرة. ويحتاج التمويل إلى إبلاغ نظيف."} image="/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp" accent="green" />
 
       <section className="section offerSection compactSection">
         <div className="container">

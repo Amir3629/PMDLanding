@@ -77,7 +77,7 @@ export default function IntegrationsPage() {
         eyebrow="4 integration types - 6 central controls"
         title="Connect the systems that already hold restaurant data, then make that data useful to the next role."
         intro="PayMyDine can work with supported POS, accounting, delivery and payment environments, then add central owner views, shared menus, reporting, inventory, food-cost and purchasing context where the source systems allow it."
-        image="/site-assets/custom/integrations-hero-restaurant-way-16.webp"
+        image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp"
         accent="green"
       />
 

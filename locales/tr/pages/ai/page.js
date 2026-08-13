@@ -30,7 +30,7 @@ const aiDetails = {
 };
 export default function AIPage() {
   return <>
-      <PageHero eyebrow={"6 AI-assisted eylemleri"} title={"Gelir, konuklar, masalar veya kârlılık ve cevabı kaynağı verilere geri izler."} intro={"PayMyDine AI soruları destekleyebilir, günlük brifingler, uyarılar, karşılaştırmalar, tahminler ve kurulumunuzda mevcut olan restoran verileriyle ilgili bir sonraki soruşturma. Kararları destekliyor; onları değiştirmiyor."} image="/site-assets/owner/2.webp" accent="green" />
+      <PageHero eyebrow={"6 AI-assisted eylemleri"} title={"Gelir, konuklar, masalar veya kârlılık ve cevabı kaynağı verilere geri izler."} intro={"PayMyDine AI soruları destekleyebilir, günlük brifingler, uyarılar, karşılaştırmalar, tahminler ve kurulumunuzda mevcut olan restoran verileriyle ilgili bir sonraki soruşturma. Kararları destekliyor; onları değiştirmiyor."} image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp" accent="green" />
 
       <section className="section highlightSection">
         <div className="container highlightGrid">

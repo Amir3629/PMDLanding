@@ -30,7 +30,7 @@ const integrationDetails = {
 };
 export default function IntegrationsPage() {
   return <>
-      <PageHero eyebrow={"4 أنواع للتكامل - 6 ضوابط مركزية"} title={"إجمعْ النظمَ التي تَحْملُ بياناتَ المطعمَ، ثمّ يَجْعلُ تلك البياناتِ مفيدة للدورِ القادمِ."} intro={"يمكن أن تعمل شركة PayMyDine مع بيئات الدعم في مجالات البرمجيات والمحاسبة والتسليم والتسديد، ثم تضيف عروض المالك المركزي، والعروض المشتركة، والتقارير، والمخزون، وتكاليف الأغذية، والسياق الشرائي حيث تسمح بذلك نظم المصدر."} image="/site-assets/custom/integrations-hero-restaurant-way-16.webp" accent="green" />
+      <PageHero eyebrow={"4 أنواع للتكامل - 6 ضوابط مركزية"} title={"إجمعْ النظمَ التي تَحْملُ بياناتَ المطعمَ، ثمّ يَجْعلُ تلك البياناتِ مفيدة للدورِ القادمِ."} intro={"يمكن أن تعمل شركة PayMyDine مع بيئات الدعم في مجالات البرمجيات والمحاسبة والتسليم والتسديد، ثم تضيف عروض المالك المركزي، والعروض المشتركة، والتقارير، والمخزون، وتكاليف الأغذية، والسياق الشرائي حيث تسمح بذلك نظم المصدر."} image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp" accent="green" />
 
       <section className="section integrationStepsSection">
         <div className="container">

@@ -5,7 +5,7 @@ export const productAreas = [{
   href: "/tr/ai",
   body: "6 AI-assisted eylemleri kullanın: sorular sor, günlük bir kısalık, bayrak sıra dışı hareket edin, dönemleri karşılaştırır, tahminleri karşılaştırır ve bir sonraki metrikleri araştırır.",
   navNote: "Sorular için 6 eylem, kısacalar, uyarılar, karşılaştırmalar, tahminler ve soruşturma.",
-  image: '/site-assets/owner/2.webp',
+  image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
   compactImage: '/site-assets/social/7.webp'
 }, {
   number: 2,
@@ -173,7 +173,7 @@ export const solutionPages = {
     capabilityBody: "Yöneticiler açık siparişler, işgal masaları, sipariş kanalları, zemin pozisyonu ve aynı işletim ortamından istisnaları inceleyebilirler.",
     ctaTitle: "Kendi hizmet akışınızda 6 Restoran Operasyon görüşünü görün.",
     ctaBody: "Zemin planınızı, sipariş kanallarınızı ve yönetim sorularınızı getirin. Panelin, masaların, siparişlerin ve canlı aktivitenin birlikte nasıl uygun olduğunu göstereceğiz.",
-    heroImage: '/site-assets/extra/management-app.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
     accent: 'green',
     highlights: [["Gösterge paneli", "Aktif tablolarla başlayın, açık siparişler, satışlar ve istisnalar, genel bir özet yerine."], ["Siparişler", "Filtre açık, gecikmiş veya tamamlanmış siparişler ve her bileti masaya ve kanalına bağlı tutmak."], ["Masalar", "Uygulamada servis statüsü ile meşgul, mevcut ve ödeme aşaması masalarını görün."], ["Kat haritaları", "Masaları, rezervasyonları ve hizmet basıncı bulmak için fiziksel zemin düzeni kullanın."]],
     story: [{
@@ -221,7 +221,7 @@ export const solutionPages = {
     capabilityBody: "Profiller tarihi, sipariş tercihleri, sadakat aktivitesi, kampanya yanıtı ve geri bildirimleri bağlanabilir, böylece bir sonraki mesajın açık bir nedeni vardır.",
     ctaTitle: "Guest CRM, Pazarlama ve Büyümeyi keşfetmek ister misiniz?",
     ctaBody: "Profiller, sadakat, teklifler, kampanyalar, geri bildirimler ve saklamayı destekleyebilecek misafir sinyalleri aracılığıyla yürüyebiliriz.",
-    heroImage: '/site-assets/extra/scan-to-order.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp',
     accent: 'green',
     highlights: [["Profiller", "Birlikte faydalı misafir bilgilerini tut, böylece ilişki daha bağlamsal hale gelebilir."], ["Loyaltyty", "Ziyaretleri daha net bir misafir katılımı ile tekrarlayın."], ["Teklifler", "Daha güçlü misafir ilişkilerini desteklemek için ilgili teklifler kullanın."], ["Kampanyalar", "Restoran seyircisi etrafında inşa edilen kampanyalarla misafir bağlamı."]],
     story: [{
@@ -245,7 +245,7 @@ export const solutionPages = {
     capabilityBody: "Konuklar tarama, tarama, sipariş, istek servisi ve restoran masayı ve sipariş bağlamını görünür tutarken ödeme yapabilirler.",
     ctaTitle: "Ödemeleri ve Konuk siparişini keşfetmek ister misiniz?",
     ctaBody: "Bir demo kitap ve masaya odaklanacağız QR, mobil menüler, misafir çek, ödeme-at-table ve bölünmüş milyar akışlar.",
-    heroImage: '/site-assets/extra/smoother-checkout.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
     accent: 'purple',
     highlights: [["Card / dijital ödeme", "Sınırlı sağlayıcı için mevcut olan kartı veya dijital yöntemleri gösterin ve fatura durumuna bağlı olarak seçilen yöntemi tut."], ["masada ödeme yapın", "Doğru faturayı masa bağlamından açın ve servis ekibine görünür ödeme statüsü tutun."], ["Split eşit eşit eşit eşit", "Seçilmiş maaş sayısına tamamen bile bölün."], ["Return by item", "Assign, kalan bakiyeyi görünürken bireysel maaşlara sipariş etti."]],
     story: [{
@@ -293,7 +293,7 @@ export const solutionPages = {
     capabilityBody: "Sahipler, yöneticiler, hizmet personeli, mutfak, rezervasyonlar ve finans aynı masa, sipariş ve iş bağlamını kullanırken farklı kontroller görebilir.",
     ctaTitle: "Team Management'ı keşfetmek ister misiniz?",
     ctaBody: "Bir demoyu okuyun ve rol iş alanları, izinler, takım yapısınız etrafında performans ve personel aktivitelerini haritalayacağız.",
-    heroImage: '/site-assets/extra/role-dashboard.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp',
     accent: 'green',
     highlights: [["Rol çalışma alanları", "Odaklı bir kuyruk imzalayın ve işten sorumlu rolüne eylemleri ayarla."], ["Roller ve izinler", "Define view, oluşturma, değişim, onay ve ihracat izinlerini rolle onaylayın."], ["Vardiya yönetimi", "Görevi ve aktif takım bağlamı koordine edilen çalışmaya yakın tut."], ["Performans anlayışı", "Tamamlanan eylemler, zamanlama ve hizmet sonuçları sorumlu rolü ve bağlamı görünür."]],
     story: [{
@@ -317,7 +317,7 @@ export const solutionPages = {
     capabilityBody: "Bir metrik dönemi, yeri, kanalları ve kaynak bağlamını belirtmeli, böylece yönetim bunun arkasındaki restoran aktivitesini takip edebilir.",
     ctaTitle: "Analytics, Tahmin ve Karability keşfetmek ister misiniz?",
     ctaBody: "Gelirin ardındaki sinyalleri gösterebiliriz, konuklar, masa performansı, tahmin, en iyi satıcılar ve kârlılığı eşya veya yerle gösterebiliriz.",
-    heroImage: '/site-assets/custom/insights-hero.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp',
     accent: 'blue',
     highlights: [["Gelir Gelir Gelir", "Dönem, hizmet penceresi, kanal veya konumu ile yapılandırılan veriler onu destekler."], ["Konukların konukları", "Misafir sayılarını takip edin veya misafir başına harcamayı ve hesaplamayı kapsar."], ["Ortalama kontrol", "Gelir ve misafir sayılarından ortalama kontrol edin, o zaman sonucu dönem veya konum ile karşılaştırın."], ["Masa cirosu", "Birçok parti masalarının nasıl hizmet ettiğini ve her hizmet aşamasında ne kadar uzun tablo kaldığını gözden geçirin."]],
     story: [{

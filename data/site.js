@@ -6,7 +6,7 @@ export const productAreas = [
     href: '/ai',
     body: 'Use 6 AI-assisted actions: ask questions, receive a daily briefing, flag unusual movement, compare periods, support forecasts and identify the next metric to investigate.',
     navNote: '6 actions for questions, briefings, alerts, comparisons, forecasts and investigation.',
-    image: '/site-assets/owner/2.webp',
+    image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
     compactImage: '/site-assets/social/7.webp'
   },
   {
@@ -201,7 +201,7 @@ export const solutionPages = {
     capabilityBody: 'Managers can review open orders, occupied tables, order channels, floor position and live exceptions from the same operating context.',
     ctaTitle: 'See the 6 Restaurant Operations views in your own service flow.',
     ctaBody: 'Bring your floor plan, order channels and management questions. We will show how the dashboard, tables, orders and live activity fit together.',
-    heroImage: '/site-assets/extra/management-app.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
     accent: 'green',
     highlights: [
       ['Dashboard', 'Start with active tables, open orders, sales and exceptions instead of a generic summary.'],
@@ -265,7 +265,7 @@ export const solutionPages = {
     capabilityBody: 'Profiles can connect visit history, order preferences, loyalty activity, campaign response and feedback so the next message has a clear reason.',
     ctaTitle: 'Want to explore Guest CRM, Marketing & Growth?',
     ctaBody: 'We can walk through profiles, loyalty, offers, campaigns, feedback and the guest signals that can support retention.',
-    heroImage: '/site-assets/extra/scan-to-order.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp',
     accent: 'green',
     highlights: [
       ['Profiles', 'Keep useful guest information together so the relationship can become more contextual.'],
@@ -297,7 +297,7 @@ export const solutionPages = {
     capabilityBody: 'Guests can scan, browse, order, request service and pay while the restaurant keeps the table and order context visible.',
     ctaTitle: 'Want to explore Payments & Guest Ordering?',
     ctaBody: 'Book a demo and we’ll focus on table QR, mobile menus, guest checkout, pay-at-table and split-bill flows.',
-    heroImage: '/site-assets/extra/smoother-checkout.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
     accent: 'purple',
     highlights: [
       ['Card / digital payments', 'Show the card or digital methods available for the configured provider and keep the selected method attached to the bill status.'],
@@ -361,7 +361,7 @@ export const solutionPages = {
     capabilityBody: 'Owners, managers, service staff, kitchen, reservations and finance can see different controls while using the same table, order and business context.',
     ctaTitle: 'Want to explore Team Management?',
     ctaBody: 'Book a demo and we’ll map role workspaces, permissions, shifts, performance and staff activity around your team structure.',
-    heroImage: '/site-assets/extra/role-dashboard.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp',
     accent: 'green',
     highlights: [
       ['Role workspaces', 'Assign a focused queue and set of actions to the role responsible for the work.'],
@@ -393,7 +393,7 @@ export const solutionPages = {
     capabilityBody: 'A metric should state its period, location, channels and source context so management can trace a change to the restaurant activity behind it.',
     ctaTitle: 'Want to explore Analytics, Forecasting & Profitability?',
     ctaBody: 'We can show the signals behind revenue, guests, table performance, forecasting, best sellers and profitability by item or location.',
-    heroImage: '/site-assets/custom/insights-hero.webp',
+    heroImage: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp',
     accent: 'blue',
     highlights: [
       ['Revenue', 'Compare revenue by period, service window, channel or location where the configured data supports it.'],

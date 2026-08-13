@@ -16,7 +16,7 @@ export const teamPages = {
       {
         title: 'Replace screen-hopping with a six-signal owner view.',
         body: 'The owner workspace brings business and operating context together so a high-level number can be traced to the tables, channels, items or periods behind it.',
-        image: '/site-assets/owner/2.webp'
+        image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
       },
       {
         title: 'Turn a result into a follow-up question.',
@@ -139,7 +139,7 @@ export const teamPages = {
     eyebrow: 'For finance - 6 reporting views',
     title: 'Trace revenue and payment results back to the restaurant activity behind them.',
     intro: 'Use revenue, category sales, payment activity, average check, best sellers and period comparisons to build cleaner reporting with the operating context still available.',
-    heroImage: '/site-assets/owner/2.webp',
+    heroImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
     accent: 'green',
     highlights: [
       ['Revenue by period or location', 'Compare the reporting period or location using the available sales data and keep the source scope explicit.'],

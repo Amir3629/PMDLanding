@@ -10,7 +10,7 @@ export const teamPages = {
     story: [{
       title: "Ekran açma ekranını altı imzalı bir varlık görüşü ile değiştirin.",
       body: "Sahibi iş alanı birlikte iş ve işletme bağlamı getiriyor, böylece üst düzey bir sayı masalara, kanallara, öğelere veya dönemlere izlenebilir.",
-      image: '/site-assets/owner/2.webp'
+      image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
     }, {
       title: "Takip eden bir soruya bir sonuç yazın.",
       body: "AI yardımı mevcut dönemleri veya yerleri karşılaştırabilir ve varlık kaynağı verileri doğrular ve eylemi seçer.",
@@ -99,7 +99,7 @@ export const teamPages = {
     eyebrow: "Finans için - 6 raporlama görüş",
     title: "Trace gelir ve ödeme sonuçları arkalarında restoran aktivitesine geri döndü.",
     intro: "Gelir, kategori satışları, ödeme aktivitesi, ortalama kontrol, en iyi satıcılar ve dönem karşılaştırmaları, işletim bağlamı ile daha temiz raporlama yapmak için kullanılır.",
-    heroImage: '/site-assets/owner/2.webp',
+    heroImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
     accent: 'green',
     highlights: [["Gelir süresi veya konumu", "Mevcut satış verilerini kullanarak raporlama dönemi veya yeri karşılaştırın ve kaynak kapsamı açık tutun."], ["Ödeme aktivitesi", "Ödeme yöntemi, durum ve yerleşim bağlamı masanın yanında veya onu üreten sipariş yolculuğu ile."], ["Kategori ve item performansı", "Hangi menü kategorileri veya öğelerin gelire katkıda bulunduğunu ve marj sorularının daha derin bir incelemeye ihtiyacı olduğunu görün."], ["AI-assisted Karşılaştırma", "Summarise dönemi veya konum değişiklikleri ve finansın bir sonraki doğrulaması gereken kaynak raporunu tanımlayın."]],
     story: [{

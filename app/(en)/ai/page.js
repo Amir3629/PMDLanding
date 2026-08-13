@@ -77,7 +77,7 @@ export default function AIPage() {
         eyebrow="6 AI-assisted actions"
         title="Ask about revenue, guests, tables or profitability and trace the answer back to the source data."
         intro="PayMyDine AI can support questions, daily briefings, alerts, comparisons, forecasting and next-step investigation across the restaurant data available in your setup. It supports decisions; it does not replace them."
-        image="/site-assets/owner/2.webp"
+        image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp"
         accent="green"
       />
 

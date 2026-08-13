@@ -30,7 +30,7 @@ const integrationDetails = {
 };
 export default function IntegrationsPage() {
   return <>
-      <PageHero eyebrow={"4 entegrasyon türleri - 6 merkezi kontrol"} title={"Restoran verilerini zaten tutan sistemlere bağlanmak, sonra bu verileri bir sonraki rol için faydalı hale getirin."} intro={"PayMyDine, desteklenen POS, muhasebe, teslimat ve ödeme ortamları ile çalışabilir, sonra merkez sahibi görüşler, paylaşılan menüler, raporlama, envanter, gıda-cost ve satın alma bağlamını kaynak sistemleri izin verir."} image="/site-assets/custom/integrations-hero-restaurant-way-16.webp" accent="green" />
+      <PageHero eyebrow={"4 entegrasyon türleri - 6 merkezi kontrol"} title={"Restoran verilerini zaten tutan sistemlere bağlanmak, sonra bu verileri bir sonraki rol için faydalı hale getirin."} intro={"PayMyDine, desteklenen POS, muhasebe, teslimat ve ödeme ortamları ile çalışabilir, sonra merkez sahibi görüşler, paylaşılan menüler, raporlama, envanter, gıda-cost ve satın alma bağlamını kaynak sistemleri izin verir."} image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp" accent="green" />
 
       <section className="section integrationStepsSection">
         <div className="container">
