@@ -1,0 +1,22 @@
+{
+  "sourceStrings": 1364,
+  "sourceFiles": 39,
+  "sourcePages": 19,
+  "locales": {
+    "tr": {
+      "cacheStrings": 1364,
+      "manualOverridesApplied": 0,
+      "repairCandidates": 0,
+      "automaticRepairs": 0,
+      "unresolved": 0
+    },
+    "ar": {
+      "cacheStrings": 1364,
+      "manualOverridesApplied": 0,
+      "repairCandidates": 0,
+      "automaticRepairs": 0,
+      "unresolved": 0
+    }
+  },
+  "result": "PASS"
+}

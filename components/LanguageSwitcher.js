@@ -6,383 +6,129 @@ import {
   useState
 } from 'react';
 
+import {
+  usePathname
+} from 'next/navigation';
+
 
 const LANGUAGES = {
-
-  en: {
-    label: 'English',
-    short: 'EN',
-    flag: '🇬🇧',
-    dir: 'ltr'
-  },
-
-  tr: {
-    label: 'Türkçe',
-    short: 'TR',
-    flag: '🇹🇷',
-    dir: 'ltr'
-  },
-
-  ar: {
-    label: 'العربية',
-    short: 'AR',
-    flag: '🇴🇲',
-    dir: 'rtl'
-  }
-
+  en: { short: 'EN', flag: '🇬🇧' },
+  tr: { short: 'TR', flag: '🇹🇷' },
+  ar: { short: 'AR', flag: '🇴🇲' }
 };
 
 
-const STORAGE_KEY =
-  'pmd_language_v1';
-
-
-const ROOT_DOMAIN =
-  'paymydine.com';
-
-
-
-function isPayMyDineDomain() {
-
-  const host =
-    window.location.hostname;
-
-
-  return (
-    host === ROOT_DOMAIN ||
-    host.endsWith(
-      `.${ROOT_DOMAIN}`
-    )
-  );
-
-}
-
-
-
-function clearGoogleCookie() {
-
-  const basic =
-    'googtrans=;' +
-    'path=/;' +
-    'Max-Age=0;' +
-    'SameSite=Lax';
-
-
-  document.cookie =
-    basic;
-
-
-  if (
-    isPayMyDineDomain()
-  ) {
-
-    document.cookie =
-      `${basic};domain=.${ROOT_DOMAIN}`;
-
+const UI = {
+  en: {
+    aria: 'Select language',
+    names: { en: 'English', tr: 'Turkish', ar: 'Arabic' },
+    sub: { en: 'English', tr: 'Türkiye', ar: 'Oman Arabic' }
+  },
+  tr: {
+    aria: 'Dil seç',
+    names: { en: 'İngilizce', tr: 'Türkçe', ar: 'Arapça' },
+    sub: { en: 'İngiltere', tr: 'Türkiye', ar: 'Umman' }
+  },
+  ar: {
+    aria: 'اختر اللغة',
+    names: { en: 'الإنجليزية', tr: 'التركية', ar: 'العربية' },
+    sub: { en: 'المملكة المتحدة', tr: 'تركيا', ar: 'عُمان' }
   }
+};
 
+
+const COOKIE = 'pmd_locale';
+const YEAR = 60 * 60 * 24 * 365;
+
+
+function normaliseLocale(value) {
+  return value === 'tr' || value === 'ar' ? value : 'en';
 }
 
 
-
-function setGoogleCookie(
-  language
-) {
-
-  const expires =
-    new Date(
-      Date.now() +
-      365 * 24 * 60 * 60 * 1000
-    ).toUTCString();
-
-
-  const basic =
-    `googtrans=/en/${language};` +
-    'path=/;' +
-    `expires=${expires};` +
-    'SameSite=Lax';
-
-
-  document.cookie =
-    basic;
-
-
-  if (
-    isPayMyDineDomain()
-  ) {
-
-    document.cookie =
-      `${basic};domain=.${ROOT_DOMAIN}`;
-
-  }
-
+function stripLocale(pathname) {
+  const clean = pathname.replace(/^\/(tr|ar)(?=\/|$)/, '');
+  return clean || '/';
 }
 
 
+function localisePath(pathname, locale) {
+  const base = stripLocale(pathname);
 
-function applyDirection(
-  language
-) {
-
-  const definition =
-    LANGUAGES[language] ||
-    LANGUAGES.en;
-
-
-  document.documentElement.lang =
-    language === 'ar'
-      ? 'ar-OM'
-      : language;
-
-
-  document.documentElement.dir =
-    definition.dir;
-
-
-  document.documentElement
-    .dataset.pmdLanguage =
-      language;
-
-
-  document.body?.classList.toggle(
-    'pmdArabic',
-    language === 'ar'
-  );
-
+  if (locale === 'en') return base;
+  return `/${locale}${base === '/' ? '' : base}`;
 }
 
 
-
-export default function LanguageSwitcher() {
-
-  const [open, setOpen] =
-    useState(false);
+function saveLocale(locale) {
+  document.cookie = `${COOKIE}=${locale}; Path=/; Max-Age=${YEAR}; SameSite=Lax`;
+}
 
 
-  const [language, setLanguage] =
-    useState('en');
+export default function LanguageSwitcher({ locale = 'en' }) {
+  const pathname = usePathname() || '/';
+  const language = normaliseLocale(locale);
+  const current = LANGUAGES[language];
+  const ui = UI[language];
 
-
-  const rootRef =
-    useRef(null);
-
-
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef(null);
 
   useEffect(() => {
+    saveLocale(language);
 
-    let saved =
-      'en';
+    const close = (event) => {
+      if (rootRef.current && !rootRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
 
+    const escape = (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
 
-    try {
-
-      saved =
-        window.localStorage.getItem(
-          STORAGE_KEY
-        ) || 'en';
-
-    } catch (_) {}
-
-
-    if (
-      !LANGUAGES[saved]
-    ) {
-
-      saved =
-        'en';
-
-    }
-
-
-    setLanguage(
-      saved
-    );
-
-
-    applyDirection(
-      saved
-    );
-
-
-    const close =
-      (event) => {
-
-        if (
-          rootRef.current &&
-          !rootRef.current.contains(
-            event.target
-          )
-        ) {
-
-          setOpen(false);
-
-        }
-
-      };
-
-
-    const escape =
-      (event) => {
-
-        if (
-          event.key ===
-            'Escape'
-        ) {
-
-          setOpen(false);
-
-        }
-
-      };
-
-
-    document.addEventListener(
-      'pointerdown',
-      close
-    );
-
-
-    window.addEventListener(
-      'keydown',
-      escape
-    );
-
+    document.addEventListener('pointerdown', close);
+    window.addEventListener('keydown', escape);
 
     return () => {
-
-      document.removeEventListener(
-        'pointerdown',
-        close
-      );
-
-
-      window.removeEventListener(
-        'keydown',
-        escape
-      );
-
+      document.removeEventListener('pointerdown', close);
+      window.removeEventListener('keydown', escape);
     };
+  }, [language]);
 
-  }, []);
+  const changeLanguage = (nextValue) => {
+    const next = normaliseLocale(nextValue);
+    setOpen(false);
 
+    if (next === language) return;
 
+    saveLocale(next);
 
-  const changeLanguage =
-    (next) => {
+    const nextPath = localisePath(pathname, next);
+    const suffix = `${window.location.search || ''}${window.location.hash || ''}`;
 
-      if (
-        !LANGUAGES[next]
-      ) {
-
-        return;
-
-      }
-
-
-      setOpen(false);
-
-
-      if (
-        next === language
-      ) {
-
-        return;
-
-      }
-
-
-      try {
-
-        window.localStorage.setItem(
-          STORAGE_KEY,
-          next
-        );
-
-      } catch (_) {}
-
-
-      /*
-        Synchronise cookie BEFORE reload.
-      */
-
-      if (
-        next === 'en'
-      ) {
-
-        clearGoogleCookie();
-
-      } else {
-
-        setGoogleCookie(
-          next
-        );
-
-      }
-
-
-      applyDirection(
-        next
-      );
-
-
-      /*
-        DO NOT live-mutate the existing React DOM.
-
-        Reload into clean server HTML.
-
-        GlobalTranslation will start Google only after hydration.
-      */
-
-      window.location.reload();
-
-    };
-
-
-
-  const current =
-    LANGUAGES[language] ||
-    LANGUAGES.en;
-
-
+    window.location.assign(`${nextPath}${suffix}`);
+  };
 
   return (
-
     <div
       className="pmdLanguageSwitcher notranslate"
       ref={rootRef}
       data-no-motion
       translate="no"
     >
-
       <button
         className="pmdLanguageButton"
         type="button"
-        aria-label="Select language"
+        aria-label={ui.aria}
         aria-expanded={open}
-        onClick={() =>
-          setOpen(
-            (value) => !value
-          )
-        }
+        onClick={() => setOpen((value) => !value)}
       >
-
-        <span
-          className="pmdLanguageFlag"
-          aria-hidden="true"
-        >
+        <span className="pmdLanguageFlag" aria-hidden="true">
           {current.flag}
         </span>
-
-
-        <span className="pmdLanguageCode">
-          {current.short}
-        </span>
-
-
-        <svg
-          viewBox="0 0 20 20"
-          aria-hidden="true"
-        >
+        <span className="pmdLanguageCode">{current.short}</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true">
           <path
             d="M5.5 7.5 10 12l4.5-4.5"
             fill="none"
@@ -392,102 +138,39 @@ export default function LanguageSwitcher() {
             strokeLinejoin="round"
           />
         </svg>
-
       </button>
 
-
       <div
-        className={
-          `pmdLanguageMenu ${
-            open
-              ? 'isOpen'
-              : ''
-          }`
-        }
+        className={`pmdLanguageMenu ${open ? 'isOpen' : ''}`}
         aria-hidden={!open}
       >
+        <button
+          type="button"
+          className={language === 'en' ? 'active' : ''}
+          onClick={() => changeLanguage('en')}
+        >
+          <span>🇬🇧</span>
+          <span><b>{ui.names.en}</b><small>{ui.sub.en}</small></span>
+        </button>
 
         <button
           type="button"
-          className={
-            language === 'en'
-              ? 'active'
-              : ''
-          }
-          onClick={() =>
-            changeLanguage(
-              'en'
-            )
-          }
+          className={language === 'tr' ? 'active' : ''}
+          onClick={() => changeLanguage('tr')}
         >
-
-          <span>
-            🇬🇧
-          </span>
-
-          <span>
-            <b>English</b>
-            <small>English</small>
-          </span>
-
+          <span>🇹🇷</span>
+          <span><b>{ui.names.tr}</b><small>{ui.sub.tr}</small></span>
         </button>
-
 
         <button
           type="button"
-          className={
-            language === 'tr'
-              ? 'active'
-              : ''
-          }
-          onClick={() =>
-            changeLanguage(
-              'tr'
-            )
-          }
+          className={language === 'ar' ? 'active' : ''}
+          onClick={() => changeLanguage('ar')}
         >
-
-          <span>
-            🇹🇷
-          </span>
-
-          <span>
-            <b>Türkçe</b>
-            <small>Turkish</small>
-          </span>
-
+          <span>🇴🇲</span>
+          <span><b>{ui.names.ar}</b><small>{ui.sub.ar}</small></span>
         </button>
-
-
-        <button
-          type="button"
-          className={
-            language === 'ar'
-              ? 'active'
-              : ''
-          }
-          onClick={() =>
-            changeLanguage(
-              'ar'
-            )
-          }
-        >
-
-          <span>
-            🇴🇲
-          </span>
-
-          <span>
-            <b>العربية</b>
-            <small>عُمان</small>
-          </span>
-
-        </button>
-
       </div>
-
     </div>
-
   );
-
 }

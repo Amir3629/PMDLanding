@@ -7,11 +7,19 @@
     "dev": "npm run assets && next dev",
     "build": "next build",
     "start": "next start",
-    "prepare:vercel": "node scripts/prepare-vercel-deploy.mjs"
+    "prepare:vercel": "node scripts/prepare-vercel-deploy.mjs",
+    "i18n:setup": "bash scripts/setup-native-i18n-translator.sh",
+    "i18n:generate": "bash scripts/setup-native-i18n-translator.sh && PMD_ARGOS_PYTHON=\"$HOME/.cache/paymydine-native-i18n/venv/bin/python\" node scripts/generate-native-i18n.mjs"
   },
   "dependencies": {
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.29.8",
+    "@babel/parser": "^7.29.8",
+    "@babel/traverse": "^7.29.8",
+    "@babel/types": "^7.29.8"
   }
 }

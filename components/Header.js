@@ -58,7 +58,7 @@ export default function Header() {
 
                 {hasMenu && (
                   <div
-                    className={`megaMenu ${item.label === 'Product' ? 'megaMenuProduct' : ''} ${isMegaOpen ? 'isOpen' : ''}`}
+                    className={`megaMenu ${item.href === '/platform' ? 'megaMenuProduct' : ''} ${isMegaOpen ? 'isOpen' : ''}`}
                     aria-hidden={!isMegaOpen}
                   >
                     <div className="megaMenuTop">
