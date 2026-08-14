@@ -458,6 +458,28 @@ function setLocaleCookies(
   return response;
 }
 
+function publicRedirectUrl(
+  request,
+  pathname =
+    request.nextUrl.pathname
+) {
+  /*
+    Nginx proxies the public HTTPS site to Next.js on
+    127.0.0.1:3000. Never allow that internal port or
+    internal origin to leak into a browser redirect.
+  */
+  const url =
+    request.nextUrl.clone();
+
+  url.protocol = 'https:';
+  url.hostname =
+    'www.paymydine.com';
+  url.port = '';
+  url.pathname = pathname;
+
+  return url;
+}
+
 function localeRedirect(
   request,
   locale,
@@ -465,12 +487,12 @@ function localeRedirect(
   status = 307
 ) {
   const url =
-    request.nextUrl.clone();
-
-  url.pathname =
-    localisePath(
-      request.nextUrl.pathname,
-      locale
+    publicRedirectUrl(
+      request,
+      localisePath(
+        request.nextUrl.pathname,
+        locale
+      )
     );
 
   const response =
@@ -542,13 +564,7 @@ function canonicalHostRedirect(
   }
 
   const url =
-    request.nextUrl.clone();
-
-  url.hostname =
-    'www.paymydine.com';
-
-  url.protocol =
-    'https:';
+    publicRedirectUrl(request);
 
   return NextResponse.redirect(
     url,
