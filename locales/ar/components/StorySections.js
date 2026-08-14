@@ -57,33 +57,7 @@ export function RoleAndAISections() {
           </article>
 
 
-          <article className="darkStoryCard">
 
-            <div className="darkCardCopy">
-
-              <span>
-                للفِرق
-              </span>
-
-              <h3>
-                وجّه الإجراء التالي إلى الدور المسؤول عنه.
-              </h3>
-
-              <p>
-                يرى فريق الخدمة الطاولات وطلبات الضيوف، ويرى المطبخ التذاكر والتوقيت، ويرى فريق الحجوزات الوصول والتوافر. وتمنح الحالة المشتركة الإدارة والذكاء الاصطناعي صورة أوضح عن أماكن انتظار العمل.
-              </p>
-
-              <a href="/ar/teams">
-                قارن مساحات العمل الست
-                {' '}
-                <Icon name="arrow" size={15} />
-              </a>
-
-            </div>
-
-            <img src={imageGroups.staff[4]} alt={"فريق مطعم يستخدم PayMyDine"} loading="lazy" />
-
-          </article>
 
 
           <article className="darkStoryCard">

@@ -13,15 +13,7 @@ export default function Footer() {
           <h4>Product</h4>
           {productAreas.map((item) => <a href={item.href} key={item.title}>{item.title}</a>)}
         </div>
-        <div>
-          <h4>For Teams</h4>
-          <a href="/teams/owner">Owner</a>
-          <a href="/teams/manager">Manager</a>
-          <a href="/teams/service-staff">Service staff</a>
-          <a href="/teams/kitchen">Kitchen & KDS</a>
-          <a href="/teams/reservations">Reservations</a>
-          <a href="/teams/finance">Finance & reporting</a>
-        </div>
+
         <div>
           <h4>Explore</h4>
           <a href="/platform">Product overview</a>

@@ -115,28 +115,6 @@ export const primaryNav = [
       }
     ]
   },
-  {
-    label: 'For Teams',
-    href: '/teams',
-    columns: [
-      {
-        title: 'Restaurant leadership',
-        links: [
-          ['Owner', '/teams/owner', 'Review 6 business signals: revenue, guests, tables, reservations, kitchen status and top items.'],
-          ['Manager', '/teams/manager', 'Coordinate 5 live queues: tables, orders, kitchen, reservations and team activity.'],
-          ['Finance & reporting', '/teams/finance', 'Use 6 reporting views for revenue, categories, payments, average check, best sellers and comparisons.']
-        ]
-      },
-      {
-        title: 'Restaurant teams',
-        links: [
-          ['Service staff', '/teams/service-staff', 'See 6 service signals: assigned tables, orders, notes, requests, status and checkout.'],
-          ['Kitchen & KDS', '/teams/kitchen', 'Move tickets through received, preparing, ready and handed-off states with timing and notes visible.'],
-          ['Reservations', '/teams/reservations', 'Use 6 planning signals for arrivals, party size, availability, walk-ins and seating.']
-        ]
-      }
-    ]
-  },
   { label: 'Integrations', href: '/integrations' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Company', href: '/company' }
@@ -213,7 +191,7 @@ export const solutionPages = {
       {
         title: 'One shift view replaces repeated status checking.',
         body: 'A manager can move from floor state to order detail without asking each team for a separate update.',
-        image: '/site-assets/owner/1.webp'
+        image: '/site-assets/custom/solution-story/operations-shift-view-20260809.webp'
       },
       {
         title: 'Keep dine-in and takeaway distinguishable but connected.',

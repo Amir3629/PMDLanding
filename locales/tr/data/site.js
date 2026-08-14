@@ -98,16 +98,6 @@ export const primaryNav = [{
     links: [productLink(6), productLink(7), productLink(8)]
   }]
 }, {
-  label: "Ekipler İçin",
-  href: "/tr/teams",
-  columns: [{
-    title: "Restoran liderlik",
-    links: [["İşletme Sahibi", "/tr/teams/owner", "6 iş sinyalleri: gelir, konuklar, masalar, rezervasyonlar, mutfak durumu ve üst eşyalar."], ["Yönetici", "/tr/teams/manager", "5 canlı kuyruklar: masalar, siparişler, mutfak, rezervasyonlar ve takım aktivitesi."], ["Finans ve raporlama", "/tr/teams/finance", "Gelir, kategoriler, ödemeler, ortalama kontrol, en iyi satıcılar ve karşılaştırmalar için 6 raporlama görüşü kullanın."]]
-  }, {
-    title: "Restoran takımları",
-    links: [["Servis ekibi", "/tr/teams/service-staff", "6 hizmet sinyallerine bakınız: masalar, siparişler, notlar, talepler, statü ve checkout."], ["Mutfak ve KDS", "/tr/teams/kitchen", "Biletleri alın, hazırlamak, hazır ve teslim edilen devletler zamanlama ve notlar görünür."], ["Rezervasyonlar", "/tr/teams/reservations", "varışlar için 6 planlama sinyalleri kullanın, parti büyüklüğü, kullanılabilirlik, yürüyüş ve oturma."]]
-  }]
-}, {
   label: "Entegrasyonlar",
   href: "/tr/integrations"
 }, {
@@ -179,7 +169,7 @@ export const solutionPages = {
     story: [{
       title: "Bir değişim görüşü tekrarlanan durumu kontrol eder.",
       body: "Bir yönetici, her takımdan ayrı bir güncelleme için sormadan ayrıntılı bir şekilde hareket edebilir.",
-      image: '/site-assets/owner/1.webp'
+      image: '/site-assets/custom/solution-story/operations-shift-view-20260809.webp'
     }, {
       title: "Yemek yemeyin ve ayırt edilemez ama bağlantılı olun.",
       body: "Her kanal kendi masasını veya sipariş bağlamını aynı canlı iş yüküne ve raporlama resmine katkıda bulunurken tutar.",

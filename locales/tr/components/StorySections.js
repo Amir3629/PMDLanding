@@ -66,37 +66,7 @@ Cevabın arkasındaki kaynak görüşü.
           </article>
 
 
-          <article className="darkStoryCard">
 
-            <div className="darkCardCopy">
-
-              <span>
-                FOR TEAMS
-              </span>
-
-              <h3>
-                Bunun sorumlu rolüne bir sonraki eylemi yollayın.
-              </h3>
-
-              <p>
-                Servis personeli masaları ve misafir talepleri görür.
-Mutfak biletleri ve zamanlamayı görür.
-Rezervasyonlar varışları ve kullanılabilirliği görür.
-Ortak statü yönetim ve AI daha net bir resim sunar
-İş nerede bekliyor.
-              </p>
-
-              <a href="/tr/teams">
-                Tüm 6 iş alanıyla karşılaştırın
-                {' '}
-                <Icon name="arrow" size={15} />
-              </a>
-
-            </div>
-
-            <img src={imageGroups.staff[4]} alt={"Restoran ekibi PayMyDine"} loading="lazy" />
-
-          </article>
 
 
           <article className="darkStoryCard">

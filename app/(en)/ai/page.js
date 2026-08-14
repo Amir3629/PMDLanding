@@ -103,12 +103,11 @@ export default function AIPage() {
             </div>
           </article>
           <article className="storyFeature reverse">
-            <div className="storyFeatureImage"><img src="/site-assets/extra/tablet-dashboard.webp" alt="" loading="lazy" /></div>
+            <div className="storyFeatureImage"><img src="/site-assets/custom/solution-story/ai-investigation-time-20260809.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">Decision support, not autopilot</span>
               <h2>Use AI to shorten investigation time while the team verifies and decides.</h2>
               <p>Every summary depends on the modules, data quality, comparison period and integrations available. The restaurant team keeps control of the operational or commercial action.</p>
-              <a className="textArrow" href="/teams/owner">See the owner decision view <Icon name="arrow" size={15}/></a>
             </div>
           </article>
         </div>

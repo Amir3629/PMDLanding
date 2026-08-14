@@ -74,41 +74,7 @@ export function RoleAndAISections() {
           </article>
 
 
-          <article className="darkStoryCard">
 
-            <div className="darkCardCopy">
-
-              <span>
-                FOR TEAMS
-              </span>
-
-              <h3>
-                Route the next action to the role responsible for it.
-              </h3>
-
-              <p>
-                Service staff sees tables and guest requests.
-                Kitchen sees tickets and timing.
-                Reservations sees arrivals and availability.
-                Shared status gives management and AI a clearer picture
-                of where work is waiting.
-              </p>
-
-              <a href="/teams">
-                Compare all 6 workspaces
-                {' '}
-                <Icon name="arrow" size={15}/>
-              </a>
-
-            </div>
-
-            <img
-              src={imageGroups.staff[4]}
-              alt="Restaurant team using PayMyDine"
-              loading="lazy"
-            />
-
-          </article>
 
 
           <article className="darkStoryCard">

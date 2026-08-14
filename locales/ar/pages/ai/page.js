@@ -52,12 +52,11 @@ export default function AIPage() {
             </div>
           </article>
           <article className="storyFeature reverse">
-            <div className="storyFeatureImage"><img src="/site-assets/extra/tablet-dashboard.webp" alt="" loading="lazy" /></div>
+            <div className="storyFeatureImage"><img src="/site-assets/custom/solution-story/ai-investigation-time-20260809.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">دعم القرار، وليس الطيار الآلي</span>
               <h2>استخدم الذكاء الاصطناعي لتقليل وقت الاستقصاء بينما يتحقق الفريق ويتخذ القرار.</h2>
               <p>ويعتمد كل موجز على الوحدات، ونوعية البيانات، وفترة المقارنة، والتكاملات المتاحة. فريق المطعم يتحكم بالعملية أو التجارية</p>
-              <a className="textArrow" href="/ar/teams/owner">انظر رأي المالك <Icon name="arrow" size={15} /></a>
             </div>
           </article>
         </div>

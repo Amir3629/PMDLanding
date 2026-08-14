@@ -11,15 +11,7 @@ export default function Footer() {
           <h4>Ürün</h4>
           {productAreas.map(item => <a href={item.href} key={item.title}>{item.title}</a>)}
         </div>
-        <div>
-          <h4>Ekipler İçin</h4>
-          <a href="/tr/teams/owner">İşletme Sahibi</a>
-          <a href="/tr/teams/manager">Yönetici</a>
-          <a href="/tr/teams/service-staff">Servis ekibi</a>
-          <a href="/tr/teams/kitchen">Mutfak ve KDS</a>
-          <a href="/tr/teams/reservations">Rezervasyonlar</a>
-          <a href="/tr/teams/finance">Finans ve raporlama</a>
-        </div>
+
         <div>
           <h4>Keşfet</h4>
           <a href="/tr/platform">Ürün genel bakışı</a>

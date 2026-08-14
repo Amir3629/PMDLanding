@@ -52,12 +52,11 @@ export default function AIPage() {
             </div>
           </article>
           <article className="storyFeature reverse">
-            <div className="storyFeatureImage"><img src="/site-assets/extra/tablet-dashboard.webp" alt="" loading="lazy" /></div>
+            <div className="storyFeatureImage"><img src="/site-assets/custom/solution-story/ai-investigation-time-20260809.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">Karar desteği, otomatik pilot değil</span>
               <h2>AI'i ekip onayladığı ve karar verirken kısa bir soruşturma zamanı kullanın.</h2>
               <p>Her özet modüllere, veri kalitesine, karşılaştırma süresine ve mevcut entegrasyonlara bağlıdır. Restoran ekibi operasyonel veya ticari eylemin kontrolünü tutar.</p>
-              <a className="textArrow" href="/tr/teams/owner">Sahibi karar görüşüne bakın <Icon name="arrow" size={15} /></a>
             </div>
           </article>
         </div>

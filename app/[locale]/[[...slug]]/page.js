@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import { solutionPages, resources } from '@/data/site';
-import { teamPages } from '@/data/teams';
 
 import * as TR_PAGE_0 from '@/locales/tr/pages/ai/page';
 import * as TR_PAGE_1 from '@/locales/tr/pages/company/page';
@@ -19,8 +18,6 @@ import * as TR_PAGE_13 from '@/locales/tr/pages/security/page';
 import * as TR_PAGE_14 from '@/locales/tr/pages/solutions/[slug]/page';
 import * as TR_PAGE_15 from '@/locales/tr/pages/solutions/page';
 import * as TR_PAGE_16 from '@/locales/tr/pages/support/page';
-import * as TR_PAGE_17 from '@/locales/tr/pages/teams/[slug]/page';
-import * as TR_PAGE_18 from '@/locales/tr/pages/teams/page';
 import * as AR_PAGE_0 from '@/locales/ar/pages/ai/page';
 import * as AR_PAGE_1 from '@/locales/ar/pages/company/page';
 import * as AR_PAGE_2 from '@/locales/ar/pages/contact/page';
@@ -38,8 +35,6 @@ import * as AR_PAGE_13 from '@/locales/ar/pages/security/page';
 import * as AR_PAGE_14 from '@/locales/ar/pages/solutions/[slug]/page';
 import * as AR_PAGE_15 from '@/locales/ar/pages/solutions/page';
 import * as AR_PAGE_16 from '@/locales/ar/pages/support/page';
-import * as AR_PAGE_17 from '@/locales/ar/pages/teams/[slug]/page';
-import * as AR_PAGE_18 from '@/locales/ar/pages/teams/page';
 
 const LOCALES = ['tr', 'ar'];
 
@@ -60,7 +55,6 @@ const STATIC = {
     "security": TR_PAGE_13,
     "solutions": TR_PAGE_15,
     "support": TR_PAGE_16,
-    "teams": TR_PAGE_18,
   },
   ar: {
     "ai": AR_PAGE_0,
@@ -78,7 +72,6 @@ const STATIC = {
     "security": AR_PAGE_13,
     "solutions": AR_PAGE_15,
     "support": AR_PAGE_16,
-    "teams": AR_PAGE_18,
   },
 };
 
@@ -86,12 +79,10 @@ const DYNAMIC = {
   tr: {
     "resources": TR_PAGE_10,
     "solutions": TR_PAGE_14,
-    "teams": TR_PAGE_17,
   },
   ar: {
     "resources": AR_PAGE_10,
     "solutions": AR_PAGE_14,
-    "teams": AR_PAGE_17,
   },
 };
 
@@ -102,7 +93,6 @@ function normaliseSegments(slug) {
 
 function validDynamic(prefix, slug) {
   if (prefix === 'solutions') return Object.prototype.hasOwnProperty.call(solutionPages, slug);
-  if (prefix === 'teams') return Object.prototype.hasOwnProperty.call(teamPages, slug) || slug === 'front-of-house';
   if (prefix === 'resources') return resources.some((item) => item.slug === slug);
   return false;
 }
@@ -139,12 +129,6 @@ export function generateStaticParams() {
     for (const slug of Object.keys(solutionPages)) {
       result.push({ locale, slug: ['solutions', slug] });
     }
-
-    for (const slug of Object.keys(teamPages)) {
-      result.push({ locale, slug: ['teams', slug] });
-    }
-
-    result.push({ locale, slug: ['teams', 'front-of-house'] });
 
     for (const item of resources) {
       result.push({ locale, slug: ['resources', item.slug] });

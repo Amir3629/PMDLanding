@@ -24,7 +24,35 @@ export default function Header() {
     };
   }, []);
 
-  const toggleMobileNav = () => {
+
+  /* PMD_OUTSIDE_MEGA_CLOSE_V16 */
+  useEffect(() => {
+    const onPointerDown = (event) => {
+      if (!mega) {
+        return;
+      }
+
+      const target = event.target;
+
+      if (!(target instanceof Element)) {
+        return;
+      }
+
+      if (target.closest('.navItem')) {
+        return;
+      }
+
+      setMega(null);
+    };
+
+    document.addEventListener('pointerdown', onPointerDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown);
+    };
+  }, [mega]);
+
+const toggleMobileNav = () => {
     if (mobileOpen) {
       setMega(null);
     }
