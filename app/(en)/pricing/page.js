@@ -1,7 +1,8 @@
 import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = { title: 'Pricing' };
+export const metadata = metadataForRoute('en', '/pricing');
 
 const factors = [
   ['Restaurant and location scope', 'The number of locations, floor complexity, service model, order channels and environments that the configuration must support.'],

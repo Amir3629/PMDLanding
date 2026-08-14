@@ -1,10 +1,8 @@
 import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Implementation',
-  description: 'A six-stage PayMyDine implementation path from operating discovery to configuration, validation, go-live and measurement.'
-};
+export const metadata = metadataForRoute('en', '/implementation');
 
 const steps = [
   ['01', 'Document the current operation', 'List roles, floor structure, order channels, guest touchpoints, current systems, repeated data entry and the metrics management uses today.'],

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { solutionPages, resources } from '@/data/site';
+import { metadataForRoute, getSeoCopy } from '@/lib/seo';
 
 import * as TR_PAGE_0 from '@/locales/tr/pages/ai/page';
 import * as TR_PAGE_1 from '@/locales/tr/pages/company/page';
@@ -140,14 +141,72 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
-  const found = findModule(locale, normaliseSegments(slug));
-  if (!found) return {};
 
-  if (typeof found.module.generateMetadata === 'function') {
-    return found.module.generateMetadata({ params: Promise.resolve(found.params || {}) });
+  const segments =
+    normaliseSegments(slug);
+
+  const found =
+    findModule(
+      locale,
+      segments
+    );
+
+  if (!found) {
+    return {};
   }
 
-  return found.module.metadata || {};
+  let raw = {};
+
+  if (
+    typeof found.module.generateMetadata ===
+    'function'
+  ) {
+    raw =
+      await found.module.generateMetadata({
+        params:
+          Promise.resolve(
+            found.params || {}
+          )
+      });
+  } else {
+    raw =
+      found.module.metadata ||
+      {};
+  }
+
+  const path =
+    segments.length
+      ? `/${segments.join('/')}`
+      : '/';
+
+  const fallback =
+    getSeoCopy(
+      locale,
+      path
+    );
+
+  const title =
+    typeof raw.title === 'string'
+      ? raw.title
+      : fallback.title;
+
+  const description =
+    typeof raw.description === 'string'
+      ? raw.description
+      : fallback.description;
+
+  return {
+    ...raw,
+
+    ...metadataForRoute(
+      locale,
+      path,
+      {
+        title,
+        description
+      }
+    )
+  };
 }
 
 export default async function LocalizedRoute({ params }) {

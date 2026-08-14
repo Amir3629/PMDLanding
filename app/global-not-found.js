@@ -1,8 +1,13 @@
 import './globals.css';
 
 export const metadata = {
+  metadataBase: new URL('https://www.paymydine.com'),
   title: 'Page Not Found | PayMyDine',
-  description: 'The requested PayMyDine page could not be found.'
+  description: 'The requested PayMyDine page could not be found.',
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 export default function GlobalNotFound() {

@@ -2,11 +2,9 @@ import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
 import { Icon } from '@/components/Icons';
 import { productAreas } from '@/data/site';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Product Areas',
-  description: 'Nine practical PayMyDine product areas covering operations, guests, teams, intelligence, growth and integrations.'
-};
+export const metadata = metadataForRoute('en', '/solutions');
 
 export default function SolutionsPage() {
   return (

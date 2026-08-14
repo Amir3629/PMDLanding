@@ -1,4 +1,5 @@
 import '../globals.css';
+import { siteRootMetadata } from '@/lib/seo';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,13 +7,11 @@ import CookieNotice from '@/components/CookieNotice';
 import SmoothMotion from '@/components/SmoothMotion';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
-export const metadata = {
-  title: {
-    default: 'PayMyDine — Restaurant Operations Platform',
-    template: '%s | PayMyDine'
-  },
-  description: 'PayMyDine brings restaurant operations, role-based team workspaces, guest ordering, kitchen flow, payments, live insights, integrations and AI assistance into one adaptable platform.',
-  icons: { icon: '/site-assets/logo.svg' }
+export const metadata = siteRootMetadata('en');
+
+export const viewport = {
+  themeColor: '#063e31',
+  colorScheme: 'light'
 };
 
 const firstVisitScript = `

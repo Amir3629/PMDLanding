@@ -1,7 +1,8 @@
 import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = { title: 'Restaurant Setups' };
+export const metadata = metadataForRoute('en', '/restaurant-types');
 
 const setups = [
   ['Full-service restaurants', 'Connect bookings, table assignment, waiter ordering, kitchen status, pay-at-table and ownership reporting around a seated guest journey.', '/site-assets/custom/restaurant-type-full-service.webp'],

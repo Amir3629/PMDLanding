@@ -1,10 +1,8 @@
 import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Security & Data',
-  description: 'A practical review of role access, data flows, integration boundaries and deployment controls for PayMyDine.'
-};
+export const metadata = metadataForRoute('en', '/security');
 
 const topics = [
   ['Role access', 'Document which of the 6 workspaces can view, create, change, approve or export each type of restaurant and guest data.'],

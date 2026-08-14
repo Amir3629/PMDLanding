@@ -2,11 +2,9 @@ import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
 import { Icon } from '@/components/Icons';
 import ProductDetailSections from '@/components/ProductDetailSections';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = {
-  title: 'PayMyDine AI',
-  description: 'AI assistance for restaurant questions, daily briefings, alerts, comparisons, forecasts and next-step investigation.'
-};
+export const metadata = metadataForRoute('en', '/ai');
 
 const questions = [
   ['Ask a business question', 'Ask about revenue, guests, average check, table turnover, sales timing, best sellers, payment mix or profitability using the data available in the configured environment.'],

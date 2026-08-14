@@ -2,11 +2,9 @@ import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
 import { Icon } from '@/components/Icons';
 import ProductDetailSections from '@/components/ProductDetailSections';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Integrations, Multi-location & Inventory',
-  description: 'Connect supported POS, accounting, delivery and payment systems with central reporting, menus and inventory context.'
-};
+export const metadata = metadataForRoute('en', '/integrations');
 
 const capabilities = [
   ['POS data', 'Bring supported order, sales, menu or table data into the PayMyDine operating picture without asking staff to enter the same information again.'],

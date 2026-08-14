@@ -4,8 +4,9 @@ import Workflow from '@/components/Workflow';
 import InteractiveDemos from '@/components/InteractiveDemos';
 import CTA from '@/components/CTA';
 import { imageGroups } from '@/data/site';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = { title: 'Product' };
+export const metadata = metadataForRoute('en', '/platform');
 
 export default function PlatformPage() {
   return (

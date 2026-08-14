@@ -2,8 +2,9 @@ import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
 import { resources } from '@/data/site';
 import { Icon } from '@/components/Icons';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = { title: 'Guides & Help' };
+export const metadata = metadataForRoute('en', '/resources');
 
 export default function ResourcesPage() {
   return (

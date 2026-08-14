@@ -38,6 +38,7 @@ const UI = {
 
 
 const COOKIE = 'pmd_locale';
+const SOURCE_COOKIE = 'pmd_locale_source';
 const YEAR = 60 * 60 * 24 * 365;
 
 
@@ -61,7 +62,16 @@ function localisePath(pathname, locale) {
 
 
 function saveLocale(locale) {
-  document.cookie = `${COOKIE}=${locale}; Path=/; Max-Age=${YEAR}; SameSite=Lax`;
+  const secure =
+    window.location.protocol === 'https:'
+      ? '; Secure'
+      : '';
+
+  document.cookie =
+    `${COOKIE}=${locale}; Path=/; Max-Age=${YEAR}; SameSite=Lax${secure}`;
+
+  document.cookie =
+    `${SOURCE_COOKIE}=manual; Path=/; Max-Age=${YEAR}; SameSite=Lax${secure}`;
 }
 
 
@@ -75,8 +85,6 @@ export default function LanguageSwitcher({ locale = 'en' }) {
   const rootRef = useRef(null);
 
   useEffect(() => {
-    saveLocale(language);
-
     const close = (event) => {
       if (rootRef.current && !rootRef.current.contains(event.target)) {
         setOpen(false);

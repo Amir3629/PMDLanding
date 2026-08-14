@@ -5,8 +5,11 @@ import InteractiveDemos from "@/locales/tr/components/InteractiveDemos";
 import { StatusGallery, LifestyleMarquee } from "@/locales/tr/components/StatusGallery";
 import { RoleAndAISections, FlexibilityAndIntegrationSections } from "@/locales/tr/components/StorySections";
 import CTA from "@/locales/tr/components/CTA";
+import SiteStructuredData from '@/components/SiteStructuredData';
 export default function HomePage() {
   return <>
+
+      <SiteStructuredData locale="tr" />
 
       <Hero />
 

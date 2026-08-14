@@ -1,10 +1,8 @@
 import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = {
-  title: 'How It Works',
-  description: 'A five-step view of how PayMyDine carries restaurant context from guest or staff action to service, payment, reporting and AI.'
-};
+export const metadata = metadataForRoute('en', '/how-it-works');
 
 const journeyCards = [
   {

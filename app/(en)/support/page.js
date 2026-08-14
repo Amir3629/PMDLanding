@@ -1,10 +1,8 @@
 import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Support',
-  description: 'Support for PayMyDine onboarding, configuration, team adoption, integrations and operating questions.'
-};
+export const metadata = metadataForRoute('en', '/support');
 
 export default function SupportPage() {
   return (

@@ -1,7 +1,8 @@
 import PageHero from '@/components/PageHero';
 import CTA from '@/components/CTA';
+import { metadataForRoute } from '@/lib/seo';
 
-export const metadata = { title: 'Company' };
+export const metadata = metadataForRoute('en', '/company');
 
 export default function CompanyPage() {
   return (

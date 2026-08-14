@@ -1,4 +1,5 @@
 import '../globals.css';
+import { siteRootMetadata } from '@/lib/seo';
 
 import { notFound } from 'next/navigation';
 import SmoothMotion from '@/components/SmoothMotion';
@@ -40,17 +41,24 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const config = CONFIG[locale];
-  if (!config) return {};
 
-  return {
-    title: {
-      default: config.title,
-      template: '%s | PayMyDine'
-    },
-    description: config.description,
-    icons: { icon: '/site-assets/logo.svg' }
-  };
+  if (!config) {
+    return {};
+  }
+
+  return siteRootMetadata(
+    locale,
+    {
+      title: config.title,
+      description: config.description
+    }
+  );
 }
+
+export const viewport = {
+  themeColor: '#063e31',
+  colorScheme: 'light'
+};
 
 const firstVisitScript = `
 (function () {

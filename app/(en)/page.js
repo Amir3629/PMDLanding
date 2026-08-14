@@ -11,12 +11,18 @@ import {
   FlexibilityAndIntegrationSections
 } from '@/components/StorySections';
 import CTA from '@/components/CTA';
+import SiteStructuredData from '@/components/SiteStructuredData';
+import { metadataForRoute } from '@/lib/seo';
+
+export const metadata = metadataForRoute('en', '/');
 
 export default function HomePage() {
 
   return (
 
     <>
+
+      <SiteStructuredData locale="en" />
 
       <Hero />
 

@@ -5,13 +5,14 @@
   "scripts": {
     "assets": "node scripts/prepare-assets.mjs",
     "dev": "npm run assets && next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "ILA_AUTO_UPDATE=false next build",
+    "start": "ILA_AUTO_UPDATE=false next start",
     "prepare:vercel": "node scripts/prepare-vercel-deploy.mjs",
     "i18n:setup": "bash scripts/setup-native-i18n-translator.sh",
     "i18n:generate": "bash scripts/setup-native-i18n-translator.sh && PMD_ARGOS_PYTHON=\"$HOME/.cache/paymydine-native-i18n/venv/bin/python\" node scripts/generate-native-i18n.mjs"
   },
   "dependencies": {
+    "ip-location-api": "5.0.2",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
