@@ -9345,3 +9345,152 @@ img[src*="/site-assets/custom/page-heroes/"] {
 }
 
 /* === PMD HOMEPAGE PRODUCT CARD MEDIA V15.3 END === */
+
+/* === PMD WIDE DESKTOP VIEWPORT ANCHOR V2 START === */
+
+/*
+  WIDE DESKTOP ONLY.
+
+  Do not modify:
+  - mobile
+  - tablet
+  - RTL
+  - fade / shadow
+  - hero height
+  - top coordinates
+  - object-position
+  - text
+  - header
+
+  Two jobs only:
+
+  1. Keep the rendered restaurant photo's RIGHT edge
+     attached to the physical viewport.
+
+  2. Keep dashboard/phone/POS artwork attached to the
+     restaurant side instead of fixed x=545px.
+*/
+
+@media (min-width: 1536px) {
+
+  /*
+    HERO BACKGROUND
+
+    Existing desktop heroVisual has:
+
+      width: min(56vw, 940px)
+      transform: scale(1.12)
+      transform-origin: top left
+
+    First term:
+      50% - 50vw
+      breaks from centered container to viewport.
+
+    Second term:
+      min(6.72vw,112.8px)
+      compensates exactly for 12% scale growth:
+        56vw * .12 = 6.72vw
+        940px * .12 = 112.8px
+
+    Third term:
+      29.12px
+      is the measured constant difference between
+      rendered photo edge and heroVisual edge.
+
+    Result:
+      rendered restaurant image right edge ~= viewport right.
+  */
+
+  html:not([dir="rtl"])
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  > .container.heroGrid
+  > .heroVisual {
+
+    left: auto !important;
+
+    right:
+      calc(
+        50% - 50vw
+        + min(6.72vw, 112.8px)
+        + 29.12px
+      )
+      !important;
+
+    margin-right: 0 !important;
+  }
+
+
+  /*
+    SECONDARY PLATFORM ARTWORK
+
+    At the approved ~1536 reference:
+      width ~= 830
+      right ~= 161
+      left ~= 545
+
+    Therefore the approved appearance is preserved.
+
+    As viewport becomes wider, right anchoring moves the
+    artwork WITH the restaurant instead of leaving it
+    behind at x=545.
+  */
+
+  html:not([dir="rtl"])
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  > .pmdHeroSecondaryLayerV2 {
+
+    left: auto !important;
+
+    right:
+      clamp(
+        160px,
+        10.5vw,
+        220px
+      )
+      !important;
+
+    width:
+      min(
+        54.04vw,
+        830px
+      )
+      !important;
+
+    aspect-ratio:
+      830 / 467
+      !important;
+
+    height: auto !important;
+
+    max-width: 830px !important;
+    max-height: none !important;
+
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+  }
+
+
+  html:not([dir="rtl"])
+  body:has(section.hero.pmdHeroFullBleedFix)
+  section.hero.pmdHeroFullBleedFix
+  > .pmdHeroSecondaryLayerV2
+  > img.pmdHeroSecondaryImageV2 {
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+  }
+}
+
+/* === PMD WIDE DESKTOP VIEWPORT ANCHOR V2 END === */
