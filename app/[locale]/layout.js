@@ -18,7 +18,7 @@ const CONFIG = {
     lang: 'tr',
     dir: 'ltr',
     title: 'PayMyDine — Restoran Operasyon Platformu',
-    description: 'PayMyDine; restoran operasyonlarını, rol bazlı ekip çalışma alanlarını, misafir siparişini, mutfak akışını, ödemeleri, canlı içgörüleri, entegrasyonları ve AI desteğini tek bir uyarlanabilir platformda bir araya getirir.',
+    description: 'PayMyDine; restoran operasyonlarını, rol bazlı ekip çalışma alanlarını, müşteri siparişini, mutfak akışını, ödemeleri, canlı içgörüleri, entegrasyonları ve Yapay Zekâ desteğini tek bir uyarlanabilir platformda bir araya getirir.',
     Header: HeaderTr,
     Footer: FooterTr,
     CookieNotice: CookieNoticeTr

@@ -13,7 +13,7 @@ const COPY = {
   tr: {
     language: 'tr',
     description:
-      'Rezervasyon, sipariş, mutfak, ödeme, misafir CRM’i, analiz ve entegrasyonları birleştiren yapay zekâ destekli restoran operasyon platformu.'
+      'Rezervasyon, sipariş, mutfak, ödeme, müşteri CRM’i, analiz ve entegrasyonları birleştiren Yapay Zekâ destekli restoran operasyon platformu.'
   },
   ar: {
     language: 'ar-OM',

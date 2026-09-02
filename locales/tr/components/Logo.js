@@ -1,11 +1,21 @@
-export default function Logo({
-  compact = false,
-  light = false
-}) {
-  return <a className={`brand notranslate ${light ? 'brandLight' : ''}`} href="/tr" aria-label={"PayMyDine ev"} translate="no" data-pmd-brand="true">
+export default function Logo({ compact = false, light = false }) {
+  return (
+    <a
+      className={`brand notranslate ${light ? 'brandLight' : ''}`}
+      href="/tr"
+      aria-label="PayMyDine ana sayfa"
+      translate="no"
+      data-pmd-brand="true"
+    >
       <img className="brandLogo" src="/site-assets/logo.svg" alt="" />
-      {!compact && <span className="brandWord notranslate" translate="no">
+      {!compact && (
+        <span
+          className="brandWord notranslate"
+          translate="no"
+        >
           PayMyDine
-        </span>}
-    </a>;
+        </span>
+      )}
+    </a>
+  );
 }

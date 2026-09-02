@@ -1,376 +1,293 @@
 import { Icon } from './Icons';
-import { imageGroups, integrationFeaturePills } from "@/locales/tr/data/site";
+import { imageGroups, integrationFeaturePills } from '@/locales/tr/data/site';
+
 export function RoleAndAISections() {
-  return <>
-
+  return (
+    <>
       <section className="section darkStorySection">
-
         <div className="container darkIntro">
-
           <div>
-
             <span className="eyebrow darkEyebrow">
-              6 rol çalışma alanları + paylaşılan AI context
+              6 rol bazlı çalışma alanı + ortak Yapay Zekâ bağlamı
             </span>
 
             <h2>
-              Her rolü kendi işlerini verin –
-ve AI'e ortak bağlamı açıklamaya yardımcı olmak için verin
-Restoranda neler oluyor.
+              Her role sorumlu olduğu işi verin;
+              Yapay Zekâya da restoran genelinde ne olduğunu anlaması için
+              gereken ortak bağlamı sağlayın.
             </h2>
-
           </div>
 
           <p>
-            Sahipler, yöneticiler, hizmet personeli, mutfak, rezervasyonlar ve finans
-Masa, sipariş, misafir, zamanlama ve ödeme yaparken odaklanmış görüşler
-bağlam bağlı kalır. Yönetim daha sonra PayMyDine AI'i kullanabilir
-Arkadaki kaynak verilerine bir sinyalden hareket edin.
+            İşletme sahibi, yöneticiler, servis personeli, mutfak, rezervasyon
+            ekibi ve finans odaklanmış görünümler kullanırken masa, sipariş,
+            müşteri, zamanlama ve ödeme bağlamı bağlantılı kalır. Yönetim daha
+            sonra PayMyDine Yapay Zekâ ile bir sinyalden arkasındaki kaynak
+            veriye kadar ilerleyebilir.
           </p>
-
         </div>
 
-
         <div className="container darkStoryGrid">
-
           <article className="darkStoryCard wideDarkCard">
-
             <div className="darkCardCopy">
-
               <span>
-                FOR OWNERS + AI
+                İŞLETME SAHİPLERİ + YAPAY ZEKÂ
               </span>
 
               <h3>
-                İş sinyallerini gözden geçirin,
-Sonra AI'e neyin değiştiğini ve nerede araştırılacağını sorun.
+                İşletme göstergelerini inceleyin; ardından neyin değiştiğini
+                ve nerede daha derine bakılması gerektiğini Yapay Zekâya sorun.
               </h3>
 
               <p>
-                Gelirle başlayın, konuklar, masalar, rezervasyonlar,
-mutfak durumu ve en çok satan öğeler.
-Sonra dönemleri, yüzey olağandışı hareketi ve açık açık
-Cevabın arkasındaki kaynak görüşü.
+                Gelir, müşteri sayısı, masalar, rezervasyonlar, mutfak durumu
+                ve en çok satan ürünlerle başlayın. Sonra dönemleri karşılaştırın,
+                olağandışı hareketleri öne çıkarın ve yanıtın arkasındaki kaynak
+                görünümü açın.
               </p>
 
               <a href="/tr/ai">
-                PayMyDine AI
-                {' '}
-                <Icon name="arrow" size={15} />
+                PayMyDine Yapay Zekâyı keşfedin{' '}
+                <Icon name="arrow" size={15}/>
               </a>
-
             </div>
 
-            <img src={imageGroups.owner[2]} alt={"Restoran sahibi PayMyDine"} loading="lazy" />
-
+            <img
+              src={imageGroups.owner[2]}
+              alt="PayMyDine kullanan restoran işletme sahibi"
+              loading="lazy"
+            />
           </article>
 
-
-
-
-
           <article className="darkStoryCard">
-
             <div className="darkCardCopy">
-
               <span>
-                GUEST GROWTH
+                MÜŞTERİ İLİŞKİLERİ VE BÜYÜME
               </span>
 
               <h3>
-                Ziyaretler, siparişler ve geri bildirimler daha kullanışlı bir misafir resmine girin.
+                Ziyaretleri, siparişleri ve geri bildirimleri daha kullanışlı
+                bir müşteri görünümüne dönüştürün.
               </h3>
 
               <p>
-                Profiller, sadakat, teklifler, kampanyalar, geri bildirim ve saklama
-sinyalleri, yaratılan ziyaret tarihine bağlı kalabilir
-Onlar, gelecekteki kararlar için daha iyi bir bağlam verirler.
+                Profiller, sadakat, teklifler, kampanyalar, geri bildirim ve
+                müşteri bağlılığı sinyalleri; bunları oluşturan ziyaret geçmişiyle
+                bağlantılı kalabilir. Böylece yönetim sonraki kararlar için daha
+                güçlü bir bağlama sahip olur.
               </p>
 
               <a href="/tr/solutions/guest-ordering">
-                Misafir büyüme iş akışına bakın
-                {' '}
-                <Icon name="arrow" size={15} />
+                Müşteri büyüme iş akışını inceleyin{' '}
+                <Icon name="arrow" size={15}/>
               </a>
-
             </div>
 
-            <img src={imageGroups.comments[8]} alt={"Konuk QR deneyim kazanmak"} loading="lazy" />
-
+            <img
+              src={imageGroups.comments[8]}
+              alt="Masa QR koduyla sipariş veren müşteri"
+              loading="lazy"
+            />
           </article>
-
         </div>
-
       </section>
-
 
       <section className="section twoUpStorySection">
-
         <div className="container">
-
           <div className="sectionHeading centerHeading">
-
             <span className="eyebrow">
-              PayMyDine AI platformda
+              Platform genelinde PayMyDine Yapay Zekâ
             </span>
 
             <h2>
-              Restorana sorun,
-Başka bir izole pano değil.
+              Ayrı bir gösterge paneline değil,
+              restoranın tamamına soru sorun.
             </h2>
 
             <p>
-              PayMyDine AI zaten mevcut işletim resminden çalışıyor
-Platformda. Gelir hakkında sorun, konuklar, ortalama kontrol,
-Tablo cirosu, satış zamanlaması, en iyi satıcılar, ödeme karışımı,
-Tahminler veya kârlılık, sonra cevabı geri izler
-Kaynak verileri.
+              PayMyDine Yapay Zekâ, platformda zaten bulunan operasyon görünümü
+              üzerinden çalışır. Gelir, müşteri sayısı, ortalama hesap tutarı,
+              masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme
+              yöntemi dağılımı, tahminler veya kârlılık hakkında soru sorun;
+              ardından yanıtı kaynak veriye kadar takip edin.
             </p>
-
           </div>
-
 
           {/* === PMD AI IMPACT GRAPH V6 START === */}
-
           <figure className="pmdAiImpactVisual">
-
-            <img src="/site-assets/custom/ai-impact-growth.png" alt={"AI- Desteklenen restoran verimliliği, gelir, masa cirosu ve misafir memnuniyeti zaman maliyetleri, bekleme süreleri ve manuel çalışmaları zamanla azalır."} loading="lazy" decoding="async" />
-
+            <img
+              src="/site-assets/custom/ai-impact-growth.png"
+              alt="Yapay Zekâ desteğiyle restoran verimliliği, gelir, masa devir hızı ve müşteri memnuniyeti artarken maliyet, bekleme süresi ve manuel işin azaldığını gösteren illüstrasyon."
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
-
           {/* === PMD AI IMPACT GRAPH V6 END === */}
 
-
           <div className="twoUpStoryGrid">
-
             <article>
-
               <img src="/site-assets/extra/manager-analytics.webp" alt="" loading="lazy" />
-
               <div>
-
                 <span className="eyebrow">
-                  Soru, karşılaştırma, araştırma
+                  Sorun, karşılaştırın, inceleyin
                 </span>
 
                 <h2>
-                  Ne değiştiğini sorun, dönemi karşılaştır
-Ve kaynak görüşü bir sonraki açılışa değer bulmak.
+                  Neyin değiştiğini sorun, dönemleri karşılaştırın ve bir sonraki
+                  adımda açılması gereken kaynak görünümü bulun.
                 </h2>
 
                 <p>
-                  Bir başlık metrikten restoran bağlamında hareket edin
-Bunun yerine, ayrı raporları kontrol etmek yerine arkasında
-Her olası açıklama için.
+                  Her olası açıklama için ayrı raporları tek tek kontrol etmek
+                  yerine, ana metrikten arkasındaki restoran bağlamına ilerleyin.
                 </p>
-
               </div>
-
             </article>
-
 
             <article>
-
               <img src="/site-assets/extra/tablet-dashboard.webp" alt="" loading="lazy" />
-
               <div>
-
                 <span className="eyebrow">
-                  Notlar, uyarılar ve tahmin desteği
+                  Günlük özetler, uyarılar ve tahmin desteği
                 </span>
 
                 <h2>
-                  Canlı işletim verileri daha kısa bir yol haline getirin
-sinyalden yönetim kararına.
+                  Canlı operasyon verisini, sinyalden yönetim kararına giden
+                  daha kısa bir yola dönüştürün.
                 </h2>
 
                 <p>
-                  AI-assisted günlük kısaltmalar, anomali bayraklar,
-Zaman karşılaştırmaları ve tahmin desteği, tutarken
-Kaynak metrik, karşılaştırma penceresi ve insan kararı
-görünür.
+                  Kaynak metriği, karşılaştırma aralığını ve insan kararını
+                  görünür tutarken Yapay Zekâ destekli günlük özetleri,
+                  olağandışı hareket uyarılarını, dönem karşılaştırmalarını ve
+                  tahmin desteğini kullanın.
                 </p>
-
               </div>
-
             </article>
-
           </div>
-
 
           <div className="sectionHeading centerHeading">
-
             <a className="button buttonGhost" href="/tr/ai">
-              PayMyDine AI
+              PayMyDine Yapay Zekâyı keşfedin
             </a>
-
           </div>
-
         </div>
-
       </section>
-
-    </>;
+    </>
+  );
 }
+
 export function FlexibilityAndIntegrationSections() {
-  return <>
-
+  return (
+    <>
       <section className="section flexibilitySection">
-
         <div className="container flexibilityGrid">
-
           <div className="flexibilityCopy">
-
             <span className="eyebrow">
-              Operasyonu yapılandırın, AI bağlamını güçlendirin
+              Operasyonu yapılandırın, Yapay Zekâ bağlamını güçlendirin
             </span>
 
             <h2>
-              Harita rolleri, modüller, kat haritaları ve misafir yolculukları bir kez,
-Daha sonra her iki günlük iş için paylaşılan verileri kullanın
-AI-assisted inceleme.
+              Rolleri, modülleri, salon planlarını ve müşteri yolculuklarını
+              bir kez tanımlayın; ortak veriyi hem günlük işler hem de
+              Yapay Zekâ destekli inceleme için kullanın.
             </h2>
 
             <p>
-              Zaten çalıştırdığınız restoranla başlayın.
-Hangi ürün alanlarının tekrarlanan çalışmasını seçin,
-Her kontrolü kimin görebilir ve bağlamı koruyabilir
-Bu yönetim raporlamaya, karşılaştırmalara ve
-AI-assisted sorular.
+              Zaten işlettiğiniz restorandan başlayın. Hangi ürün alanlarının
+              tekrarlanan işi azalttığını seçin, her kontrolü kimin görebileceğini
+              belirleyin ve yönetimin raporlama, karşılaştırma ve Yapay Zekâ
+              destekli sorular için ihtiyaç duyduğu bağlamı koruyun.
             </p>
 
             <div className="featureList">
-
-              <span>
-                <Icon name="team" size={20} />
-                <b>6 rol tabanlı iş alanları</b>
-              </span>
-
-              <span>
-                <Icon name="chart" size={20} />
-                <b>AI-assisted sorular ve kısalamalar</b>
-              </span>
-
-              <span>
-                <Icon name="phone" size={20} />
-                <b>Konuk menü ve QR akışları</b>
-              </span>
-
-              <span>
-                <Icon name="link" size={20} />
-                <b>Desteklenen POS bağlantıları</b>
-              </span>
-
+              <span><Icon name="team" size={20}/><b>6 rol bazlı çalışma alanı</b></span>
+              <span><Icon name="chart" size={20}/><b>Yapay Zekâ destekli sorular ve günlük özetler</b></span>
+              <span><Icon name="phone" size={20}/><b>Müşteri menüsü ve QR akışları</b></span>
+              <span><Icon name="link" size={20}/><b>Desteklenen POS bağlantıları</b></span>
             </div>
 
             <a className="button buttonGhost" href="/tr/restaurant-types">
-              Karşılaştırma restoran kurulumları
+              Restoran yapılarını karşılaştırın
             </a>
-
           </div>
-
 
           <div className="flexImageStack">
-
             <figure className="stackMain">
-
-              <img src={imageGroups.table[8]} alt={"Restoran masası deneyimi"} loading="lazy" />
-
+              <img src={imageGroups.table[8]} alt="Restoranda masa deneyimi" loading="lazy" />
             </figure>
-
             <figure className="stackSmall stackSmallA">
-
-              <img src={imageGroups.social[11]} alt={"Restoran misafir deneyimi"} loading="lazy" />
-
+              <img src={imageGroups.social[11]} alt="Restoran müşteri deneyimi" loading="lazy" />
             </figure>
-
             <figure className="stackSmall stackSmallB">
-
-              <img src={imageGroups.staff[1]} alt={"Restoran takımı çalışma alanı"} loading="lazy" />
-
+              <img src={imageGroups.staff[1]} alt="Restoran ekip çalışma alanı" loading="lazy" />
             </figure>
-
           </div>
-
         </div>
-
       </section>
 
-
       <section className="section integrationSection">
-
         <div className="container integrationGrid">
-
           <div className="integrationCopy">
-
             <span className="eyebrow">
-              Bağlantılı sistemler, daha iyi AI context
+              Bağlı sistemler, daha güçlü Yapay Zekâ bağlamı
             </span>
 
             <h2>
-              Restoran verilerini zaten tutan sistemlere bağlanın
-Bu nedenle operasyonlar, raporlama ve AI daha geniş bir resimden çalışabilir.
+              Restoran verisini zaten tutan sistemleri bağlayın; operasyon,
+              raporlama ve Yapay Zekâ daha geniş bir resim üzerinden çalışsın.
             </h2>
 
             <p>
-              Desteklenen POS, muhasebe, teslimat ve ödeme bağlantıları
-Merkezi raporlamaya faydalı kaynak verileri katkıda bulunabilir,
-Yer karşılaştırması, envanter ve kârlı akışlar.
-İzin verilen kaynak resmi daha tamamlanmış,
-Daha kullanışlı AI-assisted karşılaştırmalar ve soruşturmalar olabilir.
+              Desteklenen POS, muhasebe, teslimat ve ödeme bağlantıları;
+              merkezi raporlama, şube karşılaştırması, stok ve kârlılık iş
+              akışlarına yararlı kaynak veri sağlayabilir. İzin verilen kaynak
+              resmi ne kadar eksiksiz olursa Yapay Zekâ destekli karşılaştırma
+              ve incelemeler de o kadar faydalı olabilir.
             </p>
 
             <div className="integrationNote">
-
-              <Icon name="link" size={18} />
-
-              Entegrasyon ve AI kapsamı API'lere bağlıdır,
-Her dış sistemden mevcut olan izinler ve veri alanları.
-
+              <Icon name="link" size={18}/>
+              Entegrasyon ve Yapay Zekâ kapsamı, her dış sistemin sunduğu API'lere,
+              yetkilere ve veri alanlarına bağlıdır.
             </div>
 
             <a className="textArrow" href="/tr/integrations">
-              Bütünleştirme kapsamı
-              {' '}
-              <Icon name="arrow" size={15} />
+              Entegrasyon kapsamını inceleyin{' '}
+              <Icon name="arrow" size={15}/>
             </a>
-
           </div>
 
-
           <div className="integrationVisual">
-
             <div className="integrationBrand">
-
               <img src="/site-assets/logo.svg" alt="" />
-
-              <b>
-                PayMyDine
-              </b>
-
+              <b>PayMyDine</b>
             </div>
 
             <div className="integrationPills">
-
-              {integrationFeaturePills.map(name => <span key={name}>
-                  {name}
-                </span>)}
-
+              {integrationFeaturePills.map((name) => (
+                <span key={name}>{name}</span>
+              ))}
             </div>
 
-            <img className="integrationPhoto" src={imageGroups.comments[16]} alt={"POS entegrasyonu konsepti"} loading="lazy" />
-
+            <img
+              className="integrationPhoto"
+              src={imageGroups.comments[16]}
+              alt="POS entegrasyonu konsepti"
+              loading="lazy"
+            />
           </div>
-
         </div>
-
       </section>
-
-    </>;
+    </>
+  );
 }
+
 export default function StorySections() {
-  return <>
+  return (
+    <>
       <RoleAndAISections />
       <FlexibilityAndIntegrationSections />
-    </>;
+    </>
+  );
 }

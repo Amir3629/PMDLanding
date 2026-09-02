@@ -1,24 +1,34 @@
-import PageHero from "@/locales/tr/components/PageHero";
-import OfferGrid from "@/locales/tr/components/OfferGrid";
-import Workflow from "@/locales/tr/components/Workflow";
-import InteractiveDemos from "@/locales/tr/components/InteractiveDemos";
-import CTA from "@/locales/tr/components/CTA";
-import { imageGroups } from "@/locales/tr/data/site";
+import PageHero from '@/locales/tr/components/PageHero';
+import OfferGrid from '@/locales/tr/components/OfferGrid';
+import Workflow from '@/locales/tr/components/Workflow';
+import InteractiveDemos from '@/locales/tr/components/InteractiveDemos';
+import CTA from '@/locales/tr/components/CTA';
+import { imageGroups } from '@/locales/tr/data/site';
+
 export const metadata = {
-  title: "Ürün"
+  title: 'Restoran Yönetim Platformu',
+  description: 'Rezervasyon, masa, sipariş, mutfak, ödeme, müşteri CRM’i, analiz, ekip yönetimi, entegrasyonlar ve Yapay Zekâ’yı bağlantılı bir operasyon platformunda yönetin.'
 };
+
 export default function PlatformPage() {
-  return <>
-      <PageHero eyebrow={"9 ürün alanları - 6 rol iş alanı"} title={"Restoran gününün arkasındaki eylemler, statü ve ölçümler için bir işletim katmanı."} intro={"Rezervasyonlar, masalar, sipariş, mutfak, ödemeler, misafir CRM, analitik, takım kontrolleri, entegrasyonlar ve AI bağlantılı ürün alanları olarak. Her rol, yönetim paylaşılan işletim resmini tutarken odaklanmış bir çalışma alanı alır."} image="/site-assets/custom/platform-hero.webp" />
+  return (
+    <>
+      <PageHero
+        eyebrow="9 ürün alanı · 6 rol bazlı çalışma alanı"
+        title="Restoran gününün arkasındaki işlemleri, durumları ve metrikleri tek operasyon katmanında birleştirin."
+        intro="Rezervasyon, masa, sipariş, mutfak, ödeme, müşteri CRM’i, analiz, ekip kontrolleri, entegrasyonlar ve Yapay Zekâ bağlantılı ürün alanları olarak çalışır. Her rol odaklı bir çalışma alanı kullanırken yönetim ortak operasyon görünümünü korur."
+        image="/site-assets/custom/platform-hero.webp"
+      />
       <OfferGrid compact />
-      <Workflow variant={"platform platform platformu platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform"} />
+      <Workflow variant="platform" />
       <section className="section twoUpStorySection">
         <div className="container twoUpStoryGrid">
-          <article><img src={imageGroups.comments[7]} alt="" /><div><span className="eyebrow">Rol-aware iş akışı</span><h2>Masa, sipariş ve misafir bağlamı bir sonraki eylemden sorumlu rolüne taşıyın.</h2><p>Servis personeli hizmet çalışması alır, mutfak hazırlık çalışması alır, rezervasyonlar varış alır ve yöneticiler sistemler arasındaki bilgileri kopyalamadan istisna alırlar.</p></div></article>
-          <article><img src={imageGroups.social[3]} alt="" /><div><span className="eyebrow">9 karar metrikleri</span><h2>Sayıyı takip edin, karşılaştırma dönemi ve bunun arkasında işletim bağlamı.</h2><p>Rapor geliri, konuklar, ortalama kontrol, masa cirosu, satış zamanlaması, en iyi satıcılar, ödeme karışımı, tahmin ve kârlılığı, sonra AI'i neden bir sinyalin değiştiğini sormak için yardım edin.</p></div></article>
+          <article><img src={imageGroups.comments[7]} alt=""/><div><span className="eyebrow">Rol odaklı iş akışı</span><h2>Masa, sipariş ve müşteri bağlamını bir sonraki işlemden sorumlu role aktarın.</h2><p>Servis personeli servis işini, mutfak hazırlık işini, rezervasyon ekibi gelişleri ve yöneticiler istisnaları görür; bilgi sistemler arasında tekrar kopyalanmaz.</p></div></article>
+          <article><img src={imageGroups.social[3]} alt=""/><div><span className="eyebrow">9 karar metriği</span><h2>Sayının kendisiyle birlikte karşılaştırma dönemini ve operasyon bağlamını da izleyin.</h2><p>Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme yöntemi dağılımı, tahminleme ve kârlılığı inceleyin; ardından bir sinyalin neden değiştiğini araştırmak için Yapay Zekâ desteğini kullanın.</p></div></article>
         </div>
       </section>
-      <InteractiveDemos variant={"platform platform platformu platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform platform"} />
-      <CTA title={"İlk önce en çok tekrarlanan işi kaldıran ürün alanlarını seçin."} body={"Mevcut araçlarınıza tüm 9 alanı haritalayabiliriz, takım sorumlulukları ve raporlama ihtiyaçları, sonra pratik bir ilk kapsamı tanımlayın."} />
-    </>;
+      <InteractiveDemos variant="platform" />
+      <CTA title="Önce en fazla tekrar işi ortadan kaldıracak ürün alanlarını seçin." body="9 alanın tamamını mevcut araçlarınıza, ekip sorumluluklarınıza ve raporlama ihtiyaçlarınıza eşleyip pratik bir ilk kapsam belirleyebiliriz." />
+    </>
+  );
 }

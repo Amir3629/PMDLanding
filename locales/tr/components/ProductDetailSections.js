@@ -1,113 +1,140 @@
 import { Icon } from './Icons';
-const number = index => String(index + 1).padStart(2, '0');
-export default function ProductDetailSections({
-  details,
-  productName = "Bu ürün alanı"
-}) {
+
+const number = (index) => String(index + 1).padStart(2, '0');
+
+export default function ProductDetailSections({ details, productName = 'Bu ürün alanı' }) {
   if (!details) return null;
+
   const facts = details.facts || [];
   const workflow = details.workflow || [];
   const roleViews = details.roleViews || [];
   const metrics = details.metrics || [];
   const implementation = details.implementation || [];
   const faqs = details.faqs || [];
-  return <>
-      {facts.length > 0 && <section className="section highlightSection">
+
+  return (
+    <>
+      {facts.length > 0 && (
+        <section className="section highlightSection">
           <div className="container">
             <div className="sectionHeading centerHeading">
-              <span className="eyebrow">{details.factsEyebrow || `${productName} at a glance`}</span>
-              <h2>{details.factsTitle || "Ne dahil, kim kullanır ve ne kalır."}</h2>
-              <p>{details.factsIntro || "Bunlar ürün katlı gerçekler, söz konusu müşteri performans sonuçları değil."}</p>
+              <span className="eyebrow">{details.factsEyebrow || `${productName} — kısa bakış`}</span>
+              <h2>{details.factsTitle || 'Neler dahil, kim kullanır ve hangi bilgiler bağlantılı kalır?'}</h2>
+              <p>{details.factsIntro || 'Bunlar ürün kapsamını açıklar; müşteri performansına ilişkin bir sonuç garantisi değildir.'}</p>
             </div>
             <div className="highlightGrid">
-              {facts.map(([value, title, body]) => <article className="highlightCard" key={`${value}-${title}`}>
+              {facts.map(([value, title, body]) => (
+                <article className="highlightCard" key={`${value}-${title}`}>
                   <span>{value}</span>
                   <h3>{title}</h3>
                   <p>{body}</p>
-                </article>)}
+                </article>
+              ))}
             </div>
           </div>
-        </section>}
+        </section>
+      )}
 
-      {workflow.length > 0 && <section className="section howFlowSection">
+      {workflow.length > 0 && (
+        <section className="section howFlowSection">
           <div className="container">
             <div className="splitHeading howFlowHeading">
               <div>
-                <span className="eyebrow">{details.workflowEyebrow || `${productName} workflow`}</span>
-                <h2>{details.workflowTitle || "İş, ilk sinyalden tam bir eyleme nasıl hareket eder."}</h2>
+                <span className="eyebrow">{details.workflowEyebrow || `${productName} iş akışı`}</span>
+                <h2>{details.workflowTitle || 'İş, ilk sinyalden tamamlanmış bir adıma nasıl ilerler?'}</h2>
               </div>
-              <p>{details.workflowIntro || "Her adım, sorumluluk bir sonraki role taşınırken restoran bağlamını tutar."}</p>
+              <p>{details.workflowIntro || 'Sorumluluk bir sonraki role geçerken restoran bağlamı her adımda korunur.'}</p>
             </div>
             <div className="howFlowGrid">
-              {workflow.map(([title, body], index) => <article className="howFlowCard" key={title}>
+              {workflow.map(([title, body], index) => (
+                <article className="howFlowCard" key={title}>
                   <span>{number(index)}</span>
                   <h3>{title}</h3>
                   <p>{body}</p>
-                </article>)}
+                </article>
+              ))}
             </div>
           </div>
-        </section>}
+        </section>
+      )}
 
-      {roleViews.length > 0 && <section className="section companyValues">
+      {roleViews.length > 0 && (
+        <section className="section companyValues">
           <div className="container companyValuesGrid">
             <div>
-              <span className="eyebrow">{details.rolesEyebrow || "Her rol ne görür"}</span>
-              <h2>{details.rolesTitle || "Aynı restoran bağlamı, farklı sorumluluklar etrafında sunulur."}</h2>
-              <p>{details.rolesIntro || "Rol tabanlı görüşler, restoranın ayrı versiyonları olmadan arayüz gürültüsünü azaltır."}</p>
+              <span className="eyebrow">{details.rolesEyebrow || 'Her rol ne görür?'}</span>
+              <h2>{details.rolesTitle || 'Aynı restoran bağlamı, farklı sorumluluklara göre sunulur.'}</h2>
+              <p>{details.rolesIntro || 'Rol bazlı görünümler, restoranın birbirinden kopuk sürümlerini oluşturmadan ekran kalabalığını azaltır.'}</p>
             </div>
             <div className="companyValueCards">
-              {roleViews.map(([title, body]) => <article key={title}>
+              {roleViews.map(([title, body]) => (
+                <article key={title}>
                   <h3>{title}</h3>
                   <p>{body}</p>
-                </article>)}
+                </article>
+              ))}
             </div>
           </div>
-        </section>}
+        </section>
+      )}
 
-      {metrics.length > 0 && <section className="section pricingSection">
+      {metrics.length > 0 && (
+        <section className="section pricingSection">
           <div className="container">
             <div className="sectionHeading centerHeading">
-              <span className="eyebrow">{details.metricsEyebrow || "İş akışını ölçme"}</span>
-              <h2>{details.metricsTitle || "Bir gelişme iddia etmeden önce bir temel oluşturmak."}</h2>
-              <p>{details.metricsIntro || "Mevcut tam ölçümler, yapılandırılmış ortamda modüllere, entegrasyonlara ve olay verilere bağlıdır."}</p>
+              <span className="eyebrow">{details.metricsEyebrow || 'İş akışını ölçün'}</span>
+              <h2>{details.metricsTitle || 'Bir iyileşme iddia etmeden önce başlangıç değerini belirleyin.'}</h2>
+              <p>{details.metricsIntro || 'Kullanılabilen metrikler; seçilen modüllere, entegrasyonlara ve yapılandırılmış ortamdaki olay verilerine bağlıdır.'}</p>
             </div>
             <div className="pricingFactorGrid">
-              {metrics.map(([title, body], index) => <article key={title}>
+              {metrics.map(([title, body], index) => (
+                <article key={title}>
                   <span>{number(index)}</span>
                   <h3>{title}</h3>
                   <p>{body}</p>
-                </article>)}
+                </article>
+              ))}
             </div>
           </div>
-        </section>}
+        </section>
+      )}
 
-      {implementation.length > 0 && <section className="section capabilitySection">
+      {implementation.length > 0 && (
+        <section className="section capabilitySection">
           <div className="container capabilityPanel">
             <div>
-              <span className="eyebrow">{details.implementationEyebrow || "Yapılama ve veri gereksinimleri"}</span>
-              <h2>{details.implementationTitle || "İş akışını gerçekleştirmek için beklemeden önce işletim kurallarını tanımlayın."}</h2>
-              <p>{details.implementationIntro || "Uygulama gerçek, rol sahipliği, durum tanımları ve ölçüm yöntemi kaynağını belgelemeli."}</p>
+              <span className="eyebrow">{details.implementationEyebrow || 'Yapılandırma ve veri gereksinimleri'}</span>
+              <h2>{details.implementationTitle || 'İş akışından sonuç beklemeden önce operasyon kurallarını tanımlayın.'}</h2>
+              <p>{details.implementationIntro || 'Kurulum; ana veri kaynağını, rol sorumluluğunu, durum tanımlarını ve ölçüm yöntemini açıkça belgelemelidir.'}</p>
             </div>
             <div className="capabilityList">
-              {implementation.map(item => <span key={item}><Icon name="check" size={16} />{item}</span>)}
+              {implementation.map((item) => (
+                <span key={item}><Icon name="check" size={16}/>{item}</span>
+              ))}
             </div>
           </div>
-        </section>}
+        </section>
+      )}
 
-      {faqs.length > 0 && <section className="section companyValues">
+      {faqs.length > 0 && (
+        <section className="section companyValues">
           <div className="container companyValuesGrid">
             <div>
-              <span className="eyebrow">{details.faqEyebrow || "Pratik sorular"}</span>
-              <h2>{details.faqTitle || "kapsamı seçmeden önce ne açıklığa kavuşturulur."}</h2>
-              <p>{details.faqIntro || "Kesin cevap restoran kurulumuna, seçilmiş modüllere ve bağlantılı sistemlere bağlı olabilir."}</p>
+              <span className="eyebrow">{details.faqEyebrow || 'Pratik sorular'}</span>
+              <h2>{details.faqTitle || 'Kapsamı seçmeden önce hangi noktalar netleştirilmeli?'}</h2>
+              <p>{details.faqIntro || 'Kesin yanıt, restoran yapısına, seçilen modüllere ve bağlı sistemlere göre değişebilir.'}</p>
             </div>
             <div className="companyValueCards">
-              {faqs.map(([title, body]) => <article key={title}>
+              {faqs.map(([title, body]) => (
+                <article key={title}>
                   <h3>{title}</h3>
                   <p>{body}</p>
-                </article>)}
+                </article>
+              ))}
             </div>
           </div>
-        </section>}
-    </>;
+        </section>
+      )}
+    </>
+  );
 }

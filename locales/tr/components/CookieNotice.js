@@ -1,11 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+
 const STORAGE_KEY = 'pmd_cookie_consent_v1';
+
 export default function CookieNotice() {
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     let timer;
+
     try {
       const saved = window.localStorage.getItem(STORAGE_KEY);
       if (saved) {
@@ -13,39 +17,42 @@ export default function CookieNotice() {
         return undefined;
       }
     } catch (_) {
-      // If storage is unavailable, still let the visitor make a choice.
+      // Depolama kullanılamıyorsa ziyaretçi yine de seçim yapabilsin.
     }
+
     timer = window.setTimeout(() => setVisible(true), 700);
     return () => window.clearTimeout(timer);
   }, []);
-  const choose = value => {
+
+  const choose = (value) => {
     try {
       window.localStorage.setItem(STORAGE_KEY, value);
     } catch (_) {
-      // The choice can still dismiss the card for this page view.
+      // Seçim, bu sayfa görünümünde bildirimi kapatmaya devam eder.
     }
+
     document.documentElement.dataset.cookieConsent = value;
-    window.dispatchEvent(new CustomEvent('pmd-cookie-consent', {
-      detail: {
-        value
-      }
-    }));
+    window.dispatchEvent(new CustomEvent('pmd-cookie-consent', { detail: { value } }));
     setVisible(false);
   };
+
   if (!visible) return null;
-  return <aside className="cookieNotice" role="dialog" aria-label={"Çerez tercihleri"} aria-live="polite">
+
+  return (
+    <aside className="cookieNotice" role="dialog" aria-label="Çerez tercihleri" aria-live="polite">
       <span className="cookieNoticeEyebrow">Çerez tercihleri</span>
       <h2>Bu sitenin çerezleri nasıl kullanacağını seçin.</h2>
       <p>
-        Site tercihleri için temel tarayıcı depolamasını kullanıyoruz. Ayrıca, analizin etkinleştirildiği zaman site kullanımını anlamamıza yardımcı olmak için opsiyonel analitik kurabiyelere de izin verebilirsiniz.
+        Site tercihlerini saklamak için gerekli tarayıcı depolamasını kullanıyoruz. Analiz özelliği etkin olduğunda site kullanımını anlamamıza yardımcı olması için isteğe bağlı analiz çerezlerine de izin verebilirsiniz.
       </p>
       <div className="cookieNoticeActions">
         <button className="cookieNoticeSecondary" type="button" onClick={() => choose('necessary')}>
-          Yalnızca gerekli
+          Yalnızca gerekli olanlar
         </button>
         <button className="cookieNoticePrimary" type="button" onClick={() => choose('all')}>
           İsteğe bağlı çerezlere izin ver
         </button>
       </div>
-    </aside>;
+    </aside>
+  );
 }
