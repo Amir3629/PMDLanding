@@ -5,22 +5,22 @@ import ProductDetailSections from '@/locales/tr/components/ProductDetailSections
 
 export const metadata = {
   title: 'Restoran POS, Ödeme ve Muhasebe Entegrasyonları',
-  description: 'PayMyDine’ı POS, muhasebe, teslimat ve ödeme sistemleriyle bağlayın; merkezi raporlama, ortak menüler, stok ve maliyet bağlamını destekleyin.'
+  description: 'PayMyDine’ı POS, muhasebe, teslimat ve ödeme sistemleriyle bağlayın; merkezi raporlama, ortak menüler, stok ve maliyet içeriğini destekleyin.'
 };
 
 const capabilities = [
   ['POS verisi', 'Personelin aynı bilgiyi tekrar girmesine gerek kalmadan desteklenen sipariş, satış, menü veya masa verilerini PayMyDine operasyon görünümüne taşıyın.'],
-  ['Muhasebe bağlamı', 'Bağlı sistemin sunduğu imkânlar ve yetkiler çerçevesinde finans iş akışının ihtiyaç duyduğu raporlama alanlarını aktarın veya eşleyin.'],
+  ['Muhasebe içeriği', 'Bağlı sistemin sunduğu imkânlar ve yetkiler çerçevesinde finans iş akışının ihtiyaç duyduğu raporlama alanlarını aktarın veya eşleyin.'],
   ['Teslimat kanalları', 'Desteklenen teslimat siparişlerini kanal bazında ayırt edilebilir tutarken genel iş yükü ve satış görünümüne dahil edin.'],
   ['Ödeme sağlayıcıları', 'Desteklenen ödeme durumu ve mutabakat bilgisini masa ve müşteri ödeme yolculuğuyla bağlantılı tutun.']
 ];
 
 const integrationDetails = {
   factsEyebrow: 'Entegrasyon ve ölçek kapsamı',
-  factsTitle: 'Dört entegrasyon türü, altı merkezi kontrol ve şu anda adı geçen dört sağlayıcı.',
+  factsTitle: 'Dört entegrasyon tipi, altı merkezi kontrol ve şu anda adı geçen dört sağlayıcı.',
   factsIntro: 'Bir sağlayıcının adının listelenmesi her veri alanının veya iş akışının desteklendiği anlamına gelmez. Kapsam; mevcut arayüzlere, yetkilere ve kabul edilen veri yoluna bağlıdır.',
   facts: [
-    ['04', 'entegrasyon türü', 'POS, muhasebe, teslimat ve ödeme bağlantıları mevcut entegrasyon kategorilerini oluşturur.'],
+    ['04', 'entegrasyon tipi', 'POS, muhasebe, teslimat ve ödeme bağlantıları mevcut entegrasyon kategorilerini oluşturur.'],
     ['06', 'merkezi kontrol', 'Merkezi işletme sahibi görünümü, ortak menüler, merkezi raporlama, stok, ürün maliyeti ve satın alma çoklu şube operasyonlarını destekler.'],
     ['04', 'adı geçen sağlayıcı', 'Mevcut ürün verisinde SumUp, ready2order, Lightspeed ve Square yer alır; kesin kapsam arayüz ve projeye göre belirlenir.'],
     ['05', 'uygulama aşaması', 'Keşif, alan eşleme, erişim, test ve izleme pratik bir entegrasyon yolunu oluşturur.']
@@ -39,9 +39,9 @@ const integrationDetails = {
   rolesIntro: 'Bir bağlantı, belirli bir rol için gerçek bir manuel adımı kaldırmalı veya anlamlı bir veri boşluğunu kapatmalıdır.',
   roleViews: [
     ['Kurulum veya BT', 'Kimlik doğrulama, alan eşleme, test senaryoları, hata yönetimi ve teknik sağlayıcı iletişiminden sorumludur.'],
-    ['Restoran operasyonu', 'Aynı bilgiyi yeniden girmeden bağlantılı sipariş, menü, masa veya teslimat bağlamını kullanır.'],
+    ['Restoran operasyonu', 'Aynı bilgiyi yeniden girmeden bağlantılı sipariş, menü, masa veya teslimat içeriğini kullanır.'],
     ['Finans', 'Net bir ana veri kaynağı kararıyla ödeme, muhasebe ve mutabakat alanlarını inceler.'],
-    ['İşletme sahibi ve çoklu şube yönetimi', 'Yerel bağlamı korurken şubeleri, ortak standartları, stoku ve raporlamayı karşılaştırır.']
+    ['İşletme sahibi ve çoklu şube yönetimi', 'Yerel içeriği korurken şubeleri, ortak standartları, stoku ve raporlamayı karşılaştırır.']
   ],
   metricsEyebrow: 'Entegrasyon sağlığı',
   metricsTitle: 'Bağlantının eksiksiz, güncel ve manuel mutabakat ihtiyacını azaltacak şekilde çalışıp çalışmadığını ölçün.',
@@ -74,9 +74,9 @@ export default function IntegrationsPage() {
   return (
     <>
       <PageHero
-        eyebrow="4 entegrasyon türü · 6 merkezi kontrol"
+        eyebrow="4 entegrasyon tipi · 6 merkezi kontrol"
         title="Restoran verisini zaten tutan sistemleri bağlayın ve bu veriyi bir sonraki rol için kullanılabilir hale getirin."
-        intro="PayMyDine desteklenen POS, muhasebe, teslimat ve ödeme sistemleriyle çalışabilir; kaynak sistemler izin verdiğinde merkezi işletme sahibi görünümleri, ortak menüler, raporlama, stok, ürün maliyeti ve satın alma bağlamı ekleyebilir."
+        intro="PayMyDine desteklenen POS, muhasebe, teslimat ve ödeme sistemleriyle çalışabilir; kaynak sistemler izin verdiğinde merkezi işletme sahibi görünümleri, ortak menüler, raporlama, stok, ürün maliyeti ve satın alma içeriği ekleyebilir."
         image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp"
         accent="green"
       />
@@ -86,7 +86,7 @@ export default function IntegrationsPage() {
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Bağlantıdan önce veri yolunu tanımlayın</span>
             <h2>Her entegrasyon için hangi verinin hareket edeceğini, hangi sistemin ana kaynak olarak kalacağını ve sonucu kimin kullanacağını belirleyin.</h2>
-            <p>Faydalı bir entegrasyon, tekrar veri girişini veya eksik bağlamı ortadan kaldırır. Yalnızca teknik olarak mümkün olduğu için veri taşımamalıdır.</p>
+            <p>Faydalı bir entegrasyon, tekrar veri girişini veya eksik içeriği ortadan kaldırır. Yalnızca teknik olarak mümkün olduğu için veri taşımamalıdır.</p>
           </div>
           <div className="highlightGrid">
             {capabilities.map(([title, body], index) => <article className="highlightCard" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{body}</p></article>)}
@@ -99,7 +99,7 @@ export default function IntegrationsPage() {
           <div>
             <span className="eyebrow darkEyebrow">6 çoklu şube kontrolü</span>
             <h2>Her restoran yerel operasyon yapısını korurken şubeleri merkezi olarak karşılaştırın.</h2>
-            <p>İşletme sahipleri, her şubeyi aynı salon planına, servis modeline veya ekip yapısına zorlamadan şube performansını ve ortak standartları inceleyebilir.</p>
+            <p>İşletme sahipleri, her şubeyi aynı servis alanı planına, servis modeline veya ekip yapısına zorlamadan şube performansını ve ortak standartları inceleyebilir.</p>
           </div>
           <div className="integrationNameGrid">
             {['Merkezi işletme sahibi görünümü', 'Ortak menüler', 'Merkezi raporlama', 'Stok', 'Ürün maliyeti', 'Satın alma'].map((item) => <span key={item}><Icon name="check" size={17}/>{item}</span>)}

@@ -8,22 +8,22 @@ export function RoleAndAISections() {
         <div className="container darkIntro">
           <div>
             <span className="eyebrow darkEyebrow">
-              6 rol bazlı çalışma alanı + ortak Yapay Zekâ bağlamı
+              6 rol bazlı çalışma alanı + ortak Yapay Zeka içeriği
             </span>
 
             <h2>
               Her role sorumlu olduğu işi verin;
-              Yapay Zekâya da restoran genelinde ne olduğunu anlaması için
-              gereken ortak bağlamı sağlayın.
+              Yapay Zekaya da restoran genelinde ne olduğunu anlaması için
+              gereken ortak içeriği sağlayın.
             </h2>
           </div>
 
           <p>
-            İşletme sahibi, yöneticiler, servis personeli, mutfak, rezervasyon
-            ekibi ve finans odaklanmış görünümler kullanırken masa, sipariş,
-            müşteri, zamanlama ve ödeme bağlamı bağlantılı kalır. Yönetim daha
-            sonra PayMyDine Yapay Zekâ ile bir sinyalden arkasındaki kaynak
-            veriye kadar ilerleyebilir.
+            Masa, sipariş, müşteri, zamanlama ve ödeme içerikleri bağlantılıyken
+            işletme sahibi, yöneticiler, servis personeli, mutfak, rezervasyon
+            ekibi ve finans konsantre bilgiyi kullanabilir. Yönetim daha sonra
+            PayMyDine Yapay Zeka ile bir uyarıdan arkasındaki kaynak veriye
+            kadar ilerleyebilir.
           </p>
         </div>
 
@@ -31,12 +31,12 @@ export function RoleAndAISections() {
           <article className="darkStoryCard wideDarkCard">
             <div className="darkCardCopy">
               <span>
-                İŞLETME SAHİPLERİ + YAPAY ZEKÂ
+                İŞLETME SAHİPLERİ + YAPAY ZEKA
               </span>
 
               <h3>
                 İşletme göstergelerini inceleyin; ardından neyin değiştiğini
-                ve nerede daha derine bakılması gerektiğini Yapay Zekâya sorun.
+                ve nerede daha derine bakılması gerektiğini Yapay Zekaya sorun.
               </h3>
 
               <p>
@@ -47,7 +47,7 @@ export function RoleAndAISections() {
               </p>
 
               <a href="/tr/ai">
-                PayMyDine Yapay Zekâyı keşfedin{' '}
+                PayMyDine Yapay Zekayı keşfedin{' '}
                 <Icon name="arrow" size={15}/>
               </a>
             </div>
@@ -62,23 +62,23 @@ export function RoleAndAISections() {
           <article className="darkStoryCard">
             <div className="darkCardCopy">
               <span>
-                MÜŞTERİ İLİŞKİLERİ VE BÜYÜME
+                MÜŞTERİ ARTIŞI
               </span>
 
               <h3>
                 Ziyaretleri, siparişleri ve geri bildirimleri daha kullanışlı
-                bir müşteri görünümüne dönüştürün.
+                bir müşteri resmine dönüştürün.
               </h3>
 
               <p>
                 Profiller, sadakat, teklifler, kampanyalar, geri bildirim ve
                 müşteri bağlılığı sinyalleri; bunları oluşturan ziyaret geçmişiyle
                 bağlantılı kalabilir. Böylece yönetim sonraki kararlar için daha
-                güçlü bir bağlama sahip olur.
+                güçlü bir içeriğe sahip olur.
               </p>
 
               <a href="/tr/solutions/guest-ordering">
-                Müşteri büyüme iş akışını inceleyin{' '}
+                Müşteri artışı iş akışını inceleyin{' '}
                 <Icon name="arrow" size={15}/>
               </a>
             </div>
@@ -96,7 +96,7 @@ export function RoleAndAISections() {
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">
-              Platform genelinde PayMyDine Yapay Zekâ
+              Platform genelinde PayMyDine Yapay Zeka
             </span>
 
             <h2>
@@ -105,7 +105,7 @@ export function RoleAndAISections() {
             </h2>
 
             <p>
-              PayMyDine Yapay Zekâ, platformda zaten bulunan operasyon görünümü
+              PayMyDine Yapay Zeka, platformda zaten bulunan operasyon görünümü
               üzerinden çalışır. Gelir, müşteri sayısı, ortalama hesap tutarı,
               masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme
               yöntemi dağılımı, tahminler veya kârlılık hakkında soru sorun;
@@ -117,7 +117,7 @@ export function RoleAndAISections() {
           <figure className="pmdAiImpactVisual">
             <img
               src="/site-assets/custom/ai-impact-growth.png"
-              alt="Yapay Zekâ desteğiyle restoran verimliliği, gelir, masa devir hızı ve müşteri memnuniyeti artarken maliyet, bekleme süresi ve manuel işin azaldığını gösteren illüstrasyon."
+              alt="Yapay Zeka desteğiyle restoran verimliliği, gelir, masa devir hızı ve müşteri memnuniyeti artarken maliyet, bekleme süresi ve manuel işin azaldığını gösteren illüstrasyon."
               loading="lazy"
               decoding="async"
             />
@@ -139,7 +139,7 @@ export function RoleAndAISections() {
 
                 <p>
                   Her olası açıklama için ayrı raporları tek tek kontrol etmek
-                  yerine, ana metrikten arkasındaki restoran bağlamına ilerleyin.
+                  yerine, ana ölçütten arkasındaki restoran içeriğine ilerleyin.
                 </p>
               </div>
             </article>
@@ -157,8 +157,8 @@ export function RoleAndAISections() {
                 </h2>
 
                 <p>
-                  Kaynak metriği, karşılaştırma aralığını ve insan kararını
-                  görünür tutarken Yapay Zekâ destekli günlük özetleri,
+                  Kaynak ölçütü, karşılaştırma aralığını ve insan kararını
+                  görünür tutarken Yapay Zeka destekli günlük özetleri,
                   olağandışı hareket uyarılarını, dönem karşılaştırmalarını ve
                   tahmin desteğini kullanın.
                 </p>
@@ -168,7 +168,7 @@ export function RoleAndAISections() {
 
           <div className="sectionHeading centerHeading">
             <a className="button buttonGhost" href="/tr/ai">
-              PayMyDine Yapay Zekâyı keşfedin
+              PayMyDine Yapay Zekayı keşfedin
             </a>
           </div>
         </div>
@@ -184,31 +184,31 @@ export function FlexibilityAndIntegrationSections() {
         <div className="container flexibilityGrid">
           <div className="flexibilityCopy">
             <span className="eyebrow">
-              Operasyonu yapılandırın, Yapay Zekâ bağlamını güçlendirin
+              Operasyonu yapılandırın, Yapay Zeka içeriğini güçlendirin
             </span>
 
             <h2>
-              Rolleri, modülleri, salon planlarını ve müşteri yolculuklarını
+              Rolleri, modülleri, servis alanı planlarını ve müşteri yolculuklarını
               bir kez tanımlayın; ortak veriyi hem günlük işler hem de
-              Yapay Zekâ destekli inceleme için kullanın.
+              Yapay Zeka destekli inceleme için kullanın.
             </h2>
 
             <p>
-              Zaten işlettiğiniz restorandan başlayın. Hangi ürün alanlarının
+              İşlettiğiniz restorandan başlayın. Hangi ürün alanlarının
               tekrarlanan işi azalttığını seçin, her kontrolü kimin görebileceğini
-              belirleyin ve yönetimin raporlama, karşılaştırma ve Yapay Zekâ
-              destekli sorular için ihtiyaç duyduğu bağlamı koruyun.
+              belirleyin ve yönetimin raporlama, karşılaştırma ve Yapay Zeka
+              destekli sorular için ihtiyaç duyduğu içeriği koruyun.
             </p>
 
             <div className="featureList">
               <span><Icon name="team" size={20}/><b>6 rol bazlı çalışma alanı</b></span>
-              <span><Icon name="chart" size={20}/><b>Yapay Zekâ destekli sorular ve günlük özetler</b></span>
+              <span><Icon name="chart" size={20}/><b>Yapay Zeka destekli sorular ve günlük özetler</b></span>
               <span><Icon name="phone" size={20}/><b>Müşteri menüsü ve QR akışları</b></span>
               <span><Icon name="link" size={20}/><b>Desteklenen POS bağlantıları</b></span>
             </div>
 
             <a className="button buttonGhost" href="/tr/restaurant-types">
-              Restoran yapılarını karşılaştırın
+              Restoran kurulumlarını karşılaştırın
             </a>
           </div>
 
@@ -230,25 +230,25 @@ export function FlexibilityAndIntegrationSections() {
         <div className="container integrationGrid">
           <div className="integrationCopy">
             <span className="eyebrow">
-              Bağlı sistemler, daha güçlü Yapay Zekâ bağlamı
+              Bağlı sistemler, daha güçlü Yapay Zeka içeriği
             </span>
 
             <h2>
               Restoran verisini zaten tutan sistemleri bağlayın; operasyon,
-              raporlama ve Yapay Zekâ daha geniş bir resim üzerinden çalışsın.
+              raporlama ve Yapay Zeka daha geniş bir resim üzerinden çalışsın.
             </h2>
 
             <p>
               Desteklenen POS, muhasebe, teslimat ve ödeme bağlantıları;
               merkezi raporlama, şube karşılaştırması, stok ve kârlılık iş
               akışlarına yararlı kaynak veri sağlayabilir. İzin verilen kaynak
-              resmi ne kadar eksiksiz olursa Yapay Zekâ destekli karşılaştırma
+              resmi ne kadar eksiksiz olursa Yapay Zeka destekli karşılaştırma
               ve incelemeler de o kadar faydalı olabilir.
             </p>
 
             <div className="integrationNote">
               <Icon name="link" size={18}/>
-              Entegrasyon ve Yapay Zekâ kapsamı, her dış sistemin sunduğu API'lere,
+              Entegrasyon ve Yapay Zeka kapsamı, her dış sistemin sunduğu API'lere,
               yetkilere ve veri alanlarına bağlıdır.
             </div>
 

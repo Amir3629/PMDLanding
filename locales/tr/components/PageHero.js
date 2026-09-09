@@ -8,7 +8,7 @@ export default function PageHero({ eyebrow, title, intro, image, accent = 'green
           <span className="eyebrow">{eyebrow}</span>
           <h1>{title}</h1>
           <p>{intro}</p>
-          {actions && <div className="heroButtons"><a className="button" href="/tr/contact">Demo Talep Edin <Icon name="arrow" size={17}/></a><a className="button buttonGhost" href="/tr/how-it-works">Nasıl Çalışır?</a></div>}
+          {actions && <div className="heroButtons"><a className="button" href="/tr/contact">Tanıtım talep et <Icon name="arrow" size={17}/></a><a className="button buttonGhost" href="/tr/how-it-works">Nasıl Çalışır?</a></div>}
         </div>
         {image && <div className="pageHeroImage"><img src={image} alt="" /><div className="pageHeroGlass"><span>PayMyDine</span><b>{eyebrow}</b></div></div>}
       </div>

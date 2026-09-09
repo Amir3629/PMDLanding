@@ -79,7 +79,7 @@ export default function Header() {
                   >
                     <div className="megaMenuTop">
                       <strong>{item.label}</strong>
-                      <a href={item.href} onClick={() => { setMega(null); setMobileOpen(false); }}>Genel bakışı görüntüleyin <Icon name="arrow" size={15} /></a>
+                      <a href={item.href} onClick={() => { setMega(null); setMobileOpen(false); }}>Genel bakışı görüntüle <Icon name="arrow" size={15} /></a>
                     </div>
                     <div className="megaColumns">
                       {item.columns.map((column) => (
@@ -87,7 +87,7 @@ export default function Header() {
                           <span className="megaLabel">{column.title}</span>
                           {column.links.map(([label, href, note, number]) => (
                             <a className="megaLink" href={href} key={label} onClick={() => { setMega(null); setMobileOpen(false); }}>
-                              <span className="megaLinkTitle">{number ? <b className="megaLinkNumber">{number}</b> : null}<span>{label}</span></span>
+                              <span className="megaLinkTitle">{number ? <b className="megaLinkNumber">{number}</b> : null}<span>{label === 'PayMyDine Yapay Zeka' ? 'PayMyDine YZ' : label}</span></span>
                               <small>{note}</small>
                             </a>
                           ))}
@@ -102,11 +102,11 @@ export default function Header() {
         </nav>
         <div className="headerActions">
           <a className="loginLink desktopOnly" href="/tr/how-it-works">Nasıl Çalışır?</a>
-          <a className="button buttonSmall" href="/tr/contact">Demo Talep Edin <Icon name="arrow" size={16}/></a>
+          <a className="button buttonSmall" href="/tr/contact">Tanıtım talep et <Icon name="arrow" size={16}/></a>
           <button
             className="menuButton"
             type="button"
-            aria-label="Gezinme menüsünü aç veya kapat"
+            aria-label="Gezinme menüsünü aç/kapa"
             aria-expanded={mobileOpen}
             onClick={toggleMobileNav}
           >

@@ -16,16 +16,16 @@ export default function OfferGrid({ compact = false }) {
 
             <h2>
               Dokuz bağlantılı alan tek bir operasyon resmi oluşturur ve
-              PayMyDine Yapay Zekâya neyin değiştiğini açıklayacak bağlamı sağlar.
+              PayMyDine Yapay Zekaya neyin değiştiğini açıklayacak içeriği sağlar.
             </h2>
 
             <p>
               Her alan tek başına gerçek bir restoran iş akışını çözer.
               Rezervasyonlar, masalar, siparişler, mutfak, ödemeler, müşteriler,
-              ekipler, analiz ve entegrasyonlar birlikte çalıştığında Yapay Zekâ;
+              takımlar, analiz ve entegrasyonlar birlikte çalıştığında Yapay Zeka;
               dönemleri karşılaştırmak, olağandışı hareketleri işaretlemek,
               tahminleri desteklemek ve yönetimin bir sonraki adımda neye
-              odaklanması gerektiğini göstermek için gereken bağlama sahip olur.
+              odaklanması gerektiğini göstermek için gereken içeriğe sahip olur.
             </p>
           </div>
         )}

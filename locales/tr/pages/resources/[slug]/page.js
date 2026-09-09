@@ -26,7 +26,7 @@ export default async function ResourceArticle({ params }) {
           {item.sections.map(([title, body]) => <section key={title}><h2>{title}</h2><p>{body}</p></section>)}
           <div className="articleCallout">
             <strong>İş akışını ölçülebilir hale getirin</strong>
-            <p>Bu rehberdeki iş akışı için mevcut adımları, sorumlu rolü, tamamlanma durumunu, kaynak sistemleri ve bir başlangıç metriğini kaydedin. Ardından bu sonucu iyileştirebilecek veya daha anlaşılır hale getirebilecek en küçük PayMyDine kapsamını yapılandırın.</p>
+            <p>Bu rehberdeki iş akışı için mevcut adımları, sorumlu rolü, tamamlanma durumunu, kaynak sistemleri ve bir başlangıç ölçütünü kaydedin. Ardından bu sonucu iyileştirebilecek veya daha anlaşılır hale getirebilecek en küçük PayMyDine kapsamını yapılandırın.</p>
           </div>
         </div>
       </article>

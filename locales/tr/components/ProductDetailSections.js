@@ -43,7 +43,7 @@ export default function ProductDetailSections({ details, productName = 'Bu ürü
                 <span className="eyebrow">{details.workflowEyebrow || `${productName} iş akışı`}</span>
                 <h2>{details.workflowTitle || 'İş, ilk sinyalden tamamlanmış bir adıma nasıl ilerler?'}</h2>
               </div>
-              <p>{details.workflowIntro || 'Sorumluluk bir sonraki role geçerken restoran bağlamı her adımda korunur.'}</p>
+              <p>{details.workflowIntro || 'Sorumluluk bir sonraki role geçerken restoran içeriği her adımda korunur.'}</p>
             </div>
             <div className="howFlowGrid">
               {workflow.map(([title, body], index) => (
@@ -63,7 +63,7 @@ export default function ProductDetailSections({ details, productName = 'Bu ürü
           <div className="container companyValuesGrid">
             <div>
               <span className="eyebrow">{details.rolesEyebrow || 'Her rol ne görür?'}</span>
-              <h2>{details.rolesTitle || 'Aynı restoran bağlamı, farklı sorumluluklara göre sunulur.'}</h2>
+              <h2>{details.rolesTitle || 'Aynı restoran içeriği, farklı sorumluluklara göre sunulur.'}</h2>
               <p>{details.rolesIntro || 'Rol bazlı görünümler, restoranın birbirinden kopuk sürümlerini oluşturmadan ekran kalabalığını azaltır.'}</p>
             </div>
             <div className="companyValueCards">
@@ -84,7 +84,7 @@ export default function ProductDetailSections({ details, productName = 'Bu ürü
             <div className="sectionHeading centerHeading">
               <span className="eyebrow">{details.metricsEyebrow || 'İş akışını ölçün'}</span>
               <h2>{details.metricsTitle || 'Bir iyileşme iddia etmeden önce başlangıç değerini belirleyin.'}</h2>
-              <p>{details.metricsIntro || 'Kullanılabilen metrikler; seçilen modüllere, entegrasyonlara ve yapılandırılmış ortamdaki olay verilerine bağlıdır.'}</p>
+              <p>{details.metricsIntro || 'Kullanılabilen ölçütler; seçilen modüllere, entegrasyonlara ve yapılandırılmış ortamdaki olay verilerine bağlıdır.'}</p>
             </div>
             <div className="pricingFactorGrid">
               {metrics.map(([title, body], index) => (

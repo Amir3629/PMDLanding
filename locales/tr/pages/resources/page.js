@@ -5,7 +5,7 @@ import { Icon } from '@/locales/tr/components/Icons';
 
 export const metadata = {
   title: 'Restoran Operasyon Rehberleri ve Kaynakları',
-  description: 'PayMyDine kurulumu, rol bazlı çalışma alanları, Yapay Zekâ, müşteri yolculuğu, rezervasyon ve POS entegrasyonu için pratik rehberleri inceleyin.'
+  description: 'PayMyDine kurulumu, rol bazlı çalışma alanları, Yapay Zeka, müşteri yolculuğu, rezervasyon ve POS entegrasyonu için pratik rehberleri inceleyin.'
 };
 
 export default function ResourcesPage() {
@@ -14,12 +14,12 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Pratik kurulum rehberleri"
         title="Platformu yapılandırmadan önce kontrol listelerini, rol sorularını ve ölçülebilir iş akışı tanımlarını kullanın."
-        intro="Rehberler; 6 aşamalı kurulum yolunu, 6 rol bazlı çalışma alanını, Yapay Zekâ sorularını, 4 adımlı müşteri yolculuğunu, 7 rezervasyon özelliğini ve POS entegrasyonu planlamasını kapsar."
+        intro="Rehberler; 6 aşamalı kurulum yolunu, 6 rol bazlı çalışma alanını, Yapay Zeka sorularını, 4 adımlı müşteri yolculuğunu, 7 rezervasyon özelliğini ve POS entegrasyonu planlamasını kapsar."
         image="/site-assets/extra/friends-coffee.webp"
         compact
       />
       <section className="section resourcesSection"><div className="container resourceGrid">{resources.map((item) => <a className="resourceCard" href={`/tr/resources/${item.slug}`} key={item.slug}><div className="resourceImage"><img src={item.image} alt="" loading="lazy"/></div><div className="resourceCopy"><span>{item.category}</span><h2>{item.title}</h2><p>{item.intro}</p><b>Pratik rehberi okuyun <Icon name="arrow" size={15}/></b></div></a>)}</div></section>
-      <CTA title="Bir rehberi restoranınızdaki gerçek bir iş akışına uygulayın." body="Mevcut adımları, sorumlu rolleri, sistemleri ve başlangıç metriğini paylaşın. Rehberi pratik bir PayMyDine kapsamına uyarlayalım." />
+      <CTA title="Bir rehberi restoranınızdaki gerçek bir iş akışına uygulayın." body="Mevcut adımları, sorumlu rolleri, sistemleri ve başlangıç ölçütünü paylaşın. Rehberi pratik bir PayMyDine kapsamına uyarlayalım." />
     </>
   );
 }

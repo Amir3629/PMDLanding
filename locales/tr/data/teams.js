@@ -3,7 +3,7 @@ export const teamPages = {
     label: "İşletme Sahibi",
     eyebrow: "İşletme sahipleri için - 6 iş göstergesi",
     title: "Tüm ekip ekranlarını tek tek açmadan işletmenin genel durumunu görün.",
-    intro: "Tek bir işletme sahibi görünümünde gelir, müşteri sayısı, masa hareketliliği, rezervasyonlar, mutfak durumu ve en çok satan ürünleri inceleyin. Ardından neyin değiştiğini ve hangi metriğin daha yakından incelenmesi gerektiğini sorun.",
+    intro: "Tek bir işletme sahibi görünümünde gelir, müşteri sayısı, masa hareketliliği, rezervasyonlar, mutfak durumu ve en çok satan ürünleri inceleyin. Ardından neyin değiştiğini ve hangi ölçütün daha yakından incelenmesi gerektiğini sorun.",
     heroImage: '/site-assets/owner/1.webp',
     accent: 'green',
     highlights: [
@@ -13,26 +13,26 @@ export const teamPages = {
       ],
       [
         "Salon ve servis",
-        "Dolu masaları, masa devir hızını, açık siparişleri ve aktif servisi ekiplerden ayrı ayrı durum bilgisi istemeden takip edin."
+        "Dolu masaları, masa devir hızını, açık siparişleri ve aktif servisi takımlarden ayrı ayrı durum bilgisi istemeden takip edin."
       ],
       [
         "Mutfak ve menü",
         "Hazırlık durumunu, en çok satan ürünleri, tükenen ürün eğilimlerini ve ürün performansını işletmenin genel görünümü içinde inceleyin."
       ],
       [
-        "Yapay Zekâ destekli sorular",
+        "Yapay Zeka destekli sorular",
         "Neyin değiştiğini, hangi kategori veya şubede hareket olduğunu ve daha sonra hangi kaynak ekranının incelenmesi gerektiğini sorun."
       ]
     ],
     story: [
       {
         title: "Ekranlar arasında geçiş yapmak yerine altı temel göstergeyi tek görünümde takip edin.",
-        body: "İşletme sahibi çalışma alanı, ticari sonuçlarla günlük operasyonu aynı bağlamda gösterir. Böylece üst düzey bir sonuçtan ilgili masalara, kanallara, ürünlere veya dönemlere ilerlemek mümkün olur.",
+        body: "İşletme sahibi çalışma alanı, ticari sonuçlarla günlük operasyonu aynı içerikte gösterir. Böylece üst düzey bir sonuçtan ilgili masalara, kanallara, ürünlere veya dönemlere ilerlemek mümkün olur.",
         image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
       },
       {
         title: "Bir sonucu, doğru takip sorusuna dönüştürün.",
-        body: "Yapay Zekâ desteği mevcut dönemleri veya şubeleri karşılaştırabilir ve olağan dışı değişimleri özetleyebilir. Kaynak veriyi doğrulamak ve alınacak kararı belirlemek ise işletme sahibinde kalır.",
+        body: "Yapay Zeka desteği mevcut dönemleri veya şubeleri karşılaştırabilir ve olağan dışı değişimleri özetleyebilir. Kaynak veriyi doğrulamak ve alınacak kararı belirlemek ise işletme sahibinde kalır.",
         image: '/site-assets/extra/manager-analytics.webp'
       }
     ],
@@ -56,7 +56,7 @@ export const teamPages = {
     highlights: [
       [
         "Salon durumu",
-        "Canlı salon planı üzerinde dolu, uygun, bekleyen ve ödeme aşamasındaki masaları görün."
+        "Canlı servis alanı planı üzerinde dolu, uygun, bekleyen ve ödeme aşamasındaki masaları görün."
       ],
       [
         "Açık siparişler",
@@ -107,7 +107,7 @@ export const teamPages = {
       ],
       [
         "Siparişler ve notlar",
-        "Sipariş edilen ürünleri, ürün seçeneklerini, alerji bilgilerini ve servis notlarını masa bağlamıyla birlikte tutun."
+        "Sipariş edilen ürünleri, ürün seçeneklerini, alerji bilgilerini ve servis notlarını masa içeriğiyle birlikte tutun."
       ],
       [
         "Müşteri talepleri",
@@ -141,7 +141,7 @@ export const teamPages = {
   },
 
   kitchen: {
-    label: "Mutfak ve KDS",
+    label: "Mutfak ve Mutfak Ekran Sistemi (KDS)",
     eyebrow: "Mutfak için - 4 sipariş durumu",
     title: "Her mutfak fişini alındı durumundan hazırlanmaya, hazır olmaya ve servis ekibine devredilmeye kadar takip edin.",
     intro: "Mutfak çalışma alanı ürün ayrıntılarını, seçenekleri, süreleri ve dört görünür sipariş durumunu tek hazırlık kuyruğunda tutar; gereksiz salon veya yönetim kontrollerini mutfak ekranına taşımaz.",
@@ -150,7 +150,7 @@ export const teamPages = {
     highlights: [
       [
         "Odaklı hazırlık kuyruğu",
-        "Yapılandırılmış KDS'de bulunan bilgilere göre gelen işleri süre, istasyon, servis sırası veya önceliğe göre düzenleyin."
+        "Yapılandırılmış Mutfak Ekran Sistemi (KDS)'de bulunan bilgilere göre gelen işleri süre, istasyon, servis sırası veya önceliğe göre düzenleyin."
       ],
       [
         "Ürün ve seçenek ayrıntıları",
@@ -167,7 +167,7 @@ export const teamPages = {
     ],
     story: [
       {
-        title: "İyi bir KDS, önceliği ve tamamlanma durumunu ilk bakışta anlaşılır kılar.",
+        title: "İyi bir Mutfak Ekran Sistemi (KDS), önceliği ve tamamlanma durumunu ilk bakışta anlaşılır kılar.",
         body: "Mutfak ekibi neyin hazırlanacağını, hangi özel seçeneklerin bulunduğunu, siparişin ne kadar süredir beklediğini ve sıradaki durumun ne olduğunu hızla görebilmelidir.",
         image: '/site-assets/kitchen/2.webp'
       },
@@ -238,7 +238,7 @@ export const teamPages = {
     label: "Finans ve Raporlama",
     eyebrow: "Finans için - 6 raporlama görünümü",
     title: "Gelir ve ödeme sonuçlarını, bu sonuçları oluşturan restoran hareketlerine kadar izleyin.",
-    intro: "Gelir, kategori satışları, ödeme hareketleri, ortalama hesap tutarı, en çok satan ürünler ve dönem karşılaştırmalarını kullanarak operasyon bağlamını kaybetmeden daha anlaşılır raporlar oluşturun.",
+    intro: "Gelir, kategori satışları, ödeme hareketleri, ortalama hesap tutarı, en çok satan ürünler ve dönem karşılaştırmalarını kullanarak operasyon içeriğini kaybetmeden daha anlaşılır raporlar oluşturun.",
     heroImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
     accent: 'green',
     highlights: [
@@ -255,7 +255,7 @@ export const teamPages = {
         "Hangi menü kategorilerinin veya ürünlerin gelire katkıda bulunduğunu ve hangi kârlılık sorularının daha ayrıntılı inceleme gerektirdiğini görün."
       ],
       [
-        "Yapay Zekâ destekli karşılaştırma",
+        "Yapay Zeka destekli karşılaştırma",
         "Dönem veya şube değişimlerini özetleyin ve finans ekibinin daha sonra doğrulaması gereken kaynak raporu belirleyin."
       ]
     ],
@@ -266,8 +266,8 @@ export const teamPages = {
         image: '/site-assets/extra/tablet-dashboard.webp'
       },
       {
-        title: "Yapay Zekâyı cevabı onaylamak için değil, doğru finans sorusunu oluşturmak için kullanın.",
-        body: "Yapay Zekâ desteği mevcut verileri karşılaştırabilir ve özetleyebilir. Kaynağı, muhasebe uygulamasını ve nihai yorumu doğrulamak finans ekibinin sorumluluğunda kalır.",
+        title: "Yapay Zekayı cevabı onaylamak için değil, doğru finans sorusunu oluşturmak için kullanın.",
+        body: "Yapay Zeka desteği mevcut verileri karşılaştırabilir ve özetleyebilir. Kaynağı, muhasebe uygulamasını ve nihai yorumu doğrulamak finans ekibinin sorumluluğunda kalır.",
         image: '/site-assets/extra/analytics-tablet-phone.webp'
       }
     ],

@@ -2,8 +2,8 @@ import PageHero from '@/locales/tr/components/PageHero';
 import CTA from '@/locales/tr/components/CTA';
 
 export const metadata = {
-  title: 'Restoran Yazılımı Fiyatlandırması',
-  description: 'PayMyDine fiyatlandırmasını şube, ürün alanı, rol, entegrasyon ve kurulum kapsamınıza göre değerlendirin.'
+  title: 'Restoran Yazılımı Fiyatlaması',
+  description: 'PayMyDine Fiyatlamasını şube, ürün alanı, rol, entegrasyon ve kurulum kapsamınıza göre değerlendirin.'
 };
 
 const factors = [

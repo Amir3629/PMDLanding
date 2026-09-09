@@ -8,7 +8,7 @@ const steps = [
     icon: 'operations'
   },
   {
-    title: 'Bağlam işleme eklenir',
+    title: 'İçerik işleme eklenir',
     body: 'Masa, müşteri, sipariş, zamanlama, notlar ve yetkiler yeniden girilmek yerine işlemle birlikte ilerler.',
     icon: 'table'
   },
@@ -19,12 +19,12 @@ const steps = [
   },
   {
     title: 'Servis ve ödeme tamamlanır',
-    body: 'Hazırlık, hazır durumu, sorumluluk devri ve ödeme aynı restoran bağlamından devam eder; üç farklı hesap bölme yöntemi de bu akışın içindedir.',
+    body: 'Hazırlık, hazır durumu, sorumluluk devri ve ödeme aynı restoran içeriğinden devam eder; üç farklı hesap bölme yöntemi de bu akışın içindedir.',
     icon: 'card'
   },
   {
-    title: 'Operasyon verisi içgörüye ve Yapay Zekâ desteğine dönüşür',
-    body: 'Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, ödeme yöntemi dağılımı, tahminler ve kârlılık; raporlama, karşılaştırma, olağandışı hareket incelemesi ve Yapay Zekâ destekli sorular için kullanılabilir hale gelir.',
+    title: 'Operasyon verisi içgörüye ve Yapay Zeka desteğine dönüşür',
+    body: 'Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, ödeme yöntemi dağılımı, tahminler ve kârlılık; raporlama, karşılaştırma, olağandışı hareket incelemesi ve Yapay Zeka destekli sorular için kullanılabilir hale gelir.',
     icon: 'chart'
   }
 ];
@@ -37,20 +37,20 @@ export default function Workflow({ variant = 'home' }) {
       <div className="container workflowShowcase">
         <div className="workflowShowcaseCopy">
           <span className="eyebrow">
-            5 adımlı operasyon akışı + Yapay Zekâ incelemesi
+            5 adımlı operasyon akışı + Yapay Zeka incelemesi
           </span>
 
           <h2>
-            Restorandaki her işlem bir bağlam oluşturur.
-            PayMyDine bu bağlamı bağlantılı tutar; böylece hem sonraki rol
-            hem de Yapay Zekâ ne olduğunu anlayabilir.
+            Restorandaki her işlem bir içerik oluşturur.
+            PayMyDine bu içeriği bağlantılı tutar; böylece hem sonraki rol
+            hem de Yapay Zeka ne olduğunu anlayabilir.
           </h2>
 
           <p>
-            Aynı bağlam, müşteri veya ekip işlemiyle başlayıp hazırlık, servis ve
-            ödeme üzerinden raporlamaya kadar ilerler. PayMyDine Yapay Zekâ;
+            Aynı içerik, müşteri veya ekip işlemiyle başlayıp hazırlık, servis ve
+            ödeme üzerinden raporlamaya kadar ilerler. PayMyDine Yapay Zeka;
             dönemi özetlemeye, sonuçları karşılaştırmaya, olağandışı hareketleri
-            öne çıkarmaya ve yönetimin bir sonraki adımda hangi metriği veya
+            öne çıkarmaya ve yönetimin bir sonraki adımda hangi ölçütü veya
             kaynak görünümü incelemesi gerektiğini belirlemeye yardımcı olabilir.
           </p>
         </div>

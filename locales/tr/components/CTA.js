@@ -2,8 +2,8 @@ import { Icon } from './Icons';
 
 export default function CTA({
   title = "PayMyDine'ı işletmenize nasıl uyarlayabileceğimizi görmeye hazır mısınız?",
-  body = 'Kullandığınız araçları, ekip rollerini, sorumluluk devirlerini ve operasyon metriklerini paylaşın. Hangi ürün alanlarının tekrarlanan işi azaltacağını, hangi sistemlerin bağlı kalması gerektiğini birlikte belirleyelim.',
-  primaryLabel = 'Demo Talep Edin',
+  body = 'Kullandığınız araçları, ekip rollerini, sorumluluk devirlerini ve operasyon ölçütlerini paylaşın. Hangi ürün alanlarının tekrarlanan işi azaltacağını, hangi sistemlerin bağlı kalması gerektiğini birlikte belirleyelim.',
+  primaryLabel = 'Tanıtım talep et',
   primaryHref = '/tr/contact',
   secondaryLabel = 'Nasıl Çalışır?',
   secondaryHref = '/tr/how-it-works'

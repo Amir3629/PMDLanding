@@ -43,7 +43,7 @@ export default function CookieNotice() {
       <span className="cookieNoticeEyebrow">Çerez tercihleri</span>
       <h2>Bu sitenin çerezleri nasıl kullanacağını seçin.</h2>
       <p>
-        Site tercihlerini saklamak için gerekli tarayıcı depolamasını kullanıyoruz. Analiz özelliği etkin olduğunda site kullanımını anlamamıza yardımcı olması için isteğe bağlı analiz çerezlerine de izin verebilirsiniz.
+        Site tercihlerini saklamak için temel tarayıcı depolamasını kullanıyoruz. Analiz özelliği etkin olduğunda site kullanımını anlamamıza yardımcı olması için isteğe bağlı analiz çerezlerine de izin verebilirsiniz.
       </p>
       <div className="cookieNoticeActions">
         <button className="cookieNoticeSecondary" type="button" onClick={() => choose('necessary')}>

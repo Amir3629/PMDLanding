@@ -8,8 +8,8 @@ import CTA from '@/locales/tr/components/CTA';
 import SiteStructuredData from '@/components/SiteStructuredData';
 
 export const metadata = {
-  title: 'Yapay Zekâ Destekli Restoran Yönetim Yazılımı',
-  description: 'PayMyDine; rezervasyon, sipariş, mutfak, ödeme, müşteri CRM’i, analiz ve Yapay Zekâ destekli kararları tek bir restoran yönetim platformunda birleştirir.'
+  title: 'Yapay Zeka Destekli Restoran Yönetim Yazılımı',
+  description: 'PayMyDine rezervasyonları, siparişleri, mutfağı, ödemeleri, Müşteri İlişkileri Yönetimini, analizleri ve YZ destekli kararları tek bir restoran yönetim platformunda birleştirir.'
 };
 
 export default function HomePage() {
@@ -25,9 +25,9 @@ export default function HomePage() {
       <FlexibilityAndIntegrationSections />
       <LifestyleMarquee />
       <CTA
-        title="PayMyDine Yapay Zekâ’nın işletmenizdeki 9 bağlantılı ürün alanıyla nasıl çalıştığını görün."
-        body="Ekip rollerinizi, salon yapınızı, müşteri yolculuğunuzu, mevcut sistemlerinizi ve yönetimin her gün sorduğu soruları paylaşın. En küçük pratik kurulumu birlikte belirleyelim; Yapay Zekâ’nın mevcut verinizden hangi sinyalleri özetleyebileceğini, karşılaştırabileceğini, işaretleyebileceğini veya tahminleri desteklemek için kullanabileceğini gösterelim."
-        secondaryLabel="Yapay Zekâyı Keşfedin"
+        title="PayMyDine Yapay Zeka’nın işletmenizdeki 9 bağlantılı ürün alanıyla nasıl çalıştığını görün."
+        body="Ekip rollerinizi, salon yapınızı, müşteri yolculuğunuzu, mevcut sistemlerinizi ve yönetimin her gün sorduğu soruları paylaşın. En küçük pratik kurulumu birlikte belirleyelim; Yapay Zeka’nın mevcut verinizden hangi sinyalleri özetleyebileceğini, karşılaştırabileceğini, işaretleyebileceğini veya tahminleri desteklemek için kullanabileceğini gösterelim."
+        secondaryLabel="Yapay Zekayı Keşfedin"
         secondaryHref="/tr/ai"
       />
     </>

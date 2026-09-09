@@ -13,7 +13,7 @@ export default function Hero() {
           </span>
 
           <h1 className="pmdGrowthHeroTitle">
-            Yapay Zekâ Destekli
+            Yapay Zeka Destekli
             <br />
             İşletme Büyümesi.
             <br />
@@ -27,32 +27,32 @@ export default function Hero() {
           </h1>
 
           <p className="heroText">
-            PayMyDine; rezervasyon, sipariş, mutfak, ödeme ve ekip iş akışlarını
+            PayMyDine; rezervasyonları, siparişleri, mutfağı, ödeme ve takım iş akışlarını
             otomatikleştirmeye, her masayı ve müşteri yolculuğunu daha verimli
-            yönetmeye, CRM ile analitiği tek bir canlı operasyon görünümünde
-            birleştirmeye yardımcı olur. Yapay Zekâ destekli içgörüler dikkat
-            gerektiren noktaları öne çıkarır; manuel işi ve bekleme sürelerini
+            yönetmeye, MİY ile analitiği tek bir canlı operasyon görünümünde
+            birleştirmeye yardımcı olur. Yapay Zeka destekli iç görüler dikkat
+            gerektiren noktaları öne çıkarır; bedensel işi ve bekleme sürelerini
             azaltmaya, servisi hızlandırmaya, masa devir hızını ve müşteri
             deneyimini iyileştirmeye ve gelir artışını desteklemeye yardımcı olur.
           </p>
 
           <div className="heroButtons">
             <a className="button" href="/tr/contact">
-              Demo Talep Edin <Icon name="arrow" size={18}/>
+              Tanıtım talep et <Icon name="arrow" size={18}/>
             </a>
 
             <a className="button buttonGhost" href="/tr/ai">
               <Icon name="play" size={18}/>
-              Yapay Zekâyı Keşfedin
+              Yapay Zekayı Keşfedin
             </a>
           </div>
 
           <div className="heroProof">
             {[
               'Birbirine bağlı 9 ürün alanı',
-              '6 Yapay Zekâ destekli işlem',
+              '6 Yapay Zeka destekli işlem',
               '6 rol bazlı çalışma alanı',
-              'Kaynak veriye dayalı Yapay Zekâ incelemesi'
+              'Kaynak veriye dayalı Yapay Zeka incelemesi'
             ].map((item) => (
               <span key={item}>
                 <Icon name="check" size={15}/>

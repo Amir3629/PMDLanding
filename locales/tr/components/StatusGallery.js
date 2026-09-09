@@ -7,19 +7,19 @@ export function StatusGallery() {
         <div className="splitHeading">
           <div>
             <span className="eyebrow">
-              Canlı durum verisi, Yapay Zekâ bağlamına dönüşür
+              Canlı durum verisi, Yapay Zeka içeriğine dönüşür
             </span>
 
             <h2>
               Masa, sipariş ve ödeme durumunu gerçek zamanlı olarak bağlantılı tutun;
-              ardından Yapay Zekâ ile istisnaların arkasındaki nedeni inceleyin.
+              ardından Yapay Zeka ile istisnaların arkasındaki nedeni inceleyin.
             </h2>
           </div>
 
           <p>
             Müşteriler, servis personeli, mutfak ve ödeme süreçleri farklı ekranlar
             kullanır; ancak tüm hareketler aynı operasyon görünümüne katkı sağlar.
-            Böylece yönetim, raporlama, karşılaştırma ve Yapay Zekâ destekli inceleme
+            Böylece yönetim, raporlama, karşılaştırma ve Yapay Zeka destekli inceleme
             için daha net kaynak veriye ulaşır.
           </p>
         </div>

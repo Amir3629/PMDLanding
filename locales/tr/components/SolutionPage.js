@@ -34,7 +34,7 @@ export default function SolutionPage({ page }) {
         <div className="container capabilityPanel">
           <div>
             <span className="eyebrow">{page.capabilityEyebrow || 'Ekip neler yapabilir?'}</span>
-            <h2>{page.capabilityTitle || 'Gerekli işlemleri ve metrikleri tek bir iş akışında tutun.'}</h2>
+            <h2>{page.capabilityTitle || 'Gerekli işlemleri ve ölçütleri tek bir iş akışında tutun.'}</h2>
             {page.capabilityBody && <p>{page.capabilityBody}</p>}
           </div>
           <div className="capabilityList">{page.bullets.map((item) => <span key={item}><Icon name="check" size={16}/>{item}</span>)}</div>

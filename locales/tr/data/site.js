@@ -2,10 +2,10 @@ export const productAreas = [
   {
     number: 1,
     icon: 'chart',
-    title: 'PayMyDine Yapay Zekâ',
+    title: 'PayMyDine Yapay Zeka',
     href: '/tr/ai',
-    body: '6 Yapay Zekâ destekli işlem kullanın: soru sorun, günlük özet alın, olağandışı hareketleri işaretleyin, dönemleri karşılaştırın, tahminleri destekleyin ve bir sonraki incelenecek metriği belirleyin.',
-    navNote: 'Sorular, günlük özetler, uyarılar, karşılaştırmalar, tahminler ve inceleme için 6 işlem.',
+    body: '6 Yapay Zeka destekli işlem kullanın: soru sorun, günlük özet alın, olağandışı hareketleri işaretleyin, dönemleri karşılaştırın, tahminleri destekleyin ve bir sonraki inceleme ölçütünü belirleyin.',
+    navNote: 'Özetler, uyarılar, karşılaştırmalar, tahminler ve incelemeler için 6 aksiyon.',
     image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
     compactImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
   },
@@ -14,8 +14,8 @@ export const productAreas = [
     icon: 'operations',
     title: 'Restoran Operasyonları',
     href: '/tr/solutions/operations',
-    body: '6 canlı görünümü takip edin: gösterge paneli, açık siparişler, masa durumu, salon planları, salonda servis veya paket servis ve güncel restoran hareketleri.',
-    navNote: 'Siparişler, masalar, salon planları, kanallar ve aktif servis için 6 canlı görünüm.',
+    body: '6 canlı görünümü takip edin: gösterge paneli, açık siparişler, masa durumu, servis alanı planları, iş yerinde servis veya paket servis ve anlık iş yeri hareketleri.',
+    navNote: 'Siparişler, masalar, servis alanı planları, kanallar ve aktif servis için 6 canlı görünüm.',
     image: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
     compactImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp'
   },
@@ -24,8 +24,8 @@ export const productAreas = [
     icon: 'calendar',
     title: 'Rezervasyon ve Masa Yönetimi',
     href: '/tr/solutions/reservations',
-    body: '7 rezervasyon ve oturma aracını kullanın: takvim, zaman çizelgesi, müsaitlik, rezervasyonsuz müşteriler, masa atama, müşteri akışı ve çok katlı salon yönetimi.',
-    navNote: 'Gelişler, kapasite, oturma, rezervasyonsuz müşteriler ve çok katlı salonlar için 7 planlama aracı.',
+    body: '7 rezervasyon ve oturma aracını kullanın: takvim, zaman çizelgesi, müsaitlik, rezervasyonsuz müşteriler, masa atama, müşteri akışı ve çok katlı iş yeri.',
+    navNote: 'Gelişler, kapasite, oturma, rezervasyonsuz müşteriler ve çok katlı servis alanları için 7 planlama aracı.',
     image: '/site-assets/table/1.webp',
     compactImage: '/site-assets/table/2.webp'
   },
@@ -34,8 +34,8 @@ export const productAreas = [
     icon: 'kitchen',
     title: 'Sipariş, Mutfak ve Menü',
     href: '/tr/solutions/kitchen',
-    body: 'Siparişleri 7 kontrolle yönetin: garson sipariş girişi, KDS, hazırlık durumu, hazır durumu, menü yönetimi, ürün seçenekleri ve tükenen ürünler.',
-    navNote: 'Sipariş girişinden servise hazır devrine kadar 7 sipariş, mutfak ve menü kontrolü.',
+    body: 'Siparişleri 7 kontrolle yönetin: garson sipariş girişi, Mutfak Ekran Sistemi (KDS), hazırlık durumu, hazır durumu, menü yönetimi, ürün seçenekleri ve tükenen ürünler.',
+    navNote: 'Sipariş girişinden servis aşamasına kadar 7 adet sipariş, mutfak ve menü kontrolü.',
     image: '/site-assets/extra/chef-warm-kitchen.webp',
     compactImage: '/site-assets/kitchen/2.webp'
   },
@@ -44,7 +44,7 @@ export const productAreas = [
     icon: 'card',
     title: 'Ödemeler ve Müşteri Siparişi',
     href: '/tr/solutions/payments',
-    body: 'Masa QR kodu, mobil menü, masada ödeme ve 3 hesap bölme yöntemi dahil 8 müşteri sipariş ve ödeme adımını yönetin: eşit bölme, ürünlere göre bölme veya paylara göre bölme.',
+    body: '8 müşteri sipariş ve ödeme adımını yönetin: Masa QR kodu, mobil menü, masada ödeme ve 3 hesap bölme yöntemi dahil eşit bölme, ürünlere göre bölme veya paylara göre bölme.',
     navNote: '3 hesap bölme yöntemi dahil 8 sipariş ve ödeme adımı.',
     image: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
     compactImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp'
@@ -54,28 +54,28 @@ export const productAreas = [
     icon: 'chart',
     title: 'Analiz, Tahmin ve Kârlılık',
     href: '/tr/solutions/insights',
-    body: '9 karar metriğini izleyin: gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, zamana göre satış, en çok satan ürünler, ödeme yöntemi dağılımı, tahmin ve kârlılık.',
-    navNote: 'Gelir, talep, masa performansı, tahminler ve kârlılık için 9 metrik.',
+    body: '9 karar ölçütünü izleyin: gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, zamana göre satış, en çok satan ürünler, ödeme yöntemi dağılımı, tahmin ve kârlılık.',
+    navNote: 'Gelir, talep, masa performansı, tahminler ve kârlılık için 9 ölçüm.',
     image: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp',
     compactImage: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp'
   },
   {
     number: 7,
     icon: 'team',
-    title: 'Ekip Yönetimi',
+    title: 'Takım Yönetimi',
     href: '/tr/solutions/team',
-    body: '5 ekip kontrolünü yönetin: rol bazlı çalışma alanları, yetkiler, vardiyalar, performans bağlamı ve personel hareketleri.',
-    navNote: 'Çalışma alanları, yetkiler, vardiyalar ve personel hareketleri için 5 ekip kontrolü.',
+    body: '5 kontrolü yönetin: rol bazlı çalışma alanları, yetkiler, vardiyalar, performans içeriği ve personel hareketleri.',
+    navNote: 'Çalışma alanları, yetkiler, vardiyalar ve personel hareketleri için 5 kontrol.',
     image: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp',
     compactImage: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp'
   },
   {
     number: 8,
     icon: 'phone',
-    title: "Müşteri CRM'i, Pazarlama ve Büyüme",
+    title: "Müşteri İlişkileri Yönetimi (MİY), Pazarlama ve Büyüme",
     href: '/tr/solutions/guest-ordering',
-    body: '6 büyüme aracını kullanın: profiller, sadakat, teklifler, kampanyalar, geri bildirim ve müşteri bağlılığı. Uygun durumlarda ziyaret bağlamını ilgili takip iletişimlerinde kullanın.',
-    navNote: 'Müşteri bağlamı, etkileşim ve bağlılık için 6 CRM ve büyüme aracı.',
+    body: '6 büyüme aracını kullanın: profiller, sadakat, teklifler, kampanyalar, geri bildirim ve müşteri bağlılığı. Uygun durumlarda ziyaret içeriğini ilgili takip iletişimlerinde kullanın.',
+    navNote: 'Müşteri içeriği, etkileşim ve bağlılık için 6 MİY ve büyüme aracı.',
     image: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp',
     compactImage: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp'
   },
@@ -84,8 +84,8 @@ export const productAreas = [
     icon: 'link',
     title: 'Entegrasyonlar, Çoklu Şube ve Stok',
     href: '/tr/integrations',
-    body: '4 sistem türünü bağlayın — POS, muhasebe, teslimat ve ödemeler — ardından merkezi raporlama, ortak menüler, stok, gıda maliyeti ve satın alma bağlamını ekleyin.',
-    navNote: '4 entegrasyon türüne ek olarak merkezi raporlama, menüler, stok, gıda maliyeti ve satın alma.',
+    body: '4 sistem türünü bağlayın — POS, muhasebe, teslimat ve ödemeler — ardından merkezi raporlama, ortak menüler, stok, gıda maliyeti ve satın alma içeriğini ekleyin.',
+    navNote: '4 entegrasyon tipine ek olarak merkezi raporlama, menüler, stok, gıda maliyeti ve satın alma.',
     image: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp',
     compactImage: '/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp'
   }
@@ -110,13 +110,13 @@ export const primaryNav = [
         links: [productLink(3), productLink(4), productLink(5)]
       },
       {
-        title: 'Ekipler, müşteriler ve büyüme',
+        title: 'Takımlar, müşteriler ve ölçek',
         links: [productLink(6), productLink(7), productLink(8)]
       }
     ]
   },
   { label: 'Entegrasyonlar', href: '/tr/integrations' },
-  { label: 'Fiyatlandırma', href: '/tr/pricing' },
+  { label: 'Fiyatlama', href: '/tr/pricing' },
   { label: 'Şirket', href: '/tr/company' }
 ];
 
@@ -137,24 +137,24 @@ export const homeStatusCards = [
   },
   {
     image: '/site-assets/comments/5.webp',
-    eyebrow: 'Ekip durumu',
+    eyebrow: 'Takım durumu',
     title: 'Sipariş durumu, bir sonraki adımdan sorumlu role aktarılır.',
-    body: 'Servis personeli servis durumunu, mutfak hazırlık durumunu, yönetim ise aynı sipariş bağlamındaki istisnaları görür.'
+    body: 'Servis personeli servis durumunu, mutfak hazırlık durumunu, yönetim ise aynı sipariş içeriğindeki istisnaları görür.'
   },
   {
     image: '/site-assets/comments/10.webp',
     eyebrow: 'Masa QR siparişi ve ödeme',
-    title: 'Masa QR kodunu tarayın; masa bağlamını kaybetmeden inceleyin, sipariş verin ve ödeyin.',
+    title: 'Masa QR kodunu tarayın; masa içeriğini kaybetmeden inceleyin, sipariş verin ve ödeyin.',
     body: 'Müşteri masa QR kodunu tarayarak mobil menüyü açar, siparişini verir ve ödemeyi tamamlar. PayMyDine ise masa, sipariş, hesap ve ödeme durumunu ekip için bağlantılı tutar.'
   }
 ];
 
 export const workflowSteps = [
-  ['Müşteri veya ekip işlemi', 'Bir müşteri QR kodunu tarar, karşılama ekibi rezervasyonu masaya yerleştirir, servis personeli sipariş açar veya yönetici masa durumunu değiştirir.'],
-  ['Restoran bağlamı', 'Masa, müşteri, sipariş, zamanlama, notlar ve yetkiler işlemle birlikte ilerler.'],
-  ['Role göre işlem', 'Sorumlu rol, bir sonraki adım için gereken bağlam ve kontrollerle odaklanmış bir iş listesi alır.'],
-  ['Servis ve ödeme', 'Hazırlık, hazır durumu, sorumluluk devri ve ödeme aynı restoran bağlamından devam eder.'],
-  ['İçgörü ve destek', 'Gelir, müşteri, masa, satış ve kârlılık verileri raporlama ve Yapay Zekâ destekli sorular için kullanılabilir hale gelir.']
+  ['Müşteri veya ekip işlemi', 'Misafir masa QR kodunu tarar, resepsiyon rezervasyonu kaydeder, servis personeli siparişi açar veya yönetici masa durumunu değiştirir.'],
+  ['Restoran içeriği', 'Masa, müşteri, sipariş, zamanlama, notlar ve yetkiler işlemle birlikte ilerler.'],
+  ['Role göre işlem', 'Sorumlu rol, bir sonraki adım için gereken içerik ve kontrollerle odaklanmış bir iş listesi alır.'],
+  ['Servis ve ödeme', 'Hazırlık, mevcut durum, sorumluluk devri ve ödeme aynı restoran içeriğinden devam eder.'],
+  ['İçgörü ve destek', 'Gelir, müşteri, masa, satış ve kârlılık verileri raporlama ve Yapay Zeka destekli sorular için kullanılabilir hale gelir.']
 ];
 
 export const imageGroups = {
@@ -172,20 +172,20 @@ export const solutionPages = {
   operations: {
     eyebrow: 'Restoran Operasyonları',
     title: 'Masaları, siparişleri ve istisnaları servis sorununa dönüşmeden görün.',
-    intro: '6 canlı görünümü — gösterge paneli, açık siparişler, masa durumu, salon planları, salonda servis veya paket servis ve güncel hareketler — kullanarak neyin aktif, neyin beklemede olduğunu ve vardiyada hangi alanın dikkat gerektirdiğini anlayın.',
+    intro: '6 canlı görünümü — gösterge paneli, açık siparişler, masa durumu, servis alanı planları, salonda servis veya paket servis ve güncel hareketler — kullanarak neyin aktif, neyin beklemede olduğunu ve vardiyada hangi alanın dikkat gerektirdiğini anlayın.',
     storyEyebrow: 'Restoran operasyonları',
     capabilityEyebrow: '6 canlı operasyon görünümü',
     capabilityTitle: 'Restoranın durumunu ayrı ekranlardan yeniden oluşturmadan kontrol edin.',
-    capabilityBody: 'Yöneticiler açık siparişleri, dolu masaları, sipariş kanallarını, salon konumunu ve canlı istisnaları aynı operasyon bağlamından inceleyebilir.',
+    capabilityBody: 'Yöneticiler açık siparişleri, dolu masaları, sipariş kanallarını, salon konumunu ve canlı istisnaları aynı operasyon içeriğinden inceleyebilir.',
     ctaTitle: 'Restoran Operasyonları kapsamındaki 6 görünümü kendi servis akışınızda inceleyin.',
-    ctaBody: 'Salon planınızı, sipariş kanallarınızı ve yönetim sorularınızı paylaşın. Gösterge paneli, masalar, siparişler ve canlı hareketlerin birlikte nasıl çalıştığını gösterelim.',
+    ctaBody: 'Servis alanı planınızı, sipariş kanallarınızı ve yönetim sorularınızı paylaşın. Gösterge paneli, masalar, siparişler ve canlı hareketlerin birlikte nasıl çalıştığını gösterelim.',
     heroImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
     accent: 'green',
     highlights: [
       ['Gösterge paneli', 'Genel bir özet yerine aktif masalar, açık siparişler, satışlar ve istisnalarla başlayın.'],
       ['Siparişler', 'Açık, geciken veya tamamlanan siparişleri filtreleyin; her siparişi ilgili masa ve kanalla bağlantılı tutun.'],
       ['Masalar', 'Dolu, müsait ve ödeme aşamasındaki masaları servis durumuyla birlikte görün.'],
-      ['Salon planları', 'Masaları, rezervasyonları ve servis yoğunluğunu fiziksel salon düzeni üzerinde görün.']
+      ['Servis alanı planları', 'Masaları, rezervasyonları ve servis yoğunluğunu fiziksel salon düzeni üzerinde görün.']
     ],
     story: [
       {
@@ -195,11 +195,11 @@ export const solutionPages = {
       },
       {
         title: 'Salonda servis ve paket servisi ayrı izleyin, ancak operasyonu bağlantılı tutun.',
-        body: 'Her kanal kendi masa veya sipariş bağlamını korurken aynı canlı iş yüküne ve raporlama görünümüne katkı sağlar.',
+        body: 'Her kanal kendi masa veya sipariş içeriğini korurken aynı canlı iş yüküne ve raporlama görünümüne katkı sağlar.',
         image: '/site-assets/extra/restaurant-team-planning.webp'
       }
     ],
-    bullets: ['Gösterge paneli', 'Siparişler', 'Masalar', 'Salon planları', 'Salonda servis / paket servis', 'Canlı hareketler']
+    bullets: ['Gösterge paneli', 'Siparişler', 'Masalar', 'Servis alanı planları', 'Salonda servis / paket servis', 'Canlı hareketler']
   },
   reservations: {
     eyebrow: 'Rezervasyon ve Masa Yönetimi',
@@ -210,7 +210,7 @@ export const solutionPages = {
     capabilityTitle: 'Takvim ve zaman çizelgesiyle önceden planlayın; müsaitlik ve masa atamayla canlı servisi yönetin.',
     capabilityBody: 'Karşılama ekibi; kişi sayısı, geliş saati, müsait masalar, beklenen masa dönüşü, rezervasyonsuz müşteriler ve salon konumunu kullanarak bir sonraki oturma kararını verebilir.',
     ctaTitle: 'Rezervasyon ve Masa Yönetimini iş başında görmek ister misiniz?',
-    ctaBody: 'Demo sırasında takvimleri, gelişleri, masa atamayı, rezervasyonsuz müşterileri ve çok katlı salon yapılarını birlikte inceleyelim.',
+    ctaBody: 'Tanıtım sırasında takvimleri, gelişleri, masa atamayı, rezervasyonsuz müşterileri ve çok katlı salon yapılarını birlikte inceleyelim.',
     heroImage: '/site-assets/extra/host-stand.webp',
     accent: 'blue',
     highlights: [
@@ -227,21 +227,21 @@ export const solutionPages = {
       },
       {
         title: 'Rezervasyon listesini canlı bir oturma planına dönüştürün.',
-        body: 'Müsaitlik, rezervasyonsuz müşteriler, beklenen masa dönüşleri ve çok katlı masa atama rezervasyon bağlamıyla birlikte kalır.',
+        body: 'Müsaitlik, rezervasyonsuz müşteriler, beklenen masa dönüşleri ve çok katlı masa atama rezervasyon içeriğiyle birlikte kalır.',
         image: '/site-assets/custom/reservations-floor-story.webp'
       }
     ],
     bullets: ['Takvim', 'Zaman çizelgesi', 'Müsaitlik', 'Rezervasyonsuz müşteriler', 'Masa atama', 'Müşteri akışı', 'Çok katlı salonlar']
   },
   'guest-ordering': {
-    eyebrow: "Müşteri CRM'i, Pazarlama ve Büyüme",
+    eyebrow: "Müşteri İlişkileri Yönetimi (MİY), Pazarlama ve Büyüme",
     title: 'Ziyaret, sipariş ve geri bildirimlerden kullanılabilir bir müşteri kaydı oluşturun.',
     intro: '6 büyüme aracını — profiller, sadakat, teklifler, kampanyalar, geri bildirim ve müşteri bağlılığı — kullanarak etkileşimi anlayın ve izinlerle veri kurallarının uygun olduğu durumlarda ilgili takip iletişimini planlayın.',
     storyEyebrow: 'Müşteri ilişkileri',
-    capabilityEyebrow: '6 CRM ve büyüme aracı',
+    capabilityEyebrow: '6 MİY ve büyüme aracı',
     capabilityTitle: 'Anonim bir ziyaretten anlamlı ve ilgili bir takip iletişimine geçin.',
     capabilityBody: 'Profiller; ziyaret geçmişi, sipariş tercihleri, sadakat hareketleri, kampanya yanıtları ve geri bildirimi bir araya getirerek sonraki iletişime net bir neden kazandırabilir.',
-    ctaTitle: "Müşteri CRM'i, Pazarlama ve Büyümeyi incelemek ister misiniz?",
+    ctaTitle: "Müşteri İlişkileri Yönetimi (MİY), Pazarlama ve Büyümeyi incelemek ister misiniz?",
     ctaBody: 'Profilleri, sadakati, teklifleri, kampanyaları, geri bildirimi ve müşteri bağlılığını destekleyebilecek sinyalleri birlikte inceleyebiliriz.',
     heroImage: '/site-assets/custom/page-heroes/solutions-guest-ordering-hero-chatgpt-20260814.webp',
     accent: 'green',
@@ -249,7 +249,7 @@ export const solutionPages = {
       ['Profiller', 'Müşteri ilişkisini daha anlamlı hale getirmek için yararlı bilgileri tek yerde tutun.'],
       ['Sadakat', 'Müşteri etkileşimini daha net görerek tekrar ziyaretleri destekleyin.'],
       ['Teklifler', 'Müşteri ilişkisini güçlendirmek için ilgili teklifler kullanın.'],
-      ['Kampanyalar', 'Müşteri bağlamını restoran hedef kitlesine göre oluşturulan kampanyalarla birleştirin.']
+      ['Kampanyalar', 'Müşteri içeriğini restoran hedef kitlesine göre oluşturulan kampanyalarla birleştirin.']
     ],
     story: [
       {
@@ -272,14 +272,14 @@ export const solutionPages = {
     storyEyebrow: 'Müşteri siparişi ve ödeme',
     capabilityEyebrow: '8 sipariş ve ödeme adımı',
     capabilityTitle: 'QR taramasından onaya kadar masa, sipariş, hesap ve ödeme durumunu bağlantılı tutun.',
-    capabilityBody: 'Müşteriler tarayabilir, menüyü inceleyebilir, sipariş verebilir, servis talep edebilir ve ödeme yapabilir; restoran ise masa ve sipariş bağlamını görünür tutar.',
+    capabilityBody: 'Müşteriler tarayabilir, menüyü inceleyebilir, sipariş verebilir, servis talep edebilir ve ödeme yapabilir; restoran ise masa ve sipariş içeriğini görünür tutar.',
     ctaTitle: 'Ödemeler ve Müşteri Siparişi alanını incelemek ister misiniz?',
-    ctaBody: 'Demo sırasında masa QR kodu, mobil menü, müşteri ödeme süreci, masada ödeme ve hesap bölme akışlarına odaklanalım.',
+    ctaBody: 'Tanıtım sırasında masa QR kodu, mobil menü, müşteri ödeme süreci, masada ödeme ve hesap bölme akışlarına odaklanalım.',
     heroImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
     accent: 'purple',
     highlights: [
       ['Kart / dijital ödemeler', 'Yapılandırılmış sağlayıcının sunduğu kart veya dijital yöntemleri gösterin ve seçilen yöntemi hesap durumuyla bağlantılı tutun.'],
-      ['Masada ödeme', 'Doğru hesabı masa bağlamından açın ve ödeme durumunu servis ekibi için görünür tutun.'],
+      ['Masada ödeme', 'Doğru hesabı masa içeriğinden açın ve ödeme durumunu servis ekibi için görünür tutun.'],
       ['Eşit bölme', 'Toplam hesabı seçilen kişi sayısına eşit şekilde bölün.'],
       ['Ürüne göre bölme', 'Sipariş edilen ürünleri kişilere atayın ve kalan bakiyeyi görünür tutun.']
     ],
@@ -299,58 +299,58 @@ export const solutionPages = {
   },
   kitchen: {
     eyebrow: 'Sipariş, Mutfak ve Menü',
-    title: 'Her siparişi menü bağlamını koruyarak girişten servise hazır duruma taşıyın.',
-    intro: 'Sipariş alımından servis devrine kadar 7 kontrolü kullanın: garson sipariş girişi, KDS, hazırlık durumu, hazır durumu, menü yönetimi, ürün seçenekleri ve tükenen ürünler.',
+    title: 'Her siparişi menü içeriğini koruyarak girişten servise hazır duruma taşıyın.',
+    intro: 'Sipariş alımından servis devrine kadar 7 kontrolü kullanın: garson sipariş girişi, Mutfak Ekran Sistemi (KDS), hazırlık durumu, hazır durumu, menü yönetimi, ürün seçenekleri ve tükenen ürünler.',
     storyEyebrow: 'Sipariş, mutfak ve menü',
     capabilityEyebrow: '7 sipariş, mutfak ve menü kontrolü',
     capabilityTitle: 'Servis ekibi ve mutfak aynı sipariş durumunu görsün; ancak aynı ekranı kullanmak zorunda kalmasın.',
-    capabilityBody: 'Sipariş, masa, ürün, seçenek ve zamanlama bağlamını mutfağa taşır. Menü ve tükenen ürün güncellemeleri ise mevcut olmayan ürünlerin sipariş akışında ilerlemesini önler.',
+    capabilityBody: 'Sipariş, masa, ürün, seçenek ve zamanlama içeriğini mutfağa taşır. Menü ve tükenen ürün güncellemeleri ise mevcut olmayan ürünlerin sipariş akışında ilerlemesini önler.',
     ctaTitle: 'Sipariş, Mutfak ve Menü alanını iş başında görmek ister misiniz?',
-    ctaBody: 'Garson sipariş girişi, KDS hazırlığı, menü yönetimi, ürün seçenekleri ve servise hazır durum devrini kendi operasyonunuz üzerinden gösterebiliriz.',
+    ctaBody: 'Garson sipariş girişi, Mutfak Ekran Sistemi (KDS) hazırlığı, menü yönetimi, ürün seçenekleri ve servise hazır durum devrini kendi operasyonunuz üzerinden gösterebiliriz.',
     heroImage: '/site-assets/extra/chef-warm-kitchen.webp',
     accent: 'orange',
     highlights: [
       ['Garson sipariş girişi', 'Siparişi servis personeli veya müşteri akışından oluşturun; doğru masa, ürünler, seçenekler ve notları ekleyin.'],
-      ['KDS', 'Gelen siparişleri ürün detayı, zamanlama ve öncelik bağlamıyla odaklanmış bir KDS iş listesine yerleştirin.'],
+      ['Mutfak Ekran Sistemi (KDS)', 'Gelen siparişleri ürün detayı, zamanlama ve öncelik içeriğiyle odaklanmış bir Mutfak Ekran Sistemi (KDS) iş listesine yerleştirin.'],
       ['Hazırlık durumu', 'Mutfak ve yönetimin neyin beklediğini ve neyin hazırlanmakta olduğunu görebilmesi için alındı ve hazırlanıyor durumlarını gösterin.'],
       ['Hazır durumu', 'Tamamlanan siparişin bir sonraki sorumlusunun net olması için hazır durumunu servis personeline iletin.']
     ],
     story: [
       {
-        title: 'Mutfak, kopyalanmış bir sipariş özetini değil tam hazırlık bağlamını alır.',
+        title: 'Mutfak, kopyalanmış bir sipariş özetini değil tam hazırlık içeriğini alır.',
         body: 'Ürün detayları, seçenekler, siparişin bekleme süresi ve güncel durumu servis boyunca hazırlık listesinde görünür kalır.',
         image: '/site-assets/custom/solution-story/kitchen-preparation-context-20260809.webp'
       },
       {
         title: 'Menü müsaitliği, önlenebilir bir sonraki sipariş sorununu engeller.',
-        body: 'Menü, ürün seçenekleri ve tükenen ürün güncellemeleri sipariş bağlamını yeniler; böylece mevcut olmayan veya yanlış yapılandırılmış ürünler hazırlığa geçmez.',
+        body: 'Menü, ürün seçenekleri ve tükenen ürün güncellemeleri sipariş içeriğini yeniler; böylece mevcut olmayan veya yanlış yapılandırılmış ürünler hazırlığa geçmez.',
         image: '/site-assets/extra/team-planning.webp'
       }
     ],
-    bullets: ['Garson sipariş girişi', 'KDS', 'Hazırlık durumu', 'Hazır durumu', 'Menü yönetimi', 'Menü seçenekleri', 'Tükenen ürün bilgisi']
+    bullets: ['Garson sipariş girişi', 'Mutfak Ekran Sistemi (KDS)', 'Hazırlık durumu', 'Hazır durumu', 'Menü yönetimi', 'Menü seçenekleri', 'Tükenen ürün bilgisi']
   },
   team: {
-    eyebrow: 'Ekip Yönetimi',
+    eyebrow: 'Takım Yönetimi',
     title: 'Her role ihtiyaç duyduğu kontrolleri, yönetime ise ekibin genel görünümünü verin.',
-    intro: 'Her çalışanı aynı yönetim ekranına koymadan 5 ekip kontrolünü yönetin: rol bazlı çalışma alanları, yetkiler, vardiyalar, performans bağlamı ve personel hareketleri.',
-    storyEyebrow: 'Ekip yönetimi',
-    capabilityEyebrow: '5 ekip kontrolü',
+    intro: 'Her çalışanı aynı yönetim ekranına koymadan 5 kontrolü yönetin: rol bazlı çalışma alanları, yetkiler, vardiyalar, performans içeriği ve personel hareketleri.',
+    storyEyebrow: 'Takım Yönetimi',
+    capabilityEyebrow: '5 kontrol',
     capabilityTitle: 'Roller arasındaki iş devrini korurken erişimi ve ekran kalabalığını sınırlandırın.',
-    capabilityBody: 'İşletme sahipleri, yöneticiler, servis personeli, mutfak, rezervasyon ve finans aynı masa, sipariş ve işletme bağlamını kullanırken farklı kontroller görebilir.',
-    ctaTitle: 'Ekip Yönetimini incelemek ister misiniz?',
-    ctaBody: 'Demo sırasında rol bazlı çalışma alanlarını, yetkileri, vardiyaları, performansı ve personel hareketlerini ekip yapınıza göre haritalayalım.',
+    capabilityBody: 'İşletme sahipleri, yöneticiler, servis personeli, mutfak, rezervasyon ve finans aynı masa, sipariş ve işletme içeriğini kullanırken farklı kontroller görebilir.',
+    ctaTitle: 'Takım Yönetimini incelemek ister misiniz?',
+    ctaBody: 'Tanıtım sırasında rol bazlı çalışma alanlarını, yetkileri, vardiyaları, performansı ve personel hareketlerini ekip yapınıza göre haritalayalım.',
     heroImage: '/site-assets/custom/page-heroes/solutions-team-hero-chatgpt-20260809.webp',
     accent: 'green',
     highlights: [
       ['Rol bazlı çalışma alanları', 'İşten sorumlu role odaklanmış bir iş listesi ve gerekli işlemleri atayın.'],
       ['Roller ve yetkiler', 'Görüntüleme, oluşturma, değiştirme, onaylama ve dışa aktarma yetkilerini role göre belirleyin.'],
-      ['Vardiya yönetimi', 'Vardiya atamalarını ve aktif ekip bağlamını koordine edilen işe yakın tutun.'],
-      ['Performans görünümü', 'Tamamlanan işlemleri, zamanlamayı ve servis sonuçlarını sorumlu rol ve vardiya bağlamıyla birlikte inceleyin.']
+      ['Vardiya yönetimi', 'Vardiya atamalarını ve aktif ekip içeriğini koordine edilen işe yakın tutun.'],
+      ['Performans görünümü', 'Tamamlanan işlemleri, zamanlamayı ve servis sonuçlarını sorumlu rol ve vardiya içeriğiyle birlikte inceleyin.']
     ],
     story: [
       {
         title: 'Altı çalışma alanı erişimi gerçek restoran sorumluluklarına göre düzenler.',
-        body: 'İşletme sahibi, yöneticiler, servis personeli, mutfak, rezervasyon ve finans odaklanmış görünümler kullanırken iş devri bağlamı bağlantılı kalır.',
+        body: 'İşletme sahibi, yöneticiler, servis personeli, mutfak, rezervasyon ve finans odaklanmış görünümler kullanırken iş devri içeriği bağlantılı kalır.',
         image: '/site-assets/extra/taqueria-handoff.webp'
       },
       {
@@ -363,12 +363,12 @@ export const solutionPages = {
   },
   insights: {
     eyebrow: 'Analiz, Tahmin ve Kârlılık',
-    title: 'Geliri, talebi ve marjı açıklayan 9 metriği takip edin.',
+    title: 'Geliri, talebi ve marjı açıklayan 9 ölçütü takip edin.',
     intro: 'Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, zamana göre satış, en çok satan ürünler, ödeme yöntemi dağılımı, tahmin ve ürün ya da şube bazında kârlılığı karşılaştırın.',
     storyEyebrow: 'Analiz ve kârlılık',
-    capabilityEyebrow: '9 yönetim metriği',
-    capabilityTitle: 'Sayının kendisini, dönemi ve arkasındaki operasyon bağlamını birlikte karşılaştırın.',
-    capabilityBody: 'Bir metrik; dönemini, şubeyi, kanalları ve kaynak bağlamını açıkça göstermelidir. Böylece yönetim değişimin arkasındaki restoran hareketine ulaşabilir.',
+    capabilityEyebrow: '9 yönetim ölçütü',
+    capabilityTitle: 'Sayının kendisini, dönemi ve arkasındaki operasyon içeriğini birlikte karşılaştırın.',
+    capabilityBody: 'Bir ölçüt; dönemini, şubeyi, kanalları ve kaynak içeriğini açıkça göstermelidir. Böylece yönetim değişimin arkasındaki restoran hareketine ulaşabilir.',
     ctaTitle: 'Analiz, Tahmin ve Kârlılık alanını incelemek ister misiniz?',
     ctaBody: 'Gelir, müşteri sayısı, masa performansı, tahmin, en çok satan ürünler ve ürün ya da şube bazında kârlılığın arkasındaki sinyalleri gösterebiliriz.',
     heroImage: '/site-assets/custom/page-heroes/solutions-insights-hero-chatgpt-20260814.webp',
@@ -381,7 +381,7 @@ export const solutionPages = {
     ],
     story: [
       {
-        title: 'Dokuz metrik tek bir karar görünümü oluşturur.',
+        title: 'Dokuz ölçüt tek bir karar görünümü oluşturur.',
         body: 'Gelir ve talebi sipariş kanalları, müşteri hareketleri, masa performansı, en çok satan ürünler ve ödeme yöntemi dağılımıyla birlikte okuyun.',
         image: '/site-assets/extra/manager-analytics.webp'
       },
@@ -403,8 +403,8 @@ const solutionDetailExpansions = {
     factsTitle: 'Altı temel yetenek ve dört rol bakış açısı etrafında oluşturulmuş canlı bir operasyon görünümü.',
     factsIntro: 'Bu rakamlar yapılandırılmış ürün kapsamını açıklar. Performans iyileşmeleri restoranın başlangıç değerleriyle karşılaştırılarak ölçülmelidir.',
     facts: [
-      ['06', 'temel yetenek', 'Gösterge paneli, siparişler, masalar, salon planları, salonda servis veya paket servis ve canlı hareketler tek bir operasyon alanında kalır.'],
-      ['04', 'rol bakış açısı', 'İşletme sahibi, yönetici, servis personeli ve mutfak ekipleri aynı restoran bağlamını farklı ayrıntı seviyelerinde kullanır.'],
+      ['06', 'temel yetenek', 'Gösterge paneli, siparişler, masalar, servis alanı planları, salonda servis veya paket servis ve canlı hareketler tek bir operasyon alanında kalır.'],
+      ['04', 'rol bakış açısı', 'İşletme sahibi, yönetici, servis personeli ve mutfak takımlari aynı restoran içeriğini farklı ayrıntı seviyelerinde kullanır.'],
       ['02', 'servis kanalı', 'Salonda servis ve paket servis, restoran gününün ayrı sürümlerini oluşturmadan birlikte takip edilebilir.'],
       ['01', 'ortak operasyon görünümü', 'Bir durum değişikliği, bağlantısız bir ekranda sona ermek yerine aynı restoran görünümünü güncellemelidir.']
     ],
@@ -412,18 +412,18 @@ const solutionDetailExpansions = {
     workflowTitle: 'Canlı bir servis dönemi operasyon katmanında nasıl ilerler?',
     workflowIntro: 'İş akışı; mevcut durumu, sorumlu rolü ve sonraki işlemi daha kolay belirlemek için tasarlanmıştır.',
     workflow: [
-      ['Vardiya bağlamını yükleyin', 'Servis yoğunlaşmadan önce rezervasyonları, aktif masaları, açık siparişleri, paket servis işlerini ve salon görünümünü açın.'],
+      ['Vardiya içeriğini yükleyin', 'Servis yoğunlaşmadan önce rezervasyonları, aktif masaları, açık siparişleri, paket servis işlerini ve salon görünümünü açın.'],
       ['İstisnaları belirleyin', 'Bekleyen müşterileri, geciken siparişleri, ödenmemiş masaları veya yönetimin dikkat etmesi gereken salon alanlarını bulun.'],
       ['İşi sorumlu role aktarın', 'Servis personeli servis işlemlerini, mutfak hazırlık işlerini görür; yöneticiler ise daha geniş istisna görünümünü korur.'],
       ['Servis döngüsünü kapatın', 'Sipariş, masa, hazırlık ve ödeme durumunu güncelleyin; böylece sonraki ekip üyesi eski durum üzerinden çalışmaz.'],
       ['Tamamlanan vardiyayı inceleyin', 'Servis döneminden sonra gelir, müşteri sayısı, masa hareketleri ve operasyon istisnalarını karşılaştırın.']
     ],
     rolesTitle: 'Her rol, aynı restoran gününü kendi sorumluluğuna uygun ayrıntı seviyesinde görür.',
-    rolesIntro: 'Amaç herkesin yönetim panelini kullanması değildir. Amaç, ortak bağlamı korurken her rolü kendi işine odaklamaktır.',
+    rolesIntro: 'Amaç herkesin yönetim panelini kullanması değildir. Amaç, ortak içeriği korurken her rolü kendi işine odaklamaktır.',
     roleViews: [
       ['İşletme sahibi', 'Geliri, müşteri hacmini, masa devir hızını ve işletme sonucunu etkileyen istisnaları inceler.'],
       ['Yönetici', 'Vardiya boyunca salonu, açık siparişleri, gecikmeleri, paket servis hareketlerini ve koordinasyon gerektiren işlemleri izler.'],
-      ['Servis personeli', 'Atanmış masalar, siparişler, müşteri talepleri, servis durumu ve ödeme bağlamıyla çalışır.'],
+      ['Servis personeli', 'Atanmış masalar, siparişler, müşteri talepleri, servis durumu ve ödeme içeriğiyle çalışır.'],
       ['Mutfak', 'Sipariş detayı, notlar, zamanlama ve servise hazır devir durumuyla hazırlık işlerini alır.']
     ],
     metricsTitle: 'Operasyon akışının gerçekten daha kolay yönetilip yönetilmediğini ölçün.',
@@ -434,20 +434,20 @@ const solutionDetailExpansions = {
       ['Masa devir hızı', 'Her servis modeli için tutarlı bir tanım kullanarak müşterinin oturmasından masanın yeniden kullanılabilir hale gelmesine kadar geçen süreyi takip edin.'],
       ['Hesap talebinden ödemeye kadar geçen süre', 'Hesap talebinden tamamlanmış ödeme durumuna kadar son ödeme aşamasının ne kadar sürdüğünü ölçün.']
     ],
-    implementationTitle: 'Canlıya geçmeden önce salon planını, durumları ve sorumlulukları netleştirin.',
-    implementationIntro: 'Operasyon görünümü; salon planı, durum tanımları, rol yetkileri ve arkasındaki bağlı veriler kadar nettir.',
+    implementationTitle: 'Canlıya geçmeden önce servis alanı planını, durumları ve sorumlulukları netleştirin.',
+    implementationIntro: 'Operasyon görünümü; servis alanı planı, durum tanımları, rol yetkileri ve arkasındaki bağlı veriler kadar nettir.',
     implementation: [
-      'Salon planları, masa kimlikleri ve kapasite yapısı',
+      'Servis alanı planları, masa kimlikleri ve kapasite yapısı',
       'Salonda servis ve paket servis kanal tanımları',
       'Sipariş, masa, mutfak ve ödeme durum sözlüğü',
       'Rol yetkileri ve istisna sorumluluğu',
       'Operasyon görünümünde kullanılabilen POS veya ödeme verisi',
-      'İnceleme için başlangıç dönemleri ve metrik tanımları'
+      'İnceleme için başlangıç dönemleri ve ölçüt tanımları'
     ],
     faqs: [
       ['PayMyDine POS sisteminin yerini alır mı?', 'Varsayılan olarak hayır. PayMyDine, desteklenen POS bağlantılarının veya seçilen bağımsız modüllerin çevresine operasyon, müşteri, ekip ve içgörü katmanları ekleyebilir.'],
-      ['Birden fazla katı destekler mi?', 'Evet. Mevcut ürün kapsamı salon planlarını ve çok katlı restoran yapılarını içerir.'],
-      ['Salonda servis ve paket servis ayrı kalabilir mi?', 'Evet. Ayrı kanal bağlamlarını korurken aynı yönetim görünümüne katkı sağlayabilirler.'],
+      ['Birden fazla katı destekler mi?', 'Evet. Mevcut ürün kapsamı servis alanı planlarını ve çok katlı restoran yapılarını içerir.'],
+      ['Salonda servis ve paket servis ayrı kalabilir mi?', 'Evet. Ayrı kanal içeriklerini korurken aynı yönetim görünümüne katkı sağlayabilirler.'],
       ['Her durum gerçek zamanlı mı?', 'Verinin güncelliği; kaynak modüle, bağlı sisteme, yetkilere ve kurulumda kullanılan yenileme yöntemine bağlıdır.']
     ]
   },
@@ -457,16 +457,16 @@ const solutionDetailExpansions = {
     factsIntro: 'Müsaitlik ve oturma kuralları gerçek servis dönemlerine, salon yapısına ve işletme kurallarına göre yapılandırılmalıdır.',
     facts: [
       ['07', 'rezervasyon yeteneği', 'Takvim, zaman çizelgesi, müsaitlik, rezervasyonsuz müşteriler, masa atama, müşteri akışı ve çok katlı salonlar mevcut ürün kapsamını oluşturur.'],
-      ['03', 'planlama görünümü', 'Takvim, zaman çizelgesi ve canlı salon bağlamı servis öncesinde ve sırasında farklı kararları destekler.'],
+      ['03', 'planlama görünümü', 'Takvim, zaman çizelgesi ve canlı salon içeriği servis öncesinde ve sırasında farklı kararları destekler.'],
       ['02', 'geliş türü', 'Onaylı rezervasyonlar ve rezervasyonsuz müşteriler, genel kapasite görünümü kaybolmadan birlikte yönetilebilir.'],
-      ['CANLI', 'canlı salon bağlamı', 'Dolu, müsait ve rezervasyona hazır masa durumları oturma kararının yanında kalır.']
+      ['CANLI', 'canlı salon içeriği', 'Dolu, müsait ve rezervasyona hazır masa durumları oturma kararının yanında kalır.']
     ],
     workflowEyebrow: 'Müsaitlikten oturmaya',
     workflowTitle: 'Bir rezervasyon, ayrı bir listede kalmak yerine nasıl masa kararına dönüşür?',
     workflowIntro: 'Restoran hazırlıktan canlı gelişlere geçtiğinde planlama görünümü kullanılabilir kalmalıdır.',
     workflow: [
-      ['Servis yapısını tanımlayın', 'Restoranın kullandığı servis dönemlerini, salon planlarını, masa kapasitelerini ve müsaitlik kurallarını belirleyin.'],
-      ['Rezervasyonları ve rezervasyonsuz gelişleri kaydedin', 'Kişi sayısını, geliş saatini ve kaynak bağlamını beklenen veya planlanmamış her gelişle bağlantılı tutun.'],
+      ['Servis yapısını tanımlayın', 'Restoranın kullandığı servis dönemlerini, servis alanı planlarını, masa kapasitelerini ve müsaitlik kurallarını belirleyin.'],
+      ['Rezervasyonları ve rezervasyonsuz gelişleri kaydedin', 'Kişi sayısını, geliş saatini ve kaynak içeriğini beklenen veya planlanmamış her gelişle bağlantılı tutun.'],
       ['Geliş görünümünü hazırlayın', 'Müşteriler kapıya gelmeden önce sıradaki talep yoğunluğunu takvim veya zaman çizelgesinden görün.'],
       ['Salonu görerek masa atayın', 'Yalnızca rezervasyon listesine değil, güncel müsaitlik ve servis durumuna göre masa atayın veya değiştirin.'],
       ['Oturma sonucunu inceleyin', 'Gelişleri, gelmeme durumlarını, bekleme süresini, masa kullanımını ve devir hızını tutarlı olay tanımlarıyla ölçün.']
@@ -476,11 +476,11 @@ const solutionDetailExpansions = {
     roleViews: [
       ['Rezervasyon ve karşılama', 'Yaklaşan gelişleri, kişi sayısını, rezervasyon detaylarını, müsaitliği ve bir sonraki masa kararını görür.'],
       ['Yönetici', 'Kapasite baskısını, rezervasyonsuz müşterileri, geciken gelişleri ve oturma kararlarının aktif salonu nasıl etkilediğini izler.'],
-      ['Servis personeli', 'Oturma sonrasında servise başlamak için gereken masa ve müşteri bağlamını alır.'],
+      ['Servis personeli', 'Oturma sonrasında servise başlamak için gereken masa ve müşteri içeriğini alır.'],
       ['İşletme sahibi', 'Talep kalıplarını, gelmeme oranını, kapasite kullanımını ve masa devir hızını dönem veya şubeler arasında inceler.']
     ],
     metricsTitle: 'Rezervasyon olaylarını kullanarak planlamayı iyileştirin; varsayımsal yüzdeler üretmeyin.',
-    metricsIntro: 'Web sitesi veya ekip bir iyileşme iddia etmeden önce sistem, her metriği hesaplamak için gereken olayları kaydetmelidir.',
+    metricsIntro: 'Web sitesi veya ekip bir iyileşme iddia etmeden önce sistem, her ölçütü hesaplamak için gereken olayları kaydetmelidir.',
     metrics: [
       ['Rezervasyondan gelişe dönüşüm oranı', 'Aynı iptal ve gelmeme kurallarını kullanarak onaylanan rezervasyonları gerçekleşen gelişlerle karşılaştırın.'],
       ['Gelmeme oranı', 'Gelmesi beklenip gelmeyen müşteri gruplarını, veri mevcutsa dönem, kaynak veya şubeye göre takip edin.'],
@@ -491,14 +491,14 @@ const solutionDetailExpansions = {
     implementationIntro: 'Müsaitlik modelini ve masa veya rezervasyon durumunu değiştiren olayları belgeleyin.',
     implementation: [
       'Servis dönemleri ve rezervasyon müsaitlik kuralları',
-      'Salon planları, masa kapasiteleri ve masa durum tanımları',
+      'Servis alanı planları, masa kapasiteleri ve masa durum tanımları',
       'Rezervasyonsuz müşteri yönetimi ve karşılama sorumlulukları',
       'Geliş, oturma, iptal ve gelmeme olayları',
       'Yapılandırmada kullanılan rezervasyon kaynakları veya entegrasyonları',
       'Bekleme süresi, kapasite kullanımı ve devir hızı için ölçüm kuralları'
     ],
     faqs: [
-      ['Birden fazla kat desteklenebilir mi?', 'Evet. Çok katlı salon bağlamı mevcut rezervasyon ve masa yönetimi kapsamının bir parçasıdır.'],
+      ['Birden fazla kat desteklenebilir mi?', 'Evet. Çok katlı salon içeriği mevcut rezervasyon ve masa yönetimi kapsamının bir parçasıdır.'],
       ['Rezervasyonsuz müşteriler nasıl yönetilir?', 'Rezervasyonsuz müşteriler canlı geliş ve salon görünümüne eklenebilir; böylece bir sonraki oturma kararı güncel kapasiteye göre verilir.'],
       ['PayMyDine ne zaman fazla rezervasyon alınacağına karar verir mi?', 'Müsaitlik kuralları restoranın yapılandırılmış politikasına aittir. Platform, üzerinde anlaşılmış bir kural olmadan fazla rezervasyon stratejisi varsaymamalıdır.'],
       ['Rezervasyon verisi raporlamayı etkileyebilir mi?', 'Evet. Rezervasyon, geliş ve oturma olayları tutarlı biçimde kaydedildiğinde ve raporlama katmanına aktarıldığında kullanılabilir.']
@@ -508,11 +508,11 @@ const solutionDetailExpansions = {
   kitchen: {
     factsEyebrow: 'Sipariş ve mutfak kapsamı',
     factsTitle: 'Yedi kontrol sipariş alımını, hazırlık durumunu ve menü müsaitliğini birbirine bağlar.',
-    factsIntro: 'Amaç; servis personeli, mutfak ve müşterinin ya da ekibin gördüğü menü durumu arasındaki eksik bağlamı azaltmaktır.',
+    factsIntro: 'Amaç; servis personeli, mutfak ve müşterinin ya da ekibin gördüğü menü durumu arasındaki eksik içeriği azaltmaktır.',
     facts: [
-      ['07', 'iş akışı kontrolü', 'Garson sipariş girişi, KDS, hazırlık durumu, hazır durumu, menü yönetimi, ürün seçenekleri ve tükenen ürün bilgisi dahildir.'],
+      ['07', 'iş akışı kontrolü', 'Garson sipariş girişi, Mutfak Ekran Sistemi (KDS), hazırlık durumu, hazır durumu, menü yönetimi, ürün seçenekleri ve tükenen ürün bilgisi dahildir.'],
       ['02', 'kritik iş devri', 'Sipariş servisten hazırlığa geçer; hazır durumu ise yeniden servis ekibine döner.'],
-      ['03', 'sipariş bağlamı', 'Masa, ürün veya seçenek detayları ve hazırlık durumu aynı işle bağlantılı kalır.'],
+      ['03', 'sipariş içeriği', 'Masa, ürün veya seçenek detayları ve hazırlık durumu aynı işle bağlantılı kalır.'],
       ['01', 'ortak menü durumu', 'Menü değişiklikleri ve tükenen ürün bilgisi, bunlara bağlı çalışan kişilere ve kanallara ulaşmalıdır.']
     ],
     workflowEyebrow: 'Siparişten servise hazır devrine',
@@ -520,8 +520,8 @@ const solutionDetailExpansions = {
     workflowIntro: 'Yararlı sonuç başka bir sipariş ekranı değildir; okunabilir bir hazırlık listesi ve güvenilir bir iş devridir.',
     workflow: [
       ['Siparişi alın', 'Servis iş akışında masa veya kanalı, sipariş edilen ürünleri, seçenekleri ve notları kaydedin.'],
-      ['Hazırlık işini sunun', 'Mutfağa gereksiz yönetim bilgisi vermeden, işe başlamak için gereken sipariş detayını ve öncelik bağlamını gösterin.'],
-      ['Hazırlık durumunu güncelleyin', 'Yönetici ve servis ekiplerinin ne olduğunu anlayabilmesi için işi alındı ve hazırlanıyor durumları üzerinden ilerletin.'],
+      ['Hazırlık işini sunun', 'Mutfağa gereksiz yönetim bilgisi vermeden, işe başlamak için gereken sipariş detayını ve öncelik içeriğini gösterin.'],
+      ['Hazırlık durumunu güncelleyin', 'Yönetici ve servis takımlarinin ne olduğunu anlayabilmesi için işi alındı ve hazırlanıyor durumları üzerinden ilerletin.'],
       ['Servise hazır olarak işaretleyin', 'Toplama veya masa servisinden sorumlu role net bir hazır durumu iletin.'],
       ['Menü müsaitliğini güncel tutun', 'Yeni siparişlerin restoranın gerçekten sunabildiği ürünleri yansıtması için ürünleri, seçenekleri ve tükenen ürün bilgisini güncelleyin.']
     ],
@@ -529,7 +529,7 @@ const solutionDetailExpansions = {
     rolesIntro: 'Her rol, işlemin arkasındaki masa ve sipariş kimliğini kaybetmeden kendi işi için gereken ayrıntıyı görmelidir.',
     roleViews: [
       ['Servis personeli', 'Ürünleri, seçenekleri ve notları kaydeder; ardından doğru masa için hazırlık ve hazır durumunu takip eder.'],
-      ['Mutfak ve KDS', 'Ürün detayı, notlar, geçen süre ve hazırlık durumunu içeren odaklanmış bir iş listesiyle çalışır.'],
+      ['Mutfak ve Mutfak Ekran Sistemi (KDS)', 'Ürün detayı, notlar, geçen süre ve hazırlık durumunu içeren odaklanmış bir iş listesiyle çalışır.'],
       ['Yönetici', 'Servis sırasında iş yükünü, geciken siparişleri, hazır devirlerini ve menü müsaitliği istisnalarını görür.'],
       ['Menü yöneticisi', 'Yapılandırılmış sipariş kanalları için menü ürünlerini, seçenekleri ve tükenen ürün durumunu yönetir.']
     ],
@@ -545,17 +545,17 @@ const solutionDetailExpansions = {
     implementationIntro: 'Hazırlık raporlaması ancak ürün yapısı, durum olayları ve kanal sorumluluğu tutarlı olduğunda karşılaştırılabilir.',
     implementation: [
       'Menü ürünleri, kategoriler, seçenekler ve hazırlık notları',
-      'KDS görünümleri ve her iş listesinden sorumlu roller',
+      'Mutfak Ekran Sistemi (KDS) görünümleri ve her iş listesinden sorumlu roller',
       'Alındı, hazırlanıyor ve hazır durum tanımları',
       'Servis personeli onayı ve servis devri kuralları',
       'Tükenen ürün sorumluluğu ve kanal güncelleme gereksinimleri',
       'POS veya sipariş entegrasyonu için ana veri kaynağı kararları'
     ],
     faqs: [
-      ['KDS, yönetici paneliyle aynı mı?', 'Hayır. Mutfak görünümü hazırlık işlerine odaklanırken yönetim daha geniş servis ve istisna görünümünü korur.'],
+      ['Mutfak Ekran Sistemi (KDS), yönetici paneliyle aynı mı?', 'Hayır. Mutfak görünümü hazırlık işlerine odaklanırken yönetim daha geniş servis ve istisna görünümünü korur.'],
       ['Tükenen ürün bilgisi sipariş kanallarını güncelleyebilir mi?', 'Evet. Menü kontrolü ve ilgili sipariş kanalları yapılandırılmış kapsamın parçasıysa güncellenebilir.'],
       ['Ürün seçenekleri ve notlar dahil mi?', 'Ürün kapsamı, hazırlık işiyle birlikte ilerlemesi gereken menü seçeneklerini ve sipariş notlarını içerir.'],
-      ['Farklı sipariş kanalları aynı mutfak akışını kullanabilir mi?', 'Evet. Kanal ve masa veya paket servis bağlamlarını korurken tek bir hazırlık görünümüne katkı sağlayabilirler.']
+      ['Farklı sipariş kanalları aynı mutfak akışını kullanabilir mi?', 'Evet. Kanal ve masa veya paket servis içeriklerini korurken tek bir hazırlık görünümüne katkı sağlayabilirler.']
     ]
   },
 
@@ -567,28 +567,28 @@ const solutionDetailExpansions = {
       ['08', 'yolculuk adımı', 'Kart veya dijital ödeme, masada ödeme, üç hesap bölme yöntemi, masa QR kodu, mobil menü ve müşteri ödeme süreci mevcut kapsamı oluşturur.'],
       ['03', 'hesap bölme yöntemi', 'Müşteriler hesabı eşit bölebilir, sipariş edilen ürünleri kişilere atayabilir veya toplamı paylara göre dağıtabilir.'],
       ['04', 'rol bakış açısı', 'Müşteri, servis personeli, yönetim ve finans aynı ödeme sürecinin farklı görünümüne ihtiyaç duyar.'],
-      ['01', 'bağlantılı yolculuk', 'Menü erişimi, sipariş, servis bağlamı ve ödeme birbirinden bağımsız süreçler olarak yeniden başlamamalıdır.']
+      ['01', 'bağlantılı yolculuk', 'Menü erişimi, sipariş, servis içeriği ve ödeme birbirinden bağımsız süreçler olarak yeniden başlamamalıdır.']
     ],
     workflowEyebrow: 'Masa QR kodundan tamamlanan ödemeye',
     workflowTitle: 'Bir müşteri işlemi nasıl tamamlanmış ve görünür bir ödeme olayına dönüşür?',
-    workflowIntro: 'Müşteri bir sonraki adımı kolayca anlamalı; restoran ise sipariş ve ödeme bağlamını korumalıdır.',
+    workflowIntro: 'Müşteri bir sonraki adımı kolayca anlamalı; restoran ise sipariş ve ödeme içeriğini korumalıdır.',
     workflow: [
       ['Masa yolculuğunu açın', 'Müşteri masa QR kodunu tarar veya yapılandırılmış mobil menü ve sipariş deneyimine girer.'],
-      ['Siparişi oluşturun veya inceleyin', 'Müşteri veya ekip ödemeye hazırlanırken ürünler, notlar ve masa bağlamı bağlantılı kalır.'],
+      ['Siparişi oluşturun veya inceleyin', 'Müşteri veya ekip ödemeye hazırlanırken ürünler, notlar ve masa içeriği bağlantılı kalır.'],
       ['Ödemeyi başlatın', 'Müşteri hesabı inceler ve restoran yapılandırmasında kullanılabilen ödeme yöntemini seçer.'],
       ['Ödeyen kişiyi veya bölme yöntemini seçin', 'Tek kişi hesabı kapatabilir veya grup hesabı eşit, sipariş edilen ürünlere göre ya da paylara göre bölebilir.'],
-      ['Durumu restorana iletin', 'Desteklenen durumlarda tamamlanan, kısmi veya çözümlenmemiş ödeme bağlamı ekibe ve raporlama iş akışına geri döner.']
+      ['Durumu restorana iletin', 'Desteklenen durumlarda tamamlanan, kısmi veya çözümlenmemiş ödeme içeriği ekibe ve raporlama iş akışına geri döner.']
     ],
-    rolesTitle: 'Müşteri netlik ister; restoran ise ödeme bağlamına ve temiz bir iş devrine ihtiyaç duyar.',
+    rolesTitle: 'Müşteri netlik ister; restoran ise ödeme içeriğine ve temiz bir iş devrine ihtiyaç duyar.',
     rolesIntro: 'Basit bir müşteri ekranı, ekibin ihtiyaç duyduğu operasyon ve raporlama bilgisini yine de sağlamalıdır.',
     roleViews: [
       ['Müşteri', 'Restoranın iç sistemlerini öğrenmek zorunda kalmadan yapılandırılmış masa yolculuğu üzerinden menüyü inceler, sipariş verir, servis talep eder ve ödeme yapar.'],
       ['Servis personeli', 'Hesap durumunu, ödeme ilerlemesini ve masanın hâlâ servis veya ödeme desteğine ihtiyaç duyup duymadığını görür.'],
       ['Yönetici', 'Tamamlanmamış ödemeleri, istisnaları ve ödeme süresinin masa müsaitliğine etkisini izler.'],
-      ['Finans ve raporlama', 'Sağlayıcı veya POS bağlantısından alınabilen ödeme hareketlerini, yöntem dağılımını ve mutabakat bağlamını inceler.']
+      ['Finans ve raporlama', 'Sağlayıcı veya POS bağlantısından alınabilen ödeme hareketlerini, yöntem dağılımını ve mutabakat içeriğini inceler.']
     ],
     metricsTitle: 'Ödemenin tamamlanmasını ve masanın yeniden kullanılabilir hale gelmesi için gereken süreyi ölçün.',
-    metricsIntro: 'Metrikler, kurulumda gerçekten kaydedilen sağlayıcı ve restoran olaylarını kullanmalıdır.',
+    metricsIntro: 'Ölçütler, kurulumda gerçekten kaydedilen sağlayıcı ve restoran olaylarını kullanmalıdır.',
     metrics: [
       ['Hesap talebinden ödemeye kadar geçen süre', 'Müşteri veya ekibin ödeme sürecini başlatmasıyla onaylı tamamlanma arasındaki süreyi ölçün.'],
       ['Dijital ödeme tamamlama oranı', 'Gerekli olaylar mevcutsa tamamlanan ödeme yolculuklarını başlatılan yolculuklarla karşılaştırın.'],
@@ -615,33 +615,33 @@ const solutionDetailExpansions = {
 
   insights: {
     factsEyebrow: 'Analiz ve kârlılık kapsamı',
-    factsTitle: 'Dokuz yönetim metriği talep, servis, satış ve kârlılığı aynı çerçevede buluşturur.',
-    factsIntro: 'Bir metriğin güvenilir olması için kaynağı, tanımı, dönemi ve şube eşlemesi açıkça belgelenmelidir.',
+    factsTitle: 'Dokuz yönetim ölçütü talep, servis, satış ve kârlılığı aynı çerçevede buluşturur.',
+    factsIntro: 'Bir ölçütün güvenilir olması için kaynağı, tanımı, dönemi ve şube eşlemesi açıkça belgelenmelidir.',
     facts: [
-      ['09', 'yönetim metriği', 'Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, zamana göre satış, en çok satan ürünler, ödeme yöntemi dağılımı, tahminleme ve kârlılık kapsama dahildir.'],
+      ['09', 'yönetim ölçütü', 'Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, zamana göre satış, en çok satan ürünler, ödeme yöntemi dağılımı, tahminleme ve kârlılık kapsama dahildir.'],
       ['02', 'kârlılık seviyesi', 'Gerekli maliyet ve satış verileri mevcutsa kârlılık ürün veya şube bazında incelenebilir.'],
-      ['04', 'karar rolü', 'İşletme sahibi, yönetici, finans ve operasyon sorumluları aynı metrikleri farklı kararlar için kullanır.'],
+      ['04', 'karar rolü', 'İşletme sahibi, yönetici, finans ve operasyon sorumluları aynı ölçütleri farklı kararlar için kullanır.'],
       ['03', 'karşılaştırma boyutu', 'Dönem, şube ve sipariş kanalı karşılaştırmaları ana göstergedeki değişimin nedenini açıklamaya yardımcı olur.']
     ],
     workflowEyebrow: 'İşlem verisinden karara',
-    workflowTitle: 'Restoran hareketleri incelenebilir bir yönetim metriğine nasıl dönüşür?',
+    workflowTitle: 'Restoran hareketleri incelenebilir bir yönetim ölçütüne nasıl dönüşür?',
     workflowIntro: 'Raporlama katmanı, özetten kaynak işlemlere ve kullanılan tanımlara geri dönülebilecek şekilde tasarlanmalıdır.',
     workflow: [
       ['Kaynak işlemleri toplayın', 'Siparişler, masalar, müşteriler, rezervasyonlar ve ödemeler raporlama ortamındaki kullanılabilir veriyi oluşturur.'],
       ['Ortak tanımları uygulayın', 'Sonuçları karşılaştırmadan önce dönem, şube, kanal, gelir hesabı, müşteri sayısı ve maliyet girdilerini tanımlayın.'],
-      ['Operasyon panelini inceleyin', 'Yapılandırılmış modüllerle ilgili yönetim metriklerindeki güncel sonuçları ve değişimleri görün.'],
-      ['Değişimin nedenini araştırın', 'Değişimin arkasındaki operasyon bağlamını bulmak için dönem, şube, kanal, kategori veya ürün bazında filtreleyin.'],
-      ['Aksiyon alın ve yeniden karşılaştırın', 'Bir sonraki operasyon sorusunu veya aksiyonu belirleyin; daha sonraki dönemde aynı metrik tanımıyla sonucu yeniden karşılaştırın.']
+      ['Operasyon panelini inceleyin', 'Yapılandırılmış modüllerle ilgili yönetim ölçütlerindeki güncel sonuçları ve değişimleri görün.'],
+      ['Değişimin nedenini araştırın', 'Değişimin arkasındaki operasyon içeriğini bulmak için dönem, şube, kanal, kategori veya ürün bazında filtreleyin.'],
+      ['Aksiyon alın ve yeniden karşılaştırın', 'Bir sonraki operasyon sorusunu veya aksiyonu belirleyin; daha sonraki dönemde aynı ölçüt tanımıyla sonucu yeniden karşılaştırın.']
     ],
     rolesTitle: 'Aynı sayı; işletme sahibi, yönetim ve finans için farklı soruları yanıtlayabilir.',
     rolesIntro: 'Rol bazlı raporlama veri kaynağını tutarlı tutarken, her kullanıcının ihtiyaç duyduğu ayrıntı ve aksiyon seviyesini değiştirir.',
     roleViews: [
       ['İşletme sahibi', 'Geliri, müşteri talebini, şube performansını ve kârlılığı karşılaştırarak hangi alanın dikkat veya yatırım gerektirdiğini belirler.'],
-      ['Yönetici', 'Masa, servis ve satış metriklerini vardiyanın sonucunu şekillendiren operasyon olaylarıyla ilişkilendirir.'],
+      ['Yönetici', 'Masa, servis ve satış ölçütlerini vardiyanın sonucunu şekillendiren operasyon olaylarıyla ilişkilendirir.'],
       ['Finans', 'Gelir hesaplamasını, ödeme yöntemi dağılımını, kategorileri, maliyet girdilerini ve operasyon dışı raporlamada kullanılan alanları inceler.'],
       ['Operasyon sorumlusu', 'Zamanlama, en çok satan ürün ve kanal verilerini servis, menü veya personel kararlarında kullanır.']
     ],
-    metricsTitle: 'Dokuz metrik dört pratik yönetim grubunda toplanır.',
+    metricsTitle: 'Dokuz ölçüt dört pratik yönetim grubunda toplanır.',
     metricsIntro: 'Kullanılabilirlik ve doğruluk; mevcut modüllere, entegrasyonlara ve maliyet verilerine bağlıdır.',
     metrics: [
       ['Talep ve gelir', 'Gelir, müşteri sayısı ve ortalama hesap tutarı seçilen dönemdeki talebin büyüklüğünü ve değerini gösterir.'],
@@ -662,20 +662,20 @@ const solutionDetailExpansions = {
     faqs: [
       ['PayMyDine maliyet verisi olmadan kârlılık hesaplayabilir mi?', 'Hayır. Gerekli satış, ürün ve maliyet girdileri olmadan güvenilir bir kârlılık sonucu üretilemez.'],
       ['Tahmin sonucu garanti midir?', 'Hayır. Tahminler karar desteği sunan öngörülerdir; gerçekleşen sonuçlarla karşılaştırılmalı ve ekip tarafından değerlendirilmelidir.'],
-      ['Şubeler karşılaştırılabilir mi?', 'Evet. Şube eşlemeleri ve metrik tanımları seçilen lokasyonlarda tutarlıysa karşılaştırma yapılabilir.'],
-      ['Yapay Zekâ bir metriği açıklamaya yardımcı olabilir mi?', 'Evet. Yapay Zekâ mevcut veriler üzerinden özet ve inceleme desteği sunabilir; kaynak görünümleri ve nihai insan kararı görünür kalır.']
+      ['Şubeler karşılaştırılabilir mi?', 'Evet. Şube eşlemeleri ve ölçüt tanımları seçilen lokasyonlarda tutarlıysa karşılaştırma yapılabilir.'],
+      ['Yapay Zeka bir ölçütü açıklamaya yardımcı olabilir mi?', 'Evet. Yapay Zeka mevcut veriler üzerinden özet ve inceleme desteği sunabilir; kaynak görünümleri ve nihai insan kararı görünür kalır.']
     ]
   },
 
   team: {
     factsEyebrow: 'Rol bazlı ekip kapsamı',
-    factsTitle: 'Altı çalışma alanı ve beş ekip kontrolü erişimi sorumluluklarla uyumlu tutar.',
+    factsTitle: 'Altı çalışma alanı ve beş kontrol erişimi sorumluluklarla uyumlu tutar.',
     factsIntro: 'Rol bazlı tasarım, herkesin ne gördüğünü değiştirir; restoran için altı ayrı sistem oluşturmaz.',
     facts: [
-      ['06', 'rol bazlı çalışma alanı', 'İşletme sahibi, yönetici, servis personeli, mutfak, rezervasyon ve finans ekiplerinin PayMyDine içinde farklı kullanım görünümleri vardır.'],
-      ['05', 'ekip kontrolü', 'Rol bazlı çalışma alanları, yetkiler, vardiya yönetimi, performans içgörüleri ve personel hareketleri mevcut kapsamı oluşturur.'],
-      ['02', 'görünürlük seviyesi', 'Odaklı rol görünümleri günlük işi desteklerken yönetim daha geniş operasyon bağlamını korur.'],
-      ['01', 'ortak operasyon', 'Masa, sipariş, rezervasyon, mutfak ve ödeme bağlamı aynı restoran operasyonunun parçası olarak kalır.']
+      ['06', 'rol bazlı çalışma alanı', 'İşletme sahibi, yönetici, servis personeli, mutfak, rezervasyon ve finans takımlarinin PayMyDine içinde farklı kullanım görünümleri vardır.'],
+      ['05', 'kontrol', 'Rol bazlı çalışma alanları, yetkiler, vardiya yönetimi, performans içgörüleri ve personel hareketleri mevcut kapsamı oluşturur.'],
+      ['02', 'görünürlük seviyesi', 'Odaklı rol görünümleri günlük işi desteklerken yönetim daha geniş operasyon içeriğini korur.'],
+      ['01', 'ortak operasyon', 'Masa, sipariş, rezervasyon, mutfak ve ödeme içeriği aynı restoran operasyonunun parçası olarak kalır.']
     ],
     workflowEyebrow: 'Rol tasarımından günlük kullanıma',
     workflowTitle: 'Yetkiler ve odaklı çalışma alanları nasıl uygulanabilir bir operasyon modeline dönüşür?',
@@ -683,20 +683,20 @@ const solutionDetailExpansions = {
     workflow: [
       ['Gerçek sorumlulukları eşleyin', 'Ekran veya yetki vermeden önce her restoran rolünün sahip olduğu kararları ve işlemleri listeleyin.'],
       ['Erişimi bilinçli tanımlayın', 'Her role, gereksiz işletme bilgilerini açmadan işi için gereken modül, şube ve bilgileri verin.'],
-      ['Odaklı görünümleri yapılandırın', 'Masa, sipariş, hazırlık, rezervasyon veya raporlama bağlamını rolün bir sonraki aksiyonuna göre düzenleyin.'],
+      ['Odaklı görünümleri yapılandırın', 'Masa, sipariş, hazırlık, rezervasyon veya raporlama içeriğini rolün bir sonraki aksiyonuna göre düzenleyin.'],
       ['Çalışma alanını servis sırasında kullanın', 'İşlemleri ve durum değişikliklerini iş devrinden sorumlu kişi veya rolle ilişkilendirin.'],
       ['Erişimi düzenli gözden geçirin', 'Ekip yapısı veya sorumluluklar değiştikçe yetkileri, kullanıcı eğitimini ve çalışma alanı kapsamını güncelleyin.']
     ],
     rolesTitle: 'Altı çalışma alanı, restorandaki altı farklı sorumluluk alanına odaklanır.',
-    rolesIntro: 'Tek bir genel panel hem operasyon ekipleri hem de yönetim için gereksiz bilgi kalabalığı yaratır; rol bazlı görünümler bunu azaltır.',
+    rolesIntro: 'Tek bir genel panel hem operasyon takımlari hem de yönetim için gereksiz bilgi kalabalığı yaratır; rol bazlı görünümler bunu azaltır.',
     roleViews: [
-      ['İşletme sahibi ve finans', 'Her masanın veya mutfak fişinin operasyonunu yönetmeden gelir, performans, ödeme ve raporlama bağlamına ihtiyaç duyar.'],
+      ['İşletme sahibi ve finans', 'Her masanın veya mutfak fişinin operasyonunu yönetmeden gelir, performans, ödeme ve raporlama içeriğine ihtiyaç duyar.'],
       ['Yönetici', 'Vardiyayı koordine etmek için canlı salon durumunu, açık işleri, istisnaları ve ekip hareketlerini görmelidir.'],
       ['Servis personeli ve rezervasyon', 'İlgisiz finans yönetimi olmadan müşteriler, masalar, rezervasyonlar, siparişler ve servis işlemleriyle çalışır.'],
       ['Mutfak', 'Yönetim ekranının geri kalanı olmadan hazırlık ayrıntısı, süre ve hazır iş devrine odaklanır.']
     ],
     metricsTitle: 'Rol tasarımının belirsizliği ve iş devri gecikmesini azaltıp azaltmadığını ölçün.',
-    metricsIntro: 'Bu metrikler ortak olay tanımları veya ekip değerlendirme yöntemleri gerektirir; otomatik performans vaadi değildir.',
+    metricsIntro: 'Bu ölçütler ortak olay tanımları veya ekip değerlendirme yöntemleri gerektirir; otomatik performans vaadi değildir.',
     metrics: [
       ['Erişim doğruluğu', 'Kullanıcıların sorumlulukları dışında yetki almadan ihtiyaç duydukları bilgilere erişip erişemediğini inceleyin.'],
       ['İş devri süresi', 'Bir rolün durumu tamamlamasıyla bir sonraki sorumlu rolün işi kabul etmesi arasındaki süreyi ölçün.'],
@@ -714,7 +714,7 @@ const solutionDetailExpansions = {
       'Yetki ve iş akışı değişikliklerinin sorumlusu'
     ],
     faqs: [
-      ['Her rol farklı veri mi görür?', 'Roller farklı ayrıntı seviyelerini ve aksiyonları görebilir; yine de aynı temel restoran bağlamıyla çalışırlar.'],
+      ['Her rol farklı veri mi görür?', 'Roller farklı ayrıntı seviyelerini ve aksiyonları görebilir; yine de aynı temel restoran içeriğiyle çalışırlar.'],
       ['Bir kişi birden fazla role sahip olabilir mi?', 'Evet. Sorumluluğa göre yapılandırılabilir; ancak yetki modeli bilinçli şekilde gözden geçirilmelidir.'],
       ['Rol bazlı çalışma alanları yönetimin görünürlüğünü azaltır mı?', 'Hayır. Odaklı ekip görünümleri, daha geniş yönetici, işletme sahibi ve finans görünümleriyle birlikte çalışabilir.'],
       ['Yetkiler canlıya geçtikten sonra değiştirilebilir mi?', 'Evet. İnsanlar, şubeler ve sorumluluklar değiştikçe erişim ve çalışma alanı kapsamı yeniden değerlendirilmelidir.']
@@ -722,30 +722,30 @@ const solutionDetailExpansions = {
   },
 
   'guest-ordering': {
-    factsEyebrow: 'Müşteri CRM’i ve büyüme kapsamı',
+    factsEyebrow: 'Müşteri MİY’i ve büyüme kapsamı',
     factsTitle: 'Altı büyüme özelliği müşteri kimliği, etkileşim ve tekrar ziyaretleri birbirine bağlar.',
     factsIntro: 'Büyüme sonuçları; izinler, profil kalitesi, restoran uygulaması ve mevcut ölçüm verilerine bağlıdır.',
     facts: [
-      ['06', 'büyüme özelliği', 'Profiller, sadakat, teklifler, kampanyalar, geri bildirim ve müşteri bağlılığı mevcut müşteri büyüme kapsamını oluşturur.'],
+      ['06', 'büyüme özelliği', 'Profiller, sadakat, teklifler, kampanyalar, geri bildirim ve müşteri bağlılığı mevcut müşteri artışı kapsamını oluşturur.'],
       ['04', 'rol bakış açısı', 'Müşteri, servis personeli, yönetim ve pazarlama veya işletme sahibi ilişkinin farklı bölümlerini kullanır.'],
-      ['05', 'yaşam döngüsü adımı', 'Tanımla, anla, segment oluştur, iletişim kur ve ölç adımları pratik bir müşteri büyüme döngüsü oluşturur.'],
-      ['01', 'müşteri ilişkisi', 'Kimlik ve izinler uygun olduğunda ziyaret, sipariş ve geri bildirim bağlamı tek bir profile katkı sağlayabilir.']
+      ['05', 'yaşam döngüsü adımı', 'Tanımla, anla, segment oluştur, iletişim kur ve ölç adımları pratik bir müşteri artışı döngüsü oluşturur.'],
+      ['01', 'müşteri ilişkisi', 'Kimlik ve izinler uygun olduğunda ziyaret, sipariş ve geri bildirim içeriği tek bir profile katkı sağlayabilir.']
     ],
-    workflowEyebrow: 'Ziyaret bağlamından tekrar ziyaret ölçümüne',
+    workflowEyebrow: 'Ziyaret içeriğinden tekrar ziyaret ölçümüne',
     workflowTitle: 'Restoran etkileşimleri nasıl kullanılabilir müşteri ilişkisi verisine dönüşür?',
     workflowIntro: 'İş akışı, her müşteri etkileşimini gereksiz bir pazarlama kaydına dönüştürmeden iletişimin alaka düzeyini artırmalıdır.',
     workflow: [
-      ['Müşteriyi veya ziyareti tanımlayın', 'Yapılandırılmış müşteri yolculuğu ve izin kurallarına göre mevcut kimlik, ziyaret veya masa bağlamını kaydedin.'],
+      ['Müşteriyi veya ziyareti tanımlayın', 'Yapılandırılmış müşteri yolculuğu ve izin kurallarına göre mevcut kimlik, ziyaret veya masa içeriğini kaydedin.'],
       ['Faydalı etkileşim verisini ekleyin', 'Uygun ve mevcut olduğu durumlarda siparişleri, teklifleri, sadakat hareketlerini veya geri bildirimi müşteri ilişkisiyle bağlayın.'],
       ['Pratik segmentler oluşturun', 'Herkese aynı mesajı göndermek yerine müşterileri anlamlı davranış veya ilişki kriterlerine göre gruplayın.'],
       ['Teklif veya kampanya çalıştırın', 'Tanımlanmış hedef kitle ve amaç için yapılandırılmış sadakat, teklif veya kampanya araçlarını kullanın.'],
       ['Geri dönüş sinyalini ölçün', 'Kullanım, geri bildirim, tekrar ziyaret veya diğer kabul edilmiş sonuçları başlangıçtaki hedef kitle ve dönemle karşılaştırın.']
     ],
-    rolesTitle: 'Müşteri büyümesi yalnızca kampanya ekranına değil, restoran deneyimine de bağlıdır.',
-    rolesIntro: 'Profiller ve teklifler; servis bağlamı, yönetim kararları ve müşteri izinleri birbiriyle uyumlu olduğunda daha değerlidir.',
+    rolesTitle: 'Müşteri artışısi yalnızca kampanya ekranına değil, restoran deneyimine de bağlıdır.',
+    rolesIntro: 'Profiller ve teklifler; servis içeriği, yönetim kararları ve müşteri izinleri birbiriyle uyumlu olduğunda daha değerlidir.',
     roleViews: [
       ['Müşteri', 'Yapılandırılmış temas noktasından ilgili sadakat, teklif, geri bildirim veya sipariş deneyimini kullanır.'],
-      ['Servis personeli', 'Gereksiz profil veya kampanya yönetimini görmeden hizmeti desteklemek için uygun müşteri bağlamını kullanır.'],
+      ['Servis personeli', 'Gereksiz profil veya kampanya yönetimini görmeden hizmeti desteklemek için uygun müşteri içeriğini kullanır.'],
       ['Yönetici', 'Geri bildirim konularını, servis sorunlarını ve kampanya etkilerini restoran operasyonuyla birlikte değerlendirir.'],
       ['İşletme sahibi veya pazarlama', 'Mevcut müşteri ve ziyaret verilerine göre segmentleri, teklifleri, kampanyaları ve müşteri bağlılığı ölçümlerini tanımlar.']
     ],
@@ -757,7 +757,7 @@ const solutionDetailExpansions = {
       ['Teklif kullanım oranı', 'Teklif kullanımını toplam restoran trafiğine göre değil, uygun hedef kitle ve kampanya dönemine göre takip edin.'],
       ['Geri bildirim yanıt oranı', 'Tamamlanan geri bildirimleri ve öne çıkan konuları, davet edilen ziyaret veya hedef kitleyle karşılaştırın.']
     ],
-    implementationTitle: 'Müşteri büyümesi net izin, kimlik ve ilişkilendirme kuralları gerektirir.',
+    implementationTitle: 'Müşteri artışısi net izin, kimlik ve ilişkilendirme kuralları gerektirir.',
     implementationIntro: 'Müşteri ilişkisi modeli müşteri açısından anlaşılır, restoran açısından ise denetlenebilir olmalıdır.',
     implementation: [
       'Müşteri izinleri ve veri sorumluluğu modeli',
@@ -770,7 +770,7 @@ const solutionDetailExpansions = {
     faqs: [
       ['Bu, masa QR ödemesiyle aynı şey mi?', 'Hayır. Ödeme ürünü işlem yolculuğunu kapsar; bu ürün alanı profiller, sadakat, kampanyalar, geri bildirim ve müşteri bağlılığına odaklanır.'],
       ['Her müşterinin profil oluşturması gerekir mi?', 'Hayır. Profil oluşturma ve kimlik belirleme; yapılandırılmış yolculuğa, müşteri tercihine ve geçerli izin kurallarına bağlıdır.'],
-      ['Sipariş geçmişi segment oluşturmayı destekleyebilir mi?', 'Evet. Kimlik, sipariş verisi, yetkiler ve seçilen müşteri büyüme modülleri bu bağlamı sağlıyorsa kullanılabilir.'],
+      ['Sipariş geçmişi segment oluşturmayı destekleyebilir mi?', 'Evet. Kimlik, sipariş verisi, yetkiler ve seçilen müşteri artışı modülleri bu içeriği sağlıyorsa kullanılabilir.'],
       ['Bir kampanya tekrar ziyareti garanti eder mi?', 'Hayır. Kampanya ve müşteri bağlılığı performansı tanımlı hedef kitle, başlangıç seviyesi ve karşılaştırma dönemiyle ölçülmelidir.']
     ]
   }
@@ -802,27 +802,27 @@ export const resources = [
   {
     slug: 'role-based-workspaces',
     title: 'Rol Bazlı Restoran Çalışma Alanları Tasarlamak',
-    category: 'Ekipler',
-    intro: '6 rol bazlı çalışma alanıyla gereksiz ekran kalabalığını ve yetki riskini azaltırken restoran bağlamını nasıl bağlantılı tutabilirsiniz?',
+    category: 'Takımlar',
+    intro: '6 rol bazlı çalışma alanıyla gereksiz ekran kalabalığını ve yetki riskini azaltırken restoran içeriğini nasıl bağlantılı tutabilirsiniz?',
     image: '/site-assets/extra/qr-ordering-scene.webp',
     articleImage: '/site-assets/extra/outdoor-qr-toast.webp',
     sections: [
-      ['Görünümü sorumlulukla eşleştirin', 'İşletme sahibinin performans bağlamına, servis personelinin masa ve siparişlere, mutfağın ise hazırlık işlerine ihtiyacı vardır. Rol bazlı tasarım her çalışma alanını odaklı tutar.'],
-      ['Bütün operasyonu bağlantılı tutun', 'Ayrı çalışma alanları restoranın birbirinden kopuk sürümlerini oluşturmamalıdır. Faydalı bağlam, bir sonraki adımdan sorumlu kişiler arasında ilerlemeye devam etmelidir.'],
+      ['Görünümü sorumlulukla eşleştirin', 'İşletme sahibinin performans içeriğine, servis personelinin masa ve siparişlere, mutfağın ise hazırlık işlerine ihtiyacı vardır. Rol bazlı tasarım her çalışma alanını odaklı tutar.'],
+      ['Bütün operasyonu bağlantılı tutun', 'Ayrı çalışma alanları restoranın birbirinden kopuk sürümlerini oluşturmamalıdır. Faydalı içerik, bir sonraki adımdan sorumlu kişiler arasında ilerlemeye devam etmelidir.'],
       ['Yetkileri bilinçli kullanın', 'Erişim sorumluluğu takip etmelidir; böylece her rol gereksiz yönetim veya işletme bilgilerine ulaşmadan güvenle çalışabilir.']
     ]
   },
   {
     slug: 'ai-in-restaurant-operations',
-    title: 'Yapay Zekâ Restoran Operasyonlarına Nerede Destek Olabilir?',
-    category: 'Yapay Zekâ ve İçgörüler',
-    intro: 'Kaynak veriyi gizlemeden 9 restoran metriği üzerinde soru sorma, özetleme, karşılaştırma, uyarı, tahmin ve inceleme desteğinin nasıl kullanılabileceği.',
+    title: 'Yapay Zeka Restoran Operasyonlarına Nerede Destek Olabilir?',
+    category: 'Yapay Zeka ve İçgörüler',
+    intro: 'Kaynak veriyi gizlemeden 9 restoran ölçütü üzerinde soru sorma, özetleme, karşılaştırma, uyarı, tahmin ve inceleme desteğinin nasıl kullanılabileceği.',
     image: '/site-assets/extra/friends-dinner.webp',
     articleImage: '/site-assets/extra/restaurant-entrance.webp',
     sections: [
-      ['Faydalı bir soruyla başlayın', 'Yapay Zekâ; neyin değiştiği, neyin farklı performans gösterdiği veya hangi alanın dikkat gerektirdiği gibi gerçek bir operasyon sorusunu yanıtlamaya yardımcı olduğunda daha değerlidir.'],
-      ['Kaynak veriyi görünür tutun', 'İşletme sahipleri ve yöneticilerin bir özetin veya gözlemin arkasındaki bağlamı anlayabilmesi için Yapay Zekâ desteği temel restoran verisiyle birlikte sunulmalıdır.'],
-      ['Kararların yerine geçmek yerine onları destekleyin', 'Yapay Zekâ’nın faydalı rolü; bilgiyi araştırmayı, özetlemeyi ve karşılaştırmayı kolaylaştırırken operasyon kararlarının kontrolünü restoran ekibinde tutmaktır.']
+      ['Faydalı bir soruyla başlayın', 'Yapay Zeka; neyin değiştiği, neyin farklı performans gösterdiği veya hangi alanın dikkat gerektirdiği gibi gerçek bir operasyon sorusunu yanıtlamaya yardımcı olduğunda daha değerlidir.'],
+      ['Kaynak veriyi görünür tutun', 'İşletme sahipleri ve yöneticilerin bir özetin veya gözlemin arkasındaki içeriği anlayabilmesi için Yapay Zeka desteği temel restoran verisiyle birlikte sunulmalıdır.'],
+      ['Kararların yerine geçmek yerine onları destekleyin', 'Yapay Zeka’nın faydalı rolü; bilgiyi araştırmayı, özetlemeyi ve karşılaştırmayı kolaylaştırırken operasyon kararlarının kontrolünü restoran ekibinde tutmaktır.']
     ]
   },
   {
@@ -833,21 +833,21 @@ export const resources = [
     image: '/site-assets/extra/payment-cafe-table.webp',
     articleImage: '/site-assets/extra/payment-dinner.webp',
     sections: [
-      ['İlk işlemi açık hale getirin', 'Masa QR kodu, restoran bağlamı hazır olan ve bir sonraki işlemin kolayca anlaşıldığı net bir mobil deneyime açılmalıdır.'],
+      ['İlk işlemi açık hale getirin', 'Masa QR kodu, restoran içeriği hazır olan ve bir sonraki işlemin kolayca anlaşıldığı net bir mobil deneyime açılmalıdır.'],
       ['Servis ekibini sürecin içinde tutun', 'Dijital sipariş; yemeği tamamen self-servis bir arayüze dönüştürmek yerine notları, garson çağrılarını ve gerçek servis ekibini desteklemeye devam etmelidir.'],
       ['Yolculuğu ödeme sonuna kadar koruyun', 'Müşteri yemeğin sonunda süreci baştan başlatmak zorunda kalmadığında sipariş ve ödeme daha kullanışlı hale gelir.']
     ]
   },
   {
     slug: 'reservations-and-floor-planning',
-    title: 'Rezervasyon ve Salon Planlamasını Bir Araya Getirmek',
+    title: 'Rezervasyon ve Servis alanı planlamasını Bir Araya Getirmek',
     category: 'Rezervasyon',
     intro: '7 rezervasyon ve oturma özelliğinin geliş yoğunluğunu, kişi sayısını ve canlı salon kapasitesini pratik bir masa kararına nasıl dönüştürdüğü.',
     image: '/site-assets/extra/tablet-dashboard.webp',
     articleImage: '/site-assets/extra/payment-approved.webp',
     sections: [
       ['Günün yoğunluğunu önceden görün', 'Yaklaşan rezervasyonlar, kişi sayıları ve geliş saatleri müşteriler kapıya gelmeden önce ekibin talebi anlamasına yardımcı olur.'],
-      ['Salon durumunu aynı hikâyede tutun', 'Müsait, dolu ve rezervasyona hazır masalar rezervasyon listesini uygulanabilir bir oturma planına dönüştürmek için gereken bağlamı sağlar.'],
+      ['Salon durumunu aynı hikâyede tutun', 'Müsait, dolu ve rezervasyona hazır masalar rezervasyon listesini uygulanabilir bir oturma planına dönüştürmek için gereken içeriği sağlar.'],
       ['Duruma uygun görünümü seçin', 'Takvim, zaman çizelgesi ve liste görünümleri planlamayı; canlı salon görünümü ise o anda verilen kararları destekleyebilir.']
     ]
   },
@@ -870,7 +870,7 @@ export const integrations = ['SumUp', 'ready2order', 'Lightspeed', 'Square'];
 
 export const integrationFeaturePills = [
   'POS verisi',
-  'Muhasebe bağlamı',
+  'Muhasebe içeriği',
   'Teslimat kanalları',
   'Ödeme sağlayıcıları',
   'Merkezi raporlama',

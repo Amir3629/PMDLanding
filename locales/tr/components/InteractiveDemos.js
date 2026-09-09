@@ -9,7 +9,7 @@ const imageSets = {
     '/site-assets/social/8.webp',
     imageGroups.payment[3]
   ],
-  demo: [
+  tanıtım: [
     imageGroups.comments[15],
     imageGroups.table[10]
   ]
@@ -19,23 +19,23 @@ export default function InteractiveDemos({ variant = 'home' }) {
   const [ownerImage, customerImage] = imageSets[variant] || imageSets.home;
 
   return (
-    <section className="section demoSection" id="demo">
+    <section className="section demoSection" id="tanıtım">
       <div className="container">
         <div className="sectionHeading centerHeading demoSectionHeading">
           <span className="eyebrow">
-            İnsanlar için operasyon. Yapay Zekâ için bağlam.
+            İnsanlar için operasyon. Yapay Zeka için içerik.
           </span>
 
           <h2>
-            Ekipler odaklanmış ekranlar kullanır.
+            Takımlar odaklanmış ekranlar kullanır.
             Yönetim genel resmi görür.
-            Yapay Zekâ aradaki sinyalleri birleştirmeye yardımcı olur.
+            Yapay Zeka aradaki sinyalleri birleştirmeye yardımcı olur.
           </h2>
 
           <p>
-            PayMyDine, günlük ekranları işi yapan ekipler için pratik tutarken
-            raporlama ve Yapay Zekâ destekli inceleme için gereken ortak restoran
-            bağlamını da korur. Sonuç, ayrı çalışan bir sohbet aracı değil;
+            PayMyDine, günlük ekranları işi yapan takımlar için pratik tutarken
+            raporlama ve Yapay Zeka destekli inceleme için gereken ortak restoran
+            içeriğini da korur. Sonuç, ayrı çalışan bir sohbet aracı değil;
             restoranda zaten gerçekleşen operasyonun üzerine kurulan bir destek katmanıdır.
           </p>
         </div>
@@ -52,16 +52,16 @@ export default function InteractiveDemos({ variant = 'home' }) {
 
             <div className="demoShowcaseCopy">
               <span>
-                İşletme sahibi, yönetim ve Yapay Zekâ
+                İşletme sahibi, yönetim ve Yapay Zeka
               </span>
 
               <h3>
                 İşletmenin genel görünümünü görün; ardından gelir, müşteriler,
-                masalar, siparişler ve kârlılıktaki değişimi Yapay Zekâ ile inceleyin.
+                masalar, siparişler ve kârlılıktaki değişimi Yapay Zeka ile inceleyin.
               </h3>
 
               <p>
-                Üst düzey bir metrikten arkasındaki kaynak görünüme geçin,
+                Üst düzey bir ölçütten arkasındaki kaynak görünüme geçin,
                 dönemleri karşılaştırın, olağandışı değişimleri öne çıkarın ve
                 hangi salonun, kanalın, kategorinin veya ürünün incelenmesi
                 gerektiğine karar verin.
@@ -90,8 +90,8 @@ export default function InteractiveDemos({ variant = 'home' }) {
 
               <p>
                 Masa QR yolculuğu, ödeme tamamlanana kadar müşteri, masa,
-                sipariş ve ödeme bağlamını birbirine bağlı tutar. Bu etkileşimler
-                raporlama ve Yapay Zekâ destekli inceleme için yapılandırılmış
+                sipariş ve ödeme içeriğini birbirine bağlı tutar. Bu etkileşimler
+                raporlama ve Yapay Zeka destekli inceleme için yapılandırılmış
                 operasyon verisine de dönüşür.
               </p>
             </div>
