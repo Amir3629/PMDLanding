@@ -12,7 +12,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="İşletmenize özel tanıtım talep edin"
         title="Bir iş akışını, ilgili rolleri ve iyileştirmek istediğiniz ölçütü getirin."
-        intro="Bugün sürecin nasıl ilerlediğini, bilginin nerede tekrar girildiğini veya durum bilgisinin nerede kaybolduğunu, hangi sistemlerin kullanıldığını ve sonucu nasıl ölçtüğünüzü anlatın. Tanıtımı gerçek operasyon içeriğiniza göre hazırlayalım."
+        intro="Bugün sürecin nasıl ilerlediğini, bilginin nerede tekrar girildiğini veya durum bilgisinin nerede kaybolduğunu, hangi sistemlerin kullanıldığını ve sonucu nasıl ölçtüğünüzü anlatın. Tanıtımı gerçek operasyon içeriğinize göre hazırlayalım."
         image="/site-assets/extra/paris-cafe.webp"
         accent="green"
         actions={false}

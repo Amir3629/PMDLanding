@@ -872,7 +872,7 @@ export const integrationFeaturePills = [
   'POS verisi',
   'Muhasebe içeriği',
   'Teslimat kanalları',
-  'Ödeme sağlayıcıları',
+  'Ödeme sağlayıcılar',
   'Merkezi raporlama',
   'Stok'
 ];

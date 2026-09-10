@@ -24,7 +24,7 @@ export default function CompanyPage() {
             <p>Bu yaklaşım, ürünü birbirinden kopuk paneller ve pazarlama iddiaları yerine gerçek restoran operasyonuna odaklar.</p>
           </div>
           <div className="companyValueCards">
-            <article><h3>Rol sorumluluğu</h3><p>İşletme sahipleri, yöneticiler, servis personeli, mutfak, rezervasyon ve finans takımlari kendi görevlerine uygun kontroller ve yetkiler kullanır.</p></article>
+            <article><h3>Rol sorumluluğu</h3><p>İşletme sahipleri, yöneticiler, servis personeli, mutfak, rezervasyon ve finans takımları kendi görevlerine uygun kontroller ve yetkiler kullanır.</p></article>
             <article><h3>Ortak içerik</h3><p>Masa, müşteri, sipariş, zamanlama ve ödeme bilgileri tekrar girilmek yerine iş devri boyunca korunabilir.</p></article>
             <article><h3>Ölçülebilir iş akışları</h3><p>Her kurulum; bekleme süresi, hazırlık süresi, masa devir hızı, ortalama hesap tutarı veya tekrar ziyaret oranı gibi başlangıç ve hedef ölçütlerini tanımlar.</p></article>
             <article><h3>Kaynak verisi görünür Yapay Zeka</h3><p>Yapay Zeka mevcut verileri özetleyip karşılaştırabilir; ancak kaynak görünümü ve nihai insan kararı görünür kalır.</p></article>

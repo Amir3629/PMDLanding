@@ -17,7 +17,7 @@ const capabilities = [
 
 const integrationDetails = {
   factsEyebrow: 'Entegrasyon ve ölçek kapsamı',
-  factsTitle: 'Dört entegrasyon tipi, altı merkezi kontrol ve şu anda adı geçen dört sağlayıcı.',
+  factsTitle: 'Dört entegrasyon çeşidi, altı merkezi kontrol ve an itibariyle tanımlı dört sağlayıcı iletişimi',
   factsIntro: 'Bir sağlayıcının adının listelenmesi her veri alanının veya iş akışının desteklendiği anlamına gelmez. Kapsam; mevcut arayüzlere, yetkilere ve kabul edilen veri yoluna bağlıdır.',
   facts: [
     ['04', 'entegrasyon tipi', 'POS, muhasebe, teslimat ve ödeme bağlantıları mevcut entegrasyon kategorilerini oluşturur.'],

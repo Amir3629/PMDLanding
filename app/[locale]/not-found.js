@@ -12,7 +12,7 @@ export default function LocaleNotFound() {
         <span className="eyebrow">{arabic ? '404' : '404'}</span>
         <h1>{arabic ? 'الصفحة غير موجودة.' : 'Sayfa bulunamadı.'}</h1>
         <p>{arabic ? 'تعذّر العثور على الصفحة التي طلبتها.' : 'Aradığınız sayfa mevcut değil veya kaldırılmış.'}</p>
-        <a className="button" href={arabic ? '/ar' : '/tr'}>{arabic ? 'العودة إلى الصفحة الرئيسية' : 'Ana Sayfasına Dön'}</a>
+        <a className="button" href={arabic ? '/ar' : '/tr'}>{arabic ? 'العودة إلى الصفحة الرئيسية' : 'Ana Sayfaya Dön'}</a>
       </div>
     </section>
   );

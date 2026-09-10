@@ -73,7 +73,7 @@ export default function GlobalNotFound() {
               <h1>Sayfa bulunamadı.</h1>
               <p>Aradığınız sayfa mevcut değil veya kaldırılmış.</p>
               <div className="heroButtons pmdExploreButtonsFix">
-                <a className="button" href="/tr">Ana Sayfasına Dön</a>
+                <a className="button" href="/tr">Ana Sayfaya Dön</a>
                 <a className="button buttonGhost" href="/tr/platform">Platformu Keşfet</a>
               </div>
             </div>

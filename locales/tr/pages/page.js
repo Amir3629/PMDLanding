@@ -26,7 +26,7 @@ export default function HomePage() {
       <LifestyleMarquee />
       <CTA
         title="PayMyDine Yapay Zeka’nın işletmenizdeki 9 bağlantılı ürün alanıyla nasıl çalıştığını görün."
-        body="Ekip rollerinizi, salon yapınızı, müşteri yolculuğunuzu, mevcut sistemlerinizi ve yönetimin her gün sorduğu soruları paylaşın. En küçük pratik kurulumu birlikte belirleyelim; Yapay Zeka’nın mevcut verinizden hangi sinyalleri özetleyebileceğini, karşılaştırabileceğini, işaretleyebileceğini veya tahminleri desteklemek için kullanabileceğini gösterelim."
+        body="Ekip rollerinizi, salon yapınızı, müşteri yolculuğunuzu, mevcut sistemlerinizi ve yönetimin her gün sorduğu soruları ortaya koyun. En kolay pratik kurulumu birlikte belirleyelim; Yapay Zeka’nın mevcut verinizden hangi sinyalleri özetleyebileceğini, karşılaştırabileceğini, işaretleyebileceğini veya tahminleri desteklemek için kullanabileceğini gösterelim."
         secondaryLabel="Yapay Zekayı Keşfedin"
         secondaryHref="/tr/ai"
       />

@@ -35,7 +35,7 @@ export default function InteractiveDemos({ variant = 'home' }) {
           <p>
             PayMyDine, günlük ekranları işi yapan takımlar için pratik tutarken
             raporlama ve Yapay Zeka destekli inceleme için gereken ortak restoran
-            içeriğini da korur. Sonuç, ayrı çalışan bir sohbet aracı değil;
+            içeriğini de korur. Sonuç, ayrı çalışan bir sohbet aracı değil;
             restoranda zaten gerçekleşen operasyonun üzerine kurulan bir destek katmanıdır.
           </p>
         </div>

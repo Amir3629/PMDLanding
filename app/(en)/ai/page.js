@@ -27,7 +27,7 @@ const aiDetails = {
   workflowTitle: 'How a restaurant question moves from source data to a reviewed next action.',
   workflowIntro: 'The source, period and metric definition should remain visible throughout the investigation.',
   workflow: [
-    ['Choose a specific question', 'Start with a decision such as what changed, which location moved or why an item margin requires attention.'],
+    ['Choose a specific question', 'Start with a question such as what changed, which location moved or why an item margin requires attention.'],
     ['Confirm the available source', 'Identify the modules, locations, periods and definitions that can support the question.'],
     ['Generate a summary or comparison', 'Use the available data to describe the movement, comparison or forecast without hiding missing inputs.'],
     ['Inspect the evidence', 'Open the source metric, period, location, category or item behind the AI output.'],

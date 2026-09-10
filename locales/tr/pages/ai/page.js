@@ -9,34 +9,34 @@ export const metadata = {
 };
 
 const questions = [
-  ['Bir işletme sorusu sorun', 'Yapılandırılmış ortamınızdaki mevcut verileri kullanarak gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme yöntemi dağılımı veya kârlılık hakkında soru sorun.'],
+  ['İşle ilgili bir soru sorun', 'Yapılandırılmış ortamınızdaki mevcut verileri kullanarak gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme yöntemi dağılımı veya kârlılık hakkında soru sorun.'],
   ['Günlük özet alın', 'Önceki dönemi özetleyin, olağandışı değişimleri öne çıkarın ve daha yakından incelenmesi gereken ölçütleri veya şubeleri listeleyin.'],
-  ['Bir uyarının nedenini araştırın', 'Olağandışı bir sinyalden başlayarak arkasındaki döneme, kategoriye, şubeye veya operasyon içeriğine ilerleyin.'],
-  ['Karşılaştırın ve tahminleri destekleyin', 'Dönemleri veya şubeleri karşılaştırın; talep, satış ve kârlılık tahminlerini desteklemek için geçmiş verilerdeki örüntülerden yararlanın.']
+  ['Bir uyarının nedenini araştırın', 'Olağandışı bir sinyalden başlayarak arkasındaki döneme, kategoriye, şubeye veya operasyon içeriğine gidin.'],
+  ['Karşılaştırın ve tahmin edin', 'Dönemleri veya şubeleri karşılaştırın; talep, satış ve kârlılık tahminlerini desteklemek için geçmiş verilerdeki örüntülerden yararlanın.']
 ];
 
 const aiDetails = {
   factsEyebrow: 'Yapay Zeka kapsamı ve güvenlik sınırları',
   factsTitle: 'Altı destek biçimi, insan incelemesi iş akışında kalırken dokuz yönetim ölçütü üzerinde çalışabilir.',
-  factsIntro: 'Bu sayılar ürün kapsamını tanımlar. Doğruluk ve fayda; kaynak veriye, tanımlara, yetkilere ve sorulan soruya bağlıdır.',
+  factsIntro: 'Bu sayılar ürün kapsamını tanımlar. Doğruluk ve fayda kaynak veriye, tanımlara, yetkilere ve sorulan soruya bağlıdır.',
   facts: [
-    ['06', 'Yapay Zeka destekli işlem', 'Sorular, günlük özetler, uyarılar, karşılaştırmalar, tahminleme ve bir sonraki inceleme adımını belirleme mevcut kapsamı oluşturur.'],
-    ['09', 'yönetim ölçütü', 'Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme yöntemi dağılımı, tahminleme ve kârlılık işletme içeriğini sağlar.'],
-    ['04', 'karar rolü', 'İşletme sahibi, yönetici, finans ve çoklu şube yönetimi aynı veriyi farklı kararlar için inceleyebilir.'],
-    ['01', 'nihai karar sahibi insan', 'Yapay Zeka kanıtları düzenleyebilir ve neyin incelenmesi gerektiğini önerebilir; restoran ekibi doğrular ve karar verir.']
+    ['06', 'Yapay Zeka destekli işlemler', 'Sorular, günlük özetler, uyarılar, karşılaştırmalar, tahminde bulunma ve bir sonraki inceleme mevcut YZ\'nın kapsamı oluşturur.'],
+    ['09', 'yönetim ölçütleri', 'Gelir, müşteriler, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme yöntemi dağılımı, tahminde bulunma ve kârlılık işin içeriğini sağlar.'],
+    ['04', 'karar rolleri', 'İşletme sahibi, yönetici, finans ve çoklu şube yönetimi aynı veriyi farklı kararlar için inceleyebilir.'],
+    ['01', 'İnsan, nihai karar sahibi', 'Yapay Zeka kanıtları düzenleyebilir ve neyin incelenmesi gerektiğini önerebilir; restoran ekibi teyid eder ve karar verir.']
   ],
   workflowEyebrow: 'Sorumlu bir Yapay Zeka incelemesi',
-  workflowTitle: 'Bir restoran sorusu kaynak veriden gözden geçirilmiş bir sonraki aksiyona nasıl ilerler?',
+  workflowTitle: 'Restorana ilişkin bir soru kaynak veriden gözden geçirilmiş bir sonraki aksiyona nasıl ilerler?',
   workflowIntro: 'Kaynak, dönem ve ölçüt tanımı inceleme boyunca görünür kalmalıdır.',
   workflow: [
-    ['Net bir soru seçin', 'Neyin değiştiği, hangi şubenin farklılaştığı veya bir ürün marjının neden dikkat gerektirdiği gibi belirli bir kararla başlayın.'],
+    ['Belirli bir soru seçin', 'Neyin değiştiği, hangi şubenin farklılaştığı veya bir ürün marjının neden dikkat gerektirdiği gibi belirli bir soruyla başlayın.'],
     ['Mevcut veri kaynağını doğrulayın', 'Soruyu destekleyebilecek modülleri, şubeleri, dönemleri ve tanımları belirleyin.'],
-    ['Özet veya karşılaştırma oluşturun', 'Eksik girdileri gizlemeden değişimi, karşılaştırmayı veya tahmini açıklamak için mevcut veriyi kullanın.'],
+    ['Bir özet veya karşılaştırma oluşturun', 'Eksik girdileri gizlemeden değişimi, karşılaştırmayı veya tahmini açıklamak için mevcut veriyi kullanın.'],
     ['Kanıtı inceleyin', 'Yapay Zeka çıktısının arkasındaki kaynak ölçütü, dönemi, şubeyi, kategoriyi veya ürünü açın.'],
-    ['Karar verin ve sonucu yeniden inceleyin', 'Bir kişi aksiyonu seçer, yeniden ele alınacak soruyu kaydeder ve operasyon değişikliğinden sonra aynı ölçütü tekrar karşılaştırır.']
+    ['Karar verin ve sonucu yeniden inceleyin', 'Bir kişi aksiyonu seçer, yeniden ele alınacak soruyu kaydeder ve değişikliği uyguladıktan sonra aynı ölçütü tekrar karşılaştırır.']
   ],
   rolesTitle: 'Yapay Zeka her karar rolü için inceleme süresini kısaltmalı; herkese aynı cevabı vermemelidir.',
-  rolesIntro: 'Hangi soruların ve kaynak görünümlerinin kullanılabileceğini rol yetkileri ve işletme içeriği belirler.',
+  rolesIntro: 'İzinler ve iş içeriği her personelin hangi soruları ve kaynak bilgilerini kullanabileceğini belirler.',
   roleViews: [
     ['İşletme sahibi', 'Dönemleri veya şubeleri karşılaştırır, kârlılık değişimini inceler ve hangi işletme göstergesinin dikkat gerektirdiğini sorar.'],
     ['Yönetici', 'Vardiya istisnalarını, masa veya satış değişimlerini ve olağandışı bir sonucun arkasındaki operasyon olaylarını araştırır.'],
@@ -44,7 +44,7 @@ const aiDetails = {
     ['Çoklu şube yönetimi', 'Yerel kaynak içeriğini inceleme imkânını koruyarak şubeleri tutarlı tanımlarla karşılaştırır.']
   ],
   metricsEyebrow: 'Yapay Zeka katmanını değerlendirin',
-  metricsTitle: 'Yalnızca cevabın akıcı olmasını değil, kaynağa kadar izlenebilirliğini ve karar faydasını ölçün.',
+  metricsTitle: 'Yalnızca cevabın akıcı olmasını değil, kaynağa kadar izlenebilirliğini ve karar faydalılığını ölçün.',
   metricsIntro: 'Bir Yapay Zeka özelliği; belgelenmiş sorular, kaynak veri kapsamı ve restoran iş akışındaki gerçek sonuçlar üzerinden değerlendirilmelidir.',
   metrics: [
     ['Kaynak veri kapsamı', 'Bir sorunun ihtiyaç duyduğu verinin mevcut, güncel ve doğru şube veya dönemle eşleşmiş olup olmadığını takip edin.'],
@@ -94,7 +94,7 @@ export default function AIPage() {
             <div className="storyFeatureCopy">
               <span className="eyebrow">İçerik içinde 9 ölçüt</span>
               <h2>Bir sayıyla başlayın; karşılaştırma dönemini ve operasyon nedenini görünür tutun.</h2>
-              <p>Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme yöntemi dağılımı, tahminler ve kârlılık; işletme sahibi özetten arkasındaki kaynak görünüme ilerleyebildiğinde daha anlamlı hale gelir.</p>
+              <p>Gelir, müşteri sayısı, ortalama hesap tutarı, masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme yöntemi dağılımı, tahminler ve kârlılık; işletme sahibi özetten arkasındaki kaynak içeriğine ilerleyebildiğinde daha anlamlı hale gelir.</p>
               <a className="textArrow" href="/tr/solutions/insights">9 yönetim ölçütünü görün <Icon name="arrow" size={15} /></a>
             </div>
           </article>
@@ -102,7 +102,7 @@ export default function AIPage() {
             <div className="storyFeatureImage"><img src="/site-assets/custom/solution-story/ai-investigation-time-20260809.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">Karar desteği; otomatik pilot değil</span>
-              <h2>Ekip doğrulamayı ve kararı elinde tutarken Yapay Zeka ile inceleme süresini kısaltın.</h2>
+              <h2>Takım sağlama yapıp karar alırken, Yapay Zeka ile inceleme süresini kısaltın.</h2>
               <p>Her özet; mevcut modüllere, veri kalitesine, karşılaştırma dönemine ve entegrasyonlara bağlıdır. Operasyon veya ticari aksiyonun kontrolü restoran ekibinde kalır.</p>
             </div>
           </article>

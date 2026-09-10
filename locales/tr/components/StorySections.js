@@ -242,7 +242,7 @@ export function FlexibilityAndIntegrationSections() {
               Desteklenen POS, muhasebe, teslimat ve ödeme bağlantıları;
               merkezi raporlama, şube karşılaştırması, stok ve kârlılık iş
               akışlarına yararlı kaynak veri sağlayabilir. İzin verilen kaynak
-              resmi ne kadar eksiksiz olursa Yapay Zeka destekli karşılaştırma
+              içeriği ne kadar eksiksiz olursa Yapay Zeka destekli karşılaştırma
               ve incelemeler de o kadar faydalı olabilir.
             </p>
 
@@ -273,7 +273,7 @@ export function FlexibilityAndIntegrationSections() {
             <img
               className="integrationPhoto"
               src={imageGroups.comments[16]}
-              alt="POS entegrasyonu konsepti"
+              alt="POS entegrasyon kavramı"
               loading="lazy"
             />
           </div>

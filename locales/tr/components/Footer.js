@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container footerGrid">
         <div className="footerBrand">
           <Logo />
-          <p>Restoran operasyonları, rezervasyonlar, sipariş, mutfak ve menü yönetimi, ödemeler, müşteri artışısi, analiz, takım yönetimi ve entegrasyonlar için tek bir işletim platformu.</p>
+          <p>Restoran operasyonları, rezervasyonlar, sipariş, mutfak ve menü yönetimi, ödemeler, müşteri artışı, analiz, takım yönetimi ve entegrasyonlar için tek bir işletim platformu.</p>
         </div>
         <div>
           <h4>Ürün</h4>
