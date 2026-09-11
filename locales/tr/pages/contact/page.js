@@ -10,9 +10,9 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="İşletmenize özel tanıtım talep edin"
-        title="Bir iş akışını, ilgili rolleri ve iyileştirmek istediğiniz ölçütü getirin."
-        intro="Bugün sürecin nasıl ilerlediğini, bilginin nerede tekrar girildiğini veya durum bilgisinin nerede kaybolduğunu, hangi sistemlerin kullanıldığını ve sonucu nasıl ölçtüğünüzü anlatın. Tanıtımı gerçek operasyon içeriğinize göre hazırlayalım."
+        eyebrow="Pratik bir tanıtım talep edin"
+        title="Bir akışı, ilgili rolleri ve iyileştirmek istediğiniz ölçütü getirin."
+        intro="Bugün ne olduğunu, bilginin nerede tekrar girildiğini veya durum bilgisinin nerede kaybolduğunu, hangi sistemlerin kullanıldığını ve sonucu nasıl ölçtüğünüzü anlatın. Tanıtımı gerçek operasyon içeriğinize göre hazırlayalım."
         image="/site-assets/extra/paris-cafe.webp"
         accent="green"
         actions={false}
@@ -25,10 +25,10 @@ export default function ContactPage() {
             <ul>
               <li>PayMyDine Yapay Zeka: sorular, günlük özetler, uyarılar ve tahminler</li>
               <li>Restoran Operasyonları: gösterge paneli, siparişler, masalar ve servis alanı planları</li>
-              <li>Rezervasyon: takvim, gelişler, rezervasyonsuz müşteriler ve masa atama</li>
+              <li>Rezervasyonlar: takvim, gelişler, rezervasyonsuz müşteriler ve masa atama</li>
               <li>Sipariş ve Mutfak: garson siparişi, Mutfak Ekran Sistemi (KDS), durum ve menü kontrolü</li>
               <li>Ödemeler: masa QR kodu, müşteri ödeme süreci ve 3 hesap bölme yöntemi</li>
-              <li>Analiz: gelir, talep ve kârlılık için 9 yönetim ölçütü</li>
+              <li>Analizler: gelir, talep ve kârlılık için 9 yönetim ölçütü</li>
               <li>Takım Yönetimi: 6 rol bazlı çalışma alanı ve yetkiler</li>
               <li>Müşteri MİY’i: profiller, sadakat, teklifler, kampanyalar ve geri bildirim</li>
               <li>Entegrasyonlar: POS, muhasebe, teslimat, ödeme ve stok içeriği</li>

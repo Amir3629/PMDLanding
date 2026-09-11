@@ -52,19 +52,19 @@ const aiDetails = {
     ['Tahmin hatası', 'Tahmini garanti gibi sunmak yerine aynı dönem ve tanımla tahmin edilen sonucu gerçekleşen sonuçla karşılaştırın.'],
     ['İnceleme süresi', 'Belirli bir yönetim sorusunu araştırmak için gereken süreyi Yapay Zeka destekli iş akışından önce ve sonra karşılaştırın.']
   ],
-  implementationTitle: 'Yapay Zeka çıktısını kullanıma açmadan önce veri sözleşmesini ve insan inceleme sınırını tanımlayın.',
-  implementationIntro: 'Güvenli bir uygulama; sistemin hangi veriyi bildiğini, neyi göremediğini ve nihai kararın kimde olduğunu açıkça belirtir.',
+  implementationTitle: 'Yapay Zeka çıktısını kullanıma açmadan önce veri sözleşmesini ve bireysel inceleme sınırını tanımlayın.',
+  implementationIntro: 'Güvenli bir YZ uygulaması; sistemin hangi veriyi bildiğini, neyi göremediğini ve nihai kararın kimde olduğunu açıkça belirtir.',
   implementation: [
     'Onaylanmış veri kaynakları, şubeler ve geçmiş dönemler',
     'Ölçüt tanımları ve karşılaştırma kuralları',
     'Sorular ve kaynak görünümler için rol yetkileri',
     'Minimum veri kalitesi ve güncellik kontrolleri',
-    'Operasyon ve ticari aksiyonlarda insan incelemesi',
+    'Operasyon ve ticari aksiyonlarda bireysel inceleme',
     'Belgelenmiş kapsam dışı alanlar, sınırlamalar ve yönlendirme süreci'
   ],
   faqs: [
     ['PayMyDine Yapay Zeka restoranı otomatik olarak yönetir mi?', 'Hayır. Mevcut konumlandırma bağımsız operasyon kontrolü değil, Yapay Zeka desteği ve karar desteğidir.'],
-    ['Yapay Zeka kaynak veri olmadan bir soruyu yanıtlayabilir mi?', 'Faydalı bir yanıt için ilgili veri, tanım, dönem ve yetkiler gerekir. Eksik girdiler gizlice varsayılmamalı, açıkça gösterilmelidir.'],
+    ['Yapay Zeka kaynak veri olmadan bir soruyu yanıtlayabilir mi?', 'Faydalı bir yanıt için gerçekçi veri, tanım, dönem ve yetkiler gerekir. Eksik girdiler gizlice varsayılmamalı, açıkça gösterilmelidir.'],
     ['Tahminler garanti midir?', 'Hayır. Tahminler gerçekleşen sonuçlarla karşılaştırılmalı ve vaat olarak değil, öngörü olarak değerlendirilmelidir.'],
     ['Farklı roller farklı sorular sorabilir mi?', 'Evet. Her sorumluluk için uygun soruları ve ayrıntı seviyesini rol yetkileri ile kullanılabilir kaynak görünümler belirlemelidir.']
   ]
@@ -115,8 +115,8 @@ export default function AIPage() {
         <div className="container capabilityPanel">
           <div>
             <span className="eyebrow">Kullanılabilir Yapay Zeka işlemleri</span>
-            <h2>Sorun, özetleyin, karşılaştırın, uyarıları inceleyin, tahminleri destekleyin ve araştırın.</h2>
-            <p>Kesin çıktılar, PayMyDine ortamında bulunan verilere, modüllere, şubelere ve bağlı sistemlere göre değişir.</p>
+            <h2>Sor, özetle, karşılaştır, uyarıları incele, tahminleri destekle ve araştır.</h2>
+            <p>Kesin çıktılar, PayMyDine ortamında bulunan verilere, modüllere, şubelere ve bağlı sistemlere bağlıdır.</p>
           </div>
           <div className="capabilityList">
             <span><Icon name="check" size={16}/>Doğal dilde sorular</span>

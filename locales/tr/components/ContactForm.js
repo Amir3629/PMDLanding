@@ -11,7 +11,7 @@ export default function ContactForm() {
       <label>Restoran / işletme<input required name="company" /></label>
       <div className="formRow"><label>İşletme yapısı<select name="type" defaultValue=""><option value="" disabled>Bir seçenek belirleyin</option><option>Tam servis restoran</option><option>Rahat ve günlük servis restoranı</option><option>Yüksek hacimli restoran</option><option>Büyük / çok alanlı işletme</option><option>Diğer restoran yapısı</option></select></label><label>Mevcut POS sistemi<input name="pos" placeholder="İsteğe bağlı" /></label></div>
       <label>PayMyDine'ın hangi alanlarını incelemek istersiniz?<textarea name="message" rows="5" placeholder="Operasyon, takım çalışma alanları, rezervasyonlar, müşteri siparişi, mutfak, ödemeler, Yapay Zeka, analiz ve içgörüler, entegrasyonlar..." /></label>
-      <button className="button" type="submit">Tanıtım talebimi gönder</button>
+      <button className="button" type="submit">Tanıtım talebi oluştur</button>
       {sent && <p className="formSuccess">Teşekkürler — tanıtım talebiniz bu prototipte kaydedildi. Yayına almadan önce formu tercih ettiğiniz e-posta kutusuna veya MİY sistemine bağlayın.</p>}
     </form>
   );
