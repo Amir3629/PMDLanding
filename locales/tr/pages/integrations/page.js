@@ -9,21 +9,21 @@ export const metadata = {
 };
 
 const capabilities = [
-  ['POS verisi', 'Personelin aynı bilgiyi tekrar girmesine gerek kalmadan desteklenen sipariş, satış, menü veya masa verilerini PayMyDine operasyon görünümüne taşıyın.'],
+  ['POS verisi', 'Personelin aynı bilgiyi tekrar girmesine gerek kalmadan desteklenen sipariş, satış, menü veya masa verilerini PayMyDine operasyon paneline taşıyın.'],
   ['Muhasebe içeriği', 'Bağlı sistemin sunduğu imkânlar ve yetkiler çerçevesinde finans iş akışının ihtiyaç duyduğu raporlama alanlarını aktarın veya eşleyin.'],
-  ['Teslimat kanalları', 'Desteklenen teslimat siparişlerini kanal bazında ayırt edilebilir tutarken genel iş yükü ve satış görünümüne dahil edin.'],
-  ['Ödeme sağlayıcıları', 'Desteklenen ödeme durumu ve mutabakat bilgisini masa ve müşteri ödeme yolculuğuyla bağlantılı tutun.']
+  ['Teslimat kanalları', 'Desteklenen paket servis siparişlerini kanal bazında ayırt edilebilir tutarken, genel iş yükü ve satış tablosuna da dahil et.'],
+  ['Ödeme sağlayıcıları', 'Desteklenen ödeme durumu ve tahsilat bilgilerini masa takibine ve müşteri hesap kapatma sürecine bağla.']
 ];
 
 const integrationDetails = {
   factsEyebrow: 'Entegrasyon ve ölçek kapsamı',
-  factsTitle: 'Dört entegrasyon çeşidi, altı merkezi kontrol ve an itibariyle tanımlı dört sağlayıcı iletişimi',
-  factsIntro: 'Bir sağlayıcının adının listelenmesi her veri alanının veya iş akışının desteklendiği anlamına gelmez. Kapsam; mevcut arayüzlere, yetkilere ve kabul edilen veri yoluna bağlıdır.',
+  factsTitle: 'Dört entegrasyon çeşidi, altı merkezi kontrol ve an itibariyle tanımlı dört servis sağlayıcı',
+  factsIntro: 'Bir servis sağlayıcının olması her veri alanının veya iş akışının desteklendiği anlamına gelmez. Kapsam; mevcut arayüzlere, yetkilere ve kabul edilen veri yoluna bağlıdır.',
   facts: [
     ['04', 'entegrasyon tipi', 'POS, muhasebe, teslimat ve ödeme bağlantıları mevcut entegrasyon kategorilerini oluşturur.'],
     ['06', 'merkezi kontrol', 'Merkezi işletme sahibi görünümü, ortak menüler, merkezi raporlama, stok, ürün maliyeti ve satın alma çoklu şube operasyonlarını destekler.'],
-    ['04', 'adı geçen sağlayıcı', 'Mevcut ürün verisinde SumUp, ready2order, Lightspeed ve Square yer alır; kesin kapsam arayüz ve projeye göre belirlenir.'],
-    ['05', 'uygulama aşaması', 'Keşif, alan eşleme, erişim, test ve izleme pratik bir entegrasyon yolunu oluşturur.']
+    ['04', 'tanımlı servis sağlayıcı', 'Mevcut ürün verilerinde "SumUp", "ready2order", "Lightspeed" ve "Square" yer almaktadır. Kapsam arayüz ve projeye göre belirlenir.'],
+    ['05', 'uygulama aşaması', 'Keşif, alan eşleme, erişim, test ve izleme pratik bir entegrasyon yolu oluşturur.']
   ],
   workflowEyebrow: 'Sistem envanterinden izlenen bağlantıya',
   workflowTitle: 'Gerçek bir restoran iş akışına göre entegrasyon nasıl tanımlanır?',
@@ -86,7 +86,7 @@ export default function IntegrationsPage() {
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Bağlantıdan önce veri yolunu tanımlayın</span>
             <h2>Her entegrasyon için hangi verinin hareket edeceğini, hangi sistemin ana kaynak olarak kalacağını ve sonucu kimin kullanacağını belirleyin.</h2>
-            <p>Faydalı bir entegrasyon, tekrar veri girişini veya eksik içeriği ortadan kaldırır. Yalnızca teknik olarak mümkün olduğu için veri taşımamalıdır.</p>
+            <p>Faydalı bir entegrasyon, tekrar veri girişini veya eksik içeriği ortadan kaldırır. Yalnızca teknik olarak mümkün olduğu için veri taşınmamalıdır.</p>
           </div>
           <div className="highlightGrid">
             {capabilities.map(([title, body], index) => <article className="highlightCard" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{body}</p></article>)}
@@ -99,18 +99,18 @@ export default function IntegrationsPage() {
           <div>
             <span className="eyebrow darkEyebrow">6 çoklu şube kontrolü</span>
             <h2>Her restoran yerel operasyon yapısını korurken şubeleri merkezi olarak karşılaştırın.</h2>
-            <p>İşletme sahipleri, her şubeyi aynı servis alanı planına, servis modeline veya ekip yapısına zorlamadan şube performansını ve ortak standartları inceleyebilir.</p>
+            <p>İşletme sahibi her şubeyi aynı salon planı, servis modeli ya da ekip yapısına sokmadan şube performansını ve ortak standartları takip edebilir.</p>
           </div>
           <div className="integrationNameGrid">
-            {['Merkezi işletme sahibi görünümü', 'Ortak menüler', 'Merkezi raporlama', 'Stok', 'Ürün maliyeti', 'Satın alma'].map((item) => <span key={item}><Icon name="check" size={17}/>{item}</span>)}
+            {['Merkezi işletme sahibi görünümü', 'Ortak menüler', 'Merkezi raporlama', 'Stok', 'Yemek maliyeti', 'Satın alma'].map((item) => <span key={item}><Icon name="check" size={17}/>{item}</span>)}
           </div>
         </div>
       </section>
 
       <section className="section twoUpStorySection">
         <div className="container twoUpStoryGrid">
-          <article><img src="/site-assets/custom/integrations-capabilities-fit.webp" alt=""/><div><span className="eyebrow">Entegrasyon kapsamı</span><h2>Yalnızca gerçek bir iş akışını veya raporlama ihtiyacını destekleyen veri alanlarını bağlayın.</h2><p>Kurulumdan önce her veri alanı için kaynağı, veri yönünü, güncelleme sıklığını, yetkiyi ve sorumlu rolü belgeleyin.</p></div></article>
-          <article><img src="/site-assets/custom/integrations-operating-picture.webp" alt=""/><div><span className="eyebrow">Tek işletme görünümü</span><h2>Satış, stok, satın alma ve şube performansını birlikte değerlendirin.</h2><p>Bağlı sistemler gerekli veriyi sağladığında işletme sahipleri şube sonuçlarını karşılaştırabilir, ürün maliyeti değişimini anlayabilir ve bir işletme göstergesini operasyon kaynağına kadar takip edebilir.</p></div></article>
+          <article><img src="/site-assets/custom/integrations-capabilities-fit.webp" alt=""/><div><span className="eyebrow">Entegrasyon kapsamı</span><h2>Yalnızca gerçek operasyon veya raporlama ihtiyacını destekleyen veri alanlarını bağlayın.</h2><p>Kurulumdan önce her veri alanı için kaynağı, veri yönünü, güncelleme sıklığını, yetkili ve sorumlu rolü belgeleyin.</p></div></article>
+          <article><img src="/site-assets/custom/integrations-operating-picture.webp" alt=""/><div><span className="eyebrow">Tek işletme görünümü</span><h2>Satış, stok, satın alma ve şube performansını birlikte değerlendirin.</h2><p>Bağlı sistemler gerekli veriyi sağladığında işletme sahipleri şube sonuçlarını karşılaştırabilir, yiyecek maliyeti değişimini anlayabilir ve bir işletme rakamını operasyon kaynağına kadar takip edebilir.</p></div></article>
         </div>
       </section>
 
