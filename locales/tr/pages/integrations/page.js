@@ -32,7 +32,7 @@ const integrationDetails = {
     ['Ana veri kaynağını belirleyin', 'Sipariş, menü, ödeme, muhasebe, stok veya şube verisinin bugün hangi sistem tarafından yönetildiğini belgeleyin.'],
     ['Alanları ve veri yönünü tanımlayın', 'Gereken veri alanlarını, verinin PayMyDine’a mı yoksa PayMyDine’dan mı hareket edeceğini ve sonucu hangi rolün kullanacağını listeleyin.'],
     ['Erişimi ve sınırları doğrulayın', 'Sağlayıcının gerçekten sunduğu arayüzü, kimlik doğrulamayı, yetkileri, kullanım limitlerini ve durum ayrıntılarını inceleyin.'],
-    ['Mutabakat senaryolarıyla test edin', 'Canlıya geçmeden önce normal kayıtları, güncellemeleri, hataları ve tekrar kayıtları kabul edilen örneklerle doğrulayın.'],
+    ['Mutabakat senaryolarıyla test edin', 'Uygulamaya geçmeden önce normal kayıtları, güncellemeleri, hataları ve tekrar kayıtları kabul edilen örneklerle doğrulayın.'],
     ['İzleyin ve kapsamı genişletin', 'Bağlantı kapsamını büyütmeden önce veri güncelliğini, başarısız aktarımları ve mutabakat istisnalarını takip edin.']
   ],
   rolesTitle: 'Entegrasyonun değeri; kurulum, operasyon, finans ve işletme sahipliği için farklıdır.',
