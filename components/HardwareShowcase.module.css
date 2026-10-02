@@ -8,3 +8,44 @@
 @media(max-width:1050px){.heroPhotoWrap{min-height:500px;max-width:780px;width:100%;margin:0 auto}.heroPhoto{height:500px}.productImage{min-height:300px}}
 @media(max-width:760px){.heroPhotoWrap{min-height:380px}.heroPhoto{height:380px}.productVisual,.productImage{min-height:280px}}
 @media(max-width:480px){.heroPhotoWrap{min-height:290px;border-radius:22px}.heroPhoto{height:290px}.productVisual,.productImage{min-height:240px}}
+
+/* === PMD HARDWARE POLISH V1 START === */
+
+/*
+  Hardware-page-only viewport background.
+  The header lives outside the HardwareShowcase component, so the page
+  background must also reach html/body to avoid a different strip above
+  the header at the top edge of the viewport.
+*/
+:global(html):has(.page),
+:global(body):has(.page) {
+  background: #fbfefc;
+}
+
+:global(body):has(.page) :global(.siteHeader) {
+  background: rgba(251, 254, 252, .94);
+}
+
+/*
+  The four ecosystem cards are intentionally compact, but the previous
+  14px label was visually undersized at desktop widths.
+*/
+.flowItem b {
+  font-size: 18px;
+  line-height: 1.24;
+  letter-spacing: -0.015em;
+}
+
+@media (max-width: 1050px) {
+  .flowItem b {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flowItem b {
+    font-size: 16px;
+  }
+}
+
+/* === PMD HARDWARE POLISH V1 END === */
