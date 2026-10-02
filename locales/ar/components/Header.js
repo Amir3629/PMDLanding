@@ -91,6 +91,9 @@ const toggleMobileNav = () => {
                   </div>}
               </div>;
         })}
+          <div className="navItem">
+            <a href="/ar/hardware" onClick={() => { setMega(null); setMobileOpen(false); }}>الأجهزة</a>
+          </div>
         </nav>
         <div className="headerActions">
           <a className="loginLink desktopOnly" href="/ar/how-it-works">كيف يعمل</a>

@@ -19,6 +19,7 @@ import * as TR_PAGE_13 from '@/locales/tr/pages/security/page';
 import * as TR_PAGE_14 from '@/locales/tr/pages/solutions/[slug]/page';
 import * as TR_PAGE_15 from '@/locales/tr/pages/solutions/page';
 import * as TR_PAGE_16 from '@/locales/tr/pages/support/page';
+import * as TR_PAGE_17 from '@/locales/tr/pages/hardware/page';
 import * as AR_PAGE_0 from '@/locales/ar/pages/ai/page';
 import * as AR_PAGE_1 from '@/locales/ar/pages/company/page';
 import * as AR_PAGE_2 from '@/locales/ar/pages/contact/page';
@@ -36,6 +37,7 @@ import * as AR_PAGE_13 from '@/locales/ar/pages/security/page';
 import * as AR_PAGE_14 from '@/locales/ar/pages/solutions/[slug]/page';
 import * as AR_PAGE_15 from '@/locales/ar/pages/solutions/page';
 import * as AR_PAGE_16 from '@/locales/ar/pages/support/page';
+import * as AR_PAGE_17 from '@/locales/ar/pages/hardware/page';
 
 const LOCALES = ['tr', 'ar'];
 
@@ -56,6 +58,7 @@ const STATIC = {
     "security": TR_PAGE_13,
     "solutions": TR_PAGE_15,
     "support": TR_PAGE_16,
+    "hardware": TR_PAGE_17,
   },
   ar: {
     "ai": AR_PAGE_0,
@@ -73,6 +76,7 @@ const STATIC = {
     "security": AR_PAGE_13,
     "solutions": AR_PAGE_15,
     "support": AR_PAGE_16,
+    "hardware": AR_PAGE_17,
   },
 };
 

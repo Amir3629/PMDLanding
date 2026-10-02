@@ -99,6 +99,9 @@ export default function Header() {
               </div>
             );
           })}
+          <div className="navItem">
+            <a href="/tr/hardware" onClick={() => { setMega(null); setMobileOpen(false); }}>Donanım</a>
+          </div>
         </nav>
         <div className="headerActions">
           <a className="loginLink desktopOnly" href="/tr/how-it-works">Nasıl Çalışır?</a>

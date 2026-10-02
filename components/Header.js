@@ -111,6 +111,9 @@ const toggleMobileNav = () => {
               </div>
             );
           })}
+          <div className="navItem">
+            <a href="/hardware" onClick={() => { setMega(null); setMobileOpen(false); }}>Hardware</a>
+          </div>
         </nav>
         <div className="headerActions">
           <a className="loginLink desktopOnly" href="/how-it-works">How It Works</a>
