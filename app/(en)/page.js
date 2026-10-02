@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import HomeHardwareRunway from '@/components/HomeHardwareRunway';
 import OfferGrid from '@/components/OfferGrid';
 import Workflow from '@/components/Workflow';
 import InteractiveDemos from '@/components/InteractiveDemos';
@@ -25,6 +26,8 @@ export default function HomePage() {
       <SiteStructuredData locale="en" />
 
       <Hero />
+
+      <HomeHardwareRunway locale="en" />
 
       <OfferGrid />
 

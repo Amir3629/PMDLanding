@@ -1,4 +1,5 @@
 import Hero from '@/locales/tr/components/Hero';
+import HomeHardwareRunway from '@/components/HomeHardwareRunway';
 import OfferGrid from '@/locales/tr/components/OfferGrid';
 import Workflow from '@/locales/tr/components/Workflow';
 import InteractiveDemos from '@/locales/tr/components/InteractiveDemos';
@@ -17,6 +18,8 @@ export default function HomePage() {
     <>
       <SiteStructuredData locale="tr" />
       <Hero />
+
+      <HomeHardwareRunway locale="tr" />
       <OfferGrid />
       <RoleAndAISections />
       <Workflow />
