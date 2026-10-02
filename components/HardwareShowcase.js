@@ -2,6 +2,17 @@ import styles from './HardwareShowcase.module.css';
 
 const PRODUCT_TONES = ['green', 'blue', 'orange', 'purple', 'forest', 'gold', 'mint', 'slate'];
 
+const PRODUCT_IMAGES = {
+  table: '/hardware/table-qr-pay-display.webp',
+  cashier: '/hardware/dual-screen-cashier-pos.webp',
+  mobile: '/hardware/mobile-pos-terminal.webp',
+  payment: '/hardware/smart-payment-terminal.webp',
+  printer: '/hardware/receipt-printer.webp',
+  drawer: '/hardware/cash-drawer.webp',
+  kds: '/hardware/kitchen-display-system-kds.webp',
+  kiosk: '/hardware/self-service-kiosk.webp'
+};
+
 function DeviceMock({ type, label, compact = false }) {
   return (
     <div className={`${styles.deviceMock} ${styles[`device_${type}`]} ${compact ? styles.deviceCompact : ''}`} aria-hidden="true">
@@ -39,10 +50,17 @@ export default function HardwareShowcase({ copy }) {
               </div>
             </div>
 
-            <div className={styles.heroDevices}>
-              <div className={styles.heroDeviceBack}><DeviceMock type="cashier" label="POS" compact /></div>
-              <div className={styles.heroDeviceFront}><DeviceMock type="table" label="QR + PAY" compact /></div>
-              <div className={styles.heroDeviceSide}><DeviceMock type="mobile" label="MOBILE" compact /></div>
+            <div className={styles.heroPhotoWrap}>
+              <img
+                className={styles.heroPhoto}
+                src="/hardware/hero-hardware-ecosystem.webp"
+                alt="PayMyDine restaurant hardware ecosystem"
+                width="1600"
+                height="900"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -60,7 +78,15 @@ export default function HardwareShowcase({ copy }) {
             {copy.products.map((product, index) => (
               <article className={styles.productCard} data-tone={PRODUCT_TONES[index % PRODUCT_TONES.length]} key={product.name}>
                 <div className={styles.productVisual}>
-                  <DeviceMock type={product.type} label={product.shortLabel} />
+                  <img
+                    className={styles.productImage}
+                    src={PRODUCT_IMAGES[product.type]}
+                    alt={product.name}
+                    width="1448"
+                    height="1086"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className={styles.productBody}>
                   <span className={styles.productCategory}>{product.category}</span>
