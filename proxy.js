@@ -590,9 +590,9 @@ export function proxy(request) {
   const { pathname } =
     request.nextUrl;
 
-  // PMD_HOMEPAGE2_PREVIEW: keep this unindexed comparison route in English.
+  // PMD_HOMEPAGE_PREVIEWS: keep comparison routes in English and unindexed.
   // Do not overwrite the visitor's saved locale or change any other route.
-  if (pathname === '/homepage2') {
+  if (pathname === '/homepage2' || pathname === '/homepage3') {
     return nextForLocale(request, 'en');
   }
 

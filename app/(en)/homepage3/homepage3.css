@@ -1,0 +1,1456 @@
+/* Homepage 3 — experimental operating-system narrative.
+   Scope: only sections not already approved/promoted from Homepage 2.
+   Source copy and source assets remain unchanged. */
+
+#pmd-homepage3 {
+  --hp3-ink: #0b2d25;
+  --hp3-paper: #f3f4ed;
+  --hp3-paper-2: #e9ece2;
+  --hp3-line: #cfd7cb;
+  --hp3-green: #0b6b4a;
+  --hp3-lime: #d9f777;
+  --hp3-dark: #0a1713;
+  --hp3-gutter: clamp(22px, 5vw, 84px);
+  position: relative;
+  min-width: 0;
+  background: var(--hp3-paper);
+  color: var(--hp3-ink);
+}
+
+html:has(#pmd-homepage3) {
+  overflow-x: clip !important;
+  scroll-behavior: auto !important;
+}
+
+html:has(#pmd-homepage3) body > main {
+  overflow: visible !important;
+}
+
+#pmd-homepage3 .hp3-read-progress {
+  position: fixed;
+  z-index: 1002;
+  inset: 0 0 auto;
+  height: 3px;
+  pointer-events: none;
+  background: transparent;
+}
+
+#pmd-homepage3 .hp3-read-progress i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(var(--hp3-read, 0));
+  transform-origin: left;
+  background: var(--hp3-lime);
+}
+
+/* Comparison switcher stays outside exact-copy source content. */
+#pmd-homepage3 .hp3-comparison {
+  position: fixed;
+  z-index: 1001;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid #d2dbd2;
+  border-radius: 12px;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 10px 34px rgba(8,42,31,.12);
+  backdrop-filter: blur(14px);
+}
+
+#pmd-homepage3 .hp3-comparison a,
+#pmd-homepage3 .hp3-comparison span,
+#pmd-homepage3 .hp3-comparison button {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #486057;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#pmd-homepage3 .hp3-comparison span[aria-current='page'] {
+  background: #0b3128;
+  color: white;
+}
+
+#pmd-homepage3 .hp3-comparison button {
+  width: 36px;
+  padding: 0;
+  cursor: pointer;
+  color: #0b5c43;
+}
+
+#pmd-homepage3 .hp3-comparison a:focus-visible,
+#pmd-homepage3 .hp3-comparison button:focus-visible,
+#pmd-homepage3 .hp3-section-index button:focus-visible {
+  outline: 3px solid #5b914c;
+  outline-offset: 3px;
+}
+
+/* A tiny operational chapter index; no marketing copy is added. */
+#pmd-homepage3 .hp3-section-index {
+  position: fixed;
+  z-index: 998;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 5px;
+  padding: 7px;
+  border-radius: 11px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(9,31,25,.86);
+  box-shadow: 0 14px 40px rgba(0,0,0,.16);
+  backdrop-filter: blur(12px);
+}
+
+#pmd-homepage3 .hp3-section-index button {
+  width: 34px;
+  height: 28px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(255,255,255,.42);
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  font-variant-numeric: tabular-nums;
+}
+
+#pmd-homepage3 .hp3-section-index button.isActive {
+  color: #0a291f;
+  background: var(--hp3-lime);
+}
+
+/* Keep the three approved sections exactly on their current modern system. */
+#pmd-homepage3 .pmd-main-hardware-nav {
+  bottom: 74px !important;
+}
+
+/* ------------------------------------------------------------------
+   HERO — live operating canvas rather than generic SaaS split hero
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .hero {
+  min-height: clamp(820px, 96vh, 1040px) !important;
+  padding: clamp(112px, 11vh, 150px) var(--hp3-gutter) 88px !important;
+  overflow: clip !important;
+  isolation: isolate !important;
+  background:
+    linear-gradient(90deg, rgba(217,247,119,.07) 1px, transparent 1px) 0 0 / 74px 100%,
+    #0b251e !important;
+  color: #fff !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .hero::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 0 auto 0 0;
+  width: 10px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(217,247,119,.9) 0 2px,
+    transparent 2px 16px
+  );
+  opacity: .55;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroAura {
+  display: none !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroGrid {
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(100%, 1540px) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, .92fr) minmax(520px, 1.08fr) !important;
+  gap: clamp(44px, 6vw, 100px) !important;
+  align-items: center !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroCopy {
+  max-width: 760px !important;
+  position: relative !important;
+  z-index: 4 !important;
+  transform: translate3d(0, calc(var(--hp3-p, 0) * -26px), 0) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroCopy > .eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 0 0 26px !important;
+  padding: 0 0 10px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(217,247,119,.52) !important;
+  border-radius: 0 !important;
+  background: none !important;
+  color: var(--hp3-lime) !important;
+  font-size: 11px !important;
+  font-weight: 850 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .pmdGrowthHeroTitle {
+  margin: 0 !important;
+  max-width: 830px !important;
+  color: #fff !important;
+  font-size: clamp(62px, 6.35vw, 104px) !important;
+  line-height: .9 !important;
+  letter-spacing: -.064em !important;
+  font-weight: 650 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .pmdGrowthHeroTitle > span {
+  color: var(--hp3-lime) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroText {
+  max-width: 680px !important;
+  margin: 32px 0 0 !important;
+  color: rgba(238,247,241,.76) !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroButtons {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 30px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroButtons .button {
+  min-height: 52px !important;
+  border-radius: 7px !important;
+  border: 1px solid var(--hp3-lime) !important;
+  background: var(--hp3-lime) !important;
+  color: #0a2d23 !important;
+  box-shadow: none !important;
+  font-weight: 850 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroButtons .buttonGhost {
+  background: transparent !important;
+  color: white !important;
+  border-color: rgba(255,255,255,.28) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroProof {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0 !important;
+  margin: 36px 0 0 !important;
+  border-top: 1px solid rgba(255,255,255,.16) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroProof > span {
+  min-height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  padding: 0 12px 0 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+  background: none !important;
+  color: rgba(255,255,255,.72) !important;
+  font-size: 12px !important;
+  border-radius: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroProof svg {
+  color: var(--hp3-lime) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroVisual {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: clamp(570px, 67vh, 760px) !important;
+  transform: translate3d(0, calc(var(--hp3-p, 0) * -46px), 0) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroImageFrame {
+  position: absolute !important;
+  inset: 0 0 56px 0 !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  border-radius: 26px !important;
+  background: #102e27 !important;
+  box-shadow: 0 44px 90px rgba(0,0,0,.3) !important;
+  clip-path: inset(calc(var(--hp3-p, 0) * 1.2%) 0 calc(var(--hp3-p, 0) * 7%) 0 round 26px) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .heroImage {
+  display: block !important;
+  position: absolute !important;
+  inset: -3% !important;
+  width: 106% !important;
+  height: 106% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  transform: translate3d(0, calc(var(--hp3-p, 0) * 28px), 0) scale(calc(1.02 + var(--hp3-p, 0) * .025)) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .pmdHeroSecondaryLayerV2 {
+  position: absolute !important;
+  z-index: 5 !important;
+  inset: auto var(--hp3-gutter) 42px auto !important;
+  width: min(40vw, 590px) !important;
+  height: auto !important;
+  transform: translate3d(0, calc(var(--hp3-p, 0) * 74px), 0) rotate(-2deg) !important;
+  filter: drop-shadow(0 28px 42px rgba(0,0,0,.26)) !important;
+  opacity: 1 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .pmdHeroSecondaryImageV2 {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* ------------------------------------------------------------------
+   ROLE + AI — two operational scenes, not generic feature cards
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .darkStorySection {
+  position: relative !important;
+  padding: 118px 0 124px !important;
+  overflow: clip !important;
+  background: #0a1713 !important;
+  color: white !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkStorySection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 49.9%, rgba(217,247,119,.12) 50%, transparent 50.1%),
+    radial-gradient(circle at 14% 12%, rgba(67,126,87,.24), transparent 32%);
+  pointer-events: none;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkIntro,
+#pmd-homepage3 #pmd-home-main-modern .darkStoryGrid {
+  width: calc(100% - var(--hp3-gutter) * 2) !important;
+  max-width: 1440px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkIntro {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.18fr) minmax(280px, .62fr) !important;
+  gap: clamp(50px, 9vw, 150px) !important;
+  align-items: end !important;
+  margin-bottom: 74px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkIntro h2 {
+  max-width: 940px !important;
+  margin: 18px 0 0 !important;
+  font-size: clamp(43px, 5.1vw, 76px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.052em !important;
+  font-weight: 610 !important;
+  color: #fff !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkIntro > p {
+  margin: 0 0 4px !important;
+  color: #afbeb6 !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkEyebrow {
+  display: inline-block !important;
+  padding: 0 0 10px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(217,247,119,.4) !important;
+  border-radius: 0 !important;
+  background: none !important;
+  color: var(--hp3-lime) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkStoryGrid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.34fr) minmax(340px, .66fr) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkStoryCard {
+  position: relative !important;
+  min-height: 650px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  border-radius: 24px !important;
+  background: #12221c !important;
+  transform: translate3d(0, calc((1 - var(--hp3-card-p, 1)) * 60px), 0) !important;
+  box-shadow: none !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkStoryCard:nth-child(2) {
+  transform: translate3d(0, calc((1 - var(--hp3-card-p, 1)) * 110px), 0) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkStoryCard > img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: .73 !important;
+  transform: scale(calc(1.05 - var(--hp3-card-p, 1) * .035)) translateY(calc((1 - var(--hp3-card-p, 1)) * 24px)) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkStoryCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 22%, rgba(5,18,14,.25) 48%, rgba(5,18,14,.94) 100%);
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkCardCopy {
+  position: absolute !important;
+  z-index: 2 !important;
+  inset: auto 34px 34px !important;
+  padding: 0 !important;
+  max-width: 720px !important;
+  color: white !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkCardCopy > span {
+  color: var(--hp3-lime) !important;
+  letter-spacing: .13em !important;
+  font-size: 10px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkCardCopy h3 {
+  margin: 12px 0 14px !important;
+  color: #fff !important;
+  font-size: clamp(30px, 3.2vw, 48px) !important;
+  line-height: 1.03 !important;
+  letter-spacing: -.038em !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkStoryCard:nth-child(2) .darkCardCopy h3 {
+  font-size: clamp(27px, 2.5vw, 38px) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkCardCopy p {
+  max-width: 650px !important;
+  color: rgba(255,255,255,.72) !important;
+  line-height: 1.64 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .darkCardCopy a {
+  color: #fff !important;
+  border-bottom: 1px solid var(--hp3-lime) !important;
+  padding-bottom: 5px !important;
+  text-decoration: none !important;
+}
+
+/* ------------------------------------------------------------------
+   AI ACROSS PLATFORM — sticky analytical instrument with passing notes
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .twoUpStorySection {
+  position: relative !important;
+  padding: 116px 0 140px !important;
+  background: #eef1e8 !important;
+  overflow: visible !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container {
+  width: calc(100% - var(--hp3-gutter) * 2) !important;
+  max-width: 1440px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:first-child {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .55fr) !important;
+  column-gap: clamp(42px, 7vw, 110px) !important;
+  align-items: end !important;
+  max-width: none !important;
+  margin: 0 0 72px !important;
+  text-align: start !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:first-child .eyebrow {
+  grid-column: 1 / -1 !important;
+  justify-self: start !important;
+  margin-bottom: 18px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:first-child h2 {
+  margin: 0 !important;
+  color: var(--hp3-ink) !important;
+  font-size: clamp(44px, 5vw, 74px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.052em !important;
+  font-weight: 630 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:first-child p {
+  margin: 0 !important;
+  color: #56665d !important;
+  line-height: 1.74 !important;
+  font-size: 16px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .pmdAiImpactVisual {
+  position: sticky !important;
+  top: 118px !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  height: min(72vh, 720px) !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid #c7d0c3 !important;
+  border-radius: 22px !important;
+  background: #dfe5da !important;
+  box-shadow: 0 22px 70px rgba(20,54,42,.08) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .pmdAiImpactVisual img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transform: scale(calc(1.02 + var(--hp3-p, 0) * .025)) translateY(calc((var(--hp3-p, 0) - .5) * -18px)) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid {
+  position: relative !important;
+  z-index: 3 !important;
+  display: block !important;
+  margin: -31vh 0 80px !important;
+  padding-bottom: 34vh !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article {
+  width: min(580px, 43%) !important;
+  min-height: 420px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  overflow: hidden !important;
+  margin: 0 0 42vh auto !important;
+  border: 1px solid #d0d9cd !important;
+  border-radius: 18px !important;
+  background: #fbfcf8 !important;
+  box-shadow: 0 24px 70px rgba(17,49,38,.12) !important;
+  transform: translate3d(calc((1 - var(--hp3-card-p, 1)) * 36px), calc((1 - var(--hp3-card-p, 1)) * 32px), 0) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article:nth-child(2) {
+  margin: 0 auto 0 0 !important;
+  transform: translate3d(calc((1 - var(--hp3-card-p, 1)) * -36px), calc((1 - var(--hp3-card-p, 1)) * 32px), 0) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article > img {
+  width: 100% !important;
+  height: 210px !important;
+  object-fit: cover !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article > div {
+  padding: 28px 30px 32px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid h2 {
+  margin: 12px 0 14px !important;
+  color: var(--hp3-ink) !important;
+  font-size: 29px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.034em !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid p {
+  color: #53645b !important;
+  line-height: 1.68 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:last-child {
+  position: relative !important;
+  z-index: 4 !important;
+  margin: 0 !important;
+}
+
+/* ------------------------------------------------------------------
+   LIVE STATUS — physical service-state deck stacking on scroll
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .statusSection {
+  padding: 116px 0 150px !important;
+  background: #fff !important;
+  overflow: visible !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusSection > .container {
+  width: calc(100% - var(--hp3-gutter) * 2) !important;
+  max-width: 1380px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusSection .splitHeading {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, .52fr) !important;
+  gap: clamp(42px, 7vw, 100px) !important;
+  align-items: end !important;
+  margin: 0 0 72px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusSection .splitHeading h2 {
+  margin: 15px 0 0 !important;
+  font-size: clamp(42px, 4.7vw, 70px) !important;
+  line-height: .99 !important;
+  letter-spacing: -.05em !important;
+  font-weight: 630 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusSection .splitHeading > p {
+  margin: 0 !important;
+  color: #607068 !important;
+  font-size: 16px !important;
+  line-height: 1.72 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusGrid {
+  display: block !important;
+  position: relative !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCard {
+  --hp3-stack-top: calc(122px + var(--hp3-card-index, 0) * 14px);
+  position: sticky !important;
+  top: var(--hp3-stack-top) !important;
+  min-height: min(69vh, 690px) !important;
+  width: 100% !important;
+  margin: 0 0 90px !important;
+  overflow: hidden !important;
+  border: 1px solid #d1dad0 !important;
+  border-radius: 24px !important;
+  background: #0b2a23 !important;
+  box-shadow: 0 18px 55px rgba(11,45,35,.1) !important;
+  transform: scale(calc(.975 + var(--hp3-card-p, 1) * .025)) !important;
+  transform-origin: center top !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCard:last-child {
+  margin-bottom: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCard > img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transform: scale(calc(1.065 - var(--hp3-card-p, 1) * .045)) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCardShade {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, rgba(3,21,16,.9), rgba(3,21,16,.58) 43%, rgba(3,21,16,.08) 74%) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCardCopy {
+  position: absolute !important;
+  z-index: 2 !important;
+  inset: auto auto 46px 46px !important;
+  width: min(620px, 52%) !important;
+  color: white !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCardCopy > span {
+  color: var(--hp3-lime) !important;
+  font-size: 10px !important;
+  letter-spacing: .13em !important;
+  text-transform: uppercase !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCardCopy h3 {
+  margin: 12px 0 14px !important;
+  color: white !important;
+  font-size: clamp(34px, 3.8vw, 56px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.04em !important;
+  font-weight: 620 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCardCopy p {
+  color: rgba(255,255,255,.74) !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCard::after {
+  position: absolute;
+  z-index: 3;
+  right: 28px;
+  top: 26px;
+  color: rgba(255,255,255,.74);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .08em;
+  font-variant-numeric: tabular-nums;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .statusCard1::after { content: '01 / 04'; }
+#pmd-homepage3 #pmd-home-main-modern .statusCard2::after { content: '02 / 04'; }
+#pmd-homepage3 #pmd-home-main-modern .statusCard3::after { content: '03 / 04'; }
+#pmd-homepage3 #pmd-home-main-modern .statusCard4::after { content: '04 / 04'; }
+
+/* ------------------------------------------------------------------
+   INTERFACES — two modes that physically compete for viewport space
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .demoSection {
+  padding: 118px 0 130px !important;
+  background: #e7ecdf !important;
+  overflow: clip !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoSection > .container {
+  width: calc(100% - var(--hp3-gutter) * 2) !important;
+  max-width: 1440px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoSectionHeading {
+  max-width: 1040px !important;
+  margin: 0 0 64px !important;
+  text-align: start !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoSectionHeading h2 {
+  margin: 14px 0 20px !important;
+  font-size: clamp(44px, 5.2vw, 76px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.052em !important;
+  font-weight: 630 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoSectionHeading p {
+  max-width: 770px !important;
+  margin: 0 !important;
+  color: #56665d !important;
+  line-height: 1.74 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseGrid {
+  display: flex !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+  height: min(70vh, 690px) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCard {
+  flex: 1 1 50% !important;
+  position: relative !important;
+  min-width: 0 !important;
+  display: block !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(15,49,38,.14) !important;
+  border-radius: 22px !important;
+  background: #0d2a22 !important;
+  transition: flex-basis .5s cubic-bezier(.2,.75,.25,1), transform .5s cubic-bezier(.2,.75,.25,1) !important;
+  transform: translate3d(calc((.5 - var(--hp3-p, .5)) * var(--hp3-card-index, 0) * 20px), 0, 0) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCard:hover,
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCard:focus-within {
+  flex-basis: 64% !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseMedia {
+  position: absolute !important;
+  inset: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseMedia img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transform: scale(1.03) !important;
+  transition: transform .7s cubic-bezier(.2,.75,.25,1) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCard:hover img,
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCard:focus-within img {
+  transform: scale(1) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4,24,18,.04) 18%, rgba(4,24,18,.9) 100%);
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCopy {
+  position: absolute !important;
+  z-index: 2 !important;
+  inset: auto 30px 30px !important;
+  padding: 0 !important;
+  color: white !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCopy > span {
+  color: var(--hp3-lime) !important;
+  font-size: 10px !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCopy h3 {
+  max-width: 680px !important;
+  margin: 12px 0 13px !important;
+  color: white !important;
+  font-size: clamp(27px, 3vw, 43px) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.036em !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .demoShowcaseCopy p {
+  max-width: 650px !important;
+  color: rgba(255,255,255,.72) !important;
+  line-height: 1.62 !important;
+}
+
+/* ------------------------------------------------------------------
+   CONFIGURE — anchored copy with an exploded three-scene stack
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .flexibilitySection {
+  position: relative !important;
+  padding: 130px 0 150px !important;
+  background: #fafbf7 !important;
+  overflow: clip !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexibilityGrid {
+  width: calc(100% - var(--hp3-gutter) * 2) !important;
+  max-width: 1420px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, .8fr) minmax(560px, 1.2fr) !important;
+  gap: clamp(60px, 8vw, 130px) !important;
+  align-items: start !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexibilityCopy {
+  position: sticky !important;
+  top: 138px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexibilityCopy h2 {
+  margin: 16px 0 22px !important;
+  font-size: clamp(40px, 4vw, 62px) !important;
+  line-height: 1 !important;
+  letter-spacing: -.048em !important;
+  font-weight: 630 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexibilityCopy > p {
+  color: #5a6b62 !important;
+  font-size: 16px !important;
+  line-height: 1.74 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .featureList {
+  display: grid !important;
+  gap: 0 !important;
+  margin: 32px 0 !important;
+  border-top: 1px solid #cfd8ce !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .featureList > span {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-height: 54px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid #cfd8ce !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #183a30 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .featureList svg {
+  color: #2b714f !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexibilityCopy > .button {
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexImageStack {
+  position: relative !important;
+  min-height: 940px !important;
+  margin-top: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexImageStack figure {
+  position: absolute !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  border: 1px solid #d1dbd1 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 30px 70px rgba(14,49,36,.14) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .flexImageStack img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .stackMain {
+  inset: 40px 0 auto 10% !important;
+  width: 76% !important;
+  height: 620px !important;
+  transform: translate3d(0, calc((.5 - var(--hp3-p, .5)) * 90px), 0) rotate(-2.5deg) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .stackSmallA {
+  inset: 510px auto auto 0 !important;
+  width: 42% !important;
+  height: 310px !important;
+  transform: translate3d(0, calc((.5 - var(--hp3-p, .5)) * -120px), 0) rotate(4deg) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .stackSmallB {
+  inset: 610px 0 auto auto !important;
+  width: 40% !important;
+  height: 290px !important;
+  transform: translate3d(0, calc((.5 - var(--hp3-p, .5)) * 130px), 0) rotate(-5deg) !important;
+}
+
+/* ------------------------------------------------------------------
+   INTEGRATIONS — source systems orbit the shared PayMyDine context
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .integrationSection {
+  padding: 124px 0 138px !important;
+  background: #091d17 !important;
+  color: white !important;
+  overflow: clip !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationGrid {
+  width: calc(100% - var(--hp3-gutter) * 2) !important;
+  max-width: 1420px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, .72fr) minmax(620px, 1.28fr) !important;
+  gap: clamp(56px, 8vw, 120px) !important;
+  align-items: center !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationCopy .eyebrow {
+  color: var(--hp3-lime) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationCopy h2 {
+  margin: 16px 0 22px !important;
+  color: white !important;
+  font-size: clamp(40px, 4.2vw, 64px) !important;
+  line-height: 1 !important;
+  letter-spacing: -.048em !important;
+  font-weight: 620 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationCopy > p {
+  color: #aebeb6 !important;
+  font-size: 16px !important;
+  line-height: 1.72 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationNote {
+  margin: 28px 0 !important;
+  padding: 18px 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(255,255,255,.16) !important;
+  border-bottom: 1px solid rgba(255,255,255,.16) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #bccbc4 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationCopy .textArrow {
+  color: white !important;
+  text-decoration-color: var(--hp3-lime) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationVisual {
+  position: relative !important;
+  min-height: 720px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255,255,255,.13) !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 50% 50%, rgba(217,247,119,.09), transparent 45%) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationVisual::before,
+#pmd-homepage3 #pmd-home-main-modern .integrationVisual::after {
+  content: '';
+  position: absolute;
+  inset: 13%;
+  border: 1px solid rgba(217,247,119,.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationVisual::after {
+  inset: 31%;
+  border-color: rgba(255,255,255,.12);
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationPhoto {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: .18 !important;
+  filter: saturate(.72) contrast(1.04) !important;
+  transform: scale(calc(1.05 + var(--hp3-p, 0) * .035)) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationBrand {
+  position: absolute !important;
+  z-index: 4 !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 172px !important;
+  height: 172px !important;
+  display: grid !important;
+  place-items: center !important;
+  align-content: center !important;
+  gap: 10px !important;
+  border: 1px solid rgba(217,247,119,.42) !important;
+  border-radius: 50% !important;
+  background: #0b2c23 !important;
+  box-shadow: 0 0 0 22px rgba(9,38,29,.62) !important;
+  color: white !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationBrand img {
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: contain !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationBrand b {
+  color: white !important;
+  font-size: 15px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationPills {
+  position: absolute !important;
+  z-index: 5 !important;
+  inset: 0 !important;
+  display: block !important;
+  pointer-events: none !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .integrationPills > span {
+  position: absolute !important;
+  left: var(--hp3-orbit-x, 50%) !important;
+  top: var(--hp3-orbit-y, 50%) !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: 190px !important;
+  padding: 10px 13px !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  border-radius: 8px !important;
+  background: rgba(8,35,27,.92) !important;
+  color: #e7f1eb !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.16) !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  font-weight: 750 !important;
+  text-align: center !important;
+  white-space: normal !important;
+}
+
+/* ------------------------------------------------------------------
+   MOMENTS — scroll becomes a film strip through real restaurant scenes
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .photoMarquee {
+  position: relative !important;
+  height: var(--hp3-moments-height, 180vh) !important;
+  min-height: 100vh !important;
+  padding: 0 !important;
+  overflow: clip !important;
+  background: #071611 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .photoMarquee::before {
+  content: '';
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, #071611 0, transparent 7%, transparent 93%, #071611 100%);
+}
+
+#pmd-homepage3 #pmd-home-main-modern .marqueeTrack {
+  position: sticky !important;
+  top: 116px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  width: max-content !important;
+  height: calc(100vh - 146px) !important;
+  padding: 26px var(--hp3-gutter) 42px !important;
+  animation: none !important;
+  transform: translate3d(var(--hp3-moments-x, 0px), 0, 0) !important;
+  will-change: transform !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .marqueePhoto {
+  flex: 0 0 clamp(300px, 38vw, 570px) !important;
+  width: auto !important;
+  height: min(72vh, 690px) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  border-radius: 18px !important;
+  transform: none !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .marqueePhoto:nth-child(3n + 2) {
+  height: min(62vh, 590px) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .marqueePhoto:nth-child(n + 13) {
+  display: none !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .marqueePhoto img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* ------------------------------------------------------------------
+   CTA — restaurant ticket / handoff artifact, not another dark rounded box
+   ------------------------------------------------------------------ */
+#pmd-homepage3 #pmd-home-main-modern .ctaSection {
+  padding: 130px var(--hp3-gutter) 150px !important;
+  background: #0a1713 !important;
+  overflow: hidden !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaSection > .container {
+  width: min(100%, 1160px) !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaCard {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 54px !important;
+  align-items: end !important;
+  padding: clamp(44px, 6vw, 78px) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #f7f6ed !important;
+  color: var(--hp3-ink) !important;
+  box-shadow: 0 38px 90px rgba(0,0,0,.22) !important;
+  transform: translate3d(0, calc((1 - var(--hp3-p, 1)) * 52px), 0) rotate(calc((1 - var(--hp3-p, 1)) * -1.2deg)) !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaCard::before,
+#pmd-homepage3 #pmd-home-main-modern .ctaCard::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: radial-gradient(circle at 6px 0, transparent 6px, #f7f6ed 6.5px) 0 0 / 12px 12px repeat-x;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaCard::before {
+  top: -11px;
+  transform: rotate(180deg);
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaCard::after {
+  bottom: -11px;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaCard .lightEyebrow {
+  color: #2d7454 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaCard h2 {
+  max-width: 760px !important;
+  margin: 14px 0 20px !important;
+  color: var(--hp3-ink) !important;
+  font-size: clamp(44px, 5.3vw, 76px) !important;
+  line-height: .96 !important;
+  letter-spacing: -.052em !important;
+  font-weight: 630 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaCard p {
+  max-width: 760px !important;
+  color: #5b6b63 !important;
+  font-size: 16px !important;
+  line-height: 1.72 !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaActions {
+  display: grid !important;
+  gap: 10px !important;
+  min-width: 190px !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaActions .button {
+  min-height: 52px !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaActions .buttonLime {
+  background: #0b3b2d !important;
+  color: white !important;
+}
+
+#pmd-homepage3 #pmd-home-main-modern .ctaActions .buttonOutlineLight {
+  border-color: #b7c5bb !important;
+  color: #163b30 !important;
+  background: transparent !important;
+}
+
+/* ---------------------------------------------------------------
+   Responsive: no sticky stage may trap content on short/touch views.
+   --------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  #pmd-homepage3 .hp3-section-index { display: none !important; }
+  #pmd-homepage3 #pmd-home-main-modern .heroGrid { grid-template-columns: 1fr !important; }
+  #pmd-homepage3 #pmd-home-main-modern .heroVisual { height: 600px !important; max-width: 860px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .pmdHeroSecondaryLayerV2 { width: min(58vw, 590px) !important; }
+  #pmd-homepage3 #pmd-home-main-modern .darkStoryGrid { grid-template-columns: 1fr 1fr !important; }
+  #pmd-homepage3 #pmd-home-main-modern .darkStoryCard { min-height: 560px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .integrationGrid { grid-template-columns: 1fr !important; }
+  #pmd-homepage3 #pmd-home-main-modern .integrationVisual { max-width: 760px !important; width: 100% !important; margin-inline: auto !important; }
+  #pmd-homepage3 #pmd-home-main-modern .flexibilityGrid { grid-template-columns: 1fr !important; }
+  #pmd-homepage3 #pmd-home-main-modern .flexibilityCopy { position: static !important; max-width: 820px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .flexImageStack { max-width: 820px !important; width: 100% !important; margin: 20px auto 0 !important; }
+}
+
+@media (max-width: 1039px), (max-height: 699px) {
+  #pmd-homepage3 #pmd-home-main-modern .pmdAiImpactVisual,
+  #pmd-homepage3 #pmd-home-main-modern .statusCard,
+  #pmd-homepage3 #pmd-home-main-modern .marqueeTrack,
+  #pmd-homepage3 #pmd-home-main-modern .flexibilityCopy {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid {
+    margin: 26px 0 60px !important;
+    padding-bottom: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 18px !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article,
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article:nth-child(2) {
+    width: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .statusCard {
+    margin-bottom: 22px !important;
+    transform: none !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .photoMarquee {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 70px 0 !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .marqueeTrack {
+    width: 100% !important;
+    height: auto !important;
+    overflow-x: auto !important;
+    padding: 0 var(--hp3-gutter) 20px !important;
+    transform: none !important;
+    scroll-snap-type: x mandatory !important;
+    overscroll-behavior-inline: contain !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .marqueePhoto {
+    scroll-snap-align: start !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #pmd-homepage3 { --hp3-gutter: 22px; }
+  #pmd-homepage3 .hp3-comparison { left: 12px; bottom: 12px; max-width: calc(100vw - 90px); overflow-x: auto; }
+  #pmd-homepage3 .hp3-comparison a,
+  #pmd-homepage3 .hp3-comparison span { padding-inline: 9px; font-size: 11px; }
+  #pmd-homepage3 .pmd-main-hardware-nav { bottom: 66px !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .hero {
+    min-height: auto !important;
+    padding: 76px var(--hp3-gutter) 70px !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .pmdGrowthHeroTitle { font-size: clamp(52px, 14vw, 74px) !important; }
+  #pmd-homepage3 #pmd-home-main-modern .heroText { font-size: 15px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .heroProof { grid-template-columns: 1fr !important; }
+  #pmd-homepage3 #pmd-home-main-modern .heroVisual { height: 440px !important; margin-top: 28px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .pmdHeroSecondaryLayerV2 { width: 72vw !important; right: -7vw !important; bottom: 22px !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .darkStorySection,
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStorySection,
+  #pmd-homepage3 #pmd-home-main-modern .statusSection,
+  #pmd-homepage3 #pmd-home-main-modern .demoSection,
+  #pmd-homepage3 #pmd-home-main-modern .flexibilitySection,
+  #pmd-homepage3 #pmd-home-main-modern .integrationSection {
+    padding: 72px 0 82px !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .darkIntro,
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:first-child,
+  #pmd-homepage3 #pmd-home-main-modern .statusSection .splitHeading {
+    display: block !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .darkIntro > p,
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:first-child p,
+  #pmd-homepage3 #pmd-home-main-modern .statusSection .splitHeading > p {
+    margin-top: 22px !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .darkIntro h2,
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStorySection > .container > .sectionHeading:first-child h2,
+  #pmd-homepage3 #pmd-home-main-modern .statusSection .splitHeading h2,
+  #pmd-homepage3 #pmd-home-main-modern .demoSectionHeading h2,
+  #pmd-homepage3 #pmd-home-main-modern .ctaCard h2 {
+    font-size: 42px !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .darkStoryGrid { grid-template-columns: 1fr !important; }
+  #pmd-homepage3 #pmd-home-main-modern .darkStoryCard { min-height: 510px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .darkCardCopy { inset: auto 24px 26px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .darkCardCopy h3 { font-size: 31px !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .pmdAiImpactVisual { height: 360px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid { grid-template-columns: 1fr !important; }
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article { min-height: 0 !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .statusCard { min-height: 520px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .statusCardCopy { inset: auto 24px 26px !important; width: calc(100% - 48px) !important; }
+  #pmd-homepage3 #pmd-home-main-modern .statusCardCopy h3 { font-size: 34px !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .demoShowcaseGrid { display: grid !important; height: auto !important; }
+  #pmd-homepage3 #pmd-home-main-modern .demoShowcaseCard { min-height: 520px !important; transform: none !important; }
+  #pmd-homepage3 #pmd-home-main-modern .demoShowcaseCopy { inset: auto 24px 26px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .demoShowcaseCopy h3 { font-size: 31px !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .flexImageStack { min-height: 650px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .stackMain { width: 88% !important; height: 430px !important; left: 6% !important; }
+  #pmd-homepage3 #pmd-home-main-modern .stackSmallA { top: 380px !important; width: 48% !important; height: 220px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .stackSmallB { top: 430px !important; width: 47% !important; height: 205px !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .integrationVisual { min-height: 520px !important; border-radius: 24px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .integrationBrand { width: 130px !important; height: 130px !important; box-shadow: 0 0 0 14px rgba(9,38,29,.62) !important; }
+  #pmd-homepage3 #pmd-home-main-modern .integrationPills > span { max-width: 132px !important; padding: 8px 9px !important; font-size: 9px !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .marqueePhoto { flex-basis: 82vw !important; height: 58vh !important; }
+  #pmd-homepage3 #pmd-home-main-modern .marqueePhoto:nth-child(3n + 2) { height: 58vh !important; }
+
+  #pmd-homepage3 #pmd-home-main-modern .ctaSection { padding: 88px var(--hp3-gutter) 110px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .ctaCard { grid-template-columns: 1fr !important; padding: 38px 28px !important; transform: none !important; }
+  #pmd-homepage3 #pmd-home-main-modern .ctaActions { min-width: 0 !important; }
+}
+
+@media (max-width: 480px) {
+  #pmd-homepage3 { --hp3-gutter: 18px; }
+  #pmd-homepage3 #pmd-home-main-modern .heroButtons { display: grid !important; }
+  #pmd-homepage3 #pmd-home-main-modern .heroButtons .button { width: 100% !important; }
+  #pmd-homepage3 #pmd-home-main-modern .heroVisual { height: 360px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .integrationVisual { min-height: 480px !important; }
+  #pmd-homepage3 #pmd-home-main-modern .integrationPills > span { max-width: 112px !important; font-size: 8px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #pmd-homepage3 *,
+  #pmd-homepage3 *::before,
+  #pmd-homepage3 *::after {
+    scroll-behavior: auto !important;
+  }
+
+  #pmd-homepage3 #pmd-home-main-modern .heroCopy,
+  #pmd-homepage3 #pmd-home-main-modern .heroVisual,
+  #pmd-homepage3 #pmd-home-main-modern .pmdHeroSecondaryLayerV2,
+  #pmd-homepage3 #pmd-home-main-modern .darkStoryCard,
+  #pmd-homepage3 #pmd-home-main-modern .twoUpStoryGrid > article,
+  #pmd-homepage3 #pmd-home-main-modern .statusCard,
+  #pmd-homepage3 #pmd-home-main-modern .flexImageStack figure,
+  #pmd-homepage3 #pmd-home-main-modern .ctaCard {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .heroCopy,
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .heroVisual,
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .pmdHeroSecondaryLayerV2,
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .darkStoryCard,
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .twoUpStoryGrid > article,
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .statusCard,
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .flexImageStack figure,
+#pmd-homepage3[data-hp3-motion='off'] #pmd-home-main-modern .ctaCard {
+  transform: none !important;
+}
+
+@media print {
+  #pmd-homepage3 .hp3-read-progress,
+  #pmd-homepage3 .hp3-comparison,
+  #pmd-homepage3 .hp3-section-index,
+  #pmd-homepage3 .pmd-main-hardware-nav { display: none !important; }
+  #pmd-homepage3 #pmd-home-main-modern .pmdAiImpactVisual,
+  #pmd-homepage3 #pmd-home-main-modern .statusCard,
+  #pmd-homepage3 #pmd-home-main-modern .marqueeTrack,
+  #pmd-homepage3 #pmd-home-main-modern .flexibilityCopy { position: static !important; }
+  #pmd-homepage3 #pmd-home-main-modern .photoMarquee { height: auto !important; }
+  #pmd-homepage3 #pmd-home-main-modern .marqueeTrack { transform: none !important; flex-wrap: wrap !important; height: auto !important; width: 100% !important; }
+}
