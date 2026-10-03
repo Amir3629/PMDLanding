@@ -1,4 +1,4 @@
-import CurrentHomePage, { metadata as currentMetadata } from '../page';
+import { HomePageContent, metadata as currentMetadata } from '../page';
 import Homepage2Experience from '@/components/homepage2/Homepage2Experience';
 import './homepage2.css';
 
@@ -13,7 +13,7 @@ export const metadata = {
 export default function Homepage2() {
   return (
     <Homepage2Experience>
-      <CurrentHomePage />
+      <HomePageContent />
     </Homepage2Experience>
   );
 }

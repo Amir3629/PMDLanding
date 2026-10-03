@@ -14,10 +14,12 @@ import {
 import CTA from '@/components/CTA';
 import SiteStructuredData from '@/components/SiteStructuredData';
 import { metadataForRoute } from '@/lib/seo';
+import HomepageMainExperience from '@/components/homepage-main/HomepageMainExperience';
+import './homepage-main-modern.css';
 
 export const metadata = metadataForRoute('en', '/');
 
-export default function HomePage() {
+export function HomePageContent() {
 
   return (
 
@@ -54,4 +56,12 @@ export default function HomePage() {
 
   );
 
+}
+
+export default function HomePage() {
+  return (
+    <HomepageMainExperience>
+      <HomePageContent />
+    </HomepageMainExperience>
+  );
 }
