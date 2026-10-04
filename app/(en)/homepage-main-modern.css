@@ -550,19 +550,27 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   #pmd-home-main-modern .workflowShowcase { position: static !important; }
 }
 
-/* === PMD MAIN HARDWARE DENSE RAIL V1 START ===
-   Keep the approved scroll-driven shelf, but make the cards compact enough
-   that the first six operational devices are visible together on large desktop.
-   Receipt Printer and Cash Drawer remain the final reveal on horizontal scroll. */
+
+/* === PMD MAIN HARDWARE SIX CARD RAIL V2 START ===
+   Keep the approved horizontal scroll behavior, but preserve normal card
+   proportions while fitting six full hardware cards into a large desktop view. */
 @media (min-width: 1100px) and (min-height: 740px) {
   #pmd-home-main-modern[data-main-rail='on'] [data-main-track] {
-    grid-auto-columns: clamp(185px, 13.5vw, 215px) !important;
-    gap: 16px !important;
+    display: flex !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: unset !important;
+    grid-auto-columns: unset !important;
+    gap: 18px !important;
+    width: max-content !important;
+    align-items: stretch !important;
   }
 
   #pmd-home-main-modern[data-main-rail='on'] [data-card] {
-    height: clamp(320px, 36vh, 380px) !important;
-    border-radius: 18px !important;
+    flex: 0 0 clamp(165px, calc((100vw - (2 * var(--pmdm-gutter)) - 90px) / 6), 225px) !important;
+    width: clamp(165px, calc((100vw - (2 * var(--pmdm-gutter)) - 90px) / 6), 225px) !important;
+    height: auto !important;
+    aspect-ratio: .8 !important;
+    border-radius: 22px !important;
   }
 
   #pmd-home-main-modern[data-main-rail='on'] [data-card] > span:not([aria-hidden]) {
@@ -571,7 +579,7 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
 
   #pmd-home-main-modern[data-main-rail='on'] [data-card] strong {
     font-size: clamp(18px, 1.35vw, 22px) !important;
-    line-height: 1.08 !important;
+    line-height: 1.1 !important;
   }
 
   #pmd-home-main-modern[data-main-rail='on'] [data-card] > span[aria-hidden='true']:last-child {
@@ -579,4 +587,4 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
     font-size: 22px !important;
   }
 }
-/* === PMD MAIN HARDWARE DENSE RAIL V1 END === */
+/* === PMD MAIN HARDWARE SIX CARD RAIL V2 END === */

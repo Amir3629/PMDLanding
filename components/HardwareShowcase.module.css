@@ -122,3 +122,80 @@
   background: #f7f7f5;
 }
 /* === PMD HARDWARE NEUTRAL PRODUCT MEDIA V3 END === */
+
+/* === PMD HARDWARE VISUAL POLISH V3 START ===
+   The hardware hero should show the full ecosystem artwork rather than crop
+   edge devices. Product cards use a compact neutral image stage so photography
+   no longer sits inside a tall empty tinted column. */
+.heroPhotoWrap {
+  background: #f7f7f5 !important;
+}
+
+.heroPhoto {
+  object-fit: contain !important;
+  object-position: center !important;
+  box-sizing: border-box !important;
+  padding: clamp(18px, 1.7vw, 26px) !important;
+  background: #f7f7f5 !important;
+}
+
+.productVisual,
+.productCard[data-tone="green"] .productVisual,
+.productCard[data-tone="blue"] .productVisual,
+.productCard[data-tone="orange"] .productVisual,
+.productCard[data-tone="purple"] .productVisual,
+.productCard[data-tone="forest"] .productVisual,
+.productCard[data-tone="gold"] .productVisual,
+.productCard[data-tone="mint"] .productVisual,
+.productCard[data-tone="slate"] .productVisual {
+  background: #fff !important;
+}
+
+@media (min-width: 1051px) {
+  .productCard {
+    grid-template-columns: minmax(315px, 1.02fr) minmax(0, .98fr) !important;
+    min-height: 400px !important;
+  }
+
+  .productVisual {
+    align-self: center !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    padding: 10px !important;
+  }
+
+  .productImage {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .productVisual {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    padding: 10px !important;
+  }
+
+  .productImage {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .heroPhoto { padding: 14px !important; }
+  .productVisual { padding: 8px !important; }
+}
+/* === PMD HARDWARE VISUAL POLISH V3 END === */
