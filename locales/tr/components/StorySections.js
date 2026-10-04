@@ -116,7 +116,7 @@ export function RoleAndAISections() {
           {/* === PMD AI IMPACT GRAPH V6 START === */}
           <figure className="pmdAiImpactVisual">
             <img
-              src="/site-assets/custom/ai-impact-growth.png"
+              src="/site-assets/custom/ai-impact-growth.webp"
               alt="Yapay Zeka desteğiyle restoran verimliliği, gelir, masa devir hızı ve müşteri memnuniyeti artarken maliyet, bekleme süresi ve manuel işin azaldığını gösteren illüstrasyon."
               loading="lazy"
               decoding="async"

@@ -1,14 +1,14 @@
 import styles from './HomeHardwareRunway.module.css';
 
 const DEVICE_IMAGES = {
-  table: '/hardware/refresh-20261004/table-display.png',
-  cashier: '/hardware/refresh-20261004/desktop-pos.png',
-  mobile: '/hardware/refresh-20261004/mobile-pos.png',
-  payment: '/hardware/refresh-20261004/smart-payment-pos.png',
-  printer: '/hardware/refresh-20261004/printer.png',
-  drawer: '/hardware/refresh-20261004/cash-drawer.png',
-  kds: '/hardware/refresh-20261004/kds.png',
-  kiosk: '/hardware/refresh-20261004/kiosk.png'
+  table: '/hardware/refresh-20261004/table-display.webp',
+  cashier: '/hardware/refresh-20261004/desktop-pos.webp',
+  mobile: '/hardware/refresh-20261004/mobile-pos.webp',
+  payment: '/hardware/refresh-20261004/smart-payment-pos.webp',
+  printer: '/hardware/refresh-20261004/printer.webp',
+  drawer: '/hardware/refresh-20261004/cash-drawer.webp',
+  kds: '/hardware/refresh-20261004/kds.webp',
+  kiosk: '/hardware/refresh-20261004/kiosk.webp'
 };
 
 const COPY = {
@@ -106,7 +106,7 @@ export default function HomeHardwareRunway({ locale = 'en' }) {
                 alt={device.name}
                 width="1448"
                 height="1086"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 style={{ objectPosition: device.position }}
               />

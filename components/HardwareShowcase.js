@@ -3,14 +3,14 @@ import styles from './HardwareShowcase.module.css';
 const PRODUCT_TONES = ['green', 'blue', 'orange', 'purple', 'forest', 'gold', 'mint', 'slate'];
 
 const PRODUCT_IMAGES = {
-  table: '/hardware/refresh-20261004/table-display.png',
-  cashier: '/hardware/refresh-20261004/desktop-pos.png',
-  mobile: '/hardware/refresh-20261004/mobile-pos.png',
-  payment: '/hardware/refresh-20261004/smart-payment-pos.png',
-  printer: '/hardware/refresh-20261004/printer.png',
-  drawer: '/hardware/refresh-20261004/cash-drawer.png',
-  kds: '/hardware/refresh-20261004/kds.png',
-  kiosk: '/hardware/refresh-20261004/kiosk.png'
+  table: '/hardware/refresh-20261004/table-display.webp',
+  cashier: '/hardware/refresh-20261004/desktop-pos.webp',
+  mobile: '/hardware/refresh-20261004/mobile-pos.webp',
+  payment: '/hardware/refresh-20261004/smart-payment-pos.webp',
+  printer: '/hardware/refresh-20261004/printer.webp',
+  drawer: '/hardware/refresh-20261004/cash-drawer.webp',
+  kds: '/hardware/refresh-20261004/kds.webp',
+  kiosk: '/hardware/refresh-20261004/kiosk.webp'
 };
 
 function DeviceMock({ type, label, compact = false }) {
@@ -53,7 +53,7 @@ export default function HardwareShowcase({ copy }) {
             <div className={styles.heroPhotoWrap}>
               <img
                 className={styles.heroPhoto}
-                src="/hardware/refresh-20261004/homepage-hero.png"
+                src="/hardware/refresh-20261004/homepage-hero.webp"
                 alt="PayMyDine restaurant hardware ecosystem"
                 width="1600"
                 height="900"

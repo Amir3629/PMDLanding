@@ -184,7 +184,7 @@ export function RoleAndAISections() {
           <figure className="pmdAiImpactVisual">
 
             <img
-              src="/site-assets/custom/ai-impact-growth.png"
+              src="/site-assets/custom/ai-impact-growth.webp"
               alt="Illustration showing AI-supported restaurant efficiency, revenue, table turnover and guest satisfaction increasing while costs, wait times and manual work decrease over time."
               loading="lazy"
               decoding="async"
