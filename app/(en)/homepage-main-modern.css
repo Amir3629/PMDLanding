@@ -176,7 +176,7 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
 }
 #pmd-home-main-modern .offerSection .sectionHeading {
   position: sticky !important;
-  top: clamp(170px, 19vh, 205px) !important;
+  top: clamp(240px, 27vh, 300px) !important;
   margin: 0 !important;
   padding: 0 0 40px !important;
   text-align: start !important;
