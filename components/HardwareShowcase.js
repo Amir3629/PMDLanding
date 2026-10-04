@@ -3,13 +3,13 @@ import styles from './HardwareShowcase.module.css';
 const PRODUCT_TONES = ['green', 'blue', 'orange', 'purple', 'forest', 'gold', 'mint', 'slate'];
 
 const PRODUCT_IMAGES = {
-  table: '/hardware/table-qr-pay-display.webp',
-  cashier: '/hardware/dual-screen-cashier-pos.webp',
-  mobile: '/hardware/mobile-pos-terminal.webp',
-  payment: '/hardware/smart-payment-terminal.webp',
+  table: '/hardware/refresh-20261004/table-display.png',
+  cashier: '/hardware/refresh-20261004/desktop-pos.png',
+  mobile: '/hardware/refresh-20261004/mobile-pos.png',
+  payment: '/hardware/refresh-20261004/smart-payment-pos.png',
   printer: '/hardware/receipt-printer.webp',
-  drawer: '/hardware/cash-drawer.webp',
-  kds: '/hardware/kitchen-display-system-kds.webp',
+  drawer: '/hardware/refresh-20261004/cash-drawer.png',
+  kds: '/hardware/refresh-20261004/kds.png',
   kiosk: '/hardware/self-service-kiosk.webp'
 };
 
