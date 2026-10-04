@@ -76,7 +76,7 @@ export default function Hero() {
           <div className="heroImageFrame heroImageFrameClean heroRightPanel pmdHeroArtworkWrapFix">
 
             <img
-              src="/hardware/refresh-20261004/homepage-hero.png"
+              src="/site-assets/hero-platform.webp"
               alt="PayMyDine platform and guest experience"
               className="heroImage pmdHeroArtworkFix"
             />

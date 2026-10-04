@@ -53,7 +53,7 @@ export default function HardwareShowcase({ copy }) {
             <div className={styles.heroPhotoWrap}>
               <img
                 className={styles.heroPhoto}
-                src="/hardware/hero-hardware-ecosystem.webp"
+                src="/hardware/refresh-20261004/homepage-hero.png"
                 alt="PayMyDine restaurant hardware ecosystem"
                 width="1600"
                 height="900"
