@@ -549,3 +549,34 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   #pmd-home-main-modern .offerSection .sectionHeading,
   #pmd-home-main-modern .workflowShowcase { position: static !important; }
 }
+
+/* === PMD MAIN HARDWARE DENSE RAIL V1 START ===
+   Keep the approved scroll-driven shelf, but make the cards compact enough
+   that the first six operational devices are visible together on large desktop.
+   Receipt Printer and Cash Drawer remain the final reveal on horizontal scroll. */
+@media (min-width: 1100px) and (min-height: 740px) {
+  #pmd-home-main-modern[data-main-rail='on'] [data-main-track] {
+    grid-auto-columns: clamp(185px, 13.5vw, 215px) !important;
+    gap: 16px !important;
+  }
+
+  #pmd-home-main-modern[data-main-rail='on'] [data-card] {
+    height: clamp(320px, 36vh, 380px) !important;
+    border-radius: 18px !important;
+  }
+
+  #pmd-home-main-modern[data-main-rail='on'] [data-card] > span:not([aria-hidden]) {
+    inset: 20px 42px auto 20px !important;
+  }
+
+  #pmd-home-main-modern[data-main-rail='on'] [data-card] strong {
+    font-size: clamp(18px, 1.35vw, 22px) !important;
+    line-height: 1.08 !important;
+  }
+
+  #pmd-home-main-modern[data-main-rail='on'] [data-card] > span[aria-hidden='true']:last-child {
+    inset: 19px 17px auto auto !important;
+    font-size: 22px !important;
+  }
+}
+/* === PMD MAIN HARDWARE DENSE RAIL V1 END === */
