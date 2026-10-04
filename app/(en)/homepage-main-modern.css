@@ -627,3 +627,29 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   }
 }
 /* === PMD MAIN HARDWARE CLEAN CAPTIONS V7 END === */
+
+/* === PMD MAIN HARDWARE SCROLL PERFORMANCE V8 START ===
+   The rail itself is the only large composited transform while scrolling.
+   Large card/image transforms are disabled during the pinned rail to avoid
+   redundant GPU layers and repaint/compositing work. */
+@media (min-width: 1100px) and (min-height: 740px) {
+  #pmd-home-main-modern[data-main-rail='on'] section[aria-labelledby^='home-hardware-title-'] [data-main-track] {
+    transform: translate3d(0, 0, 0) !important;
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+  }
+
+  #pmd-home-main-modern[data-main-rail='on'] section[aria-labelledby^='home-hardware-title-'] [data-card] {
+    transform: none !important;
+    transition: none !important;
+    contain: layout paint !important;
+  }
+
+  #pmd-home-main-modern[data-main-rail='on'] section[aria-labelledby^='home-hardware-title-'] [data-card] > img,
+  #pmd-home-main-modern[data-main-rail='on'] section[aria-labelledby^='home-hardware-title-'] [data-card]:hover > img {
+    transform: none !important;
+    transition: none !important;
+    backface-visibility: hidden !important;
+  }
+}
+/* === PMD MAIN HARDWARE SCROLL PERFORMANCE V8 END === */

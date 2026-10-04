@@ -25,6 +25,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
   let distance = 0;
   let span = 0;
   let pinTop = 110;
+  let pinHeight = 0;
   let activeIndex = 0;
   let lastState = '';
 
@@ -34,12 +35,12 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
     el.setAttribute(name, value);
   }
 
-  function style(el, name, value) {
+  function style(el, name, value, priority = '') {
     if (!el) return;
     if (!changedStyles.has(el)) changedStyles.set(el, new Map());
     const originals = changedStyles.get(el);
     if (!originals.has(name)) originals.set(name, [el.style.getPropertyValue(name), el.style.getPropertyPriority(name)]);
-    el.style.setProperty(name, value);
+    el.style.setProperty(name, value, priority);
   }
 
   function listen(el, event, handler, options) {
@@ -72,9 +73,10 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
     if (rail && hardware && track && pin) {
       const rect = hardware.getBoundingClientRect();
       const p = clamp((pinTop - rect.top) / Math.max(1, span));
-      style(track, '--pmdm-track-x', `${(-distance * p).toFixed(2)}px`);
+      const x = Math.round(-distance * p);
+      style(track, 'transform', `translate3d(${x}px, 0, 0)`, 'important');
       activeIndex = Math.round(p * Math.max(1, devices.length - 1));
-      publish(rect.top <= pinTop + 40 && rect.bottom > pinTop + pin.offsetHeight - 30, activeIndex);
+      publish(rect.top <= pinTop + 40 && rect.bottom > pinTop + pinHeight - 30, activeIndex);
     } else {
       publish(false, 0);
     }
@@ -103,13 +105,15 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
 
     if (rail) {
       const width = pin.clientWidth;
+      pinHeight = pin.offsetHeight;
       distance = Math.max(0, track.scrollWidth - width);
       span = distance * 0.9;
-      pinTop = Math.max(104, Math.round((win.innerHeight - pin.offsetHeight) / 2));
+      pinTop = Math.max(104, Math.round((win.innerHeight - pinHeight) / 2));
       style(hardware, '--pmdm-pin-top', `${pinTop}px`);
-      style(hardware, '--pmdm-rail-height', `${Math.ceil(pin.offsetHeight + span + 160)}px`);
+      style(hardware, '--pmdm-rail-height', `${Math.ceil(pinHeight + span + 160)}px`);
     } else if (track) {
-      style(track, '--pmdm-track-x', '0px');
+      pinHeight = 0;
+      style(track, 'transform', 'translate3d(0, 0, 0)', 'important');
     }
     schedule();
   }
@@ -143,7 +147,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
 
   devices.forEach((card) => {
     listen(card, 'pointermove', (event) => {
-      if (!enabled() || !precise.matches || event.pointerType !== 'mouse') return;
+      if (rail || !enabled() || !precise.matches || event.pointerType !== 'mouse') return;
       const rect = card.getBoundingClientRect();
       style(card, '--pmdm-rx', `${(1 - 2 * (event.clientY - rect.top) / rect.height).toFixed(2)}deg`);
       style(card, '--pmdm-ry', `${(2 * (event.clientX - rect.left) / rect.width - 1).toFixed(2)}deg`);
