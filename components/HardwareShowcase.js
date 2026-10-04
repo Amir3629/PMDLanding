@@ -7,10 +7,10 @@ const PRODUCT_IMAGES = {
   cashier: '/hardware/refresh-20261004/desktop-pos.png',
   mobile: '/hardware/refresh-20261004/mobile-pos.png',
   payment: '/hardware/refresh-20261004/smart-payment-pos.png',
-  printer: '/hardware/receipt-printer.webp',
+  printer: '/hardware/refresh-20261004/printer.png',
   drawer: '/hardware/refresh-20261004/cash-drawer.png',
   kds: '/hardware/refresh-20261004/kds.png',
-  kiosk: '/hardware/self-service-kiosk.webp'
+  kiosk: '/hardware/refresh-20261004/kiosk.png'
 };
 
 function DeviceMock({ type, label, compact = false }) {
