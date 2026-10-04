@@ -7,6 +7,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
   const reduced = win.matchMedia('(prefers-reduced-motion: reduce)');
   const desktop = win.matchMedia('(min-width: 1100px) and (min-height: 740px)');
   const precise = win.matchMedia('(hover: hover) and (pointer: fine)');
+  const allHardwareGrid = win.location.pathname === '/';
   const content = root.querySelector('[data-main-modern-content]');
   const hardware = content?.querySelector('section[aria-labelledby^="home-hardware-title-"]');
   const pin = hardware?.firstElementChild;
@@ -52,6 +53,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
 
   attr(root, 'data-main-motion', enabled() ? 'on' : 'off');
   attr(root, 'data-main-rail', 'off');
+  attr(root, 'data-main-hardware-grid', allHardwareGrid ? 'all' : 'rail');
   attr(hardware, 'data-main-hardware', '');
   attr(pin, 'data-main-pin', '');
   attr(track, 'data-main-track', '');
@@ -95,7 +97,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
     measureFrame = 0;
     if (disposed) return;
     root.setAttribute('data-main-motion', enabled() ? 'on' : 'off');
-    rail = Boolean(enabled() && desktop.matches && track && pin && devices.length > 1);
+    rail = Boolean(!allHardwareGrid && enabled() && desktop.matches && track && pin && devices.length > 1);
     root.setAttribute('data-main-rail', rail ? 'on' : 'off');
 
     if (rail) {

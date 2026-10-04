@@ -549,3 +549,64 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   #pmd-home-main-modern .offerSection .sectionHeading,
   #pmd-home-main-modern .workflowShowcase { position: static !important; }
 }
+
+/* === PMD MAIN HOMEPAGE ALL 8 HARDWARE GRID V1 START ===
+   The live homepage should present the complete hardware family in the
+   second section at once, rather than requiring the horizontal rail. */
+#pmd-home-main-modern[data-main-hardware-grid='all'] section[aria-labelledby^='home-hardware-title-'] {
+  padding: 74px 0 82px !important;
+}
+
+#pmd-home-main-modern[data-main-hardware-grid='all'] section[aria-labelledby^='home-hardware-title-'] [role='list'],
+#pmd-home-main-modern[data-main-hardware-grid='all'] [data-main-track] {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-columns: auto !important;
+  gap: 16px !important;
+  width: 100% !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+#pmd-home-main-modern[data-main-hardware-grid='all'] [data-main-hardware] {
+  height: auto !important;
+}
+
+#pmd-home-main-modern[data-main-hardware-grid='all'] [data-main-pin] {
+  position: static !important;
+  top: auto !important;
+}
+
+#pmd-home-main-modern[data-main-hardware-grid='all'] [data-card] {
+  grid-column: auto !important;
+  height: auto !important;
+  aspect-ratio: 1.16 !important;
+}
+
+#pmd-home-main-modern[data-main-hardware-grid='all'] .pmd-main-hardware-nav {
+  display: none !important;
+}
+
+@media (max-width: 1099px) {
+  #pmd-home-main-modern[data-main-hardware-grid='all'] section[aria-labelledby^='home-hardware-title-'] [role='list'],
+  #pmd-home-main-modern[data-main-hardware-grid='all'] [data-main-track] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #pmd-home-main-modern[data-main-hardware-grid='all'] [data-card] {
+    aspect-ratio: .92 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #pmd-home-main-modern[data-main-hardware-grid='all'] section[aria-labelledby^='home-hardware-title-'] [role='list'],
+  #pmd-home-main-modern[data-main-hardware-grid='all'] [data-main-track] {
+    grid-template-columns: 1fr !important;
+  }
+
+  #pmd-home-main-modern[data-main-hardware-grid='all'] [data-card] {
+    aspect-ratio: .98 !important;
+  }
+}
+/* === PMD MAIN HOMEPAGE ALL 8 HARDWARE GRID V1 END === */
