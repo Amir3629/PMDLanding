@@ -552,11 +552,10 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
 
 
 
-/* === PMD MAIN HARDWARE ONE ROW HUGE CARDS V6 START ===
-   Preserve the approved single-row, scroll-driven hardware shelf. Cards are
-   deliberately oversized now: about three full cards fit on a wide desktop,
-   with a clear peek of the next device. The remaining products stay on the
-   same row and are revealed as vertical page scroll moves the rail left/right. */
+/* === PMD MAIN HARDWARE CLEAN CAPTIONS V7 START ===
+   Huge single-row hardware cards remain scroll-driven. Product photography is
+   now unobstructed: device names live in a dedicated caption rail below each
+   image, category/role labels are removed, and the arrow sits in the caption. */
 @media (min-width: 1100px) and (min-height: 740px) {
   #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [role='list'] {
     display: flex !important;
@@ -576,28 +575,55 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
     width: clamp(380px, calc((100vw - (2 * var(--pmdm-gutter)) - 56px) / 3), 520px) !important;
     height: auto !important;
     min-height: 0 !important;
-    aspect-ratio: .9 !important;
+    aspect-ratio: .82 !important;
     grid-column: auto !important;
+    border: 1px solid #d8e1d9 !important;
     border-radius: 30px !important;
+    background: var(--pmdm-paper) !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img {
+    inset: 0 0 112px 0 !important;
+    width: 100% !important;
+    height: calc(100% - 112px) !important;
+    object-fit: cover !important;
+    z-index: 0 !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span[aria-hidden='true']:first-of-type {
+    display: none !important;
   }
 
   #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span:not([aria-hidden]) {
-    inset: 30px 70px auto 30px !important;
-  }
-
-  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] strong {
-    font-size: clamp(28px, 2.2vw, 36px) !important;
-    line-height: 1.04 !important;
+    position: absolute !important;
+    inset: auto 72px 0 0 !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 112px !important;
+    padding: 0 30px !important;
+    color: var(--pmdm-ink) !important;
+    background: var(--pmdm-paper) !important;
   }
 
   #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span:not([aria-hidden]) > span {
-    font-size: 11px !important;
-    letter-spacing: .13em !important;
+    display: none !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] strong {
+    display: block !important;
+    max-width: none !important;
+    color: var(--pmdm-ink) !important;
+    font-size: clamp(27px, 2vw, 34px) !important;
+    line-height: 1.03 !important;
+    letter-spacing: -.035em !important;
   }
 
   #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span[aria-hidden='true']:last-child {
-    inset: 28px 27px auto auto !important;
+    inset: auto 28px 37px auto !important;
+    z-index: 3 !important;
+    color: #0c563d !important;
     font-size: 30px !important;
   }
 }
-/* === PMD MAIN HARDWARE ONE ROW HUGE CARDS V6 END === */
+/* === PMD MAIN HARDWARE CLEAN CAPTIONS V7 END === */

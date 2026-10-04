@@ -113,7 +113,6 @@ export default function HomeHardwareRunway({ locale = 'en' }) {
               <span className={styles.cardShade} aria-hidden="true" />
 
               <span className={styles.cardCopy}>
-                <span className={styles.cardRole}>{device.role}</span>
                 <strong>{device.name}</strong>
               </span>
 
