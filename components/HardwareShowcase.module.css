@@ -106,3 +106,19 @@
   }
 }
 /* === PMD HARDWARE FULL DEVICE VISIBILITY V2 END === */
+
+/* === PMD HARDWARE NEUTRAL PRODUCT MEDIA V3 START ===
+   Keep device photography visually primary. All product media stages use
+   one quiet neutral surface instead of category-colored pastel panels. */
+.productVisual,
+.productCard[data-tone="green"] .productVisual,
+.productCard[data-tone="blue"] .productVisual,
+.productCard[data-tone="orange"] .productVisual,
+.productCard[data-tone="purple"] .productVisual,
+.productCard[data-tone="forest"] .productVisual,
+.productCard[data-tone="gold"] .productVisual,
+.productCard[data-tone="mint"] .productVisual,
+.productCard[data-tone="slate"] .productVisual {
+  background: #f7f7f5;
+}
+/* === PMD HARDWARE NEUTRAL PRODUCT MEDIA V3 END === */
