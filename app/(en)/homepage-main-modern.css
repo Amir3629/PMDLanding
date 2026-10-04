@@ -313,7 +313,7 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   flex-direction: column !important;
   gap: 28px !important;
   position: sticky !important;
-  top: 115px !important;
+  top: clamp(240px, 27vh, 300px) !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: none !important;
