@@ -551,40 +551,48 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
 }
 
 
-/* === PMD MAIN HARDWARE SIX CARD RAIL V2 START ===
-   Keep the approved horizontal scroll behavior, but preserve normal card
-   proportions while fitting six full hardware cards into a large desktop view. */
+
+/* === PMD MAIN HARDWARE ONE ROW SIX VIEW V3 START ===
+   Desktop hardware is always composed as one continuous row. The pinned
+   scroll controller translates this row horizontally as the page scrolls
+   vertically. Six normal-proportion cards fit in the viewport; the final
+   Printer and Cash Drawer continue off-canvas until the user scrolls. */
 @media (min-width: 1100px) and (min-height: 740px) {
-  #pmd-home-main-modern[data-main-rail='on'] [data-main-track] {
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [role='list'] {
     display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+    width: max-content !important;
+    max-width: none !important;
+    margin: 0 !important;
     grid-template-columns: none !important;
     grid-auto-flow: unset !important;
     grid-auto-columns: unset !important;
-    gap: 18px !important;
-    width: max-content !important;
-    align-items: stretch !important;
   }
 
-  #pmd-home-main-modern[data-main-rail='on'] [data-card] {
-    flex: 0 0 clamp(165px, calc((100vw - (2 * var(--pmdm-gutter)) - 90px) / 6), 225px) !important;
-    width: clamp(165px, calc((100vw - (2 * var(--pmdm-gutter)) - 90px) / 6), 225px) !important;
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] {
+    flex: 0 0 clamp(180px, calc((100vw - (2 * var(--pmdm-gutter)) - 90px) / 6), 225px) !important;
+    width: clamp(180px, calc((100vw - (2 * var(--pmdm-gutter)) - 90px) / 6), 225px) !important;
     height: auto !important;
+    min-height: 0 !important;
     aspect-ratio: .8 !important;
+    grid-column: auto !important;
     border-radius: 22px !important;
   }
 
-  #pmd-home-main-modern[data-main-rail='on'] [data-card] > span:not([aria-hidden]) {
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span:not([aria-hidden]) {
     inset: 20px 42px auto 20px !important;
   }
 
-  #pmd-home-main-modern[data-main-rail='on'] [data-card] strong {
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] strong {
     font-size: clamp(18px, 1.35vw, 22px) !important;
     line-height: 1.1 !important;
   }
 
-  #pmd-home-main-modern[data-main-rail='on'] [data-card] > span[aria-hidden='true']:last-child {
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span[aria-hidden='true']:last-child {
     inset: 19px 17px auto auto !important;
     font-size: 22px !important;
   }
 }
-/* === PMD MAIN HARDWARE SIX CARD RAIL V2 END === */
+/* === PMD MAIN HARDWARE ONE ROW SIX VIEW V3 END === */

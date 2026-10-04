@@ -97,14 +97,9 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
     root.setAttribute('data-main-motion', enabled() ? 'on' : 'off');
     rail = Boolean(enabled() && desktop.matches && track && pin && devices.length > 1);
     root.setAttribute('data-main-rail', rail ? 'on' : 'off');
+    // Hardware rail is deliberately kept active on eligible desktop viewports.
+    // The CSS composes all eight devices in one row before distance is measured.
 
-    if (rail) {
-      const availableHeight = win.innerHeight - 142;
-      if (pin.offsetHeight > availableHeight) {
-        rail = false;
-        root.setAttribute('data-main-rail', 'off');
-      }
-    }
 
     if (rail) {
       const width = pin.clientWidth;
