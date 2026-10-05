@@ -9499,9 +9499,9 @@ img[src*="/site-assets/custom/page-heroes/"] {
    One evidence-bearing hero image only. Old right-side artwork, secondary image,
    aura/glow layers, white fades, tinted fades and masks are intentionally absent. */
 html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-  background: #ffffff url('/site-assets/home-hero-modern-cafe-pos.webp') center center / cover no-repeat !important;
+  background: #ffffff url('/site-assets/home-hero-untitled-design-16.webp') center center / cover no-repeat !important;
   background-color: #ffffff !important;
-  background-image: url('/site-assets/home-hero-modern-cafe-pos.webp') !important;
+  background-image: url('/site-assets/home-hero-untitled-design-16.webp') !important;
   isolation: isolate !important;
 }
 
@@ -9559,17 +9559,3 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
   }
 }
 /* === PMD HOME HERO SINGLE BACKGROUND V1 END === */
-
-/* === PMD HOME HERO FULL-WIDTH IMAGE FIT V2 START ===
-   The single hero background previously used background-size: cover, which
-   enlarged the source beyond the desktop hero bounds and clipped content at
-   the horizontal edges. On desktop, fit the source to exactly 100% of the
-   hero width so the full left/right image composition remains visible. */
-@media (min-width: 1100px) {
-  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-    background-size: 100% auto !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === PMD HOME HERO FULL-WIDTH IMAGE FIT V2 END === */
