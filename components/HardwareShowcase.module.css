@@ -276,3 +276,48 @@
   }
 }
 /* === PMD HARDWARE TALL DEVICE FULL FIT V5 END === */
+
+/* === PMD HARDWARE TALL DEVICE SCALE V6 START ===
+   V5 gave Mobile POS and Kiosk a full-height media stage and removed the old
+   clipping. V6 uses the freed space more assertively without restoring the
+   old 1.20 crop: remove media padding, keep contain, then apply a controlled
+   centered scale that stays materially below the previous clipping level. */
+.productCard[data-product='mobile'] .productVisual,
+.productCard[data-product='kiosk'] .productVisual {
+  padding: 0 !important;
+}
+
+.productCard[data-product='mobile'] .productImage {
+  transform: scale(1.07) !important;
+  transform-origin: center center !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.productCard[data-product='kiosk'] .productImage {
+  transform: scale(1.09) !important;
+  transform-origin: center center !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+@media (max-width: 1050px) {
+  .productCard[data-product='mobile'] .productImage {
+    transform: scale(1.05) !important;
+  }
+
+  .productCard[data-product='kiosk'] .productImage {
+    transform: scale(1.07) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .productCard[data-product='mobile'] .productImage {
+    transform: scale(1.03) !important;
+  }
+
+  .productCard[data-product='kiosk'] .productImage {
+    transform: scale(1.04) !important;
+  }
+}
+/* === PMD HARDWARE TALL DEVICE SCALE V6 END === */
