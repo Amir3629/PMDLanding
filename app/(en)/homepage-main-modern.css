@@ -679,3 +679,16 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   transform: none !important;
 }
 /* === PMD HOME HARDWARE FIT EXCEPTIONS V9 END === */
+
+/* === PMD HOME HARDWARE WHITE CARDS + ENTRY HOLD V10 START ===
+   Match the hardware cards to the regular white site background. */
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card],
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span:not([aria-hidden]) {
+  background: #ffffff !important;
+}
+
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cashier POS Desktop'],
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cash Drawer'] {
+  background: #ffffff !important;
+}
+/* === PMD HOME HARDWARE WHITE CARDS + ENTRY HOLD V10 END === */

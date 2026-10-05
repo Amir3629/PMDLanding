@@ -24,6 +24,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
   let rail = false;
   let distance = 0;
   let span = 0;
+  let leadHold = 0;
   let pinTop = 110;
   let pinHeight = 0;
   let activeIndex = 0;
@@ -72,7 +73,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
 
     if (rail && hardware && track && pin) {
       const rect = hardware.getBoundingClientRect();
-      const p = clamp((pinTop - rect.top) / Math.max(1, span));
+      const p = clamp((pinTop - rect.top - leadHold) / Math.max(1, span));
       const x = Math.round(-distance * p);
       style(track, 'transform', `translate3d(${x}px, 0, 0)`, 'important');
       activeIndex = Math.round(p * Math.max(1, devices.length - 1));
@@ -108,11 +109,13 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
       pinHeight = pin.offsetHeight;
       distance = Math.max(0, track.scrollWidth - width);
       span = distance * 0.9;
+      leadHold = Math.min(220, Math.max(140, Math.round(win.innerHeight * 0.18)));
       pinTop = Math.max(104, Math.round((win.innerHeight - pinHeight) / 2));
       style(hardware, '--pmdm-pin-top', `${pinTop}px`);
-      style(hardware, '--pmdm-rail-height', `${Math.ceil(pinHeight + span + 160)}px`);
+      style(hardware, '--pmdm-rail-height', `${Math.ceil(pinHeight + leadHold + span + 160)}px`);
     } else if (track) {
       pinHeight = 0;
+      leadHold = 0;
       style(track, 'transform', 'translate3d(0, 0, 0)', 'important');
     }
     schedule();
@@ -126,7 +129,7 @@ export function mountHomepageMainModern(root, { onHardware = () => {} } = {}) {
     if (!rail || !hardware) return;
     const target = clamp(index, 0, devices.length - 1);
     const absoluteTop = win.scrollY + hardware.getBoundingClientRect().top;
-    const nextY = absoluteTop - pinTop + (target / Math.max(1, devices.length - 1)) * span;
+    const nextY = absoluteTop - pinTop + leadHold + (target / Math.max(1, devices.length - 1)) * span;
     win.scrollTo({ top: nextY, behavior: immediate || !enabled() ? 'auto' : 'smooth' });
   }
 
