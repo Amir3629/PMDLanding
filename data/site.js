@@ -142,7 +142,7 @@ export const homeStatusCards = [
     body: 'Service staff sees service status, kitchen sees preparation status and management sees exceptions from the same ticket context.'
   },
   {
-    image: '/site-assets/comments/10.webp',
+    image: '/site-assets/home-status-20261005/tap-to-pay-table-1.webp',
     eyebrow: 'Table QR ordering & payment',
     title: 'Scan the table QR code, browse, order and pay without losing the table context.',
     body: 'Guests scan the table QR code to open the mobile menu, place the order and complete payment while PayMyDine keeps the table, order, bill and payment status connected for staff.'

@@ -3,7 +3,7 @@ import { imageGroups } from '@/data/site';
 const imageSets = {
 
   home: [
-    imageGroups.pos[0],
+    '/site-assets/home-demo-20261005/untitled-design-18.webp',
     imageGroups.payment[1]
   ],
 
