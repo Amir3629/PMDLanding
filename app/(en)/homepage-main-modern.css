@@ -15,7 +15,7 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
 
 /* Hardware: same scroll-driven shelf approved on /homepage2. */
 #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] {
-  background: var(--pmdm-paper) !important;
+  background: #ffffff !important;
   color: var(--pmdm-ink) !important;
   padding: 92px 0 100px !important;
   overflow: clip !important;
