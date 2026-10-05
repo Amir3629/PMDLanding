@@ -200,7 +200,7 @@ export function RoleAndAISections() {
             <article>
 
               <img
-                src="/site-assets/extra/manager-analytics.webp"
+                src="/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp"
                 alt=""
                 loading="lazy"
               />
@@ -230,7 +230,7 @@ export function RoleAndAISections() {
             <article>
 
               <img
-                src="/site-assets/extra/tablet-dashboard.webp"
+                src="/site-assets/home-ai-story-20261005/untitled-design-19.webp"
                 alt=""
                 loading="lazy"
               />
