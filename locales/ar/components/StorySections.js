@@ -129,7 +129,7 @@ export function RoleAndAISections() {
 
             <article>
 
-              <img src="/site-assets/extra/manager-analytics.webp" alt="" loading="lazy" />
+              <img src="/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp" alt="" loading="lazy" />
 
               <div>
 

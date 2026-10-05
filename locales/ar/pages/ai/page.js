@@ -43,7 +43,7 @@ export default function AIPage() {
       <section className="section storyFeatureSection">
         <div className="container">
           <article className="storyFeature">
-            <div className="storyFeatureImage"><img src="/site-assets/extra/manager-analytics.webp" alt="" loading="lazy" /></div>
+            <div className="storyFeatureImage"><img src="/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">9 مقاييس في السياق</span>
               <h2>ابدأ برقم، ثم أبقوا فترة المقارنة وقضية التشغيل واضحة.</h2>

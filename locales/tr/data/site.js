@@ -383,7 +383,7 @@ export const solutionPages = {
       {
         title: 'Dokuz ölçüt tek bir karar görünümü oluşturur.',
         body: 'Gelir ve talebi sipariş kanalları, müşteri hareketleri, masa performansı, en çok satan ürünler ve ödeme yöntemi dağılımıyla birlikte okuyun.',
-        image: '/site-assets/extra/manager-analytics.webp'
+        image: '/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp'
       },
       {
         title: 'Tahminleri gerçekleşen talep ve marjla karşılaştırın.',

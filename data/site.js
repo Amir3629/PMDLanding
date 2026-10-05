@@ -383,7 +383,7 @@ export const solutionPages = {
       {
         title: 'Nine metrics create one decision view.',
         body: 'Read revenue and demand alongside order channels, guest activity, table performance, best sellers and payment mix.',
-        image: '/site-assets/extra/manager-analytics.webp'
+        image: '/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp'
       },
       {
         title: 'Compare forecasts with actual demand and margin.',

@@ -9499,9 +9499,9 @@ img[src*="/site-assets/custom/page-heroes/"] {
    One evidence-bearing hero image only. Old right-side artwork, secondary image,
    aura/glow layers, white fades, tinted fades and masks are intentionally absent. */
 html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-  background: #ffffff url('/site-assets/home-hero-untitled-design-16.webp') center center / cover no-repeat !important;
+  background: #ffffff url('/site-assets/home-hero-untitled-design-17.webp') center center / cover no-repeat !important;
   background-color: #ffffff !important;
-  background-image: url('/site-assets/home-hero-untitled-design-16.webp') !important;
+  background-image: url('/site-assets/home-hero-untitled-design-17.webp') !important;
   isolation: isolate !important;
 }
 
@@ -9621,3 +9621,13 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
   }
 }
 /* === PMD MOBILE HERO SEPARATE IMAGE SLIDE V1.1 END === */
+
+/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.2 START === */
+@media (min-width: 741px) {
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
+    background-size: 110% auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.2 END === */

@@ -21,7 +21,7 @@ export const teamPages = {
       {
         title: 'Turn a result into a follow-up question.',
         body: 'AI assistance can compare available periods or locations and summarise unusual movement while the owner verifies the source data and chooses the action.',
-        image: '/site-assets/extra/manager-analytics.webp'
+        image: '/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp'
       }
     ],
     bullets: ['Revenue and sales', 'Guest volume', 'Table activity', 'Reservations', 'Kitchen status', 'Top-selling items']

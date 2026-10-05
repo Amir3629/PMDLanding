@@ -33,7 +33,7 @@ export const teamPages = {
       {
         title: "Bir sonucu, doğru takip sorusuna dönüştürün.",
         body: "Yapay Zeka desteği mevcut dönemleri veya şubeleri karşılaştırabilir ve olağan dışı değişimleri özetleyebilir. Kaynak veriyi doğrulamak ve alınacak kararı belirlemek ise işletme sahibinde kalır.",
-        image: '/site-assets/extra/manager-analytics.webp'
+        image: '/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp'
       }
     ],
     bullets: [
