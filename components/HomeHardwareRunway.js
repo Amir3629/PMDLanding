@@ -19,12 +19,12 @@ const COPY = {
     cta: 'Explore all hardware',
     productsLabel: 'PayMyDine restaurant hardware',
     devices: [
-      { role: 'Main counter', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'Kitchen', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
-      { role: 'Service floor', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'Self-service', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
       { role: 'Payments', name: 'Dual-Screen Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
       { role: 'At the table', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'Main counter', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Service floor', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'Kitchen', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'Self-service', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
       { role: 'Receipts', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
       { role: 'Cash', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
@@ -36,12 +36,12 @@ const COPY = {
     cta: 'Tüm donanımı keşfet',
     productsLabel: 'PayMyDine restoran donanımları',
     devices: [
-      { role: 'Ana kasa', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'Mutfak', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
-      { role: 'Servis alanı', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'Self servis', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
       { role: 'Ödemeler', name: 'Dual-Screen Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
       { role: 'Masa başı', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'Ana kasa', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Servis alanı', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'Mutfak', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'Self servis', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
       { role: 'Fişler', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
       { role: 'Nakit', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
@@ -53,12 +53,12 @@ const COPY = {
     cta: 'استكشف جميع الأجهزة',
     productsLabel: 'أجهزة PayMyDine للمطاعم',
     devices: [
-      { role: 'الكاشير', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'المطبخ', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
-      { role: 'صالة المطعم', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'الخدمة الذاتية', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
       { role: 'المدفوعات', name: 'Dual-Screen Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
       { role: 'على الطاولة', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'الكاشير', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'صالة المطعم', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'المطبخ', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'الخدمة الذاتية', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
       { role: 'الإيصالات', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
       { role: 'النقد', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
