@@ -58,6 +58,15 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <div className="pmdMobileHeroMedia">
+        <img
+          src="/site-assets/home-hero-untitled-design-16.webp"
+          alt="PayMyDine restaurant POS devices"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
     </section>
   );
 }

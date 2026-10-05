@@ -9559,3 +9559,65 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
   }
 }
 /* === PMD HOME HERO SINGLE BACKGROUND V1 END === */
+
+/* === PMD MOBILE HERO SEPARATE IMAGE SLIDE V1 START ===
+   Desktop keeps the approved single-background hero.
+   Phones get a clean copy-first hero followed by a standalone image slide.
+   The image is not a background on mobile, carries no overlay text, and is
+   right-anchored so the device cluster remains visible. */
+.pmdMobileHeroMedia {
+  display: none !important;
+}
+
+@media (max-width: 740px) {
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground
+  > .container.heroGrid {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground
+  > .pmdMobileHeroMedia {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: clamp(430px, 118vw, 620px) !important;
+    margin: 30px 0 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    isolation: isolate !important;
+  }
+
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground
+  > .pmdMobileHeroMedia > img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover !important;
+    object-position: 100% 50% !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground
+  > .pmdMobileHeroMedia::before,
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground
+  > .pmdMobileHeroMedia::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+/* === PMD MOBILE HERO SEPARATE IMAGE SLIDE V1.1 END === */
