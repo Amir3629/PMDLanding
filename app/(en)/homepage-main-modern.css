@@ -692,3 +692,64 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   background: #ffffff !important;
 }
 /* === PMD HOME HARDWARE WHITE CARDS + ENTRY HOLD V10 END === */
+
+/* === PMD HOME VISUAL POLISH V1 START ===
+   Kiosk integration artwork: use a deliberate right-side device stage so the
+   tall device reads much larger than the old width-limited legacy placement. */
+@media (min-width: 981px) {
+  #pmd-home-main-modern .integrationVisual img.integrationPhoto[src='/site-assets/hardware-device-20261004/kiosk.webp'] {
+    top: 24px !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    left: auto !important;
+    width: 46% !important;
+    height: calc(100% - 48px) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 22px !important;
+    transform: none !important;
+    filter: drop-shadow(0 24px 34px rgba(0,0,0,.32)) !important;
+    z-index: 1 !important;
+  }
+
+  #pmd-home-main-modern .integrationBrand,
+  #pmd-home-main-modern .integrationPills {
+    max-width: 48% !important;
+  }
+}
+
+/* Workflow artwork: remove the inherited white card/frame completely. */
+#pmd-home-main-modern .workflowShowcaseVisual {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#pmd-home-main-modern .workflowShowcaseVisual img[src='/site-assets/home-workflow-20261005/restaurant-pos-tablet-cozy-cafe.webp'] {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  object-fit: cover !important;
+}
+
+/* Product area 06: make the new analytics artwork read noticeably larger. */
+#pmd-home-main-modern .offerCard[href='/solutions/insights'] .offerCardMedia img[src='/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp'] {
+  transform: scale(1.28) !important;
+  transform-origin: center center !important;
+  object-position: center center !important;
+}
+
+#pmd-home-main-modern .offerCard[href='/solutions/insights']:hover .offerCardMedia img[src='/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp'],
+#pmd-home-main-modern .offerCard[href='/solutions/insights'][data-main-focused] .offerCardMedia img[src='/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp'] {
+  transform: scale(1.36) !important;
+}
+/* === PMD HOME VISUAL POLISH V1 END === */
