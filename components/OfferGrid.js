@@ -1,6 +1,13 @@
 import { offerCards } from '@/data/site';
 import { Icon } from './Icons';
 
+const HOME_OFFER_IMAGES = {
+  'PayMyDine AI': '/site-assets/home-product-areas-20261005/ai.webp',
+  'Analytics, Forecasting & Profitability': '/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp',
+  'Guest CRM, Marketing & Growth': '/site-assets/home-product-areas-20261005/guest-crm-marketing-growth.webp',
+  'Integrations, Multi-location & Inventory': '/site-assets/home-product-areas-20261005/integrations-multilocation-inventory.webp'
+};
+
 export default function OfferGrid({ compact = false }) {
   return (
     <section
@@ -49,7 +56,7 @@ export default function OfferGrid({ compact = false }) {
               <div className="offerCardMedia">
 
                 <img
-                  src={compact ? card.compactImage : card.image}
+                  src={compact ? card.compactImage : (HOME_OFFER_IMAGES[card.title] || card.image)}
                   alt=""
                   loading="lazy"
                 />

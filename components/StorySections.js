@@ -457,7 +457,7 @@ export function FlexibilityAndIntegrationSections() {
 
             <img
               className="integrationPhoto"
-              src={imageGroups.comments[16]}
+              src='/site-assets/hardware-device-20261004/kiosk.webp'
               alt="POS integration concept"
               loading="lazy"
             />
