@@ -199,3 +199,31 @@
   .productVisual { padding: 8px !important; }
 }
 /* === PMD HARDWARE VISUAL POLISH V3 END === */
+
+/* === PMD HARDWARE PRODUCT IMAGE SCALE V4 START ===
+   Use more of each 4:3 product media stage while keeping the existing
+   evidence-bearing product artwork. Table QR, Mobile POS and Kiosk receive
+   the strongest increase because their source compositions contain more air. */
+.productCard[data-product] .productImage {
+  transform: scale(1.12) !important;
+  transform-origin: center center !important;
+}
+
+.productCard[data-product='table'] .productImage,
+.productCard[data-product='mobile'] .productImage,
+.productCard[data-product='kiosk'] .productImage {
+  transform: scale(1.20) !important;
+}
+
+@media (max-width: 760px) {
+  .productCard[data-product] .productImage {
+    transform: scale(1.08) !important;
+  }
+
+  .productCard[data-product='table'] .productImage,
+  .productCard[data-product='mobile'] .productImage,
+  .productCard[data-product='kiosk'] .productImage {
+    transform: scale(1.14) !important;
+  }
+}
+/* === PMD HARDWARE PRODUCT IMAGE SCALE V4 END === */

@@ -76,7 +76,7 @@ export default function HardwareShowcase({ copy }) {
 
           <div className={styles.productGrid}>
             {copy.products.map((product, index) => (
-              <article className={styles.productCard} data-tone={PRODUCT_TONES[index % PRODUCT_TONES.length]} key={product.name}>
+              <article className={styles.productCard} data-tone={PRODUCT_TONES[index % PRODUCT_TONES.length]} data-product={product.type} key={product.name}>
                 <div className={styles.productVisual}>
                   <img
                     className={styles.productImage}

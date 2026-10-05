@@ -653,3 +653,29 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   }
 }
 /* === PMD MAIN HARDWARE SCROLL PERFORMANCE V8 END === */
+
+/* === PMD HOME HARDWARE FIT EXCEPTIONS V9 START ===
+   These two wide products need breathing room inside the large horizontal
+   hardware cards. Keep the complete device visible instead of cropping sides. */
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cashier POS Desktop'],
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cash Drawer'] {
+  object-fit: contain !important;
+  object-position: center !important;
+  box-sizing: border-box !important;
+  background: var(--pmdm-paper) !important;
+  transform: none !important;
+}
+
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cashier POS Desktop'] {
+  padding: clamp(18px, 1.5vw, 26px) !important;
+}
+
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cash Drawer'] {
+  padding: clamp(16px, 1.35vw, 24px) !important;
+}
+
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card]:hover > img[alt='Cashier POS Desktop'],
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card]:hover > img[alt='Cash Drawer'] {
+  transform: none !important;
+}
+/* === PMD HOME HARDWARE FIT EXCEPTIONS V9 END === */
