@@ -227,3 +227,52 @@
   }
 }
 /* === PMD HARDWARE PRODUCT IMAGE SCALE V4 END === */
+
+/* === PMD HARDWARE TALL DEVICE FULL FIT V5 START ===
+   Mobile POS and Kiosk are tall devices. The prior 4:3 inner media stage plus
+   scale(1.20) made that inner stage smaller than the card and clipped the top.
+   Let these two media cells use the full card height and contain the full image. */
+.productCard[data-product='mobile'] .productImage,
+.productCard[data-product='kiosk'] .productImage {
+  transform: none !important;
+  transform-origin: center center !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+@media (min-width: 1051px) {
+  .productCard[data-product='mobile'] .productVisual,
+  .productCard[data-product='kiosk'] .productVisual {
+    align-self: stretch !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 400px !important;
+    aspect-ratio: auto !important;
+    padding: 14px 8px !important;
+    overflow: hidden !important;
+  }
+
+  .productCard[data-product='mobile'] .productImage,
+  .productCard[data-product='kiosk'] .productImage {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .productCard[data-product='mobile'] .productVisual,
+  .productCard[data-product='kiosk'] .productVisual {
+    padding: 12px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .productCard[data-product='mobile'] .productVisual,
+  .productCard[data-product='kiosk'] .productVisual {
+    padding: 10px !important;
+  }
+}
+/* === PMD HARDWARE TALL DEVICE FULL FIT V5 END === */
