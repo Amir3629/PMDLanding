@@ -9494,3 +9494,68 @@ img[src*="/site-assets/custom/page-heroes/"] {
 }
 
 /* === PMD WIDE DESKTOP VIEWPORT ANCHOR V2 END === */
+
+/* === PMD HOME HERO SINGLE BACKGROUND V1 START ===
+   One evidence-bearing hero image only. Old right-side artwork, secondary image,
+   aura/glow layers, white fades, tinted fades and masks are intentionally absent. */
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
+  background: #ffffff url('/site-assets/home-hero-modern-cafe-pos.webp') center center / cover no-repeat !important;
+  background-color: #ffffff !important;
+  background-image: url('/site-assets/home-hero-modern-cafe-pos.webp') !important;
+  isolation: isolate !important;
+}
+
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground::before,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 0 !important;
+}
+
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroAura,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroVisual,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground > .pmdHeroSecondaryLayerV2 {
+  display: none !important;
+}
+
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroGrid {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroCopy {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* Neutralize every historical hero image/fade hook if stale markup is ever reintroduced. */
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroVisual::before,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroVisual::after,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroImageFrame::before,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroImageFrame::after,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroImageCover::before,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroImageCover::after,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroRightPanel::before,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .heroRightPanel::after,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .pmdHeroArtworkWrapFix::before,
+html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .pmdHeroArtworkWrapFix::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+@media (max-width: 740px) {
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
+    background-position: 62% center !important;
+  }
+}
+/* === PMD HOME HERO SINGLE BACKGROUND V1 END === */
