@@ -3,7 +3,7 @@ import { metadataForRoute } from '@/lib/seo';
 
 export const metadata = metadataForRoute('en', '/hardware', {
   title: 'Restaurant POS Hardware and Payment Devices',
-  description: 'Explore PayMyDine restaurant hardware: table QR and payment displays, dual-screen cashier POS, mobile POS terminals, payment devices, printers, cash drawers, KDS and self-service kiosks.'
+  description: 'Explore PayMyDine restaurant hardware: table QR and pay displays, dual-screen cashier POS systems, mobile POS terminals, printers, cash drawers, KDS and kiosks.'
 });
 
 const copy = {
@@ -22,13 +22,13 @@ const copy = {
   productCta: 'Ask about this device',
   products: [
     { type: 'table', shortLabel: 'QR + PAY', category: 'Table-side', name: 'Table QR & Pay Display', body: 'A compact device for each table that gives guests a clear QR entry point and supports table-side payment.', bullets: ['QR menu and ordering entry', 'Table-side payment flow', 'Always visible at the table'] },
-    { type: 'cashier', shortLabel: 'POS', category: 'Front counter', name: 'Dual-Screen Cashier POS', body: 'The main cashier workstation with a staff-facing POS and a second customer-facing display for a smoother checkout.', bullets: ['Two-screen setup', 'Orders and checkout in one station', 'Built for daily restaurant service'] },
+    { type: 'cashier', shortLabel: 'POS', category: 'Front counter', name: 'Dual-Screen Cashier POS Desktop', body: 'The main cashier workstation with a staff-facing POS and a second customer-facing display for a smoother checkout.', bullets: ['Two-screen setup', 'Orders and checkout in one station', 'Built for daily restaurant service'] },
     { type: 'mobile', shortLabel: 'MOBILE', category: 'Floor service', name: 'Mobile POS Terminal', body: 'A portable tablet-style POS for taking orders, checking tables and completing payments directly on the restaurant floor.', bullets: ['Portable service workflow', 'Order and table access', 'Payment-ready operation'] },
-    { type: 'payment', shortLabel: 'PAY', category: 'Payments', name: 'Smart Payment Terminal', body: 'A dedicated payment device for fast card and contactless checkout at the counter or around the restaurant.', bullets: ['Contactless and card payments', 'Compact payment workflow', 'Connected to the PayMyDine setup'] },
-    { type: 'printer', shortLabel: 'PRINT', category: 'Receipts', name: 'Receipt Printer', body: 'Reliable printing for customer receipts and operational order slips where paper is still part of the workflow.', bullets: ['Fast receipt printing', 'Compact counter footprint', 'Works alongside the POS setup'] },
+    { type: 'payment', shortLabel: 'PAY', category: 'Front counter', name: 'Dual-Screen Cashier POS', body: 'A compact dual-screen cashier POS for restaurants that need another counter-ready order and checkout station.', bullets: ['Dual-screen cashier setup', 'Orders and checkout at the counter', 'Connected to the PayMyDine setup'] },
+    { type: 'printer', shortLabel: 'PRINT', category: 'Receipts', name: 'Printer', body: 'Reliable printing for customer receipts and operational order slips where paper is still part of the workflow.', bullets: ['Fast receipt printing', 'Compact counter footprint', 'Works alongside the POS setup'] },
     { type: 'drawer', shortLabel: 'CASH', category: 'Cash handling', name: 'Cash Drawer', body: 'A secure cash drawer for restaurants that still accept cash alongside card and digital payments.', bullets: ['Secure cash storage', 'Counter-ready format', 'Fits the cashier workflow'] },
-    { type: 'kds', shortLabel: 'KDS', category: 'Kitchen', name: 'Kitchen Display System (KDS)', body: 'A kitchen screen that replaces scattered paper tickets with a focused view of incoming orders and preparation status.', bullets: ['Live kitchen order queue', 'Preparation status visibility', 'Clear handoff to service'] },
-    { type: 'kiosk', shortLabel: 'KIOSK', category: 'Self-service', name: 'Self-Service Kiosk', body: 'A customer-facing ordering screen for restaurants that want to offer a faster self-service ordering path.', bullets: ['Customer self-ordering', 'Reduced queue pressure', 'Connected menu and order flow'] }
+    { type: 'kds', shortLabel: 'KDS', category: 'Kitchen', name: 'KDS', body: 'A kitchen screen that replaces scattered paper tickets with a focused view of incoming orders and preparation status.', bullets: ['Live kitchen order queue', 'Preparation status visibility', 'Clear handoff to service'] },
+    { type: 'kiosk', shortLabel: 'KIOSK', category: 'Self-service', name: 'Kiosk', body: 'A customer-facing ordering screen for restaurants that want to offer a faster self-service ordering path.', bullets: ['Customer self-ordering', 'Reduced queue pressure', 'Connected menu and order flow'] }
   ],
   ecosystem: {
     eyebrow: 'One connected setup',

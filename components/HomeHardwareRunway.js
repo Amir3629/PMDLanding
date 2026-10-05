@@ -1,14 +1,14 @@
 import styles from './HomeHardwareRunway.module.css';
 
 const DEVICE_IMAGES = {
-  table: '/hardware/refresh-20261004/table-display.webp',
-  cashier: '/hardware/refresh-20261004/desktop-pos.webp',
-  mobile: '/hardware/refresh-20261004/mobile-pos.webp',
-  payment: '/hardware/refresh-20261004/smart-payment-pos.webp',
-  printer: '/hardware/refresh-20261004/printer.webp',
-  drawer: '/hardware/refresh-20261004/cash-drawer.webp',
-  kds: '/hardware/refresh-20261004/kds.webp',
-  kiosk: '/hardware/refresh-20261004/kiosk.webp'
+  table: '/site-assets/hardware-device-20261004/table-qr-pay-display.webp',
+  cashier: '/site-assets/hardware-device-20261004/dual-screen-cashier-pos-desktop.webp',
+  mobile: '/site-assets/hardware-device-20261004/mobile-pos-terminal.webp',
+  payment: '/site-assets/hardware-device-20261004/dual-screen-cashier-pos.webp',
+  printer: '/site-assets/hardware-device-20261004/printer.webp',
+  drawer: '/site-assets/hardware-device-20261004/cash-drawer.webp',
+  kds: '/site-assets/hardware-device-20261004/kds.webp',
+  kiosk: '/site-assets/hardware-device-20261004/kiosk.webp'
 };
 
 const COPY = {
@@ -19,13 +19,13 @@ const COPY = {
     cta: 'Explore all hardware',
     productsLabel: 'PayMyDine restaurant hardware',
     devices: [
-      { role: 'Main counter', name: 'Dual-Screen Cashier POS', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'Kitchen', name: 'Kitchen Display System (KDS)', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'Main counter', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Kitchen', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
       { role: 'Service floor', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'Self-service', name: 'Self-Service Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
-      { role: 'Payments', name: 'Smart Payment Terminal', image: DEVICE_IMAGES.payment, position: 'center' },
+      { role: 'Self-service', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
+      { role: 'Payments', name: 'Dual-Screen Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
       { role: 'At the table', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
-      { role: 'Receipts', name: 'Receipt Printer', image: DEVICE_IMAGES.printer, position: 'center' },
+      { role: 'Receipts', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
       { role: 'Cash', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
   },
@@ -36,14 +36,14 @@ const COPY = {
     cta: 'Tüm donanımı keşfet',
     productsLabel: 'PayMyDine restoran donanımları',
     devices: [
-      { role: 'Ana kasa', name: 'Çift Ekranlı Kasa POS', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'Mutfak', name: 'Mutfak Ekran Sistemi (KDS)', image: DEVICE_IMAGES.kds, position: 'center' },
-      { role: 'Servis alanı', name: 'Mobil POS Terminali', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'Self servis', name: 'Self Servis Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
-      { role: 'Ödemeler', name: 'Akıllı Ödeme Terminali', image: DEVICE_IMAGES.payment, position: 'center' },
-      { role: 'Masa başı', name: 'Masa QR ve Ödeme Ekranı', image: DEVICE_IMAGES.table, position: 'center' },
-      { role: 'Fişler', name: 'Fiş Yazıcısı', image: DEVICE_IMAGES.printer, position: 'center' },
-      { role: 'Nakit', name: 'Nakit Çekmecesi', image: DEVICE_IMAGES.drawer, position: 'center' }
+      { role: 'Ana kasa', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Mutfak', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'Servis alanı', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'Self servis', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
+      { role: 'Ödemeler', name: 'Dual-Screen Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
+      { role: 'Masa başı', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'Fişler', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
+      { role: 'Nakit', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
   },
   ar: {
@@ -53,14 +53,14 @@ const COPY = {
     cta: 'استكشف جميع الأجهزة',
     productsLabel: 'أجهزة PayMyDine للمطاعم',
     devices: [
-      { role: 'الكاشير', name: 'نقطة بيع كاشير بشاشتين', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'المطبخ', name: 'نظام شاشة المطبخ (KDS)', image: DEVICE_IMAGES.kds, position: 'center' },
-      { role: 'صالة المطعم', name: 'نقطة بيع متنقلة', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'الخدمة الذاتية', name: 'كشك خدمة ذاتية', image: DEVICE_IMAGES.kiosk, position: 'center' },
-      { role: 'المدفوعات', name: 'جهاز دفع ذكي', image: DEVICE_IMAGES.payment, position: 'center' },
-      { role: 'على الطاولة', name: 'شاشة QR والدفع للطاولة', image: DEVICE_IMAGES.table, position: 'center' },
-      { role: 'الإيصالات', name: 'طابعة إيصالات', image: DEVICE_IMAGES.printer, position: 'center' },
-      { role: 'النقد', name: 'درج نقدي', image: DEVICE_IMAGES.drawer, position: 'center' }
+      { role: 'الكاشير', name: 'Dual-Screen Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'المطبخ', name: 'KDS', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'صالة المطعم', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'الخدمة الذاتية', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
+      { role: 'المدفوعات', name: 'Dual-Screen Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
+      { role: 'على الطاولة', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'الإيصالات', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
+      { role: 'النقد', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
   }
 };
