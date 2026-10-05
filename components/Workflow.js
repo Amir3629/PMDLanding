@@ -45,7 +45,7 @@ export default function Workflow({ variant = 'home' }) {
   const workflowImage =
     variant === 'platform'
       ? imageGroups.comments[11]
-      : '/site-assets/home-workflow-20261005/restaurant-pos-tablet-cozy-cafe.webp';
+      : '/site-assets/home-workflow-20261005/cozy-cafe-pos-ordering-scene.webp';
 
   return (
 

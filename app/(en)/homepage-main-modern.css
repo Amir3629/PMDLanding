@@ -731,7 +731,7 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   box-shadow: none !important;
 }
 
-#pmd-home-main-modern .workflowShowcaseVisual img[src='/site-assets/home-workflow-20261005/restaurant-pos-tablet-cozy-cafe.webp'] {
+#pmd-home-main-modern .workflowShowcaseVisual img[src='/site-assets/home-workflow-20261005/cozy-cafe-pos-ordering-scene.webp'] {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
@@ -741,15 +741,4 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   object-fit: cover !important;
 }
 
-/* Product area 06: make the new analytics artwork read noticeably larger. */
-#pmd-home-main-modern .offerCard[href='/solutions/insights'] .offerCardMedia img[src='/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp'] {
-  transform: scale(1.28) !important;
-  transform-origin: center center !important;
-  object-position: center center !important;
-}
-
-#pmd-home-main-modern .offerCard[href='/solutions/insights']:hover .offerCardMedia img[src='/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp'],
-#pmd-home-main-modern .offerCard[href='/solutions/insights'][data-main-focused] .offerCardMedia img[src='/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp'] {
-  transform: scale(1.36) !important;
-}
 /* === PMD HOME VISUAL POLISH V1 END === */

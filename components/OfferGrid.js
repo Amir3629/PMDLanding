@@ -3,7 +3,7 @@ import { Icon } from './Icons';
 
 const HOME_OFFER_IMAGES = {
   'PayMyDine AI': '/site-assets/home-product-areas-20261005/ai.webp',
-  'Analytics, Forecasting & Profitability': '/site-assets/home-product-areas-20261005/analytics-forecasting-profitability.webp',
+  'Analytics, Forecasting & Profitability': '/site-assets/home-product-areas-20261005/analytics-sunlit-cafe.webp',
   'Guest CRM, Marketing & Growth': '/site-assets/home-product-areas-20261005/guest-crm-marketing-growth.webp',
   'Integrations, Multi-location & Inventory': '/site-assets/home-product-areas-20261005/integrations-multilocation-inventory.webp'
 };
