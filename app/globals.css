@@ -9622,12 +9622,12 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
 }
 /* === PMD MOBILE HERO SEPARATE IMAGE SLIDE V1.1 END === */
 
-/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.2 START === */
+/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.3 START === */
 @media (min-width: 741px) {
   html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-    background-size: 110% auto !important;
-    background-position: center center !important;
+    background-size: 116% auto !important;
+    background-position: center 62% !important;
     background-repeat: no-repeat !important;
   }
 }
-/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.2 END === */
+/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.3 END === */
