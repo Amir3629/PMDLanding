@@ -62,7 +62,7 @@ const toggleMobileNav = () => {
 
   return (
     <header className="siteHeader">
-      <div className="container headerInner">
+      <div className={`container headerInner ${mega ? 'isMegaExpanded' : ''}`}>
         <Logo />
         <nav className={`mainNav ${mobileOpen ? 'isOpen' : ''}`} aria-label="Primary navigation">
           {primaryNav.map((item) => {

@@ -50,7 +50,7 @@ export default function Header() {
 
   return (
     <header className="siteHeader">
-      <div className="container headerInner">
+      <div className={`container headerInner ${mega ? 'isMegaExpanded' : ''}`}>
         <Logo />
         <nav className={`mainNav ${mobileOpen ? 'isOpen' : ''}`} aria-label="Ana gezinme">
           {primaryNav.map((item) => {

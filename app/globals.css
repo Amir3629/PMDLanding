@@ -9631,3 +9631,148 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
   }
 }
 /* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.4 END === */
+
+/* === PMD INTEGRATED PRODUCT HEADER EXPAND V1.1 START ===
+   Desktop/tablet Product mega-menu is no longer a second floating card.
+   The existing white header frame itself grows downward, contains the menu,
+   then contracts back to the normal navigation row when closed. */
+@media (min-width: 821px) {
+  .siteHeader .headerInner {
+    --pmd-header-row-h: 72px;
+    --pmd-header-expanded-h: 456px;
+
+    height: var(--pmd-header-row-h) !important;
+    min-height: var(--pmd-header-row-h) !important;
+    align-items: flex-start !important;
+    overflow: hidden !important;
+
+    transition:
+      height .46s cubic-bezier(.22, 1, .36, 1),
+      border-radius .32s ease,
+      box-shadow .32s ease
+      !important;
+  }
+
+  .siteHeader .headerInner.isMegaExpanded {
+    height: var(--pmd-header-expanded-h) !important;
+  }
+
+  .siteHeader .headerInner > .brand,
+  .siteHeader .headerInner > .mainNav,
+  .siteHeader .headerInner > .headerActions {
+    height: var(--pmd-header-row-h) !important;
+    min-height: var(--pmd-header-row-h) !important;
+    align-items: center !important;
+  }
+
+  /* Position the Product menu against the full white header frame. */
+  .siteHeader .mainNav > .navItem {
+    position: static !important;
+  }
+
+  .siteHeader .megaMenu,
+  .siteHeader .megaMenuProduct {
+    position: absolute !important;
+    top: var(--pmd-header-row-h) !important;
+    right: 20px !important;
+    bottom: auto !important;
+    left: 20px !important;
+
+    width: auto !important;
+    max-width: none !important;
+    max-height: calc(var(--pmd-header-expanded-h) - var(--pmd-header-row-h)) !important;
+
+    margin: 0 !important;
+    padding: 18px 0 22px !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+
+    transform: translateY(-10px) !important;
+    transform-origin: top center !important;
+
+    transition:
+      opacity .18s ease,
+      transform .32s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear .32s
+      !important;
+  }
+
+  .siteHeader .megaMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: rgba(210, 225, 217, .92);
+    pointer-events: none;
+  }
+
+  .siteHeader .megaMenu.isOpen {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+
+    transition:
+      opacity .22s ease .07s,
+      transform .38s cubic-bezier(.22, 1, .36, 1) .03s,
+      visibility 0s
+      !important;
+  }
+
+  .siteHeader .megaMenuTop,
+  .siteHeader .megaColumns {
+    width: min(100%, 1120px) !important;
+    margin-inline: auto !important;
+  }
+
+  .siteHeader .megaMenuTop {
+    padding: 0 4px 16px !important;
+  }
+
+  .siteHeader .megaColumns {
+    padding: 18px 4px 0 !important;
+  }
+
+  .siteHeader .navTrigger svg {
+    transition: transform .28s cubic-bezier(.22, 1, .36, 1) !important;
+  }
+
+  .siteHeader .navTrigger.active svg {
+    transform: rotate(180deg) !important;
+  }
+
+  /* Preserve outside-click closing without adding a visible second layer. */
+  .siteHeader .megaBackdrop,
+  .siteHeader .megaBackdrop.isOpen {
+    background: transparent !important;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1080px) {
+  .siteHeader .headerInner {
+    --pmd-header-row-h: 68px;
+    --pmd-header-expanded-h: 500px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (min-width: 821px) {
+  .siteHeader .headerInner,
+  .siteHeader .megaMenu,
+  .siteHeader .navTrigger svg {
+    transition: none !important;
+  }
+}
+/* === PMD INTEGRATED PRODUCT HEADER EXPAND V1.1 END === */
