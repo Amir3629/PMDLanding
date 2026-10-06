@@ -272,3 +272,88 @@
     transition: none;
   }
 }
+
+/* === PMD HOME HARDWARE RESPONSIVE CAPTION FIX V11 START ===
+   Below the desktop scroll-rail breakpoint, the V10 white card background
+   collided with the older white overlay text. Keep the image clean and move
+   the product name into a dedicated white caption rail below the artwork. */
+@media (max-width: 1099px) {
+  .card,
+  .card:nth-child(7),
+  .card:nth-child(8) {
+    border: 1px solid #d8e1d9;
+    background: #ffffff;
+    color: #082f26;
+  }
+
+  .cardShade {
+    display: none !important;
+  }
+
+  .cardImage {
+    top: 0;
+    right: 0;
+    bottom: 84px;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: calc(100% - 84px);
+  }
+
+  .cardCopy {
+    position: absolute;
+    z-index: 2;
+    inset-inline-start: 0;
+    inset-inline-end: 58px;
+    top: auto;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    height: 84px;
+    padding: 0 20px;
+    background: #ffffff !important;
+  }
+
+  .cardCopy strong {
+    display: block;
+    max-width: 100%;
+    color: #082f26 !important;
+    font-size: clamp(21px, 3.5vw, 27px);
+    line-height: 1.04;
+    letter-spacing: -.035em;
+  }
+
+  .arrow {
+    z-index: 3;
+    top: auto;
+    bottom: 28px;
+    inset-inline-end: 20px;
+    color: #075b42 !important;
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 680px) {
+  .cardCopy {
+    height: 78px;
+    inset-inline-end: 54px;
+    padding-inline: 18px;
+  }
+
+  .cardImage {
+    bottom: 78px;
+    height: calc(100% - 78px);
+  }
+
+  .cardCopy strong {
+    font-size: clamp(21px, 6vw, 25px);
+  }
+
+  .arrow {
+    bottom: 25px;
+    inset-inline-end: 18px;
+    font-size: 25px;
+  }
+}
+/* === PMD HOME HARDWARE RESPONSIVE CAPTION FIX V11 END === */

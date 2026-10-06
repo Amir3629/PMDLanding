@@ -9914,3 +9914,14 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
   }
 }
 /* === PMD HEADER OVERLAY MENU CLEANUP V1 END === */
+
+/* === PMD GLOBAL HEADER VERTICAL ALIGN V1 START ===
+   Homepage already uses a fixed header at top:16px with no outer padding.
+   Match that visual Y-position on all non-home pages without changing their
+   sticky behavior or the integrated Product-menu overlay. */
+body:not(:has(section.hero.pmdHeroFullBleedFix)) .siteHeader {
+  top: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* === PMD GLOBAL HEADER VERTICAL ALIGN V1 END === */
