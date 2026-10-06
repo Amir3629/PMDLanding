@@ -742,3 +742,76 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
 }
 
 /* === PMD HOME VISUAL POLISH V1 END === */
+
+/* === PMD MOBILE HARDWARE CAPTION CASCADE FIX V11.1 START ===
+   homepage-main-modern.css owns higher-specificity !important card rules than
+   the CSS module. On mobile/tablet those legacy rules were forcing cardCopy
+   back to the TOP of the product image, creating the large white rectangle.
+   Keep the artwork clean and place name + arrow only in the bottom caption. */
+@media (max-width: 1099px) {
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img {
+    inset: 0 0 84px 0 !important;
+    width: 100% !important;
+    height: calc(100% - 84px) !important;
+    z-index: 0 !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span[aria-hidden='true']:first-of-type {
+    display: none !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span:not([aria-hidden]) {
+    position: absolute !important;
+    inset: auto 58px 0 0 !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 84px !important;
+    min-height: 84px !important;
+    padding: 0 20px !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    color: #082f26 !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] strong {
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    color: #082f26 !important;
+    font-size: clamp(21px, 3.5vw, 27px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.035em !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span[aria-hidden='true']:last-child {
+    inset: auto 20px 28px auto !important;
+    z-index: 3 !important;
+    color: #075b42 !important;
+    font-size: 27px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img {
+    inset: 0 0 78px 0 !important;
+    height: calc(100% - 78px) !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span:not([aria-hidden]) {
+    inset: auto 54px 0 0 !important;
+    height: 78px !important;
+    min-height: 78px !important;
+    padding: 0 18px !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] strong {
+    font-size: clamp(21px, 6vw, 25px) !important;
+  }
+
+  #pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > span[aria-hidden='true']:last-child {
+    inset: auto 18px 25px auto !important;
+    font-size: 25px !important;
+  }
+}
+/* === PMD MOBILE HARDWARE CAPTION CASCADE FIX V11.1 END === */
