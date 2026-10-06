@@ -9776,3 +9776,141 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
   }
 }
 /* === PMD INTEGRATED PRODUCT HEADER EXPAND V1.1 END === */
+
+/* === PMD HEADER OVERLAY MENU CLEANUP V1 START ===
+   Keep the visual language from the integrated-header treatment, but do not
+   let the expanded menu increase document-flow height. The white frame grows
+   with a pseudo-element while the actual header row stays fixed-height. */
+@media (min-width: 821px) {
+  .siteHeader .headerInner,
+  .siteHeader .headerInner.isMegaExpanded {
+    --pmd-header-row-h: 72px;
+    --pmd-header-expanded-h: 430px;
+
+    height: var(--pmd-header-row-h) !important;
+    min-height: var(--pmd-header-row-h) !important;
+    overflow: visible !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    isolation: isolate;
+  }
+
+  /* One visual frame, expanding over the page rather than pushing it. */
+  .siteHeader .headerInner::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: var(--pmd-header-row-h);
+    border: 1px solid #dbe7e0;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 16px 42px rgba(5, 63, 48, .08);
+    pointer-events: none;
+
+    transition:
+      height .46s cubic-bezier(.22, 1, .36, 1),
+      border-radius .34s ease,
+      box-shadow .34s ease;
+  }
+
+  .siteHeader .headerInner.isMegaExpanded::before {
+    height: var(--pmd-header-expanded-h);
+    border-radius: 24px;
+    box-shadow: 0 24px 64px rgba(5, 63, 48, .12);
+  }
+
+  /* Header controls remain above the growing frame. Flex items accept z-index. */
+  .siteHeader .headerInner > .brand,
+  .siteHeader .headerInner > .mainNav,
+  .siteHeader .headerInner > .headerActions {
+    z-index: 2;
+  }
+
+  .siteHeader .mainNav > .navItem {
+    position: static !important;
+  }
+
+  .siteHeader .megaMenu,
+  .siteHeader .megaMenuProduct {
+    z-index: 3 !important;
+    top: var(--pmd-header-row-h) !important;
+    right: 20px !important;
+    left: 20px !important;
+    max-height: calc(var(--pmd-header-expanded-h) - var(--pmd-header-row-h)) !important;
+    padding: 22px 0 58px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  /* Keep the subtle separator, but remove the old full-width top-strip layout. */
+  .siteHeader .megaMenuTop {
+    display: none !important;
+  }
+
+  .siteHeader .megaColumns {
+    width: min(100%, 1120px) !important;
+    margin-inline: auto !important;
+    padding: 4px 4px 0 !important;
+  }
+
+  /* Small utility CTA lives in the lower corner; it does not consume a row. */
+  .siteHeader .megaMenuExplore {
+    position: absolute;
+    z-index: 4;
+    inset-inline-end: 4px;
+    bottom: 14px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .siteHeader .megaMenuExplore a {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 7px;
+    width: auto !important;
+    min-height: 38px;
+    padding: 7px 10px !important;
+    border-radius: 10px;
+    background: transparent !important;
+    color: var(--green) !important;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .siteHeader .megaMenuExplore a:hover,
+  .siteHeader .megaMenuExplore a:focus-visible {
+    background: #f3f8f5 !important;
+  }
+
+  /* The siteHeader/headerInner flow height never changes while the menu is open. */
+  .siteHeader:has(.headerInner.isMegaExpanded) {
+    min-height: 0 !important;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1080px) {
+  .siteHeader .headerInner,
+  .siteHeader .headerInner.isMegaExpanded {
+    --pmd-header-row-h: 68px;
+    --pmd-header-expanded-h: 478px;
+  }
+
+  .siteHeader .megaMenu,
+  .siteHeader .megaMenuProduct {
+    padding-bottom: 62px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (min-width: 821px) {
+  .siteHeader .headerInner::before {
+    transition: none !important;
+  }
+}
+/* === PMD HEADER OVERLAY MENU CLEANUP V1 END === */

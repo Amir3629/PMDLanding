@@ -69,12 +69,11 @@ const toggleMobileNav = () => {
             }}>{item.label}</a>}
 
                 {hasMenu && <div className={`megaMenu ${item.href === "/ar/platform" ? 'megaMenuProduct' : ''} ${isMegaOpen ? 'isOpen' : ''}`} aria-hidden={!isMegaOpen}>
-                    <div className="megaMenuTop">
-                      <strong>{item.label}</strong>
+                    <div className="megaMenuExplore">
                       <a href={item.href} onClick={() => {
                   setMega(null);
                   setMobileOpen(false);
-                }}>عرض نظرة عامة <Icon name="arrow" size={15} /></a>
+                }}>استكشف جميع المنتجات <Icon name="arrow" size={15} /></a>
                     </div>
                     <div className="megaColumns">
                       {item.columns.map(column => <div key={column.title}>

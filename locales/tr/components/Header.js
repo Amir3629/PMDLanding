@@ -77,9 +77,8 @@ export default function Header() {
                     className={`megaMenu ${item.href === '/tr/platform' ? 'megaMenuProduct' : ''} ${isMegaOpen ? 'isOpen' : ''}`}
                     aria-hidden={!isMegaOpen}
                   >
-                    <div className="megaMenuTop">
-                      <strong>{item.label}</strong>
-                      <a href={item.href} onClick={() => { setMega(null); setMobileOpen(false); }}>Genel bakışı görüntüle <Icon name="arrow" size={15} /></a>
+                    <div className="megaMenuExplore">
+                      <a href={item.href} onClick={() => { setMega(null); setMobileOpen(false); }}>Tüm ürünleri keşfet <Icon name="arrow" size={15} /></a>
                     </div>
                     <div className="megaColumns">
                       {item.columns.map((column) => (
