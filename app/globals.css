@@ -9925,3 +9925,224 @@ body:not(:has(section.hero.pmdHeroFullBleedFix)) .siteHeader {
   padding: 0 !important;
 }
 /* === PMD GLOBAL HEADER VERTICAL ALIGN V1 END === */
+
+/* === PMD MOBILE SAME HEADER FRAME V1.2 START ===
+   The hamburger menu is not a second card. The existing header frame itself
+   expands downward as an overlay. Existing React state is detected through
+   .mainNav.isOpen, so no Header component rewrite is required. */
+@media (max-width: 820px) {
+  .siteHeader {
+    background: transparent !important;
+    border-bottom: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .siteHeader .headerInner {
+    --pmd-mobile-header-row-h: 70px;
+    --pmd-mobile-header-open-h: 360px;
+    --pmd-mobile-header-product-h: min(760px, calc(100dvh - 24px));
+
+    position: relative !important;
+    height: var(--pmd-mobile-header-row-h) !important;
+    min-height: var(--pmd-mobile-header-row-h) !important;
+    overflow: visible !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    isolation: isolate;
+  }
+
+  /* This is the single visual header frame. */
+  .siteHeader .headerInner::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--pmd-mobile-header-row-h);
+
+    background: #ffffff;
+    border: 1px solid #dbe7e0;
+    border-radius: 20px;
+    box-shadow: 0 16px 42px rgba(5, 63, 48, .09);
+    pointer-events: none;
+
+    transition:
+      height .44s cubic-bezier(.22, 1, .36, 1),
+      border-radius .30s ease,
+      box-shadow .30s ease;
+  }
+
+  /* Hamburger open: grow the SAME frame. */
+  .siteHeader .headerInner:has(.mainNav.isOpen)::before {
+    height: var(--pmd-mobile-header-open-h);
+    border-radius: 20px;
+    box-shadow: 0 24px 64px rgba(5, 63, 48, .13);
+  }
+
+  /* Product open inside mobile nav: allow the same frame to grow farther. */
+  .siteHeader .headerInner:has(.mainNav.isOpen .megaMenu.isOpen)::before {
+    height: var(--pmd-mobile-header-product-h);
+  }
+
+  .siteHeader .headerInner > .brand,
+  .siteHeader .headerInner > .headerActions {
+    position: relative;
+    z-index: 4;
+    height: var(--pmd-mobile-header-row-h) !important;
+    min-height: var(--pmd-mobile-header-row-h) !important;
+    align-items: center !important;
+  }
+
+  .siteHeader .menuButton {
+    position: relative;
+    z-index: 5;
+  }
+
+  /* Navigation content sits INSIDE the growing frame. */
+  .siteHeader .mainNav {
+    position: absolute !important;
+    z-index: 3 !important;
+    top: var(--pmd-mobile-header-row-h) !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: 0 !important;
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+
+    margin: 0 !important;
+    padding: 10px 18px 18px !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-10px) !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+
+    transition:
+      opacity .18s ease,
+      transform .32s cubic-bezier(.22, 1, .36, 1),
+      max-height .42s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear .42s
+      !important;
+  }
+
+  .siteHeader .mainNav.isOpen {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    max-height: calc(var(--pmd-mobile-header-open-h) - var(--pmd-mobile-header-row-h) - 8px) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
+    transition:
+      opacity .20s ease,
+      transform .34s cubic-bezier(.22, 1, .36, 1),
+      max-height .42s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s
+      !important;
+  }
+
+  .siteHeader .headerInner:has(.mainNav.isOpen .megaMenu.isOpen) .mainNav.isOpen {
+    max-height: calc(var(--pmd-mobile-header-product-h) - var(--pmd-mobile-header-row-h) - 8px) !important;
+  }
+
+  .siteHeader .mainNav > .navItem {
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .siteHeader .mainNav > .navItem > a,
+  .siteHeader .mainNav > .navItem > .navTrigger {
+    width: 100% !important;
+    min-height: 48px;
+    justify-content: space-between !important;
+    padding: 13px 10px !important;
+    border-radius: 12px !important;
+    background: transparent !important;
+  }
+
+  .siteHeader .mainNav > .navItem > a:hover,
+  .siteHeader .mainNav > .navItem > a:focus-visible,
+  .siteHeader .mainNav > .navItem > .navTrigger:hover,
+  .siteHeader .mainNav > .navItem > .navTrigger:focus-visible,
+  .siteHeader .mainNav > .navItem > .navTrigger.active {
+    background: #f3f8f5 !important;
+  }
+
+  /* Product accordion stays inside this same frame. */
+  .siteHeader .mainNav .megaMenu,
+  .siteHeader .mainNav .megaMenuProduct {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+
+    background: #f7faf8 !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+  }
+
+  .siteHeader .mainNav .megaMenuExplore {
+    position: static !important;
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+  }
+
+  .siteHeader .mainNav .megaMenuExplore a {
+    width: 100% !important;
+    justify-content: space-between !important;
+    padding: 10px 8px !important;
+    color: var(--green) !important;
+    background: transparent !important;
+  }
+
+  /* No second mobile card and no backdrop layer. */
+  .siteHeader .megaBackdrop,
+  .siteHeader .megaBackdrop.isOpen {
+    display: none !important;
+  }
+}
+
+@media (max-width: 740px) {
+  .siteHeader .headerInner {
+    --pmd-mobile-header-row-h: 64px;
+    --pmd-mobile-header-open-h: 350px;
+  }
+}
+
+@media (max-width: 380px) {
+  .siteHeader .headerInner {
+    --pmd-mobile-header-open-h: 342px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 820px) {
+  .siteHeader .headerInner::before,
+  .siteHeader .mainNav {
+    transition: none !important;
+  }
+}
+/* === PMD MOBILE SAME HEADER FRAME V1.2 END === */
