@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server';
 import { lookup as lookupCountryByIp } from 'ip-location-api/pack';
 
 const PREFIXED_LOCALES =
-  new Set(['tr', 'ar']);
+  new Set(['tr', 'ar', 'de']);
 
 const ALL_LOCALES =
-  new Set(['en', 'tr', 'ar']);
+  new Set(['en', 'tr', 'ar', 'de']);
 
 const ARABIC_COUNTRIES =
   new Set([
@@ -63,6 +63,12 @@ function firstSegment(pathname) {
 }
 
 function normaliseLocale(value) {
+  // Arabic remains available at explicit /ar URLs, but a saved Arabic
+  // preference no longer auto-routes visitors while Arabic is disabled.
+  if (value === 'ar') {
+    return null;
+  }
+
   return ALL_LOCALES.has(value)
     ? value
     : null;
@@ -71,7 +77,7 @@ function normaliseLocale(value) {
 function stripLocale(pathname) {
   const clean =
     pathname.replace(
-      /^\/(en|tr|ar)(?=\/|$)/,
+      /^\/(en|tr|ar|de)(?=\/|$)/,
       ''
     );
 
@@ -95,6 +101,10 @@ function localisePath(pathname, locale) {
 function contentLanguage(locale) {
   if (locale === 'ar') {
     return 'ar-OM';
+  }
+
+  if (locale === 'de') {
+    return 'de-DE';
   }
 
   return locale;
@@ -316,6 +326,14 @@ function localeFromCountry(country) {
   }
 
   if (
+    country === 'DE' ||
+    country === 'AT' ||
+    country === 'LI'
+  ) {
+    return 'de';
+  }
+
+  if (
     country &&
     ARABIC_COUNTRIES.has(country)
   ) {
@@ -381,7 +399,12 @@ function localeFromAcceptLanguage(
     }
 
     if (primary === 'ar') {
-      return 'ar';
+      // Arabic locale is temporarily disabled for automatic selection.
+      continue;
+    }
+
+    if (primary === 'de') {
+      return 'de';
     }
 
     if (primary === 'en') {
@@ -396,6 +419,47 @@ function detectLocale(request) {
   const country =
     countryFromIp(request) ||
     countryFromHeader(request);
+
+  if (country === 'CH') {
+    const browserLocale =
+      localeFromAcceptLanguage(
+        request.headers.get(
+          'accept-language'
+        )
+      );
+
+    return {
+      locale:
+        browserLocale === 'de'
+          ? 'de'
+          : 'en',
+      source: 'language',
+      country
+    };
+  }
+
+  if (
+    country &&
+    ARABIC_COUNTRIES.has(country)
+  ) {
+    // Keep the Arabic implementation intact, but do not automatically
+    // select it. Respect another supported browser language, otherwise EN.
+    const browserLocale =
+      localeFromAcceptLanguage(
+        request.headers.get(
+          'accept-language'
+        )
+      );
+
+    return {
+      locale:
+        browserLocale === 'ar'
+          ? 'en'
+          : browserLocale,
+      source: 'language',
+      country
+    };
+  }
 
   if (country) {
     return {
@@ -693,8 +757,7 @@ export function proxy(request) {
   }
 
   if (
-    locale === 'tr' ||
-    locale === 'ar'
+    PREFIXED_LOCALES.has(locale)
   ) {
     return localeRedirect(
       request,

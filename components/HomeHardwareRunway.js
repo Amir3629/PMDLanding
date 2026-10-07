@@ -46,6 +46,23 @@ const COPY = {
       { role: 'Nakit', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
   },
+  de: {
+    eyebrow: 'PayMyDine Hardware',
+    title: 'Hardware für jeden Servicepunkt.',
+    body: 'Vom Tisch und der Hauptkasse über Zahlungen und Küche bis zum Self-Service: Wählen Sie die Geräte, die zu den Abläufen Ihres Restaurants passen.',
+    cta: 'Alle Hardware entdecken',
+    productsLabel: 'PayMyDine Hardware für Restaurants',
+    devices: [
+      { role: 'Zahlungen', name: 'Dual Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
+      { role: 'Am Tisch', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'Hauptkasse', name: 'Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Servicebereich', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'Küche', name: 'Kitchen Screen', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'Self-Service', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
+      { role: 'Belege', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
+      { role: 'Bargeld', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
+    ]
+  },
   ar: {
     eyebrow: 'أجهزة PayMyDine',
     title: 'أجهزة لكل نقطة خدمة.',

@@ -15,6 +15,11 @@ const COPY = {
     description:
       'Rezervasyon, sipariş, mutfak, ödeme, Müşteri İlişkileri Yönetimi, analiz ve entegrasyonları birleştiren Yapay Zeka destekli restoran operasyon platformu.'
   },
+  de: {
+    language: 'de-DE',
+    description:
+      'KI-gestützte Restaurant-Betriebsplattform, die Reservierungen, Bestellungen, Küche, Zahlungen, Gäste-CRM, Analysen und Integrationen miteinander verbindet.'
+  },
   ar: {
     language: 'ar-OM',
     description:

@@ -38,8 +38,26 @@ import * as AR_PAGE_14 from '@/locales/ar/pages/solutions/[slug]/page';
 import * as AR_PAGE_15 from '@/locales/ar/pages/solutions/page';
 import * as AR_PAGE_16 from '@/locales/ar/pages/support/page';
 import * as AR_PAGE_17 from '@/locales/ar/pages/hardware/page';
+import * as DE_PAGE_0 from '@/locales/de/pages/ai/page';
+import * as DE_PAGE_1 from '@/locales/de/pages/company/page';
+import * as DE_PAGE_2 from '@/locales/de/pages/contact/page';
+import * as DE_PAGE_3 from '@/locales/de/pages/demo/page';
+import * as DE_PAGE_4 from '@/locales/de/pages/how-it-works/page';
+import * as DE_PAGE_5 from '@/locales/de/pages/implementation/page';
+import * as DE_PAGE_6 from '@/locales/de/pages/integrations/page';
+import * as DE_PAGE_7 from '@/locales/de/pages/page';
+import * as DE_PAGE_8 from '@/locales/de/pages/platform/page';
+import * as DE_PAGE_9 from '@/locales/de/pages/pricing/page';
+import * as DE_PAGE_10 from '@/locales/de/pages/resources/[slug]/page';
+import * as DE_PAGE_11 from '@/locales/de/pages/resources/page';
+import * as DE_PAGE_12 from '@/locales/de/pages/restaurant-types/page';
+import * as DE_PAGE_13 from '@/locales/de/pages/security/page';
+import * as DE_PAGE_14 from '@/locales/de/pages/solutions/[slug]/page';
+import * as DE_PAGE_15 from '@/locales/de/pages/solutions/page';
+import * as DE_PAGE_16 from '@/locales/de/pages/support/page';
+import * as DE_PAGE_17 from '@/locales/de/pages/hardware/page';
 
-const LOCALES = ['tr', 'ar'];
+const LOCALES = ['tr', 'ar', 'de'];
 
 const STATIC = {
   tr: {
@@ -78,6 +96,24 @@ const STATIC = {
     "support": AR_PAGE_16,
     "hardware": AR_PAGE_17,
   },
+  de: {
+    "ai": DE_PAGE_0,
+    "company": DE_PAGE_1,
+    "contact": DE_PAGE_2,
+    "demo": DE_PAGE_3,
+    "how-it-works": DE_PAGE_4,
+    "implementation": DE_PAGE_5,
+    "integrations": DE_PAGE_6,
+    "": DE_PAGE_7,
+    "platform": DE_PAGE_8,
+    "pricing": DE_PAGE_9,
+    "resources": DE_PAGE_11,
+    "restaurant-types": DE_PAGE_12,
+    "security": DE_PAGE_13,
+    "solutions": DE_PAGE_15,
+    "support": DE_PAGE_16,
+    "hardware": DE_PAGE_17,
+  },
 };
 
 const DYNAMIC = {
@@ -88,6 +124,10 @@ const DYNAMIC = {
   ar: {
     "resources": AR_PAGE_10,
     "solutions": AR_PAGE_14,
+  },
+  de: {
+    "resources": DE_PAGE_10,
+    "solutions": DE_PAGE_14,
   },
 };
 

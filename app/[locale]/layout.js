@@ -13,6 +13,11 @@ import HeaderAr from '@/locales/ar/components/Header';
 import FooterAr from '@/locales/ar/components/Footer';
 import CookieNoticeAr from '@/locales/ar/components/CookieNotice';
 
+
+import HeaderDe from '@/locales/de/components/Header';
+import FooterDe from '@/locales/de/components/Footer';
+import CookieNoticeDe from '@/locales/de/components/CookieNotice';
+
 const CONFIG = {
   tr: {
     lang: 'tr',
@@ -31,11 +36,20 @@ const CONFIG = {
     Header: HeaderAr,
     Footer: FooterAr,
     CookieNotice: CookieNoticeAr
+  },
+  de: {
+    lang: 'de-DE',
+    dir: 'ltr',
+    title: 'PayMyDine — Restaurant-Betriebsplattform',
+    description: 'PayMyDine verbindet Restaurantbetrieb, rollenbasierte Team-Arbeitsbereiche, Gästebestellung, Küchenabläufe, Zahlungen, aktuelle Analysen, Integrationen und KI-Unterstützung in einer anpassbaren Plattform.',
+    Header: HeaderDe,
+    Footer: FooterDe,
+    CookieNotice: CookieNoticeDe
   }
 };
 
 export function generateStaticParams() {
-  return [{ locale: 'tr' }, { locale: 'ar' }];
+  return [{ locale: 'tr' }, { locale: 'ar' }, { locale: 'de' }];
 }
 
 export async function generateMetadata({ params }) {
@@ -67,7 +81,7 @@ const firstVisitScript = `
     var seen = window.sessionStorage.getItem(key);
     if (!seen) {
       window.sessionStorage.setItem(key, '1');
-      if (/^\\/(tr|ar)\\/?$/.test(window.location.pathname)) {
+      if (/^\\/(tr|ar|de)\\/?$/.test(window.location.pathname)) {
         document.documentElement.classList.add('pmd-first-visit-splash');
         window.setTimeout(function () {
           document.documentElement.classList.remove('pmd-first-visit-splash');

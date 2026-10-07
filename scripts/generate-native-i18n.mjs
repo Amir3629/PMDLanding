@@ -14,7 +14,8 @@ const ARGOS_HELPER = path.join(ROOT, 'scripts', 'pmd-argos-translate.py');
 
 const LOCALES = {
   tr: { target: 'tr', label: 'Turkish' },
-  ar: { target: 'ar', label: 'Arabic (Oman / MSA)' }
+  ar: { target: 'ar', label: 'Arabic (Oman / MSA)' },
+  de: { target: 'de', label: 'German (Germany)' }
 };
 
 const EXCLUDED_COMPONENTS = new Set([
@@ -35,7 +36,7 @@ const TECH_KEYS = new Set([
 const TECH_JS_STRINGS = new Set([
   'Escape', 'Enter', 'Tab', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
   'click', 'change', 'submit', 'pointerdown', 'keydown', 'resize', 'scroll',
-  'en', 'tr', 'ar', 'ar-OM', 'ltr', 'rtl', 'GET', 'POST', 'PUT', 'DELETE',
+  'en', 'tr', 'ar', 'de', 'ar-OM', 'de-DE', 'ltr', 'rtl', 'GET', 'POST', 'PUT', 'DELETE',
   'true', 'false', 'undefined', 'null', 'anonymous', 'smooth', 'auto',
   'button', 'dialog', 'polite', 'email', 'text', 'main', 'navigation'
 ]);
@@ -621,7 +622,7 @@ function writeCatchAll(pageFiles) {
     });
   }
 
-  code += `\nconst LOCALES = ['tr', 'ar'];\n\n`;
+  code += `\nconst LOCALES = ['tr', 'ar', 'de'];\n\n`;
   code += `const STATIC = {\n`;
   for (const locale of Object.keys(LOCALES)) {
     code += `  ${locale}: {\n`;

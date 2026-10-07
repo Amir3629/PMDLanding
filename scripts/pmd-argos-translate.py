@@ -14,7 +14,7 @@ os.environ.setdefault(
 import argostranslate.package
 import argostranslate.translate
 
-TARGETS = ('tr', 'ar')
+TARGETS = ('tr', 'ar', 'de')
 
 
 def installed_pair(target):

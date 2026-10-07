@@ -2,17 +2,40 @@
 
 import { usePathname } from 'next/navigation';
 
+const COPY = {
+  tr: {
+    title: 'Sayfa bulunamadı.',
+    body: 'Aradığınız sayfa mevcut değil veya kaldırılmış.',
+    cta: 'Ana Sayfaya Dön'
+  },
+  ar: {
+    title: 'الصفحة غير موجودة.',
+    body: 'تعذّر العثور على الصفحة التي طلبتها.',
+    cta: 'العودة إلى الصفحة الرئيسية'
+  },
+  de: {
+    title: 'Seite nicht gefunden.',
+    body: 'Die angeforderte Seite wurde nicht gefunden oder ist nicht mehr verfügbar.',
+    cta: 'Zur Startseite'
+  }
+};
+
 export default function LocaleNotFound() {
   const pathname = usePathname() || '';
-  const arabic = pathname === '/ar' || pathname.startsWith('/ar/');
+  const locale = pathname === '/ar' || pathname.startsWith('/ar/')
+    ? 'ar'
+    : pathname === '/de' || pathname.startsWith('/de/')
+      ? 'de'
+      : 'tr';
+  const copy = COPY[locale];
 
   return (
     <section className="section">
-      <div className="container" style={{ paddingTop: 160, paddingBottom: 120, textAlign: arabic ? 'right' : 'left' }}>
-        <span className="eyebrow">{arabic ? '404' : '404'}</span>
-        <h1>{arabic ? 'الصفحة غير موجودة.' : 'Sayfa bulunamadı.'}</h1>
-        <p>{arabic ? 'تعذّر العثور على الصفحة التي طلبتها.' : 'Aradığınız sayfa mevcut değil veya kaldırılmış.'}</p>
-        <a className="button" href={arabic ? '/ar' : '/tr'}>{arabic ? 'العودة إلى الصفحة الرئيسية' : 'Ana Sayfaya Dön'}</a>
+      <div className="container" style={{ paddingTop: 160, paddingBottom: 120, textAlign: locale === 'ar' ? 'right' : 'left' }}>
+        <span className="eyebrow">404</span>
+        <h1>{copy.title}</h1>
+        <p>{copy.body}</p>
+        <a className="button" href={`/${locale}`}>{copy.cta}</a>
       </div>
     </section>
   );
