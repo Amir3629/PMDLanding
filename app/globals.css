@@ -9622,15 +9622,27 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
 }
 /* === PMD MOBILE HERO SEPARATE IMAGE SLIDE V1.1 END === */
 
-/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.4 START === */
-@media (min-width: 741px) {
+/* === PMD HOME HERO 17 LOCALE-INVARIANT CROP V1.5 START ===
+   Keep the approved Hero 17 scale, but anchor the artwork from the viewport
+   instead of a percentage of the hero box. Percentage Y positioning changes
+   when translated copy makes the hero taller, which made the same image appear
+   to move between EN, DE and TR. */
+@media (min-width: 1081px) {
   html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-    background-size: 120% auto !important;
-    background-position: center 72% !important;
+    background-size: 120vw auto !important;
+    background-position: center clamp(-230px, -11vw, -150px) !important;
     background-repeat: no-repeat !important;
   }
 }
-/* === PMD HOME HERO 17 DESKTOP CROP TUNE V1.4 END === */
+
+@media (min-width: 741px) and (max-width: 1080px) {
+  html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
+    background-size: 170% auto !important;
+    background-position: center -150px !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === PMD HOME HERO 17 LOCALE-INVARIANT CROP V1.5 END === */
 
 /* === PMD INTEGRATED PRODUCT HEADER EXPAND V1.1 START ===
    Desktop/tablet Product mega-menu is no longer a second floating card.

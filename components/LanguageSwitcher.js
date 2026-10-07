@@ -82,14 +82,27 @@ export default function LanguageSwitcher({ locale = 'en' }) {
     };
   }, [language]);
 
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (!url.searchParams.has('__pmd_locale_refresh')) return;
+    url.searchParams.delete('__pmd_locale_refresh');
+    const clean = `${url.pathname}${url.search}${url.hash}`;
+    window.history.replaceState(window.history.state, '', clean);
+  }, []);
+
   const changeLanguage = (nextValue) => {
     const next = normaliseLocale(nextValue);
     setOpen(false);
     if (next === language) return;
     saveLocale(next);
     const nextPath = localisePath(pathname, next);
-    const suffix = `${window.location.search || ''}${window.location.hash || ''}`;
-    window.location.assign(`${nextPath}${suffix}`);
+    const target = new URL(nextPath, window.location.origin);
+    const currentParams = new URLSearchParams(window.location.search || '');
+    currentParams.delete('__pmd_locale_refresh');
+    currentParams.forEach((value, key) => target.searchParams.append(key, value));
+    target.searchParams.set('__pmd_locale_refresh', String(Date.now()));
+    target.hash = window.location.hash || '';
+    window.location.assign(`${target.pathname}${target.search}${target.hash}`);
   };
 
   // Arabic remains implemented and directly reachable, but is intentionally disabled in the public selector.

@@ -600,6 +600,18 @@ function nextForLocale(
     contentLanguage(locale)
   );
 
+  // Prefixed locale HTML must not linger in a shared edge/browser cache after
+  // a landing-site deployment. The language switcher also uses a one-request
+  // cache-busting query, then removes it from the visible URL after hydration.
+  if (locale !== 'en') {
+    response.headers.set(
+      'Cache-Control',
+      'private, no-store, max-age=0, must-revalidate'
+    );
+    response.headers.set('Pragma', 'no-cache');
+    response.headers.set('Expires', '0');
+  }
+
   if (source) {
     return setLocaleCookies(
       response,
