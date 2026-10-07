@@ -657,8 +657,8 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
 /* === PMD HOME HARDWARE FIT EXCEPTIONS V9 START ===
    These two wide products need breathing room inside the large horizontal
    hardware cards. Keep the complete device visible instead of cropping sides. */
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cashier POS Desktop'],
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cash Drawer'] {
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[src='/site-assets/hardware-device-20261004/dual-screen-cashier-pos-desktop.webp'],
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[src='/site-assets/hardware-device-20261004/cash-drawer.webp'] {
   object-fit: contain !important;
   object-position: center !important;
   box-sizing: border-box !important;
@@ -666,16 +666,16 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   transform: none !important;
 }
 
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cashier POS Desktop'] {
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[src='/site-assets/hardware-device-20261004/dual-screen-cashier-pos-desktop.webp'] {
   padding: clamp(18px, 1.5vw, 26px) !important;
 }
 
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cash Drawer'] {
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[src='/site-assets/hardware-device-20261004/cash-drawer.webp'] {
   padding: clamp(16px, 1.35vw, 24px) !important;
 }
 
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card]:hover > img[alt='Cashier POS Desktop'],
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card]:hover > img[alt='Cash Drawer'] {
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card]:hover > img[src='/site-assets/hardware-device-20261004/dual-screen-cashier-pos-desktop.webp'],
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card]:hover > img[src='/site-assets/hardware-device-20261004/cash-drawer.webp'] {
   transform: none !important;
 }
 /* === PMD HOME HARDWARE FIT EXCEPTIONS V9 END === */
@@ -687,8 +687,8 @@ html:has(#pmd-home-main-modern) body > main { overflow: visible !important; }
   background: #ffffff !important;
 }
 
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cashier POS Desktop'],
-#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[alt='Cash Drawer'] {
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[src='/site-assets/hardware-device-20261004/dual-screen-cashier-pos-desktop.webp'],
+#pmd-home-main-modern section[aria-labelledby^='home-hardware-title-'] [data-card] > img[src='/site-assets/hardware-device-20261004/cash-drawer.webp'] {
   background: #ffffff !important;
 }
 /* === PMD HOME HARDWARE WHITE CARDS + ENTRY HOLD V10 END === */

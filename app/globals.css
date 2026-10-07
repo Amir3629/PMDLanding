@@ -9622,27 +9622,28 @@ html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground .
 }
 /* === PMD MOBILE HERO SEPARATE IMAGE SLIDE V1.1 END === */
 
-/* === PMD HOME HERO 17 LOCALE-INVARIANT CROP V1.5 START ===
-   Keep the approved Hero 17 scale, but anchor the artwork from the viewport
-   instead of a percentage of the hero box. Percentage Y positioning changes
-   when translated copy makes the hero taller, which made the same image appear
-   to move between EN, DE and TR. */
+/* === PMD HOME HERO 17 LOCALE-INVARIANT CROP V1.6 START ===
+   Keep one language-independent crop for EN / DE / TR, but do not lift the
+   artwork so far that its lower edge ends before the hero content. V1.5 used
+   a very negative Y anchor and exposed the white section background below the
+   image. Slightly more scale plus a lower fixed viewport anchor preserves the
+   top crop while keeping the marble counter/image continuous through the hero. */
 @media (min-width: 1081px) {
   html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-    background-size: 120vw auto !important;
-    background-position: center clamp(-230px, -11vw, -150px) !important;
+    background-size: 130vw auto !important;
+    background-position: center clamp(-105px, -5.8vw, -82px) !important;
     background-repeat: no-repeat !important;
   }
 }
 
 @media (min-width: 741px) and (max-width: 1080px) {
   html body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-    background-size: 170% auto !important;
-    background-position: center -150px !important;
+    background-size: 205% auto !important;
+    background-position: center -72px !important;
     background-repeat: no-repeat !important;
   }
 }
-/* === PMD HOME HERO 17 LOCALE-INVARIANT CROP V1.5 END === */
+/* === PMD HOME HERO 17 LOCALE-INVARIANT CROP V1.6 END === */
 
 /* === PMD INTEGRATED PRODUCT HEADER EXPAND V1.1 START ===
    Desktop/tablet Product mega-menu is no longer a second floating card.
