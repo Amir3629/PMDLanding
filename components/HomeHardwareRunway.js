@@ -36,14 +36,14 @@ const COPY = {
     cta: 'Tüm donanımı keşfet',
     productsLabel: 'PayMyDine restoran donanımları',
     devices: [
-      { role: 'Ödemeler', name: 'Dual Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
-      { role: 'Masa başı', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
-      { role: 'Ana kasa', name: 'Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'Servis alanı', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'Mutfak', name: 'Kitchen Screen', image: DEVICE_IMAGES.kds, position: 'center' },
-      { role: 'Self servis', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
-      { role: 'Fişler', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
-      { role: 'Nakit', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
+      { role: 'Ödemeler', name: 'Çift Ekranlı Kasa POS', image: DEVICE_IMAGES.payment, position: 'center' },
+      { role: 'Masa başı', name: 'Masa QR ve Ödeme Ekranı', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'Ana kasa', name: 'Masaüstü Kasa POS', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Servis alanı', name: 'Mobil POS Terminali', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'Mutfak', name: 'Mutfak Ekranı', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'Self servis', name: 'Self Servis Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
+      { role: 'Fişler', name: 'Fiş Yazıcısı', image: DEVICE_IMAGES.printer, position: 'center' },
+      { role: 'Nakit', name: 'Nakit Çekmecesi', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
   },
   de: {
@@ -53,14 +53,14 @@ const COPY = {
     cta: 'Alle Hardware entdecken',
     productsLabel: 'PayMyDine Hardware für Restaurants',
     devices: [
-      { role: 'Zahlungen', name: 'Dual Cashier POS', image: DEVICE_IMAGES.payment, position: 'center' },
-      { role: 'Am Tisch', name: 'Table QR & Pay Display', image: DEVICE_IMAGES.table, position: 'center' },
-      { role: 'Hauptkasse', name: 'Cashier POS Desktop', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'Servicebereich', name: 'Mobile POS Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
-      { role: 'Küche', name: 'Kitchen Screen', image: DEVICE_IMAGES.kds, position: 'center' },
-      { role: 'Self-Service', name: 'Kiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
-      { role: 'Belege', name: 'Printer', image: DEVICE_IMAGES.printer, position: 'center' },
-      { role: 'Bargeld', name: 'Cash Drawer', image: DEVICE_IMAGES.drawer, position: 'center' }
+      { role: 'Zahlungen', name: 'Dual-Kassen-POS', image: DEVICE_IMAGES.payment, position: 'center' },
+      { role: 'Am Tisch', name: 'Tisch-QR- & Bezahldisplay', image: DEVICE_IMAGES.table, position: 'center' },
+      { role: 'Hauptkasse', name: 'Kassen-POS-Arbeitsplatz', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Servicebereich', name: 'Mobiles POS-Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'Küche', name: 'Küchenbildschirm', image: DEVICE_IMAGES.kds, position: 'center' },
+      { role: 'Self-Service', name: 'Selbstbedienungskiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
+      { role: 'Belege', name: 'Belegdrucker', image: DEVICE_IMAGES.printer, position: 'center' },
+      { role: 'Bargeld', name: 'Kassenschublade', image: DEVICE_IMAGES.drawer, position: 'center' }
     ]
   },
   ar: {

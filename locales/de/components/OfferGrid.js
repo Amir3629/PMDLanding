@@ -25,7 +25,7 @@ und geben PayMyDine AI den Kontext, um zu erklären, was sich geändert hat.
             </h2>
 
             <p>
-              Jeder Bereich löst einen echten Restaurant-Workflow selbst.
+              Jeder Bereich löst einen echten Restaurant-Ablauf selbst.
 Verbunden, Reservierungen, Tische, Bestellungen, Küche,
 Zahlungen, Gäste, Teams, Analysen und Integrationen erstellen
 den Kontext KI verwenden kann, um Perioden zu vergleichen, Flag ungewöhnlich
@@ -56,7 +56,7 @@ Was als nächstes Aufmerksamkeit verdient.
                 <p>{card.body}</p>
 
                 <span className="cardLink">
-                  Sehen Sie den Workflow
+                  Sehen Sie den Ablauf
                   {' '}
                   <Icon name="arrow" size={15} />
                 </span>

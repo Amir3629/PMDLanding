@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!page) {
     return {};
   }
-  return metadataForRoute('en', `/de/solutions/${slug}`, {
+  return metadataForRoute('de', `/solutions/${slug}`, {
     title: page.eyebrow,
     description: page.intro
   });

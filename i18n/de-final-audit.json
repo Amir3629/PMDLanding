@@ -5,6 +5,8 @@
   "generatedJavaScriptFiles": 46,
   "productionPageFiles": 18,
   "previewRoutesLocalized": false,
-  "canonicalHardwareNamesPreserved": true,
-  "obviousEnglishUiRemaining": 0
+  "canonicalHardwareNamesPreserved": false,
+  "obviousEnglishUiRemaining": 0,
+  "localizedHardwareNames": true,
+  "heroParityAudit": "de-tr-current-hero-17"
 }

@@ -3,8 +3,8 @@ export const productAreas = [{
   icon: 'chart',
   title: 'PayMyDine AI',
   href: "/de/ai",
-  body: "Verwenden Sie 6 KI-assistierte Aktionen: Stellen Sie Fragen, erhalten Sie ein tägliches Briefing, markieren Sie ungewöhnliche Bewegungen, vergleichen Sie Perioden, unterstützen Sie Prognosen und identifizieren Sie die nächste zu untersuchende Metrik.",
-  navNote: "6 Maßnahmen für Fragen, Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen.",
+  body: "Verwenden Sie 6 KI-gestützte Aktionen: Stellen Sie Fragen, erhalten Sie ein tägliches Briefing, markieren Sie ungewöhnliche Bewegungen, vergleichen Sie Perioden, unterstützen Sie Prognosen und identifizieren Sie die nächste zu untersuchende Metrik.",
+  navNote: "6 Maßnahmen für Fragen, Tagesübersichten, Warnungen, Vergleiche, Prognosen und Untersuchungen.",
   image: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp',
   compactImage: '/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp'
 }, {
@@ -12,17 +12,17 @@ export const productAreas = [{
   icon: 'operations',
   title: "Restaurantbetrieb",
   href: "/de/solutions/operations",
-  body: "Monitor 6 Live-Ansichten: Dashboard, offene Bestellungen, Tischstatus, Bodenkarten, Dine-In oder Takeaway und aktuelle Restaurantaktivitäten.",
+  body: "Monitor 6 Live-Ansichten: Dashboard, offene Bestellungen, Tischstatus, Bodenkarten, Vor-Ort-Verzehr oder Mitnahme und aktuelle Restaurantaktivitäten.",
   navNote: "6 Live-Ansichten für Bestellungen, Tabellen, Bodenkarten, Kanäle und aktiven Service.",
   image: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp',
   compactImage: '/site-assets/custom/page-heroes/solutions-operations-hero-chatgpt-20260814.webp'
 }, {
   number: 3,
   icon: 'calendar',
-  title: "Reservierungen & Table Management",
+  title: "Reservierungen & Tischverwaltung",
   href: "/de/solutions/reservations",
-  body: "Planen Sie 7 Reservierungs- und Sitzaufgaben: Kalender, Zeitleiste, Verfügbarkeit, Walk-Ins, Tischzuweisung, Gästefluss und mehrere Etagen.",
-  navNote: "7 Planungswerkzeuge für Ankunft, Kapazität, Sitzgelegenheiten, Walk-Ins und mehrere Stockwerke.",
+  body: "Planen Sie 7 Reservierungs- und Sitzaufgaben: Kalender, Zeitleiste, Verfügbarkeit, Spontangäste, Tischzuweisung, Gästefluss und mehrere Etagen.",
+  navNote: "7 Planungswerkzeuge für Ankunft, Kapazität, Sitzgelegenheiten, Spontangäste und mehrere Stockwerke.",
   image: '/site-assets/table/1.webp',
   compactImage: '/site-assets/table/2.webp'
 }, {
@@ -39,7 +39,7 @@ export const productAreas = [{
   icon: 'card',
   title: "Zahlungen & Gästebestellung",
   href: "/de/solutions/payments",
-  body: "Cover 8 Gästebestellungs- und Zahlungsmomente, einschließlich Tabelle QR, mobiles Menü, Pay-at-Table und 3 Split-Methoden: gleichermaßen nach Artikel oder nach Aktien.",
+  body: "Cover 8 Gästebestellungs- und Zahlungsmomente, einschließlich Tabelle QR, mobiles Menü, Bezahlen am Tisch und 3 Split-Methoden: gleichermaßen nach Artikel oder nach Aktien.",
   navNote: "8 Bestell- und Zahlungsmomente, einschließlich 3 Bill-Split-Methoden.",
   image: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
   compactImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp'
@@ -73,7 +73,7 @@ export const productAreas = [{
 }, {
   number: 9,
   icon: 'link',
-  title: "Integrationen, Multi-Location & Inventory",
+  title: "Integrationen, mehrere Standorte & Bestand",
   href: "/de/integrations",
   body: "Verbinden Sie 4 Systemtypen - POS, Buchhaltung, Lieferung und Zahlungen - und fügen Sie dann zentrale Berichte, gemeinsame Menüs, Inventar, Lebensmittelkosten und Einkaufskontext hinzu.",
   navNote: "4 Integrationstypen plus zentrales Reporting, Menüs, Inventar, Lebensmittelkosten und Einkauf.",
@@ -111,7 +111,7 @@ export const offerCards = productAreas;
 export const homeStatusCards = [{
   image: '/site-assets/extra/chef-order-23.webp',
   eyebrow: "Gästezahlung",
-  title: "Behalten Sie den Tabellen- und Zahlungsstatus durch den Checkout verbunden.",
+  title: "Behalten Sie den Tabellen- und Zahlungsstatus durch den Bezahlvorgang verbunden.",
   body: "Die Gäste sehen den Betrag, die verfügbare Methode und die Bestätigung, während das Personal den Rechnungsstatus am Tisch hält."
 }, {
   image: '/site-assets/comments/14.webp',
@@ -129,7 +129,7 @@ export const homeStatusCards = [{
   title: "Scannen Sie den Tabellencode QR, durchsuchen, bestellen und bezahlen Sie, ohne den Tabellenkontext zu verlieren.",
   body: "Die Gäste scannen den Tabellencode QR, um das mobile Menü zu öffnen, die Bestellung aufzugeben und die Zahlung abzuschließen, während PayMyDine den Tisch, die Bestellung, die Rechnung und den Zahlungsstatus für das Personal verbunden hält."
 }];
-export const workflowSteps = [["Gast- oder Personalaktion", "Ein Gast scannt, Empfangsplätze, ein Kellner öffnet eine Bestellung oder ein Manager wechselt einen Tisch."], ["Restaurant-Kontext", "Tisch, Gast, Bestellung, Timing, Notizen und Berechtigungen reisen mit der Aktion."], ["Rollenspezifische Maßnahme", "Die verantwortliche Rolle erhält eine fokussierte Warteschlange mit dem Kontext und den Kontrollen, die für den nächsten Schritt erforderlich sind."], ["Service & Checkout", "Vorbereitung, Bereitschaftsstatus, Übergabe und Checkout werden aus dem gleichen Restaurantkontext fortgesetzt."], ["Insight & Assistance", "Umsatz-, Gäste-, Tabellen-, Umsatz- und Rentabilitätsdaten stehen für Reporting- und KI--gestützte Fragen zur Verfügung."]];
+export const workflowSteps = [["Gast- oder Personalaktion", "Ein Gast scannt, Empfangsplätze, ein Kellner öffnet eine Bestellung oder ein Manager wechselt einen Tisch."], ["Restaurant-Kontext", "Tisch, Gast, Bestellung, Timing, Notizen und Berechtigungen reisen mit der Aktion."], ["Rollenspezifische Maßnahme", "Die verantwortliche Rolle erhält eine fokussierte Warteschlange mit dem Kontext und den Kontrollen, die für den nächsten Schritt erforderlich sind."], ["Service & Bezahlvorgang", "Vorbereitung, Bereitschaftsstatus, Übergabe und Bezahlvorgang werden aus dem gleichen Restaurantkontext fortgesetzt."], ["Insight & Assistance", "Umsatz-, Gäste-, Tabellen-, Umsatz- und Rentabilitätsdaten stehen für Reporting- und KI--gestützte Fragen zur Verfügung."]];
 export const imageGroups = {
   comments: Array.from({
     length: 17
@@ -156,7 +156,7 @@ export const solutionPages = {
   operations: {
     eyebrow: "Restaurantbetrieb",
     title: "Siehe Tabellen, Bestellungen und Ausnahmen, bevor sie zu Serviceproblemen werden.",
-    intro: "Verwenden Sie 6 Live-Ansichten - Dashboard, offene Bestellungen, Tischstatus, Bodenkarten, Dine-In oder Takeaway und aktuelle Aktivitäten - um zu verstehen, was aktiv ist, was wartet und wo die Schicht Aufmerksamkeit benötigt.",
+    intro: "Verwenden Sie 6 Live-Ansichten - Dashboard, offene Bestellungen, Tischstatus, Bodenkarten, Vor-Ort-Verzehr oder Mitnahme und aktuelle Aktivitäten - um zu verstehen, was aktiv ist, was wartet und wo die Schicht Aufmerksamkeit benötigt.",
     storyEyebrow: "Restaurantbetrieb",
     capabilityEyebrow: "6 Live-Betriebsansichten",
     capabilityTitle: "Überprüfen Sie den Restaurantzustand, ohne ihn von separaten Bildschirmen neu zu erstellen.",
@@ -178,28 +178,28 @@ export const solutionPages = {
     bullets: ['Dashboard', "Bestellungen", "Tabellen", "Bodenkarten", "Dine-in/take-away", "Lebendaktivität"]
   },
   reservations: {
-    eyebrow: "Reservierungen & Table Management",
-    title: "Match-Buchungen und Walk-Ins zu realer Bodenkapazität.",
-    intro: "Verwenden Sie 7 Reservierungstools - Kalender, Zeitleiste, Verfügbarkeit, Walk-Ins, Tischzuweisung, Gästefluss und mehrere Etagen -, um die Nachfrage im Live-Bereich zu planen.",
+    eyebrow: "Reservierungen & Tischverwaltung",
+    title: "Match-Buchungen und Spontangäste zu realer Bodenkapazität.",
+    intro: "Verwenden Sie 7 Reservierungstools - Kalender, Zeitleiste, Verfügbarkeit, Spontangäste, Tischzuweisung, Gästefluss und mehrere Etagen -, um die Nachfrage im Live-Bereich zu planen.",
     storyEyebrow: "Reservierungen & Tischmanagement",
     capabilityEyebrow: "7 Reservierungs- und Sitzgelegenheiten",
     capabilityTitle: "Planen Sie im Voraus mit Kalender- und Zeitleistenansichten und arbeiten Sie dann live mit Verfügbarkeit und Tabellenzuweisung.",
-    capabilityBody: "Der Empfang kann Parteigröße, Ankunftszeit, verfügbare Tische, erwartete Wendungen, Walk-Ins und Bodenposition verwenden, um die nächste Sitzentscheidung zu treffen.",
+    capabilityBody: "Der Empfang kann Parteigröße, Ankunftszeit, verfügbare Tische, erwartete Wendungen, Spontangäste und Bodenposition verwenden, um die nächste Sitzentscheidung zu treffen.",
     ctaTitle: "Möchten Sie Reservations & Table Management in Aktion sehen?",
     ctaBody: "Buchen sie eine demo und wir gehen durch kalender, ankünfte, tischzuweisungen, walk-ins und mehrstöckige setups.",
     heroImage: '/site-assets/extra/host-stand.webp',
     accent: 'blue',
-    highlights: [["Kalender", "Sehen Sie Buchungen und bevorstehende Nachfrage in einer klaren Planungsansicht."], ["Zeitleiste", "Verstehen Sie die Form der Dienstzeit und was als nächstes kommt."], ["Verfügbarkeit", "Halten Sie verfügbare Tische und Sitzplatzkapazität in der Nähe des Reservierungsworkflows."], ['Walk-ins', "Behandeln Sie ungeplante Ankünfte, ohne das breitere Bodenbild zu verlieren."]],
+    highlights: [["Kalender", "Sehen Sie Buchungen und bevorstehende Nachfrage in einer klaren Planungsansicht."], ["Zeitleiste", "Verstehen Sie die Form der Dienstzeit und was als nächstes kommt."], ["Verfügbarkeit", "Halten Sie verfügbare Tische und Sitzplatzkapazität in der Nähe des Reservierungsworkflows."], ['Spontangäste', "Behandeln Sie ungeplante Ankünfte, ohne das breitere Bodenbild zu verlieren."]],
     story: [{
       title: "Sehen Sie sich die Form der Ankunft an, bevor der Service beginnt.",
       body: "Kalender- und Zeitleistenansichten zeigen Ankunftslast, Partygrößen und Timing, so dass das Team die Kapazität vorbereiten kann, bevor die Tür beschäftigt wird.",
       image: '/site-assets/extra/shared-table-feast.webp'
     }, {
       title: "Verwandeln Sie eine Buchungsliste in einen Live-Sitzplan.",
-      body: "Verfügbarkeit, Walk-Ins, erwartete Kurven und mehrstöckige Tischzuordnung bleiben dem Reservierungskontext beigefügt.",
+      body: "Verfügbarkeit, Spontangäste, erwartete Kurven und mehrstöckige Tischzuordnung bleiben dem Reservierungskontext beigefügt.",
       image: '/site-assets/custom/reservations-floor-story.webp'
     }],
-    bullets: ["Kalender", "Zeitleiste", "Verfügbarkeit", 'Walk-ins', "Tabellenzuordnung", "Gästestrom", "Mehrfachböden"]
+    bullets: ["Kalender", "Zeitleiste", "Verfügbarkeit", 'Spontangäste', "Tabellenzuordnung", "Gästestrom", "Mehrfachböden"]
   },
   'guest-ordering': {
     eyebrow: "Gast CRM, Marketing & Wachstum",
@@ -219,22 +219,22 @@ export const solutionPages = {
       body: "Verbinden Sie Besuche, Bestellungen, Präferenzen und Loyalitätsaktivitäten, um die Beziehung über eine Tabelle oder Transaktion hinaus zu verstehen.",
       image: '/site-assets/custom/solution-story/guest-profile-interactions-20260809.webp'
     }, {
-      title: "Verwenden Sie Feedback, um die nächste Retention-Aktion zu entscheiden.",
-      body: "Kombinieren Sie Feedback, bieten Sie Antworten und Besuchshäufigkeit an, um zu wählen, ob die nächste Aktion Service Recovery, Loyalität oder eine relevante Kampagne ist.",
+      title: "Verwenden Sie Feedback, um die nächste Kundenbindungsmaßnahme zu entscheiden.",
+      body: "Kombinieren Sie Feedback, bieten Sie Antworten und Besuchshäufigkeit an, um zu wählen, ob die nächste Aktion Wiedergutmachung nach Serviceproblemen, Loyalität oder eine relevante Kampagne ist.",
       image: '/site-assets/extra/cafe-conversations.webp'
     }],
-    bullets: ["Profile", "Loyalität", "Angebote", "Kampagnen", 'Feedback', 'Retention']
+    bullets: ["Profile", "Loyalität", "Angebote", "Kampagnen", 'Feedback', 'Kundenbindung']
   },
   payments: {
     eyebrow: "Zahlungen & Gästebestellung",
     title: "Nehmen Sie eine Tabelle aus dem QR-Scan zur bestätigten Zahlung, ohne die Reise neu zu starten.",
-    intro: "Cover 8 Gast- und Zahlungsmomente: Karte oder digitale Zahlung, Pay-at-Table, aufgeteilt zu gleichen Teilen, geteilt nach Artikel, geteilt nach Aktien, Tisch QR, mobiles Menü und Gäste-Checkout.",
+    intro: "Cover 8 Gast- und Zahlungsmomente: Karte oder digitale Zahlung, Bezahlen am Tisch, aufgeteilt zu gleichen Teilen, geteilt nach Artikel, geteilt nach Aktien, Tisch QR, mobiles Menü und Gäste-Bezahlvorgang.",
     storyEyebrow: "Gästebestellung & Zahlung",
     capabilityEyebrow: "8 Bestell- und Zahlungsmomente",
     capabilityTitle: "Behalten Sie Tabelle, Bestellung, Rechnung und Zahlungsstatus vom Scan bis zur Bestätigung bei.",
     capabilityBody: "Die Gäste können scannen, durchsuchen, bestellen, Service anfordern und bezahlen, während das Restaurant den Tisch und den Bestellkontext sichtbar hält.",
     ctaTitle: "Möchten Sie Payments & Guest Ordering erkunden?",
-    ctaBody: "Buchen Sie eine Demo und wir konzentrieren uns auf Tisch QR, mobile Menüs, Gästekasse, Pay-at-Table und Split-Bill-Flows.",
+    ctaBody: "Buchen Sie eine Demo und wir konzentrieren uns auf Tisch QR, mobile Menüs, Gästekasse, Bezahlen am Tisch und Split-Bill-Flows.",
     heroImage: '/site-assets/custom/page-heroes/solutions-payments-hero-chatgpt-20260814.webp',
     accent: 'purple',
     highlights: [["Karte / digitale Zahlungen", "Zeigen Sie die Karte oder die digitalen Methoden an, die für den konfigurierten Anbieter verfügbar sind, und halten Sie die ausgewählte Methode an den Rechnungsstatus gebunden."], ["Zahlung am Tisch", "Öffnen Sie die korrekte Rechnung aus dem Tabellenkontext und halten Sie den Zahlungsstatus für das Serviceteam sichtbar."], ["Geteilt", "Teilen Sie die Gesamtsumme gleichmäßig auf die ausgewählte Anzahl von Zahlern."], ["Aufschlüsselung nach Posten", "Weisen Sie bestellte Artikel einzelnen Zahlern zu, während Sie den Restbetrag sichtbar halten."]],
@@ -247,7 +247,7 @@ export const solutionPages = {
       body: "Die Gäste können als eine Partei bezahlen oder sich zu gleichen Teilen nach bestelltem Artikel oder nach Anteilen aufteilen, während der unbezahlte Restbetrag sichtbar bleibt.",
       image: '/site-assets/custom/cafe-payment-confirmation-replacement.webp'
     }],
-    bullets: ["Karte / digitale Zahlungen", "Zahlung am Tisch", "Geteilt", "Aufschlüsselung nach Posten", "Gespalten nach Aktien", "Tabelle QR", "Mobiles Menü", "Gäste Checkout"]
+    bullets: ["Karte / digitale Zahlungen", "Zahlung am Tisch", "Geteilt", "Aufschlüsselung nach Posten", "Gespalten nach Aktien", "Tabelle QR", "Mobiles Menü", "Gäste Bezahlvorgang"]
   },
   kitchen: {
     eyebrow: "Bestellung, Küche & Menü",
@@ -330,17 +330,17 @@ const solutionDetailExpansions = {
     factsEyebrow: "Restaurantbetrieb in Zahlen",
     factsTitle: "Eine Live-Betriebsansicht basiert auf sechs Kernfähigkeiten und vier Rollenperspektiven.",
     factsIntro: "Die Zahlen beschreiben den konfigurierten Produktumfang. Leistungsverbesserungen müssen an der Basislinie des Restaurants gemessen werden.",
-    facts: [['06', "Kernkompetenzen", "Dashboard, Bestellungen, Tische, Bodenkarten, Dine-In oder Takeaway und Live-Aktivitäten bleiben in einem Operationsbereich."], ['04', "Rollenperspektiven", "Besitzer, Manager, Servicemitarbeiter und Küchenteams verwenden den gleichen Restaurantkontext auf verschiedenen Detailebenen."], ['02', "Dienstkanäle", "Dine-in und Takeaway können zusammen verfolgt werden, ohne separate Versionen des Restauranttages beizubehalten."], ['01', "gemeinsames Bedienbild", "Eine Statusänderung sollte die gleiche Restaurantgeschichte aktualisieren, anstatt in einem getrennten Bildschirm zu enden."]],
+    facts: [['06', "Kernkompetenzen", "Dashboard, Bestellungen, Tische, Bodenkarten, Vor-Ort-Verzehr oder Mitnahme und Live-Aktivitäten bleiben in einem Operationsbereich."], ['04', "Rollenperspektiven", "Besitzer, Manager, Servicemitarbeiter und Küchenteams verwenden den gleichen Restaurantkontext auf verschiedenen Detailebenen."], ['02', "Dienstkanäle", "Dine-in und Takeaway können zusammen verfolgt werden, ohne separate Versionen des Restauranttages beizubehalten."], ['01', "gemeinsames Bedienbild", "Eine Statusänderung sollte die gleiche Restaurantgeschichte aktualisieren, anstatt in einem getrennten Bildschirm zu enden."]],
     workflowEyebrow: "Eine Verschiebung in fünf Schritten",
     workflowTitle: "Wie sich eine Live-Service-Periode durch die Operationsschicht bewegt.",
-    workflowIntro: "Der Workflow soll den aktuellen Zustand, die verantwortliche Rolle und die nächste Aktion leichter identifizieren.",
+    workflowIntro: "Der Ablauf soll den aktuellen Zustand, die verantwortliche Rolle und die nächste Aktion leichter identifizieren.",
     workflow: [["Laden Sie den Shift-Kontext", "Offene Reservierungen, aktive Tische, offene Bestellungen, Takeaway-Arbeiten und die Ansicht vor dem Servicedruck."], ["Ausnahmen angeben", "Finden Sie wartende Gäste, verspätete Bestellungen, unbezahlte Tische oder Bereiche des Bodens, die die Aufmerksamkeit des Managements benötigen."], ["Verlegen Sie die Arbeit in die verantwortliche Rolle", "Servicemitarbeiter sehen Serviceaktionen, Küche sieht Vorbereitungsarbeiten und Manager behalten die breitere Ausnahmeansicht."], ["Schließen Sie den Service Loop", "Aktualisieren Sie den Bestell-, Tabellen-, Vorbereitungs- und Zahlungsstatus, damit das nächste Teammitglied nicht von einem alten Status aus arbeitet."], ["Überprüfen Sie die abgeschlossene Schicht", "Vergleichen Sie Einnahmen, Gäste, Tischbewegung und betriebliche Ausnahmen nach dem Servicezeitraum."]],
     rolesTitle: "Jede Rolle erhält einen anderen Detaillierungsgrad als am selben Restauranttag.",
     rolesIntro: "Das Ziel ist nicht, dass jede Person das Management-Dashboard nutzt. Es ist, jede Rolle konzentriert zu halten und gleichzeitig den gemeinsamen Kontext zu bewahren.",
-    roleViews: [["Eigentümer", "Rezensiert Einnahmen, Gästevolumen, Tabellenumsatz und die Ausnahmen, die das Geschäftsergebnis beeinflusst haben."], ["Betriebsleiter", "Überwacht den Boden, offene Aufträge, Verzögerungen, Takeaway-Aktivitäten und die Aktionen, die während der Schicht koordiniert werden müssen."], ["Servicepersonal", "Funktioniert mit zugewiesenen Tabellen, Bestellungen, Gästeanfragen, Servicestatus und Checkout-Kontext."], ["Küche", "Erhält Vorbereitungsarbeiten mit Bestelldetails, Notizen, Timing und Bereitschaftsstatus."]],
+    roleViews: [["Eigentümer", "Rezensiert Einnahmen, Gästevolumen, Tabellenumsatz und die Ausnahmen, die das Geschäftsergebnis beeinflusst haben."], ["Betriebsleiter", "Überwacht den Boden, offene Aufträge, Verzögerungen, Takeaway-Aktivitäten und die Aktionen, die während der Schicht koordiniert werden müssen."], ["Servicepersonal", "Funktioniert mit zugewiesenen Tabellen, Bestellungen, Gästeanfragen, Servicestatus und Bezahlvorgang-Kontext."], ["Küche", "Erhält Vorbereitungsarbeiten mit Bestelldetails, Notizen, Timing und Bereitschaftsstatus."]],
     metricsTitle: "Messen Sie, ob der Betriebsfluss einfacher wird.",
     metricsIntro: "Erfassen Sie zuerst eine Baseline und vergleichen Sie dann die gleiche Definition und den gleichen Servicezeitraum nach der Implementierung.",
-    metrics: [["Zeit für die Ankunft am Sitz", "Messen Sie, wie lange Gäste zwischen der Ankunft oder dem Check-in und dem Sitzen warten, wo diese Ereignisse erfasst werden."], ["Order-to-Preparation-Zeit", "Messen Sie das Intervall zwischen Auftragsbestätigung und der Küche, die die Arbeit empfängt oder beginnt."], ["Tabellenumsatz", "Verfolgen Sie die Zeit vom Sitzen bis zur Freigabe des Tisches mit einer einheitlichen Definition für jedes Servicemodell."], ["Rechnungs-/Zahlungszeitpunkt", "Messen Sie, wie lange die letzte Checkout-Phase von der Rechnungsanfrage bis zum abgeschlossenen Zahlungsstatus dauert."]],
+    metrics: [["Zeit für die Ankunft am Sitz", "Messen Sie, wie lange Gäste zwischen der Ankunft oder dem Check-in und dem Sitzen warten, wo diese Ereignisse erfasst werden."], ["Order-to-Preparation-Zeit", "Messen Sie das Intervall zwischen Auftragsbestätigung und der Küche, die die Arbeit empfängt oder beginnt."], ["Tabellenumsatz", "Verfolgen Sie die Zeit vom Sitzen bis zur Freigabe des Tisches mit einer einheitlichen Definition für jedes Servicemodell."], ["Rechnungs-/Zahlungszeitpunkt", "Messen Sie, wie lange die letzte Bezahlvorgang-Phase von der Rechnungsanfrage bis zum abgeschlossenen Zahlungsstatus dauert."]],
     implementationTitle: "Vereinbaren Sie auf dem Boden, Status und Besitz, bevor Sie live gehen.",
     implementationIntro: "Die Bedienansicht ist nur so übersichtlich wie die Tabellenkarte, Statusdefinitionen, Rollenberechtigungen und verbundene Daten dahinter.",
     implementation: ["Bodenkarten, Tabellenkennungen und Kapazitätsstruktur", "Dine-in- und Takeaway-Kanaldefinitionen", "Bestellung, Tisch, Küche und Vokabular zum Zahlungsstatus", "Rollenberechtigungen und Ausnahmebesitz", "POS oder Zahlungsdaten für die Betriebsansicht verfügbar", "Bezugszeiträume und metrische Definitionen für die Überprüfung"],
@@ -350,31 +350,31 @@ const solutionDetailExpansions = {
     factsEyebrow: "Reservierungs- und Sitzbereich",
     factsTitle: "Sieben Planungsmöglichkeiten verbinden Buchungen, Ankünfte und die Live-Etage.",
     factsIntro: "Verfügbarkeit und Sitzlogik müssen um die tatsächlichen Servicezeiten, die Bodenstruktur und die Betriebsregeln herum konfiguriert werden.",
-    facts: [['07', "Reservierungsmöglichkeiten", "Kalender, Zeitleiste, Verfügbarkeit, Walk-Ins, Tischzuordnung, Gästefluss und mehrere Stockwerke bilden den aktuellen Produktumfang."], ['03', "Planungsansichten", "Kalender, Zeitleiste und Live-Etage-Kontext unterstützen verschiedene Entscheidungen vor und während des Dienstes."], ['02', "Ankunftsarten", "Bestätigte Buchungen und Walk-Ins können bearbeitet werden, ohne das breitere Kapazitätsbild zu verlieren."], ['LIVE', "Bodenkontext", "Besetzte, verfügbare und reservierungsbereite Tischzustände bleiben in der Nähe der Sitzentscheidung."]],
+    facts: [['07', "Reservierungsmöglichkeiten", "Kalender, Zeitleiste, Verfügbarkeit, Spontangäste, Tischzuordnung, Gästefluss und mehrere Stockwerke bilden den aktuellen Produktumfang."], ['03', "Planungsansichten", "Kalender, Zeitleiste und Live-Etage-Kontext unterstützen verschiedene Entscheidungen vor und während des Dienstes."], ['02', "Ankunftsarten", "Bestätigte Buchungen und Spontangäste können bearbeitet werden, ohne das breitere Kapazitätsbild zu verlieren."], ['LIVE', "Bodenkontext", "Besetzte, verfügbare und reservierungsbereite Tischzustände bleiben in der Nähe der Sitzentscheidung."]],
     workflowEyebrow: "Von der Verfügbarkeit zum Sitzen",
     workflowTitle: "Wie eine Buchung zu einer Tischentscheidung anstelle einer separaten Liste wird.",
     workflowIntro: "Die Planungsansicht sollte nützlich bleiben, wenn das Restaurant von der Vorbereitung in die Live-Ankunft wechselt.",
-    workflow: [["Konfigurieren der Servicestruktur", "Definieren Sie Servicezeiten, Bodenkarten, Tischkapazität und die vom Restaurant verwendeten Verfügbarkeitsregeln."], ["Buchungen und Walk-Ins erfassen", "Halten Sie Parteigröße, Ankunftszeit und Quellkontext an jede erwartete oder ungeplante Ankunft angehängt."], ["Vorbereitung der Ankunftsansicht", "Verwenden Sie den Kalender oder die Zeitleiste, um das nächste Nachfragefenster zu verstehen, bevor die Gäste den Empfang erreichen."], ["Sitz mit sichtbarem Boden", "Zuweisen oder Neuzuweisen von Tabellen mit dem aktuellen Verfügbarkeits- und Servicezustand anstelle der Buchungsliste allein."], ["Überprüfung des Sitzergebnisses", "Messen Sie Ankunft, No-Shows, Wartezeit, Tabellennutzung und Umsatz mit konsistenten Ereignisdefinitionen."]],
+    workflow: [["Konfigurieren der Servicestruktur", "Definieren Sie Servicezeiten, Bodenkarten, Tischkapazität und die vom Restaurant verwendeten Verfügbarkeitsregeln."], ["Buchungen und Spontangäste erfassen", "Halten Sie Parteigröße, Ankunftszeit und Quellkontext an jede erwartete oder ungeplante Ankunft angehängt."], ["Vorbereitung der Ankunftsansicht", "Verwenden Sie den Kalender oder die Zeitleiste, um das nächste Nachfragefenster zu verstehen, bevor die Gäste den Empfang erreichen."], ["Sitz mit sichtbarem Boden", "Zuweisen oder Neuzuweisen von Tabellen mit dem aktuellen Verfügbarkeits- und Servicezustand anstelle der Buchungsliste allein."], ["Überprüfung des Sitzergebnisses", "Messen Sie Ankunft, No-Shows, Wartezeit, Tabellennutzung und Umsatz mit konsistenten Ereignisdefinitionen."]],
     rolesTitle: "Die Rezeption plant die Tür, während das Management Kapazität und Service im Blick behält.",
     rolesIntro: "Reservierungsarbeiten sind spezialisiert, aber die Sitzentscheidung wirkt sich immer noch auf Servicemitarbeiter, Küche und Eigentümerberichte aus.",
-    roleViews: [["Reservierungen und Empfang", "Sehen Sie bevorstehende Ankünfte, Partygröße, Buchungsdetails, Verfügbarkeit und die nächste Sitzentscheidung."], ["Betriebsleiter", "Überwacht Kapazitätsdruck, Walk-Ins, verspätete Ankunft und wie sich die Sitzmöglichkeiten auf den aktiven Boden auswirken."], ["Servicepersonal", "Erhält den tisch und den gastkontext, der benötigt wird, um den service nach dem sitzen zu beginnen."], ["Eigentümer", "Bewertungen Nachfragemuster, No-Shows, Auslastung und Tabellenumsatz über Perioden oder Standorte."]],
+    roleViews: [["Reservierungen und Empfang", "Sehen Sie bevorstehende Ankünfte, Partygröße, Buchungsdetails, Verfügbarkeit und die nächste Sitzentscheidung."], ["Betriebsleiter", "Überwacht Kapazitätsdruck, Spontangäste, verspätete Ankunft und wie sich die Sitzmöglichkeiten auf den aktiven Boden auswirken."], ["Servicepersonal", "Erhält den tisch und den gastkontext, der benötigt wird, um den service nach dem sitzen zu beginnen."], ["Eigentümer", "Bewertungen Nachfragemuster, No-Shows, Auslastung und Tabellenumsatz über Perioden oder Standorte."]],
     metricsTitle: "Verwenden Sie Reservierungsereignisse, um die Planung zu verbessern, ohne einen Prozentsatz zu erfinden.",
     metricsIntro: "Das System sollte die Ereignisse erfassen, die erforderlich sind, um jede Metrik zu berechnen, bevor die Website oder das Team eine Verbesserung behauptet.",
     metrics: [["Buchungsrate bis Ankunft", "Vergleichen Sie bestätigte Buchungen mit den tatsächlichen Ankünften mit den gleichen Stornierungs- und No-Show-Regeln."], ["No-Show-Rate", "Verfolgen Sie erwartete Parteien, die nicht ankommen, segmentiert nach Zeitraum, Quelle oder Standort, sofern verfügbar."], ["Zeit für die Ankunft am Sitz", "Messen Sie die Wartezeit zwischen der Ankunft des Gastes und den zugewiesenen Sitzplätzen während vergleichbarer Servicezeiten."], ["Tabellenauslastung und Umsatz", "Überprüfen Sie, wie die verfügbare Kapazität genutzt wird und wie lange Tische unter den eigenen Definitionen des Restaurants besetzt bleiben."]],
     implementationTitle: "Reservierungsgenauigkeit beginnt mit der Konfigurationsgenauigkeit.",
     implementationIntro: "Dokumentieren Sie das Verfügbarkeitsmodell und die Ereignisse, die einen Tabellen- oder Buchungsstatus ändern.",
     implementation: ["Servicezeiträume und Buchungsverfügbarkeitsregeln", "Bodenkarten, Tabellenkapazitäten und Tabellenstatusdefinitionen", "Begehbare Handhabungs- und Empfangsverantwortung", "Anreise-, Sitzplatz-, Stornierungs- und No-Show-Events", "Buchungsquellen oder Integrationen, die dem Setup zur Verfügung stehen", "Messregeln für Wartezeit, Nutzung und Umsatz"],
-    faqs: [["Kann die Seite mehrere Stockwerke unterstützen?", "Ja. Mehrstöckiger Kontext ist Teil des aktuellen Reservierungs- und Tischverwaltungsumfangs."], ["Wie werden Walk-Ins gehandhabt?", "Walk-Ins können dem Live-Ankunfts- und Bodenbild hinzugefügt werden, so dass die nächste Sitzentscheidung die aktuelle Kapazität verwendet."], ["Entscheidet PayMyDine, wann man überbucht?", "Verfügbarkeitsregeln gehören zur konfigurierten Restaurantpolitik. Die Plattform sollte keine Überbuchungsstrategie ohne eine vereinbarte Regel annehmen."], ["Können Buchungsdaten die Berichterstattung beeinflussen?", "Ja, wenn Buchungs-, Ankunfts- und Sitzereignisse konsistent erfasst werden und der Berichtsschicht zur Verfügung stehen."]]
+    faqs: [["Kann die Seite mehrere Stockwerke unterstützen?", "Ja. Mehrstöckiger Kontext ist Teil des aktuellen Reservierungs- und Tischverwaltungsumfangs."], ["Wie werden Spontangäste gehandhabt?", "Spontangäste können dem Live-Ankunfts- und Bodenbild hinzugefügt werden, so dass die nächste Sitzentscheidung die aktuelle Kapazität verwendet."], ["Entscheidet PayMyDine, wann man überbucht?", "Verfügbarkeitsregeln gehören zur konfigurierten Restaurantpolitik. Die Plattform sollte keine Überbuchungsstrategie ohne eine vereinbarte Regel annehmen."], ["Können Buchungsdaten die Berichterstattung beeinflussen?", "Ja, wenn Buchungs-, Ankunfts- und Sitzereignisse konsistent erfasst werden und der Berichtsschicht zur Verfügung stehen."]]
   },
   kitchen: {
     factsEyebrow: "Bestell- und Küchenumfang",
     factsTitle: "Sieben Steuerelemente verbinden Auftragserfassung, Vorbereitungsstatus und Menüverfügbarkeit.",
     factsIntro: "Ziel ist es, den fehlenden Kontext zwischen Servicemitarbeitern, der Küche und dem Menü zu reduzieren, das Gäste oder Mitarbeiter sehen.",
-    facts: [['07', "Workflow-Kontrollen", "Kellnerbestellung, KDS, Vorbereitungsstatus, Bereitschaftsstatus, Menüverwaltung, Anpassung und ausverkaufte Informationen sind enthalten."], ['02', "Kritische Übergaben", "Der Auftrag wechselt vom Service zur Vorbereitung, dann bewegt sich der Bereitschaftsstatus zurück zum Serviceteam."], ['03', "Ordnungskontexte", "Tabellen-, Element- oder Modifikatordetails und Vorbereitungsstatus bleiben dem gleichen Werk beigefügt."], ['01', "geteilter Menüzustand", "Menüänderungen und ausverkaufte Informationen sollten die Personen und Kanäle erreichen, die von ihnen abhängen."]],
+    facts: [['07', "Ablauf-Kontrollen", "Kellnerbestellung, KDS, Vorbereitungsstatus, Bereitschaftsstatus, Menüverwaltung, Anpassung und ausverkaufte Informationen sind enthalten."], ['02', "Kritische Übergaben", "Der Auftrag wechselt vom Service zur Vorbereitung, dann bewegt sich der Bereitschaftsstatus zurück zum Serviceteam."], ['03', "Ordnungskontexte", "Tabellen-, Element- oder Modifikatordetails und Vorbereitungsstatus bleiben dem gleichen Werk beigefügt."], ['01', "geteilter Menüzustand", "Menüänderungen und ausverkaufte Informationen sollten die Personen und Kanäle erreichen, die von ihnen abhängen."]],
     workflowEyebrow: "Vom Auftrag bis zur fertigen Übergabe",
     workflowTitle: "Wie die Küche vollständige Arbeit erhält und einen klaren Status zurückgibt.",
     workflowIntro: "Das nützliche Ergebnis ist kein weiterer Ticketbildschirm. Es ist eine lesbare Vorbereitungswarteschlange mit einer zuverlässigen Übergabe.",
-    workflow: [["Erfassen des Auftrags", "Notieren Sie die Tabelle oder den Kanal, bestellte Elemente, Modifikatoren und Notizen im Service-Workflow."], ["Präsentation der Vorbereitungsarbeiten", "Zeigen Sie der Küche das Bestelldetail und den Prioritätskontext, der benötigt wird, um die Arbeit ohne nicht zusammenhängende Admin-Informationen aufzunehmen."], ["Status der Aktualisierungsvorbereitung", "Bewegen Sie die Arbeit durch empfangene und laufende Zustände, damit Manager und Serviceteams verstehen können, was passiert."], ["Zeichen bereit für den Dienst", "Geben Sie einen klaren Bereitschaftsstatus an die Rolle zurück, die für den Abhol- oder Tischservice verantwortlich ist."], ["Menüverfügbarkeit beibehalten", "Aktualisieren Sie Artikel, Anpassungen und ausverkaufte Informationen, damit neue Bestellungen widerspiegeln, was das Restaurant servieren kann."]],
+    workflow: [["Erfassen des Auftrags", "Notieren Sie die Tabelle oder den Kanal, bestellte Elemente, Modifikatoren und Notizen im Service-Ablauf."], ["Präsentation der Vorbereitungsarbeiten", "Zeigen Sie der Küche das Bestelldetail und den Prioritätskontext, der benötigt wird, um die Arbeit ohne nicht zusammenhängende Admin-Informationen aufzunehmen."], ["Status der Aktualisierungsvorbereitung", "Bewegen Sie die Arbeit durch empfangene und laufende Zustände, damit Manager und Serviceteams verstehen können, was passiert."], ["Zeichen bereit für den Dienst", "Geben Sie einen klaren Bereitschaftsstatus an die Rolle zurück, die für den Abhol- oder Tischservice verantwortlich ist."], ["Menüverfügbarkeit beibehalten", "Aktualisieren Sie Artikel, Anpassungen und ausverkaufte Informationen, damit neue Bestellungen widerspiegeln, was das Restaurant servieren kann."]],
     rolesTitle: "Die gleiche Reihenfolge wird unterschiedlich für Service, Vorbereitung und Management dargestellt.",
     rolesIntro: "Jede Rolle sollte die Details sehen, die für ihre Aktion erforderlich sind, ohne den Tisch zu verlieren und die Identität hinter der Arbeit zu bestellen.",
     roleViews: [["Servicepersonal", "Erfasst Elemente, Modifikatoren und Notizen, folgt dann Vorbereitung und Bereitschaftsstatus für die richtige Tabelle."], ["Küche und KDS", "Funktioniert aus einer fokussierten Warteschlange mit Einzelteildetails, Notizen, verstrichener Zeit und Vorbereitungsstatus."], ["Betriebsleiter", "Sehen Sie Workload, verspätete Tickets, bereitstehende Handoffs und Menüverfügbarkeitsausnahmen während des Service."], ["Menüverwalter", "Behält Menüpunkte, Anpassung und ausverkauften Zustand für die konfigurierten Bestellkanäle bei."]],
@@ -388,23 +388,23 @@ const solutionDetailExpansions = {
   },
   payments: {
     factsEyebrow: "Gästebestellung und Zahlungsumfang",
-    factsTitle: "Acht Gast- und Checkout-Momente beinhalten drei praktische Möglichkeiten, eine Rechnung zu teilen.",
+    factsTitle: "Acht Gast- und Bezahlvorgang-Momente beinhalten drei praktische Möglichkeiten, eine Rechnung zu teilen.",
     factsIntro: "Die genauen Zahlungsmethoden und Abwicklungsdaten hängen vom Anbieter und der im Einsatz verfügbaren Integration ab.",
-    facts: [['08', "Reisemomente", "Karten- oder digitales Bezahlen, Bezahlen am Tisch, drei Split-Methoden, Tisch QR, mobiles Menü und Gäste-Checkout bilden den aktuellen Umfang."], ['03', "Bill-Split-Methoden", "Gäste können zu gleichen Teilen teilen, bestellte Artikel zuweisen oder die Gesamtsumme durch Anteile teilen."], ['04', "Rollenperspektiven", "Gäste, Servicemitarbeiter, Management und Finanzen benötigen jeweils eine andere Sicht auf den gleichen Checkout."], ['01', "verbundene Fahrt", "Menüzugriff, Bestellung, Servicekontext und Zahlung sollten nicht als separate Erlebnisse neu gestartet werden."]],
+    facts: [['08', "Reisemomente", "Karten- oder digitales Bezahlen, Bezahlen am Tisch, drei Split-Methoden, Tisch QR, mobiles Menü und Gäste-Bezahlvorgang bilden den aktuellen Umfang."], ['03', "Bill-Split-Methoden", "Gäste können zu gleichen Teilen teilen, bestellte Artikel zuweisen oder die Gesamtsumme durch Anteile teilen."], ['04', "Rollenperspektiven", "Gäste, Servicemitarbeiter, Management und Finanzen benötigen jeweils eine andere Sicht auf den gleichen Bezahlvorgang."], ['01', "verbundene Fahrt", "Menüzugriff, Bestellung, Servicekontext und Zahlung sollten nicht als separate Erlebnisse neu gestartet werden."]],
     workflowEyebrow: "Von Tabelle QR zum abgewickelten Status",
     workflowTitle: "Wie eine Gastaktion zu einem abgeschlossenen und sichtbaren Zahlungsereignis wird.",
     workflowIntro: "Der Tisch sollte den nächsten Schritt verstehen, während das Restaurant den Ordnungs- und Abwicklungskontext beibehält.",
-    workflow: [["Öffnen Sie die Table Journey", "Ein Gast scannt die Tabelle QR oder gibt das konfigurierte mobile Menü und das Bestellerlebnis ein."], ["Erstellen oder Überprüfen der Bestellung", "Elemente, Notizen und der Tabellenkontext bleiben verbunden, wenn sich der Gast oder das Team auf den Checkout vorbereitet."], ["Start Checkout", "Der Gast überprüft die Rechnung und wählt den im Restaurant-Setup verfügbaren Zahlungsweg aus."], ["Wählen Sie eine Payer- oder Split-Methode", "Ein Zahler kann die Tabelle abrechnen, oder die Gruppe kann sich zu gleichen Teilen nach bestelltem Artikel oder nach Aktien aufteilen."], ["Status für das Restaurant bestätigen", "Abgeschlossener, teilweiser oder ungelöster Zahlungskontext kehrt an das Team zurück und meldet den Workflow, sofern unterstützt."]],
+    workflow: [["Öffnen Sie die Table Journey", "Ein Gast scannt die Tabelle QR oder gibt das konfigurierte mobile Menü und das Bestellerlebnis ein."], ["Erstellen oder Überprüfen der Bestellung", "Elemente, Notizen und der Tabellenkontext bleiben verbunden, wenn sich der Gast oder das Team auf den Bezahlvorgang vorbereitet."], ["Start Bezahlvorgang", "Der Gast überprüft die Rechnung und wählt den im Restaurant-Setup verfügbaren Zahlungsweg aus."], ["Wählen Sie eine Payer- oder Split-Methode", "Ein Zahler kann die Tabelle abrechnen, oder die Gruppe kann sich zu gleichen Teilen nach bestelltem Artikel oder nach Aktien aufteilen."], ["Status für das Restaurant bestätigen", "Abgeschlossener, teilweiser oder ungelöster Zahlungskontext kehrt an das Team zurück und meldet den Ablauf, sofern unterstützt."]],
     rolesTitle: "Die Gäste brauchen Klarheit; Das Restaurant braucht einen Siedlungskontext und eine saubere Übergabe.",
     rolesIntro: "Eine einfache Gästeoberfläche sollte weiterhin die vom Team benötigten Betriebs- und Berichtsinformationen bereitstellen.",
-    roleViews: [["Gast", "Durchsuchen, bestellen, Service anfordern und bezahlen Sie die konfigurierte Tischreise, ohne die internen Systeme des Restaurants zu erlernen."], ["Servicepersonal", "Sehen Sie den Rechnungsstatus, den Zahlungsfortschritt und ob die Tabelle noch Service- oder Abwicklungsaufmerksamkeit erfordert."], ["Betriebsleiter", "Überwacht unvollständige Zahlungen, Ausnahmen und die Auswirkungen des Checkout-Timings auf die Verfügbarkeit des Tisches."], ["Finanzierung und Berichterstattung", "Überprüfen Sie die Zahlungsaktivität, den Methodenmix und den Abstimmungskontext, die vom Anbieter oder der POS-Verbindung verfügbar sind."]],
-    metricsTitle: "Messen Sie den Abschluss des Checkouts und die Zeit, die erforderlich ist, um den Tisch freizugeben.",
+    roleViews: [["Gast", "Durchsuchen, bestellen, Service anfordern und bezahlen Sie die konfigurierte Tischreise, ohne die internen Systeme des Restaurants zu erlernen."], ["Servicepersonal", "Sehen Sie den Rechnungsstatus, den Zahlungsfortschritt und ob die Tabelle noch Service- oder Abwicklungsaufmerksamkeit erfordert."], ["Betriebsleiter", "Überwacht unvollständige Zahlungen, Ausnahmen und die Auswirkungen des Bezahlvorgang-Timings auf die Verfügbarkeit des Tisches."], ["Finanzierung und Berichterstattung", "Überprüfen Sie die Zahlungsaktivität, den Methodenmix und den Abstimmungskontext, die vom Anbieter oder der POS-Verbindung verfügbar sind."]],
+    metricsTitle: "Messen Sie den Abschluss des Bezahlvorgangs und die Zeit, die erforderlich ist, um den Tisch freizugeben.",
     metricsIntro: "Metriken müssen Anbieter- und Restaurantereignisse verwenden, die tatsächlich im Einsatz erfasst werden.",
-    metrics: [["Bill-Request-to-Payment-Zeit", "Messen Sie das Intervall zwischen dem Gast oder dem Team, der mit dem Checkout beginnt, und dem bestätigten Abschluss."], ["Digitaler Checkout-Abschluss", "Verfolgen Sie abgeschlossene Checkout-Reisen mit begonnenen Reisen, bei denen die erforderlichen Ereignisse verfügbar sind."], ["Mischung nach Split-Methoden", "Verstehen Sie, wie oft Gäste in vergleichbaren Zeiträumen eine gleiche, artikelbasierte oder anteilsbasierte Aufteilung verwenden."], ["Zahlungs- und Ausnahmemix", "Überprüfen Sie Zahlungsmethoden, unvollständige Versuche und ungelöste Siedlungsstaaten, die von angeschlossenen Systemen verfügbar sind."]],
+    metrics: [["Bill-Request-to-Payment-Zeit", "Messen Sie das Intervall zwischen dem Gast oder dem Team, der mit dem Bezahlvorgang beginnt, und dem bestätigten Abschluss."], ["Digitaler Bezahlvorgang-Abschluss", "Verfolgen Sie abgeschlossene Bezahlvorgang-Reisen mit begonnenen Reisen, bei denen die erforderlichen Ereignisse verfügbar sind."], ["Mischung nach Split-Methoden", "Verstehen Sie, wie oft Gäste in vergleichbaren Zeiträumen eine gleiche, artikelbasierte oder anteilsbasierte Aufteilung verwenden."], ["Zahlungs- und Ausnahmemix", "Überprüfen Sie Zahlungsmethoden, unvollständige Versuche und ungelöste Siedlungsstaaten, die von angeschlossenen Systemen verfügbar sind."]],
     implementationTitle: "Die Zahlungskonfiguration erfordert Anbieter-, Tabellen- und Abstimmungsentscheidungen.",
     implementationIntro: "Die Gästereise und der Back-Office-Status benötigen vor dem Start die gleichen Definitionen.",
     implementation: ["Unterstützter Zahlungsanbieter und verfügbare Statusfelder", "Tabelle und QR-Mapping für jede Gästereise", "Equal-, Item- und Share Split-Regeln", "Teilweise, abgeschlossene und fehlgeschlagene Abwicklung des Zahlungsstatus", "POS oder Finanzabgleich Verantwortlichkeiten", "Rollenberechtigungen zum Anzeigen und Lösen von Zahlungsausnahmen"],
-    faqs: [["Welche Split Methoden werden unterstützt?", "Der aktuelle Produktumfang umfasst gleiche Aufteilungen, Zuordnung nach bestellten Artikeln und Division nach Aktien."], ["Muss jedes Restaurant eine Gästebestellung verwenden?", "Nein. Gästebestellung, Pay-at-Table und Zahlungsmodule können entsprechend dem Restaurant-Setup ausgewählt werden."], ["Enthüllt jeder Zahlungsanbieter die gleichen Daten?", "Nein. Zahlungsmethoden, Statusdetails, Abrechnungsfelder und Aktualisierungsverhalten hängen vom Anbieter und der Integration ab."], ["Kann das Team sehen, wann ein Tisch bezahlt hat?", "Ja, wenn der Zahlungsstatus für den konfigurierten Arbeitsablauf verfügbar ist und die Berechtigungen es der Rolle ermöglichen, sie anzuzeigen."]]
+    faqs: [["Welche Split Methoden werden unterstützt?", "Der aktuelle Produktumfang umfasst gleiche Aufteilungen, Zuordnung nach bestellten Artikeln und Division nach Aktien."], ["Muss jedes Restaurant eine Gästebestellung verwenden?", "Nein. Gästebestellung, Bezahlen am Tisch und Zahlungsmodule können entsprechend dem Restaurant-Setup ausgewählt werden."], ["Enthüllt jeder Zahlungsanbieter die gleichen Daten?", "Nein. Zahlungsmethoden, Statusdetails, Abrechnungsfelder und Aktualisierungsverhalten hängen vom Anbieter und der Integration ab."], ["Kann das Team sehen, wann ein Tisch bezahlt hat?", "Ja, wenn der Zahlungsstatus für den konfigurierten Arbeitsablauf verfügbar ist und die Berechtigungen es der Rolle ermöglichen, sie anzuzeigen."]]
   },
   insights: {
     factsEyebrow: "Analyse und Rentabilität",
@@ -434,7 +434,7 @@ const solutionDetailExpansions = {
     workflowEyebrow: "Vom Rollendesign bis zum täglichen Gebrauch",
     workflowTitle: "Wie Berechtigungen und fokussierte Arbeitsbereiche zu einem Betriebsmodell werden.",
     workflowIntro: "Das nützliche Ergebnis ist eine klare Verantwortung, nicht nur mehr Benutzerkonten.",
-    workflow: [["Karte der tatsächlichen Verantwortlichkeiten", "Listen Sie die Entscheidungen und Aktionen jeder Restaurantrolle auf, bevor Sie Bildschirme oder Berechtigungen zuweisen."], ["Zugriff bewusst einstellen", "Geben Sie jeder Rolle die Module, Standorte und Informationen, die für ihre Arbeit benötigt werden, ohne unnötige geschäftliche Sichtbarkeit."], ["Konfigurieren fokussierter Ansichten", "Ordnen Sie den Tabellen-, Auftrags-, Vorbereitungs-, Reservierungs- oder Berichtskontext rund um die nächste Aktion der Rolle an."], ["Verwenden Sie den Workspace während des Service", "Bewahren Sie Aktionen und Statusänderungen bei der Person oder Rolle auf, die für die Übergabe verantwortlich ist."], ["Überprüfung und Anpassung des Zugangs", "Aktualisierungsberechtigungen, Onboarding und Arbeitsbereich, wenn sich die Teamstruktur oder die Verantwortlichkeiten im Restaurant ändern."]],
+    workflow: [["Karte der tatsächlichen Verantwortlichkeiten", "Listen Sie die Entscheidungen und Aktionen jeder Restaurantrolle auf, bevor Sie Bildschirme oder Berechtigungen zuweisen."], ["Zugriff bewusst einstellen", "Geben Sie jeder Rolle die Module, Standorte und Informationen, die für ihre Arbeit benötigt werden, ohne unnötige geschäftliche Sichtbarkeit."], ["Konfigurieren fokussierter Ansichten", "Ordnen Sie den Tabellen-, Auftrags-, Vorbereitungs-, Reservierungs- oder Berichtskontext rund um die nächste Aktion der Rolle an."], ["Verwenden Sie den Workspace während des Service", "Bewahren Sie Aktionen und Statusänderungen bei der Person oder Rolle auf, die für die Übergabe verantwortlich ist."], ["Überprüfung und Anpassung des Zugangs", "Aktualisierungsberechtigungen, Einführung und Arbeitsbereich, wenn sich die Teamstruktur oder die Verantwortlichkeiten im Restaurant ändern."]],
     rolesTitle: "Sechs Arbeitsbereiche beantworten sechs verschiedene Restaurantfragen.",
     rolesIntro: "Die folgenden Beispiele zeigen, warum ein einziges universelles Dashboard sowohl für operative als auch für geschäftliche Rollen Lärm erzeugen würde.",
     roleViews: [["Eigentümer und Finanzen", "Benötigen Sie Einnahmen, Leistung, Zahlung und Berichtskontext, ohne jedes Tisch- oder Küchenticket zu bedienen."], ["Betriebsleiter", "Benötigt die Live-Etage, offene Arbeit, Ausnahmen und Teamaktivitäten, um die Schicht zu koordinieren."], ["Servicepersonal und Reservierungen", "Benötigen Sie Gäste, Tische, Buchungen, Bestellungen und Serviceaktionen ohne unzusammenhängende Finanzverwaltung."], ["Küche", "Benötigt Vorbereitungsdetails, Timing und fertige Übergabe ohne den Rest der Managementoberfläche."]],
@@ -443,7 +443,7 @@ const solutionDetailExpansions = {
     metrics: [["Zugriffsgenauigkeit", "Überprüfen Sie, ob Personen die benötigten Informationen erreichen können, ohne Genehmigungen außerhalb ihrer Verantwortung zu erhalten."], ["Übergabezeit", "Messen Sie die Zeit zwischen einer Rolle, die einen Status abschließt, und der nächsten verantwortlichen Rolle, die die Arbeit anerkennt."], ["Annahme von Arbeitsbereichen", "Verfolgen Sie die aktive Nutzung der konfigurierten Rollenansichten, wenn Nutzungsereignisse verfügbar und angemessen sind."], ["Ausnahmebeschlüsse", "Messen Sie, wie lange zugewiesene betriebliche Ausnahmen während vergleichbarer Dienstzeiten ungelöst bleiben."]],
     implementationTitle: "Behandeln Sie Berechtigungen als Betriebsdesign, nicht als einmalige technische Aufgabe.",
     implementationIntro: "Das Team sollte wissen, wem Zugangsentscheidungen gehören und wie Änderungen nach dem Go-Live überprüft werden.",
-    implementation: ["Rolle und Verantwortungsmatrix", "Modul-, Standort- und Datenberechtigungen", "Workspace-Inhalte für jede Rolle", "Personal-Onboarding und rollenspezifisches Training", "Access-Review und Offboarding-Prozess", "Eigentum an Berechtigungen und Workflow-Änderungen"],
+    implementation: ["Rolle und Verantwortungsmatrix", "Modul-, Standort- und Datenberechtigungen", "Workspace-Inhalte für jede Rolle", "Personal-Einführung und rollenspezifisches Training", "Access-Review und Offboarding-Prozess", "Eigentum an Berechtigungen und Ablauf-Änderungen"],
     faqs: [["Sieht jede Rolle unterschiedliche Daten?", "Rollen können verschiedene ebenen und aktionen sehen, während sie aus dem gleichen zugrunde liegenden restaurantkontext arbeiten."], ["Kann eine Person mehr als eine Rolle spielen?", "Dieser kann entsprechend der Verantwortung konfiguriert werden, sofern das Berechtigungsmodell absichtlich überprüft wird."], ["Entfernen Rollenarbeitsbereiche die Sichtbarkeit des Managements?", "Nein. Fokussierte Teamansichten können mit breiteren Manager-, Eigentümer- und Finanzansichten koexistieren."], ["Können sich Berechtigungen nach dem Start ändern?", "Ja. Der Zugriffs- und Arbeitsbereich sollte überprüft werden, wenn sich Personen, Standorte und Verantwortlichkeiten ändern."]]
   },
   'guest-ordering': {
@@ -453,7 +453,7 @@ const solutionDetailExpansions = {
     facts: [['06', "Wachstumsfähigkeit", "Profile, Loyalität, Angebote, Kampagnen, Feedback und Bindung bilden den aktuellen Gästewachstumsumfang."], ['04', "Rollenperspektiven", "Gäste, servicemitarbeiter, management und marketing oder eigentum nutzen verschiedene teile der beziehung."], ['05', "Lebenszyklusschritte", "Identifizieren, verstehen, segmentieren, engagieren und messen Sie eine praktische Gästewachstumsschleife."], ['01', "Gastbeziehung", "Der besuchs-, bestellungs- und feedback-kontext kann zu einem profil beitragen, bei dem identität und zustimmung dies zulassen."]],
     workflowEyebrow: "Vom Besuchskontext zu einer Wiederholungsbesuchsmaßnahme",
     workflowTitle: "Wie Restaurant-Interaktionen zu nützlichen Gästebeziehungsdaten werden.",
-    workflowIntro: "Der Workflow sollte die Relevanz verbessern, ohne jede Gastinteraktion in einen wahllosen Marketingrekord zu verwandeln.",
+    workflowIntro: "Der Ablauf sollte die Relevanz verbessern, ohne jede Gastinteraktion in einen wahllosen Marketingrekord zu verwandeln.",
     workflow: [["Identifizieren Sie den Gast oder Besuch", "Erfassen Sie den verfügbaren Identitäts-, Besuchs- oder Tabellenkontext unter Verwendung der konfigurierten Guest Journey- und Einwilligungsregeln."], ["Anfügen nützlicher Interaktionsdaten", "Verbinden Sie Bestellungen, Angebote, Loyalitätsaktivitäten oder Feedback mit der Beziehung, in der die Daten verfügbar und angemessen sind."], ["Praktische Segmente erstellen", "Gruppieren Sie Gäste nach relevanten Verhaltens- oder Beziehungskriterien, anstatt allen die gleiche Botschaft zu senden."], ["Führen Sie ein Angebot oder eine Kampagne aus", "Verwenden Sie die konfigurierten Loyalitäts-, Angebots- oder Kampagnentools um eine definierte Zielgruppe und ein definiertes Ziel herum."], ["Messen Sie das Rücksignal", "Überprüfen Sie Rücknahme, Feedback, wiederholte Besuche oder andere vereinbarte Ergebnisse gegen das ursprüngliche Publikum und den ursprünglichen Zeitraum."]],
     rolesTitle: "Das Gästewachstum hängt vom Restauranterlebnis sowie vom Kampagnenbildschirm ab.",
     rolesIntro: "Profile und Angebote sind nützlich, wenn der Kontext der Servicemitarbeiter, die Managemententscheidungen und die Zustimmung der Gäste übereinstimmen.",
@@ -483,7 +483,7 @@ export const resources = [{
   intro: "Ein 6-stufiger Leitfaden von Operating Discovery und Produktumfang über Rollenkonfiguration, Integrationsprüfung, Validierung und gemessenes Go-Live.",
   image: '/site-assets/extra/team-planning.webp',
   articleImage: '/site-assets/extra/kitchen-orders.webp',
-  sections: [["Beginnen Sie mit dem Restaurant, keine Feature-Liste", "Bilden Sie das aktuelle Betriebsmodell, die Teamrollen, die Guest Journey und die Technologieumgebung ab, bevor Sie entscheiden, welche PayMyDine-Module zum ersten Setup gehören."], ["Konfigurieren um Verantwortlichkeiten", "Definieren Sie die Arbeitsbereiche, Berechtigungen, Bodenstruktur und Workflows, die jedes Team benötigt, damit das System die Funktionsweise des Restaurants widerspiegelt."], ["Planen Sie den Start in klaren Phasen", "Überprüfen Sie Integrationen, bereiten Sie das Team vor, validieren Sie den Betriebsablauf und starten Sie mit einer Konfiguration, die bei Bedarf erweitert werden kann."]]
+  sections: [["Beginnen Sie mit dem Restaurant, keine Feature-Liste", "Bilden Sie das aktuelle Betriebsmodell, die Teamrollen, die Guest Journey und die Technologieumgebung ab, bevor Sie entscheiden, welche PayMyDine-Module zum ersten Setup gehören."], ["Konfigurieren um Verantwortlichkeiten", "Definieren Sie die Arbeitsbereiche, Berechtigungen, Bodenstruktur und Ablaufs, die jedes Team benötigt, damit das System die Funktionsweise des Restaurants widerspiegelt."], ["Planen Sie den Start in klaren Phasen", "Überprüfen Sie Integrationen, bereiten Sie das Team vor, validieren Sie den Betriebsablauf und starten Sie mit einer Konfiguration, die bei Bedarf erweitert werden kann."]]
 }, {
   slug: 'role-based-workspaces',
   title: "Gestaltung rollenbasierter Restaurant-Arbeitsbereiche",
@@ -507,7 +507,7 @@ export const resources = [{
   intro: "Wie der 4-Aktions-Gästepfad - Scannen, Durchsuchen, Bestellen und Bezahlen - klare Arbeit für Servicemitarbeiter, Küche und Zahlungsströme schafft.",
   image: '/site-assets/extra/payment-cafe-table.webp',
   articleImage: '/site-assets/extra/payment-dinner.webp',
-  sections: [["Machen Sie die erste Aktion offensichtlich", "Die Tabelle QR sollte zu einem klaren mobilen Erlebnis mit dem Restaurantkontext führen und die nächste Aktion leicht verständlich machen."], ["Halten Sie den Service dicht", "Die digitale Bestellung sollte weiterhin Notizen, Kellneranrufe und das echte Serviceteam unterstützen, anstatt die Mahlzeit in eine Selbstbedienungsschnittstelle zu verwandeln."], ["Führen Sie die Reise durch den Checkout", "Bestellung und Zahlung werden nützlicher, wenn der Gast das Erlebnis am Ende des Essens nicht neu starten muss."]]
+  sections: [["Machen Sie die erste Aktion offensichtlich", "Die Tabelle QR sollte zu einem klaren mobilen Erlebnis mit dem Restaurantkontext führen und die nächste Aktion leicht verständlich machen."], ["Halten Sie den Service dicht", "Die digitale Bestellung sollte weiterhin Notizen, Kellneranrufe und das echte Serviceteam unterstützen, anstatt die Mahlzeit in eine Selbstbedienungsschnittstelle zu verwandeln."], ["Führen Sie die Reise durch den Bezahlvorgang", "Bestellung und Zahlung werden nützlicher, wenn der Gast das Erlebnis am Ende des Essens nicht neu starten muss."]]
 }, {
   slug: 'reservations-and-floor-planning',
   title: "Reservierungen und Bodenplanung zusammenbringen",
@@ -523,7 +523,7 @@ export const resources = [{
   intro: "So definieren Sie die Datenquelle, die Felder, die Richtung, das Update-Timing und die verantwortliche Rolle, bevor Sie eine POS-Integration erstellen.",
   image: '/site-assets/extra/power-up-pos.webp',
   articleImage: '/site-assets/extra/dashboard-menu-mockup.webp',
-  sections: [["Beginnen Sie mit der bestehenden Umgebung", "Verstehen Sie, was das Restaurant bereits verwendet und welche Workflows es verbessern möchte, bevor Sie entscheiden, was verbunden werden soll."], ["Arbeiten aus verfügbaren Fähigkeiten", "Der Integrationsumfang hängt von APIs, Berechtigungen und Datenzugriff ab, die von der aktuellen POS-Umgebung bereitgestellt werden."], ["Nützliche Verbindungen priorisieren", "Das Ziel ist nicht, alles standardmäßig zu ersetzen. Es ist das Hinzufügen der PayMyDine-Fähigkeiten, die die Betriebs- oder Gästereise stärken."]]
+  sections: [["Beginnen Sie mit der bestehenden Umgebung", "Verstehen Sie, was das Restaurant bereits verwendet und welche Ablaufs es verbessern möchte, bevor Sie entscheiden, was verbunden werden soll."], ["Arbeiten aus verfügbaren Fähigkeiten", "Der Integrationsumfang hängt von APIs, Berechtigungen und Datenzugriff ab, die von der aktuellen POS-Umgebung bereitgestellt werden."], ["Nützliche Verbindungen priorisieren", "Das Ziel ist nicht, alles standardmäßig zu ersetzen. Es ist das Hinzufügen der PayMyDine-Fähigkeiten, die die Betriebs- oder Gästereise stärken."]]
 }];
 export const integrations = ["Sumpf", 'ready2order', "Lichtgeschwindigkeit", "Quadrat"];
 export const integrationFeaturePills = ["POS-Daten", "Rechnungslegungskontext", "Lieferkanäle", "Zahlungsdienstleister", "Zentrale Meldung", "Bestandsaufnahme"];

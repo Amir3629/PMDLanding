@@ -13,15 +13,15 @@ const steps = [{
   body: "Servicemitarbeiter sehen Servicearbeit, Küche sieht Vorbereitungsarbeit und Manager sehen Ausnahmen und Live-Status.",
   icon: 'kitchen'
 }, {
-  title: "Service und Checkout komplett",
+  title: "Service und Bezahlvorgang komplett",
   body: "Vorbereitung, Bereitschaftsstatus, Übergabe und Zahlung werden aus dem gleichen Restaurantkontext fortgesetzt, einschließlich dreier auf Rechnung aufgeteilter Methoden.",
   icon: 'card'
 }, {
   title: "Aktivität wird zu Einsicht und KI Unterstützung",
-  body: "Umsatz, Gäste, durchschnittlicher Check, Tabellenumsatz, Verkaufszeitpunkt, Zahlungsmix, Prognosen und Rentabilität stehen für Berichte, Vergleiche, Anomalieprüfungen und KI-assistierte Fragen zur Verfügung.",
+  body: "Umsatz, Gäste, durchschnittlicher Check, Tabellenumsatz, Verkaufszeitpunkt, Zahlungsmix, Prognosen und Rentabilität stehen für Berichte, Vergleiche, Anomalieprüfungen und KI-gestützte Fragen zur Verfügung.",
   icon: 'chart'
 }];
-export default function Workflow({
+export default function Ablauf({
   variant = 'home'
 }) {
   const workflowImage = variant === 'platform' ? imageGroups.comments[11] : '/site-assets/home-workflow-20261005/cozy-cafe-pos-ordering-scene.webp';
@@ -53,7 +53,7 @@ Das Management sollte als nächstes prüfen.
 
         <div className="workflowShowcaseVisual">
 
-          <img src={workflowImage} alt={"PayMyDine Restaurant-Workflow"} loading="lazy" />
+          <img src={workflowImage} alt={"PayMyDine Restaurant-Ablauf"} loading="lazy" />
 
         </div>
 

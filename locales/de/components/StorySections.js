@@ -74,7 +74,7 @@ Die Quellenansicht hinter der Antwort.
             <div className="darkCardCopy">
 
               <span>
-                FOR TEAMS
+                FÜR TEAMS
               </span>
 
               <h3>
@@ -107,7 +107,7 @@ Wo die Arbeit wartet.
             <div className="darkCardCopy">
 
               <span>
-                GUEST GROWTH
+                GÄSTEWACHSTUM
               </span>
 
               <h3>
@@ -121,7 +121,7 @@ Sie geben dem Management einen besseren Kontext für zukünftige Entscheidungen.
               </p>
 
               <a href="/de/solutions/guest-ordering">
-                Sehen Sie sich den Gastwachstums-Workflow an
+                Sehen Sie sich den Gastwachstums-Ablauf an
                 {' '}
                 <Icon name="arrow" size={15} />
               </a>
@@ -209,7 +209,7 @@ für jede mögliche Erklärung.
               <div>
 
                 <span className="eyebrow">
-                  Briefings, Alerts & Forecast Support
+                  Tagesübersichten, Warnmeldungen & Prognoseunterstützung
                 </span>
 
                 <h2>
@@ -218,7 +218,7 @@ Vom Signal zur Managemententscheidung.
                 </h2>
 
                 <p>
-                  Verwenden Sie KI-assisted tägliche Briefings, Anomalie Flags,
+                  Verwenden Sie KI-gestützte tägliche Briefings, Anomalie Flags,
 Periodenvergleiche und prognostizierte Unterstützung bei Beibehaltung
 die Quellmetrik, das Vergleichsfenster und die menschliche Entscheidung
 sichtbar.
@@ -261,7 +261,7 @@ export function FlexibilityAndIntegrationSections() {
             <h2>
               Kartenrollen, Module, Bodenkarten und Gästereisen einmalig,
 Verwenden Sie dann die gemeinsamen Daten für beide tägliche Arbeit
-und KI-assisted Review.
+und KI-gestützte Review.
             </h2>
 
             <p>
@@ -269,7 +269,7 @@ und KI-assisted Review.
 Wählen Sie, welche Produktbereiche doppelte Arbeit entfernen,
 definieren, wer jede Kontrolle sehen und den Kontext bewahren kann
 dass das Management Berichtspflichten, Vergleiche und
-KI-assistierte Fragen.
+KI-gestützte Fragen.
             </p>
 
             <div className="featureList">
@@ -281,7 +281,7 @@ KI-assistierte Fragen.
 
               <span>
                 <Icon name="chart" size={20} />
-                <b>KI-assistierte Fragen und Briefings</b>
+                <b>KI-gestützte Fragen und Briefings</b>
               </span>
 
               <span>
@@ -342,15 +342,15 @@ KI-assistierte Fragen.
 
             <h2>
               Verbinden Sie Systeme, die bereits Restaurantdaten enthalten
-Operationen, Reporting und KI können also aus einem größeren Bild heraus funktionieren.
+Operationen, Berichterstattung und KI können also aus einem größeren Bild heraus funktionieren.
             </h2>
 
             <p>
               Unterstützt POS, Buchhaltung, Lieferung und Zahlungsverbindungen
 nützliche Quelldaten zur zentralen Berichterstattung beitragen können,
-Standortvergleich, Inventar und Rentabilität Workflows.
+Standortvergleich, Inventar und Rentabilität Ablaufs.
 Je vollständiger das erlaubte Quellbild ist,
-die nützlicheren KI-assistierten Vergleiche und Untersuchungen können sein.
+die nützlicheren KI-gestützten Vergleiche und Untersuchungen können sein.
             </p>
 
             <div className="integrationNote">

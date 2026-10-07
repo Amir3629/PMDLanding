@@ -2,10 +2,7 @@ import { Icon } from './Icons';
 
 export default function Hero() {
   return (
-    <section className="hero section pmdHeroFullBleedFix">
-      <div className="heroAura heroAuraOne" />
-      <div className="heroAura heroAuraTwo" />
-
+    <section className="hero section pmdHeroFullBleedFix pmdHomeHeroSingleBackground">
       <div className="container heroGrid">
         <div className="heroCopy">
           <span className="eyebrow">
@@ -61,23 +58,14 @@ export default function Hero() {
             ))}
           </div>
         </div>
-
-        <div className="heroVisual">
-          <div className="heroImageFrame heroImageFrameClean heroRightPanel pmdHeroArtworkWrapFix">
-            <img
-              src="/site-assets/hero-platform.webp"
-              alt="PayMyDine platformu ve müşteri deneyimi"
-              className="heroImage pmdHeroArtworkFix"
-            />
-          </div>
-        </div>
       </div>
 
-      <div className="pmdHeroSecondaryLayerV2" aria-hidden="true">
+      <div className="pmdMobileHeroMedia">
         <img
-          src="/site-assets/custom/home-hero-secondary-18.webp"
-          alt=""
-          className="pmdHeroSecondaryImageV2"
+          src="/site-assets/home-hero-untitled-design-17.webp"
+          alt="PayMyDine restoran POS cihazları"
+          loading="eager"
+          decoding="async"
         />
       </div>
     </section>

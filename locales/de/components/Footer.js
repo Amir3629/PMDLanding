@@ -19,7 +19,7 @@ export default function Footer() {
           <a href="/de/restaurant-types">Restaurantkonfigurationen</a>
           <a href="/de/how-it-works">So funktioniert es</a>
           <a href="/de/implementation">Einführung</a>
-          <a href="/de/support">Support</a>
+          <a href="/de/support">Hilfe</a>
           <a href="/de/security">Sicherheit & Daten</a>
           <a href="/de/resources">Leitfäden & Hilfe</a>
           <a href="/de/pricing">Preise</a>

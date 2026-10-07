@@ -20,10 +20,10 @@ Verwenden Sie dann KI, um die Ausnahmen dahinter zu erklären.
           </div>
 
           <p>
-            Gäste, Servicemitarbeiter, Küche und Zahlungs-Workflows verwenden unterschiedliche
+            Gäste, Servicemitarbeiter, Küche und Zahlungs-Abläufe verwenden unterschiedliche
 Bildschirme, aber ihre Aktivität trägt zum gleichen Betrieb bei
 Bild. Das gibt dem Management klarere Quellendaten für die Berichterstattung,
-Vergleiche und KI-assistierte Untersuchung.
+Vergleiche und KI-gestützte Untersuchung.
           </p>
 
         </div>

@@ -27,7 +27,7 @@ KI hilft, die Signale zwischen ihnen zu verbinden.
           <p>
             PayMyDine hält tägliche Schnittstellen für die Menschen praktisch
 die Arbeit beim Sammeln des gemeinsamen Restaurant-Kontexts erforderlich
-für Reporting und KI-assisted Review. Das Ergebnis ist kein anderes
+für Berichterstattung und KI-gestützte Review. Das Ergebnis ist kein anderes
 isolierter Chatbot - es ist eine Hilfe, die um die Operation herum aufgebaut ist
 Es passiert bereits im Restaurant.
           </p>
@@ -41,7 +41,7 @@ Es passiert bereits im Restaurant.
 
             <div className="demoShowcaseMedia demoShowcaseMediaProduct">
 
-              <img src={ownerImage} alt={"PayMyDine Besitzer und Restaurant-Betrieb Workflow"} loading="lazy" />
+              <img src={ownerImage} alt={"PayMyDine Besitzer und Restaurant-Betrieb Ablauf"} loading="lazy" />
 
             </div>
 
@@ -88,9 +88,9 @@ Scannen, durchsuchen, bestellen und bezahlen.
 
               <p>
                 Die Tabelle QR Reise hält Gast, Tisch, Bestellung und Zahlung
-Kontext verbunden durch Checkout. Diese Interaktionen auch
+Kontext verbunden durch Bezahlvorgang. Diese Interaktionen auch
 zu strukturierten Betriebsdaten für die Berichterstattung werden und
-KI-assistierte Überprüfung.
+KI-gestützte Überprüfung.
               </p>
 
             </div>

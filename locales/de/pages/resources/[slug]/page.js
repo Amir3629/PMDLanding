@@ -18,7 +18,7 @@ export async function generateMetadata({
   if (!item) {
     return {};
   }
-  return metadataForRoute('en', `/de/resources/${slug}`, {
+  return metadataForRoute('de', `/resources/${slug}`, {
     title: item.title,
     description: item.intro
   });
