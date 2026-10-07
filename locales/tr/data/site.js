@@ -142,7 +142,7 @@ export const homeStatusCards = [
     body: 'Servis personeli servis durumunu, mutfak hazırlık durumunu, yönetim ise aynı sipariş içeriğindeki istisnaları görür.'
   },
   {
-    image: '/site-assets/comments/10.webp',
+    image: '/site-assets/home-status-20261005/tap-to-pay-table-1.webp',
     eyebrow: 'Masa QR siparişi ve ödeme',
     title: 'Masa QR kodunu tarayın; masa içeriğini kaybetmeden inceleyin, sipariş verin ve ödeyin.',
     body: 'Müşteri masa QR kodunu tarayarak mobil menüyü açar, siparişini verir ve ödemeyi tamamlar. PayMyDine ise masa, sipariş, hesap ve ödeme durumunu ekip için bağlantılı tutar.'

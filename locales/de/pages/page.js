@@ -9,7 +9,7 @@ import CTA from "@/locales/de/components/CTA";
 import SiteStructuredData from "@/components/SiteStructuredData";
 import { metadataForRoute } from '@/lib/seo';
 import HomepageMainExperience from "@/components/homepage-main/HomepageMainExperience";
-import './homepage-main-modern.css';
+import '../../../app/(en)/homepage-main-modern.css';
 export const metadata = metadataForRoute('de', '/');
 export function HomePageContent() {
   return <>

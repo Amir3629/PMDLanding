@@ -62,6 +62,36 @@ export function RoleAndAISections() {
           <article className="darkStoryCard">
             <div className="darkCardCopy">
               <span>
+                TAKIMLAR İÇİN
+              </span>
+
+              <h3>
+                Bir sonraki işi, ondan sorumlu role yönlendirin.
+              </h3>
+
+              <p>
+                Servis ekibi masaları ve müşteri taleplerini, mutfak siparişleri
+                ve zamanlamayı, rezervasyon ekibi gelişleri ve müsaitliği görür.
+                Ortak durum yönetim ve Yapay Zekaya işin nerede beklediğini
+                daha net gösterir.
+              </p>
+
+              <a href="/tr/solutions/team">
+                6 çalışma alanını karşılaştırın{' '}
+                <Icon name="arrow" size={15}/>
+              </a>
+            </div>
+
+            <img
+              src={imageGroups.staff[4]}
+              alt="PayMyDine kullanan restoran ekibi"
+              loading="lazy"
+            />
+          </article>
+
+          <article className="darkStoryCard">
+            <div className="darkCardCopy">
+              <span>
                 MÜŞTERİ ARTIŞI
               </span>
 
@@ -145,7 +175,7 @@ export function RoleAndAISections() {
             </article>
 
             <article>
-              <img src="/site-assets/extra/tablet-dashboard.webp" alt="" loading="lazy" />
+              <img src="/site-assets/home-ai-story-20261005/untitled-design-19.webp" alt="" loading="lazy" />
               <div>
                 <span className="eyebrow">
                   Günlük özetler, uyarılar ve tahmin desteği
@@ -272,7 +302,7 @@ export function FlexibilityAndIntegrationSections() {
 
             <img
               className="integrationPhoto"
-              src={imageGroups.comments[16]}
+              src='/site-assets/hardware-device-20261004/kiosk.webp'
               alt="POS entegrasyon kavramı"
               loading="lazy"
             />

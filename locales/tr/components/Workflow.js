@@ -30,7 +30,10 @@ const steps = [
 ];
 
 export default function Workflow({ variant = 'home' }) {
-  const workflowImage = variant === 'platform' ? imageGroups.comments[11] : imageGroups.pos[1];
+  const workflowImage =
+    variant === 'platform'
+      ? imageGroups.comments[11]
+      : '/site-assets/home-workflow-20261005/cozy-cafe-pos-ordering-scene.webp';
 
   return (
     <section className="section workflowSection">

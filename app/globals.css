@@ -10146,18 +10146,3 @@ body:not(:has(section.hero.pmdHeroFullBleedFix)) .siteHeader {
   }
 }
 /* === PMD MOBILE SAME HEADER FRAME V1.2 END === */
-
-/* === PMD DE/TR HERO VISUAL PARITY V1 START ===
-   EN already has the approved Hero 17 crop. German and Turkish copy is taller,
-   so the same percentage anchor can make the identical artwork appear lower.
-   Keep the exact 120% scale and move only the localized crop 20px upward.
-   Mobile remains the standalone right-focused image and is untouched. */
-@media (min-width: 741px) {
-  html[lang="de-DE"] body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground,
-  html[lang="tr"] body section.hero.section.pmdHeroFullBleedFix.pmdHomeHeroSingleBackground {
-    background-size: 120% auto !important;
-    background-position: center calc(72% - 20px) !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === PMD DE/TR HERO VISUAL PARITY V1 END === */

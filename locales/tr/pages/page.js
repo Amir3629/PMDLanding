@@ -7,18 +7,19 @@ import { StatusGallery, LifestyleMarquee } from '@/locales/tr/components/StatusG
 import { RoleAndAISections, FlexibilityAndIntegrationSections } from '@/locales/tr/components/StorySections';
 import CTA from '@/locales/tr/components/CTA';
 import SiteStructuredData from '@/components/SiteStructuredData';
+import HomepageMainExperience from '@/components/homepage-main/HomepageMainExperience';
+import '../../../app/(en)/homepage-main-modern.css';
 
 export const metadata = {
   title: 'Yapay Zeka Destekli Restoran Yönetim Yazılımı',
   description: 'PayMyDine rezervasyonları, siparişleri, mutfağı, ödemeleri, Müşteri İlişkileri Yönetimini, analizleri ve YZ destekli kararları tek bir restoran yönetim platformunda birleştirir.'
 };
 
-export default function HomePage() {
+export function HomePageContent() {
   return (
     <>
       <SiteStructuredData locale="tr" />
       <Hero />
-
       <HomeHardwareRunway locale="tr" />
       <OfferGrid />
       <RoleAndAISections />
@@ -34,5 +35,13 @@ export default function HomePage() {
         secondaryHref="/tr/ai"
       />
     </>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <HomepageMainExperience>
+      <HomePageContent />
+    </HomepageMainExperience>
   );
 }

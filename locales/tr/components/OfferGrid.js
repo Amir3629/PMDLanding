@@ -1,6 +1,13 @@
 import { offerCards } from '@/locales/tr/data/site';
 import { Icon } from './Icons';
 
+const HOME_OFFER_IMAGES = {
+  'PayMyDine Yapay Zeka': '/site-assets/home-product-areas-20261005/ai.webp',
+  'Analiz, Tahmin ve Kârlılık': '/site-assets/home-product-areas-20261005/analytics-sunlit-cafe.webp',
+  'Müşteri İlişkileri Yönetimi (MİY), Pazarlama ve Büyüme': '/site-assets/home-product-areas-20261005/guest-crm-marketing-growth.webp',
+  'Entegrasyonlar, Çoklu Şube ve Stok': '/site-assets/home-product-areas-20261005/integrations-multilocation-inventory.webp'
+};
+
 export default function OfferGrid({ compact = false }) {
   return (
     <section
@@ -39,7 +46,7 @@ export default function OfferGrid({ compact = false }) {
             >
               <div className="offerCardMedia">
                 <img
-                  src={compact ? card.compactImage : card.image}
+                  src={compact ? card.compactImage : (HOME_OFFER_IMAGES[card.title] || card.image)}
                   alt=""
                   loading="lazy"
                 />
