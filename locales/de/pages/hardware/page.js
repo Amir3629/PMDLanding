@@ -41,9 +41,9 @@ const copy = {
       type: 'cashier',
       shortLabel: 'KASSE',
       category: 'Hauptkasse',
-      name: 'Kassenarbeitsplatz',
-      body: 'Ein zentraler Kassenarbeitsplatz mit Mitarbeiterdisplay und zweitem Kundendisplay für einen klaren Bestell- und Bezahlvorgang.',
-      bullets: ['Arbeitsplatz mit zwei Displays', 'Bestellung und Zahlung an einer Station', 'Für den täglichen Restaurantbetrieb ausgelegt']
+      name: 'Stationäres Kassenterminal',
+      body: 'Ein stationäres Kassenterminal mit Mitarbeiterdisplay und zweitem Kundendisplay für Bestellungen und Zahlungen an der Kasse.',
+      bullets: ['Kassenterminal mit zwei Displays', 'Bestellung und Zahlung an einer Station', 'Für den täglichen Restaurantbetrieb ausgelegt']
     },
     {
       type: 'mobile',
