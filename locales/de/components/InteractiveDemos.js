@@ -19,11 +19,11 @@ export default function InteractiveDemos({
           </span>
 
           <h2>
-            Teams sehen die Aufgaben, die für sie wichtig sind. Das Management behält den Überblick. KI hilft, Zusammenhänge in den Daten zu erkennen.
+            Jedes Team sieht seine Aufgaben. Das Management den Überblick.
           </h2>
 
           <p>
-            PayMyDine bietet jedem Team eine passende Arbeitsansicht und führt die Informationen im Hintergrund zusammen. So kann KI Fragen zum tatsächlichen Restaurantbetrieb beantworten, statt nur einen losgelösten Chat bereitzustellen.
+            Teams erledigen ihre Aufgaben. Das Management sieht das Gesamtbild und kann Veränderungen mit KI prüfen.
           </p>
 
         </div>
@@ -46,11 +46,11 @@ export default function InteractiveDemos({
               </span>
 
               <h3>
-                Geschäftszahlen im Blick behalten und mit KI untersuchen, was sich bei Umsatz, Gästen, Tischen, Bestellungen und Rentabilität verändert hat.
+                KI fragen. Zahlen prüfen.
               </h3>
 
               <p>
-                Öffnen Sie zu einer Kennzahl die zugrunde liegenden Daten, vergleichen Sie Zeiträume und erkennen Sie, welcher Standort, Kanal, Artikel oder Bereich genauer untersucht werden sollte.
+                Zeiträume vergleichen und Änderungen nach Standort, Kanal oder Artikel prüfen.
               </p>
 
             </div>
@@ -73,11 +73,11 @@ export default function InteractiveDemos({
               </span>
 
               <h3>
-                Vier einfache Schritte: Scannen, auswählen, bestellen und bezahlen.
+                Scannen. Auswählen. Bestellen. Bezahlen.
               </h3>
 
               <p>
-                Der QR-Code am Tisch verbindet Gäste, Bestellung und Zahlung bis zum Abschluss. Diese Vorgänge liefern zugleich strukturierte Daten für Berichte und KI-gestützte Auswertungen.
+                Ein QR-Ablauf verbindet Tisch, Bestellung und Zahlung für Gäste und Team.
               </p>
 
             </div>

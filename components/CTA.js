@@ -1,8 +1,8 @@
 import { Icon } from './Icons';
 
 export default function CTA({
-  title = 'Ready to map PayMyDine to your restaurant?',
-  body = 'Bring your current tools, roles, handoffs and operating metrics. We will show which product areas replace duplicate work and which systems should remain connected.',
+  title = 'See PayMyDine in your restaurant.',
+  body = 'Show us your current setup. We will suggest the modules and connections you need.',
   primaryLabel = 'Book a Demo',
   primaryHref = '/contact',
   secondaryLabel = 'How It Works',
@@ -13,7 +13,7 @@ export default function CTA({
       <div className="container">
         <div className="ctaCard">
           <div>
-            <span className="eyebrow lightEyebrow">Map the real operation</span>
+            <span className="eyebrow lightEyebrow">Built around your restaurant</span>
             <h2>{title}</h2>
             <p>{body}</p>
           </div>

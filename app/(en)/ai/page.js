@@ -15,7 +15,7 @@ const questions = [
 
 const aiDetails = {
   factsEyebrow: 'AI scope and safeguards',
-  factsTitle: 'Six assistance modes can work across nine management metrics, with human review kept in the workflow.',
+  factsTitle: 'Six AI tools. Nine key metrics.',
   factsIntro: 'These counts describe product scope. Accuracy and usefulness depend on source data, definitions, permissions and the question being asked.',
   facts: [
     ['06', 'AI-assisted actions', 'Questions, briefings, alerts, comparisons, forecasting and next-step investigation form the current AI scope.'],
@@ -24,7 +24,7 @@ const aiDetails = {
     ['01', 'human decision owner', 'AI can organise evidence and suggest what to inspect; the restaurant team verifies and decides.']
   ],
   workflowEyebrow: 'A responsible AI investigation',
-  workflowTitle: 'How a restaurant question moves from source data to a reviewed next action.',
+  workflowTitle: 'From question to evidence.',
   workflowIntro: 'The source, period and metric definition should remain visible throughout the investigation.',
   workflow: [
     ['Choose a specific question', 'Start with a question such as what changed, which location moved or why an item margin requires attention.'],
@@ -33,7 +33,7 @@ const aiDetails = {
     ['Inspect the evidence', 'Open the source metric, period, location, category or item behind the AI output.'],
     ['Decide and review the result', 'A person chooses the action, records the question to revisit and compares the same metric after the operating change.']
   ],
-  rolesTitle: 'AI should shorten investigation for each decision role without giving every role the same answer.',
+  rolesTitle: 'Useful answers for each role.',
   rolesIntro: 'Permissions and business context determine which questions and source views should be available to each person.',
   roleViews: [
     ['Owner', 'Compares periods or locations, reviews profitability movement and asks which business signal deserves attention.'],
@@ -42,7 +42,7 @@ const aiDetails = {
     ['Multi-location leadership', 'Compares sites using consistent definitions while retaining the ability to inspect the local source context.']
   ],
   metricsEyebrow: 'Evaluate the AI layer',
-  metricsTitle: 'Measure traceability and decision usefulness, not only how fluent the answer sounds.',
+  metricsTitle: 'Check the source, not just the answer.',
   metricsIntro: 'An AI feature should be reviewed against documented questions, source coverage and actual outcomes in the restaurant workflow.',
   metrics: [
     ['Source coverage', 'Track whether the data required by a question is present, current and mapped to the correct location or period.'],
@@ -50,7 +50,7 @@ const aiDetails = {
     ['Forecast error', 'Compare forecasted and actual results using the same period and definition instead of presenting forecasts as guarantees.'],
     ['Investigation time', 'Baseline how long a defined management question takes to investigate before and after the AI-assisted workflow.']
   ],
-  implementationTitle: 'Define the data contract and human-review boundary before enabling AI outputs.',
+  implementationTitle: 'Agree on data access and human review.',
   implementationIntro: 'The safest AI implementation is explicit about what the system knows, what it cannot see and who owns the final decision.',
   implementation: [
     'Approved data sources, locations and historical periods',
@@ -73,8 +73,8 @@ export default function AIPage() {
     <>
       <PageHero
         eyebrow="6 AI-assisted actions"
-        title="Ask about revenue, guests, tables or profitability and trace the answer back to the source data."
-        intro="PayMyDine AI can support questions, daily briefings, alerts, comparisons, forecasting and next-step investigation across the restaurant data available in your setup. It supports decisions; it does not replace them."
+        title="Ask AI. See the source."
+        intro="Ask about revenue, guests, tables or costs. Check the data behind every answer."
         image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp"
         accent="green"
       />
@@ -95,8 +95,8 @@ export default function AIPage() {
             <div className="storyFeatureImage"><img src="/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">9 metrics in context</span>
-              <h2>Start with a number, then keep the comparison period and operating cause visible.</h2>
-              <p>Revenue, guests, average check, table turnover, sales timing, best sellers, payment mix, forecasts and profitability are more useful when the owner can move from the summary to the source view behind it.</p>
+              <h2>See what changed in your numbers.</h2>
+              <p>Review sales, demand and profitability with the original figures.</p>
               <a className="textArrow" href="/solutions/insights">See the 9 management metrics <Icon name="arrow" size={15}/></a>
             </div>
           </article>
@@ -104,7 +104,7 @@ export default function AIPage() {
             <div className="storyFeatureImage"><img src="/site-assets/custom/solution-story/ai-investigation-time-20260809.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">Decision support, not autopilot</span>
-              <h2>Use AI to shorten investigation time while the team verifies and decides.</h2>
+              <h2>AI suggests. Your team decides.</h2>
               <p>Every summary depends on the modules, data quality, comparison period and integrations available. The restaurant team keeps control of the operational or commercial action.</p>
             </div>
           </article>
@@ -117,7 +117,7 @@ export default function AIPage() {
         <div className="container capabilityPanel">
           <div>
             <span className="eyebrow">Available AI actions</span>
-            <h2>Ask, summarise, compare, alert, forecast and investigate.</h2>
+            <h2>Six AI tools for your restaurant.</h2>
             <p>Exact outputs depend on the data, modules, locations and connected systems available in the PayMyDine environment.</p>
           </div>
           <div className="capabilityList">

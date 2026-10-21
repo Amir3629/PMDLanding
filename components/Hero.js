@@ -23,14 +23,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="heroText">
-            PayMyDine helps restaurants automate reservations, ordering,
-            kitchen, payments and team workflows, optimize every table and
-            guest journey, and connect CRM and analytics in one live operating
-            picture. AI-powered insights surface what needs attention, helping
-            reduce manual work and wait times, speed service, improve table
-            turnover and guest experience, and support revenue growth.
-          </p>
+          <ul className="heroText pmdHeroBenefits">
+            <li>Connect reservations, tables, orders and payments.</li>
+            <li>Give every team a clear view of its tasks.</li>
+            <li>Use AI to spot changes and review the source data.</li>
+          </ul>
 
           <div className="heroButtons">
             <a className="button" href="/contact">

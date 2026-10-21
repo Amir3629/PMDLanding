@@ -15,7 +15,7 @@ const capabilities = [
 
 const integrationDetails = {
   factsEyebrow: 'Integration and scale scope',
-  factsTitle: 'Four integration types, six central controls and four currently named provider conversations.',
+  factsTitle: 'Four connection types. Six central controls.',
   factsIntro: 'A named provider does not guarantee every field or workflow. Scope depends on available interfaces, permissions and the agreed data path.',
   facts: [
     ['04', 'integration types', 'POS, accounting, delivery and payment connections form the current integration categories.'],
@@ -24,7 +24,7 @@ const integrationDetails = {
     ['05', 'delivery stages', 'Discovery, field mapping, access, testing and monitoring create a practical integration path.']
   ],
   workflowEyebrow: 'From system inventory to monitored connection',
-  workflowTitle: 'How to define an integration around a real restaurant workflow.',
+  workflowTitle: 'Connect data that serves a purpose.',
   workflowIntro: 'Start with the business action or reporting need, then decide whether and how data should move.',
   workflow: [
     ['Identify the source of truth', 'Document which system owns orders, menus, payments, accounting, stock or location data today.'],
@@ -33,7 +33,7 @@ const integrationDetails = {
     ['Test with reconciliation cases', 'Validate normal records, updates, failures and duplicates against agreed examples before go-live.'],
     ['Monitor and extend', 'Track freshness, failed transfers and reconciliation exceptions before expanding the connector scope.']
   ],
-  rolesTitle: 'Integration value is different for implementation, operations, finance and ownership.',
+  rolesTitle: 'Useful data for each team.',
   rolesIntro: 'A connector should remove a real manual step or close a data gap for a named role.',
   roleViews: [
     ['Implementation or IT', 'Owns authentication, field mapping, test cases, error handling and technical provider communication.'],
@@ -42,7 +42,7 @@ const integrationDetails = {
     ['Owner and multi-location leadership', 'Compares locations, shared standards, inventory and reporting while retaining local context.']
   ],
   metricsEyebrow: 'Integration health',
-  metricsTitle: 'Measure whether the connection is complete, fresh and reducing manual reconciliation.',
+  metricsTitle: 'Check sync quality and data freshness.',
   metricsIntro: 'Targets should be agreed per provider and workflow because not every interface supports the same refresh or error detail.',
   metrics: [
     ['Sync success rate', 'Track successful records against attempted transfers for the agreed data objects and period.'],
@@ -50,7 +50,7 @@ const integrationDetails = {
     ['Reconciliation exceptions', 'Count missing, duplicate or mismatched records that require investigation by operations or finance.'],
     ['Manual re-entry time', 'Baseline the staff time spent copying or reconciling data before and after the integration is introduced.']
   ],
-  implementationTitle: 'Write the data contract before building or enabling the connector.',
+  implementationTitle: 'Define the data exchange first.',
   implementationIntro: 'The contract should explain the source, destination, ownership, refresh expectation and failure process for each field group.',
   implementation: [
     'Provider documentation, credentials and approved permissions',
@@ -73,8 +73,8 @@ export default function IntegrationsPage() {
     <>
       <PageHero
         eyebrow="4 integration types - 6 central controls"
-        title="Connect the systems that already hold restaurant data, then make that data useful to the next role."
-        intro="PayMyDine can work with supported POS, accounting, delivery and payment environments, then add central owner views, shared menus, reporting, inventory, food-cost and purchasing context where the source systems allow it."
+        title="Connect your restaurant systems."
+        intro="Link supported POS, accounting, delivery and payment data with your reports."
         image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp"
         accent="green"
       />
@@ -83,7 +83,7 @@ export default function IntegrationsPage() {
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Define the data path before the connector</span>
-            <h2>For each integration, decide which data moves, which system remains authoritative and who uses the result.</h2>
+            <h2>Connect only what you need.</h2>
             <p>A useful integration removes re-entry or missing context. It should not move data simply because a connection is technically possible.</p>
           </div>
           <div className="highlightGrid">
@@ -100,7 +100,7 @@ export default function IntegrationsPage() {
         <div className="container darkIntegrationGrid">
           <div>
             <span className="eyebrow darkEyebrow">6 multi-location controls</span>
-            <h2>Compare locations centrally while each restaurant keeps its local operating context.</h2>
+            <h2>Compare locations in one place.</h2>
             <p>Ownership can review location performance and shared standards without turning every site into the same floor plan, service model or team structure.</p>
           </div>
           <div className="integrationNameGrid">
@@ -117,7 +117,7 @@ export default function IntegrationsPage() {
             <img src="/site-assets/custom/integrations-capabilities-fit.webp" alt=""/>
             <div>
               <span className="eyebrow">Integration scope</span>
-              <h2>Connect only the fields that support a real workflow or reporting need.</h2>
+              <h2>Only the data your team needs.</h2>
               <p>Document the source, direction, refresh timing, permission and responsible role for each data field before implementation.</p>
             </div>
           </article>
@@ -125,7 +125,7 @@ export default function IntegrationsPage() {
             <img src="/site-assets/custom/integrations-operating-picture.webp" alt=""/>
             <div>
               <span className="eyebrow">One business picture</span>
-              <h2>Read sales, stock, purchasing and location performance together.</h2>
+              <h2>Sales, stock and purchasing together.</h2>
               <p>Where the connected systems provide the data, owners can compare location results, understand food-cost movement and trace a business number back to its operating source.</p>
             </div>
           </article>
@@ -134,7 +134,7 @@ export default function IntegrationsPage() {
 
       <ProductDetailSections details={integrationDetails} productName="Integrations, Multi-location & Inventory" />
 
-      <CTA title="Review one real integration before discussing every possible connector." body="Tell us the system, data fields, direction, refresh requirement and role that needs the result. We will define the practical integration scope around that workflow." />
+      <CTA title="Discuss your first integration." body="Tell us the system, data fields, direction, refresh requirement and role that needs the result. We will define the practical integration scope around that workflow." />
     </>
   );
 }

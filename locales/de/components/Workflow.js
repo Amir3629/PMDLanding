@@ -36,11 +36,11 @@ export default function Ablauf({
           </span>
 
           <h2>
-            Jeder Schritt im Restaurant erzeugt wertvolle Daten. PayMyDine hält sie über alle Zuständigkeiten hinweg verbunden – damit Teams handeln und KI Veränderungen einordnen kann.
+            Von der Bestellung bis zur Zahlung.
           </h2>
 
           <p>
-            Vom ersten Gästekontakt über Küche und Service bis zur Zahlung bleiben die Informationen verknüpft. PayMyDine KI kann daraus Zeiträume zusammenfassen, Ergebnisse vergleichen und auf Kennzahlen oder Datenquellen hinweisen, die das Management genauer prüfen sollte.
+            Bestellung, Küche und Zahlung bleiben verbunden. Jedes Team sieht den nächsten Schritt; KI unterstützt die Auswertung.
           </p>
 
         </div>

@@ -51,8 +51,8 @@ export default function HowItWorksPage() {
     <>
       <PageHero
         eyebrow="5-step operating flow"
-        title="Carry context from the first table action to the final management question."
-        intro="PayMyDine connects guest-facing actions, role-based workspaces, kitchen status, payment, reporting and AI without asking every person to use the same interface or re-enter the same context."
+        title="From first scan to final payment."
+        intro="Guests order and pay. Teams receive the next task. Everything stays connected."
         image="/site-assets/extra/izakaya-phone.webp"
         accent="orange"
       />
@@ -61,8 +61,8 @@ export default function HowItWorksPage() {
         <div className="container">
           <div className="sectionHeading centerHeading howJourneyHeading">
             <span className="eyebrow">Guest actions remain restaurant work</span>
-            <h2>A mobile action should create the right table, service or payment task for the team.</h2>
-            <p>The guest sees a short flow. The restaurant receives the structured context needed to prepare, serve and settle the table.</p>
+            <h2>Four simple steps for guests.</h2>
+            <p>Scan, browse, order and pay. Your team sees the updates.</p>
           </div>
 
           <div className="demoShowcaseGrid howJourneyGrid">
@@ -87,9 +87,9 @@ export default function HowItWorksPage() {
           <div className="splitHeading howFlowHeading">
             <div>
               <span className="eyebrow">Five explicit handoffs</span>
-              <h2>At every step, define the action, context, responsible role and visible status.</h2>
+              <h2>Five clear steps behind every order.</h2>
             </div>
-            <p>This makes the workflow testable: teams can see where information is lost, where status is repeated and where an integration or workspace should take over.</p>
+            <p>See what happens, who handles it and when it is done.</p>
           </div>
 
           <div className="howFlowGrid">
@@ -108,8 +108,8 @@ export default function HowItWorksPage() {
         <div className="container">
           <div className="sectionHeading howOperationsHeading">
             <span className="eyebrow">Behind the guest journey</span>
-            <h2>Role workspaces and visible ticket states turn digital actions into accountable restaurant work.</h2>
-            <p>The team can identify who owns the next action, which status proves completion and which metric should reflect the result.</p>
+            <h2>Every team knows what comes next.</h2>
+            <p>Orders and handoffs stay visible until completion.</p>
           </div>
 
           <div className="howOperationsGrid">
@@ -130,8 +130,8 @@ export default function HowItWorksPage() {
       </section>
 
       <CTA
-        title="Map one real restaurant journey through all 5 steps."
-        body="Bring a booking, table order, kitchen handoff or payment flow. We will identify the action, context, role, status and metric at every step."
+        title="See how PayMyDine fits your service."
+        body="Show us a typical order or payment. We will map the steps."
         primaryLabel="Book a Demo"
         primaryHref="/contact"
         secondaryLabel="Explore the 9 Product Areas"

@@ -20,12 +20,10 @@ export default function OfferGrid({
             </span>
 
             <h2>
-              Neun vernetzte Bereiche ergeben ein Gesamtbild des Restaurantbetriebs – und liefern PayMyDine KI den Kontext, um Veränderungen zu erklären.
+              Eine Plattform. Neun vernetzte Module.
             </h2>
 
-            <p>
-              Jeder Produktbereich unterstützt einen konkreten Ablauf. Zusammen verbinden Reservierungen, Tische, Bestellungen, Küche, Zahlungen, Gäste, Teams, Analysen und Integrationen die Daten, mit denen KI Zeiträume vergleichen, Auffälligkeiten erkennen und die nächsten Schritte zur Prüfung vorschlagen kann.
-            </p>
+
 
           </div>}
 

@@ -11,16 +11,12 @@ export function StatusGallery() {
             </span>
 
             <h2>
-              Masa, sipariş ve ödeme durumunu gerçek zamanlı olarak bağlantılı tutun;
-              ardından Yapay Zeka ile istisnaların arkasındaki nedeni inceleyin.
+              Her ekip güncel durumu görür.
             </h2>
           </div>
 
           <p>
-            Müşteriler, servis personeli, mutfak ve ödeme süreçleri farklı ekranlar
-            kullanır; ancak tüm hareketler aynı operasyon görünümüne katkı sağlar.
-            Böylece yönetim, raporlama, karşılaştırma ve Yapay Zeka destekli inceleme
-            için daha net kaynak veriye ulaşır.
+            Sipariş, hazırlık ve ödemeler bağlı kalır. Yönetim gecikmeleri anında görür.
           </p>
         </div>
 

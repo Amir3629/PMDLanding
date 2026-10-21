@@ -14,13 +14,13 @@ export function RoleAndAISections() {
             </span>
 
             <h2>
-              Jedes Team erhält die passenden Aufgaben und Werkzeuge. PayMyDine KI nutzt den gemeinsamen Kontext, um zu zeigen, was im Restaurant geschieht.
+              Die richtigen Werkzeuge für jedes Team.
             </h2>
 
           </div>
 
           <p>
-            Geschäftsführung, Management, Service, Küche, Reservierung und Finanzen arbeiten in eigenen Ansichten. Informationen zu Tischen, Bestellungen, Gästen, Zeiten und Zahlungen bleiben verknüpft. So kann das Management mit PayMyDine KI Veränderungen bis zu den Quelldaten zurückverfolgen.
+            Sechs Teams, ein gemeinsamer Blick auf Tische, Bestellungen und Zahlungen. KI hilft, Veränderungen zu prüfen.
           </p>
 
         </div>
@@ -37,11 +37,11 @@ export function RoleAndAISections() {
               </span>
 
               <h3>
-                Geschäftszahlen prüfen und mit KI herausfinden, was sich verändert hat und wo eine genauere Analyse sinnvoll ist.
+                Veränderungen sehen. KI nach dem Grund fragen.
               </h3>
 
               <p>
-                Ausgangspunkt sind Umsatz, Gäste, Tische, Reservierungen, Küchenstatus und meistverkaufte Artikel. Vergleichen Sie Zeiträume, erkennen Sie Auffälligkeiten und öffnen Sie die Daten hinter dem Ergebnis.
+                Umsatz, Gäste und Bestellungen vergleichen – mit Zugriff auf die Daten dahinter.
               </p>
 
               <a href="/de/ai">
@@ -69,11 +69,11 @@ export function RoleAndAISections() {
               </span>
 
               <h3>
-                Leiten Sie die nächste Aktion an die dafür verantwortliche Rolle weiter.
+                Klare Übergaben zwischen Teams.
               </h3>
 
               <p>
-                Der Service bearbeitet Tische und Gästeanfragen, die Küche Bestellungen und Zubereitungszeiten. Die Reservierung verwaltet Ankünfte und Verfügbarkeit. Ein gemeinsamer Status macht sichtbar, wo Aufgaben noch offen sind.
+                Service, Küche und Reservierung sehen ihre Aufgaben. Das Management erkennt, was noch offen ist.
               </p>
 
               <a href="/de/solutions/team">
@@ -98,11 +98,11 @@ export function RoleAndAISections() {
               </span>
 
               <h3>
-                Verwandeln Sie Besuche, Bestellungen und Feedback in ein nützlicheres Gästebild.
+                Gäste besser kennenlernen.
               </h3>
 
               <p>
-                Besuche, Bestellungen und Feedback können Gästeprofile, Treueprogramme, Angebote und Kampagnen ergänzen. So lassen sich spätere Maßnahmen besser auf tatsächliche Gästeinteraktionen abstimmen.
+                Besuche und Feedback mit Gästeprofilen, Treueprogrammen und Angeboten verknüpfen.
               </p>
 
               <a href="/de/solutions/guest-ordering">
@@ -133,11 +133,11 @@ export function RoleAndAISections() {
             </span>
 
             <h2>
-              Fragen an den Restaurantbetrieb stellen – statt mehrere voneinander getrennte Dashboards zu durchsuchen.
+              Restaurantdaten direkt befragen.
             </h2>
 
             <p>
-              PayMyDine KI arbeitet mit den verfügbaren Betriebsdaten. Fragen Sie nach Umsatz, Gästen, Durchschnittsbon, Tischwechsel, Verkaufszeiten, Bestsellern, Zahlungsarten, Prognosen oder Rentabilität. Die Antworten lassen sich zu ihren Datenquellen zurückverfolgen.
+              Umsatz, Gäste, Verkäufe und Rentabilität auswerten. Jede Antwort führt zurück zur Datenquelle.
             </p>
 
           </div>
@@ -167,11 +167,11 @@ export function RoleAndAISections() {
                 </span>
 
                 <h2>
-                  Veränderungen erkennen, Zeiträume vergleichen und die relevante Datenquelle direkt öffnen.
+                  Änderungen erkennen. Quellen prüfen.
                 </h2>
 
                 <p>
-                  Wechseln Sie von einer Kennzahl zu den zugrunde liegenden Restaurantdaten. So müssen Sie nicht mehrere getrennte Berichte nach möglichen Ursachen durchsuchen.
+                  Von der Kennzahl direkt zu den zugrunde liegenden Vorgängen.
                 </p>
 
               </div>
@@ -190,11 +190,11 @@ export function RoleAndAISections() {
                 </span>
 
                 <h2>
-                  Von aktuellen Betriebsdaten zur fundierten Managemententscheidung.
+                  Aus Live-Daten werden nächste Schritte.
                 </h2>
 
                 <p>
-                  Nutzen Sie KI-gestützte Tagesübersichten, Hinweise auf Auffälligkeiten, Zeitvergleiche und Prognosen. Die zugrunde liegenden Kennzahlen, Vergleichszeiträume und Entscheidungen des Teams bleiben dabei nachvollziehbar.
+                  Tagesübersichten, Auffälligkeiten und Prognosen prüfen. Die Entscheidung bleibt beim Team.
                 </p>
 
               </div>
@@ -232,11 +232,11 @@ export function FlexibilityAndIntegrationSections() {
             </span>
 
             <h2>
-              Legen Sie Rollen, Module, Tischpläne und Gästeabläufe einmal fest. Nutzen Sie die verknüpften Daten anschließend für den täglichen Betrieb und KI-gestützte Analysen.
+              Richten Sie PayMyDine passend ein.
             </h2>
 
             <p>
-              Bauen Sie auf den bestehenden Abläufen Ihres Restaurants auf. Wählen Sie die Produktbereiche, die doppelte Arbeit vermeiden, legen Sie Berechtigungen fest und erhalten Sie den Datenkontext für Berichte, Vergleiche und KI-gestützte Fragen.
+              Module wählen, Berechtigungen festlegen und Berichte mit dem täglichen Betrieb verbinden.
             </p>
 
             <div className="featureList">
@@ -308,11 +308,11 @@ export function FlexibilityAndIntegrationSections() {
             </span>
 
             <h2>
-              Binden Sie bestehende Restaurantsysteme an, damit Betrieb, Berichte und KI mit einem umfassenderen Datenbild arbeiten können.
+              Bestehende Systeme verbinden.
             </h2>
 
             <p>
-              Unterstützte Kassen-, Buchhaltungs-, Liefer- und Zahlungssysteme können Daten für zentrale Berichte, Standortvergleiche, Bestandsübersichten und Rentabilitätsanalysen liefern. Je vollständiger und verlässlicher die verfügbaren Daten sind, desto hilfreicher werden KI-gestützte Vergleiche und Untersuchungen.
+              Daten aus unterstützten Kassen-, Buchhaltungs-, Liefer- und Zahlungssystemen für gemeinsame Berichte nutzen. Der Umfang hängt von der Anbindung ab.
             </p>
 
             <div className="integrationNote">

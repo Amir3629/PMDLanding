@@ -26,18 +26,10 @@ export default function OfferGrid({ compact = false }) {
             </span>
 
             <h2>
-              Nine connected areas create one operating picture —
-              and give PayMyDine AI the context to explain what changed.
+              One platform. Nine connected modules.
             </h2>
 
-            <p>
-              Each area solves a real restaurant workflow on its own.
-              Connected together, reservations, tables, orders, kitchen,
-              payments, guests, teams, analytics and integrations create
-              the context AI can use to compare periods, flag unusual
-              movement, support forecasts and point management toward
-              what deserves attention next.
-            </p>
+
 
           </div>
 

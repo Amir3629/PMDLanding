@@ -14,10 +14,10 @@ const setups = [
 export default function RestaurantTypesPage() {
   return (
     <>
-      <PageHero eyebrow="4 restaurant setup patterns" title="Configure the roles, floor, guest journey and metrics around the service model you already run." intro="The product areas stay the same, but the priority, permissions and workflow change by restaurant type. Start with the real service path and select only the controls that support it." image="/site-assets/custom/shared-restaurant-hero-16.webp" />
+      <PageHero eyebrow="4 restaurant setup patterns" title="PayMyDine for your type of restaurant." intro="Choose tools that fit your service model, teams and space." image="/site-assets/custom/shared-restaurant-hero-16.webp" />
       <section className="section setupGridSection"><div className="container setupGrid">{setups.map(([title, body, image]) => <article className="setupCard" key={title}><img src={image} alt=""/><div><h2>{title}</h2><p>{body}</p></div></article>)}</div></section>
-      <section className="section capabilitySection"><div className="container capabilityPanel"><div><span className="eyebrow">Configuration decisions</span><h2>For every setup, define six things before choosing modules.</h2><p>Document roles, floor structure, order channels, guest touchpoints, current systems and the baseline metrics used to judge the result.</p></div><div className="capabilityList"><span>Role ownership</span><span>Floor and table model</span><span>Dine-in and takeaway channels</span><span>Guest ordering path</span><span>POS and payment boundaries</span><span>Baseline operating metrics</span></div></div></section>
-      <CTA title="Map one real service model to PayMyDine." body="We will identify the responsible roles, product areas, floor configuration, integrations and metrics needed for that setup." />
+      <section className="section capabilitySection"><div className="container capabilityPanel"><div><span className="eyebrow">Configuration decisions</span><h2>Start with how your restaurant works.</h2><p>Map your teams, tables, orders and current systems.</p></div><div className="capabilityList"><span>Role ownership</span><span>Floor and table model</span><span>Dine-in and takeaway channels</span><span>Guest ordering path</span><span>POS and payment boundaries</span><span>Baseline operating metrics</span></div></div></section>
+      <CTA title="Find your restaurant setup." body="We will match modules and devices to your service flow." />
     </>
   );
 }

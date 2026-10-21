@@ -44,17 +44,11 @@ export default function Workflow({ variant = 'home' }) {
           </span>
 
           <h2>
-            Restorandaki her işlem bir içerik oluşturur.
-            PayMyDine bu içeriği bağlantılı tutar; böylece hem sonraki rol
-            hem de Yapay Zeka ne olduğunu anlayabilir.
+            Siparişten ödemeye, her şey bağlantılı.
           </h2>
 
           <p>
-            Aynı içerik, müşteri veya ekip işlemiyle başlayıp hazırlık, servis ve
-            ödeme üzerinden raporlamaya kadar ilerler. PayMyDine Yapay Zeka;
-            dönemi özetlemeye, sonuçları karşılaştırmaya, olağandışı hareketleri
-            öne çıkarmaya ve yönetimin bir sonraki adımda hangi ölçütü veya
-            kaynak görünümü incelemesi gerektiğini belirlemeye yardımcı olabilir.
+            Siparişler, mutfak ve ödemeler birbirine bağlı kalır. Her ekip sıradaki işi görür.
           </p>
         </div>
 

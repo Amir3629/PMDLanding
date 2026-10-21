@@ -10159,3 +10159,8 @@ body:not(:has(section.hero.pmdHeroFullBleedFix)) .siteHeader {
   }
 }
 /* === PMD MOBILE SAME HEADER FRAME V1.2 END === */
+
+/* Home hero: concise feature bullets across all locales. */
+.pmdHeroBenefits { list-style: none; padding-inline-start: 0; display: grid; gap: .55rem; }
+.pmdHeroBenefits li { display: flex; align-items: flex-start; gap: .65rem; line-height: 1.5; }
+.pmdHeroBenefits li::before { content: "✓"; flex: none; color: #287657; font-weight: 750; }

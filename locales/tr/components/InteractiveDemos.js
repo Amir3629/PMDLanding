@@ -27,16 +27,11 @@ export default function InteractiveDemos({ variant = 'home' }) {
           </span>
 
           <h2>
-            Takımlar odaklanmış ekranlar kullanır.
-            Yönetim genel resmi görür.
-            Yapay Zeka aradaki sinyalleri birleştirmeye yardımcı olur.
+            Her ekip kendi işini, yönetim genel durumu görür.
           </h2>
 
           <p>
-            PayMyDine, günlük ekranları işi yapan takımlar için pratik tutarken
-            raporlama ve Yapay Zeka destekli inceleme için gereken ortak restoran
-            içeriğini de korur. Sonuç, ayrı çalışan bir sohbet aracı değil;
-            restoranda zaten gerçekleşen operasyonun üzerine kurulan bir destek katmanıdır.
+            Ekipler günlük işlerine odaklanır. Yönetim değişimleri yapay zekâyla inceler.
           </p>
         </div>
 
@@ -56,15 +51,11 @@ export default function InteractiveDemos({ variant = 'home' }) {
               </span>
 
               <h3>
-                İşletmenin genel görünümünü görün; ardından gelir, müşteriler,
-                masalar, siparişler ve kârlılıktaki değişimi Yapay Zeka ile inceleyin.
+                Yapay zekâya sorun. Rakamları kontrol edin.
               </h3>
 
               <p>
-                Üst düzey bir ölçütten arkasındaki kaynak görünüme geçin,
-                dönemleri karşılaştırın, olağandışı değişimleri öne çıkarın ve
-                hangi salonun, kanalın, kategorinin veya ürünün incelenmesi
-                gerektiğine karar verin.
+                Dönemleri karşılaştırın; değişimleri şube, kanal veya ürüne göre inceleyin.
               </p>
             </div>
           </article>
@@ -84,15 +75,11 @@ export default function InteractiveDemos({ variant = 'home' }) {
               </span>
 
               <h3>
-                Dört net adım:
-                tara, incele, sipariş ver ve öde.
+                Tara. İncele. Sipariş ver. Öde.
               </h3>
 
               <p>
-                Masa QR yolculuğu, ödeme tamamlanana kadar müşteri, masa,
-                sipariş ve ödeme içeriğini birbirine bağlı tutar. Bu etkileşimler
-                raporlama ve Yapay Zeka destekli inceleme için yapılandırılmış
-                operasyon verisine de dönüşür.
+                Tek QR kodu masayı, siparişi ve ödemeyi birbirine bağlar.
               </p>
             </div>
           </article>

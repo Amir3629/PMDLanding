@@ -14,8 +14,8 @@ const DEVICE_IMAGES = {
 const COPY = {
   en: {
     eyebrow: 'PayMyDine Hardware',
-    title: 'Hardware for every point of service.',
-    body: 'From the table and main counter to payments, kitchen and self-service, choose the devices that fit the way your restaurant works.',
+    title: 'Devices built for restaurant service.',
+    body: 'From QR displays to cashier terminals, kitchen screens and kiosks.',
     cta: 'Explore all hardware',
     productsLabel: 'PayMyDine restaurant hardware',
     devices: [
@@ -31,8 +31,8 @@ const COPY = {
   },
   tr: {
     eyebrow: 'PayMyDine Donanım',
-    title: 'Her servis noktası için donanım.',
-    body: 'Masadan ana kasaya, ödemeden mutfağa ve self servise kadar restoranınızın çalışma biçimine uygun cihazları seçin.',
+    title: 'Restoranınız için doğru cihazlar.',
+    body: 'Masa ekranından kasaya, mutfaktan self servis kioska kadar.',
     cta: 'Tüm donanımı keşfet',
     productsLabel: 'PayMyDine restoran donanımları',
     devices: [
@@ -48,8 +48,8 @@ const COPY = {
   },
   de: {
     eyebrow: 'PayMyDine Hardware',
-    title: 'Hardware für jeden Servicepunkt.',
-    body: 'Vom Tisch und der Hauptkasse über Zahlungen und Küche bis zum Self-Service: Wählen Sie die Geräte, die zu den Abläufen Ihres Restaurants passen.',
+    title: 'Geräte für den Restaurantalltag.',
+    body: 'Vom Tischdisplay über die Kasse bis zu Küche und Selbstbedienung.',
     cta: 'Alle Hardware entdecken',
     productsLabel: 'PayMyDine Hardware für Restaurants',
     devices: [
@@ -65,8 +65,8 @@ const COPY = {
   },
   ar: {
     eyebrow: 'أجهزة PayMyDine',
-    title: 'أجهزة لكل نقطة خدمة.',
-    body: 'من الطاولة والكاشير إلى الدفع والمطبخ والخدمة الذاتية، اختر الأجهزة التي تناسب طريقة عمل مطعمك.',
+    title: 'أجهزة تناسب عمل مطعمك.',
+    body: 'من شاشة الطاولة والكاشير إلى المطبخ وأجهزة الخدمة الذاتية.',
     cta: 'استكشف جميع الأجهزة',
     productsLabel: 'أجهزة PayMyDine للمطاعم',
     devices: [

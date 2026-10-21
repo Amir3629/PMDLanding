@@ -31,14 +31,14 @@ const operationsCards = [{
 }];
 export default function HowItWorksPage() {
   return <>
-      <PageHero eyebrow={"5-stufiger Betriebsstrom"} title={"Tragen Sie den Kontext von der ersten Tabellenaktion bis zur endgültigen Managementfrage."} intro={"PayMyDine verbindet gästeorientierte Aktionen, rollenbasierte Arbeitsbereiche, Küchenstatus, Zahlung, Reporting und KI, ohne jede Person zu bitten, die gleiche Benutzeroberfläche zu verwenden oder den gleichen Kontext erneut zu betreten."} image="/site-assets/extra/izakaya-phone.webp" accent="orange" />
+      <PageHero eyebrow={"5-stufiger Betriebsstrom"} title={"Vom ersten Scan bis zur Zahlung."} intro={"Gäste bestellen und bezahlen. Das Team sieht den nächsten Schritt. Alles bleibt verbunden."} image="/site-assets/extra/izakaya-phone.webp" accent="orange" />
 
       <section className="section howJourneySection">
         <div className="container">
           <div className="sectionHeading centerHeading howJourneyHeading">
             <span className="eyebrow">Gastaktionen bleiben Restaurantarbeit</span>
-            <h2>Eine mobile Aktion sollte die richtige Tabelle, Service- oder Zahlungsaufgabe für das Team erstellen.</h2>
-            <p>Der Gast sieht einen kurzen Fluss. Das Restaurant erhält den strukturierten Kontext, der benötigt wird, um den Tisch vorzubereiten, zu dienen und zu begleichen.</p>
+            <h2>Vier einfache Schritte für Gäste.</h2>
+            <p>Scannen, auswählen, bestellen und bezahlen. Das Team bleibt informiert.</p>
           </div>
 
           <div className="demoShowcaseGrid howJourneyGrid">
@@ -61,9 +61,9 @@ export default function HowItWorksPage() {
           <div className="splitHeading howFlowHeading">
             <div>
               <span className="eyebrow">Fünf explizite Handoffs</span>
-              <h2>Definieren Sie bei jedem Schritt die Handlung, den Kontext, die verantwortliche Rolle und den sichtbaren Status.</h2>
+              <h2>Fünf klare Schritte hinter jeder Bestellung.</h2>
             </div>
-            <p>Dadurch wird der Workflow testbar: Teams können sehen, wo Informationen verloren gehen, wo Status wiederholt werden und wo ein Integrations- oder Workspace übernehmen soll.</p>
+            <p>Sehen Sie, was passiert, wer zuständig ist und wann eine Aufgabe erledigt ist.</p>
           </div>
 
           <div className="howFlowGrid">
@@ -80,8 +80,8 @@ export default function HowItWorksPage() {
         <div className="container">
           <div className="sectionHeading howOperationsHeading">
             <span className="eyebrow">Hinter der Gästereise</span>
-            <h2>Rollenarbeitsbereiche und sichtbare Ticketzustände verwandeln digitale Aktionen in rechenschaftspflichtige Restaurantarbeit.</h2>
-            <p>Das Team kann bestimmen, wem die nächste Aktion gehört, welcher Status den Abschluss beweist und welche Metrik das Ergebnis widerspiegeln soll.</p>
+            <h2>Jedes Team kennt den nächsten Schritt.</h2>
+            <p>Bestellungen und Übergaben bleiben bis zum Abschluss sichtbar.</p>
           </div>
 
           <div className="howOperationsGrid">
@@ -99,6 +99,6 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <CTA title={"Karte eine echte Restaurantreise durch alle 5 Schritte."} body={"Bringen Sie eine Buchung, Tischbestellung, Küche Handoff oder Zahlungsfluss. Wir werden die Aktion, den Kontext, die Rolle, den Status und die Metrik bei jedem Schritt identifizieren."} primaryLabel={"Demo buchen"} primaryHref="/de/contact" secondaryLabel={"Entdecken Sie die 9 Produktbereiche"} secondaryHref="/de/platform" />
+      <CTA title={"PayMyDine im echten Service erleben."} body={"Zeigen Sie uns einen Bestell- oder Zahlungsvorgang. Wir bilden die Schritte ab."} primaryLabel={"Demo buchen"} primaryHref="/de/contact" secondaryLabel={"Entdecken Sie die 9 Produktbereiche"} secondaryHref="/de/platform" />
     </>;
 }

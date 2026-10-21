@@ -18,23 +18,23 @@ export default function ImplementationPage() {
     <>
       <PageHero
         eyebrow="6-stage implementation"
-        title="Configure PayMyDine around a documented restaurant workflow, then validate it with real service scenarios."
-        intro="Implementation starts with roles, handoffs, current systems and baseline metrics. Product areas and integrations are selected only after the operating problem and responsible team are clear."
+        title="Go live with a clear plan."
+        intro="Map your workflows, set up the tools and test with real orders."
         image="/site-assets/extra/team-tech-meeting.webp"
         accent="green"
       />
       <section className="section howFlowSection">
         <div className="container">
           <div className="splitHeading howFlowHeading">
-            <div><span className="eyebrow">From baseline to measured go-live</span><h2>Six stages, each with a clear deliverable and owner.</h2></div>
-            <p>The exact timeline varies by scope, but the sequence prevents configuration from starting before workflows, permissions, integrations and success metrics are understood.</p>
+            <div><span className="eyebrow">From baseline to measured go-live</span><h2>Six steps from setup to launch.</h2></div>
+            <p>Define your tasks, access and integrations before going live.</p>
           </div>
           <div className="howFlowGrid">
             {steps.map(([number, title, body]) => <article className="howFlowCard" key={number}><span>{number}</span><h3>{title}</h3><p>{body}</p></article>)}
           </div>
         </div>
       </section>
-      <CTA title="Bring one workflow and one baseline metric to the implementation discussion." body="We will map the responsible roles, product areas, data fields, test scenarios and measurement plan needed for a practical first release." />
+      <CTA title="Plan your PayMyDine launch." body="We will plan the setup, tests and rollout with your team." />
     </>
   );
 }

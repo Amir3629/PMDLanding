@@ -9,14 +9,14 @@ export default function SupportPage() {
     <>
       <PageHero
         eyebrow="4 support stages"
-        title="Support should know the configured roles, workflows, integrations and success metrics behind the question."
-        intro="A useful answer depends on how PayMyDine is configured in the restaurant. Support therefore follows the setup from onboarding through configuration, team adoption and ongoing operating review."
+        title="Help for your PayMyDine setup."
+        intro="Get help with setup, team access, integrations and everyday use."
         image="/site-assets/extra/team-cafe-meeting.webp"
         accent="green"
       />
       <section className="section companyValues">
         <div className="container companyValuesGrid">
-          <div><span className="eyebrow">Support across the lifecycle</span><h2>Four stages, with the configuration and responsible role visible in every conversation.</h2><p>That context makes it easier to distinguish a training question, a workflow problem, an integration boundary and a product issue.</p></div>
+          <div><span className="eyebrow">Support across the lifecycle</span><h2>Support from setup to daily service.</h2><p>Tell us the task and what went wrong. We will find the next step.</p></div>
           <div className="companyValueCards">
             <article><h3>Onboarding</h3><p>Confirm the selected product areas, role owners, baseline workflows and implementation contacts.</p></article>
             <article><h3>Configuration</h3><p>Review permissions, floor maps, menus, status rules, integrations and the expected handoffs between roles.</p></article>
@@ -25,7 +25,7 @@ export default function SupportPage() {
           </div>
         </div>
       </section>
-      <CTA title="Bring the configuration and workflow behind the support question." body="Tell us the role, action, expected status, connected system and result. That gives the support conversation a practical starting point." />
+      <CTA title="Tell us what you need help with." body="Include the task, expected result and connected system." />
     </>
   );
 }

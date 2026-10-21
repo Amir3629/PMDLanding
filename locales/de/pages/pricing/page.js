@@ -5,13 +5,13 @@ export const metadata = metadataForRoute('de', '/pricing');
 const factors = [["Restaurant- und Standortumfang", "Anzahl der Standorte, Komplexität des Bodens, Servicemodell, Bestellkanäle und Umgebungen, die die Konfiguration unterstützen muss."], ["Ausgewählte Produktbereiche", "Welche der 9 Produktbereiche sind jetzt enthalten, welche sind später geplant und welche aktuellen Systeme bleiben maßgeblich."], ["Rolle und Zugangsumfang", "Welche der 6 Rollen-Arbeitsbereiche erforderlich sind, wie sich die Berechtigungen unterscheiden und wie viele Teams oder Standorte jede Ansicht benötigen."], ["Integrations- und Umsetzungsarbeiten", "Die unterstützten Kassensystem, Zahlungs-, Buchhaltungs- oder Lieferverbindungen sowie Konfiguration, Migration, Validierung und Teamvorbereitung."]];
 export default function PricingPage() {
   return <>
-      <PageHero eyebrow={"4 Preisangaben"} title={"Preis den Konfigurations-, Implementierungs- und Integrationsumfang, den Sie tatsächlich verwenden werden."} intro={"Ein praktischer Vorschlag beginnt mit Standorten, ausgewählten Produktbereichen, Rollenarbeitsbereichen und Integrationsarbeit. Es sollte auch angegeben werden, was außerhalb von PayMyDine bleibt und welche Annahmen den endgültigen Umfang beeinflussen."} image="/site-assets/extra/qr-couple.webp" accent="green" />
+      <PageHero eyebrow={"4 Preisangaben"} title={"Preise passend zu Ihrem Restaurant."} intro={"Nennen Sie Standorte, Module und Anbindungen. Wir erstellen ein passendes Angebot."} image="/site-assets/extra/qr-couple.webp" accent="green" />
       <section className="section pricingSection">
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Definieren Sie den Umfang vor dem Preis</span>
-            <h2>Vier Inputs machen den kommerziellen Vorschlag verständlich und vergleichbar.</h2>
-            <p>Der Vorschlag sollte zeigen, was enthalten ist, welche Systeme miteinander verbunden sind, welche Rollen konfiguriert sind, welche Implementierungsarbeit erforderlich ist und was den Umfang verändern kann.</p>
+            <h2>Vier Angaben für Ihr Angebot.</h2>
+            <p>Ihr Angebot nennt Module, Einrichtung, Integrationen und Einschränkungen.</p>
           </div>
           <div className="pricingFactorGrid">
             {factors.map(([title, body], index) => <article key={title}>
@@ -22,6 +22,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-      <CTA title={"Fordern Sie Preise mit einem klaren Restaurantumfang an."} body={"Sagen Sie uns die Standorte, Produktbereiche, Rollen, aktuellen Systeme und Implementierungsbedürfnisse. Wir werden diese vier Inputs nutzen, um den kommerziellen Vorschlag zu gestalten."} primaryLabel={"Anfragepreis"} primaryHref="/de/contact" secondaryLabel={"Siehe die 6 Umsetzungsphasen"} secondaryHref="/de/implementation" />
+      <CTA title={"Angebot für Ihr Restaurant anfordern."} body={"Teilen Sie uns Standorte, gewünschte Module und vorhandene Systeme mit."} primaryLabel={"Anfragepreis"} primaryHref="/de/contact" secondaryLabel={"Siehe die 6 Umsetzungsphasen"} secondaryHref="/de/implementation" />
     </>;
 }

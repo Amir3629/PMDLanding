@@ -49,7 +49,7 @@ export default async function ResourceArticle({
             </strong>
 
             <p>
-              Halten Sie für jeden beschriebenen Ablauf die bisherigen Schritte, die verantwortliche Rolle, Abschlussstatus und Datenquellen fest. Definieren Sie eine Ausgangskennzahl und wählen Sie anschließend den kleinsten PayMyDine-Funktionsumfang, der den Ablauf sinnvoll verbessert.
+              Aktuelle Schritte, Zuständigkeit und eine Kennzahl festhalten. Dann die passenden PayMyDine-Funktionen auswählen.
             </p>
           </div>
         </div>

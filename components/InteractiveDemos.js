@@ -40,17 +40,11 @@ export default function InteractiveDemos({ variant = 'home' }) {
           </span>
 
           <h2>
-            Teams get focused screens.
-            Management gets the wider picture.
-            AI helps connect the signals between them.
+            One view for each team. One overview for managers.
           </h2>
 
           <p>
-            PayMyDine keeps daily interfaces practical for the people doing
-            the work while collecting the shared restaurant context needed
-            for reporting and AI-assisted review. The result is not another
-            isolated chatbot — it is assistance built around the operation
-            already happening in the restaurant.
+            Staff handle their work. Managers see the full picture and can investigate changes with AI.
           </p>
 
         </div>
@@ -77,14 +71,11 @@ export default function InteractiveDemos({ variant = 'home' }) {
               </span>
 
               <h3>
-                See the business picture, then ask AI to explain movement
-                across revenue, guests, tables, orders and profitability.
+                Ask AI what changed. Check the numbers.
               </h3>
 
               <p>
-                Move from a high-level metric to the source view behind it,
-                compare periods, surface unusual changes and decide which
-                floor, channel, category or item needs investigation.
+                Compare periods and explore changes by location, channel or item.
               </p>
 
             </div>
@@ -111,15 +102,11 @@ export default function InteractiveDemos({ variant = 'home' }) {
               </span>
 
               <h3>
-                Four clear actions:
-                scan, browse, order and pay.
+                Scan. Browse. Order. Pay.
               </h3>
 
               <p>
-                The table QR journey keeps guest, table, order and payment
-                context connected through checkout. Those interactions also
-                become structured operating data for reporting and
-                AI-assisted review.
+                One QR journey links the table, order and payment for guests and staff.
               </p>
 
             </div>

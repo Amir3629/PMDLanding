@@ -7,7 +7,7 @@ export const metadata = metadataForRoute('de', '/ai');
 const questions = [["Stellen Sie eine Geschäftsfrage", "Fragen Sie nach Umsatz, Gästen, Durchschnittsbon, Tischwechsel, Verkaufszeitpunkt, Bestsellern, Zahlungsmix oder Rentabilität mit den in der konfigurierten Umgebung verfügbaren Daten."], ["Erhalten Sie ein tägliches Briefing", "Fassen Sie den vorherigen Zeitraum zusammen, heben Sie ungewöhnliche Bewegungen hervor und listen Sie die Metriken oder Orte auf, die einen genaueren Blick verdienen."], ["Auffälligkeiten untersuchen", "Bewegen Sie sich von einem ungewöhnlichen Signal zu der Datenzeitraum, Kategorie, Standort oder Betriebskontext dahinter."], ["Vergleich und Prognose", "Vergleichen Sie Zeiträume oder Standorte und verwenden Sie historische Muster, um Nachfrage-, Verkaufs- und Rentabilitätsprognosen zu unterstützen."]];
 const aiDetails = {
   factsEyebrow: "KI-Funktionen und Grenzen",
-  factsTitle: "Sechs KI-gestützte Funktionen für neun Managementkennzahlen – Entscheidungen bleiben beim Team.",
+  factsTitle: "Sechs KI-Funktionen. Neun Kennzahlen.",
   factsIntro: "Die Zahlen beschreiben den vorgesehenen Funktionsumfang. Aussagekraft und Genauigkeit hängen von den verfügbaren Daten, klaren Definitionen und Berechtigungen ab.",
   facts: [
     ['06', 'KI-gestützte Funktionen', 'Fragen beantworten, Tagesübersichten erstellen, Auffälligkeiten erkennen, Zeiträume vergleichen, Prognosen unterstützen und nächste Prüfschritte vorschlagen.'],
@@ -16,7 +16,7 @@ const aiDetails = {
     ['01', 'Menschliche Entscheidung', 'KI kann Informationen aufbereiten und Hinweise geben. Das Restaurantteam überprüft die Ergebnisse und entscheidet.']
   ],
   workflowEyebrow: "KI sinnvoll und nachvollziehbar einsetzen",
-  workflowTitle: "Von einer konkreten Restaurantfrage zur überprüften Maßnahme.",
+  workflowTitle: "Von der Frage zur Datenquelle.",
   workflowIntro: "Datenquelle, Zeitraum und Definition der Kennzahl müssen bei jedem Schritt erkennbar bleiben.",
   workflow: [
     ['Konkrete Frage stellen', 'Zum Beispiel: Was hat sich verändert? Welcher Standort weicht ab? Warum fällt der Ertrag eines Artikels auf?'],
@@ -25,7 +25,7 @@ const aiDetails = {
     ['Belege nachvollziehen', 'Die Kennzahl sowie Zeiträume, Standorte, Kategorien und Artikel hinter der KI-Ausgabe öffnen.'],
     ['Entscheiden und Wirkung überprüfen', 'Das Team legt die Maßnahme fest, dokumentiert die offene Frage und vergleicht dieselbe Kennzahl nach der Änderung.']
   ],
-  rolesTitle: "Jede Rolle erhält Antworten, die zu ihren Aufgaben und Berechtigungen passen.",
+  rolesTitle: "Passende Antworten für jede Rolle.",
   rolesIntro: "Zugriffsrechte und betrieblicher Kontext bestimmen, welche Fragen und Daten eine Person sehen darf.",
   roleViews: [
     ['Geschäftsführung', 'Vergleicht Zeiträume oder Standorte, prüft Veränderungen der Rentabilität und erkennt wichtige Geschäftssignale.'],
@@ -34,7 +34,7 @@ const aiDetails = {
     ['Standortübergreifende Leitung', 'Vergleicht Standorte anhand einheitlicher Kennzahlen und kann die lokalen Daten dahinter einsehen.']
   ],
   metricsEyebrow: "Qualität der KI-Auswertung bewerten",
-  metricsTitle: "Entscheidend sind nachvollziehbare Ergebnisse und nützliche Maßnahmen, nicht nur flüssige Antworten.",
+  metricsTitle: "Die Datenquelle zählt, nicht nur die Antwort.",
   metricsIntro: "KI-Funktionen sollten mit dokumentierten Fragen, ausreichender Datenabdeckung und messbaren Ergebnissen im Betrieb geprüft werden.",
   metrics: [
     ['Datenabdeckung', 'Prüfen, ob benötigte Daten vorhanden, aktuell und dem richtigen Standort sowie Zeitraum zugeordnet sind.'],
@@ -42,7 +42,7 @@ const aiDetails = {
     ['Prognoseabweichung', 'Prognosen und tatsächliche Ergebnisse für denselben Zeitraum und dieselbe Kennzahlendefinition vergleichen.'],
     ['Zeit für die Analyse', 'Messen, wie lange die Klärung einer festgelegten Managementfrage vor und nach Einführung des KI-gestützten Ablaufs dauert.']
   ],
-  implementationTitle: "Vor dem Einsatz von KI müssen Datenbasis und menschliche Freigaben feststehen.",
+  implementationTitle: "Datenzugriff und Kontrolle klar regeln.",
   implementationIntro: "Eine verantwortungsvolle Umsetzung beschreibt, welche Daten KI nutzen darf, welche Informationen fehlen und wer Entscheidungen trifft.",
   implementation: [
     'Freigegebene Datenquellen, Standorte und historische Zeiträume',
@@ -61,7 +61,7 @@ const aiDetails = {
 };
 export default function AIPage() {
   return <>
-      <PageHero eyebrow={"6 KI-gestützte Aktionen"} title={"Stellen Sie Fragen zu Umsatz, Gästen, Tischen oder Rentabilität und prüfen Sie die zugrunde liegenden Daten."} intro={"PayMyDine KI kann Fragen, tägliche Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen im nächsten Schritt über die in Ihrem Setup verfügbaren Restaurantdaten hinweg unterstützen. Sie unterstützt Entscheidungen; sie ersetzt sie nicht."} image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp" accent="green" />
+      <PageHero eyebrow={"6 KI-gestützte Aktionen"} title={"KI fragen. Quellen prüfen."} intro={"Fragen zu Umsatz, Gästen, Tischen oder Kosten stellen. Jede Antwort lässt sich anhand der Daten prüfen."} image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp" accent="green" />
 
       <section className="section highlightSection">
         <div className="container highlightGrid">
@@ -77,8 +77,8 @@ export default function AIPage() {
             <div className="storyFeatureImage"><img src="/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">9 Metriken im Kontext</span>
-              <h2>Beginnen Sie mit einer Kennzahl und prüfen Sie den Zeitraum sowie die betrieblichen Ursachen.</h2>
-              <p>Einnahmen, Gäste, Durchschnittsbon, Tischwechsel, Verkaufszeitpunkt, Bestseller, Zahlungsmix, Prognosen und Rentabilität sind nützlicher, wenn der Eigentümer von der Zusammenfassung in die dahinter liegende Quellansicht wechseln kann.</p>
+              <h2>Veränderungen in Ihren Zahlen erkennen.</h2>
+              <p>Umsatz, Nachfrage und Rentabilität mit Originaldaten prüfen.</p>
               <a className="textArrow" href="/de/solutions/insights">Siehe die 9 Management-Metriken <Icon name="arrow" size={15} /></a>
             </div>
           </article>
@@ -86,7 +86,7 @@ export default function AIPage() {
             <div className="storyFeatureImage"><img src="/site-assets/custom/solution-story/ai-investigation-time-20260809.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">Entscheidungsunterstützung, nicht Autopilot</span>
-              <h2>Verwenden Sie KI, um die Untersuchungszeit zu verkürzen, während das Team überprüft und entscheidet.</h2>
+              <h2>KI gibt Hinweise. Ihr Team entscheidet.</h2>
               <p>Jede Zusammenfassung hängt von den verfügbaren Modulen, Datenqualität, Vergleichszeitraum und Integrationen ab. Das Restaurantteam behält die Kontrolle über die operativen oder kommerziellen Maßnahmen.</p>
             </div>
           </article>
@@ -99,7 +99,7 @@ export default function AIPage() {
         <div className="container capabilityPanel">
           <div>
             <span className="eyebrow">Verfügbare KI-Aktionen</span>
-            <h2>Fragen, zusammenfassen, vergleichen, alarmieren, vorhersagen und untersuchen.</h2>
+            <h2>Sechs KI-Funktionen für Ihr Restaurant.</h2>
             <p>Die genauen Ausgaben hängen von den Daten, Modulen, Standorten und angeschlossenen Systemen ab, die in der PayMyDine-Umgebung verfügbar sind.</p>
           </div>
           <div className="capabilityList">

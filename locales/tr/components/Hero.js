@@ -23,15 +23,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="heroText">
-            PayMyDine; rezervasyonları, siparişleri, mutfağı, ödeme ve takım iş akışlarını
-            otomatikleştirmeye, her masayı ve müşteri yolculuğunu daha verimli
-            yönetmeye, MİY ile analitiği tek bir canlı operasyon görünümünde
-            birleştirmeye yardımcı olur. Yapay Zeka destekli iç görüler dikkat
-            gerektiren noktaları öne çıkarır; bedensel işi ve bekleme sürelerini
-            azaltmaya, servisi hızlandırmaya, masa devir hızını ve müşteri
-            deneyimini iyileştirmeye ve gelir artışını desteklemeye yardımcı olur.
-          </p>
+          <ul className="heroText pmdHeroBenefits">
+            <li>Rezervasyon, masa, sipariş ve ödemeleri bir araya getirin.</li>
+            <li>Her ekip kendi görevlerini tek bakışta görsün.</li>
+            <li>Yapay zekâ ile değişimleri ve kaynak verileri inceleyin.</li>
+          </ul>
 
           <div className="heroButtons">
             <a className="button" href="/tr/contact">

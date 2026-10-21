@@ -34,7 +34,7 @@ export function HomePageContent() {
 
       <LifestyleMarquee />
 
-      <CTA title={"Erfahren Sie, wie PayMyDine KI Ihr Restaurant in allen 9 vernetzten Produktbereichen unterstützen kann."} body={"Sprechen wir über Ihre Teamrollen, Tischpläne, Gästeabläufe und bestehenden Systeme. Gemeinsam finden wir ein passendes Setup und zeigen, welche Betriebsdaten KI auswerten, vergleichen, auf Auffälligkeiten prüfen und für Prognosen nutzen kann."} secondaryLabel={"PayMyDine KI entdecken"} secondaryHref="/de/ai" />
+      <CTA title={"PayMyDine für Ihr Restaurant entdecken."} body={"Zeigen Sie uns Ihr Team und Ihre Systeme. Wir finden die passenden Module."} secondaryLabel={"PayMyDine KI entdecken"} secondaryHref="/de/ai" />
 
     </>;
 }

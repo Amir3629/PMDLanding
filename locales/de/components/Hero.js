@@ -23,15 +23,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="heroText">
-            PayMyDine hilft Restaurants, Reservierungen, Bestellungen, Küche,
-            Zahlungen und Teamabläufe zu automatisieren, jeden Tisch und die
-            gesamte Gästereise zu verbessern sowie CRM und Analysen in einem
-            aktuellen Betriebsbild zu verbinden. KI-gestützte Einblicke zeigen,
-            wo Handlungsbedarf besteht – damit weniger manuelle Arbeit und
-            Wartezeit entstehen, der Service schneller wird, Tische effizienter
-            genutzt werden, das Gästeerlebnis steigt und der Umsatz wachsen kann.
-          </p>
+          <ul className="heroText pmdHeroBenefits">
+            <li>Reservierungen, Tische, Bestellungen und Zahlungen verbinden.</li>
+            <li>Jedes Team sieht seine Aufgaben auf einen Blick.</li>
+            <li>KI erkennt Auffälligkeiten und zeigt die Daten dahinter.</li>
+          </ul>
 
           <div className="heroButtons">
             <a className="button" href="/de/contact">

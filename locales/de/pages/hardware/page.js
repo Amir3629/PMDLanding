@@ -10,15 +10,15 @@ const copy = {
   contactHref: '/de/contact',
   hero: {
     eyebrow: 'PayMyDine Hardware',
-    title: 'Restaurant-Hardware, bereit für den Service.',
-    intro: 'Stellen Sie Ihr PayMyDine-Setup mit Tisch-QR- und Bezahldisplays, Kassensystem, mobilen Terminals, Küchenbildschirmen, Selbstbedienungskiosken, Belegdruckern und Kassenschubladen passend zu Ihrem Betrieb zusammen.',
+    title: 'Restaurantgeräte. Bereit für den Service.',
+    intro: 'Kassenterminals, Tischdisplays, Küchenbildschirme und Kioske passend auswählen.',
     primaryCta: 'Hardware-Ausstattung planen',
     secondaryCta: 'Geräte entdecken',
     meta: ['Kaufen', 'Leasen', 'Mieten', 'Ein vernetztes System']
   },
   productsEyebrow: 'Hardware-Auswahl',
-  productsTitle: 'Vom Tisch bis zur Küche hat jedes Gerät eine klare Aufgabe.',
-  productsIntro: 'Wählen Sie die Geräte, die Ihr Restaurant heute braucht, und erweitern Sie Ihre Ausstattung, wenn sich Ihre Abläufe verändern.',
+  productsTitle: 'Für jede Aufgabe das passende Gerät.',
+  productsIntro: 'Mit den nötigen Geräten starten. Später einfach erweitern.',
   productCta: 'Dieses Gerät anfragen',
   products: [
     {
@@ -88,13 +88,13 @@ const copy = {
   ],
   ecosystem: {
     eyebrow: 'Ein vernetztes Setup',
-    title: 'Hardware, die als ein Restaurantsystem zusammenarbeitet.',
-    body: 'Halten Sie Tisch, Kasse, Zahlung, Küche und Selbstbedienung in derselben PayMyDine-Betriebsumgebung verbunden.',
+    title: 'Geräte, die zusammenarbeiten.',
+    body: 'Tische, Kasse, Küche und Selbstbedienung verbinden.',
     steps: ['Tisch & Gast', 'Kasse & Zahlung', 'Küche & Druck', 'Kiosk & Wachstum']
   },
   options: {
     eyebrow: 'Flexible Geschäftsmodelle',
-    title: 'Kaufen, leasen oder mieten Sie das Setup, das zu Ihrem Restaurant passt.',
+    title: 'Geräte kaufen, leasen oder mieten.',
     body: 'Wählen Sie das Modell, das zu Budget, Rollout-Plan und gewünschter Nutzungsdauer passt.',
     items: [
       { title: 'Kaufen', body: 'Besitzen Sie die Hardware direkt und bauen Sie ein langfristiges Setup für Ihr Restaurant auf.' },
@@ -105,8 +105,8 @@ const copy = {
   },
   finalCta: {
     eyebrow: 'Setup zusammenstellen',
-    title: 'Beschreiben Sie, wie Ihr Restaurant Gäste bedient. Wir planen die passende Hardware dazu.',
-    body: 'Teilen Sie uns Tischanzahl, Servicemodell, Kassen-Setup, Küchenablauf und Zahlungsanforderungen mit. Daraus können wir ein praktisches Hardwarepaket ableiten.',
+    title: 'Die passende Hardware für Ihr Restaurant.',
+    body: 'Nennen Sie Tischanzahl, Serviceablauf und Zahlungsbedarf.',
     button: 'Mit dem Vertrieb sprechen'
   }
 };

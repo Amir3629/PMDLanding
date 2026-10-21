@@ -46,8 +46,8 @@ export function HomePageContent() {
       <LifestyleMarquee />
 
       <CTA
-        title="See how PayMyDine AI fits your restaurant across all 9 connected product areas."
-        body="Bring your roles, floor structure, guest journey, current systems and the questions management asks every day. We will map the smallest practical setup and show which signals AI can summarise, compare, flag or use to support forecasts from the data you actually have."
+        title="See PayMyDine in your restaurant."
+        body="Tell us about your team and current systems. We will show the right modules."
         secondaryLabel="Explore PayMyDine AI"
         secondaryHref="/ai"
       />

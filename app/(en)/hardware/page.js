@@ -10,15 +10,15 @@ const copy = {
   contactHref: '/contact',
   hero: {
     eyebrow: 'PayMyDine Hardware',
-    title: 'Restaurant hardware, ready for service.',
-    intro: 'Build a complete PayMyDine setup with table-side QR and payment devices, cashier POS, mobile terminals, printers, kitchen screens and self-service kiosks. Choose the combination that fits your operation.',
+    title: 'Restaurant devices. Ready for service.',
+    intro: 'Choose cashier terminals, table displays, kitchen screens and kiosks for your restaurant.',
     primaryCta: 'Plan my hardware setup',
     secondaryCta: 'Explore the devices',
     meta: ['Buy', 'Lease', 'Rent', 'One connected ecosystem']
   },
   productsEyebrow: 'Hardware range',
-  productsTitle: 'From the table to the kitchen, every device has a clear job.',
-  productsIntro: 'Choose only the hardware your restaurant needs today and expand the setup as your service model grows.',
+  productsTitle: 'The right device for every task.',
+  productsIntro: 'Start with the devices you need. Add more when you grow.',
   productCta: 'Ask about this device',
   products: [
     { type: 'payment', shortLabel: 'PAY', category: 'Front counter', name: 'Dual Cashier POS', body: 'A compact dual-screen cashier POS for restaurants that need another counter-ready order and checkout station.', bullets: ['Dual-screen cashier setup', 'Orders and checkout at the counter', 'Connected to the PayMyDine setup'] },
@@ -32,13 +32,13 @@ const copy = {
   ],
   ecosystem: {
     eyebrow: 'One connected setup',
-    title: 'Hardware that works as one restaurant system.',
-    body: 'Keep the guest table, cashier, payment, kitchen and self-service journey connected to the same PayMyDine operating environment.',
+    title: 'Devices that work together.',
+    body: 'Connect tables, checkout, kitchen and self-service.',
     steps: ['Table & guest', 'POS & payment', 'Kitchen & printing', 'Kiosk & growth']
   },
   options: {
     eyebrow: 'Flexible commercial options',
-    title: 'Buy, lease or rent the setup that fits your restaurant.',
+    title: 'Buy, lease or rent your devices.',
     body: 'Choose the commercial model that matches your budget, rollout plan and operating horizon.',
     items: [
       { title: 'Buy', body: 'Own the hardware outright and build a long-term setup around your restaurant.' },
@@ -49,8 +49,8 @@ const copy = {
   },
   finalCta: {
     eyebrow: 'Build your setup',
-    title: 'Tell us how your restaurant serves guests. We’ll map the hardware around it.',
-    body: 'Share your number of tables, service model, cashier setup, kitchen flow and payment needs. We can define a practical hardware package from there.',
+    title: 'Get a hardware setup for your restaurant.',
+    body: 'Tell us your table count, service flow and payment needs.',
     button: 'Talk to Sales'
   }
 };

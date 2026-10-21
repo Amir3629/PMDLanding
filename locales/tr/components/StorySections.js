@@ -12,18 +12,12 @@ export function RoleAndAISections() {
             </span>
 
             <h2>
-              Her role sorumlu olduğu işi verin;
-              Yapay Zekaya da restoran genelinde ne olduğunu anlaması için
-              gereken ortak içeriği sağlayın.
+              Her ekip için doğru araçlar.
             </h2>
           </div>
 
           <p>
-            Masa, sipariş, müşteri, zamanlama ve ödeme içerikleri bağlantılıyken
-            işletme sahibi, yöneticiler, servis personeli, mutfak, rezervasyon
-            ekibi ve finans konsantre bilgiyi kullanabilir. Yönetim daha sonra
-            PayMyDine Yapay Zeka ile bir uyarıdan arkasındaki kaynak veriye
-            kadar ilerleyebilir.
+            Altı ekip, ortak masa ve sipariş bilgileri. Yapay zekâ değişimleri incelemeye yardımcı olur.
           </p>
         </div>
 
@@ -35,15 +29,11 @@ export function RoleAndAISections() {
               </span>
 
               <h3>
-                İşletme göstergelerini inceleyin; ardından neyin değiştiğini
-                ve nerede daha derine bakılması gerektiğini Yapay Zekaya sorun.
+                Neyin değiştiğini görün. Yapay zekâya sorun.
               </h3>
 
               <p>
-                Gelir, müşteri sayısı, masalar, rezervasyonlar, mutfak durumu
-                ve en çok satan ürünlerle başlayın. Sonra dönemleri karşılaştırın,
-                olağandışı hareketleri öne çıkarın ve yanıtın arkasındaki kaynak
-                görünümü açın.
+                Geliri, müşteri sayısını ve siparişleri kaynak verilerle karşılaştırın.
               </p>
 
               <a href="/tr/ai">
@@ -130,16 +120,11 @@ export function RoleAndAISections() {
             </span>
 
             <h2>
-              Ayrı bir gösterge paneline değil,
-              restoranın tamamına soru sorun.
+              Restoran verilerinize sorun.
             </h2>
 
             <p>
-              PayMyDine Yapay Zeka, platformda zaten bulunan operasyon görünümü
-              üzerinden çalışır. Gelir, müşteri sayısı, ortalama hesap tutarı,
-              masa devir hızı, satış zamanlaması, en çok satan ürünler, ödeme
-              yöntemi dağılımı, tahminler veya kârlılık hakkında soru sorun;
-              ardından yanıtı kaynak veriye kadar takip edin.
+              Satış, müşteri ve kârlılık verilerini inceleyin. Yanıtların kaynağına ulaşın.
             </p>
           </div>
 
@@ -163,13 +148,11 @@ export function RoleAndAISections() {
                 </span>
 
                 <h2>
-                  Neyin değiştiğini sorun, dönemleri karşılaştırın ve bir sonraki
-                  adımda açılması gereken kaynak görünümü bulun.
+                  Değişimi görün. Kaynağı bulun.
                 </h2>
 
                 <p>
-                  Her olası açıklama için ayrı raporları tek tek kontrol etmek
-                  yerine, ana ölçütten arkasındaki restoran içeriğine ilerleyin.
+                  Raporlar arasında geçmeden rakamların ayrıntılarına inin.
                 </p>
               </div>
             </article>
@@ -182,15 +165,11 @@ export function RoleAndAISections() {
                 </span>
 
                 <h2>
-                  Canlı operasyon verisini, sinyalden yönetim kararına giden
-                  daha kısa bir yola dönüştürün.
+                  Canlı veriden net aksiyonlara.
                 </h2>
 
                 <p>
-                  Kaynak ölçütü, karşılaştırma aralığını ve insan kararını
-                  görünür tutarken Yapay Zeka destekli günlük özetleri,
-                  olağandışı hareket uyarılarını, dönem karşılaştırmalarını ve
-                  tahmin desteğini kullanın.
+                  Günlük özetleri, uyarıları ve tahminleri inceleyin. Kararı ekibiniz verir.
                 </p>
               </div>
             </article>
@@ -218,16 +197,11 @@ export function FlexibilityAndIntegrationSections() {
             </span>
 
             <h2>
-              Rolleri, modülleri, servis alanı planlarını ve müşteri yolculuklarını
-              bir kez tanımlayın; ortak veriyi hem günlük işler hem de
-              Yapay Zeka destekli inceleme için kullanın.
+              Restoranınızı istediğiniz gibi kurun.
             </h2>
 
             <p>
-              İşlettiğiniz restorandan başlayın. Hangi ürün alanlarının
-              tekrarlanan işi azalttığını seçin, her kontrolü kimin görebileceğini
-              belirleyin ve yönetimin raporlama, karşılaştırma ve Yapay Zeka
-              destekli sorular için ihtiyaç duyduğu içeriği koruyun.
+              Modülleri seçin, yetkileri belirleyin ve raporları günlük işle bağlayın.
             </p>
 
             <div className="featureList">
@@ -264,16 +238,11 @@ export function FlexibilityAndIntegrationSections() {
             </span>
 
             <h2>
-              Restoran verisini zaten tutan sistemleri bağlayın; operasyon,
-              raporlama ve Yapay Zeka daha geniş bir resim üzerinden çalışsın.
+              Mevcut sistemlerinizi bağlayın.
             </h2>
 
             <p>
-              Desteklenen POS, muhasebe, teslimat ve ödeme bağlantıları;
-              merkezi raporlama, şube karşılaştırması, stok ve kârlılık iş
-              akışlarına yararlı kaynak veri sağlayabilir. İzin verilen kaynak
-              içeriği ne kadar eksiksiz olursa Yapay Zeka destekli karşılaştırma
-              ve incelemeler de o kadar faydalı olabilir.
+              Desteklenen kasa, muhasebe, teslimat ve ödeme verilerini raporlara bağlayın.
             </p>
 
             <div className="integrationNote">

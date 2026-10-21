@@ -4,10 +4,10 @@ import { metadataForRoute } from '@/lib/seo';
 export const metadata = metadataForRoute('de', '/support');
 export default function SupportPage() {
   return <>
-      <PageHero eyebrow={"4 Stützstufen"} title={"Der Support sollte die konfigurierten Rollen, Workflows, Integrationen und Erfolgsmetriken hinter der Frage kennen."} intro={"Eine nützliche Antwort hängt davon ab, wie PayMyDine im Restaurant konfiguriert ist. Der Support folgt daher dem Setup vom Onboarding über die Konfiguration, Teamadoption und laufende Betriebsüberprüfung."} image="/site-assets/extra/team-cafe-meeting.webp" accent="green" />
+      <PageHero eyebrow={"4 Support-Phasen"} title={"Hilfe für Ihr PayMyDine-Setup."} intro={"Unterstützung bei Einrichtung, Zugriffsrechten, Integrationen und täglicher Nutzung."} image="/site-assets/extra/team-cafe-meeting.webp" accent="green" />
       <section className="section companyValues">
         <div className="container companyValuesGrid">
-          <div><span className="eyebrow">Unterstützung über den gesamten Lebenszyklus hinweg</span><h2>Vier Phasen, wobei die Konfiguration und die verantwortungsvolle Rolle in jedem Gespräch sichtbar sind.</h2><p>Dieser Kontext macht es einfacher, eine Trainingsfrage, ein Workflowproblem, eine Integrationsgrenze und ein Produktproblem zu unterscheiden.</p></div>
+          <div><span className="eyebrow">Unterstützung über den gesamten Lebenszyklus hinweg</span><h2>Support von der Einrichtung bis zum Service.</h2><p>Nennen Sie die Aufgabe und das Problem. Wir klären den nächsten Schritt.</p></div>
           <div className="companyValueCards">
             <article><h3>Onboarding</h3><p>Bestätigen Sie die ausgewählten Produktbereiche, Rolleninhaber, Baseline-Workflows und Implementierungskontakte.</p></article>
             <article><h3>Konfiguration</h3><p>Überprüfen Sie Berechtigungen, Bodenkarten, Menüs, Statusregeln, Integrationen und die erwarteten Übergaben zwischen Rollen.</p></article>
@@ -16,6 +16,6 @@ export default function SupportPage() {
           </div>
         </div>
       </section>
-      <CTA title={"Bringen Sie die Konfiguration und den Workflow hinter die Supportfrage."} body={"Sagen Sie uns die Rolle, die Aktion, den erwarteten Status, das verbundene System und das Ergebnis. Das gibt dem support-gespräch einen praktischen ausgangspunkt."} />
+      <CTA title={"Wobei benötigen Sie Unterstützung?"} body={"Beschreiben Sie die Aufgabe, das erwartete Ergebnis und das verbundene System."} />
     </>;
 }

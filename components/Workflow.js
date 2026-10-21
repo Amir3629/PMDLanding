@@ -60,17 +60,11 @@ export default function Workflow({ variant = 'home' }) {
           </span>
 
           <h2>
-            Every restaurant action creates context.
-            PayMyDine keeps it connected so the next role —
-            and AI — can understand what happened.
+            From order to payment, connected.
           </h2>
 
           <p>
-            The same context follows the journey from guest or staff action
-            through preparation, service and payment into reporting.
-            PayMyDine AI can then help summarise the period, compare results,
-            surface unusual movement and identify which metric or source view
-            management should inspect next.
+            Guest actions, kitchen updates and payments stay linked. Teams see the next task; AI helps review the results.
           </p>
 
         </div>

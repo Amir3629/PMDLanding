@@ -18,18 +18,13 @@ export function RoleAndAISections() {
             </span>
 
             <h2>
-              Give each role the work it owns —
-              and give AI the shared context to help explain
-              what is happening across the restaurant.
+              The right tools for every role.
             </h2>
 
           </div>
 
           <p>
-            Owners, managers, service staff, kitchen, reservations and finance
-            use focused views while table, order, guest, timing and payment
-            context stays connected. Management can then use PayMyDine AI to
-            move from a signal to the source data behind it.
+            Six teams, one shared view of tables, orders and payments. AI helps managers investigate changes.
           </p>
 
         </div>
@@ -46,15 +41,11 @@ export function RoleAndAISections() {
               </span>
 
               <h3>
-                Review the business signals,
-                then ask AI what changed and where to investigate.
+                See what changed. Ask AI why.
               </h3>
 
               <p>
-                Start with revenue, guests, tables, reservations,
-                kitchen status and top-selling items.
-                Then compare periods, surface unusual movement and open
-                the source view behind the answer.
+                Compare revenue, guests and orders with the source data behind each result.
               </p>
 
               <a href="/ai">
@@ -86,15 +77,11 @@ export function RoleAndAISections() {
               </span>
 
               <h3>
-                Route the next action to the role responsible for it.
+                Keep every handoff moving.
               </h3>
 
               <p>
-                Service staff sees tables and guest requests.
-                Kitchen sees tickets and timing.
-                Reservations sees arrivals and availability.
-                Shared status gives management and AI a clearer picture
-                of where work is waiting.
+                Service, kitchen and reservations see their own tasks. Managers see what is still waiting.
               </p>
 
               <a href="/solutions/team">
@@ -123,13 +110,11 @@ export function RoleAndAISections() {
               </span>
 
               <h3>
-                Turn visits, orders and feedback into a more useful guest picture.
+                Know your returning guests.
               </h3>
 
               <p>
-                Profiles, loyalty, offers, campaigns, feedback and retention
-                signals can remain connected to the visit history that created
-                them, giving management better context for future decisions.
+                Link visits and feedback to guest profiles, loyalty and relevant offers.
               </p>
 
               <a href="/solutions/guest-ordering">
@@ -164,16 +149,11 @@ export function RoleAndAISections() {
             </span>
 
             <h2>
-              Ask the restaurant,
-              not another isolated dashboard.
+              Ask your restaurant data.
             </h2>
 
             <p>
-              PayMyDine AI works from the operating picture already available
-              in the platform. Ask about revenue, guests, average check,
-              table turnover, sales timing, best sellers, payment mix,
-              forecasts or profitability, then trace the answer back to
-              the source data.
+              Explore revenue, guests, sales and profitability. Check the source behind every answer.
             </p>
 
           </div>
@@ -212,14 +192,11 @@ export function RoleAndAISections() {
                 </span>
 
                 <h2>
-                  Ask what changed, compare the period
-                  and find the source view worth opening next.
+                  See changes. Find their source.
                 </h2>
 
                 <p>
-                  Move from a headline metric into the restaurant context
-                  behind it instead of manually checking separate reports
-                  for every possible explanation.
+                  Explore the transactions behind a metric without switching between reports.
                 </p>
 
               </div>
@@ -242,15 +219,11 @@ export function RoleAndAISections() {
                 </span>
 
                 <h2>
-                  Turn live operating data into a shorter path
-                  from signal to management decision.
+                  Turn live data into clear next steps.
                 </h2>
 
                 <p>
-                  Use AI-assisted daily briefings, anomaly flags,
-                  period comparisons and forecast support while keeping
-                  the source metric, comparison window and human decision
-                  visible.
+                  Review daily briefs, unusual changes and forecasts. Your team remains in control.
                 </p>
 
               </div>
@@ -298,17 +271,11 @@ export function FlexibilityAndIntegrationSections() {
             </span>
 
             <h2>
-              Map roles, modules, floor maps and guest journeys once,
-              then use the shared data for both daily work
-              and AI-assisted review.
+              Set up the restaurant your way.
             </h2>
 
             <p>
-              Start with the restaurant you already run.
-              Choose which product areas remove duplicate work,
-              define who can see each control and preserve the context
-              that management needs for reporting, comparisons and
-              AI-assisted questions.
+              Choose modules, define permissions and keep reports connected to daily work.
             </p>
 
             <div className="featureList">
@@ -395,16 +362,11 @@ export function FlexibilityAndIntegrationSections() {
             </span>
 
             <h2>
-              Connect the systems that already hold restaurant data
-              so operations, reporting and AI can work from a wider picture.
+              Connect your existing systems.
             </h2>
 
             <p>
-              Supported POS, accounting, delivery and payment connections
-              can contribute useful source data to central reporting,
-              location comparison, inventory and profitability workflows.
-              The more complete the permitted source picture is,
-              the more useful AI-assisted comparisons and investigations can be.
+              Bring supported POS, accounting, delivery and payment data into shared reporting. Available features depend on each connection.
             </p>
 
             <div className="integrationNote">

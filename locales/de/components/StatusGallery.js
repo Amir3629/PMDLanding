@@ -13,13 +13,13 @@ export function StatusGallery() {
             </span>
 
             <h2>
-              Tisch-, Bestell- und Zahlungsstatus bleiben für alle Beteiligten aktuell. KI hilft, Auffälligkeiten im Zusammenhang zu verstehen.
+              Alle Teams sehen den aktuellen Status.
             </h2>
 
           </div>
 
           <p>
-            Gäste, Service, Küche und Zahlungsabwicklung nutzen unterschiedliche Ansichten, arbeiten aber mit denselben Vorgängen. Das gibt dem Management eine verlässlichere Grundlage für Berichte, Vergleiche und KI-gestützte Analysen.
+            Bestellungen, Zubereitung und Zahlungen bleiben verknüpft. Das Management erkennt offene Vorgänge sofort.
           </p>
 
         </div>

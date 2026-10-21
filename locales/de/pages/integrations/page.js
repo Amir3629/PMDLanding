@@ -7,7 +7,7 @@ export const metadata = metadataForRoute('de', '/integrations');
 const capabilities = [["Kassendaten", "Bringen Sie unterstützte Bestell-, Verkaufs-, Menü- oder Tabellendaten in das PayMyDine-Betriebsbild, ohne die Mitarbeiter zu bitten, die gleichen Informationen erneut einzugeben."], ["Buchhaltungsdaten", "Übergeben oder Anpassen der verfügbaren Berichtsfelder, die vom Finanz-Workflow benötigt werden, abhängig vom verbundenen System und den Berechtigungen."], ["Lieferkanäle", "Halten Sie unterstützte Lieferaufträge nach Kanälen unterscheidbar, während Sie sie in das breitere Workload- und Verkaufsbild aufnehmen."], ["Zahlungsdienstleister", "Verbinden Sie den unterstützten Zahlungsstatus und den Abwicklungskontext mit der Tisch- und Gäste-Checkout-Reise."]];
 const integrationDetails = {
   factsEyebrow: "Integrationen und Funktionsumfang",
-  factsTitle: "Vier Integrationsbereiche, sechs zentrale Funktionen und vier derzeit genannte Anbieter.",
+  factsTitle: "Vier Anbindungstypen. Sechs zentrale Funktionen.",
   factsIntro: "Die Nennung eines Anbieters bedeutet nicht, dass jede Funktion verfügbar ist. Entscheidend sind Schnittstellen, Berechtigungen und der vereinbarte Datenaustausch.",
   facts: [
     ['04', 'Integrationsbereiche', 'Kassensysteme, Buchhaltung, Lieferdienste und Zahlungen bilden die vorgesehenen Anbindungsbereiche.'],
@@ -16,7 +16,7 @@ const integrationDetails = {
     ['05', 'Projektphasen', 'Bedarf klären, Datenfelder zuordnen, Zugriff einrichten, testen und laufend überwachen.']
   ],
   workflowEyebrow: "Vom bestehenden System zur überwachten Anbindung",
-  workflowTitle: "Integrationen beginnen mit einem konkreten Ablauf im Restaurant.",
+  workflowTitle: "Daten sinnvoll verbinden.",
   workflowIntro: "Erst den benötigten Arbeitsschritt oder Bericht festlegen. Danach entscheiden, welche Daten zwischen welchen Systemen fließen sollen.",
   workflow: [
     ['Führende Datenquelle festlegen', 'Dokumentieren, welches System Bestellungen, Menüs, Zahlungen, Buchhaltung, Warenbestand und Standorte verwaltet.'],
@@ -25,7 +25,7 @@ const integrationDetails = {
     ['Abgleich und Fehlerfälle testen', 'Normale Datensätze, Änderungen, Fehler und Duplikate anhand vereinbarter Beispiele prüfen.'],
     ['Anbindung überwachen und erweitern', 'Datenaktualität, fehlgeschlagene Übertragungen und Abweichungen beobachten, bevor weitere Funktionen hinzukommen.']
   ],
-  rolesTitle: "Integrationen unterstützen Betrieb, Finanzen, Geschäftsführung und Implementierung auf unterschiedliche Weise.",
+  rolesTitle: "Passende Daten für jedes Team.",
   rolesIntro: "Eine Anbindung sollte einen konkreten manuellen Schritt vermeiden oder eine wichtige Informationslücke schließen.",
   roleViews: [
     ['Implementierung und IT', 'Verantwortlich für Authentifizierung, Feldzuordnung, Tests, Fehlerbehandlung und Abstimmung mit Anbietern.'],
@@ -34,7 +34,7 @@ const integrationDetails = {
     ['Geschäftsführung und Standortleitung', 'Vergleicht Standorte, gemeinsame Standards, Bestände und Berichte, ohne lokale Besonderheiten zu verlieren.']
   ],
   metricsEyebrow: "Qualität der Anbindung",
-  metricsTitle: "Messen, ob Daten vollständig und aktuell ankommen und manuelle Abstimmungen abnehmen.",
+  metricsTitle: "Datenaktualität und Abgleich prüfen.",
   metricsIntro: "Zielwerte müssen zum jeweiligen Anbieter und Ablauf passen, da Schnittstellen unterschiedliche Aktualisierungs- und Fehlerdaten liefern.",
   metrics: [
     ['Erfolgsquote der Synchronisation', 'Erfolgreich übertragene Datensätze mit allen Übertragungsversuchen des festgelegten Zeitraums vergleichen.'],
@@ -42,7 +42,7 @@ const integrationDetails = {
     ['Abgleichsabweichungen', 'Fehlende, doppelte oder widersprüchliche Datensätze erfassen, die geprüft werden müssen.'],
     ['Zeit für manuelle Nacharbeit', 'Erfassen, wie viel Zeit das Team vor und nach Einführung der Anbindung für Kopieren und Abgleichen benötigt.']
   ],
-  implementationTitle: "Vor dem Aufbau jeder Anbindung braucht es eine klare Datenvereinbarung.",
+  implementationTitle: "Datenaustausch vorab festlegen.",
   implementationIntro: "Darin werden Quelle, Ziel, Zuständigkeit, Aktualisierung und Umgang mit Fehlern für jede Datengruppe festgelegt.",
   implementation: [
     'Anbieterdokumentation, Zugangsdaten und freigegebene Berechtigungen',
@@ -61,13 +61,13 @@ const integrationDetails = {
 };
 export default function IntegrationsPage() {
   return <>
-      <PageHero eyebrow={"4 Integrationstypen - 6 zentrale Funktionenen"} title={"Verbinden Sie die Systeme, die bereits Restaurantdaten enthalten, und machen Sie diese Daten für die nächste Rolle nützlich."} intro={"PayMyDine kann mit unterstützten Kassen-, Buchhaltungs-, Liefer- und Zahlungsumgebungen arbeiten und dann zentrale Geschäftsführungsansichten, freigegebene Menüs, Berichte, Warenbestand, Wareneinsatz und Einkaufskontext hinzufügen, wenn die Quellsysteme dies zulassen."} image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp" accent="green" />
+      <PageHero eyebrow={"4 Anbindungsarten · 6 zentrale Funktionen"} title={"Ihre Restaurantsysteme verbinden."} intro={"Daten aus unterstützten Kassensystemen, Buchhaltung, Lieferdiensten und Zahlungen für Berichte nutzen."} image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp" accent="green" />
 
       <section className="section integrationStepsSection">
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Definieren Sie den Datenpfad vor dem Connector</span>
-            <h2>Entscheiden Sie für jede Integration, welche Daten sich bewegen, welches System autoritativ bleibt und wer das Ergebnis verwendet.</h2>
+            <h2>Nur nötige Daten anbinden.</h2>
             <p>Eine sinnvolle Anbindung spart doppelte Dateneingaben oder schließt eine Informationslücke. Daten sollten nicht allein deshalb übertragen werden, weil es technisch möglich ist.</p>
           </div>
           <div className="highlightGrid">
@@ -82,7 +82,7 @@ export default function IntegrationsPage() {
         <div className="container darkIntegrationGrid">
           <div>
             <span className="eyebrow darkEyebrow">6 Kontrollen an mehreren Standorten</span>
-            <h2>Vergleichen Sie Standorte zentral, während jedes Restaurant seinen lokalen Betriebskontext beibehält.</h2>
+            <h2>Standorte zentral vergleichen.</h2>
             <p>Die Geschäftsführung kann die Leistung der Standorte und gemeinsame Standards überprüfen, ohne jeden Standort in den gleichen Grundriss, das gleiche Servicemodell oder die gleiche Teamstruktur zu verwandeln.</p>
           </div>
           <div className="integrationNameGrid">
@@ -97,7 +97,7 @@ export default function IntegrationsPage() {
             <img src="/site-assets/custom/integrations-capabilities-fit.webp" alt="" />
             <div>
               <span className="eyebrow">Integrationsbereich</span>
-              <h2>Verbinden Sie nur die Felder, die einen echten Workflow oder Berichtsbedarf unterstützen.</h2>
+              <h2>Nur Daten, die das Team braucht.</h2>
               <p>Dokumentieren Sie Quelle, Richtung, Aktualisierungszeitpunkt, Berechtigung und verantwortliche Rolle für jedes Datenfeld vor der Implementierung.</p>
             </div>
           </article>
@@ -105,15 +105,15 @@ export default function IntegrationsPage() {
             <img src="/site-assets/custom/integrations-operating-picture.webp" alt="" />
             <div>
               <span className="eyebrow">Ein gemeinsamer Geschäftsüberblick</span>
-              <h2>Lesen Sie Verkauf, Lager, Einkauf und Standortleistung zusammen.</h2>
+              <h2>Umsatz, Bestand und Einkauf gemeinsam sehen.</h2>
               <p>Wo die angeschlossenen Systeme die Daten bereitstellen, können Eigentümer Standortergebnisse vergleichen, die Wareneinsatzbewegung verstehen und eine Geschäftsnummer bis zur Betriebsquelle zurückverfolgen.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <ProductDetailSections details={integrationDetails} productName={"Integrationen, Multi-Location & Inventory"} />
+      <ProductDetailSections details={integrationDetails} productName={"Integrationen, Standorte & Warenbestand"} />
 
-      <CTA title={"Prüfen Sie eine konkrete Integration, bevor Sie weitere Anbindungen planen."} body={"Nennen Sie uns das System, die benötigten Datenfelder, die Übertragungsrichtung, die gewünschte Aktualität und die zuständige Rolle. Daraus entwickeln wir einen realistischen Integrationsumfang."} />
+      <CTA title={"Erste Integration besprechen."} body={"Nennen Sie uns das System, die benötigten Datenfelder, die Übertragungsrichtung, die gewünschte Aktualität und die zuständige Rolle. Daraus entwickeln wir einen realistischen Integrationsumfang."} />
     </>;
 }

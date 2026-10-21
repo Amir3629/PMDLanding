@@ -16,8 +16,8 @@ export default function SecurityPage() {
     <>
       <PageHero
         eyebrow="4 security review areas"
-        title="Review access, data flow, integrations and deployment against the real configuration."
-        intro="Security claims should describe the environment that is actually deployed. PayMyDine discussions therefore start with roles, connected systems, data responsibilities and operational controls rather than generic promises."
+        title="Review security for your actual setup."
+        intro="Review access, data flows, providers and deployment controls for your environment."
         image="/site-assets/extra/office-dashboard.webp"
         accent="green"
       />
@@ -28,11 +28,11 @@ export default function SecurityPage() {
       </section>
       <section className="section capabilitySection">
         <div className="container capabilityPanel">
-          <div><span className="eyebrow">Questions to document</span><h2>Who can act, which data moves, where it is stored and who responds when something fails?</h2><p>The answer may involve PayMyDine, the restaurant, the hosting environment and external POS or payment providers. Responsibilities should be explicit before go-live.</p></div>
+          <div><span className="eyebrow">Questions to document</span><h2>Know who can access your data.</h2><p>Review storage, system access and incident responsibilities before launch.</p></div>
           <div className="capabilityList"><span>Role permissions</span><span>Data inventory</span><span>Integration credentials</span><span>Retention and backups</span><span>Logging and monitoring</span><span>Incident responsibility</span></div>
         </div>
       </section>
-      <CTA title="Review the actual deployment and data path." body="Bring the roles, providers, data types and integration diagram so the security conversation can assign clear controls and responsibilities." />
+      <CTA title="Review your security setup." body="Share your data flows and providers so responsibilities can be documented." />
     </>
   );
 }

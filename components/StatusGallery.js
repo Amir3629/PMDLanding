@@ -16,17 +16,13 @@ export function StatusGallery() {
             </span>
 
             <h2>
-              Keep the table, ticket and payment state shared in real time,
-              then use AI to help explain the exceptions behind it.
+              Every team sees the latest status.
             </h2>
 
           </div>
 
           <p>
-            Guests, service staff, kitchen and payment workflows use different
-            screens, but their activity contributes to the same operating
-            picture. That gives management clearer source data for reporting,
-            comparisons and AI-assisted investigation.
+            Orders, preparation and payments stay in sync. Managers can see exceptions without chasing updates.
           </p>
 
         </div>

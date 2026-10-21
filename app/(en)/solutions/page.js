@@ -11,8 +11,8 @@ export default function SolutionsPage() {
     <>
       <PageHero
         eyebrow="9 PayMyDine product areas"
-        title="Choose the workflow you need to improve, then keep it connected to the rest of the restaurant."
-        intro="Each product area below states the actions it supports, the restaurant context it keeps and the metrics or status the team can use. Start with one area or combine all nine."
+        title="Nine modules. Your restaurant, connected."
+        intro="Choose the workflow you want to improve. Add more modules as you need them."
         image="/site-assets/extra/restaurant-team-planning.webp"
         accent="green"
       />
@@ -21,8 +21,8 @@ export default function SolutionsPage() {
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Product map by operational job</span>
-            <h2>Pick the area that matches the job, queue or management question you want to fix.</h2>
-            <p>Reservations, service, kitchen, payment, teams and reporting remain separate responsibilities, but their useful context can travel through one operating layer.</p>
+            <h2>Choose the job. Find the right module.</h2>
+            <p>Every module has a clear job. The data stays connected.</p>
           </div>
           <div className="offerGrid offerGridVisual">
             {productAreas.map((item) => (
@@ -44,8 +44,8 @@ export default function SolutionsPage() {
         <div className="container capabilityPanel">
           <div>
             <span className="eyebrow">Connected by shared context</span>
-            <h2>Different workflows can use the same table, order, guest and payment story.</h2>
-            <p>That reduces re-entry and repeated status checking while still giving each role a focused screen and permission set.</p>
+            <h2>One shared view of the guest journey.</h2>
+            <p>Less re-entry. Clear tasks for every team.</p>
           </div>
           <div className="capabilityList">
             <span><Icon name="check" size={16}/>9 product areas</span>
@@ -58,7 +58,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <CTA title="Map the 9 product areas to your existing restaurant systems." body="We will identify what PayMyDine should own, what should stay in your POS or payment setup and where connected context removes duplicate work." />
+      <CTA title="Find your ideal PayMyDine setup." body="Keep the systems that work. Connect the modules you need." />
     </>
   );
 }

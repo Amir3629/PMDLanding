@@ -83,14 +83,7 @@ export default async function ResourceArticle({
             </strong>
 
             <p>
-              For the workflow in this guide,
-              record the current steps,
-              responsible role, completion
-              status, source systems and one
-              baseline metric. Then configure
-              the smallest PayMyDine scope
-              that can improve or clarify that
-              result.
+              List the current steps, team owner and one metric. Then choose the smallest PayMyDine setup that helps.
             </p>
           </div>
         </div>

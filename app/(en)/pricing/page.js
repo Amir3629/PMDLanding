@@ -16,8 +16,8 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="4 pricing inputs"
-        title="Price the configuration, implementation and integration scope you will actually use."
-        intro="A practical proposal starts with locations, selected product areas, role workspaces and integration work. It should also state what remains outside PayMyDine and which assumptions affect the final scope."
+        title="Pricing built around your restaurant."
+        intro="Tell us your locations, modules and integrations. We will define the quote."
         image="/site-assets/extra/qr-couple.webp"
         accent="green"
       />
@@ -25,8 +25,8 @@ export default function PricingPage() {
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Define the scope before the price</span>
-            <h2>Four inputs make the commercial proposal understandable and comparable.</h2>
-            <p>The proposal should show what is included, which systems connect, which roles are configured, what implementation work is required and what may change the scope.</p>
+            <h2>Four things shape your quote.</h2>
+            <p>Your quote lists modules, setup, integrations and any exclusions.</p>
           </div>
           <div className="pricingFactorGrid">
             {factors.map(([title, body], index) => (
@@ -40,8 +40,8 @@ export default function PricingPage() {
         </div>
       </section>
       <CTA
-        title="Request pricing with a clear restaurant scope."
-        body="Tell us the locations, product areas, roles, current systems and implementation needs. We will use those four inputs to shape the commercial proposal."
+        title="Get a quote for your setup."
+        body="Share your locations, chosen modules and existing systems."
         primaryLabel="Request pricing"
         primaryHref="/contact"
         secondaryLabel="See the 6 implementation stages"
