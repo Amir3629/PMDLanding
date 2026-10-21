@@ -9,7 +9,7 @@ export function StatusGallery() {
           <div>
 
             <span className="eyebrow">
-              Live-Status wird zu KI Kontext
+              Live-Status wird zu KI-Kontext
             </span>
 
             <h2>

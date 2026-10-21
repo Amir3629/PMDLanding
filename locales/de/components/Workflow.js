@@ -17,7 +17,7 @@ const steps = [{
   body: "Vorbereitung, Bereitschaftsstatus, Übergabe und Zahlung werden aus dem gleichen Restaurantkontext fortgesetzt, einschließlich dreier auf Rechnung aufgeteilter Methoden.",
   icon: 'card'
 }, {
-  title: "Aktivität wird zu Einsicht und KI Unterstützung",
+  title: "Aktivität wird zu Einsicht und KI-Unterstützung",
   body: "Umsatz, Gäste, durchschnittlicher Check, Tabellenumsatz, Verkaufszeitpunkt, Zahlungsmix, Prognosen und Rentabilität stehen für Berichte, Vergleiche, Anomalieprüfungen und KI-gestützte Fragen zur Verfügung.",
   icon: 'chart'
 }];
@@ -44,7 +44,7 @@ und KI - kann verstehen, was passiert ist.
           <p>
             Der gleiche Kontext folgt der Reise von Gast- oder Personalaktion
 durch Vorbereitung, Service und Zahlung in die Berichterstattung.
-PayMyDine AI kann dann helfen, den Zeitraum zusammenzufassen, Ergebnisse zu vergleichen,
+PayMyDine KI kann dann helfen, den Zeitraum zusammenzufassen, Ergebnisse zu vergleichen,
 Oberfläche ungewöhnliche Bewegung und identifizieren, welche Metrik oder Quelle Ansicht
 Das Management sollte als nächstes prüfen.
           </p>

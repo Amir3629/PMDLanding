@@ -47,6 +47,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <CTA title={"Weisen Sie die 9 Produktbereiche Ihren bestehenden Restaurantsystemen zu."} body={"Wir identifizieren, was PayMyDine besitzen soll, was in Ihrem POS oder Zahlungs-Setup bleiben soll und wo verbundener Kontext doppelte Arbeit entfernt."} />
+      <CTA title={"Weisen Sie die 9 Produktbereiche Ihren bestehenden Restaurantsystemen zu."} body={"Wir identifizieren, was PayMyDine besitzen soll, was in Ihrem Kassensystem oder Zahlungs-Setup bleiben soll und wo verbundener Kontext doppelte Arbeit entfernt."} />
     </>;
 }

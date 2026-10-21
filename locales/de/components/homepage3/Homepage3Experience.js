@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { mountHomepage3 } from './motion';
-const SECTIONS = ["Held", "Rollen + KI", "KI Kontext", "Live-Status", "Schnittstellen", "Konfigurieren", "Integrationen", "Momente", "Nächster Schritt"];
+const SECTIONS = ["Held", "Rollen + KI", "KI-Kontext", "Live-Status", "Schnittstellen", "Konfigurieren", "Integrationen", "Momente", "Nächster Schritt"];
 export default function Homepage3Experience({
   children
 }) {

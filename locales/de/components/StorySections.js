@@ -24,7 +24,7 @@ Was passiert im ganzen Restaurant?
           <p>
             Eigentümer, Manager, Servicepersonal, Küche, Reservierungen und Finanzen
 Verwenden Sie fokussierte Ansichten während Tisch, Bestellung, Gast, Timing und Zahlung
-Der Kontext bleibt verbunden. Das Management kann dann PayMyDine AI verwenden
+Der Kontext bleibt verbunden. Das Management kann dann PayMyDine KI verwenden
 Bewegen Sie sich von einem Signal zu den Quelldaten dahinter.
           </p>
 
@@ -54,7 +54,7 @@ Die Quellenansicht hinter der Antwort.
               </p>
 
               <a href="/de/ai">
-                PayMyDine AI entdecken
+                PayMyDine KI entdecken
                 {' '}
                 <Icon name="arrow" size={15} />
               </a>
@@ -144,7 +144,7 @@ Sie geben dem Management einen besseren Kontext für zukünftige Entscheidungen.
           <div className="sectionHeading centerHeading">
 
             <span className="eyebrow">
-              PayMyDine AI auf der gesamten Plattform
+              PayMyDine KI auf der gesamten Plattform
             </span>
 
             <h2>
@@ -153,7 +153,7 @@ kein anderes isoliertes Dashboard.
             </h2>
 
             <p>
-              PayMyDine AI funktioniert aus dem Operationsbild bereits verfügbar
+              PayMyDine KI funktioniert aus dem Operationsbild bereits verfügbar
 auf der Plattform. Fragen Sie nach Einnahmen, Gästen, durchschnittlichem Scheck,
 Tabellenumsatz, Verkaufszeitpunkt, Bestseller, Zahlungsmix,
 Prognosen oder Rentabilität, dann verfolgen Sie die Antwort zurück zu
@@ -163,15 +163,15 @@ die Quelldaten.
           </div>
 
 
-          {/* === PMD AI IMPACT GRAPH V6 START === */}
+          {/* === PMD KI IMPACT GRAPH V6 START === */}
 
           <figure className="pmdAiImpactVisual">
 
-            <img src="/site-assets/custom/ai-impact-growth.webp" alt={"Abbildung zeigt, dass KI- die Restauranteffizienz, den Umsatz, den Tischumsatz und die Gästezufriedenheit unterstützt, während Kosten, Wartezeiten und manuelle Arbeit im Laufe der Zeit abnehmen."} loading="lazy" decoding="async" />
+            <img src="/site-assets/custom/ai-impact-growth.webp" alt={"Abbildung zeigt, dass KI-gestützte Restauranteffizienz, den Umsatz, den Tischumsatz und die Gästezufriedenheit unterstützt, während Kosten, Wartezeiten und manuelle Arbeit im Laufe der Zeit abnehmen."} loading="lazy" decoding="async" />
 
           </figure>
 
-          {/* === PMD AI IMPACT GRAPH V6 END === */}
+          {/* === PMD KI IMPACT GRAPH V6 END === */}
 
 
           <div className="twoUpStoryGrid">
@@ -234,7 +234,7 @@ sichtbar.
           <div className="sectionHeading centerHeading">
 
             <a className="button buttonGhost" href="/de/ai">
-              PayMyDine AI entdecken
+              PayMyDine KI entdecken
             </a>
 
           </div>
@@ -291,7 +291,7 @@ KI-gestützte Fragen.
 
               <span>
                 <Icon name="link" size={20} />
-                <b>Unterstützte POS-Verbindungen</b>
+                <b>Unterstützte Kassenanbindungen</b>
               </span>
 
             </div>
@@ -346,7 +346,7 @@ Operationen, Berichterstattung und KI können also aus einem größeren Bild her
             </h2>
 
             <p>
-              Unterstützt POS, Buchhaltung, Lieferung und Zahlungsverbindungen
+              Unterstützt Kassensystem, Buchhaltung, Lieferung und Zahlungsverbindungen
 nützliche Quelldaten zur zentralen Berichterstattung beitragen können,
 Standortvergleich, Inventar und Rentabilität Ablaufs.
 Je vollständiger das erlaubte Quellbild ist,
@@ -391,7 +391,7 @@ Berechtigungen und Datenfelder, die von jedem externen System verfügbar sind.
 
             </div>
 
-            <img className="integrationPhoto" src='/site-assets/hardware-device-20261004/kiosk.webp' alt={"POS Integrationskonzept"} loading="lazy" />
+            <img className="integrationPhoto" src='/site-assets/hardware-device-20261004/kiosk.webp' alt={"Kassenintegrationskonzept"} loading="lazy" />
 
           </div>
 

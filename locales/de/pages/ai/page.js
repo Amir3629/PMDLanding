@@ -6,7 +6,7 @@ import { metadataForRoute } from '@/lib/seo';
 export const metadata = metadataForRoute('de', '/ai');
 const questions = [["Stellen Sie eine Geschäftsfrage", "Fragen Sie nach Umsatz, Gästen, durchschnittlichem Scheck, Tabellenumsatz, Verkaufszeitpunkt, Bestsellern, Zahlungsmix oder Rentabilität mit den in der konfigurierten Umgebung verfügbaren Daten."], ["Erhalten Sie ein tägliches Briefing", "Fassen Sie den vorherigen Zeitraum zusammen, heben Sie ungewöhnliche Bewegungen hervor und listen Sie die Metriken oder Orte auf, die einen genaueren Blick verdienen."], ["Ermittlung einer Ausschreibung", "Bewegen Sie sich von einem ungewöhnlichen Signal zu der Quellenperiode, Kategorie, Standort oder Betriebskontext dahinter."], ["Vergleich und Prognose", "Vergleichen Sie Zeiträume oder Standorte und verwenden Sie historische Muster, um Nachfrage-, Verkaufs- und Rentabilitätsprognosen zu unterstützen."]];
 const aiDetails = {
-  factsEyebrow: "KI Umfang und Schutzmaßnahmen",
+  factsEyebrow: "KI-Umfang und Schutzmaßnahmen",
   factsTitle: "Sechs Assistenzmodi können über neun Managementmetriken hinweg funktionieren, wobei die menschliche Überprüfung im Workflow verbleibt.",
   factsIntro: "Diese Zählungen beschreiben den Warenumfang. Genauigkeit und Nützlichkeit hängen von Quelldaten, Definitionen, Berechtigungen und der gestellten Frage ab.",
   facts: [['06', "KI-assistierte Aktionen", "Fragen, Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen im nächsten Schritt bilden den aktuellen KI-Bereich."], ['09', "Managementmetriken", "Umsatz, Gäste, durchschnittlicher Scheck, Tabellenumsatz, Verkaufszeitpunkt, Bestseller, Zahlungsmix, Prognose und Rentabilität bieten Geschäftskontext."], ['04', "Entscheidungsrollen", "Eigentümer, Manager, Finanzen und Multi-Location-Führung können die gleichen Daten für verschiedene Entscheidungen untersuchen."], ['01', "Menschlicher Entscheidungsträger", "KI kann Beweise organisieren und vorschlagen, was zu inspizieren ist; das Restaurantteam überprüft und entscheidet."]],
@@ -24,11 +24,11 @@ const aiDetails = {
   implementationTitle: "Definieren Sie den Datenvertrag und die Grenze für die menschliche Überprüfung, bevor Sie KI-Ausgaben aktivieren.",
   implementationIntro: "Die sicherste KI-Implementierung ist explizit darüber, was das System weiß, was es nicht sehen kann und wer die endgültige Entscheidung besitzt.",
   implementation: ["Genehmigte Datenquellen, Orte und historische Perioden", "Metrische Definitionen und Vergleichsregeln", "Rollenberechtigungen für Fragen und Quellansichten", "Mindestdatenqualität und -frische", "Human Review für operative und kommerzielle Maßnahmen", "Dokumentierte Ausschlüsse, Beschränkungen und Eskalationspfade"],
-  faqs: [["Führt PayMyDine AI das Restaurant automatisch aus?", "Nein. Die aktuelle Positionierung ist KI Unterstützung und Entscheidungsunterstützung, nicht autonome Betriebssteuerung."], ["Kann KI eine Frage ohne die Quelldaten beantworten?", "Eine nützliche Antwort erfordert die relevanten Daten, Definition, Zeitraum und Berechtigungen. Fehlende Inputs sollten gezeigt und nicht stillschweigend erfunden werden."], ["Sind Prognosen garantiert?", "Nein. Prognosen sollten an den tatsächlichen Ergebnissen gemessen und als Schätzungen und nicht als Versprechen überprüft werden."], ["Können verschiedene Rollen unterschiedliche Fragen stellen?", "Ja. Rollenberechtigungen und verfügbare Quellansichten sollten die Fragen und die für jede Verantwortung angemessene Tiefe steuern."]]
+  faqs: [["Führt PayMyDine KI das Restaurant automatisch aus?", "Nein. Die aktuelle Positionierung ist KI-Unterstützung und Entscheidungsunterstützung, nicht autonome Betriebssteuerung."], ["Kann KI eine Frage ohne die Quelldaten beantworten?", "Eine nützliche Antwort erfordert die relevanten Daten, Definition, Zeitraum und Berechtigungen. Fehlende Inputs sollten gezeigt und nicht stillschweigend erfunden werden."], ["Sind Prognosen garantiert?", "Nein. Prognosen sollten an den tatsächlichen Ergebnissen gemessen und als Schätzungen und nicht als Versprechen überprüft werden."], ["Können verschiedene Rollen unterschiedliche Fragen stellen?", "Ja. Rollenberechtigungen und verfügbare Quellansichten sollten die Fragen und die für jede Verantwortung angemessene Tiefe steuern."]]
 };
 export default function AIPage() {
   return <>
-      <PageHero eyebrow={"6 KI-gestützte Aktionen"} title={"Fragen Sie nach Einnahmen, Gästen, Tabellen oder Rentabilität und verfolgen Sie die Antwort auf die Quelldaten."} intro={"PayMyDine AI kann Fragen, tägliche Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen im nächsten Schritt über die in Ihrem Setup verfügbaren Restaurantdaten hinweg unterstützen. Sie unterstützt Entscheidungen; sie ersetzt sie nicht."} image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp" accent="green" />
+      <PageHero eyebrow={"6 KI-gestützte Aktionen"} title={"Fragen Sie nach Einnahmen, Gästen, Tabellen oder Rentabilität und verfolgen Sie die Antwort auf die Quelldaten."} intro={"PayMyDine KI kann Fragen, tägliche Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen im nächsten Schritt über die in Ihrem Setup verfügbaren Restaurantdaten hinweg unterstützen. Sie unterstützt Entscheidungen; sie ersetzt sie nicht."} image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp" accent="green" />
 
       <section className="section highlightSection">
         <div className="container highlightGrid">
@@ -60,7 +60,7 @@ export default function AIPage() {
         </div>
       </section>
 
-      <ProductDetailSections details={aiDetails} productName={"PayMyDine AI"} />
+      <ProductDetailSections details={aiDetails} productName={"PayMyDine KI"} />
 
       <section className="section capabilitySection">
         <div className="container capabilityPanel">

@@ -2,8 +2,8 @@ import HardwareShowcase from '@/components/HardwareShowcase';
 import { metadataForRoute } from '@/lib/seo';
 
 export const metadata = metadataForRoute('de', '/hardware', {
-  title: 'Restaurant-POS-Hardware und Zahlungsgeräte',
-  description: 'Entdecken Sie PayMyDine Hardware für Restaurants: Tisch-QR- und Bezahldisplays, Kassen-POS-Systeme, mobile POS-Terminals, Küchenbildschirme, Selbstbedienungskioske, Belegdrucker und Kassenschubladen.'
+  title: 'Restaurant-Kassenhardware und Zahlungsgeräte',
+  description: 'Entdecken Sie PayMyDine Hardware für Restaurants: Tisch-QR- und Bezahldisplays, Kassensysteme, mobile Kassenterminals, Küchenbildschirme, Selbstbedienungskioske, Belegdrucker und Kassenschubladen.'
 });
 
 const copy = {
@@ -11,7 +11,7 @@ const copy = {
   hero: {
     eyebrow: 'PayMyDine Hardware',
     title: 'Restaurant-Hardware, bereit für den Service.',
-    intro: 'Stellen Sie Ihr PayMyDine-Setup mit Tisch-QR- und Bezahldisplays, Kassen-POS, mobilen Terminals, Küchenbildschirmen, Selbstbedienungskiosken, Belegdruckern und Kassenschubladen passend zu Ihrem Betrieb zusammen.',
+    intro: 'Stellen Sie Ihr PayMyDine-Setup mit Tisch-QR- und Bezahldisplays, Kassensystem, mobilen Terminals, Küchenbildschirmen, Selbstbedienungskiosken, Belegdruckern und Kassenschubladen passend zu Ihrem Betrieb zusammen.',
     primaryCta: 'Hardware-Setup planen',
     secondaryCta: 'Geräte entdecken',
     meta: ['Kaufen', 'Leasen', 'Mieten', 'Ein vernetztes System']
@@ -25,8 +25,8 @@ const copy = {
       type: 'payment',
       shortLabel: 'PAY',
       category: 'Hauptkasse',
-      name: 'Dual-Kassen-POS',
-      body: 'Ein kompaktes Kassen-POS für Restaurants, die einen zusätzlichen Bestell- und Zahlungsplatz am Tresen benötigen.',
+      name: 'Dual-Kassenstation',
+      body: 'Ein kompaktes Kassensystem für Restaurants, die einen zusätzlichen Bestell- und Zahlungsplatz am Tresen benötigen.',
       bullets: ['Kassen-Setup mit zwei Displays', 'Bestellung und Zahlung am Tresen', 'Mit dem PayMyDine-System verbunden']
     },
     {
@@ -39,18 +39,18 @@ const copy = {
     },
     {
       type: 'cashier',
-      shortLabel: 'POS',
+      shortLabel: 'KASSE',
       category: 'Hauptkasse',
-      name: 'Kassen-POS-Arbeitsplatz',
-      body: 'Der zentrale Kassenarbeitsplatz mit Mitarbeiter-POS und zweitem Kundendisplay für einen klaren Bestell- und Bezahlvorgang.',
+      name: 'Kassenarbeitsplatz',
+      body: 'Der zentrale Kassenarbeitsplatz mit Mitarbeiterkasse und zweitem Kundendisplay für einen klaren Bestell- und Bezahlvorgang.',
       bullets: ['Arbeitsplatz mit zwei Displays', 'Bestellung und Zahlung an einer Station', 'Für den täglichen Restaurantbetrieb ausgelegt']
     },
     {
       type: 'mobile',
       shortLabel: 'MOBIL',
       category: 'Servicebereich',
-      name: 'Mobiles POS-Terminal',
-      body: 'Ein tragbares POS-Terminal zum Aufnehmen von Bestellungen, Prüfen von Tischen und Abschließen von Zahlungen direkt im Servicebereich.',
+      name: 'Mobiles Kassenterminal',
+      body: 'Ein tragbares Kassenterminal zum Aufnehmen von Bestellungen, Prüfen von Tischen und Abschließen von Zahlungen direkt im Servicebereich.',
       bullets: ['Mobiler Serviceablauf', 'Zugriff auf Bestellungen und Tische', 'Zahlungen direkt im Service']
     },
     {
@@ -75,7 +75,7 @@ const copy = {
       category: 'Belege',
       name: 'Belegdrucker',
       body: 'Zuverlässiger Druck für Kundenbelege und operative Bestellbons überall dort, wo Papier weiterhin Teil des Ablaufs ist.',
-      bullets: ['Schneller Belegdruck', 'Kompaktes Format am Tresen', 'Passend zum POS-Setup']
+      bullets: ['Schneller Belegdruck', 'Kompaktes Format am Tresen', 'Passend zum Kassensystem']
     },
     {
       type: 'drawer',
@@ -90,7 +90,7 @@ const copy = {
     eyebrow: 'Ein vernetztes Setup',
     title: 'Hardware, die als ein Restaurantsystem zusammenarbeitet.',
     body: 'Halten Sie Tisch, Kasse, Zahlung, Küche und Selbstbedienung in derselben PayMyDine-Betriebsumgebung verbunden.',
-    steps: ['Tisch & Gast', 'POS & Zahlung', 'Küche & Druck', 'Kiosk & Wachstum']
+    steps: ['Tisch & Gast', 'Kasse & Zahlung', 'Küche & Druck', 'Kiosk & Wachstum']
   },
   options: {
     eyebrow: 'Flexible Geschäftsmodelle',

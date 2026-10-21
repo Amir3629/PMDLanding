@@ -40,7 +40,7 @@ export default function Hero() {
 
             <a className="button buttonGhost" href="/de/ai">
               <Icon name="play" size={18}/>
-              PayMyDine AI entdecken
+              PayMyDine KI entdecken
             </a>
           </div>
 
@@ -63,7 +63,7 @@ export default function Hero() {
       <div className="pmdMobileHeroMedia">
         <img
           src="/site-assets/home-hero-untitled-design-17.webp"
-          alt="PayMyDine POS-Geräte für Restaurants"
+          alt="PayMyDine Kassengeräte für Restaurants"
           loading="eager"
           decoding="async"
         />

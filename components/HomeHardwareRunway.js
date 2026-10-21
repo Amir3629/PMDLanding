@@ -53,10 +53,10 @@ const COPY = {
     cta: 'Alle Hardware entdecken',
     productsLabel: 'PayMyDine Hardware für Restaurants',
     devices: [
-      { role: 'Zahlungen', name: 'Dual-Kassen-POS', image: DEVICE_IMAGES.payment, position: 'center' },
+      { role: 'Zahlungen', name: 'Dual-Kassenstation', image: DEVICE_IMAGES.payment, position: 'center' },
       { role: 'Am Tisch', name: 'Tisch-QR- & Bezahldisplay', image: DEVICE_IMAGES.table, position: 'center' },
-      { role: 'Hauptkasse', name: 'Kassen-POS-Arbeitsplatz', image: DEVICE_IMAGES.cashier, position: 'center' },
-      { role: 'Servicebereich', name: 'Mobiles POS-Terminal', image: DEVICE_IMAGES.mobile, position: 'center' },
+      { role: 'Hauptkasse', name: 'Kassenarbeitsplatz', image: DEVICE_IMAGES.cashier, position: 'center' },
+      { role: 'Servicebereich', name: 'Mobiles Kassenterminal', image: DEVICE_IMAGES.mobile, position: 'center' },
       { role: 'Küche', name: 'Küchenbildschirm', image: DEVICE_IMAGES.kds, position: 'center' },
       { role: 'Self-Service', name: 'Selbstbedienungskiosk', image: DEVICE_IMAGES.kiosk, position: 'center' },
       { role: 'Belege', name: 'Belegdrucker', image: DEVICE_IMAGES.printer, position: 'center' },
