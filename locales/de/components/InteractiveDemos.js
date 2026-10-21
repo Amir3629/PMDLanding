@@ -15,21 +15,15 @@ export default function InteractiveDemos({
         <div className="sectionHeading centerHeading demoSectionHeading">
 
           <span className="eyebrow">
-            Operationen für Menschen. Kontext für KI.
+            Klare Arbeitsabläufe für Teams. Zusammenhänge für KI.
           </span>
 
           <h2>
-            Teams erhalten fokussierte Bildschirme.
-Management bekommt das breitere Bild.
-KI hilft, die Signale zwischen ihnen zu verbinden.
+            Teams sehen die Aufgaben, die für sie wichtig sind. Das Management behält den Überblick. KI hilft, Zusammenhänge in den Daten zu erkennen.
           </h2>
 
           <p>
-            PayMyDine hält tägliche Schnittstellen für die Menschen praktisch
-die Arbeit beim Sammeln des gemeinsamen Restaurant-Kontexts erforderlich
-für Berichterstattung und KI-gestützte Review. Das Ergebnis ist kein anderes
-isolierter Chatbot - es ist eine Hilfe, die um die Operation herum aufgebaut ist
-Es passiert bereits im Restaurant.
+            PayMyDine bietet jedem Team eine passende Arbeitsansicht und führt die Informationen im Hintergrund zusammen. So kann KI Fragen zum tatsächlichen Restaurantbetrieb beantworten, statt nur einen losgelösten Chat bereitzustellen.
           </p>
 
         </div>
@@ -41,7 +35,7 @@ Es passiert bereits im Restaurant.
 
             <div className="demoShowcaseMedia demoShowcaseMediaProduct">
 
-              <img src={ownerImage} alt={"PayMyDine Besitzer und Restaurant-Betrieb Ablauf"} loading="lazy" />
+              <img src={ownerImage} alt={"PayMyDine: Ansicht für Restaurantleitung und Betrieb"} loading="lazy" />
 
             </div>
 
@@ -52,14 +46,11 @@ Es passiert bereits im Restaurant.
               </span>
 
               <h3>
-                Sehen Sie sich das Geschäftsbild an und bitten Sie KI, die Bewegung zu erklären
-Über Einnahmen, Gäste, Tische, Bestellungen und Rentabilität.
+                Geschäftszahlen im Blick behalten und mit KI untersuchen, was sich bei Umsatz, Gästen, Tischen, Bestellungen und Rentabilität verändert hat.
               </h3>
 
               <p>
-                Bewegen Sie sich von einer High-Level-Metrik zur Quellansicht dahinter,
-Perioden vergleichen, ungewöhnliche Veränderungen an der Oberfläche und entscheiden, welche
-Boden, Kanal, Kategorie oder Gegenstand müssen untersucht werden.
+                Öffnen Sie zu einer Kennzahl die zugrunde liegenden Daten, vergleichen Sie Zeiträume und erkennen Sie, welcher Standort, Kanal, Artikel oder Bereich genauer untersucht werden sollte.
               </p>
 
             </div>
@@ -82,15 +73,11 @@ Boden, Kanal, Kategorie oder Gegenstand müssen untersucht werden.
               </span>
 
               <h3>
-                Vier klare Maßnahmen:
-Scannen, durchsuchen, bestellen und bezahlen.
+                Vier einfache Schritte: Scannen, auswählen, bestellen und bezahlen.
               </h3>
 
               <p>
-                Die Tabelle QR Reise hält Gast, Tisch, Bestellung und Zahlung
-Kontext verbunden durch Bezahlvorgang. Diese Interaktionen auch
-zu strukturierten Betriebsdaten für die Berichterstattung werden und
-KI-gestützte Überprüfung.
+                Der QR-Code am Tisch verbindet Gäste, Bestellung und Zahlung bis zum Abschluss. Diese Vorgänge liefern zugleich strukturierte Daten für Berichte und KI-gestützte Auswertungen.
               </p>
 
             </div>

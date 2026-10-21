@@ -1,24 +1,24 @@
 import { imageGroups } from "@/locales/de/data/site";
 import { Icon } from './Icons';
 const steps = [{
-  title: "Aktionsbeginn",
-  body: "Ein Gast scannt einen Tisch QR, an der Rezeption sitzt eine Buchung, das Servicepersonal öffnet eine Bestellung oder ein Manager ändert einen Tisch.",
+  title: "Eine Aktion startet den Ablauf",
+  body: "Ein Gast scannt einen QR-Code am Tisch, die Rezeption weist eine Reservierung zu, der Service erfasst eine Bestellung oder das Management ändert eine Tischbelegung.",
   icon: 'operations'
 }, {
-  title: "Kontext ist angehängt",
-  body: "Tisch, Gast, Bestellung, Timing, Notizen und Berechtigungen reisen mit der Aktion, anstatt erneut eingegeben zu werden.",
+  title: "Informationen bleiben verknüpft",
+  body: "Tisch, Gast, Bestellung, Zeitangaben, Notizen und Berechtigungen begleiten die Aktion, statt erneut eingegeben werden zu müssen.",
   icon: 'table'
 }, {
-  title: "Die verantwortliche Rolle erhält es",
-  body: "Servicemitarbeiter sehen Servicearbeit, Küche sieht Vorbereitungsarbeit und Manager sehen Ausnahmen und Live-Status.",
+  title: "Die zuständige Rolle übernimmt",
+  body: "Der Service sieht seine Aufgaben, die Küche die Zubereitungsschritte und das Management offene Punkte sowie den aktuellen Status.",
   icon: 'kitchen'
 }, {
-  title: "Service und Bezahlvorgang komplett",
-  body: "Vorbereitung, Bereitschaftsstatus, Übergabe und Zahlung werden aus dem gleichen Restaurantkontext fortgesetzt, einschließlich dreier auf Rechnung aufgeteilter Methoden.",
+  title: "Service und Zahlung abschließen",
+  body: "Zubereitung, Fertigmeldung, Übergabe und Zahlung greifen auf dieselben Informationen zurück – einschließlich drei Möglichkeiten, eine Rechnung aufzuteilen.",
   icon: 'card'
 }, {
-  title: "Aktivität wird zu Einsicht und KI-Unterstützung",
-  body: "Umsatz, Gäste, durchschnittlicher Check, Tabellenumsatz, Verkaufszeitpunkt, Zahlungsmix, Prognosen und Rentabilität stehen für Berichte, Vergleiche, Anomalieprüfungen und KI-gestützte Fragen zur Verfügung.",
+  title: "Betriebsdaten werden zu Erkenntnissen",
+  body: "Umsatz, Gästezahl, Durchschnittsbon, Tischwechsel, Verkaufszeiten, Zahlungsarten, Prognosen und Rentabilität liefern die Grundlage für Berichte, Vergleiche und KI-gestützte Auswertungen.",
   icon: 'chart'
 }];
 export default function Ablauf({
@@ -32,21 +32,15 @@ export default function Ablauf({
         <div className="workflowShowcaseCopy">
 
           <span className="eyebrow">
-            5-stufiger Betriebsfluss + KI Überprüfung
+            5 Schritte im Restaurantbetrieb + KI-Auswertung
           </span>
 
           <h2>
-            Jede Restaurantaktion schafft Kontext.
-PayMyDine hält es so die nächste Rolle verbunden —
-und KI - kann verstehen, was passiert ist.
+            Jeder Schritt im Restaurant erzeugt wertvolle Daten. PayMyDine hält sie über alle Zuständigkeiten hinweg verbunden – damit Teams handeln und KI Veränderungen einordnen kann.
           </h2>
 
           <p>
-            Der gleiche Kontext folgt der Reise von Gast- oder Personalaktion
-durch Vorbereitung, Service und Zahlung in die Berichterstattung.
-PayMyDine KI kann dann helfen, den Zeitraum zusammenzufassen, Ergebnisse zu vergleichen,
-Oberfläche ungewöhnliche Bewegung und identifizieren, welche Metrik oder Quelle Ansicht
-Das Management sollte als nächstes prüfen.
+            Vom ersten Gästekontakt über Küche und Service bis zur Zahlung bleiben die Informationen verknüpft. PayMyDine KI kann daraus Zeiträume zusammenfassen, Ergebnisse vergleichen und auf Kennzahlen oder Datenquellen hinweisen, die das Management genauer prüfen sollte.
           </p>
 
         </div>
@@ -62,7 +56,7 @@ Das Management sollte als nächstes prüfen.
 
       <div className="container">
 
-        <div className="workflowJourneyPanel" aria-label={"PayMyDine Restaurant Reise"}>
+        <div className="workflowJourneyPanel" aria-label={"PayMyDine: Ablauf im Restaurant"}>
 
           {steps.map((step, index) => <article className="workflowJourneyItem" key={step.title}>
 

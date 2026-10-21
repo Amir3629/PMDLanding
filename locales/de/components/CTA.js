@@ -1,7 +1,7 @@
 import { Icon } from './Icons';
 export default function CTA({
-  title = "Bereit, PayMyDine Ihrem Restaurant zuzuordnen?",
-  body = "Bringen Sie Ihre aktuellen Tools, Rollen, Handoffs und Betriebsmetriken mit. Wir zeigen, welche Produktbereiche Duplikate ersetzen und welche Systeme vernetzt bleiben sollen.",
+  title = "Wie passt PayMyDine zu Ihrem Restaurant?",
+  body = "Zeigen Sie uns Ihre bestehenden Systeme, Teamrollen und Abläufe. Gemeinsam prüfen wir, welche PayMyDine-Bereiche doppelte Arbeit vermeiden und welche Systeme angebunden bleiben.",
   primaryLabel = "Demo buchen",
   primaryHref = "/de/contact",
   secondaryLabel = "So funktioniert es",
@@ -11,7 +11,7 @@ export default function CTA({
       <div className="container">
         <div className="ctaCard">
           <div>
-            <span className="eyebrow lightEyebrow">Karte der realen Operation</span>
+            <span className="eyebrow lightEyebrow">Für Ihren Restaurantbetrieb geplant</span>
             <h2>{title}</h2>
             <p>{body}</p>
           </div>

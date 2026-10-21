@@ -4,31 +4,64 @@ import { Icon } from "@/locales/de/components/Icons";
 import ProductDetailSections from "@/locales/de/components/ProductDetailSections";
 import { metadataForRoute } from '@/lib/seo';
 export const metadata = metadataForRoute('de', '/ai');
-const questions = [["Stellen Sie eine Geschäftsfrage", "Fragen Sie nach Umsatz, Gästen, durchschnittlichem Scheck, Tabellenumsatz, Verkaufszeitpunkt, Bestsellern, Zahlungsmix oder Rentabilität mit den in der konfigurierten Umgebung verfügbaren Daten."], ["Erhalten Sie ein tägliches Briefing", "Fassen Sie den vorherigen Zeitraum zusammen, heben Sie ungewöhnliche Bewegungen hervor und listen Sie die Metriken oder Orte auf, die einen genaueren Blick verdienen."], ["Ermittlung einer Ausschreibung", "Bewegen Sie sich von einem ungewöhnlichen Signal zu der Quellenperiode, Kategorie, Standort oder Betriebskontext dahinter."], ["Vergleich und Prognose", "Vergleichen Sie Zeiträume oder Standorte und verwenden Sie historische Muster, um Nachfrage-, Verkaufs- und Rentabilitätsprognosen zu unterstützen."]];
+const questions = [["Stellen Sie eine Geschäftsfrage", "Fragen Sie nach Umsatz, Gästen, Durchschnittsbon, Tischwechsel, Verkaufszeitpunkt, Bestsellern, Zahlungsmix oder Rentabilität mit den in der konfigurierten Umgebung verfügbaren Daten."], ["Erhalten Sie ein tägliches Briefing", "Fassen Sie den vorherigen Zeitraum zusammen, heben Sie ungewöhnliche Bewegungen hervor und listen Sie die Metriken oder Orte auf, die einen genaueren Blick verdienen."], ["Auffälligkeiten untersuchen", "Bewegen Sie sich von einem ungewöhnlichen Signal zu der Datenzeitraum, Kategorie, Standort oder Betriebskontext dahinter."], ["Vergleich und Prognose", "Vergleichen Sie Zeiträume oder Standorte und verwenden Sie historische Muster, um Nachfrage-, Verkaufs- und Rentabilitätsprognosen zu unterstützen."]];
 const aiDetails = {
-  factsEyebrow: "KI-Umfang und Schutzmaßnahmen",
-  factsTitle: "Sechs Assistenzmodi können über neun Managementmetriken hinweg funktionieren, wobei die menschliche Überprüfung im Workflow verbleibt.",
-  factsIntro: "Diese Zählungen beschreiben den Warenumfang. Genauigkeit und Nützlichkeit hängen von Quelldaten, Definitionen, Berechtigungen und der gestellten Frage ab.",
-  facts: [['06', "KI-assistierte Aktionen", "Fragen, Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen im nächsten Schritt bilden den aktuellen KI-Bereich."], ['09', "Managementmetriken", "Umsatz, Gäste, durchschnittlicher Scheck, Tabellenumsatz, Verkaufszeitpunkt, Bestseller, Zahlungsmix, Prognose und Rentabilität bieten Geschäftskontext."], ['04', "Entscheidungsrollen", "Eigentümer, Manager, Finanzen und Multi-Location-Führung können die gleichen Daten für verschiedene Entscheidungen untersuchen."], ['01', "Menschlicher Entscheidungsträger", "KI kann Beweise organisieren und vorschlagen, was zu inspizieren ist; das Restaurantteam überprüft und entscheidet."]],
-  workflowEyebrow: "Eine verantwortungsvolle KI Untersuchung",
-  workflowTitle: "Wie sich eine Restaurantfrage von den Quelldaten zu einer überprüften nächsten Aktion bewegt.",
-  workflowIntro: "Quelle, Zeitraum und metrische Definition sollten während der gesamten Untersuchung sichtbar bleiben.",
-  workflow: [["Wählen Sie eine spezifische Frage", "Beginnen Sie mit einer Frage, z. B. was sich geändert hat, welcher Standort sich bewegt hat oder warum ein Artikelrand Aufmerksamkeit erfordert."], ["Bestätige die verfügbare Quelle", "Identifizieren Sie die Module, Orte, Zeiträume und Definitionen, die die Frage unterstützen können."], ["Erstellen einer Zusammenfassung oder eines Vergleichs", "Verwenden Sie die verfügbaren Daten, um die Bewegung zu beschreiben, zu vergleichen oder zu prognostizieren, ohne fehlende Eingaben zu verbergen."], ["Prüfung der Beweise", "Öffnen Sie die Quellmetrik, den Zeitraum, den Ort, die Kategorie oder das Element hinter der Ausgabe von KI."], ["Entscheiden und überprüfen Sie das Ergebnis", "Eine Person wählt die Aktion aus, zeichnet die Frage auf, die erneut besucht werden soll, und vergleicht die gleiche Metrik nach der Betriebsänderung."]],
-  rolesTitle: "KI sollte die Untersuchung für jede Entscheidungsrolle verkürzen, ohne jeder Rolle die gleiche Antwort zu geben.",
-  rolesIntro: "Berechtigungen und Geschäftskontext bestimmen, welche Fragen und Quellansichten jeder Person zur Verfügung stehen sollten.",
-  roleViews: [["Eigentümer", "Vergleicht Perioden oder Standorte, überprüft die Rentabilitätsbewegung und fragt, welches Geschäftssignal Aufmerksamkeit verdient."], ["Betriebsleiter", "Untersucht Verschiebungsausnahmen, Tabellen- oder Verkaufsbewegungen und die Betriebsereignisse hinter einem ungewöhnlichen Ergebnis."], ["Finanzen", "Überprüfen Sie den Umsatz-, Zahlungs-, Kategorie- und Kostenkontext, bevor Sie eine Finanzübersicht oder einen Vergleich annehmen."], ["Multilokale Führung", "Vergleicht Websites mit konsistenten Definitionen und behält gleichzeitig die Möglichkeit, den lokalen Quellkontext zu inspizieren."]],
-  metricsEyebrow: "Bewerten der KI-Schicht",
-  metricsTitle: "Messen Sie die Rückverfolgbarkeit und den Entscheidungsnutzen, nicht nur, wie fließend die Antwort klingt.",
-  metricsIntro: "Eine KI-Funktion sollte anhand von dokumentierten Fragen, Quellenabdeckung und tatsächlichen Ergebnissen im Restaurant-Workflow überprüft werden.",
-  metrics: [["Quellendeckung", "Verfolgen Sie, ob die von einer Frage benötigten Daten vorhanden, aktuell und an den richtigen Ort oder Zeitraum abgebildet sind."], ["Rückverfolgbarkeit der Antwort", "Überprüfen Sie, ob der Benutzer von einer Zusammenfassung zurück in den Metrik-, Filter- und Quellkontext dahinter wechseln kann."], ["Prognosefehler", "Vergleichen Sie die prognostizierten und tatsächlichen Ergebnisse mit dem gleichen Zeitraum und der gleichen Definition, anstatt Prognosen als Garantien darzustellen."], ["Untersuchungszeit", "Baseline, wie lange eine definierte Managementfrage dauert, um vor und nach dem KI-assisted Workflow zu untersuchen."]],
-  implementationTitle: "Definieren Sie den Datenvertrag und die Grenze für die menschliche Überprüfung, bevor Sie KI-Ausgaben aktivieren.",
-  implementationIntro: "Die sicherste KI-Implementierung ist explizit darüber, was das System weiß, was es nicht sehen kann und wer die endgültige Entscheidung besitzt.",
-  implementation: ["Genehmigte Datenquellen, Orte und historische Perioden", "Metrische Definitionen und Vergleichsregeln", "Rollenberechtigungen für Fragen und Quellansichten", "Mindestdatenqualität und -frische", "Human Review für operative und kommerzielle Maßnahmen", "Dokumentierte Ausschlüsse, Beschränkungen und Eskalationspfade"],
-  faqs: [["Führt PayMyDine KI das Restaurant automatisch aus?", "Nein. Die aktuelle Positionierung ist KI-Unterstützung und Entscheidungsunterstützung, nicht autonome Betriebssteuerung."], ["Kann KI eine Frage ohne die Quelldaten beantworten?", "Eine nützliche Antwort erfordert die relevanten Daten, Definition, Zeitraum und Berechtigungen. Fehlende Inputs sollten gezeigt und nicht stillschweigend erfunden werden."], ["Sind Prognosen garantiert?", "Nein. Prognosen sollten an den tatsächlichen Ergebnissen gemessen und als Schätzungen und nicht als Versprechen überprüft werden."], ["Können verschiedene Rollen unterschiedliche Fragen stellen?", "Ja. Rollenberechtigungen und verfügbare Quellansichten sollten die Fragen und die für jede Verantwortung angemessene Tiefe steuern."]]
+  factsEyebrow: "KI-Funktionen und Grenzen",
+  factsTitle: "Sechs KI-gestützte Funktionen für neun Managementkennzahlen – Entscheidungen bleiben beim Team.",
+  factsIntro: "Die Zahlen beschreiben den vorgesehenen Funktionsumfang. Aussagekraft und Genauigkeit hängen von den verfügbaren Daten, klaren Definitionen und Berechtigungen ab.",
+  facts: [
+    ['06', 'KI-gestützte Funktionen', 'Fragen beantworten, Tagesübersichten erstellen, Auffälligkeiten erkennen, Zeiträume vergleichen, Prognosen unterstützen und nächste Prüfschritte vorschlagen.'],
+    ['09', 'Managementkennzahlen', 'Umsatz, Gästezahl, Durchschnittsbon, Tischwechsel, Verkäufe nach Tageszeit, Bestseller, Zahlungsarten, Prognosen und Rentabilität.'],
+    ['04', 'Entscheidungsrollen', 'Geschäftsführung, Management, Finanzen und standortübergreifende Leitung nutzen dieselben Daten für unterschiedliche Fragen.'],
+    ['01', 'Menschliche Entscheidung', 'KI kann Informationen aufbereiten und Hinweise geben. Das Restaurantteam überprüft die Ergebnisse und entscheidet.']
+  ],
+  workflowEyebrow: "KI sinnvoll und nachvollziehbar einsetzen",
+  workflowTitle: "Von einer konkreten Restaurantfrage zur überprüften Maßnahme.",
+  workflowIntro: "Datenquelle, Zeitraum und Definition der Kennzahl müssen bei jedem Schritt erkennbar bleiben.",
+  workflow: [
+    ['Konkrete Frage stellen', 'Zum Beispiel: Was hat sich verändert? Welcher Standort weicht ab? Warum fällt der Ertrag eines Artikels auf?'],
+    ['Verfügbare Daten prüfen', 'Feststellen, welche Module, Standorte, Zeiträume und Kennzahlendefinitionen die Frage beantworten können.'],
+    ['Ergebnisse zusammenfassen oder vergleichen', 'Die vorhandenen Daten auswerten, vergleichen oder für Prognosen nutzen – ohne fehlende Angaben zu verbergen.'],
+    ['Belege nachvollziehen', 'Die Kennzahl sowie Zeiträume, Standorte, Kategorien und Artikel hinter der KI-Ausgabe öffnen.'],
+    ['Entscheiden und Wirkung überprüfen', 'Das Team legt die Maßnahme fest, dokumentiert die offene Frage und vergleicht dieselbe Kennzahl nach der Änderung.']
+  ],
+  rolesTitle: "Jede Rolle erhält Antworten, die zu ihren Aufgaben und Berechtigungen passen.",
+  rolesIntro: "Zugriffsrechte und betrieblicher Kontext bestimmen, welche Fragen und Daten eine Person sehen darf.",
+  roleViews: [
+    ['Geschäftsführung', 'Vergleicht Zeiträume oder Standorte, prüft Veränderungen der Rentabilität und erkennt wichtige Geschäftssignale.'],
+    ['Betriebsleitung', 'Untersucht Auffälligkeiten während der Schicht, Tischwechsel und Umsatzveränderungen sowie deren Ursachen.'],
+    ['Finanzen', 'Prüft Umsatz, Zahlungen, Kategorien und Kosten, bevor Berichte oder Vergleiche übernommen werden.'],
+    ['Standortübergreifende Leitung', 'Vergleicht Standorte anhand einheitlicher Kennzahlen und kann die lokalen Daten dahinter einsehen.']
+  ],
+  metricsEyebrow: "Qualität der KI-Auswertung bewerten",
+  metricsTitle: "Entscheidend sind nachvollziehbare Ergebnisse und nützliche Maßnahmen, nicht nur flüssige Antworten.",
+  metricsIntro: "KI-Funktionen sollten mit dokumentierten Fragen, ausreichender Datenabdeckung und messbaren Ergebnissen im Betrieb geprüft werden.",
+  metrics: [
+    ['Datenabdeckung', 'Prüfen, ob benötigte Daten vorhanden, aktuell und dem richtigen Standort sowie Zeitraum zugeordnet sind.'],
+    ['Nachvollziehbarkeit', 'Prüfen, ob sich eine Zusammenfassung auf die zugrunde liegende Kennzahl, Filter und Datenquelle zurückführen lässt.'],
+    ['Prognoseabweichung', 'Prognosen und tatsächliche Ergebnisse für denselben Zeitraum und dieselbe Kennzahlendefinition vergleichen.'],
+    ['Zeit für die Analyse', 'Messen, wie lange die Klärung einer festgelegten Managementfrage vor und nach Einführung des KI-gestützten Ablaufs dauert.']
+  ],
+  implementationTitle: "Vor dem Einsatz von KI müssen Datenbasis und menschliche Freigaben feststehen.",
+  implementationIntro: "Eine verantwortungsvolle Umsetzung beschreibt, welche Daten KI nutzen darf, welche Informationen fehlen und wer Entscheidungen trifft.",
+  implementation: [
+    'Freigegebene Datenquellen, Standorte und historische Zeiträume',
+    'Kennzahlendefinitionen und Vergleichsregeln',
+    'Berechtigungen je Rolle und Datenansicht',
+    'Mindestanforderungen an Datenqualität und Aktualität',
+    'Prüfung durch Menschen bei betrieblichen und wirtschaftlichen Maßnahmen',
+    'Dokumentierte Grenzen, Ausschlüsse und Eskalationswege'
+  ],
+  faqs: [
+    ['Steuert PayMyDine KI den Restaurantbetrieb automatisch?', 'Nein. PayMyDine KI dient der Analyse und Entscheidungsunterstützung, nicht der autonomen Steuerung des Betriebs.'],
+    ['Kann KI ohne zugrunde liegende Daten eine verlässliche Antwort liefern?', 'Nein. Dafür sind passende Daten, klare Definitionen, ein Zeitraum und die erforderlichen Berechtigungen nötig. Fehlende Angaben dürfen nicht verborgen werden.'],
+    ['Sind Prognosen garantiert?', 'Nein. Prognosen sind Schätzungen. Das Team sollte sie mit tatsächlichen Ergebnissen vergleichen und regelmäßig überprüfen.'],
+    ['Können verschiedene Rollen unterschiedliche Fragen stellen?', 'Ja. Zugriffsrechte und verfügbare Datenansichten bestimmen, welche Fragen und Details für die jeweilige Rolle zugänglich sind.']
+  ]
 };
 export default function AIPage() {
   return <>
-      <PageHero eyebrow={"6 KI-gestützte Aktionen"} title={"Fragen Sie nach Einnahmen, Gästen, Tabellen oder Rentabilität und verfolgen Sie die Antwort auf die Quelldaten."} intro={"PayMyDine KI kann Fragen, tägliche Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen im nächsten Schritt über die in Ihrem Setup verfügbaren Restaurantdaten hinweg unterstützen. Sie unterstützt Entscheidungen; sie ersetzt sie nicht."} image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp" accent="green" />
+      <PageHero eyebrow={"6 KI-gestützte Aktionen"} title={"Stellen Sie Fragen zu Umsatz, Gästen, Tischen oder Rentabilität und prüfen Sie die zugrunde liegenden Daten."} intro={"PayMyDine KI kann Fragen, tägliche Briefings, Warnungen, Vergleiche, Prognosen und Untersuchungen im nächsten Schritt über die in Ihrem Setup verfügbaren Restaurantdaten hinweg unterstützen. Sie unterstützt Entscheidungen; sie ersetzt sie nicht."} image="/site-assets/custom/page-heroes/ai-hero-chatgpt-20260813.webp" accent="green" />
 
       <section className="section highlightSection">
         <div className="container highlightGrid">
@@ -44,8 +77,8 @@ export default function AIPage() {
             <div className="storyFeatureImage"><img src="/site-assets/home-ai-story-20261005/pay-my-dine-cafe-dashboard.webp" alt="" loading="lazy" /></div>
             <div className="storyFeatureCopy">
               <span className="eyebrow">9 Metriken im Kontext</span>
-              <h2>Beginnen Sie mit einer Zahl und halten Sie dann den Vergleichszeitraum und die Betriebsursache sichtbar.</h2>
-              <p>Einnahmen, Gäste, durchschnittlicher Scheck, Tabellenumsatz, Verkaufszeitpunkt, Bestseller, Zahlungsmix, Prognosen und Rentabilität sind nützlicher, wenn der Eigentümer von der Zusammenfassung in die dahinter liegende Quellansicht wechseln kann.</p>
+              <h2>Beginnen Sie mit einer Kennzahl und prüfen Sie den Zeitraum sowie die betrieblichen Ursachen.</h2>
+              <p>Einnahmen, Gäste, Durchschnittsbon, Tischwechsel, Verkaufszeitpunkt, Bestseller, Zahlungsmix, Prognosen und Rentabilität sind nützlicher, wenn der Eigentümer von der Zusammenfassung in die dahinter liegende Quellansicht wechseln kann.</p>
               <a className="textArrow" href="/de/solutions/insights">Siehe die 9 Management-Metriken <Icon name="arrow" size={15} /></a>
             </div>
           </article>
@@ -71,15 +104,15 @@ export default function AIPage() {
           </div>
           <div className="capabilityList">
             <span><Icon name="check" size={16} />Natürliche Sprachfragen</span>
-            <span><Icon name="check" size={16} />Tägliches KI Briefing</span>
+            <span><Icon name="check" size={16} />Tägliches KI-Briefing</span>
             <span><Icon name="check" size={16} />Intelligente Warnungen</span>
             <span><Icon name="check" size={16} />Zeitraum- und Standortvergleich</span>
             <span><Icon name="check" size={16} />Unterstützung bei der Prognose</span>
-            <span><Icon name="check" size={16} />Nächste Metrik zu untersuchen</span>
+            <span><Icon name="check" size={16} />Nächste Kennzahl zur Prüfung</span>
           </div>
         </div>
       </section>
 
-      <CTA title={"Bringen Sie eine echte Managementfrage zu einer KI-Demo."} body={"Wir werden herausfinden, welche PayMyDine-Daten benötigt werden, die Quellenansichten hinter der Antwort zeigen und erklären, wo eine menschliche Überprüfung unerlässlich bleibt."} />
+      <CTA title={"Bringen Sie eine echte Managementfrage zu einer KI-Demo."} body={"Wir werden herausfinden, welche PayMyDine-Daten benötigt werden, die Quellenansichten hinter der Antwort zeigen und erklären, wo eine Prüfung durch das Team unerlässlich bleibt."} />
     </>;
 }

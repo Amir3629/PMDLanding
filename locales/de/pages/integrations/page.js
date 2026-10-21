@@ -4,38 +4,71 @@ import { Icon } from "@/locales/de/components/Icons";
 import ProductDetailSections from "@/locales/de/components/ProductDetailSections";
 import { metadataForRoute } from '@/lib/seo';
 export const metadata = metadataForRoute('de', '/integrations');
-const capabilities = [["Kassendaten", "Bringen Sie unterstützte Bestell-, Verkaufs-, Menü- oder Tabellendaten in das PayMyDine-Betriebsbild, ohne die Mitarbeiter zu bitten, die gleichen Informationen erneut einzugeben."], ["Rechnungslegungskontext", "Übergeben oder Anpassen der verfügbaren Berichtsfelder, die vom Finanz-Workflow benötigt werden, abhängig vom verbundenen System und den Berechtigungen."], ["Lieferkanäle", "Halten Sie unterstützte Lieferaufträge nach Kanälen unterscheidbar, während Sie sie in das breitere Workload- und Verkaufsbild aufnehmen."], ["Zahlungsdienstleister", "Verbinden Sie den unterstützten Zahlungsstatus und den Abwicklungskontext mit der Tisch- und Gäste-Checkout-Reise."]];
+const capabilities = [["Kassendaten", "Bringen Sie unterstützte Bestell-, Verkaufs-, Menü- oder Tabellendaten in das PayMyDine-Betriebsbild, ohne die Mitarbeiter zu bitten, die gleichen Informationen erneut einzugeben."], ["Buchhaltungsdaten", "Übergeben oder Anpassen der verfügbaren Berichtsfelder, die vom Finanz-Workflow benötigt werden, abhängig vom verbundenen System und den Berechtigungen."], ["Lieferkanäle", "Halten Sie unterstützte Lieferaufträge nach Kanälen unterscheidbar, während Sie sie in das breitere Workload- und Verkaufsbild aufnehmen."], ["Zahlungsdienstleister", "Verbinden Sie den unterstützten Zahlungsstatus und den Abwicklungskontext mit der Tisch- und Gäste-Checkout-Reise."]];
 const integrationDetails = {
-  factsEyebrow: "Integration und Umfang",
-  factsTitle: "Vier Integrationstypen, sechs zentrale Steuerungen und vier aktuell benannte Anbietergespräche.",
-  factsIntro: "Ein benannter Anbieter garantiert nicht jedes Feld oder jeden Workflow. Der Umfang hängt von verfügbaren Schnittstellen, Berechtigungen und dem vereinbarten Datenpfad ab.",
-  facts: [['04', "Integrationsarten", "Kassensystem, Buchhaltung, Lieferung und Zahlungsverbindungen bilden die aktuellen Integrationskategorien."], ['06', "zentrale Steuerung", "Zentrale Eigentümeransicht, geteilte Menüs, zentrale Berichterstattung, Inventar, Lebensmittelkosten und Einkaufsunterstützung Gruppenoperationen."], ['04', "Namensgeber", "Die aktuellen Produktdatennamen SumUp, ready2order, Lightspeed und Square, je nach Schnittstelle und Projektumfang."], ['05', "Lieferphasen", "Discovery, Field Mapping, Access, Testing und Monitoring schaffen einen praktischen Integrationspfad."]],
-  workflowEyebrow: "Vom Systeminventar zur überwachten Verbindung",
-  workflowTitle: "Wie definiert man eine Integration um einen echten Restaurant-Workflow herum?",
-  workflowIntro: "Beginnen Sie mit der Geschäftsmaßnahme oder dem Berichtsbedarf und entscheiden Sie dann, ob und wie sich Daten bewegen sollen.",
-  workflow: [["Identifizieren Sie die Quelle der Wahrheit", "Dokumentieren Sie, welches System heute Bestellungen, Menüs, Zahlungen, Buchhaltungs-, Lager- oder Standortdaten besitzt."], ["Definieren Sie Felder und Richtung", "Listen Sie die genauen Felder auf, die erforderlich sind, ob Daten in PayMyDine verschoben werden und welche Rolle das Ergebnis verwendet."], ["Bestätigen Sie Zugriffe und Limits", "Überprüfen Sie die Provider-Schnittstelle, Authentifizierung, Berechtigungen, Tariflimits und Statusdetails, die tatsächlich verfügbar sind."], ["Test mit Abgleichfällen", "Validieren Sie normale Aufzeichnungen, Updates, Fehler und Duplikate mit vereinbarten Beispielen, bevor Sie live gehen."], ["Überwachung und Ausdehnung", "Verfolgen Sie Frische, fehlgeschlagene Übertragungen und Abgleichsausnahmen, bevor Sie den Konnektorumfang erweitern."]],
-  rolesTitle: "Der Integrationswert unterscheidet sich für Implementierung, Betrieb, Finanzen und Eigentum.",
-  rolesIntro: "Ein Connector sollte einen echten manuellen Schritt entfernen oder eine Datenlücke für eine benannte Rolle schließen.",
-  roleViews: [["Implementierung oder IT", "Besitzt Authentifizierung, Field Mapping, Testfälle, Fehlerbehandlung und technische Anbieterkommunikation."], ["Restaurantbetrieb", "Verwendet verbundene Bestellungen, Menü, Tabelle oder Lieferkontext, ohne die gleichen Informationen erneut einzugeben."], ["Finanzen", "Bewertet Zahlungs-, Buchhaltungs- und Abstimmungsfelder mit einer klaren Wahrheitsquelle."], ["Eigentümer und Multi-Location Leadership", "Vergleicht Standorte, gemeinsame Standards, Inventar und Berichterstattung, während der lokale Kontext beibehalten wird."]],
-  metricsEyebrow: "Integrationsgesundheit",
-  metricsTitle: "Messen Sie, ob die Verbindung vollständig, frisch ist und die manuelle Abstimmung reduziert wird.",
-  metricsIntro: "Ziele sollten pro Anbieter und Workflow vereinbart werden, da nicht jede Schnittstelle die gleichen Aktualisierungs- oder Fehlerdetails unterstützt.",
-  metrics: [["Sync Erfolgsquote", "Verfolgen Sie erfolgreiche Aufzeichnungen gegen versuchte Übertragungen für die vereinbarten Datenobjekte und den Zeitraum."], ["Frische der Daten", "Messen Sie die Verzögerung zwischen dem Quellereignis und seinem verwendbaren Erscheinungsbild im Ziel-Workflow."], ["Ausnahmen für den Abgleich", "Zählen Sie fehlende, doppelte oder nicht übereinstimmende Datensätze, die eine Untersuchung durch Operationen oder Finanzen erfordern."], ["Manuelle Wiedereingabezeit", "Baseline die Zeit, die das Personal für das Kopieren oder Abgleichen von Daten vor und nach der Einführung der Integration aufgewendet hat."]],
-  implementationTitle: "Schreiben Sie den Datenvertrag, bevor Sie den Connector erstellen oder aktivieren.",
-  implementationIntro: "Im Vertrag sollten Quelle, Ziel, Eigentümer, Aktualisierungserwartung und Fehlerprozess für jede Feldgruppe erläutert werden.",
-  implementation: ["Dokumentation des Anbieters, Anmeldeinformationen und genehmigte Berechtigungen", "Source-of-Truth-Entscheidung für jedes Datenobjekt", "Feldabbildung, Richtung und Aktualisierung", "Ort, Menü, Zahlungs- und Kontokennung", "Fehlerhaltung, Alarmierung und Abgleich", "Normal-, Update-, Duplikat- und Fehlertestfälle"],
-  faqs: [["Welche Anbieter werden derzeit benannt?", "Die aktuellen Produktdatennamen SumUp, ready2order, Lightspeed und Square. Die genaue Fähigkeit hängt weiterhin von der verfügbaren Schnittstelle und dem vereinbarten Projektumfang ab."], ["Muss PayMyDine den Kassensystem ersetzen?", "Nein. Die Integrationsstrategie kann das bestehende Kassensystem als Quelle der Wahrheit beibehalten und ausgewählte PayMyDine-Workflows und -Ansichten hinzufügen."], ["Ist jede Integration in Echtzeit?", "Nein. Frische hängt von der Provider-Schnittstelle, Berechtigungen, Polling- oder Event-Optionen und dem Deployment-Design ab."], ["Funktioniert Inventar ohne Produkt- und Kostendaten?", "Kein vollständiges Inventar oder Lebensmittelkostenbild kann ohne den erforderlichen Artikel, Lager, Kauf und Kostenaufwand erstellt werden."]]
+  factsEyebrow: "Integrationen und Funktionsumfang",
+  factsTitle: "Vier Integrationsbereiche, sechs zentrale Funktionen und vier derzeit genannte Anbieter.",
+  factsIntro: "Die Nennung eines Anbieters bedeutet nicht, dass jede Funktion verfügbar ist. Entscheidend sind Schnittstellen, Berechtigungen und der vereinbarte Datenaustausch.",
+  facts: [
+    ['04', 'Integrationsbereiche', 'Kassensysteme, Buchhaltung, Lieferdienste und Zahlungen bilden die vorgesehenen Anbindungsbereiche.'],
+    ['06', 'Zentrale Funktionen', 'Übergreifende Geschäftsführungsansicht, gemeinsame Menüs, Berichte, Warenbestand, Wareneinsatz und Einkaufsinformationen.'],
+    ['04', 'Genannte Anbieter', 'SumUp, ready2order, Lightspeed und Square werden als mögliche Anbieter berücksichtigt – abhängig von verfügbaren Schnittstellen.'],
+    ['05', 'Projektphasen', 'Bedarf klären, Datenfelder zuordnen, Zugriff einrichten, testen und laufend überwachen.']
+  ],
+  workflowEyebrow: "Vom bestehenden System zur überwachten Anbindung",
+  workflowTitle: "Integrationen beginnen mit einem konkreten Ablauf im Restaurant.",
+  workflowIntro: "Erst den benötigten Arbeitsschritt oder Bericht festlegen. Danach entscheiden, welche Daten zwischen welchen Systemen fließen sollen.",
+  workflow: [
+    ['Führende Datenquelle festlegen', 'Dokumentieren, welches System Bestellungen, Menüs, Zahlungen, Buchhaltung, Warenbestand und Standorte verwaltet.'],
+    ['Datenfelder und Richtung bestimmen', 'Festlegen, welche Felder erforderlich sind, wohin sie übertragen werden und welche Teamrolle sie benötigt.'],
+    ['Zugriff und Grenzen prüfen', 'Schnittstellen, Anmeldung, Berechtigungen, Tarifgrenzen und verfügbare Statusinformationen mit dem Anbieter klären.'],
+    ['Abgleich und Fehlerfälle testen', 'Normale Datensätze, Änderungen, Fehler und Duplikate anhand vereinbarter Beispiele prüfen.'],
+    ['Anbindung überwachen und erweitern', 'Datenaktualität, fehlgeschlagene Übertragungen und Abweichungen beobachten, bevor weitere Funktionen hinzukommen.']
+  ],
+  rolesTitle: "Integrationen unterstützen Betrieb, Finanzen, Geschäftsführung und Implementierung auf unterschiedliche Weise.",
+  rolesIntro: "Eine Anbindung sollte einen konkreten manuellen Schritt vermeiden oder eine wichtige Informationslücke schließen.",
+  roleViews: [
+    ['Implementierung und IT', 'Verantwortlich für Authentifizierung, Feldzuordnung, Tests, Fehlerbehandlung und Abstimmung mit Anbietern.'],
+    ['Restaurantbetrieb', 'Nutzt verknüpfte Bestellungen, Menüs, Tische und Lieferinformationen, ohne Daten erneut einzutragen.'],
+    ['Finanzen', 'Prüft Zahlungen, Buchhaltungsdaten und Abgleichsprozesse mit einer klar festgelegten führenden Datenquelle.'],
+    ['Geschäftsführung und Standortleitung', 'Vergleicht Standorte, gemeinsame Standards, Bestände und Berichte, ohne lokale Besonderheiten zu verlieren.']
+  ],
+  metricsEyebrow: "Qualität der Anbindung",
+  metricsTitle: "Messen, ob Daten vollständig und aktuell ankommen und manuelle Abstimmungen abnehmen.",
+  metricsIntro: "Zielwerte müssen zum jeweiligen Anbieter und Ablauf passen, da Schnittstellen unterschiedliche Aktualisierungs- und Fehlerdaten liefern.",
+  metrics: [
+    ['Erfolgsquote der Synchronisation', 'Erfolgreich übertragene Datensätze mit allen Übertragungsversuchen des festgelegten Zeitraums vergleichen.'],
+    ['Datenaktualität', 'Die Zeit zwischen einem Ereignis im Quellsystem und seiner Verfügbarkeit im Zielsystem messen.'],
+    ['Abgleichsabweichungen', 'Fehlende, doppelte oder widersprüchliche Datensätze erfassen, die geprüft werden müssen.'],
+    ['Zeit für manuelle Nacharbeit', 'Erfassen, wie viel Zeit das Team vor und nach Einführung der Anbindung für Kopieren und Abgleichen benötigt.']
+  ],
+  implementationTitle: "Vor dem Aufbau jeder Anbindung braucht es eine klare Datenvereinbarung.",
+  implementationIntro: "Darin werden Quelle, Ziel, Zuständigkeit, Aktualisierung und Umgang mit Fehlern für jede Datengruppe festgelegt.",
+  implementation: [
+    'Anbieterdokumentation, Zugangsdaten und freigegebene Berechtigungen',
+    'Führendes System für jedes Datenobjekt',
+    'Feldzuordnung, Übertragungsrichtung und Aktualisierungsintervall',
+    'Zuordnung von Standort-, Menü-, Zahlungs- und Kontokennungen',
+    'Fehlerbehandlung, Warnmeldungen und Datenabgleich',
+    'Tests für Normalfälle, Änderungen, Duplikate und Fehler'
+  ],
+  faqs: [
+    ['Welche Anbieter werden derzeit genannt?', 'Als mögliche Anbieter werden SumUp, ready2order, Lightspeed und Square genannt. Die konkreten Möglichkeiten hängen von Schnittstellen und Projektumfang ab.'],
+    ['Muss PayMyDine das bestehende Kassensystem ersetzen?', 'Nein. Das bestehende Kassensystem kann weiterhin die führende Datenquelle sein, während PayMyDine ausgewählte Abläufe und Ansichten ergänzt.'],
+    ['Ist jede Integration in Echtzeit?', 'Nein. Die Aktualität hängt von der Schnittstelle, den Berechtigungen, der Übertragungsmethode und der technischen Umsetzung ab.'],
+    ['Funktioniert die Bestandsverwaltung ohne Artikel- und Kostendaten?', 'Nein. Für zuverlässige Bestands- und Wareneinsatzberichte werden die entsprechenden Artikel-, Lager-, Einkaufs- und Kostendaten benötigt.']
+  ]
 };
 export default function IntegrationsPage() {
   return <>
-      <PageHero eyebrow={"4 Integrationstypen - 6 zentrale Steuerungen"} title={"Verbinden Sie die Systeme, die bereits Restaurantdaten enthalten, und machen Sie diese Daten für die nächste Rolle nützlich."} intro={"PayMyDine kann mit unterstützten Kassen-, Buchhaltungs-, Liefer- und Zahlungsumgebungen arbeiten und dann zentrale Eigentümeransichten, freigegebene Menüs, Berichte, Inventar, Lebensmittelkosten und Einkaufskontext hinzufügen, wenn die Quellsysteme dies zulassen."} image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp" accent="green" />
+      <PageHero eyebrow={"4 Integrationstypen - 6 zentrale Funktionenen"} title={"Verbinden Sie die Systeme, die bereits Restaurantdaten enthalten, und machen Sie diese Daten für die nächste Rolle nützlich."} intro={"PayMyDine kann mit unterstützten Kassen-, Buchhaltungs-, Liefer- und Zahlungsumgebungen arbeiten und dann zentrale Geschäftsführungsansichten, freigegebene Menüs, Berichte, Warenbestand, Wareneinsatz und Einkaufskontext hinzufügen, wenn die Quellsysteme dies zulassen."} image="/site-assets/custom/page-heroes/integrations-hero-chatgpt-20260814.webp" accent="green" />
 
       <section className="section integrationStepsSection">
         <div className="container">
           <div className="sectionHeading centerHeading">
             <span className="eyebrow">Definieren Sie den Datenpfad vor dem Connector</span>
             <h2>Entscheiden Sie für jede Integration, welche Daten sich bewegen, welches System autoritativ bleibt und wer das Ergebnis verwendet.</h2>
-            <p>Eine nützliche Integration entfernt den Wiedereintritt oder fehlenden Kontext. Es sollte keine Daten verschieben, nur weil eine Verbindung technisch möglich ist.</p>
+            <p>Eine sinnvolle Anbindung spart doppelte Dateneingaben oder schließt eine Informationslücke. Daten sollten nicht allein deshalb übertragen werden, weil es technisch möglich ist.</p>
           </div>
           <div className="highlightGrid">
             {capabilities.map(([title, body], index) => <article className="highlightCard" key={title}>
@@ -50,10 +83,10 @@ export default function IntegrationsPage() {
           <div>
             <span className="eyebrow darkEyebrow">6 Kontrollen an mehreren Standorten</span>
             <h2>Vergleichen Sie Standorte zentral, während jedes Restaurant seinen lokalen Betriebskontext beibehält.</h2>
-            <p>Eigentümer können die Standortleistung und gemeinsame Standards überprüfen, ohne jeden Standort in den gleichen Grundriss, das gleiche Servicemodell oder die gleiche Teamstruktur zu verwandeln.</p>
+            <p>Die Geschäftsführung kann die Leistung der Standorte und gemeinsame Standards überprüfen, ohne jeden Standort in den gleichen Grundriss, das gleiche Servicemodell oder die gleiche Teamstruktur zu verwandeln.</p>
           </div>
           <div className="integrationNameGrid">
-            {["Zentrale Eigentümeransicht", "Gemeinsame Menüs", "Zentrale Meldung", "Bestandsaufnahme", "Lebensmittelkosten", "Einkauf"].map(item => <span key={item}><Icon name="check" size={17} />{item}</span>)}
+            {["Zentrale Geschäftsführungsansicht", "Gemeinsame Menüs", "Zentrale Berichte", "Bestandsaufnahme", "Wareneinsatz", "Einkauf"].map(item => <span key={item}><Icon name="check" size={17} />{item}</span>)}
           </div>
         </div>
       </section>
@@ -71,9 +104,9 @@ export default function IntegrationsPage() {
           <article>
             <img src="/site-assets/custom/integrations-operating-picture.webp" alt="" />
             <div>
-              <span className="eyebrow">Ein Business-Bild</span>
+              <span className="eyebrow">Ein gemeinsamer Geschäftsüberblick</span>
               <h2>Lesen Sie Verkauf, Lager, Einkauf und Standortleistung zusammen.</h2>
-              <p>Wo die angeschlossenen Systeme die Daten bereitstellen, können Eigentümer Standortergebnisse vergleichen, die Lebensmittelkostenbewegung verstehen und eine Geschäftsnummer bis zur Betriebsquelle zurückverfolgen.</p>
+              <p>Wo die angeschlossenen Systeme die Daten bereitstellen, können Eigentümer Standortergebnisse vergleichen, die Wareneinsatzbewegung verstehen und eine Geschäftsnummer bis zur Betriebsquelle zurückverfolgen.</p>
             </div>
           </article>
         </div>
@@ -81,6 +114,6 @@ export default function IntegrationsPage() {
 
       <ProductDetailSections details={integrationDetails} productName={"Integrationen, Multi-Location & Inventory"} />
 
-      <CTA title={"Überprüfen Sie eine echte Integration, bevor Sie jeden möglichen Connector besprechen."} body={"Sagen Sie uns das System, die Datenfelder, die Richtung, die Aktualisierungsanforderung und die Rolle, die das Ergebnis benötigt. Wir werden den praktischen Integrationsbereich um diesen Workflow herum definieren."} />
+      <CTA title={"Prüfen Sie eine konkrete Integration, bevor Sie weitere Anbindungen planen."} body={"Nennen Sie uns das System, die benötigten Datenfelder, die Übertragungsrichtung, die gewünschte Aktualität und die zuständige Rolle. Daraus entwickeln wir einen realistischen Integrationsumfang."} />
     </>;
 }

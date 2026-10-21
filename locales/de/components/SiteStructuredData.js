@@ -2,7 +2,7 @@ import { SITE_URL, absoluteUrl, localisedPath } from '@/lib/seo';
 const COPY = {
   en: {
     language: 'en',
-    description: "KI-gestützt Restaurant-Betriebsplattform, die Reservierungen, Bestellung, Küche, Zahlungen, Gäste CRM, Analysen und Integrationen verbindet."
+    description: "KI-gestützte Restaurant-Betriebsplattform, die Reservierungen, Bestellung, Küche, Zahlungen, Gäste CRM, Analysen und Integrationen verbindet."
   },
   tr: {
     language: 'tr',

@@ -3,8 +3,8 @@ import { Icon } from './Icons';
 const HOME_OFFER_IMAGES = {
   'PayMyDine KI': '/site-assets/home-product-areas-20261005/ai.webp',
   "Analysen, Prognosen und Rentabilität": '/site-assets/home-product-areas-20261005/analytics-sunlit-cafe.webp',
-  "Gast CRM, Marketing & Wachstum": '/site-assets/home-product-areas-20261005/guest-crm-marketing-growth.webp',
-  "Integrationen, Multi-Location & Inventory": '/site-assets/home-product-areas-20261005/integrations-multilocation-inventory.webp'
+  "Gäste-CRM, Marketing & Wachstum": '/site-assets/home-product-areas-20261005/guest-crm-marketing-growth.webp',
+  "Integrationen, Standorte & Warenbestand": '/site-assets/home-product-areas-20261005/integrations-multilocation-inventory.webp'
 };
 export default function OfferGrid({
   compact = false
@@ -20,17 +20,11 @@ export default function OfferGrid({
             </span>
 
             <h2>
-              Neun zusammenhängende Bereiche erzeugen ein Operationsbild -
-und geben PayMyDine KI den Kontext, um zu erklären, was sich geändert hat.
+              Neun vernetzte Bereiche ergeben ein Gesamtbild des Restaurantbetriebs – und liefern PayMyDine KI den Kontext, um Veränderungen zu erklären.
             </h2>
 
             <p>
-              Jeder Bereich löst einen echten Restaurant-Ablauf selbst.
-Verbunden, Reservierungen, Tische, Bestellungen, Küche,
-Zahlungen, Gäste, Teams, Analysen und Integrationen erstellen
-den Kontext KI verwenden kann, um Perioden zu vergleichen, Flag ungewöhnlich
-Bewegung, Unterstützungsprognosen und Punktmanagement in Richtung
-Was als nächstes Aufmerksamkeit verdient.
+              Jeder Produktbereich unterstützt einen konkreten Ablauf. Zusammen verbinden Reservierungen, Tische, Bestellungen, Küche, Zahlungen, Gäste, Teams, Analysen und Integrationen die Daten, mit denen KI Zeiträume vergleichen, Auffälligkeiten erkennen und die nächsten Schritte zur Prüfung vorschlagen kann.
             </p>
 
           </div>}

@@ -10,22 +10,17 @@ export function RoleAndAISections() {
           <div>
 
             <span className="eyebrow darkEyebrow">
-              6 Rollen-Arbeitsbereiche + gemeinsamer KI-Kontext
+              6 Rollenbereiche mit gemeinsamem KI-Kontext
             </span>
 
             <h2>
-              Geben Sie jeder Rolle die Arbeit, die sie besitzt -
-und geben KI den gemeinsamen Kontext zu erklären
-Was passiert im ganzen Restaurant?
+              Jedes Team erhält die passenden Aufgaben und Werkzeuge. PayMyDine KI nutzt den gemeinsamen Kontext, um zu zeigen, was im Restaurant geschieht.
             </h2>
 
           </div>
 
           <p>
-            Eigentümer, Manager, Servicepersonal, Küche, Reservierungen und Finanzen
-Verwenden Sie fokussierte Ansichten während Tisch, Bestellung, Gast, Timing und Zahlung
-Der Kontext bleibt verbunden. Das Management kann dann PayMyDine KI verwenden
-Bewegen Sie sich von einem Signal zu den Quelldaten dahinter.
+            Geschäftsführung, Management, Service, Küche, Reservierung und Finanzen arbeiten in eigenen Ansichten. Informationen zu Tischen, Bestellungen, Gästen, Zeiten und Zahlungen bleiben verknüpft. So kann das Management mit PayMyDine KI Veränderungen bis zu den Quelldaten zurückverfolgen.
           </p>
 
         </div>
@@ -38,19 +33,15 @@ Bewegen Sie sich von einem Signal zu den Quelldaten dahinter.
             <div className="darkCardCopy">
 
               <span>
-                FOR OWNERS + KI
+                FÜR GESCHÄFTSFÜHRUNG + KI
               </span>
 
               <h3>
-                Überprüfen Sie die Geschäftssignale,
-dann fragen Sie KI, was sich geändert hat und wo Sie untersuchen sollen.
+                Geschäftszahlen prüfen und mit KI herausfinden, was sich verändert hat und wo eine genauere Analyse sinnvoll ist.
               </h3>
 
               <p>
-                Beginnen Sie mit Einnahmen, Gästen, Tischen, Reservierungen,
-Küchenstatus und meistverkaufte Artikel.
-Dann vergleichen Sie Perioden, Oberfläche ungewöhnliche Bewegung und öffnen
-Die Quellenansicht hinter der Antwort.
+                Ausgangspunkt sind Umsatz, Gäste, Tische, Reservierungen, Küchenstatus und meistverkaufte Artikel. Vergleichen Sie Zeiträume, erkennen Sie Auffälligkeiten und öffnen Sie die Daten hinter dem Ergebnis.
               </p>
 
               <a href="/de/ai">
@@ -82,11 +73,7 @@ Die Quellenansicht hinter der Antwort.
               </h3>
 
               <p>
-                Servicemitarbeiter sehen Tische und Gästeanfragen.
-Die Küche sieht Tickets und Timing.
-Reservierungen sehen Ankunft und Verfügbarkeit.
-Gemeinsamer Status gibt Management und KI ein klareres Bild
-Wo die Arbeit wartet.
+                Der Service bearbeitet Tische und Gästeanfragen, die Küche Bestellungen und Zubereitungszeiten. Die Reservierung verwaltet Ankünfte und Verfügbarkeit. Ein gemeinsamer Status macht sichtbar, wo Aufgaben noch offen sind.
               </p>
 
               <a href="/de/solutions/team">
@@ -115,13 +102,11 @@ Wo die Arbeit wartet.
               </h3>
 
               <p>
-                Profile, Loyalität, Angebote, Kampagnen, Feedback und Bindung
-Signale können mit der Besuchsgeschichte verbunden bleiben, die erstellt wurde
-Sie geben dem Management einen besseren Kontext für zukünftige Entscheidungen.
+                Besuche, Bestellungen und Feedback können Gästeprofile, Treueprogramme, Angebote und Kampagnen ergänzen. So lassen sich spätere Maßnahmen besser auf tatsächliche Gästeinteraktionen abstimmen.
               </p>
 
               <a href="/de/solutions/guest-ordering">
-                Sehen Sie sich den Gastwachstums-Ablauf an
+                Gästeentwicklung im Überblick
                 {' '}
                 <Icon name="arrow" size={15} />
               </a>
@@ -148,16 +133,11 @@ Sie geben dem Management einen besseren Kontext für zukünftige Entscheidungen.
             </span>
 
             <h2>
-              Fragen Sie das Restaurant,
-kein anderes isoliertes Dashboard.
+              Fragen an den Restaurantbetrieb stellen – statt mehrere voneinander getrennte Dashboards zu durchsuchen.
             </h2>
 
             <p>
-              PayMyDine KI funktioniert aus dem Operationsbild bereits verfügbar
-auf der Plattform. Fragen Sie nach Einnahmen, Gästen, durchschnittlichem Scheck,
-Tabellenumsatz, Verkaufszeitpunkt, Bestseller, Zahlungsmix,
-Prognosen oder Rentabilität, dann verfolgen Sie die Antwort zurück zu
-die Quelldaten.
+              PayMyDine KI arbeitet mit den verfügbaren Betriebsdaten. Fragen Sie nach Umsatz, Gästen, Durchschnittsbon, Tischwechsel, Verkaufszeiten, Bestsellern, Zahlungsarten, Prognosen oder Rentabilität. Die Antworten lassen sich zu ihren Datenquellen zurückverfolgen.
             </p>
 
           </div>
@@ -187,14 +167,11 @@ die Quelldaten.
                 </span>
 
                 <h2>
-                  Fragen Sie, was sich geändert hat, vergleichen Sie den Zeitraum
-und finden Sie die Quellansicht, die es wert ist, als nächstes geöffnet zu werden.
+                  Veränderungen erkennen, Zeiträume vergleichen und die relevante Datenquelle direkt öffnen.
                 </h2>
 
                 <p>
-                  Bewegen Sie sich von einer Headline-Metrik in den Restaurant-Kontext
-dahinter, anstatt separate Berichte manuell zu überprüfen
-für jede mögliche Erklärung.
+                  Wechseln Sie von einer Kennzahl zu den zugrunde liegenden Restaurantdaten. So müssen Sie nicht mehrere getrennte Berichte nach möglichen Ursachen durchsuchen.
                 </p>
 
               </div>
@@ -213,15 +190,11 @@ für jede mögliche Erklärung.
                 </span>
 
                 <h2>
-                  Verwandeln Sie Live-Betriebsdaten in einen kürzeren Pfad
-Vom Signal zur Managemententscheidung.
+                  Von aktuellen Betriebsdaten zur fundierten Managemententscheidung.
                 </h2>
 
                 <p>
-                  Verwenden Sie KI-gestützte tägliche Briefings, Anomalie Flags,
-Periodenvergleiche und prognostizierte Unterstützung bei Beibehaltung
-die Quellmetrik, das Vergleichsfenster und die menschliche Entscheidung
-sichtbar.
+                  Nutzen Sie KI-gestützte Tagesübersichten, Hinweise auf Auffälligkeiten, Zeitvergleiche und Prognosen. Die zugrunde liegenden Kennzahlen, Vergleichszeiträume und Entscheidungen des Teams bleiben dabei nachvollziehbar.
                 </p>
 
               </div>
@@ -255,21 +228,15 @@ export function FlexibilityAndIntegrationSections() {
           <div className="flexibilityCopy">
 
             <span className="eyebrow">
-              Konfigurieren Sie die Operation, stärken Sie den KI-Kontext
+              Restaurantbetrieb konfigurieren, KI-Kontext verbessern
             </span>
 
             <h2>
-              Kartenrollen, Module, Bodenkarten und Gästereisen einmalig,
-Verwenden Sie dann die gemeinsamen Daten für beide tägliche Arbeit
-und KI-gestützte Review.
+              Legen Sie Rollen, Module, Tischpläne und Gästeabläufe einmal fest. Nutzen Sie die verknüpften Daten anschließend für den täglichen Betrieb und KI-gestützte Analysen.
             </h2>
 
             <p>
-              Beginnen Sie mit dem Restaurant, das Sie bereits betreiben.
-Wählen Sie, welche Produktbereiche doppelte Arbeit entfernen,
-definieren, wer jede Kontrolle sehen und den Kontext bewahren kann
-dass das Management Berichtspflichten, Vergleiche und
-KI-gestützte Fragen.
+              Bauen Sie auf den bestehenden Abläufen Ihres Restaurants auf. Wählen Sie die Produktbereiche, die doppelte Arbeit vermeiden, legen Sie Berechtigungen fest und erhalten Sie den Datenkontext für Berichte, Vergleiche und KI-gestützte Fragen.
             </p>
 
             <div className="featureList">
@@ -286,7 +253,7 @@ KI-gestützte Fragen.
 
               <span>
                 <Icon name="phone" size={20} />
-                <b>Gästemenü und QR Flows</b>
+                <b>Gästemenü und QR-Abläufe</b>
               </span>
 
               <span>
@@ -319,7 +286,7 @@ KI-gestützte Fragen.
 
             <figure className="stackSmall stackSmallB">
 
-              <img src={imageGroups.staff[1]} alt={"Restaurant Team Workspace"} loading="lazy" />
+              <img src={imageGroups.staff[1]} alt={"Arbeitsbereich des Restaurantteams"} loading="lazy" />
 
             </figure>
 
@@ -341,29 +308,23 @@ KI-gestützte Fragen.
             </span>
 
             <h2>
-              Verbinden Sie Systeme, die bereits Restaurantdaten enthalten
-Operationen, Berichterstattung und KI können also aus einem größeren Bild heraus funktionieren.
+              Binden Sie bestehende Restaurantsysteme an, damit Betrieb, Berichte und KI mit einem umfassenderen Datenbild arbeiten können.
             </h2>
 
             <p>
-              Unterstützt Kassensystem, Buchhaltung, Lieferung und Zahlungsverbindungen
-nützliche Quelldaten zur zentralen Berichterstattung beitragen können,
-Standortvergleich, Inventar und Rentabilität Ablaufs.
-Je vollständiger das erlaubte Quellbild ist,
-die nützlicheren KI-gestützten Vergleiche und Untersuchungen können sein.
+              Unterstützte Kassen-, Buchhaltungs-, Liefer- und Zahlungssysteme können Daten für zentrale Berichte, Standortvergleiche, Bestandsübersichten und Rentabilitätsanalysen liefern. Je vollständiger und verlässlicher die verfügbaren Daten sind, desto hilfreicher werden KI-gestützte Vergleiche und Untersuchungen.
             </p>
 
             <div className="integrationNote">
 
               <Icon name="link" size={18} />
 
-              Integration und KI-Bereich hängen von den APIs ab,
-Berechtigungen und Datenfelder, die von jedem externen System verfügbar sind.
+              Umfang von Integrationen und KI-Funktionen hängen von den verfügbaren Schnittstellen, Berechtigungen und Datenfeldern der angebundenen Systeme ab.
 
             </div>
 
             <a className="textArrow" href="/de/integrations">
-              Überprüfung des Integrationsbereichs
+              Integrationsmöglichkeiten prüfen
               {' '}
               <Icon name="arrow" size={15} />
             </a>

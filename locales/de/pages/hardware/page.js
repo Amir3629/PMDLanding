@@ -12,22 +12,22 @@ const copy = {
     eyebrow: 'PayMyDine Hardware',
     title: 'Restaurant-Hardware, bereit für den Service.',
     intro: 'Stellen Sie Ihr PayMyDine-Setup mit Tisch-QR- und Bezahldisplays, Kassensystem, mobilen Terminals, Küchenbildschirmen, Selbstbedienungskiosken, Belegdruckern und Kassenschubladen passend zu Ihrem Betrieb zusammen.',
-    primaryCta: 'Hardware-Setup planen',
+    primaryCta: 'Hardware-Ausstattung planen',
     secondaryCta: 'Geräte entdecken',
     meta: ['Kaufen', 'Leasen', 'Mieten', 'Ein vernetztes System']
   },
   productsEyebrow: 'Hardware-Auswahl',
   productsTitle: 'Vom Tisch bis zur Küche hat jedes Gerät eine klare Aufgabe.',
-  productsIntro: 'Wählen Sie nur die Hardware, die Ihr Restaurant heute benötigt, und erweitern Sie das Setup, wenn Ihr Servicemodell wächst.',
+  productsIntro: 'Wählen Sie die Geräte, die Ihr Restaurant heute braucht, und erweitern Sie Ihre Ausstattung, wenn sich Ihre Abläufe verändern.',
   productCta: 'Dieses Gerät anfragen',
   products: [
     {
       type: 'payment',
       shortLabel: 'PAY',
       category: 'Hauptkasse',
-      name: 'Dual-Kassenstation',
+      name: 'Kassenstation mit zwei Displays',
       body: 'Ein kompaktes Kassensystem für Restaurants, die einen zusätzlichen Bestell- und Zahlungsplatz am Tresen benötigen.',
-      bullets: ['Kassen-Setup mit zwei Displays', 'Bestellung und Zahlung am Tresen', 'Mit dem PayMyDine-System verbunden']
+      bullets: ['Kasse mit zwei Displays', 'Bestellung und Zahlung am Tresen', 'Mit dem PayMyDine-System verbunden']
     },
     {
       type: 'table',
@@ -42,7 +42,7 @@ const copy = {
       shortLabel: 'KASSE',
       category: 'Hauptkasse',
       name: 'Kassenarbeitsplatz',
-      body: 'Der zentrale Kassenarbeitsplatz mit Mitarbeiterkasse und zweitem Kundendisplay für einen klaren Bestell- und Bezahlvorgang.',
+      body: 'Ein zentraler Kassenarbeitsplatz mit Mitarbeiterdisplay und zweitem Kundendisplay für einen klaren Bestell- und Bezahlvorgang.',
       bullets: ['Arbeitsplatz mit zwei Displays', 'Bestellung und Zahlung an einer Station', 'Für den täglichen Restaurantbetrieb ausgelegt']
     },
     {

@@ -13,17 +13,13 @@ export function StatusGallery() {
             </span>
 
             <h2>
-              Halten Sie den Tisch, das Ticket und den Zahlungszustand in Echtzeit geteilt,
-Verwenden Sie dann KI, um die Ausnahmen dahinter zu erklären.
+              Tisch-, Bestell- und Zahlungsstatus bleiben für alle Beteiligten aktuell. KI hilft, Auffälligkeiten im Zusammenhang zu verstehen.
             </h2>
 
           </div>
 
           <p>
-            Gäste, Servicemitarbeiter, Küche und Zahlungs-Abläufe verwenden unterschiedliche
-Bildschirme, aber ihre Aktivität trägt zum gleichen Betrieb bei
-Bild. Das gibt dem Management klarere Quellendaten für die Berichterstattung,
-Vergleiche und KI-gestützte Untersuchung.
+            Gäste, Service, Küche und Zahlungsabwicklung nutzen unterschiedliche Ansichten, arbeiten aber mit denselben Vorgängen. Das gibt dem Management eine verlässlichere Grundlage für Berichte, Vergleiche und KI-gestützte Analysen.
           </p>
 
         </div>
@@ -57,7 +53,7 @@ Vergleiche und KI-gestützte Untersuchung.
 }
 export function LifestyleMarquee() {
   const images = ['/site-assets/extra/seaside-dinner.webp', '/site-assets/extra/twilight-cafe.webp', '/site-assets/extra/friends-split-bill.webp', '/site-assets/extra/friends-qr.webp', '/site-assets/extra/bill-paid-cafe.webp', '/site-assets/extra/split-bill-table.webp', '/site-assets/custom/split-friends-replacement.webp', '/site-assets/extra/qr-ordering-experience.webp', imageGroups.social[0], imageGroups.social[2], imageGroups.table[3], imageGroups.kitchen[3]];
-  return <section className="photoMarquee" aria-label={"Restaurant Momente"}>
+  return <section className="photoMarquee" aria-label={"Momente im Restaurant"}>
 
       <div className="marqueeTrack">
 
